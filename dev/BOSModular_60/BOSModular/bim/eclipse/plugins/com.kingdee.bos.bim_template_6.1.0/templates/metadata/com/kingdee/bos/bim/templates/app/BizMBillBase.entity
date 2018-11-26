@@ -1,0 +1,950 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entityObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.bos.bim.templates.app</package>
+    <name>BizMBillBase</name>
+    <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].alias</alias>
+    <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].description</description>
+    <userDefined>false</userDefined>
+    <bosType>24B43236</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.bos.bim.templates.BizMBillBase</businessImplName>
+    <businessControllerName>com.kingdee.bos.bim.templates.app.BizMBillBaseController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>abstract</subClassingMode>
+    <methods>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getValue].description</description>
+            <innerID>43ff1db3-0100-1000-e000-0003c0a813a9</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.framework.test.app.BillHead1</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getValue].description</description>
+            <innerID>43ff1db3-0100-1000-e000-0004c0a813a9</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.framework.test.app.BillHead1</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+                <parameter>
+                    <name>selector</name>
+                    <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getValue].parameters.parameter[selector].alias</alias>
+                    <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getValue].parameters.parameter[selector].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.SelectorItemCollection</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getValue].description</description>
+            <innerID>43ff1db3-0100-1000-e000-0005c0a813a9</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.framework.test.app.BillHead1</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getValue].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getValue].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getCollection].description</description>
+            <innerID>43ff1db3-0100-1000-e000-0006c0a813a9</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.framework.test.app.BillHead1</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getCollection].description</description>
+            <innerID>43ff1db3-0100-1000-e000-0007c0a813a9</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.framework.test.app.BillHead1</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>view</name>
+                    <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getCollection].parameters.parameter[view].alias</alias>
+                    <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getCollection].parameters.parameter[view].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.EntityViewInfo</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getCollection].description</description>
+            <innerID>43ff1db3-0100-1000-e000-0008c0a813a9</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.framework.test.app.BillHead1</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getCollection].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getCollection].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+        </method>
+    </methods>
+    <isAbstract>true</isAbstract>
+    <bizUnitPK>com.kingdee.bos.bim.templates.BizMBillBaseTemplate</bizUnitPK>
+    <baseEntity>
+        <key name="package" value="com.kingdee.eas.framework.app" />
+        <key name="name" value="BillBase" />
+    </baseEntity>
+    <table>
+        <key name="package" value="com.kingdee.bos.bim.templates.app" />
+        <key name="name" value="t_BizMBillBase" />
+    </table>
+    <properties>
+        <linkProperty>
+            <name>entrys1</name>
+            <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].properties.linkProperty[entrys1].alias</alias>
+            <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].properties.linkProperty[entrys1].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <relationship>
+                <key name="package" value="com.kingdee.bos.bim.templates.app" />
+                <key name="name" value="R_BizMBillBase_BizMBillEntryBase" />
+            </relationship>
+        </linkProperty>
+        <ownProperty>
+            <name>BIMTEMPR_4BIZORG</name>
+            <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].properties.ownProperty[BIMTEMPR_4BIZORG].alias</alias>
+            <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].properties.ownProperty[BIMTEMPR_4BIZORG].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>50</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].properties.ownProperty[BIMTEMPR_4BIZORG].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFBIMTEMPR_4BIZORG" />
+            </mappingField>
+        </ownProperty>
+    </properties>
+    <logicalKey>
+        <name>id</name>
+        <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].logicalKey[id].alias</alias>
+        <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].logicalKey[id].description</description>
+        <keyClass>com.kingdee.bos.dao.IObjectPK</keyClass>
+        <userDefined>false</userDefined>
+        <keyProperties>
+            <baseProperty>
+                <key name="name" value="id" />
+            </baseProperty>
+        </keyProperties>
+    </logicalKey>
+    <events>
+        <event>
+            <name>submitEvent</name>
+            <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[submitEvent].alias</alias>
+            <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[submitEvent].description</description>
+            <userDefined>false</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>fcab73e7-00fc-1000-e000-0002c0a813e6</name>
+                    <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[submitEvent].eventMethods.eventMethod[fcab73e7-00fc-1000-e000-0002c0a813e6].alias</alias>
+                    <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[submitEvent].eventMethods.eventMethod[fcab73e7-00fc-1000-e000-0002c0a813e6].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="submitRelations" />
+                        <key name="innerID" value="fcab73e7-00fc-1000-e000-0002c0a813e6" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[submitEvent].eventMethods.eventMethod[fcab73e7-00fc-1000-e000-0002c0a813e6].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[submitEvent].eventMethods.eventMethod[fcab73e7-00fc-1000-e000-0002c0a813e6].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID>f6b0cbbc-0102-1000-e000-0060c0a813adevfp</formalParameterInnerID>
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[submitEvent].eventMethods.eventMethod[fcab73e7-00fc-1000-e000-0002c0a813e6].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[submitEvent].eventMethods.eventMethod[fcab73e7-00fc-1000-e000-0002c0a813e6].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID />
+                            <actualParameterIndex>1</actualParameterIndex>
+                            <isBOPK>false</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>f6b0cbbc-0102-1000-e000-0060c0a813adevfp</innerID>
+                    <userDefined>false</userDefined>
+                    <parameter>
+                        <name>model</name>
+                        <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[submitEvent].formalParameters.formalParameter.parameter[model].alias</alias>
+                        <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[submitEvent].formalParameters.formalParameter.parameter[model].description</description>
+                        <direction>in</direction>
+                        <dataType>ObjectValue</dataType>
+                        <metadataRef>com.kingdee.bos.bim.templates.app.BizMBillBase</metadataRef>
+                        <userDefined>false</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+        <event>
+            <name>deleteEvent</name>
+            <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[deleteEvent].alias</alias>
+            <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[deleteEvent].description</description>
+            <userDefined>false</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>a94a3987-00fb-1000-e000-000ac0a813e6</name>
+                    <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[deleteEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-000ac0a813e6].alias</alias>
+                    <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[deleteEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-000ac0a813e6].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="delete" />
+                        <key name="innerID" value="a94a3987-00fb-1000-e000-000ac0a813e6" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[deleteEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-000ac0a813e6].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[deleteEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-000ac0a813e6].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID>ae594f97-0102-1000-e000-0014c0a813adevfp</formalParameterInnerID>
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>ae594f97-0102-1000-e000-0014c0a813adevfp</innerID>
+                    <userDefined>false</userDefined>
+                    <parameter>
+                        <name>pk</name>
+                        <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[deleteEvent].formalParameters.formalParameter.parameter[pk].alias</alias>
+                        <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[deleteEvent].formalParameters.formalParameter.parameter[pk].description</description>
+                        <direction>in</direction>
+                        <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                        <metadataRef />
+                        <userDefined>false</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+        <event>
+            <name>passAuditEvent</name>
+            <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[passAuditEvent].alias</alias>
+            <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[passAuditEvent].description</description>
+            <userDefined>false</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>bbce8906-00fa-1000-e000-000ec0a813e6</name>
+                    <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[passAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].alias</alias>
+                    <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[passAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="passAudit" />
+                        <key name="innerID" value="bbce8906-00fa-1000-e000-000ec0a813e6" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[passAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[passAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID>ae594f97-0102-1000-e000-0018c0a813adevfp</formalParameterInnerID>
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[passAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[passAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID>ae594f97-0102-1000-e000-001ac0a813adevfp</formalParameterInnerID>
+                            <actualParameterIndex>1</actualParameterIndex>
+                            <isBOPK>false</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>ae594f97-0102-1000-e000-0018c0a813adevfp</innerID>
+                    <userDefined>false</userDefined>
+                    <parameter>
+                        <name>pk</name>
+                        <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[passAuditEvent].formalParameters.formalParameter.parameter[pk].alias</alias>
+                        <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[passAuditEvent].formalParameters.formalParameter.parameter[pk].description</description>
+                        <direction>in</direction>
+                        <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                        <metadataRef />
+                        <userDefined>false</userDefined>
+                    </parameter>
+                </formalParameter>
+                <formalParameter>
+                    <innerID>ae594f97-0102-1000-e000-001ac0a813adevfp</innerID>
+                    <userDefined>false</userDefined>
+                    <parameter>
+                        <name>model</name>
+                        <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[passAuditEvent].formalParameters.formalParameter.parameter[model].alias</alias>
+                        <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[passAuditEvent].formalParameters.formalParameter.parameter[model].description</description>
+                        <direction>in</direction>
+                        <dataType>ObjectValue</dataType>
+                        <metadataRef>com.kingdee.bos.bim.templates.app.BizMBillBase</metadataRef>
+                        <userDefined>false</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+        <event>
+            <name>unpassAuditEvent</name>
+            <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[unpassAuditEvent].alias</alias>
+            <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[unpassAuditEvent].description</description>
+            <userDefined>false</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>bbce8906-00fa-1000-e000-000fc0a813e6</name>
+                    <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[unpassAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].alias</alias>
+                    <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[unpassAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="unpassAudit" />
+                        <key name="innerID" value="bbce8906-00fa-1000-e000-000fc0a813e6" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[unpassAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[unpassAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID>ae594f97-0102-1000-e000-001dc0a813adevfp</formalParameterInnerID>
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[unpassAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[unpassAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID>ae594f97-0102-1000-e000-001ec0a813adevfp</formalParameterInnerID>
+                            <actualParameterIndex>1</actualParameterIndex>
+                            <isBOPK>false</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>ae594f97-0102-1000-e000-001dc0a813adevfp</innerID>
+                    <userDefined>false</userDefined>
+                    <parameter>
+                        <name>pk</name>
+                        <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[unpassAuditEvent].formalParameters.formalParameter.parameter[pk].alias</alias>
+                        <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[unpassAuditEvent].formalParameters.formalParameter.parameter[pk].description</description>
+                        <direction>in</direction>
+                        <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                        <metadataRef />
+                        <userDefined>false</userDefined>
+                    </parameter>
+                </formalParameter>
+                <formalParameter>
+                    <innerID>ae594f97-0102-1000-e000-001ec0a813adevfp</innerID>
+                    <userDefined>false</userDefined>
+                    <parameter>
+                        <name>model</name>
+                        <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[unpassAuditEvent].formalParameters.formalParameter.parameter[model].alias</alias>
+                        <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[unpassAuditEvent].formalParameters.formalParameter.parameter[model].description</description>
+                        <direction>in</direction>
+                        <dataType>ObjectValue</dataType>
+                        <metadataRef>com.kingdee.bos.bim.templates.app.BizMBillBase</metadataRef>
+                        <userDefined>false</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+    </events>
+    <defaultView>
+        <name />
+        <alias>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].defaultViewalias</alias>
+        <description>entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].defaultViewdescription</description>
+        <filter>
+            <maskString />
+        </filter>
+    </defaultView>
+    <resource>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].alias">
+            <lang locale="zh_CN" value="多分录单据基础模板" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="多分錄單據基礎範本" />
+            <lang locale="zh_TW" value="多分錄單據基礎範本" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].defaultView.filterextendedProperty.bimTemplateType">
+            <lang locale="zh_CN" value="MBillBase" />
+            <lang locale="zh_TW" value="MBillBase" />
+            <lang locale="en_US" value="MBillBase" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].defaultView.filterextendedProperty.codingRuleEnabled">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+            <lang locale="en_US" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].defaultView.filterextendedProperty.listUI">
+            <lang locale="zh_CN" value="com.kingdee.bos.bim.templates.client.BizMBillListUI" />
+            <lang locale="zh_TW" value="com.kingdee.bos.bim.templates.client.BizMBillListUI" />
+            <lang locale="en_US" value="com.kingdee.bos.bim.templates.client.BizMBillListUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].defaultViewalias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].defaultViewdescription">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].defaultViewextendedProperty.bimTemplateType">
+            <lang locale="zh_CN" value="MBillBase" />
+            <lang locale="zh_TW" value="MBillBase" />
+            <lang locale="en_US" value="MBillBase" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].defaultViewextendedProperty.codingRuleEnabled">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+            <lang locale="en_US" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].defaultViewextendedProperty.listUI">
+            <lang locale="zh_CN" value="com.kingdee.bos.bim.templates.client.BizMBillListUI" />
+            <lang locale="zh_TW" value="com.kingdee.bos.bim.templates.client.BizMBillListUI" />
+            <lang locale="en_US" value="com.kingdee.bos.bim.templates.client.BizMBillListUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].description">
+            <lang locale="zh_CN" value="多分录单据基础模板" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="多分錄單據基礎範本" />
+            <lang locale="zh_TW" value="多分錄單據基礎範本" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[deleteEvent].alias">
+            <lang locale="zh_CN" value="删除事件" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="刪除事件" />
+            <lang locale="zh_TW" value="刪除事件" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[deleteEvent].description">
+            <lang locale="zh_CN" value="删除事件" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="刪除事件" />
+            <lang locale="zh_TW" value="刪除事件" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[deleteEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-000ac0a813e6].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[deleteEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-000ac0a813e6].description">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[deleteEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-000ac0a813e6].parameterMappings.parameterMappingalias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[deleteEvent].eventMethods.eventMethod[a94a3987-00fb-1000-e000-000ac0a813e6].parameterMappings.parameterMappingdescription">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[deleteEvent].formalParameters.formalParameter.parameter[pk].alias">
+            <lang locale="zh_CN" value="对象主键" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="對象主鍵" />
+            <lang locale="zh_TW" value="對象主鍵" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[deleteEvent].formalParameters.formalParameter.parameter[pk].description">
+            <lang locale="zh_CN" value="对象主键" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="對象主鍵" />
+            <lang locale="zh_TW" value="對象主鍵" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[passAuditEvent].alias">
+            <lang locale="zh_CN" value="审核通过事件" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="審核通過事件" />
+            <lang locale="zh_TW" value="審核通過事件" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[passAuditEvent].description">
+            <lang locale="zh_CN" value="审核通过事件" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="審核通過事件" />
+            <lang locale="zh_TW" value="審核通過事件" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[passAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[passAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].description">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[passAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].parameterMappings.parameterMappingalias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[passAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].parameterMappings.parameterMappingdescription">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[passAuditEvent].formalParameters.formalParameter.parameter[model].alias">
+            <lang locale="zh_CN" value="值对象" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="值對象" />
+            <lang locale="zh_TW" value="值對象" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[passAuditEvent].formalParameters.formalParameter.parameter[model].description">
+            <lang locale="zh_CN" value="值对象" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="值對象" />
+            <lang locale="zh_TW" value="值對象" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[passAuditEvent].formalParameters.formalParameter.parameter[pk].alias">
+            <lang locale="zh_CN" value="对象主键" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="對象主鍵" />
+            <lang locale="zh_TW" value="對象主鍵" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[passAuditEvent].formalParameters.formalParameter.parameter[pk].description">
+            <lang locale="zh_CN" value="对象主键" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="對象主鍵" />
+            <lang locale="zh_TW" value="對象主鍵" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[submitEvent].alias">
+            <lang locale="zh_CN" value="提交" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="提交" />
+            <lang locale="zh_TW" value="提交" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[submitEvent].description">
+            <lang locale="zh_CN" value="提交" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="提交" />
+            <lang locale="zh_TW" value="提交" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[submitEvent].eventMethods.eventMethod[fcab73e7-00fc-1000-e000-0002c0a813e6].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[submitEvent].eventMethods.eventMethod[fcab73e7-00fc-1000-e000-0002c0a813e6].description">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[submitEvent].eventMethods.eventMethod[fcab73e7-00fc-1000-e000-0002c0a813e6].parameterMappings.parameterMappingalias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[submitEvent].eventMethods.eventMethod[fcab73e7-00fc-1000-e000-0002c0a813e6].parameterMappings.parameterMappingdescription">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[submitEvent].formalParameters.formalParameter.parameter[model].alias">
+            <lang locale="zh_CN" value="值对象" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="值對象" />
+            <lang locale="zh_TW" value="值對象" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[submitEvent].formalParameters.formalParameter.parameter[model].description">
+            <lang locale="zh_CN" value="值对象" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="值對象" />
+            <lang locale="zh_TW" value="值對象" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[unpassAuditEvent].alias">
+            <lang locale="zh_CN" value="反审核事件" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="反審核事件" />
+            <lang locale="zh_TW" value="反審核事件" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[unpassAuditEvent].description">
+            <lang locale="zh_CN" value="反审核事件" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="反審核事件" />
+            <lang locale="zh_TW" value="反審核事件" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[unpassAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[unpassAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].description">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[unpassAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].parameterMappings.parameterMappingalias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[unpassAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].parameterMappings.parameterMappingdescription">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[unpassAuditEvent].formalParameters.formalParameter.parameter[model].alias">
+            <lang locale="zh_CN" value="值对象" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="值對象" />
+            <lang locale="zh_TW" value="值對象" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[unpassAuditEvent].formalParameters.formalParameter.parameter[model].description">
+            <lang locale="zh_CN" value="值对象" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="值對象" />
+            <lang locale="zh_TW" value="值對象" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[unpassAuditEvent].formalParameters.formalParameter.parameter[pk].alias">
+            <lang locale="zh_CN" value="对象主键" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="對象主鍵" />
+            <lang locale="zh_TW" value="對象主鍵" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].events.event[unpassAuditEvent].formalParameters.formalParameter.parameter[pk].description">
+            <lang locale="zh_CN" value="对象主键" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="對象主鍵" />
+            <lang locale="zh_TW" value="對象主鍵" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].extendedProperty.OrgType">
+            <lang locale="zh_CN" value="Company" />
+            <lang locale="zh_TW" value="Company" />
+            <lang locale="en_US" value="Company" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].extendedProperty.bimTemplateType">
+            <lang locale="zh_CN" value="MBillBase" />
+            <lang locale="zh_TW" value="MBillBase" />
+            <lang locale="en_US" value="MBillBase" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].extendedProperty.codingRuleEnabled">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+            <lang locale="en_US" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].extendedProperty.editUI">
+            <lang locale="zh_CN" value="com.kingdee.bos.bim.templates.client.BizMBillEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.bos.bim.templates.client.BizMBillEditUI" />
+            <lang locale="en_US" value="com.kingdee.bos.bim.templates.client.BizMBillEditUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].extendedProperty.enableFieldPermission">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+            <lang locale="en_US" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].extendedProperty.listUI">
+            <lang locale="zh_CN" value="com.kingdee.bos.bim.templates.client.BizMBillListUI" />
+            <lang locale="zh_TW" value="com.kingdee.bos.bim.templates.client.BizMBillListUI" />
+            <lang locale="en_US" value="com.kingdee.bos.bim.templates.client.BizMBillListUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].logicalKey[id].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].logicalKey[id].description">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getCollection].alias">
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getCollection].description">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getCollection].parameters.parameter[oql].alias">
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getCollection].parameters.parameter[oql].description">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getCollection].parameters.parameter[view].alias">
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getCollection].parameters.parameter[view].description">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getValue].alias">
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getValue].description">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getValue].parameters.parameter[oql].alias">
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getValue].parameters.parameter[oql].description">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getValue].parameters.parameter[pk].alias">
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getValue].parameters.parameter[pk].description">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getValue].parameters.parameter[selector].alias">
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].methods.method[getValue].parameters.parameter[selector].description">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].properties.linkProperty[entrys1].alias">
+            <lang locale="zh_CN" value="分录1" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="分錄1" />
+            <lang locale="zh_TW" value="分錄1" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].properties.linkProperty[entrys1].description">
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+            <lang locale="en_US" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].properties.linkProperty[entrys1].extendedProperty.isForGrouping">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+            <lang locale="en_US" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].properties.linkProperty[entrys1].extendedProperty.isForMapping">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+            <lang locale="en_US" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].properties.linkProperty[entrys1].extendedProperty.isForMatching">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+            <lang locale="en_US" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].properties.linkProperty[entrys1].extendedProperty.isForWrittenBack">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+            <lang locale="en_US" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].properties.linkProperty[entrys1].extendedProperty.isInCode">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+            <lang locale="en_US" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].properties.linkProperty[entrys1].extendedProperty.userDefined">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+            <lang locale="en_US" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].properties.ownProperty[BIMTEMPR_4BIZORG].alias">
+            <lang locale="zh_CN" value="主业务组织" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="主業務組織" />
+            <lang locale="zh_TW" value="主業務組織" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].properties.ownProperty[BIMTEMPR_4BIZORG].defaultValue">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].properties.ownProperty[BIMTEMPR_4BIZORG].description">
+            <lang locale="zh_CN" value="主业务组织" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="主業務組織" />
+            <lang locale="zh_TW" value="主業務組織" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].properties.ownProperty[BIMTEMPR_4BIZORG].extendedProperty.ColWidthInKDTable">
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+            <lang locale="en_US" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].properties.ownProperty[BIMTEMPR_4BIZORG].extendedProperty.bizDataType">
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+            <lang locale="en_US" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].properties.ownProperty[BIMTEMPR_4BIZORG].extendedProperty.enableFieldPermission">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+            <lang locale="en_US" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].properties.ownProperty[BIMTEMPR_4BIZORG].extendedProperty.isForGrouping">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+            <lang locale="en_US" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].properties.ownProperty[BIMTEMPR_4BIZORG].extendedProperty.isForMapping">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+            <lang locale="en_US" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].properties.ownProperty[BIMTEMPR_4BIZORG].extendedProperty.isForMatching">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+            <lang locale="en_US" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].properties.ownProperty[BIMTEMPR_4BIZORG].extendedProperty.isForWrittenBack">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+            <lang locale="en_US" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].properties.ownProperty[BIMTEMPR_4BIZORG].extendedProperty.isInCode">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+            <lang locale="en_US" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.bos.bim.templates.app.BizMBillBase].properties.ownProperty[BIMTEMPR_4BIZORG].extendedProperty.isVisibleForKDTable">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+            <lang locale="en_US" value="true" />
+        </rs>
+    </resource>
+</entityObject>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BIReport>
+	<Cube ref="public:demo.cube" caption="公共:销售数据立方体" />
+	<DataSource ref="public:demo.ds" caption="公共:销售数据源" />
+	<MdxQuery name="query1" caption="" title="" memoHead="" memoTail="" perPageRows="">
+		select measures.members on columns,
+			non empty Product.levels(0).members  on rows 
+		from sales where ([Time].[${year2000}$])
+
+	</MdxQuery>
+	<WorksheetComponent name="ws001" caption="" mdxQuery="query1" showSlicer="true" />
+</BIReport>
+

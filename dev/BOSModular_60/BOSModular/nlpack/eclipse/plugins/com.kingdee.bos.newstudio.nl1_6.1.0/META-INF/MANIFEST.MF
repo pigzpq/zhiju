@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: NewStudioNL Fragment
+Bundle-SymbolicName: com.kingdee.bos.studio.nl1
+Bundle-Version: 6.0.0
+Fragment-Host: com.kingdee.bos.studio;bundle-version="[6.0.0,7.0.0)"
+Bundle-Localization: plugin
+Bundle-ClassPath: newstudio.nl1.jar

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="com.kingdee.tool.actionset"
+            label="Action"
+            visible="true">
+         <menu
+               id="com.kingdee.bos.menu.tools"
+               label="工具(&amp;T)"
+               path="edit">
+            <separator
+                  name="update">
+            </separator>
+         </menu>
+         <action
+               class="com.kingdee.bos.bosideupdate.actions.UpdateBOSAction"
+               id="com.kingdee.bos.bosideupdate.actions.UpdateBOSAction"
+               label="更新BOS工具(&amp;I)"
+               menubarPath="com.kingdee.bos.menu.tools/update"
+               retarget="false"
+               style="push"/>
+      </actionSet>
+   </extension>
+</plugin>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="gbk"?>
+<configSet>
+	<property name="nlFile" value=""/>
+	<property name="description" value="BIM解决方案功能设置"/>
+	<property name="layout"	value="1"/>
+	<item>
+		<name>com.kingdee.bos.bim.actions.SetAcctItemBizUnitAction</name>
+		<alias>启用核算项目</alias>
+		<value>false</value>
+		<valueType>boolean</valueType>
+		<properties>
+			<property name="UITYPE"		value="CHECKBOX"/>
+			<property name="ENABLEVALUE" value="true"/>
+			<property name="tips"		value="是否在本解决方案中启用核算项目的功能"/>
+			<property name="actionName"	value="com.kingdee.bos.bim.actions.SetAcctItemBizUnitAction"/>
+		</properties>
+	</item>
+	<item>
+		<name>com.kingdee.bos.bim.actions.SetSalaryItemAction</name>
+		<alias>启用薪酬项目</alias>
+		<value>false</value>
+		<valueType>boolean</valueType>
+		<properties>
+			<property name="UITYPE"		value="CHECKBOX"/>
+			<property name="ENABLEVALUE" value="true"/>
+			<property name="tips"		value="是否在本解决方案中启用薪酬项目的功能"/>
+			<property name="actionName"	value="com.kingdee.bos.bim.actions.SetSalaryItemAction"/>
+		</properties>
+	</item>
+	<item>
+		<name>useBizFieldTemplate</name>
+		<alias>启用业务字段模板</alias>
+		<value>false</value>
+		<valueType>boolean</valueType>
+		<properties>
+			<property name="UITYPE"		value="CHECKBOX"/>
+			<property name="ENABLEVALUE" value="true"/>
+			<property name="tips"		value="是否在本解决方案中启用业务字段模板的功能"/>
+			<property name="actionName"	value="useBizFieldTemplate"/>
+		</properties>
+	</item>
+</configSet>

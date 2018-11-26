@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BIReport>
+	<Cube ref="public:demo.cube" caption="公共:销售数据立方体" />
+	<DataSource ref="public:demo_var2.ds" caption="公共:销售数据源(变量专用2)" />
+	<MdxQuery name="query1" caption="产品近X年销售分析(变量使用过滤器宏)" title="" memoHead="" memoTail="" perPageRows="20">		select measures.members on columns,
+			non empty Product.levels(0).members on rows 
+		from sales</MdxQuery>
+	<WorksheetComponent name="sheet1" caption="表格" mdxQuery="query1" showSlicer="true" />
+	<FilterComponent name="filter" caption="过滤器">
+		<FilterItem type="input" dataType="number" caption="输入近多少年" column="" operator="LT" required="true" defaultValue="10" varname="lastYears" />
+	</FilterComponent>
+</BIReport>
+

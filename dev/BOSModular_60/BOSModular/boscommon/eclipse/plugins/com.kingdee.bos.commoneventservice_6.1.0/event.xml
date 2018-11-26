@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CommonEvent xmlns="http://www.kingdee.com/commonevent1_0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.kingdee.com/commonevent1_0/commonevent1_0.xsd">
+	<Id>c6668913-0115-1000-e000-0002c0a81395</Id>
+	<Name>TestEvent</Name>
+	<HostIp>192.168.19.149</HostIp>
+	<HostName>gongyin</HostName>
+	<Version>1.0</Version>
+	<Group>Group</Group>
+	<CreatedTime>2007-10-22 14:29:09.695</CreatedTime>
+	<Priority>80</Priority>
+	<Severity>20</Severity>
+	<Type>BOS</Type>
+	<Alias>
+		<Locale key="l1" value="alias" />
+		<Locale key="l2" value="别名&lt;旺财&gt;" />
+	</Alias>
+	<Description>
+		<Locale key="l2" value="描述&lt;描述详细信息&gt;" />
+		<Locale key="l1" value="description" />
+	</Description>
+	<EventContextDatas>
+		<EventContextData name="context key1"  value="contextValue1" />
+		<EventContextData name="context key2"  value="contextValue2" />
+		<EventContextData name="context key3"  value="contextValue3" />
+	</EventContextDatas>
+	<EventExtendedDatas>
+		<EventExtendedData name="ExtendedData Key1"  datatype="java.lang.String" value="extendedValue1" />
+		<EventExtendedData name="ExtendedData Key2"  datatype="com.kingdee.bos.util.BOSUuid" value="c6668913-0115-1000-e000-0003c0a81395evmd" />
+		<EventExtendedData name="ExtendedData Key3"  datatype="java.sql.TimeStamp" value="2007-10-22 14:29:09.726" />
+		<EventExtendedData name="ExtendedData Key4"  datatype="com.kingdee.bos.dao.ormapping.ObjectUuidPK" value="b1b88122-0115-1000-e000-204980000013WFACTDEF" />
+		<EventExtendedData name="ExtendedData Key5"  datatype="com.kingdee.bos.dao.IObjectValue" value="rO0ABXNyADZjb20ua2luZ2RlZS5ib3MuZXZlbnQucmVwb3NpdG9yeS5EYXRhQ2hhbmdlT2JqZWN0VmFsdWXKEcSEm8zImgIAAUwAB3BrRmllbGR0ABJMamF2YS9sYW5nL1N0cmluZzt4cgAnY29tLmtpbmdkZWUuYm9zLmRhby5BYnN0cmFjdE9iamVjdFZhbHVl5z4Wsh5x+zUCAARaAAhpc0xvYWRlZEwADWRlZmF1bHRMb2NhbGV0ABJMamF2YS91dGlsL0xvY2FsZTtMAA1leHRlbmRlZFByb3BzdAAPTGphdmEvdXRpbC9NYXA7TAAHcGtGaWVsZHEAfgABeHIAImNvbS5raW5nZGVlLnV0aWwuUHJvcGVydHlDb250YWluZXL7CfMAMHTIVgIAAUwABnZhbHVlc3EAfgAEeHBzcgAmY29tLmtpbmdkZWUudXRpbC5Tb3J0ZWRTdHJpbmdPYmplY3RNYXDb3RHQbkmdAQIAA0kABHNpemVbAARrZXlzdAATW0xqYXZhL2xhbmcvU3RyaW5nO1sABnZhbHVlc3QAE1tMamF2YS9sYW5nL09iamVjdDt4cAAAAAF1cgATW0xqYXZhLmxhbmcuU3RyaW5nO63SVufpHXtHAgAAeHAAAAAedAAGcGFyYW1zcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHB1cgATW0xqYXZhLmxhbmcuT2JqZWN0O5DOWJ8QcylsAgAAeHAAAAAedXEAfgAOAAAAAnNyACdjb20ua2luZ2RlZS5ib3MuZXZlbnQuRXZlbnRFeHRlbmRlZERhdGHh+Lh7H9sJTgIAA0wACGRhdGFUeXBldAAlTGNvbS9raW5nZGVlL2Jvcy9ldmVudC9FdmVudERhdGFUeXBlO0wABG5hbWVxAH4AAUwABXZhbHVldAASTGphdmEvbGFuZy9PYmplY3Q7eHBzcgAjY29tLmtpbmdkZWUuYm9zLmV2ZW50LkV2ZW50RGF0YVR5cGW5ywQeNqFP6QIAAHhyACBjb20ua2luZ2RlZS51dGlsLmVudW0uU3RyaW5nRW51bRIMcL1Iw/gzAgABTAAGc1ZhbHVlcQB+AAF4cgAaY29tLmtpbmdkZWUudXRpbC5lbnVtLkVudW3iPM7TGDBKyQIAAUwABWlOYW1lcQB+AAF4cHQAEFRZUEVfT0JKRUNUVkFMVUV0ACBjb20ua2luZ2RlZS5ib3MuZGFvLklPYmplY3RWYWx1ZXQAEUV4dGVuZGVkRGF0YSBLZXk1cQB+AAZzcgARamF2YS5sYW5nLkJvb2xlYW7NIHKA1Zz67gIAAVoABXZhbHVleHAAcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHAAc3IAEGphdmEudXRpbC5Mb2NhbGV++BFgnDD57AIABEkACGhhc2hjb2RlTAAHY291bnRyeXEAfgABTAAIbGFuZ3VhZ2VxAH4AAUwAB3ZhcmlhbnRxAH4AAXhw/////3QAAHQAAmwycQB+ACBwcHQAJGM2NjY4OTEzLTAxMTUtMTAwMC1lMDAwLTAwMDRjMGE4MTM5NQ==" />
+		<EventExtendedData name="ExtendedData Key6"  datatype="java.lang.String[]" value="123,哈哈,this is 3,wieie" />
+		<EventExtendedData name="ExtendedData Key7"  datatype="java.lang.Boolean" value="true" />
+		<EventExtendedData name="ExtendedData Key8"  datatype="java.lang.Byte[]" value="116,104,105,115,32,105,115,32,97,32,98,121,116,101,115,32,97,114,114,97,121" />
+		<EventExtendedData name="ExtendedData Key9"  datatype="java.lang.Character" value="h" />
+		<EventExtendedData name="ExtendedData Key10"  datatype="java.sql.Date" value="2007-10-22" />
+		<EventExtendedData name="ExtendedData Key11"  datatype="java.lang.Double" value="1.2190822828929218" />
+		<EventExtendedData name="ExtendedData Key12"  datatype="java.lang.Integer[]" value="2123,532,645" />
+		<EventExtendedData name="ExtendedData Key13"  datatype="java.sql.Time" value="14:29:11" />
+	</EventExtendedDatas>
+</CommonEvent>

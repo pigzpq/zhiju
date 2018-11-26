@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BIReport>
+	<Cube ref="public:demo.cube" caption="公共:销售数据立方体" />
+	<DataSource ref="public:demo.ds" caption="公共:销售数据源" />
+	<MdxQuery name="query1" caption="" title="" memoHead="" memoTail="" perPageRows="">with 
+  member [Product].total as
+    '[Product].[V$All]',caption='合计',
+    formatString="#,##0.00",
+    color=
+    "mdx:case [measures].currentmember when [measures].[sales_dollars] then iif([measures].currentmember.value&gt;${maxValue}$,'red',iif([measures].currentmember.value&gt;${minValue}$,'green','blue')) else 'black' end"
+		select State.levels(0).members*measures.members on columns,
+			non empty {Product.levels(0).members,[Product].total} on rows 
+		from sales
+	</MdxQuery>
+	<WorksheetComponent name="ws001" caption="" mdxQuery="query1" showSlicer="true" />
+	<FilterComponent name="filter" caption="过滤器">
+		<FilterItem type="input" dataType="number" caption="好(红色) &gt; " column="" operator="EQ" required="true" defaultValue="50000" varname="maxValue" />
+		<FilterItem type="input" dataType="string" caption="差(蓝色) &lt; " column="" operator="EQ" required="true" defaultValue="10000" varname="minValue" />
+	</FilterComponent>
+</BIReport>
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Meta>
+	<Element name="demo_worksheet_chart.olaprpt" caption="产品地区销售情况分析(图表)" />
+	<Element name="demo_worksheet.olaprpt" caption="产品地区销售情况分析(单表)" />
+	<Element name="demo_chart.olaprpt" caption="产品地区销售情况分析(单图)" />
+	<Element name="demo_worksheet_chart2.olaprpt" caption="产品地区销售情况分析(图)(显示数据)" />
+</Meta>
+

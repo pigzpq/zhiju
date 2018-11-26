@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<Title>2.4.2</Title>
+</HEAD>
+<BODY>
+<P class=MsoNormalIndent style="MARGIN: 1pt 0cm">数据绑定主要分为两种类型：查询类界面的数据绑定和编辑类界面的数据绑定。</P>
+<P class=MsoNormalIndent style="MARGIN: 1pt 0cm"><SPAN lang=EN-US>&nbsp;<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 1pt 0cm">对于查询类界面，数据绑定是一个从<SPAN lang=EN-US>Query对象到KDTable的单向过程。通常在设计期定义完绑定关系后，不会在代码中再关注绑定问题。相关方法是：</SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 1pt 0cm 1pt 42pt; TEXT-INDENT: -21pt; mso-char-indent-count: 0; mso-char-indent-size: 0cm; mso-list: l1 level1 lfo2; tab-stops: list 42.0pt"><SPAN lang=EN-US>1.<SPAN style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN>由<SPAN lang=EN-US>KDTable的setFormatXML方法完成列的定义</SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 1pt 0cm 1pt 42pt; TEXT-INDENT: -21pt; mso-char-indent-count: 0; mso-char-indent-size: 0cm; mso-list: l1 level1 lfo2; tab-stops: list 42.0pt"><SPAN lang=EN-US>2.<SPAN style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN>由<SPAN lang=EN-US>KDTable的putBindContents传递绑定关系</SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 1pt 0cm 1pt 42pt; TEXT-INDENT: -21pt; mso-char-indent-count: 0; mso-char-indent-size: 0cm; mso-list: l1 level1 lfo2; tab-stops: list 42.0pt"><SPAN lang=EN-US>3.<SPAN style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN>在<SPAN lang=EN-US>KDTalbe的doRequestRowSet事件中完成数据的获取与显示 </SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 1pt 0cm; mso-char-indent-count: 0; mso-char-indent-size: 0cm"><SPAN lang=EN-US>&nbsp;<o:p></o:p></SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 1pt 0cm; mso-char-indent-count: 0; mso-char-indent-size: 0cm">对于编辑类界面，由<SPAN lang=EN-US>loadFields和storeFields方法定义了Entity对象与界面控件双向的绑定关系。如果对象是聚合类型的数据（例如单据）并选择KDTable显示单据体，则进一步由loadLineFields和storeLineFields定义了单据行与KDTable的绑定关系。如果在BOS Studio中定义绑定关系，那么这些方法会由BOS自动生成。</SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 1pt 0cm; mso-char-indent-count: 0; mso-char-indent-size: 0cm"><SPAN style="COLOR: blue">注意：不管是完全不使用<SPAN lang=EN-US>BOS Studio来定义绑定关系，还是只有部分控件使用BOS Studio定义了绑定关系，你都需要重载这些方法，并通过手工编码来把所有绑定关系补充完整。这是因为超类依赖于这些方法来管理绑定关系。<o:p></o:p></SPAN></SPAN></P>
+<P class=MsoNormalIndent style="BACKGROUND: #e0e0e0; MARGIN: 1pt 0cm; mso-char-indent-count: 0; mso-char-indent-size: 0cm">示例：</P>
+<P class=MsoNormalIndent style="BACKGROUND: #e0e0e0; MARGIN: 1pt 0cm; mso-char-indent-count: 0; mso-char-indent-size: 0cm">假设币别编辑界面没有为<SPAN lang=EN-US>isoCode在设计期定义绑定关系，那么需要补充定义：</SPAN></P>
+<P class=MsoNormalIndent style="BACKGROUND: #e0e0e0; MARGIN: 1pt 0cm; mso-char-indent-count: 0; mso-char-indent-size: 0cm"><SPAN lang=EN-US>public void loadFields()</SPAN></P>
+<P class=MsoNormalIndent style="BACKGROUND: #e0e0e0; MARGIN: 1pt 0cm; mso-char-indent-count: 0; mso-char-indent-size: 0cm"><SPAN lang=EN-US>{</SPAN></P>
+<P class=MsoNormalIndent style="BACKGROUND: #e0e0e0; MARGIN: 1pt 0cm; mso-char-indent-count: 0; mso-char-indent-size: 0cm"><SPAN lang=EN-US><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp; </SPAN>super.loadFields();</SPAN></P>
+<P class=MsoNormal style="BACKGROUND: #e0e0e0; MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: left; mso-layout-grid-align: none" align=left><SPAN lang=EN-US style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt"><SPAN style="mso-tab-count: 2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>// editData允许强类型访问<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="BACKGROUND: #e0e0e0; MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: left; mso-layout-grid-align: none" align=left><SPAN lang=EN-US style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt"><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp; </SPAN><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp; </SPAN>txtIsoCode.setText(editData.getIsoCode());<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="BACKGROUND: #e0e0e0; MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: left; mso-layout-grid-align: none" align=left><SPAN lang=EN-US style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt"><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp; </SPAN>}<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="BACKGROUND: #e0e0e0; MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: left; mso-layout-grid-align: none" align=left><SPAN lang=EN-US style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt">&nbsp;<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="BACKGROUND: #e0e0e0; MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: left; mso-layout-grid-align: none" align=left><SPAN lang=EN-US style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt"><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp; </SPAN>public void storeFields()<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="BACKGROUND: #e0e0e0; MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: left; mso-layout-grid-align: none" align=left><SPAN lang=EN-US style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt"><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp; </SPAN>{<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="BACKGROUND: #e0e0e0; MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: left; mso-layout-grid-align: none" align=left><SPAN lang=EN-US style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt"><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp; </SPAN><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp; </SPAN>super.storeFields();</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="BACKGROUND: #e0e0e0; MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: left; mso-layout-grid-align: none" align=left><SPAN lang=EN-US style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt"><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp; </SPAN><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp; </SPAN>editData.setIsoCode(txtIsoCode.getText());<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="BACKGROUND: #e0e0e0; MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: left; mso-layout-grid-align: none" align=left><SPAN lang=EN-US style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: 宋体; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt"><SPAN style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp; </SPAN>}<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US><FONT face="Times New Roman">&nbsp;<o:p></o:p></FONT></SPAN></P>
+
+</BODY>
+</HTML>

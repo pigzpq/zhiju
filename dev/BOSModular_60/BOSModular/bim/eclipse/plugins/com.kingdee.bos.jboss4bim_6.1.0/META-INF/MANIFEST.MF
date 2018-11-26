@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Jboss4BIM Plug-in
+Bundle-SymbolicName: com.kingdee.bos.jboss4bim;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Vendor: Kingdee Software (China) Company Ltd.,
+Bundle-ActivationPolicy: lazy

@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="../../../../book.css" CHARSET="GB2312" TYPE="text/css">
+<TITLE>
+怎樣建立多個表達式之間的邏輯關係
+</TITLE>
+
+<link rel="stylesheet" type="text/css" HREF="../../../../book.css">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H3>怎樣建立多個表達式之間的邏輯關係</H3>
+<p>怎樣建立多個表達式之間的邏輯關係？即如何設置formular String（mask String）？</p>
+<p>在BOS中，經常需要對多個表達式進行邏輯操作，比如，BOS Studio中，當一個過濾條件有兩個表達式時（假設 field1 > a 與 field2 > b）,怎樣描述這些表達式之間的邏輯關係？再比如，構造一個EntityViewInfo，傳給getCollection, 其中有多個filterItemInfo, mask關係如何設置？這種情況下BOS是通過它們的formular String 或者 mask String設置的。比如，為了表達出 field1 > a and field2 > b，只需要輸入formular String 為：(#0 and #1) 即可。請注意，序號從0開始。</p>
+
+
+<p align="center"><a href="../../../../notices.html"><img border="0" src="../../../../copyright.gif"></a></p>
+<p></p>
+</BODY>
+</HTML>

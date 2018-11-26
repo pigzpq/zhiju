@@ -1,0 +1,102 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>Google 地图 </title>
+    <script src="http://ditu.google.com/maps?file=api&amp;v=2.s&amp;key=ABQIAAAAcsewCwfZpWREgxvSOivDdBRzz5Nv93rCZdOUJqqwvgfFlFg-ehSlgpW1uPbSm47bm_AuSEy5H13XAw&hl=zh-CN" type="text/javascript"></script>
+  </head>
+ <body> 
+    <script type="text/javascript">
+    function initialize() 
+    {
+		if (GBrowserIsCompatible()) 
+		{
+		  // var options = {size:GSize(400, 300), backgroundColor:"#FF0000"};
+		   
+           var map = new GMap2(document.getElementById("map_canvas")); //新建一个地图
+		   map.setMapType(G_NORMAL_MAP);//定义地图类型，如卫星或平面地图
+		   map.setCenter(new GLatLng(34.24132422972854, 108.93768310546875), 4); //定义地图中心坐标
+		   map.enableScrollWheelZoom()//启用使用鼠标滚轮缩放
+		   map.enableDoubleClickZoom() //启用双击缩放地图
+		   //map.disableDragging();   //禁止拖动
+		   //map.addControl(new GScaleControl());    //创建比例工具
+		   //map.addControl(new GSmallZoomControl()); //创建缩放工具
+		   map.addControl(new GLargeMapControl()); //创建带有可在四个方向平移、放大、缩小的按钮以及缩放滑块的控件。
+		   map.addControl(new MyControl());//添加自定义组件
+		   //map.addControl(new GMapTypeControl());//地图类型按钮组件
+		   //map.addControl(new GMenuMapTypeControl());//地图类型下拉框组件
+		   map.addControl(new GOverviewMapControl());//缩略图组件
+		   //map.addControl(new GScaleControl());//缩放彼列组件
+		   map.enableGoogleBar();//搜索组件
+		   //new GKeyboardHandler(map);//支持键盘操作
+		   //加入标记图标
+		   var blueIcon = new GIcon(G_DEFAULT_ICON); //新建一个图标
+		   blueIcon.image = "icon/icon.png"; //定义图标地址
+		   blueIcon.iconSize=new GSize(32, 32); //定义图标大小
+		   blueIcon.shadow = "icon/icon.png"; //定义图标地址
+		  
+		   markerOptions = { icon:blueIcon };// 设置 GMarkerOptions 对象
+		   map.openInfoWindow(map.getCenter(),"<h1>文字</h1>"); //地图载入时打开信息窗口
+		
+		   point=new GLatLng(22.541118,114.089971)   //经纬度
+		   var marker = new GMarker(point, markerOptions); //新建一个标记
+		   map.addOverlay(marker) //叠加一个层
+		
+		   GEvent.addListener(marker, "click", function() {
+		           marker.openInfoWindowHtml("<span style='font-size:12px'>marker</span><br><img src=http://www.dyx-elec.com/101260/Image/Web/2>");
+		         });//加入一个点击事件，点击就打开信息窗口
+		
+		   GEvent.addListener(map, "move", function() {
+		           document.getElementById("zoomnum").innerHTML=map.getCenter();
+		         });//加入一个地图移动就出发事件
+		
+		   point=new GLatLng(22.54101913812432, 114.08801794052124)   //经纬度
+		   var marker1 = new GMarker(point, markerOptions); //新建一个标记
+		   map.addOverlay(marker1) //叠加一个层
+		   GEvent.addListener(marker1, "click", function() {
+		           marker.openInfoWindowHtml("<span style='font-size:12px'>marker1</span><br><img src=http://www.dyx-elec.com/101260/Image/Web/2>");
+		         });//探出提示
+		    GEvent.addListener(map, "click", function() {
+		           document.getElementById("zoomnum").innerHTML=map.getCenter();
+		         });//取得地图中心坐标  
+		    GEvent.addListener(map,"mousemove",function(event) 
+              {
+	              mouseMoveLat=event.y;
+	              mouseMoveLng=event.x
+              }); //取得鼠标经纬度
+		            
+		  //随即添加标记    
+		  var bounds = map.getBounds(); 
+		  var southWest = bounds.getSouthWest(); 
+		  var northEast = bounds.getNorthEast(); 
+		  var lngSpan = northEast.lng() - southWest.lng(); 
+		  var latSpan = northEast.lat() - southWest.lat(); 
+		  for (var i = 0; i < 10; i++) { 
+		    var point = new GLatLng(southWest.lat() + latSpan * Math.random(), 
+		        southWest.lng() + lngSpan * Math.random()); 
+		    map.addOverlay(new GMarker(point)); 
+		  } 
+		   
+      }
+    }
+    function MyControl(){}
+	MyControl.prototype = new GControl();
+	MyControl.prototype.initialize = function(map){
+	    this.map = map;
+	    var container = map.getContainer();
+	    var label = document.createElement("my_control");
+	    container.appendChild(label);
+	    label.innerHTML ='<table width="200" bgcolor="#E6E6E6"><tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr></table>';
+	    return label;
+	}
+	MyControl.prototype.getDefaultPosition = function(){
+	    return new GControlPosition(G_ANCHOR_TOP_RIGHT, new GSize(0, 0));
+	}
+</script>
+</head>
+<body onload="initialize()" onunload="GUnload()">
+<div id="my_control" ></div>
+<div id="map_canvas" style="width: 500px; height: 500px;"></div>
+<hr>
+获取中心经纬度:<span id=zoomnum></span>
+</body>
+</html>

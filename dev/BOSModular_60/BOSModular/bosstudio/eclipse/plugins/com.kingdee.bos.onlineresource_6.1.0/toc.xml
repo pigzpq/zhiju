@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="com.kingdee.bos.studio.toc"?>
+<!-- ============================================================================= -->
+<!-- Define the top level topics                                                   -->
+<!-- ============================================================================= -->
+
+<toc label="金蝶BOS 在线帮助资源" topic="html/welcome_first.html">
+	<topic label="BOS知识库" href="html/bosrepository.htm">
+		<link toc="bosrepository.xml" />
+	</topic>
+	<topic label="BOS应用FAQ" href="html/bosfaq.htm">
+		<link toc="bosfaq.xml" />
+	</topic>
+	<topic label="相关连接" href="html/relativelink.htm">
+		<link toc="relativelink.xml" />
+	</topic>
+	<topic label="版权声明" href="html/notices.html"/>
+	
+</toc>

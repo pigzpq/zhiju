@@ -1,0 +1,103 @@
+<html>
+<head>
+	<meta http-equiv="Content-Language" content="zh-cn">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>拆分单元格</title>
+	<STYLE>
+	.dialog
+	{
+		font-size:9pt;
+	}
+	</STYLE>
+	<script src="../js/sue-main.js"></script>
+	<script src="../js/sue-config.js"></script>
+</head>
+<body topmargin="10" leftmargin="10" bottommargin="5" rightmargin="10" onkeydown="doKeyDown()">
+	<table border="0" width="100%" class="dialog" cellPadding="0" cellSpacing="0">
+	  <tr height="25">
+	    <td>列数：
+			<SELECT id="ctrlColNums" size="1" style="width:40">
+				<OPTION value="1">1</OPTION>
+				<OPTION value="2" selected="true">2</OPTION>
+				<OPTION value="3">3</OPTION>
+				<OPTION value="4">4</OPTION>
+				<OPTION value="5">5</OPTION>
+			</SELECT>
+		</td>
+	  </tr>
+	  <tr height="25">
+	    <td>行数：
+			<SELECT id="ctrlRowNums" size="1" style="width:40">
+				<OPTION value="1">1</OPTION>
+				<OPTION value="2">2</OPTION>
+				<OPTION value="3">3</OPTION>
+				<OPTION value="4">4</OPTION>
+				<OPTION value="5">5</OPTION>
+			</SELECT>
+	    </td>
+	  </tr>
+	  <tr height="50"><td><div id="txtPrompt"></td></tr>
+	  <tr>
+		<td style="text-align:right;padding:0px">
+			<button id="btnOK" class="portal_button" onclick="return btnOK_onclick()" style="margin-right:10px">确定</button>
+			<button id="btnCancel" class="portal_button" onclick="return btnCancel_onclick()">取消</button>
+		</td>
+	  </tr>
+	</table>
+</body>
+
+<script language="javascript">
+var _oParams;
+
+function document.body.onload()
+{
+	_oParams = window.frameElement.$param;
+}
+
+function btnOK.onclick()
+{
+	var iRowNums = parseInt(ctrlRowNums.value);
+	var iColNums = parseInt(ctrlColNums.value);
+	if(!bSecret)//留有后门，可不做校验
+	{
+		var oLayoutTable = _oParams.oLayoutTable;
+		var maxRows = _oParams.oLimited.iMaxRows;
+		//拆分，把自己1变成N，只插入了N-1，所以要减1
+		if(iRowNums + oLayoutTable.iRows - 1 > maxRows)
+		{
+			alert("表格已经有" + oLayoutTable.iRows 
+				+ "行，拆分后不能使总行数超过" + maxRows + "行。");
+			return;
+		}
+		var maxCols = _oParams.oLimited.iMaxCols;
+		if(iColNums + oLayoutTable.iCols - 1 > maxCols)
+		{
+			alert("表格已经有" + oLayoutTable.iCols 
+				+ "列，拆分后不能使总列数超过" + maxCols + "列。");
+			return;
+		}
+	}
+
+	_oParams.iRowNums = iRowNums;
+	_oParams.iColNums = iColNums
+	
+	_oParams.dialog.closeDialog( true );
+}
+
+function btnCancel.onclick()
+{
+	_oParams.dialog.closeDialog( false );
+}
+
+var bSecret;
+function doKeyDown()
+{
+	//[ctrl]+[shift]+[alt]+[s]
+	if(event.ctrlKey && event.shiftKey && event.altKey && event.keyCode == 83)
+	{
+		bSecret = true;
+		txtPrompt.innerText = "（开启不校验状态）";
+	}
+}
+</script>
+</html>

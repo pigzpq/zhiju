@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.draw2d.sdk"
+      label="%featureName"
+      version="3.4.0.v20080115-677-8082A5655G3B9B8x422_274A"
+      provider-name="%providerName"
+      plugin="org.eclipse.draw2d.source"
+      image="eclipse_update_120.jpg">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <url>
+      <update label="%updateSiteName" url="http://download.eclipse.org/tools/gef/update-site/releases/site.xml"/>
+      <discovery label="%updateSiteName" url="http://download.eclipse.org/tools/gef/update-site/releases/site.xml"/>
+   </url>
+
+   <includes
+         id="org.eclipse.draw2d"
+         version="3.4.0.v20080115-33-7w3119163_"/>
+
+   <includes
+         id="org.eclipse.draw2d.source"
+         version="3.4.0.v20080115-33-7w3119163_"/>
+
+</feature>

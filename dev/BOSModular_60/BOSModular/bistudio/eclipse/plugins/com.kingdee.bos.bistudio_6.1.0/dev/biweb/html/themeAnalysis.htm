@@ -1,0 +1,12 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>金蝶BI平台 - 主题分析</title>	
+	</head>
+	<frameset id="frames" cols="250px,11px,*" frameborder="0">
+		<frame id="tree" src="tree.jsp?treeType=configReport" scrolling="no" noresize="noresize"></frame>
+		<frame id="scaler" src="scaler.htm" scrolling="no" noresize="noresize"></frame>
+		//修改：处理目录发布为Portlet后session的问题（处理主题分析与Portlet目录在report.jsp中的兼容） 2010-03-02 bruce_sha
+		<frame id="bireport" src="report.jsp?from=" scrolling="no" noresize="noresize"></frame>
+	</frameset>
+</html>

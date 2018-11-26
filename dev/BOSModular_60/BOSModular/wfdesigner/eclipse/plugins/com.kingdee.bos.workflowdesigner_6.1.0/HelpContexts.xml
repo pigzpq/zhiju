@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contexts>
+	<context id="活动属性基本">
+		<description>活动属性-基本页面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活动属性-基本页面"/>
+	</context>
+	<context id="模式">
+		<description>活动属性-模式页面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活动属性-模式页面"/>
+	</context>
+	<context id="消息">
+		<description>活动属性-消息页面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活动属性-消息页面"/>
+	</context>
+	<context id="后置脚本">
+		<description>活动属性-后置脚本页面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活动属性-后置脚本页面"/>
+	</context>
+	<context id="最后期限">
+		<description>活动属性-最后期限页面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活动属性-最后期限页面"/>
+	</context>
+	<context id="参与人">
+		<description>活动属性-参与人页面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活动属性-参与人页面"/>
+	</context>
+	<context id="任务">
+		<description>活动属性-任务页面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活动属性-任务页面"/>
+	</context>
+	<context id="流程绑定">
+		<description>活动属性-流程绑定页面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活动属性-流程绑定页面"/>
+	</context>
+	<context id="参与人变量">
+		<description>活动属性-参与人变量页面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活动属性-参与人变量页面"/>
+	</context>
+	<context id="关系">
+		<description>活动属性-关系页面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活动属性-关系页面"/>
+	</context>
+	<context id="流程发起人">
+		<description>活动属性-流程发起人页面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活动属性-流程发起人页面"/>
+	</context>
+	<context id="活动执行人">
+		<description>活动属性-活动执行人页面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活动属性-活动执行人页面"/>
+	</context>
+	<context id="组织单元">
+		<description>活动属性-组织单元页面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活动属性-组织单元页面"/>
+	</context>
+	<context id="职位">
+		<description>活动属性-职位页面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活动属性-职位页面"/>
+	</context>
+	<context id="职员">
+		<description>活动属性-职员页面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活动属性-职员页面"/>
+	</context>
+	<context id="流程管理员">
+		<description>活动属性-流程管理员页面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活动属性-流程管理员页面"/>
+	</context>
+	<context id="职位关系">
+		<description>活动属性-职位关系页面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活动属性-职位关系页面"/>
+	</context>
+	<context id="职员关系">
+		<description>活动属性-职员关系页面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活动属性-职员关系页面"/>
+	</context>
+	<context id="任意人">
+		<description>活动属性-任意人页面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活动属性-任意人页面"/>
+	</context>
+	<context id="subSystemView">
+		<description>视图-子系统分类流程视图</description>
+		<topic href="help/refrence/view-intro.htm" label="视图-子系统分类流程视图"/>
+	</context>
+	<context id="wfConnectionView">
+		<description>视图-连接视图</description>
+		<topic href="help/refrence/login.htm" label="视图-连接视图"/>
+	</context>
+	<context id="modelValidateView">
+		<description>视图-流程校验视图</description>
+		<topic href="help/refrence/view-intro.htm" label="视图-流程校验视图"/>
+	</context>
+	<context id="functionSelectionView">
+		<description>视图-业务功能视图</description>
+		<topic href="help/refrence/view-intro.htm" label="视图-业务功能视图"/>
+	</context>
+	<context id="consoleView">
+		<description>视图-控制台视图</description>
+		<topic href="help/refrence/view-intro.htm" label="视图-控制台视图"/>
+	</context>
+</contexts>

@@ -1,0 +1,111 @@
+<html>
+<head>
+	<meta http-equiv="Content-Language" content="zh-cn">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="../js/sue-main.js"></script>
+	<script src="../js/sue-ui.js"></script>
+	<script src="../js/sue-config.js"></script>
+	<script src="../js/bi.js"></script>
+	<SCRIPT src="../js/bi_tree.js"></SCRIPT>
+	<title>选取资源</title>
+	<STYLE>
+	.dialog
+	{
+		font-size:9pt;
+	}
+	</STYLE>
+</head>
+<body topmargin="10" leftmargin="10" bottommargin="5" rightmargin="10">
+	<table border="0" width="100%" height="100%" class="dialog" cellPadding="0" cellSpacing="0">
+	  <tr>
+	    <td width="100%" height="100%" style="padding:10" valign="top">
+		  	<TABLE border="0" cellPadding="0" cellSpacing="0" width="100%" height="100%" style="font-size:9pt">
+				<TR height="26" valign="top">
+					<TD id="titleOwner"/>
+				</TR>
+				<TR>
+					<TD>
+						<DIV id="selectorOwner" style="width:100%; height:100%"></DIV>
+					</TD>
+				</TR>
+			</TABLE>
+		</td>
+	  </tr>
+	  <tr>
+	    <td style="text-align:right">
+	    	<button id="btnOK" class="portal_button" onclick="return btnOK_onclick()" style="margin-right:10px">确定</button>
+	       	<button id="btnCancel" class="portal_button" onclick="return btnCancel_onclick()">取消</button>
+	    </td>
+	  </tr>
+	</table>
+</body>
+
+<script language="javascript">
+var _oParams;
+var _oSelector;
+var _sTypePrompt;
+
+function document.body.onload()
+{
+	_oParams = window.frameElement.$param;
+	var root;
+
+	if(_oParams.sType == "piece")
+	{
+		titleOwner.innerText = "请选择片段来源：";
+		_sTypePrompt = "片段";
+		_oSelector = new PieceDialog(_oParams.servletURL);
+		root = _oSelector.getSelectDiv();
+		_.copyStyle( root, "border,padding,backgroundColor", [ "none", "0px", "#e0eaf5" ] );
+		document.getElementById("selectorOwner").appendChild(root);
+		_oSelector.regDblClick(btnOK.onclick);
+	}
+	else if(_oParams.sType == "picture")
+	{
+		titleOwner.innerText = "请选择图片来源：";
+		_sTypePrompt = "图片";
+		_oSelector = new ResourceDialog(_oParams.servletURL);
+		root = _oSelector.getSelectDiv();
+		_.copyStyle( root, "border,padding,backgroundColor", [ "none", "0px", "#e0eaf5" ] );
+		document.getElementById("selectorOwner").appendChild(root);
+		_oSelector.regDblClick(btnOK.onclick);
+	}
+	else
+	{
+		alert("RuntimeException: 错误的类型，检查调用代码！");
+		return;
+	}
+	document.body.focus();
+}
+
+function btnOK.onclick()
+{
+	if(check())
+	{   
+	    if(_oParams.sType == "piece"){
+	    	_oParams.sCaption = _oSelector.getSelectedCaption();
+	    }else if(_oParams.sType == "picture"){
+	        _oParams.sCaption=_oSelector.getSelectedCaption();
+	    }
+		_oParams.sUri = _oSelector.getSelected();
+		_oParams.dialog.closeDialog( true );
+	}
+}
+
+function btnCancel.onclick()
+{
+	_oParams.dialog.closeDialog( false );
+}
+
+function check()
+{
+	if(!_oSelector.getSelected())
+	{
+		var sPrompt = '请选择' + _sTypePrompt + '来源。';
+		alert(sPrompt);
+		return false;
+	}
+	return true;
+}
+</script>
+</html>

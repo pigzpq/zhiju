@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="获取指定职位名称的职员列表">
+    <script><![CDATA[com.kingdee.eas.basedata.person.IPerson personFactory = com.kingdee.eas.basedata.person.PersonFactory.getLocalInstance(__bosContext);
+com.kingdee.eas.basedata.org.AdminOrgUnitInfo unitInfo = personFactory.getPrimaryAdminOrgUnit(com.kingdee.bos.util.BOSUuid.read(personId));
+com.kingdee.eas.basedata.org.IPosition positionFactory = com.kingdee.eas.basedata.org.PositionFactory.getLocalInstance(__bosContext);
+com.kingdee.eas.basedata.org.PositionCollection  positions = positionFactory.getPositionCollection("WHERE adminOrgUnit.id='" + unitInfo.getId() + "'");
+java.util.Set perSet = new java.util.HashSet();
+for (int i=0; i<positions.size(); i++) {
+	com.kingdee.eas.basedata.org.PositionInfo pos = positions.get(i);
+	if (positionName.equals(pos.getName())) {
+		com.kingdee.eas.basedata.person.PersonCollection personCol = positionFactory.getAllPersons(pos.getId());
+		for (int j=0; j<personCol.size(); j++) {
+			perSet.add(personCol.get(j).getId().toString());
+		}
+	}
+}
+java.lang.String[] persons = new java.lang.String[perSet.size()];
+persons = perSet.toArray(persons);
+return persons;]]></script>
+    <description><![CDATA[指定一个人员的ID和职位名称,查找该人员相同组织下的该职位对象.
+如果有该职位,则返回该职位下所有人员的ID列表.
+实际应用:定义三个流程变量:personId (内码BOID); positionName(字符串);persons(外部数据类型)
+将personId与对应的职员ID相关联,并设positionName的初始值为职位名称(如部门经理).
+然后在函数节点中引用本函数,并将返回值设给persons,在后面的节点中就可以将参与人变量设为persons]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>PERFORMER</type>
+      <array>false</array>
+      <description><![CDATA[返回相应职位中所有职员ID]]></description>
+    </return>
+    <parameter>
+      <name>personId</name>
+      <type>BOID</type>
+      <array>false</array>
+      <description><![CDATA[职员ID]]></description>
+    </parameter>
+    <parameter>
+      <name>positionName</name>
+      <type>STRING</type>
+      <array>false</array>
+      <description><![CDATA[职位名称]]></description>
+    </parameter>
+  </function>
+</functions>
+

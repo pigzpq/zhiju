@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BIReport>
+  <Cube ref="public:demo.cube" caption="公共:销售数据立方体"/>
+  <DataSource ref="public:demo_filter.ds" caption="公共:销售数据源(过滤专用)"/>
+  <MdxQuery name="query1" caption="产品地区销售分析" title="产品销售分析(${filter_country}$)" memoHead="产品分类:${filter_Category}$" memoTail="截止日期:${filter_date}$" perPageRows="20">select State.levels(0).members*measures.members on columns, non empty Product.levels(0).members on rows from sales</MdxQuery>
+  <WorksheetComponent name="ws001" caption="表格" mdxQuery="query1" showSlicer="true" canMoveDimension="true" showColumnDimensionInSlicer="true" showRowDimensionInSlicer="true" showColumnHeader="true"/>
+  <ChartComponent name="chart001" caption="图形" mdxQuery="query1" chartTitle="产品/地区销售情况图" showSlicer="false" showChangeType="false" chartHeight="400" chartWidth="400" showLegend="true" legendPosition="3" categoryLabelAlign="Auto" dataShow="1" chartType="Bar" showPercentFormatForValue="false" showPercentFormatForTooltip="false" radarTargetColumnIndex="0" radarMinColumnIndex="1" showItemData="false" canMoveDimension="true" showColumnDimensionInSlicer="true" showRowDimensionInSlicer="true"/>
+  <FilterComponent name="filter" caption="过滤器">
+    <FilterItem type="input" dataType="date" caption="截止日期" column="TimeTable.Month_Date,SalesFact.sales_date" operator="LE" required="true" defaultValue="" varname="filter_date" globalParam="g_end_date"/>
+    <FilterItem type="sql" dataType="string" caption="国家" column="State.country" operator="IN" required="true" defaultValue="USA" varname="filter_country" globalParam="g_country" >
+      <SqlInfo captionColumn="Country" valueColumn="country" table="StateFilterItem" parentColumn="" childColumn="" isLeafColumn="" orderBy="" orderMethod="asc"/>
+    </FilterItem>
+    <FilterItem type="list" dataType="string" caption="产品分类" column="Product.Category" operator="IN" required="true" defaultValue="Bread" varname="filter_Category" globalParam="g_product">
+      <ListItem caption="Bread" value="Bread"/>
+      <ListItem caption="Meat" value="Meat"/>
+      <ListItem caption="Dairy" value="Dairy"/>
+    </FilterItem>
+    <FilterItem type="sql" dataType="number" caption="选择职员" column="Employee.Employee_ID" operator="IN" required="true" defaultValue="" varname="" globalParam="g_employee" >
+      <SqlInfo captionColumn="Employee_Name" valueColumn="Employee_ID" table="Employee" parentColumn="Manager_ID" childColumn="Employee_ID" isLeafColumn="" orderBy="" orderMethod="asc"/>
+    </FilterItem>
+  </FilterComponent>
+  <Options>
+    <Molap value="false"/>
+  </Options>
+</BIReport>

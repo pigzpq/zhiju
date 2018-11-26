@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<introContent>
+  <!-- 
+
+-->
+  <page alt-style="css/root_swt.properties" style="css/root.css" id="root" style-id="page">
+    <title style-id="intro-header">欢迎使用BOS Studio v5.0</title>
+    <group id="links-background">
+      <group id="page-links">
+        <link label="概述" url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.kingdee.bos.studio.doc/html/guide/int_bosstudio.htm" id="overview" style-id="left">
+          <img id="overview_img" style-id="content-img" src="css/graphics/icons/etool/overview72.gif" alt="Overview"></img>
+          <text>什么是BOS Studio</text>
+        </link>
+        <link label="打开主透视图" url="http://org.eclipse.ui.intro/runAction?class=com.kingdee.bos.studio.perspective.OpenMainPerspectiveAction&amp;pluginId=com.kingdee.bos.studio" id="samples" style-id="left">
+          <img id="samples_img" style-id="content-img" src="css/graphics/icons/etool/samples72.gif" alt="Samples"></img>
+          <text>点击这里将打开BOS Studio主透视图</text>
+        </link>
+        <link label="创建一个新的solution" url="http://org.eclipse.ui.intro/runAction?class=com.kingdee.bos.studio.wizard.solution.NewSolutionCreationAction&amp;pluginId=com.kingdee.bos.studio" id="tutorials" style-id="left">
+	      <img id="tutorials_img" style-id="content-img" src="css/graphics/icons/etool/tutorials72.gif" alt="Tutorials"></img>
+          <text>一步一步帮助您创建一个新的solution</text>
+        </link>
+        <link label="更多信息" url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.kingdee.bos.studio.doc/welcome_first.html" id="news" style-id="right">
+          <img id="whatsnew_img" style-id="content-img" src="css/graphics/icons/etool/whatsnew72.gif" alt="What&apos;s New"></img>
+          <text>了解BOS Studio的新特性</text>
+        </link>
+      </group>
+    </group>
+    <group id="action-links">
+      <link url="http://org.eclipse.ui.intro/runAction?class=com.kingdee.bos.studio.perspective.OpenMainPerspectiveAction&amp;pluginId=com.kingdee.bos.studio" label="工作台" id="workbench">
+        <img id="workbench_img" style-id="content-img" src="css/graphics/icons/etool/wb48.gif" alt="Go to the workbench"></img>
+        <text>返回工作台</text>
+      </link>
+    </group>
+  </page>
+  
+  <page alt-style="css/standby_swt.properties" style="css/standby_root.css" id="standby" style-id="page">
+		<title style-id="intro-header">欢迎使用BOS Studio v5.0</title>
+		<group id="links-background">
+			<group id="page-links">
+				<link label="概述" url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.kingdee.bos.studio.doc/html/guide/int_bosstudio.htm" id="overview" style-id="left">
+					<text>什么是BOS Studio</text>
+				</link>
+				<link label="打开主透视图" url="http://org.eclipse.ui.intro/runAction?class=com.kingdee.bos.studio.perspective.OpenMainPerspectiveAction&amp;pluginId=com.kingdee.bos.studio" id="samples" style-id="left">                   
+                    <text>点击这里将打开BOS Studio主透视图</text>
+                </link>
+				<link label="创建一个新的solution" url="http://org.eclipse.ui.intro/runAction?class=com.kingdee.bos.studio.wizard.solution.NewSolutionCreationAction&amp;pluginId=com.kingdee.bos.studio" id="tutorials" style-id="left">	      
+                    <text>一步一步帮助您创建一个新的solution</text>
+                </link>
+                <link label="更多信息" url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.kingdee.bos.studio.doc/welcome_first.html" id="news" style-id="right">         
+                    <text>了解BOS Studio的新特性</text>
+                </link>
+			</group>
+		</group>
+	</page>
+  <!-- 
+
+-->
+
+</introContent>

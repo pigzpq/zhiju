@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+<!-- ============================================================================= -->
+<!-- Define topics for the main guide                                              -->
+<!-- ============================================================================= -->
+<toc label="UI">
+	<topic label="KDBizPromptBox" href="html/ui/components/KDBizPromptBox.htm"/>
+	<topic label="KDButton" href="html/ui/components/KDButton.htm"/>	
+	<topic label="KDChart" href="html/ui/components/KDChart.htm"/>
+	<topic label="KDCheckBox" href="html/ui/components/KDCheckBox.htm"/>
+	<topic label="KDComboBox" href="html/ui/components/KDComboBox.htm"/>
+	<topic label="KDContainer" href="html/ui/components/KDContainer.htm"/>
+	<topic label="KDCustomDial" href="html/ui/components/KDCustomDial.htm"/>
+	<topic label="KDDatePicker" href="html/ui/components/KDDatePicker.htm"/>
+	<topic label="KDDial" href="html/ui/components/KDDial.htm"/>
+	<topic label="KDDialog" href="html/ui/components/KDDialog.htm"/>
+	<topic label="KDFormattedTextField" href="html/ui/components/KDFormattedTextField.htm"/>
+	<topic label="KDFrame" href="html/ui/components/KDFrame.htm"/>
+	<topic label="KDInternalFrame" href="html/ui/components/KDInternalFrame.htm"/>
+	<topic label="KDLabel" href="html/ui/components/KDLabel.htm"/>
+	<topic label="KDLabelContainer" href="html/ui/components/KDLabelContainer.htm"/>
+	<topic label="KDLayout" href="html/ui/components/KDLayout.htm"/>
+	<topic label="KDList" href="html/ui/components/KDList.htm"/>
+	<topic label="KDMenuBar" href="html/ui/components/KDMenuBar.htm"/>
+	<topic label="KDMultiLangBox" href="html/ui/components/KDMultiLangBox.htm"/>
+	<topic label="KDPopupMenu" href="html/ui/components/KDPopupMenu.htm"/>
+	<topic label="KDProgressBar" href="html/ui/components/KDProgressBar.htm"/>
+	<topic label="KDPromptBox" href="html/ui/components/KDPromptBox.htm"/>
+	<topic label="KDRadioButton" href="html/ui/components/KDRadioButton.htm"/>
+	<topic label="KDSpinner" href="html/ui/components/KDSpinner.htm"/>
+	<topic label="KDStatusBar" href="html/ui/components/KDStatusBar.htm"/>
+	<topic label="KDTable" href="html/ui/components/KDTable.htm"/>
+	<topic label="KDTextArea" href="html/ui/components/KDTextArea.htm"/>
+	<topic label="KDTextAreaCtrl" href="html/ui/components/KDTextAreaCtrl.htm"/>
+	<topic label="KDTextField" href="html/ui/components/KDTextField.htm"/>
+	<topic label="KDTimePicker" href="html/ui/components/KDTimePicker.htm"/>
+	<topic label="KDToolBar" href="html/ui/components/KDToolBar.htm"/>
+	<topic label="KDTree" href="html/ui/components/KDTree.htm"/>
+	<topic label="KDTreeView" href="html/ui/components/KDTreeView.htm"/>
+	<topic label="KDWorkButton" href="html/ui/components/KDWorkButton.htm"/>
+</toc>

@@ -1,0 +1,250 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Language" content="zh-cn">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script src="../js/sue-main.js"></script>
+		<script src="../js/sue-ui.js"></script>
+		<script src="../js/sue-config.js"></script>
+		<script src="../js/bi.js"></script>
+		<SCRIPT language="JavaScript" src="ctrl.js"></SCRIPT>
+		<title>页面设置</title>
+		<STYLE>
+	.dialog
+	{
+		font-size:9pt;
+	}
+	.disabledTextField
+	{
+		border:1px solid gray;
+		background-color:#EEEEEE
+	}
+	</STYLE>
+	</head>
+	<body topmargin="10" leftmargin="10" bottommargin="5" rightmargin="10">
+		<table border="0" width="100%" height="100%" class="dialog" cellPadding="0" cellSpacing="0">
+			<tr>
+				<td width="100%" height="100%" colspan="3" style="padding:0px" valign="top">
+					<TABLE style="font-size:9pt">
+						<COL width="40">
+						<COL width="60">
+						<COL width="80">
+						<COL width="80">
+						<COL width="80">
+						<COL width="80">
+						<TR>
+							<TD align="right" colspan="2">
+								页面大小(宽x高)：
+							</TD>
+							<TD colspan="4">
+								<INPUT id="ctrlWidth" type="text" style="width:50" onmousedown="this.focus()" onkeydown="doKeyDown()">
+								&nbspX&nbsp
+								<INPUT id="ctrlHeight" type="text" style="width:50" onmousedown="this.focus()" onkeydown="doKeyDown()">
+							</TD>
+						</TR>
+						<TR height="4">
+							<TD colspan="6" style="font-size:1pt">&nbsp</TD>
+						</TR>
+						<TR>
+							<TD></TD>
+							<TD align="right">网格行数：</TD>
+							<TD colspan="4"><INPUT id="ctrlRows" type="text" style="width:50" onmousedown="this.focus()" onkeydown="doKeyDown()"></TD>
+						</TR>
+						<TR>
+							<TD></TD>
+							<TD align="right">网格列数：</TD>
+							<TD colspan="4"><INPUT id="ctrlCols" type="text" style="width:50" onmousedown="this.focus()" onkeydown="doKeyDown()"></TD>
+						</TR>
+						<TR height="20">
+							<TD colspan="6" style="font-size:1pt">&nbsp</TD>
+						</TR>
+						<TR>
+							<TD align="right"><INPUT id="ctrlHasPic" type="checkbox" onclick="syncCtrlEnabled()"></TD>
+							<TD align="right">背景图片：</TD>
+							<TD>
+								<SELECT id="ctrlScale" size="1" style="width:65">
+									<OPTION value="center">居中</OPTION>
+									<OPTION value="tiled">平铺</OPTION>
+								</SELECT>
+							</TD>
+							<TD align="right"><button id="ctrlSelectPic" class="portal_button" onclick="onSelectPicture()">浏览...</button></TD>
+							<TD align="right">背景颜色：</TD>
+							<TD colspan="2" id="backgroundCtrlOwner"></TD>
+						</TR>
+						<TR>
+							<TD></TD>
+							<TD colspan="3"><INPUT id="ctrlPicPath" type="text" style="width:100%" disabled="true" class="disabledTextField"></TD>
+							<TD colspan="2"></TD>
+						</TR>						
+						<TR>
+						</TR>
+					</TABLE>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3" style="text-align:right;padding:0px">
+					<button id="btnOK" class="portal_button" onclick="return btnOK_onclick()" style="margin-right:10px">确定</button>
+					<button id="btnCancel" class="portal_button" onclick="return btnCancel_onclick()">取消</button>
+				</td>
+			</tr>
+		</table>
+	</body>
+	<script language="javascript">
+var _oParams;
+
+function document.body.onload()
+{
+	_oParams = window.frameElement.$param;
+	
+	var owner = document.getElementById("backgroundCtrlOwner");
+	ctrlBackground = new ColorSelector(owner, 65);
+	ctrlBackground.setShowDefault("透明", _sTransparentColor);
+	ctrlBackground.setSelectedColor(_oParams.sBackgroundColor ? _oParams.sBackgroundColor : _sTransparentColor);
+	
+	if(_oParams.sBackgroundPic)
+	{
+		ctrlHasPic.checked = true;
+		ctrlPicPath.value = _oParams.sBackgroundPic;
+		if(_oParams.sBackgroundScale)
+		{
+			ctrlScale.value = _oParams.sBackgroundScale;
+		}
+	}
+	else
+	{
+		ctrlHasPic.checked = false;
+		ctrlPicPath.value = "";
+	}
+	syncCtrlEnabled();
+	
+	
+	ctrlWidth.value = _oParams.iWidth;
+	ctrlHeight.value = _oParams.iHeight;
+	ctrlRows.value = _oParams.iRows;
+	ctrlCols.value = _oParams.iCols;
+	document.body.focus();
+}
+
+function btnOK.onclick()
+{
+	if(check())
+	{
+		if(ctrlBackground.getSelectedColor() == _sTransparentColor)
+		{
+			_oParams.sBackgroundColor = null;
+		}
+		else
+		{
+			_oParams.sBackgroundColor = ctrlBackground.getSelectedColor();
+		}
+		
+		if(ctrlHasPic.checked)
+		{
+			_oParams.sBackgroundPic = ctrlPicPath.value;
+			_oParams.sBackgroundScale = ctrlScale.value;
+		}
+		else
+		{
+			_oParams.sBackgroundPic = null;
+		}
+		
+		_oParams.iWidth = parseInt(ctrlWidth.value);
+		_oParams.iHeight = parseInt(ctrlHeight.value);
+		_oParams.iRows = parseInt(ctrlRows.value);
+		_oParams.iCols = parseInt(ctrlCols.value);
+		
+		_oParams.dialog.closeDialog( true );
+	}
+}
+
+function btnCancel.onclick()
+{
+	_oParams.dialog.closeDialog( false );
+}
+
+function check()
+{
+	var maxRows = _oParams.oLimited.iMaxRows;
+	var maxCols = _oParams.oLimited.iMaxCols;
+	if(ctrlRows.dashboard_changed)
+	{
+		var iRows = parseInt(ctrlRows.value);
+		if(isNaN(iRows) || iRows <= 0 || iRows > maxRows)
+		{
+			alert("网格行数必须是 (0, " + maxRows + "] 区间的整数。");
+			ctrlRows.focus();
+			return false;
+		}
+	}
+	if(ctrlCols.dashboard_changed)
+	{
+		var iCols = parseInt(ctrlCols.value);
+		if(isNaN(iCols) || iCols <= 0 || iCols > maxCols)
+		{
+			alert("网格列数必须是 (0, " + maxCols + "] 区间的整数。");
+			ctrlCols.focus();
+			return false;
+		}
+	}
+	if(ctrlWidth.dashboard_changed)
+	{
+		var iWidth = parseInt(ctrlWidth.value);
+		if(isNaN(iWidth) || iWidth <= 0 || iWidth > 4096)
+		{
+			alert("宽度必须是 (0,4096] 区间的整数。");
+			ctrlWidth.focus();
+			return false;
+		}
+	}
+	if(ctrlHeight.dashboard_changed)
+	{
+		var iHeight = parseInt(ctrlHeight.value);
+		if(isNaN(iHeight) || iHeight <= 0 || iHeight > 4096)
+		{
+			alert("高度必须是 (0,4096] 区间的整数。");
+			ctrlHeight.focus();
+			return false;
+		}
+	}
+	return true;
+}
+
+function syncCtrlEnabled()
+{
+	ctrlScale.disabled = !(ctrlHasPic.checked);
+	ctrlSelectPic.disabled = !(ctrlHasPic.checked);
+	if(ctrlHasPic.checked && _oParams.sBackgroundPic)
+	{
+		ctrlPicPath.value = _oParams.sBackgroundPic;
+	}
+	else
+	{
+		ctrlPicPath.value = "";
+	}
+}
+
+function onSelectPicture()
+{
+	var oParams = new Object();
+	oParams.sType = "picture";
+	oParams.sUri = _oParams.sBackgroundPic;
+	oParams.servletURL = _oParams.servletURL;
+	
+	parent._wrapHTMLPageInDialog( {
+		uri: "dlgResSelector.htm",
+		width: 410,
+		height: 270,
+		param: oParams,
+		callback: function( returnValue ) {
+			if ( !returnValue ) return;
+			_oParams.sBackgroundPic = oParams.sUri;
+			ctrlPicPath.value = _oParams.sBackgroundPic;
+		}
+	} );
+}
+
+function doKeyDown()
+{
+	event.srcElement.dashboard_changed = true;
+}
+	</script>
+</html>

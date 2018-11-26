@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.sdk"
+      label="%featureName"
+      version="3.4.0.v20080522-7O7S-CHEp2gcoGjmFFomLz-d5M8NdvuPgDrH17jw0Mvhe"
+      provider-name="%providerName"
+      image="eclipse_update_120.jpg">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <url>
+      <update label="%updateSiteName" url="http://download.eclipse.org/eclipse/updates/3.4"/>
+      <discovery label="%updateSiteName" url="http://download.eclipse.org/eclipse/updates/3.4"/>
+      <discovery label="%secondaryUpdateSiteName" url="http://download.eclipse.org/releases/ganymede"/>
+   </url>
+
+   <includes
+         id="org.eclipse.platform"
+         version="3.4.0.v20080610-9I96EhtEm-T_5LxIsybz-3MdGZmOA3uwv7Ka_M"/>
+
+   <includes
+         id="org.eclipse.platform.source"
+         version="3.4.0.v20080610-9I96EhtEm-T_5LxIsybz-3MdGZmOA3uwv7Ka_M"/>
+
+   <includes
+         id="org.eclipse.cvs"
+         version="1.1.0.v20080603-7C79E8M9EI99m9c9S"/>
+
+   <includes
+         id="org.eclipse.cvs.source"
+         version="1.1.0.v20080603-7C79E8M9EI99m9c9S"/>
+
+   <includes
+         id="org.eclipse.jdt"
+         version="3.4.0.v20080603-2000-7o7tEAXEFpPqqoXxgaBhhhq"/>
+
+   <includes
+         id="org.eclipse.jdt.source"
+         version="3.4.0.v20080603-2000-7o7tEAXEFpPqqoXxgaBhhhq"/>
+
+   <includes
+         id="org.eclipse.pde"
+         version="3.4.0.v20080603-7T7U-E_EkMNrNKb39WcMC"/>
+
+   <includes
+         id="org.eclipse.pde.source"
+         version="3.4.0.v20080603-7T7U-E_EkMNrNKb39WcMC"/>
+
+   <includes
+         id="org.eclipse.pde.p2"
+         version="1.0.0.v20080522-1--7w3119171503111"
+         optional="true"/>
+
+   <includes
+         id="org.eclipse.pde.p2.source"
+         version="1.0.0.v20080522-1--7w3119171503111"
+         optional="true"/>
+
+   <plugin
+         id="org.eclipse.sdk"
+         download-size="0"
+         install-size="0"
+         version="3.4.0.v200806172000"/>
+
+</feature>

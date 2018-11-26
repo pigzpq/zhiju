@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?metadataRepository class='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'?>
+<repository name='dropins metadata repo: file:/D:/bos/BOSModular/rcs/' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.system' value='true'/>
+    <property name='p2.timestamp' value='1540128715140'/>
+  </properties>
+  <units size='1'>
+    <unit id='com.kingdee.bos.rcs' version='6.0.0'>
+      <update id='com.kingdee.bos.rcs' range='[0.0.0,6.0.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='RCS Plug-in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Kingdee Software (China) Company Ltd.'/>
+        <property name='file.name' value='D:\bos\BOSModular\rcs\eclipse\plugins\com.kingdee.bos.rcs_6.1.0'/>
+        <property name='file.lastModified' value='1540115226031'/>
+      </properties>
+      <provides size='6'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.rcs' version='6.0.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.rcs' version='6.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.rcs' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.rcs.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.rcs.viewpart' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='7'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.update.configurator' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.common' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.log4j' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.rcs' version='6.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Eclipse-AutoStart: true&#xA;Export-Package: com.kingdee.bos.rcs,com.kingdee.bos.rcs.util,com.kingdee.bos.rcs.viewpart&#xA;Bundle-Localization: plugin&#xA;Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.ui.ide,org.eclipse.core.resources,org.eclipse.update.configurator,com.kingdee.bos.common,org.log4j&#xA;Bundle-Activator: com.kingdee.bos.rcs.RCSPlugin&#xA;Bundle-Name: RCS Plug-in&#xA;Bundle-Version: 6.0.0&#xA;Bundle-Vendor: Kingdee Software (China) Company Ltd.&#xA;Bundle-SymbolicName: com.kingdee.bos.rcs; singleton:=true&#xA;Manifest-Version: 1.0&#xA;Bundle-ClassPath: rcs.jar&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+  </units>
+</repository>

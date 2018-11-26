@@ -1,0 +1,35 @@
+Bundle-ManifestVersion: 2
+Manifest-Version: 1.0
+Bundle-Name: ToolBase Plug-in
+Bundle-SymbolicName: com.kingdee.bos.tool.toolbase;singleton:=true
+Bundle-Version: 6.0
+Bundle-ClassPath: toolbase.jar
+Bundle-Activator: com.kingdee.bos.tool.ToolBasePlugin
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.resources;visibility:=reexport,
+ org.eclipse.core.runtime;visibility:=reexport,
+ org.eclipse.jface.text;visibility:=reexport,
+ org.eclipse.ui;visibility:=reexport,
+ org.eclipse.ui.views;visibility:=reexport,
+ org.eclipse.ui.workbench.texteditor;visibility:=reexport,
+ org.log4j;visibility:=reexport,
+ org.jdom;visibility:=reexport,
+ org.junit;visibility:=reexport,
+ com.kingdee.bos.common;visibility:=reexport
+Eclipse-AutoStart: true
+Export-Package: com.kingdee.bos.tool,
+ com.kingdee.bos.tool.common,
+ com.kingdee.bos.tool.wizard,
+ com.kingdee.bos.tool.exceptions,
+ com.kingdee.bos.tool.validators,
+ com.kingdee.bos.tool.properties,
+ com.kingdee.bos.tool.preferences,
+ com.kingdee.bos.tool.console,
+ com.kingdee.bos.tool.celleditors,
+ com.kingdee.bos.tool.widgets,
+ com.kingdee.bos.tool.jobs.deferredjobs,
+ com.kingdee.bos.tool.actions,
+ com.kingdee.bos.tool.utils,
+ com.kingdee.bos.tool.dialogs,
+ com.kingdee.bos.tool.inifile
+Bundle-Vendor: Kingdee Software (China) Company Ltd.

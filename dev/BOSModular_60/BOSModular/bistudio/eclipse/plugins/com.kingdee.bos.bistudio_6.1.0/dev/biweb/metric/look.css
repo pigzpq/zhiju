@@ -1,0 +1,93 @@
+.itemCaption
+{
+	border: 1 solid #8Db2D3;
+	background-color: #CBDFF0;
+	color: #0063AB;
+	font-size: 10pt;
+	text-align: center;
+	padding: 2;
+}
+
+.itemValue
+{
+	border-left: 1 solid #8Db2D3;
+	border-right: 1 solid #8Db2D3;
+	border-bottom: 1 solid #8Db2D3;
+	background-color: #EBF3FB;
+	color: #0063AB;
+	font-size: 10pt;
+	text-align: right;
+	padding: 1;
+	padding-right: 4;
+}
+
+.itemConst
+{
+	border: 1 solid #8Db2D3;
+	background-color: #EBF3FB;
+	color: #0063AB;
+	font-size: 10pt;
+	text-align: center;
+	padding: 2;
+}
+
+.expandBox_expanded
+{
+	font-size: 6pt;
+	text-align: center;
+	color: #0063AB;
+	background-color: #EBF3FB;
+
+	border-left: 1 solid #8Db2D3;
+	border-top : 1 solid #8Db2D3;
+	border-right: 1 solid #CBDFF0;
+	border-bottom: 1 solid #CBDFF0;
+}
+
+.expandBox_unExpanded
+{
+	font-size: 6pt;
+	text-align: center;
+	color: #0063AB;
+	background-color: #EBF3FB;
+
+	border-left: 1 solid #CBDFF0;
+	border-top : 1 solid #CBDFF0;
+	border-right: 1 solid #8Db2D3;
+	border-bottom: 1 solid #8Db2D3;
+}
+
+.lineH
+{
+	border-top : 1 solid #a2a2a2;
+}
+
+.lineV
+{
+	border-left: 1 solid #a2a2a2;
+}
+
+.sign
+{
+	font-size: 10pt;
+	color: #0063AB;
+	font-weight: 700;
+	text-align: center;
+}
+
+.inputCtrl
+{
+	border: 1 solid #FF7D40;
+	background-color: #EBF3FB;
+}
+
+.inputCtrlButton
+{
+	font-size: 8pt;
+	border-width: 1;
+}
+
+.inputCtrlUnit
+{
+	font-size: 10pt;
+}

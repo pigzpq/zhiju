@@ -1,0 +1,1239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webUIObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.bos.bim.templates.web</package>
+    <name>BizTreeDetailListUI</name>
+    <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].alias</alias>
+    <description>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].description</description>
+    <userDefined>false</userDefined>
+    <releasePackage>com.kingdee.bos.bim.templates.web</releasePackage>
+    <releaseClass>BizTreeDetailListUI</releaseClass>
+    <title>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].title</title>
+    <uitype />
+    <defaultbutton />
+    <bizUnitPK />
+    <parent>
+        <key name="package" value="com.kingdee.eas.framework.web" />
+        <key name="name" value="TreeDetailListUI" />
+    </parent>
+    <components>
+        <component>
+            <name>innerWindowUserTag</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[innerWindowUserTag].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.UserTag</classType>
+            <isContainer>true</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>attributes</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[innerWindowUserTag].properties.property[attributes].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+        </component>
+        <component>
+            <name>rootForm</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[rootForm].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Form</classType>
+            <isContainer>true</isContainer>
+            <constraints>x=5;y=5;width=1006;height=641;autoSize=15</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+        </component>
+        <component>
+            <name>toolBar</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[toolBar].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.ToolBar</classType>
+            <isContainer>true</isContainer>
+            <constraints>x=3;y=4;width=996;height=30;autoSize=12</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name>webToolBarLayout1</name>
+                <type>WebToolBarLayout</type>
+                <value />
+            </layoutInfo>
+            <parent>
+                <key name="name" value="rootForm" />
+            </parent>
+        </component>
+        <component>
+            <name>splitcontainer1</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[splitcontainer1].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Splitcontainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>x=3;y=67;width=996;height=569;autoSize=15</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name>webSplitLayout1</name>
+                <type>WebSplitLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>dividerLocation</name>
+                    <type>int</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[splitcontainer1].properties.property[dividerLocation].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="rootForm" />
+            </parent>
+        </component>
+        <component>
+            <name>freePanel</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[freePanel].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.FreePanel</classType>
+            <isContainer>true</isContainer>
+            <constraints>x=3;y=36;width=183;height=28;autoSize=0</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <parent>
+                <key name="name" value="rootForm" />
+            </parent>
+        </component>
+        <component>
+            <name>chkIncludeLowerLevel</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[chkIncludeLowerLevel].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.CheckBox</classType>
+            <isContainer>false</isContainer>
+            <constraints>x=193;y=42;width=140;height=19;autoSize=0</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <parent>
+                <key name="name" value="rootForm" />
+            </parent>
+        </component>
+        <component>
+            <name>btnAddNew</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnAddNew].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Button</classType>
+            <isContainer>false</isContainer>
+            <constraints>0</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>label</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnAddNew].properties.property[label].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>actionBinding</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnAddNew].properties.property[actionBinding].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="toolBar" />
+            </parent>
+        </component>
+        <component>
+            <name>btnView</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnView].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Button</classType>
+            <isContainer>false</isContainer>
+            <constraints>1</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>label</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnView].properties.property[label].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>actionBinding</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnView].properties.property[actionBinding].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="toolBar" />
+            </parent>
+        </component>
+        <component>
+            <name>btnEdit</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnEdit].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Button</classType>
+            <isContainer>false</isContainer>
+            <constraints>2</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>label</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnEdit].properties.property[label].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>actionBinding</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnEdit].properties.property[actionBinding].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="toolBar" />
+            </parent>
+        </component>
+        <component>
+            <name>btnRemove</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnRemove].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Button</classType>
+            <isContainer>false</isContainer>
+            <constraints>3</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>label</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnRemove].properties.property[label].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>actionBinding</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnRemove].properties.property[actionBinding].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="toolBar" />
+            </parent>
+        </component>
+        <component>
+            <name>btnRefresh</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnRefresh].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Button</classType>
+            <isContainer>false</isContainer>
+            <constraints>4</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>label</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnRefresh].properties.property[label].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>actionBinding</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnRefresh].properties.property[actionBinding].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="toolBar" />
+            </parent>
+        </component>
+        <component>
+            <name>btnQuery</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnQuery].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Button</classType>
+            <isContainer>false</isContainer>
+            <constraints>5</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>label</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnQuery].properties.property[label].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>actionBinding</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnQuery].properties.property[actionBinding].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="toolBar" />
+            </parent>
+        </component>
+        <component>
+            <name>btnExit</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnExit].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Button</classType>
+            <isContainer>false</isContainer>
+            <constraints>6</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>label</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnExit].properties.property[label].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>actionBinding</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnExit].properties.property[actionBinding].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="toolBar" />
+            </parent>
+        </component>
+        <component>
+            <name>freePanel2</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[freePanel2].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.FreePanel</classType>
+            <isContainer>true</isContainer>
+            <constraints>right</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name>smartLayout4</name>
+                <type>SmartLayout</type>
+                <value>topAlign=2;bottomAlign=2;leftAlign=2;rightAlign=2</value>
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>title</name>
+                    <type />
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[freePanel2].properties.property[title].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="splitcontainer1" />
+            </parent>
+        </component>
+        <component>
+            <name>panel1</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[panel1].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Panel</classType>
+            <isContainer>true</isContainer>
+            <constraints>left</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name>webLayout3</name>
+                <type>WebLayout</type>
+                <value>0,1,false</value>
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>autoScroll</name>
+                    <type>boolean</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[panel1].properties.property[autoScroll].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="splitcontainer1" />
+            </parent>
+        </component>
+        <component>
+            <name>dataGrid</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[dataGrid].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.DataGrid</classType>
+            <isContainer>true</isContainer>
+            <constraints>x=0;y=0;width=752;height=570;autoSize=15</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name>webLayout</name>
+                <type>WebLayout</type>
+                <value>0,1,false</value>
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>binding</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[dataGrid].properties.property[binding].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>paged</name>
+                    <type>boolean</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[dataGrid].properties.property[paged].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>rows</name>
+                    <type>int</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[dataGrid].properties.property[rows].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>value</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[dataGrid].properties.property[value].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>var</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[dataGrid].properties.property[var].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>showRowNumber</name>
+                    <type>java.lang.Boolean</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[dataGrid].properties.property[showRowNumber].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>sync</name>
+                    <type />
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[dataGrid].properties.property[sync].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>toolBarPosition</name>
+                    <type />
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[dataGrid].properties.property[toolBarPosition].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="freePanel2" />
+            </parent>
+        </component>
+        <component>
+            <name>idColumn</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[idColumn].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Column</classType>
+            <isContainer>false</isContainer>
+            <constraints>width=170;height=19;newLine=false</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>header</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[idColumn].properties.property[header].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>width</name>
+                    <type>int</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[idColumn].properties.property[width].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>hidden</name>
+                    <type>boolean</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[idColumn].properties.property[hidden].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="dataGrid" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>value</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>mainQuery</bindingObject>
+                    <bindingField>id</bindingField>
+                    <fieldType>java.lang.String</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>false</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>nameColumn</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[nameColumn].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Column</classType>
+            <isContainer>false</isContainer>
+            <constraints>width=170;height=19;newLine=false</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>header</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[nameColumn].properties.property[header].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>width</name>
+                    <type>int</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[nameColumn].properties.property[width].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="dataGrid" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>value</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>mainQuery</bindingObject>
+                    <bindingField>name</bindingField>
+                    <fieldType>java.lang.String</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>false</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>numberColumn</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[numberColumn].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Column</classType>
+            <isContainer>false</isContainer>
+            <constraints>width=170;height=19;newLine=false</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>header</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[numberColumn].properties.property[header].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>width</name>
+                    <type>int</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[numberColumn].properties.property[width].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="dataGrid" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>value</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>mainQuery</bindingObject>
+                    <bindingField>number</bindingField>
+                    <fieldType>java.lang.String</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>false</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>simpleNameColumn</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[simpleNameColumn].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Column</classType>
+            <isContainer>false</isContainer>
+            <constraints>width=170;height=19;newLine=false</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>header</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[simpleNameColumn].properties.property[header].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>width</name>
+                    <type>int</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[simpleNameColumn].properties.property[width].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="dataGrid" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>value</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>mainQuery</bindingObject>
+                    <bindingField>simpleName</bindingField>
+                    <fieldType>java.lang.String</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>false</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>descriptionColumn</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[descriptionColumn].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Column</classType>
+            <isContainer>false</isContainer>
+            <constraints>width=170;height=19;newLine=false</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>header</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[descriptionColumn].properties.property[header].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>width</name>
+                    <type>int</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[descriptionColumn].properties.property[width].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="dataGrid" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>value</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>mainQuery</bindingObject>
+                    <bindingField>description</bindingField>
+                    <fieldType>java.lang.String</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>false</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>tree</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[tree].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Tree</classType>
+            <isContainer>true</isContainer>
+            <constraints>width=100%;height=566;newLine=false</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>autoLeaf</name>
+                    <type>boolean</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[tree].properties.property[autoLeaf].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="panel1" />
+            </parent>
+        </component>
+        <component>
+            <name>btnGroupMove</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnGroupMove].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Button</classType>
+            <isContainer>false</isContainer>
+            <constraints>x=151;y=3;width=24;height=21;autoSize=0</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+        </component>
+        <component>
+            <name>btnGroupRefresh</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnGroupRefresh].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Button</classType>
+            <isContainer>false</isContainer>
+            <constraints>x=121;y=3;width=24;height=21;autoSize=0</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+        </component>
+        <component>
+            <name>btnGroupDel</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnGroupDel].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Button</classType>
+            <isContainer>false</isContainer>
+            <constraints>x=91;y=3;width=24;height=21;autoSize=0</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+        </component>
+        <component>
+            <name>btnGroupEdit</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnGroupEdit].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Button</classType>
+            <isContainer>false</isContainer>
+            <constraints>x=61;y=3;width=24;height=21;autoSize=0</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+        </component>
+        <component>
+            <name>btnGroupView</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnGroupView].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Button</classType>
+            <isContainer>false</isContainer>
+            <constraints>x=31;y=3;width=24;height=21;autoSize=0</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+        </component>
+        <component>
+            <name>btnGroupAddNew</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnGroupAddNew].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Button</classType>
+            <isContainer>false</isContainer>
+            <constraints>x=1;y=3;width=24;height=21;autoSize=0</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+        </component>
+    </components>
+    <dataObjects>
+        <dataObject>
+            <name>mainQuery</name>
+            <type>com.kingdee.bos.bim.templates.app.BizTreeDetailQuery</type>
+            <objectType>jqye</objectType>
+            <herited>false</herited>
+            <userDefined>false</userDefined>
+        </dataObject>
+    </dataObjects>
+    <scripts>
+        <script>
+            <name>newScript0</name>
+            <type>javascript</type>
+            <reference>/resource/common.js</reference>
+            <script />
+            <herited>false</herited>
+            <userDefined>false</userDefined>
+            <location />
+        </script>
+        <script>
+            <name>newScript1</name>
+            <type>javascript</type>
+            <reference>/resource/commonQuery.js</reference>
+            <script />
+            <herited>false</herited>
+            <userDefined>false</userDefined>
+            <location />
+        </script>
+    </scripts>
+    <styleSheets>
+        <styleSheet>
+            <name>newCss0</name>
+            <reference>#{skin.getSkinReourceURL('/widget/css/custom_list.css')}</reference>
+            <herited>false</herited>
+            <userDefined>false</userDefined>
+        </styleSheet>
+    </styleSheets>
+    <resource>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].alias">
+            <lang locale="zh_CN" value="BizTreeDetailListUI" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="BizTreeDetailListUI" />
+            <lang locale="zh_TW" value="BizTreeDetailListUI" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnAddNew].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnAddNew].properties.property[actionBinding].value">
+            <lang locale="zh_CN" value="addNewAction" />
+            <lang locale="en_US" value="addNewAction" />
+            <lang locale="zh_HK" value="addNewAction" />
+            <lang locale="zh_TW" value="addNewAction" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnAddNew].properties.property[label].value">
+            <lang locale="zh_CN" value="新增" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="新增" />
+            <lang locale="zh_TW" value="新增" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnEdit].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnEdit].properties.property[actionBinding].value">
+            <lang locale="zh_CN" value="editAction" />
+            <lang locale="en_US" value="editAction" />
+            <lang locale="zh_HK" value="editAction" />
+            <lang locale="zh_TW" value="editAction" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnEdit].properties.property[label].value">
+            <lang locale="zh_CN" value="编辑" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="編輯" />
+            <lang locale="zh_TW" value="編輯" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnExit].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnExit].properties.property[actionBinding].value">
+            <lang locale="zh_CN" value="exitAction" />
+            <lang locale="en_US" value="exitAction" />
+            <lang locale="zh_HK" value="exitAction" />
+            <lang locale="zh_TW" value="exitAction" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnExit].properties.property[label].value">
+            <lang locale="zh_CN" value="退出" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="退出" />
+            <lang locale="zh_TW" value="退出" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnGroupAddNew].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnGroupDel].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnGroupEdit].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnGroupMove].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnGroupRefresh].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnGroupView].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnQuery].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnQuery].properties.property[actionBinding].value">
+            <lang locale="zh_CN" value="queryAction" />
+            <lang locale="en_US" value="queryAction" />
+            <lang locale="zh_HK" value="queryAction" />
+            <lang locale="zh_TW" value="queryAction" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnQuery].properties.property[label].value">
+            <lang locale="zh_CN" value="查询" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="查詢" />
+            <lang locale="zh_TW" value="查詢" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnRefresh].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnRefresh].properties.property[actionBinding].value">
+            <lang locale="zh_CN" value="refreshAction" />
+            <lang locale="en_US" value="refreshAction" />
+            <lang locale="zh_HK" value="refreshAction" />
+            <lang locale="zh_TW" value="refreshAction" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnRefresh].properties.property[label].value">
+            <lang locale="zh_CN" value="刷新" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="刷新" />
+            <lang locale="zh_TW" value="刷新" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnRemove].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnRemove].properties.property[actionBinding].value">
+            <lang locale="zh_CN" value="deleteAction" />
+            <lang locale="en_US" value="deleteAction" />
+            <lang locale="zh_HK" value="deleteAction" />
+            <lang locale="zh_TW" value="deleteAction" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnRemove].properties.property[label].value">
+            <lang locale="zh_CN" value="删除" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="刪除" />
+            <lang locale="zh_TW" value="刪除" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnView].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnView].properties.property[actionBinding].value">
+            <lang locale="zh_CN" value="viewAction" />
+            <lang locale="en_US" value="viewAction" />
+            <lang locale="zh_HK" value="viewAction" />
+            <lang locale="zh_TW" value="viewAction" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[btnView].properties.property[label].value">
+            <lang locale="zh_CN" value="查看" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="查看" />
+            <lang locale="zh_TW" value="查看" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[chkIncludeLowerLevel].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[dataGrid].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[dataGrid].properties.property[binding].value">
+            <lang locale="zh_CN" value="#{custom.BizTreeDetailListUIBean.grid}" />
+            <lang locale="en_US" value="#{custom.BizTreeDetailListUIBean.grid}" />
+            <lang locale="zh_HK" value="#{custom.BizTreeDetailListUIBean.grid}" />
+            <lang locale="zh_TW" value="#{custom.BizTreeDetailListUIBean.grid}" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[dataGrid].properties.property[paged].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[dataGrid].properties.property[rows].value">
+            <lang locale="zh_CN" value="10" />
+            <lang locale="en_US" value="10" />
+            <lang locale="zh_HK" value="10" />
+            <lang locale="zh_TW" value="10" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[dataGrid].properties.property[showRowNumber].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[dataGrid].properties.property[sync].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[dataGrid].properties.property[toolBarPosition].value">
+            <lang locale="zh_CN" value="bottom" />
+            <lang locale="en_US" value="bottom" />
+            <lang locale="zh_HK" value="bottom" />
+            <lang locale="zh_TW" value="bottom" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[dataGrid].properties.property[value].value">
+            <lang locale="zh_CN" value="pagedListData" />
+            <lang locale="en_US" value="pagedListData" />
+            <lang locale="zh_HK" value="pagedListData" />
+            <lang locale="zh_TW" value="pagedListData" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[dataGrid].properties.property[var].value">
+            <lang locale="zh_CN" value="data" />
+            <lang locale="en_US" value="data" />
+            <lang locale="zh_HK" value="data" />
+            <lang locale="zh_TW" value="data" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[descriptionColumn].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[descriptionColumn].properties.property[header].value">
+            <lang locale="zh_CN" value="描述" />
+            <lang locale="en_US" value="描述" />
+            <lang locale="zh_HK" value="描述" />
+            <lang locale="zh_TW" value="描述" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[descriptionColumn].properties.property[width].value">
+            <lang locale="zh_CN" value="100" />
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[freePanel2].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[freePanel2].properties.property[title].value">
+            <lang locale="zh_CN" value="right" />
+            <lang locale="en_US" value="right" />
+            <lang locale="zh_HK" value="right" />
+            <lang locale="zh_TW" value="right" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[freePanel].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[idColumn].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[idColumn].properties.property[header].value">
+            <lang locale="zh_CN" value="id" />
+            <lang locale="en_US" value="id" />
+            <lang locale="zh_HK" value="id" />
+            <lang locale="zh_TW" value="id" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[idColumn].properties.property[hidden].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[idColumn].properties.property[width].value">
+            <lang locale="zh_CN" value="100" />
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[innerWindowUserTag].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[innerWindowUserTag].properties.property[attributes].value">
+            <lang locale="zh_CN" value="beanName=#{custom.BizTreeDetailListUIBean}" />
+            <lang locale="en_US" value="beanName=value" />
+            <lang locale="zh_HK" value="beanName=#{custom.BizTreeDetailListUIBean}" />
+            <lang locale="zh_TW" value="beanName=#{custom.BizTreeDetailListUIBean}" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[nameColumn].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[nameColumn].properties.property[header].value">
+            <lang locale="zh_CN" value="名称" />
+            <lang locale="en_US" value="名称" />
+            <lang locale="zh_HK" value="名稱" />
+            <lang locale="zh_TW" value="名稱" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[nameColumn].properties.property[width].value">
+            <lang locale="zh_CN" value="100" />
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[numberColumn].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[numberColumn].properties.property[header].value">
+            <lang locale="zh_CN" value="编码" />
+            <lang locale="en_US" value="编码" />
+            <lang locale="zh_HK" value="編碼" />
+            <lang locale="zh_TW" value="編碼" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[numberColumn].properties.property[width].value">
+            <lang locale="zh_CN" value="100" />
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[panel1].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[panel1].properties.property[autoScroll].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[rootForm].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[simpleNameColumn].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[simpleNameColumn].properties.property[header].value">
+            <lang locale="zh_CN" value="简称" />
+            <lang locale="en_US" value="简称" />
+            <lang locale="zh_HK" value="簡稱" />
+            <lang locale="zh_TW" value="簡稱" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[simpleNameColumn].properties.property[width].value">
+            <lang locale="zh_CN" value="100" />
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[splitcontainer1].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[splitcontainer1].properties.property[dividerLocation].value">
+            <lang locale="zh_CN" value="240" />
+            <lang locale="en_US" value="240" />
+            <lang locale="zh_HK" value="240" />
+            <lang locale="zh_TW" value="240" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[toolBar].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[tree].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].components.component[tree].properties.property[autoLeaf].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].description">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].extendedProperty.height_self_adaption">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+            <lang locale="en_US" value="true" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizTreeDetailListUI].title">
+            <lang locale="zh_CN" value="BizTreeDetailListUI" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="BizTreeDetailListUI" />
+            <lang locale="zh_TW" value="BizTreeDetailListUI" />
+        </rs>
+    </resource>
+</webUIObject>
+

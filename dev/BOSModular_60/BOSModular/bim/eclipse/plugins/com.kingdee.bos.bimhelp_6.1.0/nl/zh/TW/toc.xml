@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="com.kingdee.bos.bim.toc"?>
+<!-- ============================================================================= -->
+<!-- Define the top level topics                                                   -->
+<!-- ============================================================================= -->
+<toc label="金蝶業務建模工具幫助系統" topic="welcome_first.html">
+	<topic label="系統概述" href="html/1.htm"/>
+	<topic label="安裝使用業務建模工具" href="html/2.htm">
+		<topic label="運行最低配置" href="html/3.htm"/>
+		<topic label="導入解決方案" href="html/4.htm"/>
+		<topic label="解決方案設置" href="html/5.htm"/>
+	</topic>
+	<topic label="業務建模工具主框架" href="html/6.htm">
+		<topic label="組別管理" href="html/7.htm"/>
+		<topic label="新建業務單元" href="html/8.htm">
+			<topic label="新增基礎資料" href="html/9.htm"/>
+			<topic label="新增業務單據" href="html/10.htm"/>
+		</topic>
+		<topic label="新建業務範本" href="html/11.htm"/>
+		<topic label="主功能表管理" href="html/12.htm"/>
+		<topic label="網路控制管理" href="html/13.htm"/>
+	</topic>
+	<topic label="定義業務單元" href="html/14.htm">
+		<topic label="業務單元資訊" href="html/15.htm">
+			<topic label="業務單元屬性設置" href="html/16.htm"/>
+			<topic label="業務單元資訊管理" href="html/17.htm"/>
+		</topic>
+		<topic label="欄位管理" href="html/18.htm">
+			<topic label="新增欄位" href="html/19.htm"/>
+			<topic label="修改欄位" href="html/20.htm"/>
+			<topic label="刪除欄位" href="html/21.htm"/>
+		</topic>
+		<topic label="事件管理" href="html/22.htm">
+			<topic label="事件類型" href="html/23.htm"/>
+			<topic label="事件操作類型" href="html/24.htm"/>
+			<topic label="事件定義" href="html/25.htm">
+				<topic label="根據事件觸發時刻選擇事件" href="html/26.htm"/>
+				<topic label="各種操作的詳細描述" href="html/27.htm"/>
+			</topic>
+		</topic>
+		<topic label="頁簽管理" href="html/28.htm">
+			<topic label="新增頁簽" href="html/29.htm"/>
+			<topic label="修改頁簽" href="html/30.htm"/>
+		</topic>
+		<topic label="業務單元功能表工具欄管理" href="html/31.htm">
+			<topic label="錄入介面功能表管理" href="html/32.htm"/>
+			<topic label="錄入介面工具欄管理" href="html/33.htm"/>
+		</topic>
+		<topic label="枚舉定義" href="html/34.htm"/>
+		<topic label="錄入及查詢順序管理" href="html/35.htm">
+			<topic label="設置錄入順序" href="html/36.htm"/>
+			<topic label="設置查詢順序" href="html/37.htm"/>
+		</topic>
+		<topic label="格式設置" href="html/38.htm">
+			<topic label="對齊" href="html/39.htm"/>
+			<topic label="大小" href="html/40.htm"/>
+			<topic label="間距" href="html/41.htm"/>
+			<topic label="縮放" href="html/42.htm"/>
+		</topic>
+	</topic>
+	<topic label="定義核算項目" href="html/43.htm">
+		<topic label="設置核算專案" href="html/44.htm"/>
+		<topic label="取消核算專案設置" href="html/45.htm"/>
+	</topic>
+	<topic label="定義業務範本" href="html/46.htm">
+		<topic label="定義基礎資料範本" href="html/47.htm"/>
+		<topic label="定義單據範本" href="html/48.htm"/>
+	</topic>
+	<topic label="報表管理" href="html/49.htm">
+		<topic label="一般報表" href="html/50.htm">
+			<topic label="新建報表資料源" href="html/51.htm"/>
+			<topic label="新建報表" href="html/52.htm"/>
+		</topic>
+		<topic label="分析報表" href="html/53.htm">
+			<topic label="新建分析報表資料源" href="html/54.htm"/>
+			<topic label="新建分析報表" href="html/55.htm"/>
+		</topic></topic>
+		<topic label="業務功能定義及與工作流集成" href="html/56.htm">
+			<topic label="業務功能定義" href="html/57.htm"/>
+			<topic label="與工作流集成" href="html/58.htm"/>
+		</topic>
+		<topic label="與單據轉換平臺控制集成" href="html/59.htm">
+			<topic label="定義的業務單據可進行單據轉換定義" href="html/60.htm"/>
+			<topic label="定義的單據可以進行定義轉換為憑證" href="html/61.htm"/>
+		</topic>
+		<topic label="許可權定義與許可權控制集成" href="html/62.htm">
+			<topic label="許可權定義" href="html/63.htm"/>
+			<topic label="與許可權控制集成" href="html/64.htm"/>
+		</topic>
+		<topic label="發佈業務單元及報表" href="html/65.htm"/>
+		<topic label="測試業務單元及報表" href="html/66.htm"/>
+		<topic label="部署業務單元" href="html/67.htm"/>
+		<topic label="附錄A" href="html/68.htm"/>
+</toc>

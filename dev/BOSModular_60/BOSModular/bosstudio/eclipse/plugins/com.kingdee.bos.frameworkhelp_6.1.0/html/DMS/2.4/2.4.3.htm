@@ -1,0 +1,14 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<Title>2.4.3</Title>
+</HEAD>
+<BODY>
+<P class=MsoNormalIndent style="MARGIN: 1pt 0cm">对<SPAN lang=EN-US>UI元素进行使能控制有两种方法：一是利用setOprtState方法，二是利用checkActionStatus方法。</SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 1pt 0cm">在<SPAN lang=EN-US>BOS的UI设计器中，可以利用状态编辑视图定义各种状态下控件的使能情况。BOS会自动生成反映满足这种定义的setOprtState方法。当然，也可以不用BOS的定义能力而重载后完全自行编码，尤其是在需要定义更多逻辑时：例如控件的使能可能需要检查当OprtState处于某种状态时，某些数据是否同时符合要求。</SPAN></P>
+<P class=MsoNormalIndent style="MARGIN: 1pt 0cm">而<SPAN lang=EN-US>checkActionStatus方法会在按钮的事件响应完毕后被调用，作为一种推荐的检查控件使能的统一位置。checkActionStatus的调用频率比较高，故检查逻辑最好比较简单。</SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN style="COLOR: blue; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">注意：这种方式与</SPAN><SPAN lang=EN-US style="COLOR: blue"><FONT face="Times New Roman">UI</FONT></SPAN><SPAN style="COLOR: blue; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的</SPAN><SPAN lang=EN-US style="COLOR: blue"><FONT face="Times New Roman">OprtState</FONT></SPAN><SPAN style="COLOR: blue; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">没有关系，视为对</SPAN><SPAN lang=EN-US style="COLOR: blue"><FONT face="Times New Roman">OprtState</FONT></SPAN><SPAN style="COLOR: blue; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">机制的一种补充。</SPAN></P>
+
+</BODY>
+</HTML>

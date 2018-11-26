@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<welcomePage title="KINGDEE BOS Studio" format="wrap">
+	<intro>本页将帮助你熟悉BOS Studio开发工具。
+你可以通过阅读下面的章节和点击相关的链接而迅速入门。 </intro>
+	<item><b>BOS Studio主透视图</b>
+		<p>通过Studio进行建模设计时请打开主透视图<action pluginId="com.kingdee.bos.studio" class="com.kingdee.bos.studio.perspective.OpenMainPerspectiveAction">窗口 - 打开透视图 - 其他 - 金蝶BOS Studio</action>。</p>
+	</item>
+	<item><b>创建一个新的solution</b>
+		<p>开始创建一个新的solution请通过<action pluginId="com.kingdee.bos.studio" class="com.kingdee.bos.studio.wizard.solution.NewSolutionCreationAction">文件 - 新建 - BOS - Solution</action>。</p>
+	</item>
+	<item><b>更多信息</b>
+		<p>如果需要得到更多信息可以通过<topic id="/teems.framework.tdt.doc.user/toc.xml">BOS Studio开发工具</topic>进行了解。</p>
+	</item>
+</welcomePage>

@@ -1,0 +1,72 @@
+<table width="470" height="280" border="0" style="font-size:12px">
+  <tr>
+    <td width="115" height="28" align="right">对象名称：</td>
+    <td width="345"  align="left">
+	<input sue="objectName" type="text" style="width:150px" /></td>
+  </tr>
+    <tr>
+      <td  height="28" align="right">标签：</td>
+      <td align="left">
+	  <input  type="text"   style="width:150px" sue="hintText"/>	  </td>
+    </tr>
+    <tr>
+      <td  height="28" align="right">长度：</td>
+       <td align="left">
+	   <input type="text"   style="width:150px" sue="width"/>	   </td>
+    </tr>
+    <tr>
+      <td height="27" align="right" >方向：</td>
+      <td align="left">
+	  <select  sue="valign"  style="width:150px;" value="h">
+        <option value="h">水平</option>
+        <option value="v">垂直</option>
+      </select>      </td>
+    </tr>
+    <tr>
+      <td height="27" align="right">数据源选择：</td>
+      <td align="left">
+        <select sue="chooseDS" style="width:150px">
+          <option>请选择数据源....</option>
+		</select></td>
+    </tr>
+    <tr>
+      <td height="24"align="right">最大值：</td>
+      <td align="left">
+        <select sue="maxValue_select" style="width:150px;">
+		</select>
+        <input  sue="maxValue_input" type="text" style="width:150px"  /></td>
+    </tr>
+    <tr>
+      <td height="24" align="right">最小值：</td>
+      <td align="left">
+	  <select sue="minValue_select" style="width:150px;">
+      </select>
+	  <input  sue="minValue_input"  type="text" style="width:150px"  /></td>
+    </tr>
+    <tr>
+      <td height="24" align="right">刻度间隔：</td>
+      <td align="left" >
+	  <select sue="distance_select"  style="width:150px;">
+      </select>
+      <input  sue="distance_input"  type="text" style="width:150px" /></td>
+    </tr>
+    <tr>
+      <td height="24" align="right">步长：</td>
+      <td align="left" >
+	  <select sue="step_select"  style="width:150px;">
+      </select>
+      <input  sue="step_input"  type="text" style="width:150px" /></td>
+    </tr>
+    <tr>
+      <td height="24" align="right">默认滑标位置：</td>
+      <td align="left">
+	  <select sue="dfValue_select" style="width:150px;">
+      </select>
+      <input  sue="dfValue_input" type="text" style="width:150px"  /></td>
+    </tr>
+    <tr>
+      <td height="24" align="right">单位：</td>
+      <td align="left">
+	  <input sue="unit_input" type="text" style="width:150px"  /></td>
+    </tr>
+ </table>

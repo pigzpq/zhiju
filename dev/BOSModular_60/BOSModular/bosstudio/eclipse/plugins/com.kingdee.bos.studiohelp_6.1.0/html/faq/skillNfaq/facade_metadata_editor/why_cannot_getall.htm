@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=GB2312">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="../../../../book.css" CHARSET="GB2312" TYPE="text/css">
+<TITLE>
+一个Facade定义好几个方法，但当Funtion关联到该Facade时，只能看到部分的方法，为什么
+</TITLE>
+
+<link rel="stylesheet" type="text/css" HREF="../../../../book.css">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H3>一个Facade定义好几个方法，但当Funtion关联到该Facade时，只能看到部分的方法，为什么</H3>
+<p>原因可能是该Facade的部分方法的定义过长（如：有的方法参数达到13个），导致下拉列表中的选项不能在一个屏幕范围内显示完整，出现的垂直滚动条看不见，误以为"方法少了"。解决方法，把弹出的对话框往左移一下，就可以看见垂直滚动条了。最砌底的解决方案是：重构Facade中的方法定义，方法参数超过7、8个就得重构。</p>
+
+
+<p align="center"><a href="../../../../notices.html"><img border="0" src="../../../../copyright.gif"></a></p>
+<p></p>
+</BODY>
+</HTML>

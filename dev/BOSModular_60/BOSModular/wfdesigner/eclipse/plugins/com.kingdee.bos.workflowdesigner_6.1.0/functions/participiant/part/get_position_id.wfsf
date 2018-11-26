@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="获取参与人对应的职员ID">
+    <script><![CDATA[if(null == participant)
+		return null;
+com.kingdee.eas.basedata.person.app.PersonToWFAdapter adapter = new com.kingdee.eas.basedata.person.app.PersonToWFAdapter();
+com.kingdee.bos.workflow.participant.Person person = adapter.getPersonByUserId(__bosContext, participant);
+return person.getEmployeeId();]]></script>
+    <description><![CDATA[根据参与人获取参与人对应的职员ID]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>STRING</type>
+      <array>false</array>
+      <description><![CDATA[返回参与人对应的职员ID]]></description>
+    </return>
+    <parameter>
+      <name>participant</name>
+      <type>BOID</type>
+      <array>false</array>
+      <description><![CDATA[参与人]]></description>
+    </parameter>
+  </function>
+</functions>
+

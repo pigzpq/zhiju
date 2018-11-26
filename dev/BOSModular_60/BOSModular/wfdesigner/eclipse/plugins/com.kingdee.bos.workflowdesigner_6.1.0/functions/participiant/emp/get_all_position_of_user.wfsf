@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="获取职员所在的所有职位">
+    <script><![CDATA[if(null == personID || "".equals(personID.toString()))
+			return null;
+		return com.kingdee.eas.basedata.person.PersonFactory.getLocalInstance(__bosContext).getPositions(personID);]]></script>
+    <description><![CDATA[获取职员的所有职位信息]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>OBJECT</type>
+      <description><![CDATA[返回职员的所有职位集合(PositionCollection)]]></description>
+    </return>
+    <parameter>
+      <name>personID</name>
+      <type>BOID</type>
+      <description><![CDATA[职员ID]]></description>
+    </parameter>
+  </function>
+</functions>
+

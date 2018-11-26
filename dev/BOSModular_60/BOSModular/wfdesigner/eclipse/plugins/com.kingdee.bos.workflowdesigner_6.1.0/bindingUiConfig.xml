@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<uiconfig>
+	<userDefinedUI>
+		<name>内嵌单据多级审批界面</name>
+		<description>简单的多级审批界面,界面中包含单据信息和多级审批历史记录信息,可以通过工具栏的各种按钮进行功能操作</description>
+		<url></url>
+		<image>images/multiapprove_oldgui.jpg</image>
+		<className>com.kingdee.eas.base.multiapprove.client.MultiApproveUI</className>
+		<nodeType></nodeType>
+		<uiType>gui</uiType>
+	</userDefinedUI>
+	<userDefinedUI>
+		<name>多级审批带下一步参与人界面</name>
+		<description>多级审批界面能单选或多选决策项,同时决策项是和分支进行关联的,可以用来指定后续分支的参与人</description>
+		<url></url>
+		<image>images/multiapprove_newgui.jpg</image>
+		<className>com.kingdee.eas.base.multiapprove.client.MultiApproveWithDecisionUI</className>
+		<nodeType></nodeType>
+		<uiType>gui</uiType>
+	</userDefinedUI>
+	<userDefinedUI>
+		<name>简单WEB审批页面</name>
+		<description>简单的web审批页面,可以查看单据信息和提交审批结果</description>
+		<url>/jsf/test</url>
+		<image>images/multiapprove_oldweb.jpg</image>
+		<className>com.kingdee.eas.base.multiapprove.multiapproveWeb</className>
+		<nodeType></nodeType>
+		<uiType>web</uiType>
+	</userDefinedUI>
+	<userDefinedUI>
+		<name>多级审批WEB页面</name>
+		<description>多级审批门户页面,可以查看单据信息,简单明了同时功能齐全</description>
+		<url>/multiapprove.jsf</url>
+		<image>images/multiapprove_newweb.jpg</image>
+		<className>com.kingdee.eas.base.multiapprove.MultiapproveWith</className>
+		<nodeType></nodeType>
+		<uiType>web</uiType>
+	</userDefinedUI>
+<!--	<userDefinedUI>
+		<name>业务办理</name>
+		<description>不带决策项多级审批</description>
+		<url>/bizHandle.jsf</url>
+		<image>images/multiapprove_bizHandle.jpg</image>
+		<className>com.kingdee.eas.base.multiapprove.MultiapproveWith</className>
+		<nodeType></nodeType>
+		<uiType>web</uiType>
+	</userDefinedUI> -->
+</uiconfig>

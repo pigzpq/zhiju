@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?metadataRepository class='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'?>
+<repository name='dropins metadata repo: file:/D:/bos/BOSModular/bosruntime/' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.system' value='true'/>
+    <property name='p2.timestamp' value='1540128715781'/>
+  </properties>
+  <units size='4'>
+    <unit id='com.kingdee.bos.security' version='5.4.0' singleton='false'>
+      <update id='com.kingdee.bos.security' range='[0.0.0,5.4.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='BOS Security Plug-in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Kingdee Software (China) Company Ltd.'/>
+        <property name='file.name' value='D:\bos\BOSModular\bosruntime\eclipse\plugins\com.kingdee.bos.security_6.1.0'/>
+        <property name='file.lastModified' value='1540115279000'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.security' version='5.4.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.security' version='5.4.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='osgi.bundle' name='org.log4j' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.common' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.security' version='5.4.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Bundle-Name: BOS Security Plug-in&#xA;Bundle-Version: 5.4.0&#xA;Eclipse-LazyStart: false&#xA;Require-Bundle: org.log4j,com.kingdee.bos.common&#xA;Bundle-SymbolicName: com.kingdee.bos.security&#xA;Bundle-Localization: plugin&#xA;Manifest-Version: 1.0&#xA;Bundle-Vendor: Kingdee Software (China) Company Ltd.&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.kingdee.bos.invokeservice' version='6.1.0' singleton='false'>
+      <update id='com.kingdee.bos.invokeservice' range='[0.0.0,6.1.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='InvokeService Plug-in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Kingdee Software (China) Company Ltd.'/>
+        <property name='file.name' value='D:\bos\BOSModular\bosruntime\eclipse\plugins\com.kingdee.bos.invokeservice_6.1.0'/>
+        <property name='file.lastModified' value='1540115279078'/>
+      </properties>
+      <provides size='9'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.invokeservice' version='6.1.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.invokeservice' version='6.1.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.framework.batchinvoke' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.framework.batchinvoke.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.framework.cache' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.framework.cache.config' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.framework.cache.notify' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='7'>
+        <required namespace='osgi.bundle' name='org.junit' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.log4j' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.cache' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.common' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.metadata' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.orm' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.ksql' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.invokeservice' version='6.1.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-Vendor: Kingdee Software (China) Company Ltd.&#xA;Bundle-ManifestVersion: 2&#xA;Bundle-Localization: plugin&#xA;Bundle-Name: InvokeService Plug-in&#xA;Require-Bundle: org.junit,org.log4j,com.kingdee.bos.cache,com.kingdee.bos.common,com.kingdee.bos.metadata,com.kingdee.bos.orm,com.kingdee.bos.ksql&#xA;Bundle-ClassPath: invokeservice.jar&#xA;Eclipse-AutoStart: true&#xA;Manifest-Version: 1.0&#xA;Bundle-SymbolicName: com.kingdee.bos.invokeservice&#xA;Bundle-Version: 6.1.0&#xA;Export-Package: com.kingdee.bos,com.kingdee.bos.framework.batchinvoke,com.kingdee.bos.framework.batchinvoke.impl,com.kingdee.bos.framework.cache,com.kingdee.bos.framework.cache.config,com.kingdee.bos.framework.cache.notify&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.kingdee.bos.bosframework' version='5.4.0'>
+      <update id='com.kingdee.bos.bosframework' range='[0.0.0,5.4.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='BOSFramework Plug-in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='KINGDEE Software Corp.Bundle-Vendor: Kingdee Software (China) Company Ltd.,'/>
+        <property name='file.name' value='D:\bos\BOSModular\bosruntime\eclipse\plugins\com.kingdee.bos.bosframework_6.1.0'/>
+        <property name='file.lastModified' value='1540115279140'/>
+      </properties>
+      <provides size='62'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.bosframework' version='5.4.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.bosframework' version='5.4.0'/>
+        <provided namespace='java.package' name='com.kingdee' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.config' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.config.app' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.config.listener' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.config.listener.app' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.config.server' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.dao' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.dao.mdquery' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.dao.mdquery.demo' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.dao.mdquery.demo.ui' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.dao.mdquery.server' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.dao.ormapping' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.dao.ormapping.client' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.dao.ormapping.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.dao.ormapping.lazyload' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.dao.ormapping_ex' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.dao.ormapping_ex.ast' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.dao.ormapping_ex.ast.expr' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.dao.ormapping_ex.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.dao.ormapping_ex.runtime' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.dao.ormapping_ex.runtime.dataquery' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.dao.ormapping_ex.runtime.objectquery' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.dao.ormapping_ex.runtime.objectquery.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.dao.ormapping_ex.service' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.dao.query' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.dao.query.server' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.db' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.framework' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.framework.agent' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.framework.agent.demo' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.framework.agent.demo.ejb' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.framework.async' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.framework.async.demo' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.framework.async.demo.ejb' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.framework.batch' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.framework.bp' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.framework.command' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.framework.command.tmpl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.framework.ejb' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.jdbc.trace' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.metadata.function' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.service' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.service.manager' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.transaction' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.transaction.EJBTxFacade' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.transaction.springframework.aop.framework' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.transaction.springframework.beans.factory' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.transaction.springframework.core' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.transaction.springframework.dao' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.transaction.springframework.jndi' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.transaction.springframework.transaction' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.transaction.springframework.transaction.interceptor' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.transaction.springframework.transaction.jta' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.transaction.springframework.transaction.support' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.transaction.springframework.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.util.rpc' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='15'>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.orm' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.log4j' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.cache' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.ksql' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.jdom' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.commons-logging' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.j2ee' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.junit' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.message' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.metadata' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.apws' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.ctrl' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.invokeservice' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.kscript' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.bosframework' version='5.4.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-Vendor: KINGDEE Software Corp.Bundle-Vendor: Kingdee Software (China) Company Ltd.,&#xA;Bundle-ManifestVersion: 2&#xA;Bundle-Localization: plugin&#xA;Bundle-Name: BOSFramework Plug-in&#xA;Require-Bundle: com.kingdee.bos.orm,org.log4j,com.kingdee.bos.cache,com.kingdee.bos.ksql,org.jdom,org.commons-logging,com.j2ee,org.junit,org.eclipse.jdt.core,com.kingdee.bos.message,com.kingdee.bos.metadata,com.kingdee.apws,com.kingdee.bos.ctrl,com.kingdee.bos.invokeservice,com.kingdee.bos.kscript&#xA;Bundle-ClassPath: bosframework.jar,lib/cglib-full-2.0.2.jar,lib/axis.jar,lib/jaxrpc.jar&#xA;Bundle-ActivationPolicy: lazy&#xA;Manifest-Version: 1.0&#xA;Bundle-SymbolicName: com.kingdee.bos.bosframework;singleton:=true&#xA;Bundle-Version: 5.4.0&#xA;Export-Package: com.kingdee,com.kingdee.bos,com.kingdee.bos.config,com.kingdee.bos.config.app,com.kingdee.bos.config.listener,com.kingdee.bos.config.listener.app,com.kingdee.bos.config.server,com.kingdee.bos.dao,com.kingdee.bos.dao.mdquery,com.kingdee.bos.dao.mdquery.demo,com.kingdee.bos.dao.mdquery.demo.ui,com.kingdee.bos.dao.mdquery.server,com.kingdee.bos.dao.ormapping,com.kingdee.bos.dao.ormapping.client,com.kingdee.bos.dao.ormapping.impl,com.kingdee.bos.dao.ormapping.lazyload,com.kingdee.bos.dao.ormapping_ex,com.kingdee.bos.dao.ormapping_ex.ast,com.kingdee.bos.dao.ormapping_ex.ast.expr,com.kingdee.bos.dao.ormapping_ex.parser,com.kingdee.bos.dao.ormapping_ex.runtime,com.kingdee.bos.dao.ormapping_ex.runtime.dataquery,com.kingdee.bos.dao.ormapping_ex.runtime.objectquery,com.kingdee.bos.dao.ormapping_ex.runtime.objectquery.impl,com.kingdee.bos.dao.ormapping_ex.service,com.kingdee.bos.dao.query,com.kingdee.bos.dao.query.server,com.kingdee.bos.db,com.kingdee.bos.framework,com.kingdee.bos.framework.agent,com.kingdee.bos.framework.agent.demo,com.kingdee.bos.framework.agent.demo.ejb,com.kingdee.bos.framework.async,com.kingdee.bos.framework.async.demo,com.kingdee.bos.framework.async.demo.ejb,com.kingdee.bos.framework.batch,com.kingdee.bos.framework.bp,com.kingdee.bos.framework.command,com.kingdee.bos.framework.command.tmpl,com.kingdee.bos.framework.ejb,com.kingdee.bos.jdbc.trace,com.kingdee.bos.metadata.function,com.kingdee.bos.service,com.kingdee.bos.service.manager,com.kingdee.bos.spi,com.kingdee.bos.transaction,com.kingdee.bos.transaction.EJBTxFacade,com.kingdee.bos.transaction.springframework.aop.framework,com.kingdee.bos.transaction.springframework.beans.factory,com.kingdee.bos.transaction.springframework.core,com.kingdee.bos.transaction.springframework.dao,com.kingdee.bos.transaction.springframework.jndi,com.kingdee.bos.transaction.springframework.transaction,com.kingdee.bos.transaction.springframework.transaction.interceptor,com.kingdee.bos.transaction.springframework.transaction.jta,com.kingdee.bos.transaction.springframework.transaction.support,com.kingdee.bos.transaction.springframework.util,com.kingdee.bos.util,com.kingdee.bos.util.rpc&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.kingdee.bos.message' version='6.1.0'>
+      <update id='com.kingdee.bos.message' range='[0.0.0,6.1.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='BOS Message'/>
+        <property name='org.eclipse.equinox.p2.provider' value='KINGDEE Software Corp.Bundle-Vendor: Kingdee Software (China) Company Ltd.,'/>
+        <property name='file.name' value='D:\bos\BOSModular\bosruntime\eclipse\plugins\com.kingdee.bos.message_6.1.0'/>
+        <property name='file.lastModified' value='1540115279046'/>
+      </properties>
+      <provides size='10'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.message' version='6.1.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.message' version='6.1.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.service.message' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.service.message.agent' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.service.message.jms' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.service.message.jms.grouptopic' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.service.message.jms.queue' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.service.message.jms.topic' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.service.message.mail' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='5'>
+        <required namespace='osgi.bundle' name='org.log4j' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.j2ee' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.metadata' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.orm' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.junit' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.message' version='6.1.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Require-Bundle: org.log4j,com.j2ee,com.kingdee.bos.metadata,com.kingdee.bos.orm,org.junit&#xA;Manifest-Version: 1.0&#xA;Eclipse-AutoStart: true&#xA;Bundle-Version: 6.1.0&#xA;Bundle-SymbolicName: com.kingdee.bos.message;singleton=true&#xA;Bundle-Localization: plugin&#xA;Bundle-Name: BOS Message&#xA;Bundle-ClassPath: message.jar&#xA;Provide-Package: com.kingdee.bos.service.message,com.kingdee.bos.service.message.agent,com.kingdee.bos.service.message.jms,com.kingdee.bos.service.message.jms.grouptopic,com.kingdee.bos.service.message.jms.queue,com.kingdee.bos.service.message.jms.topic,com.kingdee.bos.service.message.mail&#xA;Bundle-Vendor: KINGDEE Software Corp.Bundle-Vendor: Kingdee Software (China) Company Ltd.,&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+  </units>
+</repository>

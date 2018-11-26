@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: BimHelp Plug-in
+Bundle-SymbolicName: com.kingdee.bos.bim.doc; singleton:=true
+Bundle-Version: 6.0.0
+Bundle-Vendor: Kingdee Software
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.help,
+ org.eclipse.core.runtime,
+ org.eclipse.ui

@@ -1,0 +1,17 @@
+<div style="padding:10px;width:100%">
+	<div sue="msgDiv" style="display:none"></div>
+	<div sue="subName" style="padding-top:10px;font-size:12px">
+		主题名称：
+		<input type="text" class="portal_textfield" style="width:265px" />
+	<div>
+	<div style="padding-top:10px;font-size:12px">
+		请选择报表：
+	<div>
+	<div sue="themeTree" style="padding:10px;width:100%;height:180px;border:solid 1px #718BB7;background-color:#FFF;overflow-x:hidden;overflow-y:auto"></div>
+	<div style="padding-top:10px;font-size:12px">
+		<input type="checkbox" sue="cbdatacenter">使用外部数据中心</checkbox>
+		<select type="select" sue="datacenterlist" style="width:180px">
+
+		</select>
+	<div>
+</div>

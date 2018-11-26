@@ -1,0 +1,52 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;">
+	<title>Main Topic</title>
+</head>
+
+<body>
+<h3>设计report</h3>
+<p>设计界面如下<br />
+</p>
+<p><img src="../../images/reference/ds_repot_1.png" width="800" height="584" /> </p>
+<p>里面的组件表示报表界面中显示的元素，有：图、表、过滤。</p>
+<ol>
+  <ol>
+    <li>标题：在工程中目录树中显示的标题，可选设置。</li>
+    <li>立方体：选择使用的立方体模型。</li>
+    <img src="../../images/reference/ds_repot_2.png" width="525" height="435" /><br />
+           在cube下面的，将生产前缀public:，表示引用公用的cube：<br />
+    <p><img src="../../images/reference/ds_repot_3.png" width="188" height="22" />  </p>
+    <p>
+           如果在其它目录，比如report目录下，则不显示前缀，表示私有cube。只为分类而区分，实际使用中，可以引用任何本主题下任何地方的cube。但建议能公用的写在cube目录下，即使不公用，也建在cube下，建议建立子目录以便管理。</p>
+    <li>数据源：使用规则与立方体同。</li>
+    <li>组件</li>
+    <p>组件包括：1..n个分析方案，1个过滤组件。<br />
+    <img src="../../images/reference/ds_repot_4.png" width="212" height="165" /></p>
+      <li>分析方案 对象：</li>
+      <p>一个分析方案对应一条mdx查询语句，里面可以新增一个图、表组件，图表组件共享该mdx，也就是运行时它们将共享一个多维模型，对它们的交互是联动的。<br />
+  标题，备注头，备注尾(类似于文档的标题，页头，页尾)可以采用宏变量(过滤器中)或自定义变量，用来显示用户自定义信息。如果为空，则该行不显示。</p>
+    <li>表：只有一个名称属性。</li>
+    <li>图：</li>
+    <p><img src="../../images/reference/ds_repot_5.png" width="491" height="440" /></p>
+    <li>过滤：组件，在实际报表中显示为过滤界面。</li>
+    <p><img src="../../images/reference/ds_repot_6.png" width="284" height="182" /><br />
+     <li>过滤项：分三类――输入、值列表、SQL列表，各项之间逻辑为“and“关系。</li>
+     <p><img src="../../images/reference/ds_repot_7.png" width="139" height="77" /></p>
+        <li>输入：过滤界面中将显示为输入框；</li></p>
+        <p><img src="../../images/reference/ds_repot_8.png" width="611" height="258" /><br />
+		  数据类型：字符、数值、日期三种，日期格式yyyy-MM-dd  H:mm:ss或yyyy-MM-dd。<br />
+		  标题：过滤界面显示的过滤项标签。<br />
+		  字段：表示该项过滤条件施加到那个数据上，格式为：<br />
+		  数据源名称.字段{, 数据源名称.字段}<br />
+		  如“Employee.manager_id,fact.Employee_id“。<br />
+		数据源名称：该报表模型使用到的数据源项名称。</p>
+		<li>值列表：过滤界面中将显示为下拉框；</li>
+        <li>SQL列表：过滤界面中将显示为F7，里面的值为数据源sql查询结果集；</li>
+        <p><img src="../../images/reference/ds_repot_9.png" width="610" height="233" /><br />
+如果指定父/子字段,则F7会显示为树,是否叶节点用于虚模式查询时返回子结点是否为叶子,如果为空,则默认为非叶结点.
+</p>
+    </ol>
+</ol>
+</body>
+</html>

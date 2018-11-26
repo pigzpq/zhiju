@@ -1,0 +1,151 @@
+﻿th{
+  	font: 12px "宋体", Arial;
+  	white-space:nowrap;
+  	word-break:keep-all;
+}
+
+td {
+	white-space:nowrap;
+  	word-break:keep-all;
+}
+
+th div {
+	white-space:nowrap;
+  	word-break:keep-all;
+}
+
+.slicer{
+  	font: 12px "宋体", Arial;
+}
+
+.slicer-input{
+  	font: 12px "宋体", Arial;
+}
+
+/* headings */
+th.corner-heading,
+th.row-heading-heading,
+th.column-heading-heading,
+th.column-heading-even,
+th.column-heading-odd, 
+th.column-heading-span, 
+th.row-heading-even,
+th.row-heading-odd,
+th.row-heading-span,
+th.column-heading-even-right, 
+th.row-heading-even-right,
+th.column-heading-odd-right, 
+th.row-heading-odd-right,
+th.row-heading-span-right,
+th.column-heading-span-right,
+th.rownum-heading,
+th.rownum
+{
+	font: 12px "宋体", Arial;
+	text-align: left;
+	vertical-align: middle;
+	padding-top:4;
+	padding-bottom:4;
+	padding-left:2;
+	padding-right:2;
+}
+
+th.rownum
+{
+	text-align: center;
+	vertical-align: middle;
+	width:23px;
+}
+
+th.column-heading-heading
+{
+	text-align: center;
+	color: #008203;
+}
+
+th.row-heading-heading,
+th.column-heading-even,
+th.column-heading-odd, 
+th.column-heading-span
+{
+text-align: center;
+}
+
+th.row-heading-heading
+{
+color: #1549B3;
+}
+
+th.column-heading-even-right, 
+th.row-heading-even-right,
+th.column-heading-odd-right, 
+th.row-heading-odd-right,
+th.column-heading-span-right, 
+th.row-heading-span-right {
+  text-align: right;
+}
+
+th.row-heading-even,
+th.row-heading-odd,
+th.row-heading-span
+{
+	padding-right:0.5em;
+}
+
+th.column-heading-odd-right, 
+th.row-heading-odd-right
+{
+  background-color : #FFFEED;
+}
+
+td.cell-even, td.cell-odd,
+td.dataCell
+{
+	font: 12px "宋体", Arial;
+	color : #000;
+	text-align: right;
+	background-color : #FFF;
+	padding-top:4;
+	padding-bottom:4;
+	padding-left:4;
+	padding-right:4;
+	height:20;
+}
+.btn_mouseout {
+ BORDER-RIGHT: #2C59AA 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #2C59AA 1px solid; PADDING-LEFT: 
+
+2px; FONT-SIZE: 12px; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, 
+
+StartColorStr=#ffffff, EndColorStr=#C3DAF5); BORDER-LEFT: #2C59AA 1px solid; CURSOR: hand; COLOR: 
+
+black; PADDING-TOP: 2px; BORDER-BOTTOM: #2C59AA 1px solid
+}
+.btn_mouseover {
+ BORDER-RIGHT: #2C59AA 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #2C59AA 1px solid; PADDING-LEFT: 
+
+2px; FONT-SIZE: 12px; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, 
+
+StartColorStr=#ffffff, EndColorStr=#D7E7FA); BORDER-LEFT: #2C59AA 1px solid; CURSOR: hand; COLOR: 
+
+black; PADDING-TOP: 2px; BORDER-BOTTOM: #2C59AA 1px solid
+}
+.btn_mousedown
+{
+ BORDER-RIGHT: #FFE400 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #FFE400 1px solid; PADDING-LEFT: 
+
+2px; FONT-SIZE: 12px; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, 
+
+StartColorStr=#ffffff, EndColorStr=#C3DAF5); BORDER-LEFT: #FFE400 1px solid; CURSOR: hand; COLOR: 
+
+black; PADDING-TOP: 2px; BORDER-BOTTOM: #FFE400 1px solid
+}
+.btn_mouseup {
+ BORDER-RIGHT: #2C59AA 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #2C59AA 1px solid; PADDING-LEFT: 
+
+2px; FONT-SIZE: 12px; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, 
+
+StartColorStr=#ffffff, EndColorStr=#C3DAF5); BORDER-LEFT: #2C59AA 1px solid; CURSOR: hand; COLOR: 
+
+black; PADDING-TOP: 2px; BORDER-BOTTOM: #2C59AA 1px solid
+}
+

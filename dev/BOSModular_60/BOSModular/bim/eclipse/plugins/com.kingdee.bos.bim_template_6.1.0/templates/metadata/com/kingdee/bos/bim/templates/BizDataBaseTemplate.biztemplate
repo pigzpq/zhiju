@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizTemplate xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.bos.bim.templates</package>
+    <name>BizDataBaseTemplate</name>
+    <alias>bizTemplate[com.kingdee.bos.bim.templates.BizDataBaseTemplate].alias</alias>
+    <description>bizTemplate[com.kingdee.bos.bim.templates.BizDataBaseTemplate].description</description>
+    <userDefined>false</userDefined>
+    <bizType>BaseData</bizType>
+    <template>false</template>
+    <entityPK>com.kingdee.bos.bim.templates.app.BizDataBase</entityPK>
+    <queryPK>com.kingdee.bos.bim.templates.app.BizDataBaseQuery</queryPK>
+    <editUIPK>com.kingdee.bos.bim.templates.client.BizDataBaseEditUI</editUIPK>
+    <listUIPK>com.kingdee.bos.bim.templates.client.BizDataBaseListUI</listUIPK>
+    <webEditUIPK>com.kingdee.bos.bim.templates.web.BizDataBaseEditUI</webEditUIPK>
+    <webListUIPK>com.kingdee.bos.bim.templates.web.BizDataBaseListUI</webListUIPK>
+    <entityFunctionPK />
+    <editUIFunctionPK />
+    <listUIFunctionPK />
+    <entryUIPK />
+    <versionDate />
+    <versionNumber />
+    <extendTablePKs />
+    <extendEntityPKs />
+    <extendQueryPKs />
+    <extendEditUIPKs />
+    <extendListUIPKs />
+    <menuPKList />
+    <bimTemplateType>DataBase</bimTemplateType>
+    <relatedTablePK />
+    <relatedEntityPK />
+    <relatedEditUIPK />
+    <genImplementCode>true</genImplementCode>
+    <resource>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizDataBaseTemplate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单级基础资料模板" />
+            <lang locale="zh_TW" value="單級基礎資料範本" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizDataBaseTemplate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单级基础资料模板" />
+            <lang locale="zh_TW" value="單級基礎資料範本" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizDataBaseTemplate].extendedProperty.BizUnitDeployed">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizDataBaseTemplate].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizDataBaseTemplate].extendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="name" />
+            <lang locale="zh_CN" value="name" />
+            <lang locale="zh_TW" value="name" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizDataBaseTemplate].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizDataBaseTemplate].extendedProperty.isSimpleEntity">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizDataBaseTemplate].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizTemplate>
+

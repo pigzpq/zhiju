@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="获取职位上所有人员">
+    <script><![CDATA[if(null == positionID || "".equals(positionID))
+			return null;
+		com.kingdee.eas.basedata.person.app.PersonToWFAdapter adapter = new 
+		com.kingdee.eas.basedata.person.app.PersonToWFAdapter();
+		return adapter.getPositionHolders(__bosContext,positionID);]]></script>
+    <description><![CDATA[根据职位ID获取此职位对应的所有人员]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>PERFORMER</type>
+      <description><![CDATA[返回参与人数组]]></description>
+      <isArray>true</isArray>
+    </return>
+    <parameter>
+      <name>positionID</name>
+      <type>STRING</type>
+      <description><![CDATA[职位ID]]></description>
+    </parameter>
+  </function>
+</functions>
+

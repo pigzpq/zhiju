@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: BSRRTool Plug-in
+Bundle-SymbolicName: com.kingdee.bos.bsrrtool;singleton:=true
+Bundle-Version: 1.0.0
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.ui,
+ org.eclipse.jface,
+ com.kingdee.bos.bsrr,
+ com.kingdee.bos.common,
+ org.axis
+Bundle-ClassPath: bsrrtool.jar
+Bundle-Vendor: Kingdee Software (China) Company Ltd.
+Export-Package: com.kingdee.bos.bsrr.tool,
+ com.kingdee.bos.bsrr.tool.dialog,
+ com.kingdee.bos.bsrr.tool.provider,
+ com.kingdee.bos.bsrr.tool.wizard,
+ com.kingdee.bos.srr
+Bundle-Activator: com.kingdee.bos.bsrr.tool.BSRRToolPlugin
+Bundle-ActivationPolicy: lazy

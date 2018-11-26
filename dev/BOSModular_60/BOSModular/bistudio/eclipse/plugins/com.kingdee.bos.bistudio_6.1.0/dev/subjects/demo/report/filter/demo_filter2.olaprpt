@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BIReport>
+	<Cube ref="public:demo.cube" caption="公共:销售数据立方体" />
+	<DataSource ref="public:demo_filter.ds" caption="公共:销售数据源(过滤专用)" />
+	<MdxQuery name="query1" caption="产品地区销售分析(标准过滤2)" title="" memoHead="" memoTail="" perPageRows="20">
+		select State.levels(0).members*measures.members on columns,
+			non empty Product.levels(0).members on rows 
+		from sales</MdxQuery>
+	<FilterComponent name="filter" caption="过滤器">
+		<FilterItem type="sql" dataType="number" caption="选择职员" column="Employee.Employee_ID" operator="EQ" required="true" defaultValue="" varname="">
+			<SqlInfo captionColumn="Employee_Name" valueColumn="Employee_ID" table="Employee" parentColumn="Manager_ID" childColumn="Employee_ID" isLeafColumn="" orderBy="" orderMethod="asc" />
+		</FilterItem>
+	</FilterComponent>
+	<WorksheetComponent name="sheet1" caption="表格" mdxQuery="query1" showSlicer="true" />
+	<Options>
+		<Molap value="false" />
+	</Options>
+</BIReport>
+

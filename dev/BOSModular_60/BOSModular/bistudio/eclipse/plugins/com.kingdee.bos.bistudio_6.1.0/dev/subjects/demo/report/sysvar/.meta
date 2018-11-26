@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Meta>
+	<Element name="." caption="系统变量" />
+	<Element name="demo_date.olaprpt" caption="时间日期测试" />
+</Meta>
+

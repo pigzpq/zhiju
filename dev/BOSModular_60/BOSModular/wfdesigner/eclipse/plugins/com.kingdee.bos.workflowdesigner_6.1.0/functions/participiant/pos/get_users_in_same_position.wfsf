@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="获取同职位非本人人员">
+    <script><![CDATA[if(null == positionID || "".equals(positionID) || null == personID || "".equals(personID))
+			return null;
+		com.kingdee.eas.basedata.person.app.PersonToWFAdapter adapter = new 
+		com.kingdee.eas.basedata.person.app.PersonToWFAdapter();
+		com.kingdee.bos.workflow.participant.Person[] persons = adapter.getPositionHolders(__bosContext,positionID);
+		java.util.ArrayList list = new java.util.ArrayList();
+		for(int i = 0 ;i<persons.length;i++){
+			if(!persons[i].getEmployeeId().equalsIgnoreCase(personID))
+				list.add(persons[i]);
+		}
+		com.kingdee.bos.workflow.participant.Person[] ps = new com.kingdee.bos.workflow.participant.Person[list.size()];
+		System.arraycopy(list.toArray(), 0, ps, 0, list.size());
+		return ps;]]></script>
+    <description><![CDATA[根据职位ID获取此职位对应的所有人员但不包含传入的人员]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>PERFORMER</type>
+      <array>false</array>
+      <description><![CDATA[返回参与人数组]]></description>
+    </return>
+    <parameter>
+      <name>posotionID</name>
+      <type>STRING</type>
+      <array>false</array>
+      <description><![CDATA[职位ID]]></description>
+    </parameter>
+    <parameter>
+      <name>personID</name>
+      <type>STRING</type>
+      <array>false</array>
+      <description><![CDATA[人员ID]]></description>
+    </parameter>
+  </function>
+</functions>
+

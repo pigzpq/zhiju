@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Nl1 Fragment
+Bundle-SymbolicName: com.kingdee.bos.tool.toolcommon.nl1
+Bundle-Version: 6.0.0
+Fragment-Host: com.kingdee.bos.tool.toolcommon;bundle-version="[6.0.0,7.0.0)"
+Bundle-Localization: plugin
+Bundle-ClassPath: toolcommon.nl1.jar

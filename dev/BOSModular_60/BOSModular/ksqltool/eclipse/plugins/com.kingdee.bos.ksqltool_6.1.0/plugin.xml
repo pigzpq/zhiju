@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.editors">       
+      <editor
+            class="com.kingdee.bos.sql.ksqltool.ksqleditor.SQLEditor"
+            contributorClass="com.kingdee.bos.sql.ksqltool.ksqleditor.SQLEditorContributor"
+            default="false"
+            extensions="ksql"
+            icon="images/function.png"
+            id="com.kingdee.bos.sql.ksqltool.ksqleditor.SQLEditor"
+            name="K-SQL编辑器"/>
+      <editor
+            class="com.kingdee.bos.sql.ksqltool.erdiagram.ERDiagram"
+            extensions="kerd"
+            icon="icons/sample.gif"
+            id="com.kingdee.bos.sql.ksqltool.erdiagram.ERDiagram"
+            name="ER Diagram"/>
+   </extension>
+   <extension
+         point="org.eclipse.help.toc">
+      <toc
+            file="toc.xml"
+            primary="true">
+      </toc>
+      <toc
+            file="tocconcepts.xml">
+      </toc>
+      <toc
+            file="tocgettingstarted.xml">
+      </toc>
+      <toc
+            file="tocreference.xml">
+      </toc>
+      <toc
+            file="tocsamples.xml">
+      </toc>
+      <toc
+            file="toctasks.xml">
+      </toc>
+   </extension>
+   
+   <!--首选项配置
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            name="K-SQL Tool"
+            class="com.kingdee.bos.sql.ksqltool.preferences.KSQLPreferencePage"
+            id="com.kingdee.bos.sql.ksqltool.preferences.KSQLPreferencePage">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="com.kingdee.bos.sql.ksqltool.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+   -->
+   
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="K-SQL Tool"
+            id="com.kingdee.bos.sql.ksqltool">
+      </category>
+      <view
+            category="com.kingdee.bos.sql.ksqltool"
+            class="com.kingdee.bos.sql.ksqltool.views.ResultDataView"
+            icon="images/view.png"
+            id="com.kingdee.bos.sql.ksqltool.views.ResultDataView"
+            name="数据浏览器"/>
+      <view
+            category="com.kingdee.bos.sql.ksqltool"
+            class="com.kingdee.bos.sql.ksqltool.views.DBSchemaView"
+            icon="images/connect.png"
+            id="com.kingdee.bos.sql.ksqltool.views.DBSchemaView"
+            name="对象浏览器"/>
+      <view
+            category="com.kingdee.bos.sql.ksqltool"
+            class="com.kingdee.bos.sql.ksqltool.views.SQLPanelView"
+            icon="images/sql.png"
+            id="com.kingdee.bos.sql.ksqltool.views.SQLPanelView"
+            name="语句浏览器"/>
+      <view
+            category="com.kingdee.bos.sql.ksqltool"
+            class="com.kingdee.bos.sql.ksqltool.views.TableInfoView"
+            icon="IMG/tbtn_metadata.gif"
+            id="com.kingdee.bos.sql.ksqltool.views.TableInfoView"
+            name="表信息浏览器"/>
+   </extension>
+   <!--application
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.kingdee.bos.sql.ksqltool.application.Application">
+         </run>
+      </application>
+   </extension>
+   -->
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.kingdee.bos.sql.ksqltool.perspective.KSQLToolPerspective"
+            icon="IMG/DB.gif"
+            id="com.kingdee.bos.sql.ksqltool.perspective.KSQLToolPerspective"
+            name="K-SQL Tool">
+      </perspective>
+   </extension>
+   
+   <extension
+         point="org.eclipse.core.filebuffers.documentSetup">
+      <participant
+            class="com.kingdee.bos.sql.ksqltool.ksqleditor.SQLDocumentParticipant"
+            extensions="ksql"/>
+   </extension>
+
+</plugin>

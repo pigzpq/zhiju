@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Meta>
+  <Element name="demo.ds" caption="销售数据源"/>
+  <Element name="demo_filter.ds" caption="销售数据源(过滤专用)"/>
+  <Element name="demo_var.ds" caption="销售数据源(变量专用)"/>
+  <Element name="demo_dimLink.ds" caption="销售数据源(维度穿透专用)"/>
+  <Element name="demo_var2.ds" caption="销售数据源(变量专用2)"/>
+</Meta>

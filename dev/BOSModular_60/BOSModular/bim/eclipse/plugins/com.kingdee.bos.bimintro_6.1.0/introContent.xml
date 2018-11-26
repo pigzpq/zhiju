@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<introContent>
+	<page alt-style="css/root_swt.properties" style="css/root.css" id="root" style-id="page">
+		<title style-id="intro-header">欢迎使用金蝶BOS集成开发环境</title>
+		<group id="links-background">
+			<group id="page-links">
+				<link label="业务建模工具" url="http://org.eclipse.ui.intro/runAction?pluginId=com.kingdee.bos.bim&amp;class=com.kingdee.bos.bim.perspective.OpenBIMPerspectiveAction" id="overview" style-id="left">
+					<img id="overview_img" style-id="content-img" src="css/graphics/icons/etool/overview72.gif" alt="Overview"/>
+					<text>点这里将打开业务建模工具</text>
+				</link>
+				<link label="流程配置工具" url="http://org.eclipse.ui.intro/runAction?pluginId=com.kingdee.bos.workflow.designer&amp;class=com.kingdee.bos.workflow.wfdesigner.perspective.OpenWfDesignerPerspectiveAction" id="samples" style-id="right">
+					<img id="samples_img" style-id="content-img" src="css/graphics/icons/etool/samples72.gif" alt="Samples"/>
+					<text>点这里将打开流程配置工具</text>
+				</link>
+			</group>
+			<group id="page-links">
+				<link label="设计开发工具" url="http://org.eclipse.ui.intro/runAction?pluginId=com.kingdee.bos.studio&amp;class=com.kingdee.bos.studio.perspective.OpenMainPerspectiveAction" id="tutorials" style-id="left">
+					<img id="tutorials_img" style-id="content-img" src="css/graphics/icons/etool/tutorials72.gif" alt="Tutorials"/>
+					<text>点这里将打开设计开发工具</text>
+				</link>
+				<link label="测试部署工具" url="http://org.eclipse.ui.intro/runAction?pluginId=com.kingdee.bos.bim&amp;class=com.kingdee.bos.bim.perspective.OpenBIMPerspectiveAction" id="news" style-id="right">
+					<img id="whatsnew_img" style-id="content-img" src="css/graphics/icons/etool/whatsnew72.gif" alt="bimDeployPerspective"/>
+					<text>点这里将打开测试部署工具</text>
+				</link>
+			</group>
+		</group>
+	    <group id="action-links">
+	      <link url="http://org.eclipse.ui.intro/close" label="工作台" id="workbench">
+	        <img id="workbench_img" style-id="content-img" src="css/graphics/icons/etool/wb48.gif" alt="Go to the workbench"></img>
+	        <text>返回工作台</text>
+	      </link>
+	    </group>		
+	</page>
+	
+    <page alt-style="css/standby_swt.properties" style="css/standby_root.css" id="standby" style-id="page">
+    	<title style-id="intro-header">欢迎使用金蝶BOS集成开发环境</title>
+		<group id="links-background">
+			<group id="page-links">
+				<link label="业务建模工具" url="http://org.eclipse.ui.intro/runAction?pluginId=com.kingdee.bos.bim&amp;class=com.kingdee.bos.bim.perspective.OpenBIMPerspectiveAction" id="overview" style-id="left">
+					<text>点这里将打开业务建模工具</text>
+				</link>
+				<link label="流程配置工具" url="http://org.eclipse.ui.intro/runAction?pluginId=com.kingdee.bos.workflow.designer&amp;class=com.kingdee.bos.workflow.wfdesigner.perspective.OpenWfDesignerPerspectiveAction" id="samples" style-id="left">
+					<text>点这里将打开流程配置工具</text>
+				</link>
+			</group>
+			<group id="page-links">
+				<link label="设计开发工具" url="http://org.eclipse.ui.intro/runAction?pluginId=com.kingdee.bos.studio&amp;class=com.kingdee.bos.studio.perspective.OpenMainPerspectiveAction" id="tutorials" style-id="right">
+					<text>点这里将打开设计开发工具</text>
+				</link>
+				<link label="测试部署工具" url="http://org.eclipse.ui.intro/runAction?pluginId=com.kingdee.bos.bim&amp;class=com.kingdee.bos.bim.perspective.OpenBIMPerspectiveAction" id="news" style-id="right">
+					<text>点这里将打开测试部署工具</text>
+				</link>
+			</group>
+		</group>
+	</page>
+</introContent>

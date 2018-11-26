@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+<!-- ============================================================================= -->
+<!-- Define topics for the main guide                                              -->
+<!-- ============================================================================= -->
+<toc label="BOS知识库">
+	<topic label="总体框架" href="http://eas2:8080/Wiki.jsp?page=BOSFramework"/>
+	<topic label="元数据" href="http://eas2:8080/Wiki.jsp?page=MetaData"/>
+	<topic label="ORMapping" href="http://eas2:8080/Wiki.jsp?page=ORMapping"/>
+	<topic label="Query" href="http://eas2:8080/Wiki.jsp?page=Query"/>
+	<topic label="KSQL" href="http://eas2:8080/Wiki.jsp?page=KSQL"/>
+	<topic label="工作流系统" href="http://eas2:8080/Wiki.jsp?page=Workflow"/>
+	<topic label="BOS Studio" href="http://eas2:8080/Wiki.jsp?page=BOSStudio"/>
+	<topic label="BIM（业务管理平台）" href="http://eas2:8080/Wiki.jsp?page=BIM"/>
+	<topic label="KScript" href="http://eas2:8080/Wiki.jsp?page=KScript"/>
+	<topic label="应用框架" href="http://eas2:8080/Wiki.jsp?page=AppFramework"/>
+	<topic label="工具" href="http://eas2:8080/Wiki.jsp?page=Tools"/>
+	<topic label="Eclipse技术" href="http://eas2:8080/Wiki.jsp?page=Eclipse"/>
+	<topic label="基础服务" href="http://eas2:8080/Wiki.jsp?page=BaseService"/>
+	<topic label="构建与发布" href="http://eas2:8080/Wiki.jsp?page=BuildampRealse"/>	
+</toc>

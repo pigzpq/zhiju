@@ -1,0 +1,156 @@
+<html>
+<head>
+	<meta http-equiv="Content-Language" content="zh-cn">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="../js/sue-main.js"></script>
+	<script src="../js/sue-ui.js"></script>
+	<script src="../js/sue-config.js"></script>
+	<script src="../js/bi.js"></script>
+	<SCRIPT src="../js/bi_tree.js"></SCRIPT>
+	
+	<title>图片对象属性设置</title>
+	<STYLE>
+	.dialog
+	{
+		font-size:9pt;
+	}
+	</STYLE>
+</head>
+<body topmargin="10" leftmargin="10" bottommargin="5" rightmargin="10">
+	<table border="0" width="100%" height="100%" class="dialog" cellPadding="0" cellSpacing="0">
+	  <tr>
+	    <td width="100%" height="100%" valign="top">
+		  	<TABLE border="0" cellPadding="0" cellSpacing="0" width="100%" height="100%" style="font-size:9pt">
+		  		<COL width="80">
+		  		<COL width="180">
+		  		<TR>
+		  			<TD>
+		  				<INPUT id="ctrlShowTitle" type="checkbox" onclick="doCheckboxClick()">显示标题栏
+		  			</TD>
+		  			<TD>
+		  				标题：<INPUT id="ctrlTitle" type="text" style="width:100px" onkeydown="doKeyDown()">
+		  			</TD>
+				</TR>
+				<tr height="40">
+					<td colspan="3">
+						对象名称：<input id="objectName" type="text"/>
+					</td>
+				</tr>
+				<TR>
+					<TD colspan="2">缩放：
+						<SELECT id="ctrlScale" size="1" style="width:120" onclick="doSelectClick()">
+							<OPTION value="original">保持原始大小</OPTION>
+							<OPTION value="filled">缩放充满容器</OPTION>
+						</SELECT>
+					</TD>
+				</TR>
+			</TABLE>
+		</td>
+	  </tr>
+	  <tr>
+		<td style="text-align:right;padding:0px">
+			<button id="btnOK" class="portal_button" onclick="return btnOK_onclick()" style="margin-right:10px">确定</button>
+			<button id="btnCancel" class="portal_button" onclick="return btnCancel_onclick()">取消</button>
+		</td>
+	  </tr>
+	</table>
+</body>
+
+<script language="javascript">
+var _oParams;
+
+function document.body.onload()
+{
+	_oParams = window.frameElement.$param;
+	
+	_.id( "objectName" ).value = _oParams.name;
+	ctrlShowTitle.checked = _oParams.bShowTitle;
+	ctrlTitle.value = (_oParams.sTitle == null ? "" : _oParams.sTitle);
+	
+	ctrlScale.value = (_oParams.sScale ? _oParams.sScale : null);
+	try {
+		document.getElementById("ctrlTitle").focus();
+	} catch( e ) {
+	}
+}
+
+var jsKeyWordMap = _.hash( "abstract,boolean,break,byte,case,catch,char,class,const,continue,default,delete,do,double,else,extends,false,final,finally,float,for,function,goto,if,implements,import,in,instanceof,int,interface,long,native,new,null,package,private,protected,public,return,short,static,super,switch,synchronized,this,throw,throws,transient,true,try,typeof,undefined,var,void,while,with,Object,Math,String,Number,Boolean,Array,Image,Option,Error".split(","), _.I, 1 );
+var dashboardKeyWordMap = _.hash( "window,name,document,parent,opener,top,location,history,navigator".split( "," ), _.I, 1 );
+
+// 测试是否合法的对象名称
+function testValidObjectName( name ) {
+	if ( !name ) {
+		return true;
+	} else if ( !/^[A-Za-z]\w*$/.test( name ) ) {
+		return "对象名称只能包含英文字符、数字和下划线，且必须英文字符开头。";
+	} else if ( name in jsKeyWordMap ) {
+		return "对象名称不能使用JavaScript关键字，请更换。";
+	} else if ( name in dashboardKeyWordMap ) {
+		return "对象名称不能使用仪表板运行环境关键字，请更换。";
+	} else {
+		return true;
+	}
+}
+
+function btnOK.onclick()
+{
+	_oParams.name = _.id( "objectName" ).value;
+	_oParams.name = _.trim( _oParams.name );
+	var testObjectName = testValidObjectName( _oParams.name );
+	if ( testObjectName !== true ) {
+		alert( testObjectName );
+		return;
+	}
+		
+	if(ctrlShowTitle.dashboard_changed)
+	{
+		_oParams.bShowTitle = ctrlShowTitle.checked;
+	}
+	else
+	{
+		_oParams.bShowTitle = null;
+	}
+	
+	if(ctrlTitle.dashboard_changed)
+	{
+		_oParams.sTitle = ctrlTitle.value;
+	}
+	else
+	{
+		_oParams.sTitle = null;
+	}
+	
+	if(ctrlScale.dashboard_changed && ctrlScale.value)
+	{
+		_oParams.sScale = ctrlScale.value;
+	}
+	else
+	{
+		_oParams.sScale = null;
+	}
+	
+	_oParams.dialog.closeDialog( true );
+}
+
+function btnCancel.onclick()
+{
+	_oParams.dialog.closeDialog( false );
+}
+	
+function doKeyDown()
+{
+	event.srcElement.dashboard_changed = true;
+}
+
+function doCheckboxClick()
+{
+	var e = event.srcElement;
+	e.dashboard_changed = true;
+}
+
+function doSelectClick() {
+	event.srcElement.dashboard_changed = true;
+}
+
+</script>
+</html>

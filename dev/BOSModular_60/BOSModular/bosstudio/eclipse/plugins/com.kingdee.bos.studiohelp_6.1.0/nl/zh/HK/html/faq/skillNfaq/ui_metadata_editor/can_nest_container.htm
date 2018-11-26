@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="../../../../book.css" CHARSET="GB2312" TYPE="text/css">
+<TITLE>
+能在相對佈局的容器中嵌套採用KDLayout的容器嗎
+</TITLE>
+
+<link rel="stylesheet" type="text/css" HREF="../../../../book.css">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H3>能在相對佈局的容器中嵌套採用KDLayout的容器嗎</H3>
+<p>可以，但須在UI的非抽像類的構造函數的最後，重載該採用KDLayout佈局的容器的"OriginalBounds"客戶屬性，類似代碼如下：</p>
+<p>pnlBase.putClientProperty("OriginalBounds", new Rectangle(8, 256, 763, 10)); </p>
+
+
+<p align="center"><a href="../../../../notices.html"><img border="0" src="../../../../copyright.gif"></a></p>
+<p></p>
+</BODY>
+</HTML>

@@ -1,0 +1,128 @@
+﻿/*
+ * Web组件样式表
+ */
+
+html, body {
+	height: 100%;
+}
+
+.normal_words {
+	font:12px "宋体", Arial;
+}
+
+.filter_panel_container {
+	font-size:12px;
+	word-break:keep-all;
+	white-space:no-wrap;
+}
+
+.filter_panel_container a {
+	margin-right:10px;
+	text-decoration:none;
+}
+
+.filter_panel_container a:hover {
+	text-decoration:underline;
+}
+
+.filter_panel_container hr {
+	size:3px;
+	width:100%;
+}
+
+.filter_label {
+	font: 13px "宋体", Arial;
+	margin-right: 10px;
+}
+
+.filter_button {
+	border: solid 1px #CCC;
+	background-color: #EFF8FA;
+	padding-top: 3px;
+	cursor: pointer;
+}
+
+.filter_textfield {
+	border: solid 1px #CCC;
+	width: 190px;
+}
+
+.constraint_splitor {
+	text-align: center;
+	padding: 0px 18px 0px 0px;
+	font-size: 14px;
+	vertical-align: middle;
+	color: #9E9E9E;
+}
+
+.slicer_field {
+	font-size: 12px;
+	padding: 15px 10px 0px 10px;
+	width: 100%;
+}
+
+.slicer_field span {
+	height: 25px;
+}
+
+.page_field {
+	font-size: 12px;
+	padding: 10px;
+	white-space: nowrap;
+	break-all: keep-all;
+	border-bottom:solid 1px #d6dbe1;
+}
+
+.ui_container {
+	font-size: 12px;
+	padding: 10px 0px 25px 0px;
+	margin: 0px 10px;
+	width: 100%;
+	//overflow-x: auto;
+}
+
+.ui_container area{
+	cursor:hand;
+}
+
+.page_div {
+	margin-top:10px;
+	font:12px Arial;
+}
+
+.page_div img {
+	border: none;
+	vertical-align: middle;
+	cursor: hand;
+	margin: 0px 6px;
+}
+
+/*
+ * TableLayout
+ */
+.tablelayout_container {
+	border: none;
+	width: 100%;
+	margin-top:20px;
+	//table-layout:fixed;
+}
+
+.tablelayout {
+	vertical-align: top;
+}
+
+.strategy_title {
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;
+}
+
+.strategy_memo {
+	padding: 10px 0px;
+	font-size: 12px;
+}
+
+.report_msgdiv {
+	padding: 10px;
+}

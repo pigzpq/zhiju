@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<meta http-equiv="Pragma" content="no-cache"> 
+		<meta http-equiv="Cache-Control" content="no-cache"> 
+		<meta http-equiv="Expires" content="0">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	   	<link rel="stylesheet" type="text/css" href="../ext-2.0/resources/css/ext-all.css" />
+	   	<link rel="stylesheet" type="text/css" href="../metric/look.css" />
+	   	<link href="../css/worksheet.css" rel="stylesheet" type="text/css" ></link>
+		<link href="../css/ui-components.css" type="text/css" rel="stylesheet"></link>
+		<script src="../js/sue-main.js"></script>
+		<script src="../js/sue-ui.js"></script>
+		<script src="../js/sue-config.js"></script>
+		<script src="../js/bi.js"></script>
+		<script src="../js/bi_tree.js"></script>
+		<script src="../metric/component/tree.js"></script>
+		<script src="../js/ext_report.js"></script>
+		<script>
+	   _.bindEvent( window, "load", function() {
+		var servletURL = "/easportal/BIReport";
+		var loadURL = "/easportal/BIReport?servletType=extReport&from=portlet&"+location.href.split(/\?/g)[1];
+		var obj = {
+			isTab: _.K( false ),
+			body: document.body,
+			servletURL: servletURL,
+			url: loadURL
+		};
+		loadReport( obj );
+		var realHeight = document.body.clientHeight;
+		var prefHeight = realHeight+180>700?realHeight+180:880;		
+		document.frames.frameElement.style.height=(prefHeight)+"px";
+		
+		} );
+		</script>
+	</head>
+	<body id="body" topmargin="0" leftmargin="0" bottommargin="0" rightmargin="0" oncontextmenu="return false;">
+	</body>
+</html>

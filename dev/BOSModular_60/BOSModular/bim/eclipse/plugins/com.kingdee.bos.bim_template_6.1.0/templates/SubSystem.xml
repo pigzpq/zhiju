@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 U (http://www.xmlspy.com) by et8 (et8) -->
+<subSystem>
+	<row fullname="com.kingdee.eas.base" name="base" alias_l1="base" alias_l2="基础系统" alias_l3="基础系统" isleaf="0"/>
+	<row fullname="com.kingdee.eas.base.auth" name="auth" alias_l1="auth" alias_l2="身份认证" alias_l3="身份认证" isleaf="1"/>
+	<row fullname="com.kingdee.eas.base.codingrule" name="codingrule" alias_l1="codingrule" alias_l2="编码规则" alias_l3="编码规则" isleaf="1"/>
+	<row fullname="com.kingdee.eas.base.dap" name="dap" alias_l1="dap" alias_l2="动态会计平台" alias_l3="动态会计平台" isleaf="1"/>
+	<row fullname="com.kingdee.eas.base.forewarn" name="forewarn" alias_l1="forewarn" alias_l2="预警平台" alias_l3="预警平台" isleaf="1"/>
+	<row fullname="com.kingdee.eas.base.init" name="init" alias_l1="init" alias_l2="系统初始化" alias_l3="系统初始化" isleaf="1"/>
+	<row fullname="com.kingdee.eas.base.job" name="job" alias_l1="job" alias_l2="后台任务管理" alias_l3="后台任务管理" isleaf="1"/>
+	<row fullname="com.kingdee.eas.base.log" name="log" alias_l1="log" alias_l2="上机日志" alias_l3="上机日志" isleaf="1"/>
+	<row fullname="com.kingdee.eas.base.message" name="message" alias_l1="message" alias_l2="业务消息中心" alias_l3="业务消息中心" isleaf="1"/>
+	<row fullname="com.kingdee.eas.base.myeas" name="myeas" alias_l1="myeas" alias_l2="我的EAS" alias_l3="我的EAS" isleaf="1"/>
+	<row fullname="com.kingdee.eas.base.param" name="param" alias_l1="param" alias_l2="参数管理" alias_l3="参数管理" isleaf="1"/>
+	<row fullname="com.kingdee.eas.base.permission" name="permission" alias_l1="permission" alias_l2="权限系统" alias_l3="权限系统" isleaf="1"/>
+	<row fullname="com.kingdee.eas.base.user" name="user" alias_l1="user" alias_l2="用户管理" alias_l3="用户管理" isleaf="1"/>
+	<row fullname="com.kingdee.eas.base.vc" name="vc" alias_l1="vc" alias_l2="对帐中心" alias_l3="对帐中心" isleaf="1"/>
+	<row fullname="com.kingdee.eas.base.wf" name="wf" alias_l1="wf" alias_l2="工作流客户端" alias_l3="工作流客户端" isleaf="1"/>
+	<row fullname="com.kingdee.eas.basedata" name="basedata" alias_l1="basedata" alias_l2="基础资料" alias_l3="基础资料" isleaf="0"/>
+	<row fullname="com.kingdee.eas.basedata.assistant" name="assistant" alias_l1="assistant" alias_l2="辅助资料" alias_l3="辅助资料" isleaf="1"/>
+	<row fullname="com.kingdee.eas.basedata.master" name="master" alias_l1="master" alias_l2="主数据" alias_l3="主数据" isleaf="1"/>
+	<row fullname="com.kingdee.eas.basedata.org" name="org" alias_l1="org" alias_l2="组织架构" alias_l3="组织架构" isleaf="1"/>
+	<row fullname="com.kingdee.eas.basedata.person" name="person" alias_l1="person" alias_l2="基本人事" alias_l3="基本人事" isleaf="1"/>
+	<row fullname="com.kingdee.eas.fi" name="fi" alias_l1="fi" alias_l2="集团财务" alias_l3="集团财务" isleaf="0"/>
+	<row fullname="com.kingdee.eas.fi.ar" name="ar" alias_l1="ar" alias_l2="应收系统" alias_l3="应收系统" isleaf="1"/>
+	<row fullname="com.kingdee.eas.fi.ap" name="ap" alias_l1="ap" alias_l2="应付系统" alias_l3="应付系统" isleaf="1"/>
+	<row fullname="com.kingdee.eas.fi.cas" name="cas" alias_l1="cas" alias_l2="出纳管理" alias_l3="出纳管理" isleaf="1"/>
+	<row fullname="com.kingdee.eas.fi.cas.rac" name="rac" alias_l1="rac" alias_l2="收支平台" alias_l3="收支平台" isleaf="1"/>
+	<row fullname="com.kingdee.eas.fi.fa" name="fa" alias_l1="fa" alias_l2="固定资产" alias_l3="固定资产" isleaf="1"/>
+	<row fullname="com.kingdee.eas.fi.gl" name="gl" alias_l1="gl" alias_l2="总账" alias_l3="总账" isleaf="1"/>
+	<row fullname="com.kingdee.eas.fi.gr" name="gr" alias_l1="gr" alias_l2="集团应用(业务合并)" alias_l3="集团应用(业务合并)" isleaf="1"/>
+	<row fullname="com.kingdee.eas.fi.rpt" name="rpt" alias_l1="rpt" alias_l2="报表" alias_l3="报表" isleaf="1"/>
+	<row fullname="com.kingdee.eas.hr" name="hr" alias_l1="hr" alias_l2="人力资源" alias_l3="人力资源" isleaf="0"/>
+	<row fullname="com.kingdee.eas.hr.org" name="org" alias_l1="org" alias_l2="组织架构管理" alias_l3="组织架构管理" isleaf="1"/>
+	<row fullname="com.kingdee.eas.hr.payroll" name="payroll" alias_l1="payroll" alias_l2="薪酬管理" alias_l3="薪酬管理" isleaf="1"/>
+	<row fullname="com.kingdee.eas.ma" name="ma" alias_l1="ma" alias_l2="管理会计" alias_l3="管理会计" isleaf="0"/>
+	<row fullname="com.kingdee.eas.ma.bg" name="bg" alias_l1="bg" alias_l2="预算管理" alias_l3="预算管理" isleaf="1"/>
+	<row fullname="com.kingdee.eas.fm" name="fm" alias_l1="fm" alias_l2="资金管理" alias_l3="资金管理" isleaf="0"/>
+	<row fullname="com.kingdee.eas.fm.fp" name="fp" alias_l1="fp" alias_l2="资金计划" alias_l3="资金计划" isleaf="1"/>
+	<row fullname="com.kingdee.eas.fm.fs" name="fs" alias_l1="fs" alias_l2="资金结算" alias_l3="资金结算" isleaf="1"/>
+</subSystem>

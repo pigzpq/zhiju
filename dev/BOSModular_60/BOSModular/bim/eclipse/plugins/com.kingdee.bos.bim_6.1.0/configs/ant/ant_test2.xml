@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="project" default="compile" >
+	<property name="root" value="C:\java\"/>
+	<property name="lib" value="W:\eas\Server\lib"/>
+	<property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter">
+		<classpath>
+			<filelist >
+				<file name="F:\BOSModular\platform\eclipse\plugins\org.eclipse.jdt.core_3.4.0.v_874.jar"/>
+				<file name="D:\jdtCompilerAdapter.jar"/>
+			</filelist>
+		</classpath>
+		</property>
+	<target name="compile" description="编译" >
+		<javac srcdir="${root}\src" destdir="${root}\classes"  fork="true"
+			debug="on" noWarn="on" source="1.4" verbose="true" target="1.4"  memoryMaximumSize="1024M"
+			>
+			<classpath>
+				<fileset dir="${lib}">
+					<include name="sp/**/*.zip" />
+					<include name="sp/**/*.jar" />
+					<include name="industry/**/*.zip" />
+					<include name="industry/**/*.jar" />
+					<include name="web/**/*.zip" />
+					<include name="web/**/*.jar" />
+					<include name="common/**/*.zip" />
+					<include name="common/**/*.jar" />
+					<include name="client/**/*.zip" />
+					<include name="client/**/*.jar" />
+					<include name="server/**/*.zip" />
+					<include name="server/**/*.jar" />
+				</fileset>
+			</classpath>
+		</javac>
+	</target>
+</project>

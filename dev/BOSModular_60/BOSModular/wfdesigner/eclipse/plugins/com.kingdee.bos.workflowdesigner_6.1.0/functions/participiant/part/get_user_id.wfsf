@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="获取参与人对应的用户ID">
+    <script><![CDATA[if(null == participant)
+	return null;
+var cls = ""+participant.getClass();
+if ("class java.lang.String".equals(cls) || "class com.kingdee.bos.util.BOSUuid".equals(cls)) {
+	participant = participant.toString();
+	var adapter = new com.kingdee.eas.basedata.person.app.PersonToWFAdapter();
+	var persons = adapter.getPersonByEmployeeId(__bosContext, participant);
+	if (persons == null || persons.length == 0)
+		return null;
+	else
+		return persons[0].getUserId().toString();
+} 
+
+else {
+	return participant.toString();
+}]]></script>
+    <description><![CDATA[根据传入的参与人,获取此参与人对应的用户ID]]></description>
+    <type>KSCRIPT</type>
+    <editable>true</editable>
+    <return>
+      <type>STRING</type>
+      <array>false</array>
+      <description><![CDATA[返回参与人对应的第一个用户ID]]></description>
+    </return>
+    <parameter>
+      <name>participant</name>
+      <type>BOID</type>
+      <array>false</array>
+      <description><![CDATA[职员Person对象,或者是职员的ID(字符串)]]></description>
+    </parameter>
+  </function>
+</functions>
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin name="%pluginName" id="com.j2ee" version="1.3" provider-name="%providerName">
+	<runtime>
+		<library name="j2ee.jar">
+			<export name="*"/>
+		</library>
+	</runtime>
+</plugin>

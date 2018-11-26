@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+<toc label="参考">
+	<topic label="工作流模型参考" href="help/refrence/model.htm"/>
+	<topic label="建模工具参考" href="help/refrence/designer-top.htm">
+		<topic label="登录建模工具" href="help/refrence/login.htm"/>
+		<topic label="流程编辑" href="help/refrence/flowdesign-top.htm">
+			<topic label="视图功能" href="help/refrence/view-intro.htm"/>
+			<topic label="建立流程" href="help/refrence/buildaflow.htm"/>
+			<topic label="流程属性" href="help/refrence/flow-attribute.htm"/>
+			<topic label="节点属性" href="help/refrence/node-attribute.htm"/>
+			<topic label="连接弧属性" href="help/refrence/wire-attribute.htm"/>
+			<topic label="校验和发布" href="help/refrence/deployandvalidate.htm"/>
+			<topic label="帮助和提示" href="help/refrence/helptips.htm"/>
+		</topic>
+	</topic>
+</toc>
+

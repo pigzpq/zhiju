@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Meta>
+	<Element name="." caption="维度穿透" />
+	<Element name="demo_dimlink.olaprpt" caption="产品地区销售分析(可查看维度成员明细)" />
+	<Element name="demo_dimlink_format.olaprpt" caption="产品地区销售分析(格式化)" />
+</Meta>
+

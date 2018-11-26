@@ -1,0 +1,74 @@
+<project name="buildMetadataJar" default="buildMetadataJar">
+	<taskdef name="deployMetaData" 	classname="com.kingdee.bos.bim.ant.task.SimpleMetaDataDeployTask"/>
+	<property name="build.compiler" 	value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+	<property name="dir.metadata"	value="F:\eas_solu\LOCAL\metadata"/>
+	<property name="dir.lib"			value="F:\eas_solu\LOCAL\lib"/>
+	<property name="targetDir" 		value=""/>
+	<property name="jarName" 		value=""/>
+	<property name="tempDir" 		value="${targetDir}/temp"/>
+
+	<target name="buildMetadataJar" depends="init,deploy,compile,package,cleanup" description="发布并打包元数据"/>
+	
+	<target description="初始化环境" name="init">
+		<mkdir dir="${targetDir}"/>
+		<mkdir dir="${tempDir}"/>
+		<delete dir="${tempDir}"/>
+		<mkdir dir="${tempDir}/metas"/>
+		<mkdir dir="${tempDir}/java"/>
+		<mkdir dir="${tempDir}/classes"/>
+		<mkdir dir="${tempDir}/j2ee"/>
+	</target>
+	
+	<target description="生成相关元数据" name="deploy" depends="init">
+		<deployMetaData 
+			projectRoot ="${dir.project}" 
+			metaDataListFile="${targetDir}\metadata.list"
+			j2eeDir="${tempDir}\j2ee" 
+			javasrcDir="${tempDir}\java" 
+			metadataDir="${tempDir}\metas" 
+			deployRPC="true"
+			genImplementCode="true"
+			genEntityImplCode="true"
+			agentConfigFile="{dir.project}/DeployAgent.xml"/>
+	</target>
+	
+	<target description="编译JAVA文件" name="compile" depends="deploy">
+		<javac srcdir="${tempDir}/java" destdir="${tempDir}/classes" 
+			debug="off" noWarn="on" source="1.4" target="1.4" 
+			fork="true"  memoryInitialSize="128m" memoryMaximumSize="1024m" 
+			failonerror="true" tempdir="${tempDir}">
+		  	<classpath>
+		  		<fileset dir="${dir.lib}">
+			  		<include name="sp/**/*.zip"/>
+			  		<include name="sp/**/*.jar"/>	
+			  		<include name="web/**/*.zip"/>
+			  		<include name="web/**/*.jar"/> 	        	
+			  		<include name="common/**/*.zip"/>	
+			  		<include name="common/**/*.jar"/>	
+			  		<include name="client/**/*.zip"/>
+			  		<include name="client/**/*.jar"/>	        	
+			  		<include name="server/**/*.zip"/>	
+					<include name="server/**/*.jar"/>	        	
+				</fileset>
+		  </classpath>
+		</javac>
+		<copy todir="${tempDir}/classes">
+			<fileset dir="${tempDir}/java">
+				<include name="**/*.properties"/>
+			</fileset>
+		</copy>
+	</target>
+	
+	<target description="打包资源文件" name="package">
+		<jar destfile="${targetDir}/${jarName}_metas.jar">
+			<fileset dir="${tempDir}/metas"/>
+		</jar>
+		<jar destfile="${targetDir}/${jarName}.jar">
+			<fileset dir="${tempDir}/classes"/>
+		</jar>
+	</target>
+	
+	<target description="清除临时文件" name="cleanup">
+		<delete dir="${tempDir}"/>
+	</target>
+</project>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+<!-- ============================================================================= -->
+<!-- Define topics for the main guide                                              -->
+<!-- ============================================================================= -->
+<toc label="Tasks">
+	<topic label="創建解決方案" href="html/tasks/create_solution.htm"/>
+	<topic label="創建實體對像" href="html/tasks/create_entity.htm"/>
+	<topic label="創建實體關係" href="html/tasks/create_relationship.htm"/>
+	<topic label="創建數據表" href="html/tasks/create_table.htm"/>
+	<topic label="創建查詢" href="html/tasks/create_query.htm"/>
+	<topic label="創建枚舉" href="html/tasks/create_enum.htm"/>
+	<topic label="創建異常" href="html/tasks/create_exception.htm"/>
+	<topic label="創建功能" href="html/tasks/create_facade.htm"/>
+	<topic label="創建業務數據類型" href="html/tasks/create_bizdatatype.htm"/>
+	<topic label="創建多語言資源" href="html/tasks/create_resource.htm"/>
+	<topic label="創建用戶界面" href="html/tasks/create_ui.htm"/>
+	<topic label="創建權限" href="html/tasks/create_permission.htm"/>
+	<topic label="多語言定義" href="html/tasks/define_multiLanguage.htm"/>
+	<topic label="校驗元數據" href="html/tasks/check_metadata.htm"/>
+	<topic label="發佈元數據" href="html/tasks/release_metadata.htm"/>
+</toc>

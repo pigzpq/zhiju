@@ -1,0 +1,105 @@
+<project name="BIMProject" default="buildPatch">
+	<taskdef name="deployMetaData" 	classname="com.kingdee.bos.bim.ant.task.SimpleMetaDataDeployTask"/>
+	<taskdef name="createPatchFile"	classname="com.kingdee.bos.bim.ant.task.CreatePatchXMLTask"/>
+	
+	<property name="dir.project_temp" 	value="./patchWorkspace"/>
+	<property name="dir.project"	value="F:\eas_solu\LOCAL"/>
+	<property name="dir.metadata"		value="${dir.project}/metadata"/>
+	<property name="destFile"			value="c:\\test.zip"/>
+	<property name="description"		value="测试描述"/>
+	<property name="patchName"			value="bim_patch"/>
+	<property name="version"			value="EAS600"/>
+	<property name="jarName"			value="eas_sp"/>
+	<property name="deployRPC"			value="false"/>
+	<property name="build.compiler" 	value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+
+	
+	<property name="tempDir" 	value="${dir.project_temp}/buildPath"/>
+  	<target name="init" description="创建目录">
+  		<delete  dir="${tempDir}"/>
+  		<mkdir dir="${tempDir}"/>
+  		<mkdir dir="${tempDir}/logs"/>
+  		<mkdir dir="${tempDir}/classes"/>
+  		<mkdir dir="${tempDir}/jars/sql"/>
+  		<mkdir dir="${tempDir}/jars/Server/server/properties"/>
+  		<mkdir dir="${tempDir}/jars/Server/server/metas"/>
+  		<mkdir dir="${tempDir}/jars/Server/server/lib/sp"/>
+  		<mkdir dir="${tempDir}/jars/Server/server/deploy/fileserver.ear/easWebClient/lib/sp"/>
+  		<mkdir dir="${tempDir}/jars/Server/server/deploy/fileserver.ear/easWebClient/metas"/>
+  		<mkdir dir="${tempDir}\javasrc"/>
+  		<mkdir dir="${tempDir}\metadata" />
+  	</target>
+	
+	<target name="deploy" description="发布元数据">
+		<deployMetaData projectRoot ="${dir.project}" 
+  			metaDataListFile="${dir.project_temp}\metadata.list"
+			j2eeDir="${tempDir}\j2ee" 
+  			javasrcDir="${tempDir}\javasrc" 
+  			metadataDir="${tempDir}\metadata" 
+  			deployRPC="true"
+			agentConfigFile="${dir.project}/DeployAgent.xml"/>
+	</target>
+	
+	<target name="compile" description="编译">
+		<javac srcdir="${tempDir}/javasrc" destdir="${tempDir}/classes" 
+			fork="false" source="1.5" target="1.5"	nowarn="on"	debug="on"
+			taskname="javac5" includejavaruntime="false" includeantruntime="false">
+			<classpath path="${dir.classes}">
+				<fileset dir="${dir.lib}">
+					<exclude name="src/**/*.*"/>
+					<include name="sp/**/*.zip"/>
+					<include name="sp/**/*.jar"/>
+					<include name="**/*.jar"/>
+					<include name="**/*.zip"/>
+				</fileset>
+			</classpath>
+			<compilerarg value="-Xlint:unchecked"/>
+		</javac>
+		
+		<copy todir="${tempDir}/classes">
+			<fileset dir="${tempDir}/javasrc">
+				<include name="**/*.properties"/>
+			</fileset>
+		</copy> 
+		<copy todir="${tempDir}/jars/Server/server/properties">
+			<fileset dir="${dir.project}">
+				<include name="SubSystem*.xml"/>
+			</fileset>
+		</copy>
+		<copy todir="${tempDir}/jars/sql">
+			<fileset dir="${dir.project_temp}">
+				<include name="empty.sql"/>
+			</fileset>
+		</copy>
+		<copy todir="${tempDir}/jars">
+			<fileset file="${dir.project_temp}/${readMeFileName}.txt"/>
+		</copy>
+	</target>
+	
+	<target name="makeJar" description="打包">
+		<jar destfile="${tempDir}/jars/Server/server/metas/sp-bim-metas.jar">
+			<fileset dir="${tempDir}/metadata"/>
+		</jar>
+		<jar destfile="${tempDir}/jars/Server/server/deploy/fileserver.ear/easWebClient/metas/sp-bim-metas.jar">
+			<fileset dir="${tempDir}/metadata"/>
+		</jar>
+		<jar destfile="${tempDir}/jars/Server/server/lib/sp/${jarName}.jar">
+			<fileset dir="${tempDir}/classes"/>
+		</jar>
+		<jar destfile="${tempDir}/jars/Server/server/deploy/fileserver.ear/easWebClient/lib/sp/${jarName}.jar">
+			<fileset dir="${tempDir}/classes"/>
+		</jar>
+	</target>
+	
+	<target name="build" description="创建文档">
+		<createPatchFile patchName="${patchName}" description="${description}" rootDir="${tempDir}/jars" version="${version}"/>
+		<zip destfile="${destFile}">
+		  <fileset dir="${tempDir}/jars"/>
+		</zip>
+	</target>
+	<target name="cleanup" description="清除临时目录">
+		<delete  dir="${tempDir}" />
+	</target>
+	
+	<target name="buildPatch" description="制作补丁" depends="init,deploy,compile,makeJar,build,cleanup"/>
+</project>

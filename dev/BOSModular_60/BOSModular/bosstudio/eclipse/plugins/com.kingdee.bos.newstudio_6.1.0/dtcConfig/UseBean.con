@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Config>
+  <isContainer>false</isContainer>
+  <isVisual>false</isVisual>
+  <Properties>
+    <Property>
+      <name>value</name>
+      <defaultValue></defaultValue>
+      <type>java.lang.String</type>
+      <editorType>1</editorType>
+      <group>杂项</group>
+      <isMultiLan>true</isMultiLan>
+      <canBindData>true</canBindData>
+      <enableEL>true</enableEL>
+    </Property>
+    <Property>
+      <name>prependId</name>
+      <defaultValue></defaultValue>
+      <type>java.lang.String</type>
+      <editorType>1</editorType>
+      <group>杂项</group>
+      <canBindData>false</canBindData>
+    </Property>
+  </Properties>
+  <Events/>
+</Config>

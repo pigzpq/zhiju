@@ -1,0 +1,17 @@
+<project name="export" default="doExport" basedir=".">
+	<target name="doExport">
+		<echo>
+			export start......
+		</echo>
+		<zip destfile="${destZipFile}">
+			<fileset dir="${toExportItemPath}">
+				<include name="${fileFilter}"/>
+			</fileset>
+		</zip>
+		<!--zip destfile="w:/temp/aa.zip">
+			<fileset dir="I:\eclipse-SDK-3.0.1\runtime-workspace\solution">
+				<include name="com/kingdee/eas/**/*.kdwf"/>
+			</fileset>
+		</zip-->
+	</target>
+</project>

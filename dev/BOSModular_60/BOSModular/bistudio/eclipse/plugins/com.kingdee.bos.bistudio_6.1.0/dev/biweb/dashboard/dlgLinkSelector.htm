@@ -1,0 +1,197 @@
+<html>
+<head>
+	<meta http-equiv="Content-Language" content="zh-cn">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="../js/sue-main.js"></script>
+	<script src="../js/sue-ui.js"></script>
+	<script src="../js/sue-config.js"></script>
+	<script src="../js/bi.js"></script>
+	<script src="../js/bi_tree.js"></script>
+	<title>链接属性设置</title>
+	<STYLE>
+	.dialog
+	{
+		font-size:9pt;
+	}
+	</STYLE>
+</head>
+<body topmargin="10" leftmargin="10" bottommargin="5" rightmargin="10">
+	<table border="0" width="100%" height="100%" class="dialog" cellPadding="0" cellSpacing="0">
+	  <tr>
+	    <td width="100%" height="100%" style="padding:10" valign="top">
+		  	<TABLE border="0" cellPadding="0" cellSpacing="0" width="100%" height="100%" style="font-size:9pt">
+				<TR height="10" valign="top">
+					<TD align="left">链接提示：<input type="text" id="linkTip" size=45></TD>
+				</TR>
+				<TR height="10" valign="top">
+					<TD align="left">
+						<text>链接数据选择：</text>
+						<input type="radio" name="linkType" value="" onclick="linkTypeChange()"> 无 </input>
+						<input type="radio" name="linkType" value="url" onclick="linkTypeChange()"> URL </input>
+						<input type="radio" name="linkType" value="dashboard" onclick="linkTypeChange()"> 仪表板 </input>
+						<input type="radio" name="linkType" value="piece" onclick="linkTypeChange()"> 片段 </input>
+						<input type="radio" name="linkType" value="report" onclick="linkTypeChange()"> 报表</input>
+					</TD>
+				</TR>
+				<TR height="80" valign="top">
+					<TD>
+						<DIV id="resoureSelector" style="width:100%; height:100%"></DIV>
+					</TD>
+				</TR>
+			</TABLE>
+		</td>
+	  </tr>
+	  <tr>
+	    <td style="text-align:right">
+	    	<button id="btnOK" class="portal_button" onclick="return btnOK_onclick()" style="margin-right:10px">确定</button>
+	       	<button id="btnCancel" class="portal_button" onclick="return btnCancel_onclick()">取消</button>
+	    </td>
+	  </tr>
+	</table>
+</body>
+
+<script language="javascript">
+var _oParams;
+var _oSelector;
+var _sTypePrompt;
+var _sLinkType;
+var _sLinkReportType;
+
+function findCheckIndex(type)
+{
+	for(i=0;i<5;i++) {
+		if(linkType[i].value == type)
+			return i;	
+	}
+	return 0;
+}
+
+function document.body.onload()
+{
+	_oParams = window.frameElement.$param;
+	linkType[findCheckIndex(_oParams.sLinkType)].checked = true;
+	linkTip.value = _oParams.sLinkTip;
+	linkTypeChange();
+	document.body.focus();
+}
+
+function btnOK.onclick()
+{
+	if(check())
+	{   
+		_oParams.sLinkTip = linkTip.value;
+		_oParams.sLinkType = _sLinkType;
+		if(_sLinkType == "") {
+			_oParams.sLinkURI = "";
+		}else if(_sLinkType == "url") {
+			_oParams.sLinkURI = inputURL.value;
+		}else if(_sLinkType == "report") {
+			_oParams.sLinkReportType = _oSelector.getSelectedReportType();
+			_oParams.sLinkURI = _oSelector.getSelected();
+		}else {
+			_oParams.sLinkURI = _oSelector.getSelected();
+		}
+		_oParams.dialog.closeDialog( true );
+	}
+}
+
+function btnCancel.onclick()
+{
+	_oParams.dialog.closeDialog( false );
+}
+
+function check()
+{
+ 	if(linkType[0].checked)
+ 		return true;
+
+	if(linkType[1].checked)
+	{
+		if(inputURL.value == "")
+		{
+			var sPrompt = '请输入外部URL地址……';
+			alert(sPrompt);
+			return false;
+		}
+		else 
+			return true;	
+	}
+	
+	if(!_oSelector)
+		return false;
+	
+	if(!_oSelector.getSelected())
+	{
+		var sPrompt = '请选择链接到' + _sTypePrompt + '的资源。';
+		alert(sPrompt);
+		return false;
+	}
+	
+	return true;
+}
+
+function linkTypeChange()
+{
+	var divContent = _.id("resoureSelector");
+	_oSelector && _oSelector.remove();
+	divContent.innerHTML = "";
+	disabledCtrl(linkTip,linkType[0].checked);
+	
+	if(linkType[0].checked) {
+		//无
+		linkTip.value = "";
+		_sTypePrompt = "";
+		_sLinkType = linkType[0].value;
+		return;
+	}
+	
+	if(linkType[1].checked){
+		//URL
+		_sTypePrompt = "URL";
+		_sLinkType = linkType[1].value;
+		divContent.innerHTML = "外部URL地址：<input type=\"text\" id=\"inputURL\" size=50>";
+		inputURL.value = ((_oParams.sLinkType == _sLinkType) ? _oParams.sLinkURI : "");
+		if(inputURL.value == "")
+			inputURL.value = "http://";
+		return;
+	}
+	
+	//以下是资源树的加载处理，使用不同的资源树，但其它操作类似
+	if(linkType[2].checked){
+		//仪表盘
+		_sTypePrompt = "仪表盘";
+		_sLinkType = linkType[2].value;
+		_oSelector = new DashboardTreeDialog(_oParams.servletURL);
+	}else if(linkType[3].checked){		
+		//片段
+		_sTypePrompt = "片段";
+		_oSelector = new PieceDialog(_oParams.servletURL);
+		_sLinkType = linkType[3].value;		
+	}else if(linkType[4].checked){	
+		//报表
+		_sTypePrompt = "报表";
+		_oSelector = new ReportTreeDialog(_oParams.servletURL);
+		_sLinkType = linkType[4].value;
+	}
+	var root = _oSelector.getSelectDiv();
+	_.copyStyle( root, "border,padding,backgroundColor", [ "none", "0px", "#e0eaf5" ] );
+	divContent.appendChild(root);
+	
+}
+
+function disabledCtrl(oCtrl, bDisabled)
+{
+	if(!oCtrl) return;
+	oCtrl.disabled = bDisabled;	
+	if(bDisabled)
+	{
+		oCtrl.className = "disabledTextField";
+	}
+	else
+	{
+		oCtrl.className = "";
+	}	
+}
+
+</script>
+</html>

@@ -1,0 +1,72 @@
+<project name="deployBIMProject" default="publish">
+	<property name="deploytemp" value="_deploytemp_" />
+	<!--property name="webclient_home" value="${dir.server}/../fileserver.ear/easWebClient" /-->
+	<property name="webclient_home" value="${dir.server}/deploy/fileserver.ear/easWebClient" />
+	<taskdef name="mytask" classname="com.kingdee.bos.bim.ant.task.MyTask" />
+	<taskdef name="dbpublish" classname="com.kingdee.bos.bim.ant.task.DbPublishTask" />
+	<taskdef name="easVersionUpdate" classname="com.kingdee.bos.bim.ant.task.EASVersionUpdateTask" />
+	<target name="init" description="初始化">
+		<mytask description="测试系统当前的环境变量" />
+		<condition property="webclient_home" value="${CLIENT_HOME}">
+			<and>
+				<isset property="CLIENT_HOME" />
+				<available file="${CLIENT_HOME}" type="dir" />
+			</and>
+		</condition>
+	</target>
+	<target name="clean">
+	</target>
+	<target name="bakup">
+		<echo message="备份服务器文件..." />
+		<tstamp>
+			<format property="bakup.time" pattern="yyyyMMddHHmmss" />
+		</tstamp>
+		<mkdir dir="${dir.server}/../bimbakup/${bakup.time}" />
+		<property name="bimbakup.dir" value="${dir.server}/../bimbakup/${bakup.time}" />
+		<copy tofile="${bimbakup.dir}/eas_sp.server.jar" file="${dir.server}/lib/sp/eas_sp.jar" failonerror="false" />
+		<copy tofile="${bimbakup.dir}/eas_sp.webclient.jar" file="${webclient_home}/lib/sp/eas_sp.jar" failonerror="false" />
+		<copy tofile="${bimbakup.dir}/metas.webclient.jar" file="${webclient_home}/metas/sp-bim-metas.jar" failonerror="false" />
+		<copy tofile="${bimbakup.dir}/metas.server.jar" file="${dir.server}/metas/sp-bim-metas.jar" failonerror="false" />
+	</target>
+	<target name="publish" depends="init,clean,bakup">
+		<echo message="升级版本标记..." />
+		<easVersionUpdate driverClass="${tdb.driver_class}" jdbcUrl="${tdb.url}" user="${tdb.user}" password="${tdb.password}" solFile="${dir.deploy_metas}/eas.solution" />
+
+		<echo message="输出文件到EAS运行时..." />
+
+		<mkdir dir="${dir.server}/lib/sp" />
+		<mkdir dir="${dir.classes}" />
+		<jar destfile="${dir.project}/eas_sp.jar">
+			<fileset dir="${dir.classes}" includes="**/*" />
+		</jar>
+		<jar destfile="${dir.project}/${bakup.time}-bim-metas.jar">
+			<fileset dir="${dir.deploy_metas}" includes="**/*" />
+		</jar>
+		<copy file="${dir.project}/eas_sp.jar" tofile="${dir.server}/lib/sp/eas_sp.jar" overwrite="true" />
+		<copy file="${dir.project}/${bakup.time}-bim-metas.jar" tofile="${dir.server}/metas/sp-bim-metas.jar" />
+
+		<echo message="输出套打到EAS运行时..." />
+		<copy todir="${dir.server}/deploy/" overwrite="true">
+			<fileset dir="${dir.project}/runtime">
+				<include name="ctrlhome\server\storage\bim\**\*" />
+				<!--
+		      	<include name="ctrlhome\server\storage\eas\kdnote\template\**\*"/>
+		      	-->
+			</fileset>
+		</copy>
+
+		<echo message="输出到自动更新服务" />
+		<copy file="${dir.server}/lib/sp/eas_sp.jar" tofile="${webclient_home}/lib/sp/eas_sp.jar" />
+		<copy file="${dir.project}/${bakup.time}-bim-metas.jar" tofile="${webclient_home}/metas/sp-bim-metas.jar" overwrite="true" />
+
+		<echo message="同步数据库...." />
+		<dbpublish driverClass="${tdb.driver_class}" jdbcUrl="${tdb.url}" user="${tdb.user}" password="${tdb.password}" recordFile="${dir.project}/deployRecord.xml" 
+			deployedMetas="${dir.server}/metas/*.jar" fnMenuFile="${dir.project}/FnMenuTree.xml" targetImportDir="${dir.server}" bimMetas="${dir.server}/metas/sp-bim-metas.jar" />
+		<delete failonerror="false">
+			<fileset dir="${dir.project}" id="id">
+				<include name="eas_sp.jar" />
+				<include name="*-bim-metas.jar" />
+			</fileset>
+		</delete>
+	</target>
+</project>

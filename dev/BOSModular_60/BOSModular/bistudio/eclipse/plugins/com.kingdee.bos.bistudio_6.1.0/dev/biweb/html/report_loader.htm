@@ -1,0 +1,46 @@
+<!--
+穿透时用到
+-->
+<html>
+	<head>
+		<meta http-equiv="Pragma" content="no-cache"> 
+		<meta http-equiv="Cache-Control" content="no-cache"> 
+		<meta http-equiv="Expires" content="0">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	   	<link rel="stylesheet" type="text/css" href="../ext-2.0/resources/css/ext-all.css" />
+	   	<link rel="stylesheet" type="text/css" href="../metric/look.css" />
+	   	<link href="../css/worksheet.css" rel="stylesheet" type="text/css" ></link>
+		<link href="../css/ui-components.css" type="text/css" rel="stylesheet"></link>
+		
+		<script src="../ext-2.0/adapter/ext/ext-base.js"></script>
+		<script src="../ext-2.0/ext-all.js"></script>
+		
+		<script src="../js/sue-main.js"></script>
+		<script src="../js/sue-ui.js"></script>
+		<script src="../js/sue-config.js"></script>
+		<script src="../js/bi.js"></script>
+		<script src="../js/bi_tree.js"></script>
+		<script src="../metric/component/tree.js"></script>
+		<script src="../metric/dupont.js"></script>		
+		<script src="../js/uilayout.js"></script>
+		<script>
+			// 由于要改变xsl里面的色彩方案，所以这里把原本的静态CSS改为动态注册
+			_.css( _.format( "th.column-heading-even, th.column-heading-odd, th.column-heading-span, th.corner-heading, th.row-heading-even, th.row-heading-odd, th.row-heading-span, th.column-heading-even-right, th.row-heading-even-right, th.column-heading-span-right, th.row-heading-span-right, th.row-heading-heading, th.column-heading-heading, th.rownum-heading, th.rownum {background-color:%s;border:solid 1px #fff;} td.cell-even, td.cell-odd {border:solid 1px %s} .slicer_field, .page_field, .strategy_title, .report_msgdiv {background-color:%s} .filter_panel_container hr {color:%s} .filter_panel_container a {color:%s}", Sue.config.cs[6], Sue.config.cs[6], Sue.config.cs[7], Sue.config.cs[10], Sue.config.cs[11] ) );
+			_.bindEvent( window, "load", function() {
+				var servletURL = location.href.match( /.*?\?servletURL\=(.*?)&load\=/ )[1];
+				var loadURL = location.href.match( /.*?\&load\=(.*)$/ )[1];
+				var obj = {
+					isTab: _.K( false ),
+					body: document.body,
+					servletURL: servletURL,
+					url: loadURL
+				};
+
+				loadReport( obj );
+				} );
+
+		</script>
+	</head>
+	<body id="body" topmargin="0" leftmargin="0" bottommargin="0" rightmargin="0" oncontextmenu="return false;">
+	</body>
+</html>

@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-Name: BOS Message
+Bundle-SymbolicName: com.kingdee.bos.message;singleton=true
+Bundle-Version: 6.1.0
+Bundle-ClassPath: message.jar
+Bundle-Localization: plugin
+Eclipse-AutoStart: true
+Require-Bundle: org.log4j,
+ com.j2ee,
+ com.kingdee.bos.metadata,
+ com.kingdee.bos.orm,
+ org.junit
+Provide-Package: com.kingdee.bos.service.message,
+ com.kingdee.bos.service.message.agent,
+ com.kingdee.bos.service.message.jms,
+ com.kingdee.bos.service.message.jms.grouptopic,
+ com.kingdee.bos.service.message.jms.queue,
+ com.kingdee.bos.service.message.jms.topic,
+ com.kingdee.bos.service.message.mail
+Bundle-Vendor: KINGDEE Software Corp.Bundle-Vendor: Kingdee Software (China) Company Ltd.,

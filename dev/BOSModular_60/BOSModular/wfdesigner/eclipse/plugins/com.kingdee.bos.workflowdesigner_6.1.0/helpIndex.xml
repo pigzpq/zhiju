@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+<toc label="工作流建模工具帮助" topic="help/contents/eas-wf-overview.htm">
+	<topic label="概述" href="help/summary/top.htm">
+		<link toc="toc_summary.xml"/>
+	</topic>
+	<topic label="参考" href="help/refrence/refrence-top.htm">
+		<link toc="toc_refrence.xml"/>
+	</topic>
+	<topic label="我的第一条流程" href="help/contents/simpleFlowEG/eg-top.htm">
+		<link toc="toc_simpleFlowExample.xml"/>
+	</topic>
+</toc>

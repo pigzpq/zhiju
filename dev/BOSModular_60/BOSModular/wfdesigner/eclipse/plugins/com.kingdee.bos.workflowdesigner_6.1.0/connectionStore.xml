@@ -1,0 +1,36 @@
+<wfConnections>
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <wfConnection name="工作流连接1">
+        <attribute key="aisName" value="001" />
+        <attribute key="aisAlias" value="重庆市南川区人民医院" />
+        <attribute key="locale" value="L2" />
+        <attribute key="serverHost" value="172.168.9.22" />
+        <attribute key="serverPort" value="6888" />
+        <attribute key="solutionName" value="eas" />
+        <attribute key="userName" value="administrator" />
+        <attribute key="default" value="true" />
+        
+        <attribute key="isStorePassword" value="true" />
+        <attribute key="password" value="bgBjAGEAZABtAGkAbgAsAC4A" />
+    </wfConnection>
+</wfConnections>

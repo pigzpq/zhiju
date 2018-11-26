@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by whli (asdf) -->
+<config>
+   <configitem name="DebugOptions">
+      <attribute key="cacheLazyLoad" value="true" />
+      <attribute key="nonejb" value="true" />
+   </configitem>
+   <configitem name="LicenseFile">
+      <attribute key="LicenseFileReader" value="com.kingdee.eas.base.license.file.EASLicenseFileReader" />
+      <attribute key="SoftwareName" value="KINGDEE EAS" />
+      <attribute key="SerialNumber" value="B43-WR8-391-JB1" />
+   </configitem>
+   <configitem name="MessageService">>
+      <attribute key="defaultDestination" value="workflow1" />
+      <configitem name="listeners">
+         <configitem name="listener1">
+            <attribute key="name" value="BMCMessageListener" />
+            <attribute key="class" value="com.kingdee.eas.base.message.app.BMCMessageListener" />
+            <attribute key="domain" value="" />
+            <attribute key="filter" value="" />
+         </configitem>
+         <configitem name="listener2">
+            <attribute key="name" value="MobileAppMsgListener" />
+            <attribute key="class" value="com.kingdee.eas.mobile.msg.listener.MobileAppMsgListener" />
+            <attribute key="domain" value="" />
+            <attribute key="filter" value="" />
+         </configitem>
+      </configitem>
+      <configitem name="Destinations">
+         <configitem name="workflow1">
+            <attribute key="driverClassName" value="com.kingdee.bos.service.message.jms.topic.JMSTopicDriver" />
+            <attribute key="url" value="bosmessage:jms:topic:jms/workflowTopic" />
+            <configitem name="properties">
+               <attribute key="contextFactory" value="com.apusic.jndi.InitialContextFactory" />
+               <attribute key="jndiURL" value="iiop://127.0.0.1:56898" />
+               <attribute key="securityCredential" value="admin" />
+               <attribute key="securityPrincipal" value="admin" />
+               <attribute key="connectionFactoryJNDIName" value="jms/TopicConnectionFactory" />
+            </configitem>
+         </configitem>
+      </configitem>
+      <attribute key="serviceType" value="Direct" />
+   </configitem>
+
+   <configitem name="ORMServiceLocation">
+      <configitem name="sequence">
+         <attribute key="serviceURL" value="" />
+      </configitem>
+      <configitem name="scheduler">
+         <attribute key="serviceURL" value="" />
+      </configitem>
+      <configitem name="refCount">
+         <attribute key="serviceURL" value="" />
+      </configitem>
+      <configitem name="SessionManager">
+         <attribute key="serviceURL" value="" />
+      </configitem>
+      <configitem name="CodingRule">
+         <attribute key="serviceURL" value="" />
+      </configitem>
+      <configitem name="NetCtrl">
+         <attribute key="serviceURL" value="" />
+      </configitem>
+      <configitem name="userMonitor">
+         <attribute key="serviceURL" value="" />
+      </configitem>
+      <configitem name="paramCache">
+         <attribute key="serviceURL" value="" />
+      </configitem>
+   </configitem>
+   <configitem name="Workflow">
+      <attribute key="workflowServerKey" value="" />
+      <attribute key="isEnableScheduler" value="true" />
+      <attribute key="schedulerIdleWaiteTime" value="3000" />
+      <attribute key="schedulerThreadPoolSize" value="10" />
+      <attribute key="workflowTransQueueTime" value="1000" />
+      <attribute key="isInitWfService" value="true" />
+      <attribute key="QueueMaxRetryTimes" value="1" />
+      <attribute key="assignmentListener" value="com.kingdee.eas.base.message.app.AssignReadListener" />
+      <attribute key="cacheManager" value="WfCacheManager2" />
+      <attribute key="threadSemaphore" value="8" />
+      <attribute key="testBeforeUse" value="true" />
+      <attribute key="isEnableDaemon" value="true" />
+      <attribute key="BizeventResetPolicy" value="20" />
+      <attribute key="ResumeSuspendedProcessPolicy" value="" />
+      <attribute key="RepairBizToWfRelationPolicy" value="60" />
+      <attribute key="RepairSchedulerDataPolicy" value="-1" />
+      <attribute key="DeleteJobProcessWhenClosed" value="false" />
+      <attribute key="EnableInvokeRequiredTransaction" value="true" />
+      <configitem name="participant">
+         <attribute key="provider" value="com.kingdee.eas.basedata.person.app.PersonToWFAdapter" />
+      </configitem>
+      <configitem name="permission">
+         <attribute key="provider" value="com.kingdee.eas.base.permission.app.adapter.WfPermissionProvider" />
+      </configitem>
+      <configitem name="LogConfig">
+         <attribute key="LogLevel" value="WARN" />
+         <attribute key="EnableEngineLog" value="true" />
+         <attribute key="EnableQueueLog" value="true" />
+         <attribute key="EnableProcessDefLog" value="true" />
+         <attribute key="EnableProcessInstLog" value="true" />
+      </configitem>
+   </configitem>
+   <configitem name="SolutionInfo">
+      <configitem name="eas">
+         <configitem name="AISInfo">
+         	<attribute key="MetaDataPath" value="${CONFIG_DIR_REPOSITORY}" />
+	 		${BOSCONFIG_AISINFO}
+         </configitem>
+      </configitem>
+   </configitem>
+   <configitem name="PortalInfo">
+      <attribute key="isAllowEMailAudit" value="true" />
+      <attribute key="host" value="127.0.0.1" />
+      <attribute key="port" value="56898" />
+      <attribute key="contextroot" value="/easportal" />
+      <attribute key="rederectTo" value="?redirectTo=SYS_MC" />
+   </configitem>
+   <configitem name="supportlanguage">
+      <attribute key="L2#CH" value="\u7b80\u4f53\u4e2d\u6587" />
+      <attribute key="L3#TW" value="\u7b80\u4f53\u4e2d\u6587" />
+   </configitem>
+   <configitem name="UserMonitor">
+      <attribute key="idleTime" value="720" />
+   </configitem>
+</config>
+

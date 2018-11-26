@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BIReport>
+	<Cube ref="public:demo.cube" caption="公共:销售数据立方体" />
+	<DataSource ref="public:demo_dimLink.ds" caption="公共:销售数据源(维度穿透专用)" />
+	<MdxQuery name="query1" caption="产品地区销售分析(可查看明细)" title="" memoHead="" memoTail="" perPageRows="25">select state.levels(0).members * measures.members on columns,
+employee.members * product.levels(0).members on rows
+from sales</MdxQuery>
+	<WorksheetComponent name="table1" caption="表格" mdxQuery="query1" showSlicer="true" />
+	<ListComponent name="list" caption="序时簿">
+		<List name="lstCountry" caption="地区销售名细表" head="国家:&amp;[]&amp;" tail="2008/12/10 stone" ds="dsCountry" pageRows="15" width="0" >
+			<Fields>
+				<Field name="sales_dolars" formatString="#,##0.0000"/>
+			</Fields>
+		</List>	
+		<List name="lstProduct" caption="产品销售明细表" head="金蝶软件有限公司" tail="2008-12-10 stone " ds="dsProduct" pageRows="6" width="600" />
+		<List name="lstEmployee" caption="职员明细销售" head="职员名：stone" tail="打印时间：aaaa" ds="dsEmployee" pageRows="25" width="500">
+			<Fields>
+				<Field name="Sales_Dollars" formatString="#,##0.0"/>
+				<Field name="Sales_Units" formatString="#,##"/>
+				<Field name="Sales_Date" formatString="yyyy-mm-dd"/>
+			</Fields>
+		</List>
+	</ListComponent>
+	<Link name="linkCountry" caption="查看国家明细" dimension="State" levelname="Country" paramColumn="key" linkType="list" linkTo="lstCountry" mdxQuery="query1" />
+	<Link name="linkCategory" caption="查看产品明细" dimension="Product" levelname="Product" paramColumn="key" linkType="list" linkTo="lstProduct" mdxQuery="query1" />
+	<Link name="link3" caption="查看职员明细" dimension="Employee" levelname="Employee" paramColumn="key" linkType="list" linkTo="lstEmployee" mdxQuery="query1" />
+</BIReport>
+

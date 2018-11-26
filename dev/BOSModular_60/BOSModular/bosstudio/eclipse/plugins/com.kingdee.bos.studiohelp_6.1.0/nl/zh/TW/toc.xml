@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="com.kingdee.bos.studio.toc"?>
+<!-- ============================================================================= -->
+<!-- Define the top level topics                                                   -->
+<!-- ============================================================================= -->
+
+<toc label="金蝶BOS Studio幫助系統" topic="welcome_first.html">
+	<topic label="簡介" href="guide_first.html">
+		<link toc="topics_Guide.xml" />
+	</topic>
+	<topic label="任務" href="task_first.html">
+		<link toc="topics_Tasks.xml" />
+	</topic>
+	<topic label="UI控件使用說明" href="ui_components_first.html">
+		<link toc="topics_UI.xml" />
+	</topic>
+	<topic label="幾個新增功能" href="newfunction_first.html">
+		<link toc="topics_newfunction.xml" />
+	</topic>
+	<topic label="文檔及FAQ" href="faq_first.html">
+		<link toc="topics_Faq.xml" />
+	</topic>	
+	<topic label="版權聲明" href="notices.html"/>	
+</toc>

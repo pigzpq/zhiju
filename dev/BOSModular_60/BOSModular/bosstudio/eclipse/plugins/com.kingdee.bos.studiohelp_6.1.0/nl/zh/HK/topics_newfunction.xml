@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+<!-- ============================================================================= -->
+<!-- Define topics for the main guide                                              -->
+<!-- ============================================================================= -->
+<toc label="newfunction">
+	<topic label="發佈WebService" href="html/newfunction/deploywebservice.htm">
+		<topic label="BOS WebService的範圍" href="html/newfunction/webservice/BOSWebServiceDeFanWei.htm"/>	
+		<topic label="在BOS Studio中發佈Web Service" href="html/newfunction/webservice/FaBuWebService.htm"/>
+		<topic label="Web Service部署方式" href="html/newfunction/webservice/WebServiceBuShuFangShi.htm"/>
+		<topic label="約束及注意事項" href="html/newfunction/webservice/YueShuJiZhuYiShiXiang.htm"/>
+		<topic label="客戶端調用示例" href="html/newfunction/webservice/WebServiceCientDevelopGuide.htm"/>
+		<topic label="其他說明" href="html/newfunction/webservice/QiTaShuoMing.htm"/>
+	</topic>
+	<topic label="多語言設置" href="html/newfunction/multilan.htm">
+		<topic label="簡繁體字典維護" href="html/newfunction/multilan/JianFanTiZiDianWeiHu.htm"/>
+		<topic label="元數據自動設置繁體中文" href="html/newfunction/multilan/ZiDongSheZhiFanTiZhongWen.htm"/>
+		<topic label="Property文件簡繁體轉換" href="html/newfunction/multilan/JianFanTiZhuanHuan.htm"/>
+	</topic>
+	<topic label="Agent使用指南" href="html/newfunction/agent/agentguide.htm"/>
+</toc>

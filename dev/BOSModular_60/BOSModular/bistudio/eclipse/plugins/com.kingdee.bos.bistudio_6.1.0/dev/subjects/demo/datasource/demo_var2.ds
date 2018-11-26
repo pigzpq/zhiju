@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSource name="OLAP TEST">
+	<Table name="State">
+		<Sql><![CDATA[
+			
+select * from t_bi_State
+			
+		]]></Sql>
+	</Table>
+	<Table name="Employee">
+		<Sql><![CDATA[
+			
+			select * from t_bi_employee
+			
+		]]></Sql>
+	</Table>
+	<Table name="SalesFact">
+		<Sql><![CDATA[select A.* from t_bi_SalesFact A,t_bi_timemonth B where
+B.Month_date > {${year_ago}$} and A.Month_ID = B.Month_ID
+		
+			
+		]]></Sql>
+	</Table>
+	<Table name="TimeTable">
+		<Sql><![CDATA[select * from t_bi_timemonth where Month_Date > {${year_ago}$}
+		]]></Sql>
+	</Table>
+	<Table name="Product">
+		<Sql><![CDATA[
+			
+			select t_bi_Product.Product_ID,"t_bi_ProSubCategory".SubCategory_ID,
+				"t_bi_ProSubCategory".SubCategory,"t_bi_ProCategory".Category_ID,
+				"t_bi_ProCategory".Category,
+				convert(varchar,Product_Id) || ' ' || Product_Name as Name_Id 
+			from t_bi_Product,t_bi_ProCategory,t_bi_ProSubCategory 
+			where t_bi_Product.SubCategory_ID=t_bi_ProSubCategory.SubCategory_ID 
+				and t_bi_ProCategory.Category_ID = t_bi_ProSubCategory.Category_ID
+				]]></Sql>
+	</Table>
+</DataSource>
+

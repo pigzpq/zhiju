@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by lhf (lcsoft) -->
+<Config>
+	<isContainer>true</isContainer>
+	<isVisual>true</isVisual>
+	<Properties>
+		<Property>
+			<name>font</name>
+			<type>java.awt.Font</type>
+			<defaultValue>family=Dialog,name=Dialog,style=0,size=12</defaultValue>
+			<editorType>5</editorType>
+			<group>外观</group>
+			<canDirectSet/>
+			<canBindData>false</canBindData>
+		</Property>
+		<Property>
+			<name>foreground</name>
+			<type>java.awt.Color</type>
+			<defaultValue>r=0,g=0,b=0</defaultValue>
+			<editorType>4</editorType>
+			<group>外观</group>
+			<canDirectSet/>
+			<canBindData>false</canBindData>
+		</Property>				
+	
+		<Property>
+			<name>lineWidth</name>
+			<type>int</type>
+			<defaultValue>-1</defaultValue>
+			<editorType>3</editorType>
+			<group>外观</group>
+			<canBindData>false</canBindData>
+			<enableEL>false</enableEL>
+		</Property>
+		<Property>
+			<name>caption</name>
+			<type>java.lang.String</type>
+			<defaultValue/>
+			<editorType>1</editorType>
+			<group>外观</group>
+			<isMultiLan>true</isMultiLan>
+			<canBindData>true</canBindData>
+			<enableEL>true</enableEL>
+		</Property>
+	</Properties>
+	<Events>
+	</Events>
+</Config>

@@ -1,0 +1,205 @@
+<project name="importBIMProject" default="import">
+	<taskdef name="mytask" 						classname="com.kingdee.bos.bim.ant.task.MyTask"/>
+	<taskdef name="unjarTask" 					classname="com.kingdee.bos.bim.ant.task.UnjarTask"/>
+	<taskdef name="configableCopy" 				classname="com.kingdee.bos.bim.ant.task.ConfigableCopyTask"/>
+	<taskdef name="mergeTemplateSet" 			classname="com.kingdee.bos.bim.ant.task.MergeTemplateSetTask"/>
+	<taskdef name="dataSourceMigrateTask" 		classname="com.kingdee.bos.bim.ant.task.ApusicDataSourceMigrateTask"/>
+	<taskdef name="apusicDeployAppRepairTask" 	classname="com.kingdee.bos.bim.ant.task.ApusicDeployAppRepairTask"/>
+	<taskdef name="bosConfigurationRepairTask" 	classname="com.kingdee.bos.bim.ant.task.BOSConfigurationRepairTask"/>
+	<taskdef name="portalConfigFileRepairTask" 	classname="com.kingdee.bos.bim.ant.task.PortalConfigFileRepairTask"/>
+	<taskdef name="fixClientConfigTask"         classname="com.kingdee.bos.bim.ant.task.FixClientConfigTask"/>
+
+	<target name="initial" description="创建工程目录">
+		<mytask description="环境变量测试"/>
+		<mkdir dir="${dir.src}"/>
+		<mkdir dir="${dir.metadata}"/>
+		<mkdir dir="${dir.basemetas}"/>
+		<mkdir dir="${dir.classes}"/>	
+		<mkdir dir="${dir.lib}"/>
+
+		<mkdir dir="${dir.project}\runtime"/>
+		<mkdir dir="${dir.project}\runtime\apusic"/>
+		<mkdir dir="${dir.project}\runtime\server"/>
+		<mkdir dir="${dir.project}\runtime\client"/>
+		<mkdir dir="${dir.project}\logs"/>
+		<mkdir dir="${dir.project}\deployed_metas"/>
+	</target> 
+	
+	<target name="releaseRuntime" description="解压模板">
+		<unjar description="解压runtime.zip到运行时目录" src="${dir.sol_template}\runtime.zip" dest="${dir.project}\runtime"/>
+		<mkdir dir="${dir.metadata}"/>
+		<mkdir dir="${dir.basemetas}"/>
+		<copy todir="${dir.basemetas}" description="复制业务模板文件">
+			<fileset dir="${dir.sol_template}">
+				<include name="bim_templates.zip"/>
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="copyServerFile" description="复制服务器文件">
+		<copy description="复制类库文件" todir="${dir.lib}" includeEmptyDirs="false"  preservelastmodified="true">
+			<fileset dir="${dir.import}\${server.lib}">
+				<include name="**/*.jar"/>
+				<exclude name="eas_sp.jar"/>
+			</fileset>
+		</copy>
+		
+		<copy description="复制元数据" todir="${dir.basemetas}" includeEmptyDirs="false"  preservelastmodified="true">
+			<fileset dir="${dir.import}/${server.metas}">
+				<include name="**/*"/>
+				<exclude name="sp-bim-metas.jar"/>
+				<exclude name="configure/**/*.*"/>
+			</fileset>
+		</copy> 
+		
+		<copy description="复制服务器端配置文件ctrlhome" todir="${dir.project}\runtime\" >
+			<fileset dir="${dir.import}/server/deploy">
+				<include name="ctrlhome/**/*"/>
+			</fileset>
+		</copy>
+		
+		<copy  description="复制服务器端配置文件properties" todir="${dir.project}\runtime\${server.properties}" failonerror="false">
+			<fileset dir="${dir.import}\${server.properties}">
+				<exclude name="upgradescript\"/>
+			</fileset>
+		</copy>  
+		
+		<copy description="复制服务器端配置文件config" todir="${dir.project}\runtime\${server.config}" >
+			<fileset dir="${dir.import}\${server.config}">
+				<include name="**/*"/>
+			</fileset>
+		</copy> 
+		
+		<copy description="复制配置文件" todir="${dir.project}" failonerror="false">
+			<fileset dir="${dir.import}\${server.properties}">
+				<include name="datacenters.xml"/>
+				<include name="DeployAgent.xml"/>
+				<include name="SubSystem_*.xml"/>
+				<include name="SubSystemChangeParent.xml"/>
+				<include name="SubSystemFilter.xml"/>
+				<include name="eascomponents.xml"/>
+				<include name="SubSystemChangeParent_industry.xml"/>
+			</fileset>
+		</copy>
+		
+		<copy description="复制Client从fileserver.ear" todir="${dir.project}\runtime\client\deploy\">
+			<fileset dir="${dir.import}\${server.fileserver.ear.easWebClient}\">
+				<include name="**/*.*"/>
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="releaseServerFile" description="释放压缩文件">
+		<!--
+		<unjarTask description="解压元数据到元数据目录" fromDir="${dir.import}\${server.metas}" toDir="${dir.metadata}" excludeDirs="mri"/>
+		-->	
+		<unjar description="解压二次开发元数据" dest="${dir.metadata}" overwrite="true">
+			<fileset dir="${dir.import}\${server.metas}">
+				<include name="**/sp-bim-metas.jar"/>
+			</fileset>
+		</unjar>
+		
+		<mkdir dir="${dir.classes}"/>
+		<unjar description="解压二次开发代码" dest="${dir.classes}">
+			<fileset dir="${dir.import}\${server.lib}">
+				<include name="sp/eas_sp.jar"/>
+			</fileset>
+		</unjar>
+		
+		<unjar description="解压ＷＥＢ资源" dest="${dir.project}\web\webRoot" src="${dir.sol_template}\war.zip"/>
+		
+		<mkdir dir="${dir.lib}\web\"/>
+		<!--
+		<copy description="web\webRoot\WEB-INF\lib\*.jar到lib\web\*jar" todir="${dir.lib}\web\">
+			<fileset dir="${dir.project}\web\webRoot\WEB-INF\lib\">
+				<include name="**/*.jar"/>
+			</fileset>
+		</copy>
+		-->	
+		<unjar description="解压二次开发元数据" src="${dir.sol_template}\custom.zip" dest="${dir.metadata}"/>
+		
+		<delete description="删除元数据目录下的描述文件" dir="${dir.metadata}\META-INF"/>
+	</target>
+		
+	<target name="copyTemplate" description="复制模板文件">
+		<unjar description="解压runtime.zip到运行时目录" src="${dir.sol_template}\runtime.zip" dest="${dir.project}\runtime" overwrite="true"/>
+		
+		<copy description="复制部署记录文件" todir="${dir.project}" >
+			<fileset dir="${dir.sol_template}">
+				<include name="deployRecord.xml"/>
+			</fileset>
+		</copy>
+		
+		<mkdir dir="${dir.project}\logs"/>
+		<!--
+		<copy description="复制日志文件" todir="${dir.project}\logs" >
+			<fileset dir="${dir.sol_template}\log">
+				<include name="*.*"/>
+			</fileset>
+		</copy>
+		-->
+		
+		<copy description="复制license文件" todir="${dir.project}\runtime\${server.config}">
+			<fileset dir="${dir.sol_template}">
+				<include name="licensefile.xml"/>
+				<include name="licenses\*"/>
+			</fileset>
+		</copy>
+				
+		<copy description="复制功能配置文件" todir="${dir.project}">
+			<fileset dir="${dir.bim}\configs">
+				<include name="projectFunctionConfig.xml"/>
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="configProject" description="配置工程">
+		<mkdir dir="${dir.project}/web/websrc"/>
+		<mkdir dir="${dir.project}/web/webRoot"/>
+		
+		<configableCopy description="拷贝LIB文件，用于工作流更新" 
+			configFile="${dir.bim}\configs\updateJars.list" 
+			sourceDir="${dir.lib}" 
+			targetRootDir="${dir.project}\runtime\server\deploy\fileserver.ear\easWebClient\BOSModular"
+			properties="VERSION=${version.bim}"/>
+		
+		<dataSourceMigrateTask description="修改datasource配置文件" 
+			datasources="${dir.project}\runtime\apusic\config\datasources.xml"
+			datacenters="${dir.project}\datacenters.xml"
+			aisName="${name.ais}"
+			serverIP="${serverIP}"/>
+		
+		<apusicDeployAppRepairTask description="修改apusic部署文件" testApusicHome="${dir.project}\runtime\apusic\" 
+		  		apps="${dir.project}/runtime/server/deploy/eas.ear;${dir.project}/runtime/server/deploy/fileserver.ear;${dir.project}/runtime/server/deploy/bim_test.ear;${dir.project}/web/webRoot"/>
+		
+		<mergeTemplateSet 
+			file2="${dir.metadata}\eas.templateset" 
+			file1="${dir.metadata}\bim.templateset" 
+			target="${dir.metadata}\eas.templateset"/>
+		
+		<bosConfigurationRepairTask description="修改bosconfig配置文件" 
+					bosconfigFile="${dir.project}\runtime\${server.file.bosconfig}"
+					licenseFile="${dir.project}\runtime\${server.config}\licenses\license" 
+					delpoypath="${dir.project}\runtime\${server.config}"
+					aisName="${name.ais}"/>
+		<portalConfigFileRepairTask description="修改portal配置文件" 
+					configFile="${dir.project}\runtime\${server.config}\portalConfig\resourceSet.properties"
+					runtimePath="${dir.project}/runtime/server/deploy/fileserver.ear/easWebClient/"/>
+		
+		<fixClientConfigTask        description ="修改\runtime\client\deploy\client下面的client.xml文件"
+		             clientConfigFile="${dir.project}/runtime/client/deploy/client/config.xml"
+			         perfLogInit="off"/>
+		
+	</target>
+	
+	<target name="cleanup" description="清除缓存" if="isRemoteServer">
+		<delete dir="${dir.import}"/>
+	</target>
+	
+	<target name="refresh" description="刷新工作空间">
+		<eclipse.refreshLocal  description="刷新" resource="${name.project}" depth="infinite"/>
+	</target>
+
+	<target name="import" description="引入解决方案" depends="initial, releaseRuntime, copyServerFile, releaseServerFile, copyTemplate, configProject, cleanup">
+	</target>
+</project>

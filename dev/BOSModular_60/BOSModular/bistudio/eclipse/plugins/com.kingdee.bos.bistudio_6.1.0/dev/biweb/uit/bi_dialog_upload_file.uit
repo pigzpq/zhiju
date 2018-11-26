@@ -1,0 +1,32 @@
+<div>
+	<div sue="msgDiv"></div>
+	<div sue="divRepAction" style="padding:10px 0px;text-align:right">
+		<button sue="btnNewDir" class="portal_button" style="margin-right:10px">新建</button>
+		<button sue="btnDel" class="portal_button">删除</button>
+	</div>
+	<div sue="repTree" style="width:100%;height:135px;border:solid 1px #718BB7;overflow-y:auto"></div>
+	<form sue="form" target="uploader" method="post" enctype="multipart/form-data">
+		<div style="padding-top:10px;font:12px Arial">
+			存储路径：
+			<input sue="savePath" type="text" readonly="true" style="width:273px;height:19px" class="portal_textfield" />
+			<input name="savePath" sue="savePathHidden" type="hidden"/>
+		<div>
+		<div style="padding-top:10px;font:12px Arial">
+			资源名称：
+			<input sue="resName" type="text" style="width:273px;height:19px" class="portal_textfield" />
+			<input name="caption" sue="resNameHidden" type="hidden"/>
+		<div>
+		<div style="padding-top:10px;font:12px Arial">
+			<input sue="overwrite" type="checkbox" class="portal_textfield" >同名强制覆盖</input>
+			<input name="isOverwrite" sue="overwriteHidden" type="hidden"/>
+		<div>
+		<div sue="upload" style="padding-top:10px;font:12px Arial">
+			请选择要上传的文件：<br/>
+			<input name="upload" sue="uploadFilePath" type="file" style="border:solid 1px #718BB7;width:100%;height:19px" />
+		</div>
+	</form>
+	<div sue="btnField" style="padding-top:10px;text-align:right">
+		<button sue="btnUpload" class="portal_button">上传</button>
+	</div>
+	<iframe name="uploader" sue="uploader" style="display:none;width:0px;height:0px"></iframe>
+</div>

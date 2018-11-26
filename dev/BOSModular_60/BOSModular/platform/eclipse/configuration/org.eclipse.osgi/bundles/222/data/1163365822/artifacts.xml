@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository class='org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository' version='1.0.0'?>
+<repository name='dropins artifact repo: file:/D:/bos/BOSModular/nlpack/' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.system' value='true'/>
+    <property name='p2.timestamp' value='1540128716953'/>
+  </properties>
+  <mappings size='3'>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='8'>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.studio.nl1' version='6.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/nlpack/eclipse/plugins/com.kingdee.bos.newstudio.nl1_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\nlpack\eclipse\plugins\com.kingdee.bos.newstudio.nl1_6.1.0'/>
+        <property name='file.lastModified' value='1540115245484'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.license.nl' version='5.4.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/nlpack/eclipse/plugins/com.kingdee.bos.boslicensenl_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\nlpack\eclipse\plugins\com.kingdee.bos.boslicensenl_6.1.0'/>
+        <property name='file.lastModified' value='1540115245625'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.tool.toolcommon.nl1' version='6.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/nlpack/eclipse/plugins/com.kingdee.bos.toolcommon.nl1_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\nlpack\eclipse\plugins\com.kingdee.bos.toolcommon.nl1_6.1.0'/>
+        <property name='file.lastModified' value='1540115245406'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.boswebservice.nl' version='5.4.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/nlpack/eclipse/plugins/com.kingdee.bos.boswebservicenl_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\nlpack\eclipse\plugins\com.kingdee.bos.boswebservicenl_6.1.0'/>
+        <property name='file.lastModified' value='1540115245515'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.bim.nl' version='6.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/nlpack/eclipse/plugins/com.kingdee.bos.bimnl_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\nlpack\eclipse\plugins\com.kingdee.bos.bimnl_6.1.0'/>
+        <property name='file.lastModified' value='1540115245718'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.rcs.nl1' version='1.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/nlpack/eclipse/plugins/com.kingdee.bos.rcsnl_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\nlpack\eclipse\plugins\com.kingdee.bos.rcsnl_6.1.0'/>
+        <property name='file.lastModified' value='1540115245453'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.tool.toolbase.nl1' version='1.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/nlpack/eclipse/plugins/com.kingdee.bos.toolbase.nl1_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\nlpack\eclipse\plugins\com.kingdee.bos.toolbase.nl1_6.1.0'/>
+        <property name='file.lastModified' value='1540115245421'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.workflow.designer.nl1' version='5.4.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/nlpack/eclipse/plugins/com.kingdee.bos.wfdesignernl_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\nlpack\eclipse\plugins\com.kingdee.bos.wfdesignernl_6.1.0'/>
+        <property name='file.lastModified' value='1540115245359'/>
+      </repositoryProperties>
+    </artifact>
+  </artifacts>
+</repository>

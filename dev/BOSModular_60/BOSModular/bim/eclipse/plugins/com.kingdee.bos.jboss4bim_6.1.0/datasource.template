@@ -1,0 +1,12 @@
+
+  <local-tx-datasource>
+    <jndi-name>jdbc/${DCINFO.aisNumber}</jndi-name>
+    <driver-class>com.kingdee.bos.sql.shell.Driver</driver-class>
+    <connection-url>${DCINFO.generateXMLUrl}</connection-url>
+    <idle-timeout-minutes>60</idle-timeout-minutes>
+    <min-pool-size>20</min-pool-size>
+    <max-pool-size>80</max-pool-size>
+    <user-name>${DCINFO.userName}</user-name>
+    <password>${DCINFO.password}</password>
+    <check-valid-connection-sql>select 1</check-valid-connection-sql>
+  </local-tx-datasource>

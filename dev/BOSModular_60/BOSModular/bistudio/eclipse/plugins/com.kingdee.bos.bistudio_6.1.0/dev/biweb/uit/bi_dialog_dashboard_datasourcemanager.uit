@@ -1,0 +1,89 @@
+<table cellspacing="0" cellpadding="0" style="font-size:12px;width:100%;height:100%">
+	<tr>
+		<td style="width:150px;padding:0px 10px">
+			<div>
+				<!-- <img sue="newFolderIcon" title="新建目录" src="images/tbtn_new_folder.gif" style="cursor:pointer"/> -->
+				<img sue="newIcon" title="新建" src="images/tbtn_new.gif" style="cursor:pointer"/>
+				<img sue="saveIcon" title="保存" src="images/tbtn_save.gif" style="cursor:pointer"/>
+				<img sue="deleteIcon" title="删除" src="images/tbtn_delete.gif" style="cursor:pointer"/>
+			</div>
+			<div sue="treeDiv" style="height:420px;padding:10px;border:solid 1px #718BB7;background-color:#FFF;overflow:auto;width:150px"></div>
+		</td>
+		
+		<td style="width:490px;vertical-align:top;padding-right:10px">
+
+			<div style="padding:10px 0px 5px 0px">
+				数据源名称：<input sue="datasourceName" type="text" class="portal_textfield" style="width:120px;background-color:#E0EAFA"/>
+				<input type="checkbox" sue="cbdatacenter">使用外部数据中心</checkbox>
+				<select type="select" sue="datacenterlist" style="width:120px">
+				</select>
+			</div>
+			<br/>	
+			<div style="padding-bottom:5px">
+				类型：
+				<select sue="datasourceType" style="margin-right:30px">
+					<option value="sql" selected="selected">SQL</option>
+				</select>
+				共享范围：
+				<select sue="datasourceSaveLocation" style="margin-right:30px">
+					<option value="dashboard">本仪表板</option>
+					<!-- <option value="repository">存储库</option> -->
+				</select>
+				最大返回行数：
+				<input sue="maxRowCount" type="text" class="portal_textfield" value="1000" style="width:35px"/>
+			</div>
+			<div sue="contentDiv" style="padding:0px;width:100%;height:120px">
+			</div>
+			<div style="padding-top:5px">
+				<button sue="getTableColumnsBtn" class="portal_button" style="margin-right:20px">获取可用列</button>
+				<button sue="releaseContentArea" class="portal_button" style="margin-right:20px">解锁查询语句</button>
+				<span style="float:right">查询结果共<span sue="totalRowCount">0</span>行</span>
+			</div>
+			<hr size="1" style="border-color:#718BB7"/>
+			<div>
+				<table cellspacing="0" cellpadding="0" style="font-size:12px;width:100%;height:182px">
+					<tr>
+						<td style="width:150px">可用列</td>
+						<td style="width:52px">&nbsp;</td>
+						<td style="width:150px">输出列</td>
+						<td style="width:100px">&nbsp;</td>
+					</tr>
+					<tr>
+						<td>
+							<div sue="validColumnDiv" style="overflow-x:hidden;height:100%;width:150px;background-color:#FFF;border:solid 1px #718BB7"></div>
+						</td>
+						<td style="padding:0px 10px">
+							<div style="padding-bottom:10px">
+								<button sue="gt" class="portal_button">&nbsp;&gt;&nbsp;</button>
+							</div>
+							<div style="padding-bottom:10px">
+								<button sue="gt2" class="portal_button">&gt;&gt;</button>
+							</div>
+							<div style="padding-bottom:10px">
+								<button sue="lt" class="portal_button">&nbsp;&lt;&nbsp;</button>
+							</div>
+							<div>
+								<button sue="lt2" class="portal_button">&lt;&lt;</button>
+							</div>
+						</td>
+						<td>
+							<div sue="outputColumnDiv" style="overflow-x:hidden;height:100%;width:150px;background-color:#FFF;border:solid 1px #718BB7"></div>							
+						</td>
+						<td style="padding-left:10px;vertical-align:top">
+							<div style="padding-bottom:10px">
+								<button sue="moveUp" class="portal_button">上移</button>
+							</div>
+							<div style="padding-bottom:10px">
+								<button sue="moveDown" class="portal_button">下移</button>
+							</div>
+							<div style="padding-bottom:10px">
+								<button sue="defineAliasBtn" class="portal_button">定义别名</button>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<br/>
+			</div>
+		</td>
+	</tr>
+</table>

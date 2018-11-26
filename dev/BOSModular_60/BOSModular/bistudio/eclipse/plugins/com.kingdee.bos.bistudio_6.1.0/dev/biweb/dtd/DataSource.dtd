@@ -1,0 +1,21 @@
+<!ELEMENT DataSource (Table+)>
+<!ELEMENT Table EMPTY>
+<!ATTLIST DataSource name CDATA #REQUIRED>	<!-- 数据源名称 -->
+<!ATTLIST Table name CDATA #REQUIRED>		<!-- 表名称 -->
+<!ATTLIST Table sql CDATA #REQUIRED>		<!-- 表对应的sql语句 -->
+
+<!--sql 支持系统变量 
+			EAS中的对象				脚本中的名称
+		UserInfo(用户信息)   		user
+		CtrlUnitInfo(控制单元信息)   cu
+		OrgUnitInfo (组织)			org
+	系统变量的写法： $变量名  == >  变量值
+				或  @变量名  == >  '变量值'
+	例如；
+		sql = "select * from t_test where id = @user.personId"
+		
+	其它：
+		需要使用者实现 BIEasEnv 接口(接口中提供相应对象值)，
+		使用BISystem.setBIEasEnv(...)传入。			
+   -->
+   

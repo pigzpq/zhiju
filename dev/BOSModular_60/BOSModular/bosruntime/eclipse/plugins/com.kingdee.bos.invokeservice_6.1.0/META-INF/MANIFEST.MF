@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: InvokeService Plug-in
+Bundle-SymbolicName: com.kingdee.bos.invokeservice
+Bundle-Version: 6.1.0
+Bundle-Vendor: Kingdee Software (China) Company Ltd.
+Bundle-ClassPath: invokeservice.jar
+Bundle-Localization: plugin
+Require-Bundle: org.junit,
+ org.log4j,
+ com.kingdee.bos.cache,
+ com.kingdee.bos.common,
+ com.kingdee.bos.metadata,
+ com.kingdee.bos.orm,
+ com.kingdee.bos.ksql
+Eclipse-AutoStart: true
+Export-Package: com.kingdee.bos,
+ com.kingdee.bos.framework.batchinvoke,
+ com.kingdee.bos.framework.batchinvoke.impl,
+ com.kingdee.bos.framework.cache,
+ com.kingdee.bos.framework.cache.config,
+ com.kingdee.bos.framework.cache.notify

@@ -1,0 +1,13 @@
+<project name="import" default="unZip">
+	<target name="unZip">
+		<echo>
+			import start......
+		</echo>
+		<unzip src="${zipFile}" dest="${destUnzipFolder}">
+		</unzip>
+	</target>
+	<target name="deleteTempFolder">
+		<delete dir="${destUnzipFolder}" includeemptydirs="true">
+		</delete>
+	</target>
+</project>

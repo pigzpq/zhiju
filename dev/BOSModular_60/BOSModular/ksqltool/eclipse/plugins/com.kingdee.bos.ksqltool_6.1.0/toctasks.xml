@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Tasks" link_to="toc.xml#tasks"> 
+	<topic label="使用对象浏览器"  href="html/tasks/maintopic.html"> 
+		<topic label="浏览数据库" href="html/tasks/subtopic.html" /> 
+	</topic>
+	<topic label="使用K-SQL编辑器">
+		<topic label="编写K-SQL语句" href="html/tasks/subtopic2.html" /> 
+	</topic> 
+</toc>

@@ -1,0 +1,7 @@
+@css .sue_ui_ext_f7{margin-bottom:5px;height:17px;}
+@css .sue_ui_ext_f7 img{display:inline;border:none;margin-left:10px;vertical-align:middle;cursor:hand}
+
+<div style="display:inline;border:solid 1px #CCC;width:190px">
+	<input type="text" style="font:12px Arial;border:0px;height:19px;width:168px"/>
+	<button style="position:relative;top:0px;right:0px;width:19px;height:19px;border:none;cursor:pointer"></button>
+</div>

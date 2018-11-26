@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="获取成本中心负责人">
+    <script><![CDATA[com.kingdee.bos.dao.ormapping.ObjectUuidPK pk = new com.kingdee.bos.dao.ormapping.ObjectUuidPK(costDeptId.toString());
+com.kingdee.eas.basedata.org.CostCenterOrgUnitInfo costOrgInfo = com.kingdee.eas.basedata.org.CostCenterOrgUnitFactory.getLocalInstance(__bosContext).getCostCenterOrgUnitInfo(pk);
+if(costOrgInfo != null && costOrgInfo.getLeader() != null) {     
+          com.kingdee.eas.basedata.person.PersonInfo leader = costOrgInfo.getLeader();
+          return leader.getId();
+       }]]></script>
+    <description><![CDATA[获取成本中心负责人]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>PERFORMER</type>
+      <array>false</array>
+      <description><![CDATA[成本中心负责人]]></description>
+    </return>
+    <parameter>
+      <name>costDeptId</name>
+      <type>BOID</type>
+      <array>false</array>
+      <description></description>
+    </parameter>
+  </function>
+</functions>
+

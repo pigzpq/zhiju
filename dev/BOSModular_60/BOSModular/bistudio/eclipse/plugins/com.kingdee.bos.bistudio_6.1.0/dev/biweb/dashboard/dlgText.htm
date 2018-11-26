@@ -1,0 +1,294 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Language" content="zh-cn">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>文字对象属性设置</title>
+		<SCRIPT language="JavaScript" src="ctrl.js"></SCRIPT>
+		<script src="../js/sue-main.js"></script>
+		<script src="../js/sue-config.js"></script>
+		<STYLE>
+	.dialog
+	{
+		font-size:9pt;
+	}
+	</STYLE>
+	</head>
+	<body topmargin="10" leftmargin="10" bottommargin="5" rightmargin="10">
+		<OBJECT id="dlgHelper" CLASSID="clsid:3050f819-98b5-11cf-bb82-00aa00bdce0b" width="0px" height="0px"></OBJECT>
+		<table border="0" width="100%" height="100%" class="dialog" cellPadding="0" cellSpacing="0">
+			<tr>
+				<td width="100%" height="100%" valign="top">
+					<TABLE style="font-size:9pt">
+						<COL width="80" />
+						<COL width="120" />
+						<COL width="100" />
+						<COL width="60" />
+						<tr height="40">
+							<td colspan="3">
+								对象名称：<input id="objectName" type="text"/>
+							</td>
+						</tr>
+						<TR>
+							<TD colspan="2">字体：</TD>
+							<TD>字型：</TD>
+							<TD>字号：</TD>
+						</TR>
+						<TR>
+							<TD colspan="2">
+								<SELECT id="ctrlFontName" size="1" style="width:100%">
+								</SELECT>
+							</TD>
+							<TD>
+								<SELECT id="ctrlFontStyle" size="1" style="width:100%">
+									<OPTION value="0">常规</OPTION>
+									<OPTION value="1">加粗</OPTION>
+									<OPTION value="2">倾斜</OPTION>
+									<OPTION value="3">加粗 倾斜</OPTION>
+								</SELECT>
+							</TD>
+							<TD>
+								<INPUT id="ctrlFontSize" style="width:100%" onkeydown="doKeyDown()">
+							</TD>
+						</TR>
+						<TR>
+							<TD colspan="4" style="font-size:3pt">&nbsp</TD>
+						</TR>
+						<TR>
+							<TD>水平对齐：</TD>
+							<TD>
+								<SELECT id="ctrlHAlign" size="1" style="width:100%">
+									<OPTION value="left">左对齐</OPTION>
+									<OPTION value="center">水平居中</OPTION>
+									<OPTION value="right">右对齐</OPTION>
+								</SELECT>
+							</TD>
+							<TD align="right">字体颜色：</TD>
+							<TD id="fontColorCtrlOwner">
+						</TR>
+						<TR>
+							<TD>垂直对齐：</TD>
+							<TD>
+								<SELECT id="ctrlVAlign" size="1" style="width:100%">
+									<OPTION value="top">上对齐</OPTION>
+									<OPTION value="middle">垂直居中</OPTION>
+									<OPTION value="bottom">下对齐</OPTION>
+								</SELECT>
+							</TD>
+							<TD align="right">背景颜色：</TD>
+							<TD id="backgroundCtrlOwner">
+							</TD>
+						</TR>
+						<TR>
+							<TD colspan="4" style="padding-top:8">
+								<INPUT id="ctrlUnderline" type="checkbox" onclick="doCheckboxClick()">下划线
+							</TD>
+						</TR>
+						<TR>
+							<TD colspan="4" style="padding-top:20">文字内容：</TD>
+						</TR>
+						<TR>
+							<TD colspan="4">
+								<TEXTAREA id="ctrlText" rows="6" style="width:350px" onkeydown="doKeyDown()"></TEXTAREA>
+							</TD>
+						</TR>
+					</TABLE>
+				</td>
+			</tr>
+			<tr>
+				<td style="text-align:right;padding:0px">
+					<button id="btnOK" class="portal_button" onclick="return btnOK_onclick()" style="margin-right:10px">确定</button>
+					<button id="btnCancel" class="portal_button" onclick="return btnCancel_onclick()">取消</button>
+				</td>
+			</tr>
+		</table>
+	</body>
+	<script language="javascript">
+var _oParams;
+var ctrlFontColor;
+var ctrlBackground;
+
+function document.body.onload()
+{
+	prepareFonts();
+
+	var owner = document.getElementById("backgroundCtrlOwner");
+	ctrlBackground = new ColorSelector(owner);
+	ctrlBackground.setShowDefault("透明", _sTransparentColor);
+	
+	owner = document.getElementById("fontColorCtrlOwner");
+	ctrlFontColor = new ColorSelector(owner);
+	ctrlFontColor.setShowDefault("默认", "#000000");
+	
+	_oParams = window.frameElement.$param;
+	
+	_.id( "objectName" ).value = _oParams.name;
+	ctrlFontName.value = _oParams.oStyle.sFontName;
+	ctrlFontSize.value = (_oParams.oStyle.iFontSize == null ? "" : _oParams.oStyle.iFontSize);
+	
+	var iFontStyle = 0;
+	if(_oParams.oStyle.bBold == null || _oParams.oStyle.bItalic == null)
+	{
+		iFontStyle = -1;
+	}
+	else
+	{
+		if(_oParams.oStyle.bBold)
+		{
+			iFontStyle += 1;
+		}
+		if(_oParams.oStyle.bItalic)
+		{
+			iFontStyle += 2;
+		}
+	}
+	ctrlFontStyle.value = iFontStyle;
+
+	ctrlUnderline.checked = _oParams.oStyle.bUnderline;
+	
+	if(_oParams.oStyle.sBackground == null)
+	{
+		ctrlBackground.setSelectedColor("");
+	}
+	else
+	{
+		if(_oParams.oStyle.sBackground == "")
+		{
+			ctrlBackground.setSelectedColor(_sTransparentColor);
+		}
+		else
+		{
+			ctrlBackground.setSelectedColor(_oParams.oStyle.sBackground);
+		}
+	}
+	ctrlFontColor.setSelectedColor(_oParams.oStyle.sFontColor == null ? "" : _oParams.oStyle.sFontColor);
+	
+	ctrlHAlign.value = _oParams.oStyle.sAlignH;
+	ctrlVAlign.value = _oParams.oStyle.sAlignV;
+	
+	ctrlText.value = (_oParams.sText == null ? "" : _oParams.sText);
+	try {
+		document.getElementById("ctrlText").focus();
+	} catch( e ) {
+	}
+}
+
+function prepareFonts()
+{
+	var ctrl = document.getElementById("ctrlFontName");
+	for(var i = 1, c = dlgHelper.fonts.count; i <= c; i++)
+	{
+		var option = document.createElement("OPTION");
+		option.text = dlgHelper.fonts(i);
+		option.value = option.text;
+		ctrl.options.add(option);
+	}
+}
+
+var jsKeyWordMap = _.hash( "abstract,boolean,break,byte,case,catch,char,class,const,continue,default,delete,do,double,else,extends,false,final,finally,float,for,function,goto,if,implements,import,in,instanceof,int,interface,long,native,new,null,package,private,protected,public,return,short,static,super,switch,synchronized,this,throw,throws,transient,true,try,typeof,undefined,var,void,while,with,Object,Math,String,Number,Boolean,Array,Image,Option,Error".split(","), _.I, 1 );
+var dashboardKeyWordMap = _.hash( "window,name,document,parent,opener,top,location,history,navigator".split( "," ), _.I, 1 );
+
+// 测试是否合法的对象名称
+function testValidObjectName( name ) {
+	if ( !name ) {
+		return true;
+	} else if ( !/^[A-Za-z]\w*$/.test( name ) ) {
+		return "对象名称只能包含英文字符、数字和下划线，且必须英文字符开头。";
+	} else if ( name in jsKeyWordMap ) {
+		return "对象名称不能使用JavaScript关键字，请更换。";
+	} else if ( name in dashboardKeyWordMap ) {
+		return "对象名称不能使用仪表板运行环境关键字，请更换。";
+	} else {
+		return true;
+	}
+}
+
+function btnOK.onclick()
+{
+	if(check())
+	{
+		_oParams.name = _.id( "objectName" ).value;
+		_oParams.name = _.trim( _oParams.name );
+		var testObjectName = testValidObjectName( _oParams.name );
+		if ( testObjectName !== true ) {
+			alert( testObjectName );
+			return;
+		}
+		
+		_oParams.oStyle.sFontName = ctrlFontName.value;
+		_oParams.oStyle.iFontSize = (ctrlFontSize.dashboard_changed ? parseInt(ctrlFontSize.value) :  null);
+		
+		var iFontStyle = ctrlFontStyle.value;
+		if(iFontStyle)
+		{
+			_oParams.oStyle.bBold = ((iFontStyle & 1) == 1);
+			_oParams.oStyle.bItalic = ((iFontStyle & 2) == 2);
+		}
+		
+		if(ctrlUnderline.dashboard_changed)
+		{
+			_oParams.oStyle.bUnderline = ctrlUnderline.checked;
+		}
+		else
+		{
+			_oParams.oStyle.bUnderline = null;
+		}
+		
+
+		if(ctrlFontColor.getSelectedColor())
+		{
+			_oParams.oStyle.sFontColor = ctrlFontColor.getSelectedColor();
+		}
+		
+		if(ctrlBackground.getSelectedColor())
+		{
+			if(ctrlBackground.getSelectedColor() == _sTransparentColor)
+			{
+				_oParams.oStyle.sBackground = "";
+			}
+			else
+			{
+				_oParams.oStyle.sBackground = ctrlBackground.getSelectedColor();
+			}
+		}
+
+		_oParams.oStyle.sAlignH = ctrlHAlign.value;
+		_oParams.oStyle.sAlignV = ctrlVAlign.value;
+		
+		_oParams.sText = (ctrlText.dashboard_changed ? ctrlText.value : null);
+		
+		_oParams.dialog.closeDialog( true );
+	}
+}
+
+function btnCancel.onclick()
+{
+	_oParams.dialog.closeDialog( false );
+}
+
+function check()
+{
+	if(ctrlFontSize.dashboard_changed)
+	{
+		var iFontSize = parseInt(ctrlFontSize.value);
+		if(isNaN(iFontSize))
+		{
+			alert("字号必须是数字。");
+			ctrlFontSize.focus();
+			return false;
+		}
+	}
+	return true;
+}
+
+function doKeyDown()
+{
+	event.srcElement.dashboard_changed = true;
+}
+
+function doCheckboxClick()
+{
+	event.srcElement.dashboard_changed = true;
+}
+
+	</script>
+</html>

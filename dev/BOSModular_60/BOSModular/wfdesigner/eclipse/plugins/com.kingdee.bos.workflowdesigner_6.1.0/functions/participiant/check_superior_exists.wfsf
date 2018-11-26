@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="根据单据内码判断流程发起人是否有直接上级">
+    <script><![CDATA[boolean haveSupervisor = false;
+		com.kingdee.bos.workflow.service.ormrpc.IEnactmentService service = new  
+		com.kingdee.bos.workflow.service.ormrpc.EnactmentService( 
+		__bosContext); 
+		com.kingdee.bos.workflow.ProcessInstInfo[] procInstInfos = service 
+		.getProcessInstanceByHoldedObjectId(billID.toString()); 
+		com.kingdee.bos.workflow.ProcessInstInfo curProcInst = null; 
+		for (int i = 0, n = procInstInfos.length; i < n; i++) { 
+		if (procInstInfos[i].getState().startsWith("open.run")) { 
+		curProcInst = procInstInfos[i]; 
+		} 
+		} 
+		if (curProcInst != null) { 
+		String initUserId = curProcInst.getInitiatorId(); 
+		com.kingdee.eas.basedata.person.app.PersonToWFAdapter adapter = new 
+		com.kingdee.eas.basedata.person.app.PersonToWFAdapter(); 
+		com.kingdee.bos.workflow.participant.Person[] persons = adapter 
+		.getSupervisor(__bosContext, initUserId); 
+		if (persons != null && persons.length > 0 && persons[0] != null) { 
+			haveSupervisor = true; 
+		} 
+		}
+		return haveSupervisor;]]></script>
+    <description><![CDATA[根据单据,判断此单据的流程实例发起人
+是否有直接上级.]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>BOOLEAN</type>
+      <array>false</array>
+      <description><![CDATA[有直接上级,返回true,否则返回false]]></description>
+    </return>
+    <parameter>
+      <name>billID</name>
+      <type>BOID</type>
+      <array>false</array>
+      <description><![CDATA[绑定的单据ID]]></description>
+    </parameter>
+  </function>
+</functions>
+

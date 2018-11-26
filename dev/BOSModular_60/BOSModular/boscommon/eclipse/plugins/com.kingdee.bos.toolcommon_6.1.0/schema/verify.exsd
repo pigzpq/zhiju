@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="com.kingdee.bos.tool.toolcommon">
+<annotation>
+      <appInfo>
+         <meta.schema plugin="com.kingdee.bos.tool.toolcommon" id="metaDataVerify" name="MetaData Verify"/>
+      </appInfo>
+      <documentation>
+         [Enter description of this extension point.]
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <complexType>
+         <sequence>
+            <element ref="category" minOccurs="1" maxOccurs="unbounded"/>
+            <element ref="verifyUnit" minOccurs="1" maxOccurs="unbounded"/>
+         </sequence>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="point" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="category">
+      <complexType>
+         <attribute name="name" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="enable" type="boolean" use="default" value="false">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="verifyUnit">
+      <complexType>
+         <sequence>
+            <element ref="targets"/>
+         </sequence>
+         <attribute name="name" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="category" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="level" use="default" value="WARNING">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <enumeration value="FATAL">
+                  </enumeration>
+                  <enumeration value="ERROR">
+                  </enumeration>
+                  <enumeration value="WARNING">
+                  </enumeration>
+               </restriction>
+            </simpleType>
+         </attribute>
+         <attribute name="id" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="class" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appInfo>
+                  <meta.attribute kind="java" basedOn="com.kingdee.bos.tool.IVerify"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="targets">
+      <complexType>
+         <sequence>
+            <element ref="target" minOccurs="1" maxOccurs="unbounded"/>
+         </sequence>
+      </complexType>
+   </element>
+
+   <element name="target">
+      <complexType>
+         <attribute name="style" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <enumeration value="Entity">
+                  </enumeration>
+                  <enumeration value="Facade">
+                  </enumeration>
+                  <enumeration value="BizException">
+                  </enumeration>
+                  <enumeration value="BizEnum">
+                  </enumeration>
+                  <enumeration value="Permission">
+                  </enumeration>
+                  <enumeration value="MDQuery">
+                  </enumeration>
+                  <enumeration value="Function">
+                  </enumeration>
+                  <enumeration value="Rule">
+                  </enumeration>
+                  <enumeration value="Query">
+                  </enumeration>
+                  <enumeration value="UIObject">
+                  </enumeration>
+                  <enumeration value="BizDataType">
+                  </enumeration>
+                  <enumeration value="Table">
+                  </enumeration>
+                  <enumeration value="Relationship">
+                  </enumeration>
+                  <enumeration value="Package">
+                  </enumeration>
+                  <enumeration value="MultiLanguage">
+                  </enumeration>
+                  <enumeration value="Solution">
+                  </enumeration>
+                  <enumeration value="Application">
+                  </enumeration>
+                  <enumeration value="SubSystem">
+                  </enumeration>
+                  <enumeration value="ImageResource">
+                  </enumeration>
+               </restriction>
+            </simpleType>
+         </attribute>
+         <attribute name="saveEnable" type="boolean" use="default" value="false">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="createEnable" type="boolean" use="default" value="false">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="since"/>
+      </appInfo>
+      <documentation>
+         [Enter the first release in which this extension point appears.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="examples"/>
+      </appInfo>
+      <documentation>
+         [Enter extension point usage example here.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="apiInfo"/>
+      </appInfo>
+      <documentation>
+         [Enter API information here.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="implementation"/>
+      </appInfo>
+      <documentation>
+         [Enter information about supplied implementation of this extension point.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="copyright"/>
+      </appInfo>
+      <documentation>
+         
+      </documentation>
+   </annotation>
+
+</schema>

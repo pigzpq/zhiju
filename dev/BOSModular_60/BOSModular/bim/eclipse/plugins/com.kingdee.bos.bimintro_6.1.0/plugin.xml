@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension id="ide" point="org.eclipse.core.runtime.products">
+      <product application="org.eclipse.ui.ide.workbench" description="%blurb" name="%productName">
+         <property name="windowImages" value="bim16.gif,bim32.gif"/>
+         <property name="aboutImage" value="about.gif"/>
+         <property name="aboutText" value="%blurb"/>
+         <property name="appName" value="BOS BIM"/>
+         <property name="preferenceCustomization" value="plugin_customization.ini"/>
+      </product>
+   </extension>
+   <extension point="org.eclipse.ui.intro">
+      <intro
+            class="org.eclipse.ui.intro.config.CustomizableIntroPart"
+            icon="bim16.gif"
+            id="com.kingdee.bos.bim.product.intro"/>
+      <introProductBinding
+            introId="com.kingdee.bos.bim.product.intro"
+            productId="com.kingdee.bos.bim.product.ide"/>
+   </extension>
+   <extension
+         id="intro"
+         point="org.eclipse.ui.intro.config">
+      <config
+            content="$nl$/introContent.xml"
+            id="org.eclipse.platform.introConfig"
+            introId="com.kingdee.bos.bim.product.intro">
+         <presentation
+               home-page-id="root"
+               standby-page-id="standby">
+            <implementation
+                  kind="html"
+                  os="win32"
+                  style="css/shared.css"
+                  ws="win32"/>
+            <implementation kind="swt"/>
+         </presentation>
+      </config>
+   </extension>
+
+</plugin>

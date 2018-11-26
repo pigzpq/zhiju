@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	</head>
+	<script src="../js/sue-main.js"></script>
+	<script src="../js/sue-config.js"></script>
+	<style type="text/css">
+	html, body {
+		height:100%
+	}
+	
+	body {
+		margin:0px;
+		padding:0px;
+		background: center center no-repeat;
+	}
+	</style>
+	<body>
+		<script>
+			_.bindEvent( window, "load", function() {
+				document.body.style.backgroundImage = _.format( "url(../img/ui-web/scaler_indicater_%s.gif)", Sue.config.cs.name );
+				_.bindEvent( document.body, "click", f );
+			} );
+			// 缩入
+			function f() {
+				parent.document.getElementById( "frames" ).cols = "0px,11px,*";
+				document.body.style.backgroundImage = _.format( "url(../img/ui-web/scaler_indicater2_%s.gif)", Sue.config.cs.name );
+				_.unbindEvent( document.body, "click" );
+				_.bindEvent( document.body, "click", g );
+			}
+			// 弹出
+			function g() {
+				parent.document.getElementById( "frames" ).cols = "250px,11px,*";
+				document.body.style.backgroundImage = _.format( "url(../img/ui-web/scaler_indicater_%s.gif)", Sue.config.cs.name );
+				_.unbindEvent( document.body, "click" );
+				_.bindEvent( document.body, "click", f );
+			}
+		</script>
+	</body>
+</html>

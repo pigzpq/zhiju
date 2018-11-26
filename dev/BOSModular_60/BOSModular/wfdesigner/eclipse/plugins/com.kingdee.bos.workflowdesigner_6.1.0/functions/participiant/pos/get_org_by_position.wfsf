@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="获取职位对应的组织单元">
+    <script><![CDATA[if(null == positionID || "".equals(positionID.toString()))
+			return null;
+		com.kingdee.eas.basedata.person.app.PersonToWFAdapter adapter = new 
+		com.kingdee.eas.basedata.person.app.PersonToWFAdapter();
+		return adapter.getAdminOrgUnitNamebyPositionID(__bosContext,positionID.toString());]]></script>
+    <description><![CDATA[获取职位对应的组织单元,并返回组织单元的ID
+以便后续使用.]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>STRING</type>
+      <description><![CDATA[返回组织单元ID]]></description>
+    </return>
+    <parameter>
+      <name>positionID</name>
+      <type>BOID</type>
+      <description><![CDATA[职位ID]]></description>
+    </parameter>
+  </function>
+</functions>
+

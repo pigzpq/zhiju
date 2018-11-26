@@ -1,0 +1,45 @@
+<div class="topDivcss" style="width:100%; height:100%">
+  <table class="tablecss" width="100%" height="100%" style="font-size:12px" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="1%" height="5">&nbsp;</td>
+      <td colspan="2">&nbsp;</td>
+      <td width="14%">&nbsp;</td>
+      <td colspan="2">&nbsp;</td>
+      <td width="9%">&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="26">&nbsp;</td>
+      <td width="12%" valign="bottom">分组列表：</td>
+      <td width="27%" align="right" valign="bottom">
+	   <a href="#" title="新增分组" onClick="doGroupAdd();"><img border="0" src="../dashboard/images/tbtn_new.gif" /></a>
+	   <a href="#" title="删除分组" onClick="doGroupDel();"> <img border="0" src="../dashboard/images/tbtn_delete.gif" /></a>
+	   <a href="#" title="保存" onClick="doGroupUpdate();"> <img border="0" src="../dashboard/images/tbtn_save.gif" /></a>      </td>
+      <td>&nbsp;</td>
+      <td colspan="2">&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+     <td rowspan="2">	 </td>
+      <td colspan="2" rowspan="2">
+	  <div class="divcss">
+	  <select id="existGroup" class="inputcss"   size="22" style="width:200px;">
+      </select>
+     </div></td>
+      <td rowspan="2">&nbsp;</td>
+      <td width="9%" height="39" align="left">分组名称：      </td>
+      <td width="28%" align="left"><input name="text" type="text" class="inputcss"  id="groupName"  style="width:220px;" /></td>
+      <td rowspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="263" align="left" valign="top">分组描述：</td>
+      <td height="263" align="left"><textarea name="textarea"  rows="19" class="inputcss" id="groupDesc" style="width:220px;"></textarea></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td colspan="2" height="40" >&nbsp;</td>
+      <td>&nbsp;</td>
+      <td colspan="2"  align="right"><button id="btn_groupClose" class="portal_button" onClick="window.close();">关闭</button></td>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+</div>

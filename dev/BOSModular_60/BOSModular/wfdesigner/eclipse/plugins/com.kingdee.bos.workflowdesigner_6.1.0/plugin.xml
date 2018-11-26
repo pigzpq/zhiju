@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension-point id="WebBillSelector" name="Web Bill Selector" schema="schema/WebBillSelector.exsd"/>
+   <extension-point id="WebBillUiStatusSelector" name="Web Bill UiStatus Selector" schema="schema/WebBillUiStatusSelector.exsd"/>
+
+	<extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="%wfMofifyPerspective.name"
+            icon="icons/mainperspective.gif"
+            class="com.kingdee.bos.workflow.wfdesigner.perspective.BosPerspective"
+            id="com.kingdee.bos.workflow.wfdesigner.perspective.BosPerspective">
+      </perspective>
+      <perspective
+            name="%wfConnectionPerspective"
+            icon="icons/wfconnection.gif"
+            class="com.kingdee.bos.workflow.wfdesigner.perspective.WfConnectionPerspectiveFactory"
+            id="com.kingdee.bos.workflow.wfdesigner.perspective.WfConnectionPerspectiveFactory">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="%wfViewCollection"
+            id="BOSView">
+      </category>
+      <view
+            name="%wfProcessView.name"
+            icon="icons/applicationview.gif"
+            category="BOSView"
+            class="com.kingdee.bos.workflow.wfdesigner.view.SubSystemView"
+            id="com.kingdee.bos.workflow.wfdesigner.view.SubSystemView">
+      </view>
+      <view
+            name="%procValidateView.name"
+            icon="icons/workflowdesigner/validate.gif"
+            category="BOSView"
+            class="com.kingdee.bos.workflow.wfdesigner.view.ModelValidateView"
+            id="com.kingdee.bos.workflow.wfdesigner.view.ModelValidateView">
+      </view>
+      <view
+            name="%functionSelectionView.name"
+            icon="icons/workflowdesigner/dbicon.gif"
+            category="BOSView"
+            class="com.kingdee.bos.workflow.wfdesigner.view.FunctionSelectionView"
+            id="com.kingdee.bos.workflow.wfdesigner.view.FunctionSelectionView">
+      </view>
+      <view
+            name="%wfConnectionView.name"
+            icon="icons/wfconnection.gif"
+            category="BOSView"
+            class="com.kingdee.bos.workflow.wfdesigner.view.WfConnectionView"
+            id="com.kingdee.bos.workflow.wfdesigner.view.WfConnectionView">
+      </view>
+      <view
+            name="%consoleView.name"
+            icon="icons/workflowdesigner/consoleview/console_view.gif"
+            category="BOSView"
+            class="org.eclipse.ui.internal.console.ConsoleView"
+            id="com.kingdee.bos.workflow.wfdesigner.view.ConsoleView">
+      </view>
+      <view
+            icon="icons/wfconnectionitem.gif"
+            class="com.kingdee.bos.workflow.wfdesigner.view.WfTestCaseView"
+            category="BOSView"
+            name="%wfTestView.name"
+            id="com.kingdee.bos.workflow.wfdesigner.view.WfTestCaseView"/>
+      <view
+            category="BOSView"
+            class="com.kingdee.bos.workflow.wfdesigner.view.ScriptFunctionView"
+            icon="icons/sample.gif"
+            id="com.kingdee.bos.workflow.wfdesigner.view.ScriptFunctionView"
+            name="%wfScriptFunctionView.name"/>
+      <view
+            category="BOSView"
+            class="com.kingdee.bos.workflow.wfdesigner.view.ProcessVariableQuoteView.ProcessVariableQuoteView"
+            icon="icons/sample.gif"
+            id="com.kingdee.bos.workflow.wfdesigner.view.ProcessVariableQuoteView.ProcessVariableQuoteView"
+            name="%processVariableQuoteView.name"
+            restorable="true">
+      </view>
+   </extension>
+   
+	<extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.kingdee.bos.workflow.wfdesigner.editor.MultiPageEditor"
+            icon="icons/workflowdesigner/workflow.gif"
+            default="true"
+            contributorClass="com.kingdee.bos.workflow.wfdesigner.editor.WfProcessActionBarContributor"
+            name="%wfProcessDiagramEditor.name"
+            id="com.kingdee.bos.workflow.wfdesigner.editor.WfProcessEditor"
+            extensions="kdwf">
+      </editor>
+
+      <editor
+            name="%connectionEditor.name"
+            default="true"
+            icon="icons/link_dbexplorer.gif"
+            extensions="wfc"
+            contributorClass="com.kingdee.bos.workflow.wfdesigner.editor.WfLoginEditorContributor"
+            class="com.kingdee.bos.workflow.wfdesigner.editor.WfLoginEditor"
+            id="com.kingdee.bos.workflow.wfdesigner.editor.WfLoginEditor">
+      </editor>
+      <editor
+            class="com.kingdee.bos.workflow.wfdesigner.editor.MultiPageEditor"
+            icon="icons/sample.gif"
+            default="false"
+            contributorClass="com.kingdee.bos.workflow.wfdesigner.editor.WfTemplateActionBarContributor"
+            name="%wfTemplateDiagramEditor.name"
+            id="com.kingdee.bos.workflow.wfdesigner.editor.WfTemplateEditor"
+            extensions="wft"/>
+      <editor
+            class="com.kingdee.bos.workflow.wfdesigner.editor.WfScriptFunctionEditorEx"
+            contributorClass="com.kingdee.bos.workflow.wfdesigner.editor.WfProcessActionBarContributor"
+            default="false"
+            icon="icons/workflowdesigner/workflow.gif"
+            id="com.kingdee.bos.workflow.wfdesigner.editor.WfScriptFunctionEditorEx"
+            name="%wfScriptFunctionEditor.name">
+      </editor>
+      <editor
+            class="com.kingdee.bos.workflow.wfdesigner.editor.WfScriptFunctionEditor"
+            contributorClass="com.kingdee.bos.workflow.wfdesigner.editor.WfProcessActionBarContributor"
+            icon="icons/workflowdesigner/workflow.gif"
+            id="com.kingdee.bos.workflow.wfdesigner.editor.WfScriptFunctionEditor"
+            name="%wfScriptFunctionEditor.name"/>
+      
+   </extension>
+   
+   
+   
+   <!--extend help-->
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="HelpContexts.xml">
+      </contexts>
+   </extension>	
+   
+   <!--extend commond-->
+   <extension  point="org.eclipse.ui.commands">
+      <category
+            name="%scriptCommond.name"
+            description="%scriptCommond.desc"
+            id="com.kingdee.bos.workflow.ui.keys">
+      </category>
+      <command
+            name="%scriptContextAssit.name"
+            category="com.kingdee.bos.workflow.ui.keys"
+            description="%scriptContextAssit.desc"
+            id="com.kindee.bos.workflow.script.contentAssitant">
+      </command>
+   </extension>
+   
+   <!--extend applications-->
+   <extension
+         point="org.eclipse.core.runtime.applications"
+         id="wfDesignerApp"
+         name="%wfDesignerApp.name">
+      <application>
+         <run
+            class="com.kingdee.bos.workflow.WfDesignerApp">
+         </run>
+      </application>
+   </extension>
+   
+   <!--extend products-->
+   <extension
+         point="org.eclipse.core.runtime.products"
+         id="product">
+      <product
+            name="%wfDesignerProduct.name"
+            application="com.kingdee.bos.workflowdesigner.wfDesignerApp">
+         <property
+               name="appName"
+               value="工作流建模工具"/>
+         <property
+               name="windowImages"
+               value="icons/eclipse.gif,icons/eclipse32.gif"/>
+         <property
+               name="aboutText"
+               value="工作流建模工具"/>
+         <property
+               name="aboutImage"
+               value="icons/eclipse_lg.gif"/>
+      </product>
+   </extension>
+   
+   <extension point = "org.eclipse.ui.actionSets"> 
+        <actionSet
+              label="%procControl.name"
+              visible="false"
+              id="com.kingdee.bos.workflow.desinger.option.actionSets"> 
+            <!--  
+            <menu
+               id="com.kingdee.bos.workflow.Desinger.option.menu" 
+               label="选项"
+               path="options"> 
+               <separator name="metas"/>
+               <separator name="execute"/>
+            </menu>
+            -->
+            <!--
+            <action
+                  label="选项"
+                  tooltip="校验和发布设置"
+                  class="com.kingdee.bos.workflow.wfdesigner.actionsets.OptionAction"
+                  icon="icons/sample.gif"
+                  style="push"
+                  menubarPath="tools/tools_group_1"
+                  id="com.kingdee.bos.workflow.desinger.option.deployandvalidate"/>
+             -->
+            <action
+                  label="%logoutAction.name"
+                  icon="icons/sample.gif"
+                  tooltip="注销"
+                  class="com.kingdee.bos.workflow.wfdesigner.actionsets.LogOutActionDelegate"
+                  style="push"
+                  menubarPath="com.kingdee.bos.menu.tools/tools_group_1"
+                  id="com.kingdee.bos.menu.logout">
+               <enablement>
+                  <and>
+                     <pluginState
+                           value="activated"
+                           id="com.kingdee.bos.workflow.designer"/>
+                  </and>
+               </enablement>
+            </action>
+           <action
+                  label="流程分配信息查看"
+                  icon="icons/sample.gif"
+                  tooltip="流程分配信息查看"
+                  class="com.kingdee.bos.workflow.wfdesigner.actionsets.ProcessUserInfoViewActionDelegate"
+                  style="push"
+                  menubarPath="com.kingdee.bos.menu.tools/tools_group_1"
+                  id="com.kingdee.bos.menu.ProcessUserInfoViewAction">
+               <enablement>
+                  <and>
+                     <pluginState
+                           value="activated"
+                           id="com.kingdee.bos.workflow.designer"/>
+                  </and>
+               </enablement>
+            </action>
+            
+            <action
+                  label="流程分配"
+                  icon="icons/sample.gif"
+                  tooltip="流程分配"
+                  class="com.kingdee.bos.workflow.wfdesigner.actionsets.ProcessPermissionControlActionDelegate"
+                  style="push"
+                  menubarPath="com.kingdee.bos.menu.tools/tools_group_1"
+                  id="com.kingdee.bos.menu.processpermission">
+               <enablement>
+                  <and>
+                     <pluginState
+                           value="activated"
+                           id="com.kingdee.bos.workflow.designer"/>
+                  </and>
+               </enablement>
+            </action>
+            
+            
+            <action
+                  label="%importProcAction.name"
+                  class="com.kingdee.bos.workflow.wfdesigner.actionsets.ImportModelActionDelegate"
+                  tooltip="导入流程模型"
+                  icon="icons/workflowdesigner/subsytemview/wf_right_input.gif"
+                  style="push"
+                  menubarPath="com.kingdee.bos.menu.tools/tools_group_2"
+                  id="com.kingdee.bos.menu.importModel"/>
+            <action
+                  label="%exportProcAction.name"
+                  class="com.kingdee.bos.workflow.wfdesigner.actionsets.ExportModelActionDelegate"
+                  tooltip="导出流程模型"
+                  icon="icons/workflowdesigner/subsytemview/wf_right_output.gif"
+                  style="push"
+                  menubarPath="com.kingdee.bos.menu.tools/tools_group_2"
+                  id="com.kingdee.bos.menu.exportModel"/>
+            <action
+                  class="com.kingdee.bos.workflow.wfdesigner.actionsets.STCConvertActionDelegate"
+                  icon="icons/sample.gif"
+                  id="com.kingdee.bos.workflow.wfdesigner.actionsets.STCConvertActionDelegate"
+                  label="%stcConvertor.name"
+                  menubarPath="com.kingdee.bos.menu.tools/tools_group_4"
+                  style="push"/>
+           <menu
+            label="工具(&amp;T)"
+            path="edit"
+            id="com.kingdee.bos.menu.tools">
+         <separator name="tools_group_1"/>
+         <separator name="tools_group_2"/>
+         <separator name="tools_group_3"/>
+         <separator name="tools_group_4"/>
+      </menu>
+           <action
+                 class="com.kingdee.bos.workflow.wfdesigner.actionsets.BSRRRegistryConfigActionDelegate"
+                 icon="icons/sample.gif"
+                 id="BSRRRegistryConfig"
+                 label="服务注册库连接设置"
+                 menubarPath="com.kingdee.bos.menu.tools/tools_group_4"
+                 style="push"
+                 tooltip="BSRR连接设置">
+              <enablement>
+                 <and>
+                    <pluginState
+                          id="com.kingdee.bos.workflow.designer"
+                          value="activated">
+                    </pluginState>
+                 </and>
+              </enablement>
+           </action>
+           <action
+                 class="com.kingdee.bos.workflow.wfdesigner.actionsets.ExportImageActionDelegate"
+                 icon="icons/workflowdesigner/saveaspic_16.gif"
+                 id="com.kingdee.bos.menu.exportImage"
+                 label="另存为图片"
+                 menubarPath="file/save"
+                 style="push"
+                 tooltip="另存为图片">
+           </action>
+   		</actionSet>
+   	</extension>
+   	
+   <extension point="org.eclipse.help.toc">
+        <toc file="helpIndex.xml" primary="true" />
+    </extension>
+    
+    <extension point="org.eclipse.help.toc">
+        <toc file="toc_summary.xml" />
+		<toc file="toc_refrence.xml" />
+        <toc file="toc_simpleFlowExample.xml" />
+        <!--toc file="toc_Ref.xml" /-->
+    </extension>
+    
+    <extension point="org.eclipse.ui.intro">
+      <intro  class="org.eclipse.ui.intro.config.CustomizableIntroPart"
+              id="com.kingdee.bos.workflow.designer"
+              icon="icons/intro.gif">
+      </intro>
+      <introProductBinding
+            introId="com.kingdee.bos.workflow.designer"
+            productId="com.kingdee.bos.rcs.product">
+      </introProductBinding>
+   </extension>
+   
+   <extension  id="intro"  point="org.eclipse.ui.intro.config">
+      <config  introId="com.kingdee.bos.workflow.designer"
+               id="org.eclipse.platform.introConfig"
+               content="introContent.xml">
+         <presentation home-page-id="root" standby-page-id="standby">
+            <implementation
+                  ws="win32"
+                  style="css/shared.css"
+                  kind="html"
+                  os="win32">
+            </implementation>
+            <implementation
+                  kind="swt">
+            </implementation>
+         </presentation>
+      </config>
+   </extension>
+   <extension
+         id="com.kingdee.bos.workflow.designer.viewset"
+         name="建模工具视图集"
+         point="com.kingdee.bos.rcs.viewset">
+         <perspectiveCategory
+               pluginID="com.kingdee.bos.workflow.designer"
+               perspectiveID="com.kingdee.bos.workflow.wfdesigner.perspective.BosPerspective"
+               perspectiveName="%wfMofifyPerspective.name"
+               id="com.kingdee.bos.workflow.wfdesigner.perspective.BosPerspective.category"/>
+          <perspectiveCategory
+               pluginID="com.kingdee.bos.workflow.designer"
+               perspectiveID="com.kingdee.bos.workflow.wfdesigner.perspective.WfConnectionPerspectiveFactory"
+               perspectiveName="%wfConnectionPerspective"
+               id="com.kingdee.bos.workflow.wfdesigner.perspective.WfConnectionPerspectiveFactory.category"/>
+         <viewSet perspectiveCategoryID="com.kingdee.bos.workflow.wfdesigner.perspective.BosPerspective.category"
+         		  viewID="com.kingdee.bos.workflow.wfdesigner.view.SubSystemView"
+         		  vewName="%wfProcessView.name"/>
+         <viewSet perspectiveCategoryID="com.kingdee.bos.workflow.wfdesigner.perspective.BosPerspective.category"
+         		  viewID="com.kingdee.bos.workflow.wfdesigner.view.ModelValidateView"
+         		  vewName="%procValidateView.name"/>
+         <viewSet perspectiveCategoryID="com.kingdee.bos.workflow.wfdesigner.perspective.BosPerspective.category"
+         		  viewID="com.kingdee.bos.workflow.wfdesigner.view.FunctionSelectionView"
+         		  vewName="%functionSelectionView.name"/>
+         <viewSet perspectiveCategoryID="com.kingdee.bos.workflow.wfdesigner.perspective.BosPerspective.category"
+         		  viewID="com.kingdee.bos.workflow.wfdesigner.view.ConsoleView"
+         		  vewName="%consoleView.name"/>
+         <viewSet perspectiveCategoryID="com.kingdee.bos.workflow.wfdesigner.perspective.WfConnectionPerspectiveFactory.category"
+         		  viewID="com.kingdee.bos.workflow.wfdesigner.view.WfConnectionView"
+         		  vewName="%wfConnectionView.name"/>	 
+   </extension>
+   <extension
+         id="com.kingdee.bos.workflow.wfdesigner.ResourceAdapter"
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            class="com.kingdee.bos.workflow.wfdesigner.view.internal.adpater.WfResourceAdapterFactory"
+            adaptableType="com.kingdee.bos.workflow.wfdesigner.view.IResourceInfo">
+            <adapter type="org.eclipse.ui.views.properties.IPropertySource"/>
+      </factory>
+   </extension>
+   <extension
+         point="org.eclipse.ui.helpSupport">
+      <config class="org.eclipse.help.ui.internal.DefaultHelpUI"/>
+   </extension>   
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="com.kingdee.bos.studio.preferences.MainPreferencePage"
+            class="com.kingdee.bos.workflow.wfdesigner.preferences.WFDesingerPreferencePage"
+            id="com.kingdee.bos.workflow.wfdesigner.preferences.WFDesingerPreferencePage"
+            name="金蝶EAS-BOS工作流工具"/>
+   </extension>
+    
+</plugin>

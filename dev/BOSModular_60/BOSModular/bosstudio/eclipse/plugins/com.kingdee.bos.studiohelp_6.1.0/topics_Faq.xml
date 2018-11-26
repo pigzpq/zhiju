@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+<!-- ============================================================================= -->
+<!-- Define topics for the main guide                                              -->
+<!-- ============================================================================= -->
+<toc label="Faq">
+	<topic label="BOS知识库" href="html/faq/bos_repository.htm"/>
+	
+	<topic label="使用技巧及FAQ" href="html/faq/use_skill_faq_first.htm">
+		<topic label="系统环境" href="html/faq/skillNfaq/system_environment.htm" >
+		    <!--<topic label="怎样获取BOS Studio出错的日志信息" href="html/faq/skillNfaq/system_environment/get_error_log.htm" />-->
+		</topic>
+	    <topic label="通用功能" href="html/faq/skillNfaq/common_function.htm" >
+	        <!--
+	        <topic label="如何从一个编辑器(Editor)中快速定位其它的对象" href="html/faq/skillNfaq/common_function/get_other_object.htm" />
+	        <topic label="怎样建立多个表达式之间的逻辑关系" href="html/faq/skillNfaq/common_function/create_logic_relationship.htm" />
+	        -->
+		</topic>	
+	    <topic label="UI元数据编辑器" href="html/faq/skillNfaq/ui_metadata_editor.htm" >
+	        <!--
+	        <topic label="打开原先设计好的界面（UI文件）时，控件上的标签怎么突然不见了" href="html/faq/skillNfaq/ui_metadata_editor/why_label_disappear.htm" />
+	        <topic label="怎么往KDList、KDComboBox控件中添加选项" href="html/faq/skillNfaq/ui_metadata_editor/how_add_item.htm" />
+	        <topic label="怎么设置TabbedPane控件的页签标题" href="html/faq/skillNfaq/ui_metadata_editor/how_set_title.htm" />
+	        <topic label="怎么激活KDTabbedPane的某一页签" href="html/faq/skillNfaq/ui_metadata_editor/how_active_page.htm" />
+	        <topic label="如何用键盘移动控件的位置" href="html/faq/skillNfaq/ui_metadata_editor/how_move_control.htm" />
+	        <topic label="UI编辑器支持分组框控件吗" href="html/faq/skillNfaq/ui_metadata_editor/can_group_control.htm" />
+	        -->
+		</topic>
+	    <topic label="Facade元数据编辑器" href="html/faq/skillNfaq/facade_metadata_editor.htm" />
+	</topic>
+</toc>

@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: rcsNL Fragment
+Bundle-SymbolicName: com.kingdee.bos.rcs.nl1
+Bundle-Version: 1.0.0
+Bundle-Vendor: KINGDEE
+Fragment-Host: com.kingdee.bos.rcs;bundle-version="[4.1.0,6.0.0)"
+Bundle-Localization: plugin
+Bundle-ClassPath: rcsNL.jar

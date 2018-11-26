@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<meta http-equiv="Pragma" content="no-cache"/> 
+		<meta http-equiv="Cache-Control" content="no-cache"/> 
+		<meta http-equiv="Expires" content="0"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	   	<link href="../css/worksheet.css" rel="stylesheet" type="text/css"></link>
+	   	<link href="../css/ui-components.css" rel="stylesheet" type="text/css"></link>
+		<script src="../js/sue-main.js"></script>
+		<script src="../js/sue-config.js"></script>
+		<script src="../js/bi.js"></script>
+		<script defer>
+			var path = location.search.match( /(path\=)(.*?)&/ )[2];
+			var url = location.search.match( /(url\=)(.*?)$/ )[2];
+			var d = document.getElementById("content");
+			_.post( {
+				url: url,
+				json: {
+					servletType: "piece",
+					action: "preview",
+					path: path
+				},
+				async: false,
+				nocache: true,
+				beforeStart: null,
+				afterEnd: null,
+				callback: function( r ) {
+					switch(r.type) {
+					case "piece_worksheet_dynamic":
+					case "piece_worksheet_snapshot":
+					case "piece_chart_dynamic":
+						d.innerHTML = r.content;
+						break;
+					case "piece_chart_snapshot":
+						var e = document.createElement("img");
+						e.src = r.content;
+						d.appendChild(e);
+						break;
+					}
+				}
+			} );
+		</script>
+	</head>
+	<body topmargin="10" leftmargin="0" bottommargin="10" rightmargin="0" style="overflow-x:auto;overflow-y:hidden">
+		<div id="content"></div>
+	</body>
+</html>

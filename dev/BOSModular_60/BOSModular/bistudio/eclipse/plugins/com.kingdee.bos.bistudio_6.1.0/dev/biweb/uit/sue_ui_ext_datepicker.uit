@@ -1,0 +1,104 @@
+@css .sue_ui_ext_datepicker_cellbody td{text-align:center;cursor:hand;padding:5px;}
+@css .sue_ui_ext_datepicker_table {font-size:12px;}
+@css .sue_ui_ext_datepicker_table th{text-align:center;}
+
+<div>
+	<table style="width:100%">
+		<tr style="text-align:center">
+			<td sue="previous_img" style="cursor:hand;width:10px;text-align:right"></td>
+			<td style="font-size:12px">
+				<select sue="year_selector">
+				</select>
+				<select sue="month_selector">
+					<option value="1">一月</option>
+					<option value="2">二月</option>
+					<option value="3">三月</option>
+					<option value="4">四月</option>
+					<option value="5">五月</option>
+					<option value="6">六月</option>
+					<option value="7">七月</option>
+					<option value="8">八月</option>
+					<option value="9">九月</option>
+					<option value="10">十月</option>
+					<option value="11">十一月</option>
+					<option value="12">十二月</option>
+				</select>
+			</td>
+			<td sue="next_img" style="cursor:hand;width:10px;text-align:left"></td>
+		</tr>
+	</table>
+</div>
+<div>
+	<table cellpadding="4" class="sue_ui_ext_datepicker_table" >
+		<thead>
+			<tr style="color:#F00;font-size:14px;text-align:center;">
+				<th>日</th>
+				<th>一</th>
+				<th>二</th>
+				<th>三</th>
+				<th>四</th>
+				<th>五</th>
+				<th>六</th>
+			</tr>
+		</thead>
+		<tbody class="sue_ui_ext_datepicker_cellbody">
+			<tr>
+				<td sue="cell1"></td>
+				<td sue="cell2"></td>
+				<td sue="cell3"></td>
+				<td sue="cell4"></td>
+				<td sue="cell5"></td>
+				<td sue="cell6"></td>
+				<td sue="cell7"></td>
+			</tr>
+			<tr>
+				<td sue="cell8"></td>
+				<td sue="cell9"></td>
+				<td sue="cell10"></td>
+				<td sue="cell11"></td>
+				<td sue="cell12"></td>
+				<td sue="cell13"></td>
+				<td sue="cell14"></td>
+			</tr>
+			<tr>
+				<td sue="cell15"></td>
+				<td sue="cell16"></td>
+				<td sue="cell17"></td>
+				<td sue="cell18"></td>
+				<td sue="cell19"></td>
+				<td sue="cell20"></td>
+				<td sue="cell21"></td>
+			</tr>
+			<tr>
+				<td sue="cell22"></td>
+				<td sue="cell23"></td>
+				<td sue="cell24"></td>
+				<td sue="cell25"></td>
+				<td sue="cell26"></td>
+				<td sue="cell27"></td>
+				<td sue="cell28"></td>
+			</tr>
+			<tr>
+				<td sue="cell29"></td>
+				<td sue="cell30"></td>
+				<td sue="cell31"></td>
+				<td sue="cell32"></td>
+				<td sue="cell33"></td>
+				<td sue="cell34"></td>
+				<td sue="cell35"></td>
+			</tr>
+			<tr>
+				<td sue="cell36"></td>
+				<td sue="cell37"></td>
+				<td sue="cell38"></td>
+				<td sue="cell39"></td>
+				<td sue="cell40"></td>
+				<td sue="cell41"></td>
+				<td sue="cell42"></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div style="padding-top:10px">
+	<button sue="today" class="portal_button">今天</button>
+</div>

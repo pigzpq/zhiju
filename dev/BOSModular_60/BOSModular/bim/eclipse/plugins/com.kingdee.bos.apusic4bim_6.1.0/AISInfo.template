@@ -1,0 +1,8 @@
+ 	<configitem name="${DCINFO.aisNumber}">
+    	<configitem name="EJBService">
+        	<attribute key="contextFactory" value="com.apusic.naming.jndi.CNContextFactory" />
+            <attribute key="securityCredential" value="admin" />
+            <attribute key="securityPrincipal" value="admin" />
+            <attribute key="datasource" value="jdbc/${DCINFO.aisNumber}" />
+         </configitem>
+    </configitem>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="gb2312"?>
+<exceptions locale="L2">
+	<exception id="WFD_SER_001" type="错误" subsystem="workflow">
+		<short>
+			<text>获取服务列表失败</text>
+		</short>
+		<explain>
+			<reason>从服务器获取服务列表失败</reason>
+			<scene>网络中断</scene>
+			<scene>服务器未正常启动</scene>
+			<scene>服务器配置有错误</scene>
+		</explain>
+	</exception>
+	<exception id="WFD_FUNCTION_MISSING" type="错误" subsystem="workflow">
+		<short>
+			<text>活动绑定的业务功能[{0}]不存在，请重新选择任务!</text>
+			<param index="0">业务功能全名</param>
+		</short>
+		<explain>
+			<reason>活动绑定的任务相关联的业务功能元数据不存在或已删除</reason>
+			<scene>BOS工具加载的元数据与服务器端加载的元数据不一致</scene>
+		</explain>
+		<responses>
+			<response>请检查活动绑定的任务相关联的业务功能操作是否存在</response>
+			<!--<response>打开"工具"菜单下的"元数据路径设置"功能，检查指定路径下的元数据是否与EAS服务器的元数据一致</response>-->
+		</responses>
+	</exception>
+	<exception id="WFD_OPERATION_MISSING" type="错误" subsystem="workflow">
+		<short>
+			<text>活动绑定的任务[{0}]不存在，请重新选择任务</text>
+			<param index="0">业务操作全名</param>
+		</short>
+		<explain>
+			<reason>活动绑定的任务相关联的业务功能操作不存在或已删除</reason>
+			<scene>BOS工具加载的元数据与服务器端加载的元数据不一致</scene>
+		</explain>
+		<responses>
+			<response>请检查活动绑定的业务功能的业务操作是否存在</response>
+			<!--<response>打开"工具"菜单下的"元数据路径设置"功能，检查指定路径下的元数据是否与EAS服务器的元数据一致</response>-->
+		</responses>
+	</exception>
+	<exception id="WFD_ENTITY_MISSING" type="错误" subsystem="workflow">
+		<short>
+			<text>任务[{0}]关联的实体元数据不存在，请重新选择任务</text>
+			<param index="0">业务操作全名</param>
+		</short>
+		<explain>
+			<reason>任务关联的实体元数据不存在或已删除</reason>
+			<scene>BOS工具加载的元数据与服务器端加载的元数据不一致</scene>
+		</explain>
+		<responses>
+			<response>请检查活动绑定的业务功能相关联的实体元数据是否存在</response>
+			<!--<response>打开"工具"菜单下的"元数据路径设置"功能，检查指定路径下的元数据是否与EAS服务器的元数据一致</response>-->
+		</responses>
+	</exception>
+	<exception id="WFD_MDMETHOD_MISSING" type="错误" subsystem="workflow">
+		<short>
+			<text>任务[{0}]关联的实体方法不存在，相关实体为{1}请重新选择任务</text>
+				<param index="0">业务操作全名</param>
+				<param index="1">实体全名</param>
+		</short>
+		<explain>
+			<reason>任务关联的实体方法不存在或已删除</reason>
+			<scene>BOS工具加载的元数据与服务器端加载的元数据不一致</scene>
+		</explain>
+		<responses>
+			<response>请检查活动绑定的业务功能相关联的实体方法是否存在</response>
+			<!--<response>打开"工具"菜单下的"元数据路径设置"功能，检查指定路径下的元数据是否与EAS服务器的元数据一致</response>-->
+		</responses>
+	</exception>
+	<exception id="WFD_CONNECTON_SERVER_ERROR" type="错误" subsystem="workflow">
+		<short>
+			<text>连接服务器失败! 服务器[{0}]未启动</text>
+			<param index="0">服务器url</param>
+		</short>
+		<explain>
+			<reason>指定URL的服务器未启动</reason>
+			<scene>EAS服务器被停止</scene>
+		</explain>
+		<responses>
+			<response>请检查指定URL的服务器是否已启动</response>
+		</responses>
+	</exception>
+	<exception id="WFD_CONNECTON_COMPONENT_NOT_COMPATIBLE" type="错误" subsystem="workflow">
+		<short>
+			<text>连接服务器失败! 建模工具与服务端组件版本不一致</text>
+		</short>
+		<explain>
+			<reason>建模工具与服务端组件版本不一致</reason>
+			<scene>服务器或建模工具未同步打补丁或组件版本不一致</scene>
+		</explain>
+		<responses>
+			<response>打开"文件"菜单下的"更新BOS IDE补丁"功能，选择"自远程服务器更新"，输入连接服务器的地址及更新端口进行更新。</response>
+		</responses>
+	</exception>
+</exceptions>
+
+

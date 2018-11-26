@@ -1,0 +1,1545 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?metadataRepository class='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'?>
+<repository name='dropins metadata repo: file:/D:/bos/BOSModular/bim/' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.system' value='true'/>
+    <property name='p2.timestamp' value='1540128716031'/>
+  </properties>
+  <units size='8'>
+    <unit id='com.kingdee.bos.apusic' version='1.0.0' singleton='false'>
+      <update id='com.kingdee.bos.apusic' range='[0.0.0,1.0.0)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Apusic Plug-in'/>
+        <property name='file.name' value='D:\bos\BOSModular\bim\eclipse\plugins\com.kingdee.bos.apusic4bim_6.1.0'/>
+        <property name='file.lastModified' value='1540115308828'/>
+      </properties>
+      <provides size='1143'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.apusic' version='1.0.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.apusic' version='1.0.0'/>
+        <provided namespace='java.package' name='.' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.META-INF' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.META-INF.services' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.codemodel' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.codemodel.fmt' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.codemodel.util' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.codemodel.writer' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.relaxng.javadt' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.addon.elementwrapper' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.addon.locator' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.addon.sync' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.generator' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.generator.cls' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.generator.field' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.generator.marshaller' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.generator.unmarshaller' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.generator.unmarshaller.automaton' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.generator.util' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.generator.validator' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.grammar' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.grammar.ext' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.grammar.id' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.grammar.util' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.grammar.xducer' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.reader' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.reader.annotator' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.reader.decorator' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.reader.dtd' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.reader.dtd.bindinfo' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.reader.internalizer' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.reader.relaxng' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.reader.xmlschema' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.reader.xmlschema.bindinfo' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.reader.xmlschema.bindinfo.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.reader.xmlschema.cs' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.reader.xmlschema.ct' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.reader.xmlschema.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.runtime' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.util' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.tools.xjc.writer' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.xml.xsom' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.xml.xsom.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.xml.xsom.impl.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.xml.xsom.impl.parser.state' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.xml.xsom.impl.util' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.xml.xsom.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.xml.xsom.util' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.com.sun.xml.xsom.visitor' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.org.apache.env' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.org.apache.xml.resolver' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.org.apache.xml.resolver.apps' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.org.apache.xml.resolver.helpers' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.org.apache.xml.resolver.readers' version='0.0.0'/>
+        <provided namespace='java.package' name='1.0.org.apache.xml.resolver.tools' version='0.0.0'/>
+        <provided namespace='java.package' name='EDU.oswego.cs.dl.util.concurrent' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.client' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.cluster' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.cluster.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.cluster.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.connector' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.connector.cxmgr' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.connector.inflow' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.connector.security' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.connector.work' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.cluster' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.cluster.idl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.PortableActivationIDL' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.PortableActivationIDL.InitialNameServicePackage' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.PortableActivationIDL.LocatorPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.PortableActivationIDL.RepositoryPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.activation' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.copyobject' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.corba' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.dynamicany' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.encoding' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.interceptors' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.io' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.ior' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.ior.iiop' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.javax.rmi' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.javax.rmi.CORBA' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.legacy.connection' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.logging' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.monitoring' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.naming.cosnaming' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.naming.namingutil' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.naming.pcosnaming' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.oa' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.oa.poa' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.oa.toa' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.orb' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.orbutil' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.orbutil.closure' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.orbutil.concurrent' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.orbutil.fsm' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.orbutil.graph' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.orbutil.resources' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.orbutil.threadpool' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.presentation.rmi' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.protocol' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.protocol.giopmsgheaders' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.resolver' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.transport' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.impl.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.internal.CosNaming' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.internal.Interceptors' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.internal.POA' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.internal.corba' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.internal.iiop' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.internal.io' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.org.omg.CORBA' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.pept.broker' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.pept.encoding' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.pept.protocol' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.pept.transport' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.spi.activation' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.spi.activation.InitialNameServicePackage' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.spi.activation.LocatorPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.spi.activation.RepositoryPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.spi.copyobject' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.spi.encoding' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.spi.extension' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.spi.ior' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.spi.ior.iiop' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.spi.legacy.connection' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.spi.legacy.interceptor' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.spi.logging' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.spi.monitoring' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.spi.oa' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.spi.orb' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.spi.orbutil.closure' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.spi.orbutil.fsm' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.spi.orbutil.proxy' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.spi.orbutil.threadpool' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.spi.presentation.rmi' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.spi.protocol' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.spi.resolver' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.spi.servicecontext' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.ee.spi.transport' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.plugin.ee' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.plugin.generic' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.plugin.ibm' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.plugin.sun.orb14' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.plugin.sun.orb15' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.rmi' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.corba.rmi.generator' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.deploy.dtds' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.deploy.manager' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.deploy.model' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.deploy.runtime' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.deploy.runtime.annotation' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.domain' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.ejb' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.ejb.container' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.ejb.ejbql' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.ejb.generator' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.ejb.persistence' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.ejb.persistence.jdbc' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.ejb.portable' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.ejb.timer' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.esb' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.invocation' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jdbc' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jdbc.adapter' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jdbc.rmi' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jdbc.trace' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.adapter' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.admin' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.admin.helper' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.admin.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.admin.loginer' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.admin.loginer.jaas' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.admin.loginer.jndi' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.admin.loginer.local' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.admin.properties' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.admin.protocol.reply' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.admin.protocol.request' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.event' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.event.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.event.internal.action' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.event.message.protocol' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.file.transport' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.file.transport.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.file.transport.internal.receiver' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.file.transport.properties' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.file.transport.protocol.reply' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.file.transport.protocol.request' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.local' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.local.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.transport' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.transport.helper' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.transport.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.transport.reply' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.client.transport.request' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.cluster' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.cmd.controller' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.cmd.controller.admin' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.cmd.controller.ft' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.cmd.process' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.cmd.process.admin' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.cmd.process.check' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.cmd.process.event' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.cmd.response' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.cmd.response.queue' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.cmd.response.topic' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.config' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.event' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.event.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.ext' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.filter' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.filter.helper' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.message' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.message.delivery' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.message.delivery.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.message.pool' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.message.pool.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.message.pool.store' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.operation' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.operation.event' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.operation.event.convertor' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.operation.msg' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.operation.parameter' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.queue' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.routing' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.selector' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.selector.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.server' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.store' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.store.db' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.store.file' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.store.jdbc' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.topic' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.transaction' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.transport' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jms.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jmx' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jmx.adaptors.mejb' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jmx.adaptors.rmi' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.jndi' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.logging' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.logging.manager' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.management' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.management.statistics' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.naming' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.naming.cluster' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.naming.ins' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.naming.ins.ext' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.naming.jndi' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.naming.jndi.factories' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.naming.jndi.url.corbaname' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.naming.jndi.url.iiop' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.naming.jndi.url.iiopname' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.naming.jndi.url.java' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.net' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.apache.commons.logging' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.apache.commons.logging.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jaxen' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jaxen.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jaxen.dom4j' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jaxen.expr' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jaxen.expr.iter' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jaxen.function' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jaxen.function.ext' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jaxen.function.xslt' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jaxen.javabean' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jaxen.pattern' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jaxen.saxpath' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jaxen.saxpath.base' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jaxen.saxpath.helpers' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jaxen.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jgroups' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jgroups.annotations' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jgroups.auth' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jgroups.blocks' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jgroups.conf' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jgroups.debug' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jgroups.demos' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jgroups.demos.applets' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jgroups.demos.wb' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jgroups.jmx' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jgroups.jmx.protocols' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jgroups.jmx.protocols.pbcast' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jgroups.mux' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jgroups.persistence' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jgroups.protocols' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jgroups.protocols.pbcast' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jgroups.stack' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.jgroups.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.objectweb.asm' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.objectweb.asm.commons' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.objectweb.asm.signature' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.objectweb.asm.tree' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.objectweb.asm.tree.analysis' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.objectweb.asm.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.org.w3c.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.persistence.hibernate' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.persistence.manager' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.persistence.toplink' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.security' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.security.auth.callback' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.security.auth.login' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.security.cert' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.security.config' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.security.crypto' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.security.jacc' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.security.pkcs' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.security.provider' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.security.realm' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.security.ssl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.security.sso' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.security.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.server' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.service' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.servlet.http' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.servlet.http.acp' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.servlet.http.ajp' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.servlet.http.loadbalancer' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.servlet.http.mux' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.servlet.http.session' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.servlet.http.ssl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.servlet.http.tcp' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.servlet.jsp' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.servlet.servlets' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.admin' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.admin.resources' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.appctl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.deploytool' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.deploytool.config' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.deploytool.deploy' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.deploytool.deployment' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.deploytool.deployment.dtds' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.deploytool.dialog' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.deploytool.event' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.deploytool.help' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.deploytool.images' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.deploytool.jmx' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.deploytool.migrate' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.deploytool.migrate.java' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.deploytool.migrate.xslt' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.deploytool.migrate.xslt.dtds' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.deploytool.multideploy' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.deploytool.panel' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.deploytool.treenode' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.deploytool.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.deploytool.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.domain' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.ejbgen' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.firststep' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.firststep.as' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.firststep.mq' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.firststep.nls' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.firststep.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.helpdoc' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.jspc' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.osservice' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.tools.site' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.transaction' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.transaction.jta' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.transaction.ots' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.util.asm' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.util.concurrent' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.util.concurrent.atomic' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.util.concurrent.atomic.adapter' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.util.concurrent.atomic.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.util.concurrent.helpers' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.util.concurrent.locks' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web.container' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web.faces' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web.http' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web.http.acp' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web.http.ajp' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web.http.ajp12' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web.http.ajp13' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web.http.delegate' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web.http.mux' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web.http.ssl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web.http.tcp' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web.jsp' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web.jsp.compiler' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web.jsp.generator' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web.jsp.jspc' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web.jsp.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web.jsp.runtime' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web.jsp.taglib' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web.jsp.tree' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web.jsp.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web.loadbalancer' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web.resources' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web.servlet' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web.session' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.web.webdav' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.dom.resources' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.parser.resources' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.parsers' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.reader' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.rpc.binding' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.rpc.binding.http' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.rpc.binding.https' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.rpc.client' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.rpc.client.dii' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.rpc.client.proxy' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.rpc.deploy' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.rpc.encoding' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.rpc.encoding.soap11' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.rpc.handler' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.rpc.handler.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.rpc.mapping' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.rpc.server' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.rpc.server.dtds' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.rpc.server.http' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.rpc.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.rpc.tools' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.rpc.tools.gui' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.rpc.tools.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.rpc.tools.wsctl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.rpc.tools.wsdeploy' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.rpc.tools.wsdeploy.config' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.rpc.tools.wsgen' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.rpc.utils' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.soap.soap11' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.soap.soap12' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.soap.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.stream.event' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.writer' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.address' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.binding' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.client' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.client.dispatch' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.client.pipe' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.client.sei' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.connection' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.deploy.runtime' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.deployment' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.exception' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.handler' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.invocation' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.jaxb' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.message' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.model' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.pipeline' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.servlet' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.soap.attach' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.soap.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.tools' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.tools.wsdl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.util.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.ws.wsdl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.apusic.xml.wsdl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.borland.jbcl.layout' version='0.0.0'/>
+        <provided namespace='java.package' name='com.ibm.wsdl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.ibm.wsdl.extensions' version='0.0.0'/>
+        <provided namespace='java.package' name='com.ibm.wsdl.extensions.http' version='0.0.0'/>
+        <provided namespace='java.package' name='com.ibm.wsdl.extensions.mime' version='0.0.0'/>
+        <provided namespace='java.package' name='com.ibm.wsdl.extensions.schema' version='0.0.0'/>
+        <provided namespace='java.package' name='com.ibm.wsdl.extensions.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='com.ibm.wsdl.extensions.soap12' version='0.0.0'/>
+        <provided namespace='java.package' name='com.ibm.wsdl.factory' version='0.0.0'/>
+        <provided namespace='java.package' name='com.ibm.wsdl.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.ibm.wsdl.util.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='com.ibm.wsdl.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='com.keypoint' version='0.0.0'/>
+        <provided namespace='java.package' name='com.netscape.jndi.ldap' version='0.0.0'/>
+        <provided namespace='java.package' name='com.netscape.jndi.ldap.common' version='0.0.0'/>
+        <provided namespace='java.package' name='com.netscape.jndi.ldap.controls' version='0.0.0'/>
+        <provided namespace='java.package' name='com.netscape.jndi.ldap.schema' version='0.0.0'/>
+        <provided namespace='java.package' name='com.netscape.sasl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.netscape.sasl.mechanisms' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.activation.registries' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.activation.viewers' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.codemodel' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.codemodel.fmt' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.codemodel.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.codemodel.writer' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.dtdparser' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.facelets' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.facelets.compiler' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.facelets.component' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.facelets.el' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.facelets.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.facelets.tag' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.facelets.tag.jsf' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.facelets.tag.jsf.core' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.facelets.tag.jsf.html' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.facelets.tag.jstl.core' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.facelets.tag.jstl.fn' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.facelets.tag.ui' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.facelets.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.istack' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.istack.tools' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.istack.ws' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.java.help.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.java.help.search' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.mail.dsn' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.mail.handlers' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.mail.iap' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.mail.imap' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.mail.imap.protocol' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.mail.pop3' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.mail.smtp' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.mail.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.org.apache.xml.internal.resolver' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.org.apache.xml.internal.resolver.helpers' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.org.apache.xml.internal.resolver.readers' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.org.apache.xml.internal.resolver.tools' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.org.omg.CORBA' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.org.omg.CORBA.ValueDefPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.org.omg.CORBA.portable' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.org.omg.SendingContext' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.org.omg.SendingContext.CodeBasePackage' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.jxc' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.jxc.apt' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.jxc.gen.config' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.jxc.model.nav' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.resourcegen' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.ant' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.api' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.api.wsdl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.processor' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.processor.generator' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.processor.model' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.processor.model.exporter' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.processor.model.java' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.processor.model.jaxb' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.processor.modeler' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.processor.modeler.annotation' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.processor.modeler.wsdl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.processor.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.resources' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.util.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.wscompile' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.wsdl.document' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.wsdl.document.http' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.wsdl.document.jaxws' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.wsdl.document.mime' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.wsdl.document.schema' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.wsdl.document.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.wsdl.framework' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.ws.wsdl.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.addon.at_generated' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.addon.code_injector' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.addon.episode' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.addon.locator' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.addon.sync' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.api' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.api.impl.j2s' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.api.impl.s2j' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.api.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.generator.annotation.ri' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.generator.annotation.spec' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.generator.bean' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.generator.bean.field' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.generator.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.model' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.model.nav' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.outline' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.reader' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.reader.dtd' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.reader.dtd.bindinfo' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.reader.gbind' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.reader.internalizer' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.reader.relaxng' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.reader.xmlschema' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.reader.xmlschema.bindinfo' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.reader.xmlschema.ct' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.reader.xmlschema.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.runtime' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.xjc.writer' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.bind' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.bind.annotation' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.bind.api' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.bind.api.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.bind.marshaller' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.bind.unmarshaller' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.bind.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.bind.v2' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.bind.v2.bytecode' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.bind.v2.model.annotation' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.bind.v2.model.core' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.bind.v2.model.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.bind.v2.model.nav' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.bind.v2.model.runtime' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.bind.v2.runtime' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.bind.v2.runtime.output' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.bind.v2.runtime.property' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.bind.v2.runtime.reflect' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.bind.v2.runtime.reflect.opt' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.bind.v2.runtime.unmarshaller' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.bind.v2.schemagen' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.bind.v2.schemagen.episode' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.bind.v2.schemagen.xmlschema' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.bind.v2.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.dtdparser' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.dtdparser.resources' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.stream.buffer' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.stream.buffer.sax' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.stream.buffer.stax' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.txw2' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.txw2.annotation' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.txw2.output' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.addressing' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.addressing.model' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.addressing.v200408' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.api' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.api.addressing' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.api.client' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.api.fastinfoset' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.api.message' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.api.message.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.api.model' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.api.model.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.api.model.wsdl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.api.pipe' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.api.pipe.helper' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.api.server' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.api.streaming' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.api.wsdl.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.api.wsdl.writer' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.binding' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.client' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.client.dispatch' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.client.sei' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.developer' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.developer.servlet' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.encoding' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.encoding.fastinfoset' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.encoding.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.encoding.soap.streaming' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.encoding.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.fault' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.handler' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.message' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.message.jaxb' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.message.saaj' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.message.source' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.message.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.model' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.model.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.model.wsdl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.protocol.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.protocol.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.resources' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.server' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.server.provider' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.server.sei' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.server.servlet' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.streaming' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.transport' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.transport.http' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.transport.http.client' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.transport.http.server' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.transport.http.servlet' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.util.exception' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.util.localization' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.util.pipe' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.util.resources' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.util.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.wsdl.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.wsdl.writer' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.wsdl.writer.document' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.wsdl.writer.document.http' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.wsdl.writer.document.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.wsdl.writer.document.soap12' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.ws.wsdl.writer.document.xsd' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.xsom' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.xsom.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.xsom.impl.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.xsom.impl.parser.state' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.xsom.impl.scd' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.xsom.impl.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.xsom.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.xsom.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.xml.xsom.visitor' version='0.0.0'/>
+        <provided namespace='java.package' name='elite.ast' version='0.0.0'/>
+        <provided namespace='java.package' name='elite.lang' version='0.0.0'/>
+        <provided namespace='java.package' name='elite.lang.annotation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.activation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.annotation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.annotation.security' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.ejb' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.ejb.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.el' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.enterprise.deploy.model' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.enterprise.deploy.model.exceptions' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.enterprise.deploy.shared' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.enterprise.deploy.shared.factories' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.enterprise.deploy.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.enterprise.deploy.spi.exceptions' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.enterprise.deploy.spi.factories' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.enterprise.deploy.spi.status' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.faces' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.faces.application' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.faces.component' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.faces.component.html' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.faces.context' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.faces.convert' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.faces.el' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.faces.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.faces.lifecycle' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.faces.model' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.faces.render' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.faces.validator' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.faces.webapp' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.help' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.help.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.help.plaf' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.help.plaf.basic' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.help.plaf.basic.images' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.help.resources' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.help.search' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.help.tagext' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.interceptor' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.jms' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.jws' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.jws.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.mail' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.mail.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.mail.internet' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.mail.search' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.mail.util' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.j2ee' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.j2ee.statistics' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.measure' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.measure.converter' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.measure.quantity' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.measure.unit' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.persistence' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.persistence.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.resource' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.resource.cci' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.resource.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.resource.spi.endpoint' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.resource.spi.security' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.resource.spi.work' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.jacc' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.servlet' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.servlet.http' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.servlet.jsp' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.servlet.jsp.el' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.servlet.jsp.jstl.core' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.servlet.jsp.jstl.fmt' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.servlet.jsp.jstl.sql' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.servlet.jsp.jstl.tlv' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.servlet.jsp.tagext' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.transaction' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.transaction.xa' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.wsdl' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.wsdl.extensions' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.wsdl.extensions.http' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.wsdl.extensions.mime' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.wsdl.extensions.schema' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.wsdl.extensions.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.wsdl.extensions.soap12' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.wsdl.factory' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.wsdl.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.bind' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.bind.annotation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.bind.annotation.adapters' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.bind.attachment' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.bind.helpers' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.bind.util' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.registry' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.registry.infomodel' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.registry.samples' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.rpc' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.rpc.encoding' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.rpc.handler' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.rpc.handler.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.rpc.holders' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.rpc.server' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.rpc.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.stream.events' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.stream.util' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.handler' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.handler.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.http' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.wsaddressing' version='0.0.0'/>
+        <provided namespace='java.package' name='license' version='0.0.0'/>
+        <provided namespace='java.package' name='netscape.ldap' version='0.0.0'/>
+        <provided namespace='java.package' name='netscape.ldap.ber.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='netscape.ldap.client' version='0.0.0'/>
+        <provided namespace='java.package' name='netscape.ldap.client.opers' version='0.0.0'/>
+        <provided namespace='java.package' name='netscape.ldap.controls' version='0.0.0'/>
+        <provided namespace='java.package' name='netscape.ldap.factory' version='0.0.0'/>
+        <provided namespace='java.package' name='netscape.ldap.util' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.changesets' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.config' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.descriptors' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.descriptors.changetracking' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.descriptors.copying' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.descriptors.invalidation' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.ejb.cmp3' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.ejb.cmp3.persistence' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.exceptions' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.exceptions.i18n' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.expressions' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.indirection' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.databaseaccess' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.descriptors' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.ejb.cmp3' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.ejb.cmp3.base' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.ejb.cmp3.jdbc.base' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.ejb.cmp3.metadata' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.ejb.cmp3.metadata.accessors' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.ejb.cmp3.metadata.accessors.objects' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.ejb.cmp3.metadata.columns' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.ejb.cmp3.metadata.listeners' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.ejb.cmp3.metadata.queries' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.ejb.cmp3.metadata.sequencing' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.ejb.cmp3.metadata.tables' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.ejb.cmp3.naming' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.ejb.cmp3.naming.base' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.ejb.cmp3.transaction' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.ejb.cmp3.transaction.base' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.ejb.cmp3.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.ejb.cmp3.xml.accessors' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.ejb.cmp3.xml.columns' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.ejb.cmp3.xml.listeners' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.ejb.cmp3.xml.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.ejb.cmp3.xml.queries' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.ejb.cmp3.xml.sequencing' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.ejb.cmp3.xml.tables' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.expressions' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.helper' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.helper.linkedlist' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.identitymaps' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.indirection' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.localization' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.localization.i18n' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.parsing' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.parsing.ejbql' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.parsing.ejbql.antlr273' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.queryframework' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.security' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.sequencing' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.sessions' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.internal.weaving' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.jndi' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.logging' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.mappings' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.mappings.converters' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.mappings.foundation' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.platform.database' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.platform.database.oracle' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.platform.server' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.platform.server.oc4j' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.platform.server.sunas' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.platform.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.platform.xml.jaxp' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.queryframework' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.querykeys' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.sequencing' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.sessions' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.threetier' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.tools.schemaframework' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.tools.sessionconfiguration' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.tools.sessionmanagement' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.transaction' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.transaction.oc4j' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.transaction.sunas' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.essentials.weaving' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.libraries.asm' version='0.0.0'/>
+        <provided namespace='java.package' name='oracle.toplink.libraries.asm.attrs' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.bcel' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.bcel.classfile' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.bcel.generic' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.bcel.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.bcel.verifier' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.bcel.verifier.exc' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.bcel.verifier.statics' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.bcel.verifier.structurals' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.fileupload' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.fileupload.disk' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.fileupload.portlet' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.fileupload.servlet' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.fileupload.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.io' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.io.filefilter' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.io.input' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.io.output' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.env' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.taglibs.standard' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.taglibs.standard.extra.spath' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.taglibs.standard.functions' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.taglibs.standard.lang.jstl' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.taglibs.standard.lang.jstl.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.taglibs.standard.lang.jstl.test' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.taglibs.standard.lang.jstl.test.beans' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.taglibs.standard.lang.support' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.taglibs.standard.resources' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.taglibs.standard.tag.common.core' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.taglibs.standard.tag.common.fmt' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.taglibs.standard.tag.common.sql' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.taglibs.standard.tag.common.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.taglibs.standard.tag.el.core' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.taglibs.standard.tag.el.fmt' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.taglibs.standard.tag.el.sql' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.taglibs.standard.tag.el.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.taglibs.standard.tag.rt.core' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.taglibs.standard.tag.rt.fmt' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.taglibs.standard.tag.rt.sql' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.taglibs.standard.tag.rt.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.taglibs.standard.tei' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.taglibs.standard.tlv' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xml.resolver' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xml.resolver.apps' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xml.resolver.etc' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xml.resolver.helpers' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xml.resolver.readers' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xml.resolver.tools' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xmlcommons' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.cmp' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.cms' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.crmf' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.cryptopro' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.esf' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.ess' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.gnu' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.iana' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.icao' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.isismtt' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.isismtt.ocsp' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.isismtt.x509' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.kisa' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.microsoft' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.misc' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.mozilla' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.nist' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.ntt' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.ocsp' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.oiw' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.pkcs' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.sec' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.smime' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.teletrust' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.tsp' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.x500' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.x509' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.x509.qualified' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.x509.sigi' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.asn1.x9' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.crypto' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.crypto.agreement' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.crypto.agreement.kdf' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.crypto.digests' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.crypto.encodings' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.crypto.engines' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.crypto.examples' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.crypto.generators' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.crypto.io' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.crypto.macs' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.crypto.modes' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.crypto.paddings' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.crypto.params' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.crypto.prng' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.crypto.signers' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.crypto.tls' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.crypto.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.i18n' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.i18n.filter' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.jce' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.jce.examples' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.jce.exception' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.jce.interfaces' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.jce.netscape' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.jce.provider' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.jce.provider.symmetric' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.jce.spec' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.math.ec' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.mozilla' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.ocsp' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.openssl' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.util.encoders' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.util.test' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.voms' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.x509' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.x509.examples' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.x509.extension' version='0.0.0'/>
+        <provided namespace='java.package' name='org.bouncycastle.x509.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.base' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.base.config' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.base.log' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.base.modules' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.chart' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.chart.annotations' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.chart.axis' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.chart.block' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.chart.demo' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.chart.editor' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.chart.encoders' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.chart.entity' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.chart.event' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.chart.imagemap' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.chart.labels' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.chart.needle' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.chart.plot' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.chart.renderer' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.chart.renderer.category' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.chart.renderer.xy' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.chart.resources' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.chart.servlet' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.chart.title' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.chart.urls' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.chart.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.data' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.data.category' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.data.contour' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.data.function' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.data.gantt' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.data.general' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.data.io' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.data.jdbc' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.data.resources' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.data.statistics' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.data.time' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.data.time.ohlc' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.data.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.data.xy' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.date' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.io' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.layout' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.resources' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.text' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.threads' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.ui' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.ui.about' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.ui.about.resources' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.ui.action' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.ui.tabbedui' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jfree.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jvnet.fastinfoset' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jvnet.fastinfoset.sax' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jvnet.fastinfoset.sax.helpers' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jvnet.fastinfoset.stax' version='0.0.0'/>
+        <provided namespace='java.package' name='org.jvnet.staxex' version='0.0.0'/>
+        <provided namespace='java.package' name='org.kohsuke.rngom.ast.builder' version='0.0.0'/>
+        <provided namespace='java.package' name='org.kohsuke.rngom.ast.om' version='0.0.0'/>
+        <provided namespace='java.package' name='org.kohsuke.rngom.ast.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.kohsuke.rngom.binary' version='0.0.0'/>
+        <provided namespace='java.package' name='org.kohsuke.rngom.binary.visitor' version='0.0.0'/>
+        <provided namespace='java.package' name='org.kohsuke.rngom.digested' version='0.0.0'/>
+        <provided namespace='java.package' name='org.kohsuke.rngom.dt' version='0.0.0'/>
+        <provided namespace='java.package' name='org.kohsuke.rngom.dt.builtin' version='0.0.0'/>
+        <provided namespace='java.package' name='org.kohsuke.rngom.nc' version='0.0.0'/>
+        <provided namespace='java.package' name='org.kohsuke.rngom.parse' version='0.0.0'/>
+        <provided namespace='java.package' name='org.kohsuke.rngom.parse.compact' version='0.0.0'/>
+        <provided namespace='java.package' name='org.kohsuke.rngom.parse.host' version='0.0.0'/>
+        <provided namespace='java.package' name='org.kohsuke.rngom.parse.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='org.kohsuke.rngom.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.kohsuke.rngom.xml.sax' version='0.0.0'/>
+        <provided namespace='java.package' name='org.kohsuke.rngom.xml.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA.portable' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CSI' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CSIIOP' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CosTSInteroperation' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CosTransactions' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.GSSUP' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.IOP' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableInterceptor' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableInterceptor.ORBInitInfoPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.operamasks.el.compat' version='0.0.0'/>
+        <provided namespace='java.package' name='org.operamasks.el.eval' version='0.0.0'/>
+        <provided namespace='java.package' name='org.operamasks.el.eval.closure' version='0.0.0'/>
+        <provided namespace='java.package' name='org.operamasks.el.eval.seq' version='0.0.0'/>
+        <provided namespace='java.package' name='org.operamasks.el.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='org.operamasks.el.resolver' version='0.0.0'/>
+        <provided namespace='java.package' name='org.operamasks.el.resources' version='0.0.0'/>
+        <provided namespace='java.package' name='org.operamasks.el.shell' version='0.0.0'/>
+        <provided namespace='java.package' name='org.operamasks.net.sf.cglib.beans' version='0.0.0'/>
+        <provided namespace='java.package' name='org.operamasks.net.sf.cglib.core' version='0.0.0'/>
+        <provided namespace='java.package' name='org.operamasks.net.sf.cglib.proxy' version='0.0.0'/>
+        <provided namespace='java.package' name='org.operamasks.net.sf.cglib.reflect' version='0.0.0'/>
+        <provided namespace='java.package' name='org.operamasks.net.sf.cglib.transform' version='0.0.0'/>
+        <provided namespace='java.package' name='org.operamasks.net.sf.cglib.transform.hook' version='0.0.0'/>
+        <provided namespace='java.package' name='org.operamasks.net.sf.cglib.transform.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='org.operamasks.net.sf.cglib.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.operamasks.org.objectweb.asm' version='0.0.0'/>
+        <provided namespace='java.package' name='org.operamasks.org.objectweb.asm.attrs' version='0.0.0'/>
+        <provided namespace='java.package' name='org.operamasks.org.objectweb.asm.tree' version='0.0.0'/>
+        <provided namespace='java.package' name='org.operamasks.org.objectweb.asm.tree.analysis' version='0.0.0'/>
+        <provided namespace='java.package' name='org.operamasks.org.objectweb.asm.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.operamasks.org.objectweb.asm.util.attrs' version='0.0.0'/>
+        <provided namespace='java.package' name='org.operamasks.org.objectweb.asm.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='org.operamasks.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.relaxng.datatype' version='0.0.0'/>
+        <provided namespace='java.package' name='org.relaxng.datatype.helpers' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.css' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.events' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.html' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.ranges' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.stylesheets' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.traversal' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.views' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xml.sax' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xml.sax.ext' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xml.sax.helpers' version='0.0.0'/>
+        <provided namespace='java.package' name='persistence.antlr' version='0.0.0'/>
+        <provided namespace='java.package' name='persistence.antlr.actions.cpp' version='0.0.0'/>
+        <provided namespace='java.package' name='persistence.antlr.actions.csharp' version='0.0.0'/>
+        <provided namespace='java.package' name='persistence.antlr.actions.java' version='0.0.0'/>
+        <provided namespace='java.package' name='persistence.antlr.collections' version='0.0.0'/>
+        <provided namespace='java.package' name='persistence.antlr.collections.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='persistence.antlr.debug' version='0.0.0'/>
+        <provided namespace='java.package' name='persistence.antlr.debug.misc' version='0.0.0'/>
+        <provided namespace='java.package' name='persistence.antlr.preprocessor' version='0.0.0'/>
+        <provided namespace='java.package' name='sun.corba' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.apusic' version='1.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Manifest-Version: 1.0&#xA;Bundle-ManifestVersion: 2&#xA;Bundle-Localization: plugin&#xA;Bundle-SymbolicName: com.kingdee.bos.apusic&#xA;Bundle-Vendor: &#xA;Export-Package: .,&#xA; 1.0.META-INF,&#xA; 1.0.META-INF.services,&#xA; 1.0.com.sun.codemodel,&#xA; 1.0.com.sun.codemodel.fmt,&#xA; 1.0.com.sun.codemodel.util,&#xA; 1.0.com.sun.codemodel.writer,&#xA; 1.0.com.sun.relaxng.javadt,&#xA; 1.0.com.sun.tools.xjc,&#xA; 1.0.com.sun.tools.xjc.addon.elementwrapper,&#xA; 1.0.com.sun.tools.xjc.addon.locator,&#xA; 1.0.com.sun.tools.xjc.addon.sync,&#xA; 1.0.com.sun.tools.xjc.generator,&#xA; 1.0.com.sun.tools.xjc.generator.cls,&#xA; 1.0.com.sun.tools.xjc.generator.field,&#xA; 1.0.com.sun.tools.xjc.generator.marshaller,&#xA; 1.0.com.sun.tools.xjc.generator.unmarshaller,&#xA; 1.0.com.sun.tools.xjc.generator.unmarshaller.automaton,&#xA; 1.0.com.sun.tools.xjc.generator.util,&#xA; 1.0.com.sun.tools.xjc.generator.validator,&#xA; 1.0.com.sun.tools.xjc.grammar,&#xA; 1.0.com.sun.tools.xjc.grammar.ext,&#xA; 1.0.com.sun.tools.xjc.grammar.id,&#xA; 1.0.com.sun.tools.xjc.grammar.util,&#xA; 1.0.com.sun.tools.xjc.grammar.xducer,&#xA; 1.0.com.sun.tools.xjc.reader,&#xA; 1.0.com.sun.tools.xjc.reader.annotator,&#xA; 1.0.com.sun.tools.xjc.reader.decorator,&#xA; 1.0.com.sun.tools.xjc.reader.dtd,&#xA; 1.0.com.sun.tools.xjc.reader.dtd.bindinfo,&#xA; 1.0.com.sun.tools.xjc.reader.internalizer,&#xA; 1.0.com.sun.tools.xjc.reader.relaxng,&#xA; 1.0.com.sun.tools.xjc.reader.xmlschema,&#xA; 1.0.com.sun.tools.xjc.reader.xmlschema.bindinfo,&#xA; 1.0.com.sun.tools.xjc.reader.xmlschema.bindinfo.parser,&#xA; 1.0.com.sun.tools.xjc.reader.xmlschema.cs,&#xA; 1.0.com.sun.tools.xjc.reader.xmlschema.ct,&#xA; 1.0.com.sun.tools.xjc.reader.xmlschema.parser,&#xA; 1.0.com.sun.tools.xjc.runtime,&#xA; 1.0.com.sun.tools.xjc.util,&#xA; 1.0.com.sun.tools.xjc.writer,&#xA; 1.0.com.sun.xml.xsom,&#xA; 1.0.com.sun.xml.xsom.impl,&#xA; 1.0.com.sun.xml.xsom.impl.parser,&#xA; 1.0.com.sun.xml.xsom.impl.parser.state,&#xA; 1.0.com.sun.xml.xsom.impl.util,&#xA; 1.0.com.sun.xml.xsom.parser,&#xA; 1.0.com.sun.xml.xsom.util,&#xA; 1.0.com.sun.xml.xsom.visitor,&#xA; 1.0.org.apache.env,&#xA; 1.0.org.apache.xml.resolver,&#xA; 1.0.org.apache.xml.resolver.apps,&#xA; 1.0.org.apache.xml.resolver.helpers,&#xA; 1.0.org.apache.xml.resolver.readers,&#xA; 1.0.org.apache.xml.resolver.tools,&#xA; EDU.oswego.cs.dl.util.concurrent,&#xA; com.apusic.client,&#xA; com.apusic.cluster,&#xA; com.apusic.cluster.impl,&#xA; com.apusic.cluster.spi,&#xA; com.apusic.connector,&#xA; com.apusic.connector.cxmgr,&#xA; com.apusic.connector.inflow,&#xA; com.apusic.connector.security,&#xA; com.apusic.connector.work,&#xA; com.apusic.corba,&#xA; com.apusic.corba.cluster,&#xA; com.apusic.corba.cluster.idl,&#xA; com.apusic.corba.ee.PortableActivationIDL,&#xA; com.apusic.corba.ee.PortableActivationIDL.InitialNameServicePackage,&#xA; com.apusic.corba.ee.PortableActivationIDL.LocatorPackage,&#xA; com.apusic.corba.ee.PortableActivationIDL.RepositoryPackage,&#xA; com.apusic.corba.ee.impl.activation,&#xA; com.apusic.corba.ee.impl.copyobject,&#xA; com.apusic.corba.ee.impl.corba,&#xA; com.apusic.corba.ee.impl.dynamicany,&#xA; com.apusic.corba.ee.impl.encoding,&#xA; com.apusic.corba.ee.impl.interceptors,&#xA; com.apusic.corba.ee.impl.io,&#xA; com.apusic.corba.ee.impl.ior,&#xA; com.apusic.corba.ee.impl.ior.iiop,&#xA; com.apusic.corba.ee.impl.javax.rmi,&#xA; com.apusic.corba.ee.impl.javax.rmi.CORBA,&#xA; com.apusic.corba.ee.impl.legacy.connection,&#xA; com.apusic.corba.ee.impl.logging,&#xA; com.apusic.corba.ee.impl.monitoring,&#xA; com.apusic.corba.ee.impl.naming.cosnaming,&#xA; com.apusic.corba.ee.impl.naming.namingutil,&#xA; com.apusic.corba.ee.impl.naming.pcosnaming,&#xA; com.apusic.corba.ee.impl.oa,&#xA; com.apusic.corba.ee.impl.oa.poa,&#xA; com.apusic.corba.ee.impl.oa.toa,&#xA; com.apusic.corba.ee.impl.orb,&#xA; com.apusic.corba.ee.impl.orbutil,&#xA; com.apusic.corba.ee.impl.orbutil.closure,&#xA; com.apusic.corba.ee.impl.orbutil.concurrent,&#xA; com.apusic.corba.ee.impl.orbutil.fsm,&#xA; com.apusic.corba.ee.impl.orbutil.graph,&#xA; com.apusic.corba.ee.impl.orbutil.resources,&#xA; com.apusic.corba.ee.impl.orbutil.threadpool,&#xA; com.apusic.corba.ee.impl.presentation.rmi,&#xA; com.apusic.corba.ee.impl.protocol,&#xA; com.apusic.corba.ee.impl.protocol.giopmsgheaders,&#xA; com.apusic.corba.ee.impl.resolver,&#xA; com.apusic.corba.ee.impl.transport,&#xA; com.apusic.corba.ee.impl.util,&#xA; com.apusic.corba.ee.internal.CosNaming,&#xA; com.apusic.corba.ee.internal.Interceptors,&#xA; com.apusic.corba.ee.internal.POA,&#xA; com.apusic.corba.ee.internal.corba,&#xA; com.apusic.corba.ee.internal.iiop,&#xA; com.apusic.corba.ee.internal.io,&#xA; com.apusic.corba.ee.org.omg.CORBA,&#xA; com.apusic.corba.ee.pept.broker,&#xA; com.apusic.corba.ee.pept.encoding,&#xA; com.apusic.corba.ee.pept.protocol,&#xA; com.apusic.corba.ee.pept.transport,&#xA; com.apusic.corba.ee.spi.activation,&#xA; com.apusic.corba.ee.spi.activation.InitialNameServicePackage,&#xA; com.apusic.corba.ee.spi.activation.LocatorPackage,&#xA; com.apusic.corba.ee.spi.activation.RepositoryPackage,&#xA; com.apusic.corba.ee.spi.copyobject,&#xA; com.apusic.corba.ee.spi.encoding,&#xA; com.apusic.corba.ee.spi.extension,&#xA; com.apusic.corba.ee.spi.ior,&#xA; com.apusic.corba.ee.spi.ior.iiop,&#xA; com.apusic.corba.ee.spi.legacy.connection,&#xA; com.apusic.corba.ee.spi.legacy.interceptor,&#xA; com.apusic.corba.ee.spi.logging,&#xA; com.apusic.corba.ee.spi.monitoring,&#xA; com.apusic.corba.ee.spi.oa,&#xA; com.apusic.corba.ee.spi.orb,&#xA; com.apusic.corba.ee.spi.orbutil.closure,&#xA; com.apusic.corba.ee.spi.orbutil.fsm,&#xA; com.apusic.corba.ee.spi.orbutil.proxy,&#xA; com.apusic.corba.ee.spi.orbutil.threadpool,&#xA; com.apusic.corba.ee.spi.presentation.rmi,&#xA; com.apusic.corba.ee.spi.protocol,&#xA; com.apusic.corba.ee.spi.resolver,&#xA; com.apusic.corba.ee.spi.servicecontext,&#xA; com.apusic.corba.ee.spi.transport,&#xA; com.apusic.corba.plugin.ee,&#xA; com.apusic.corba.plugin.generic,&#xA; com.apusic.corba.plugin.ibm,&#xA; com.apusic.corba.plugin.sun.orb14,&#xA; com.apusic.corba.plugin.sun.orb15,&#xA; com.apusic.corba.rmi,&#xA; com.apusic.corba.rmi.generator,&#xA; com.apusic.deploy.dtds,&#xA; com.apusic.deploy.manager,&#xA; com.apusic.deploy.model,&#xA; com.apusic.deploy.runtime,&#xA; com.apusic.deploy.runtime.annotation,&#xA; com.apusic.domain,&#xA; com.apusic.ejb,&#xA; com.apusic.ejb.container,&#xA; com.apusic.ejb.ejbql,&#xA; com.apusic.ejb.generator,&#xA; com.apusic.ejb.persistence,&#xA; com.apusic.ejb.persistence.jdbc,&#xA; com.apusic.ejb.portable,&#xA; com.apusic.ejb.timer,&#xA; com.apusic.esb,&#xA; com.apusic.invocation,&#xA; com.apusic.jdbc,&#xA; com.apusic.jdbc.adapter,&#xA; com.apusic.jdbc.rmi,&#xA; com.apusic.jdbc.trace,&#xA; com.apusic.jms.adapter,&#xA; com.apusic.jms.client,&#xA; com.apusic.jms.client.admin,&#xA; com.apusic.jms.client.admin.helper,&#xA; com.apusic.jms.client.admin.internal,&#xA; com.apusic.jms.client.admin.loginer,&#xA; com.apusic.jms.client.admin.loginer.jaas,&#xA; com.apusic.jms.client.admin.loginer.jndi,&#xA; com.apusic.jms.client.admin.loginer.local,&#xA; com.apusic.jms.client.admin.properties,&#xA; com.apusic.jms.client.admin.protocol.reply,&#xA; com.apusic.jms.client.admin.protocol.request,&#xA; com.apusic.jms.client.event,&#xA; com.apusic.jms.client.event.internal,&#xA; com.apusic.jms.client.event.internal.action,&#xA; com.apusic.jms.client.event.message.protocol,&#xA; com.apusic.jms.client.file.transport,&#xA; com.apusic.jms.client.file.transport.internal,&#xA; com.apusic.jms.client.file.transport.internal.receiver,&#xA; com.apusic.jms.client.file.transport.properties,&#xA; com.apusic.jms.client.file.transport.protocol.reply,&#xA; com.apusic.jms.client.file.transport.protocol.request,&#xA; com.apusic.jms.client.local,&#xA; com.apusic.jms.client.local.impl,&#xA; com.apusic.jms.client.transport,&#xA; com.apusic.jms.client.transport.helper,&#xA; com.apusic.jms.client.transport.internal,&#xA; com.apusic.jms.client.transport.reply,&#xA; com.apusic.jms.client.transport.request,&#xA; com.apusic.jms.cluster,&#xA; com.apusic.jms.cmd.controller,&#xA; com.apusic.jms.cmd.controller.admin,&#xA; com.apusic.jms.cmd.controller.ft,&#xA; com.apusic.jms.cmd.process,&#xA; com.apusic.jms.cmd.process.admin,&#xA; com.apusic.jms.cmd.process.check,&#xA; com.apusic.jms.cmd.process.event,&#xA; com.apusic.jms.cmd.response,&#xA; com.apusic.jms.cmd.response.queue,&#xA; com.apusic.jms.cmd.response.topic,&#xA; com.apusic.jms.config,&#xA; com.apusic.jms.event,&#xA; com.apusic.jms.event.impl,&#xA; com.apusic.jms.ext,&#xA; com.apusic.jms.filter,&#xA; com.apusic.jms.filter.helper,&#xA; com.apusic.jms.message,&#xA; com.apusic.jms.message.delivery,&#xA; com.apusic.jms.message.delivery.impl,&#xA; com.apusic.jms.message.pool,&#xA; com.apusic.jms.message.pool.impl,&#xA; com.apusic.jms.message.pool.store,&#xA; com.apusic.jms.operation,&#xA; com.apusic.jms.operation.event,&#xA; com.apusic.jms.operation.event.convertor,&#xA; com.apusic.jms.operation.msg,&#xA; com.apusic.jms.operation.parameter,&#xA; com.apusic.jms.queue,&#xA; com.apusic.jms.routing,&#xA; com.apusic.jms.selector,&#xA; com.apusic.jms.selector.parser,&#xA; com.apusic.jms.server,&#xA; com.apusic.jms.store,&#xA; com.apusic.jms.store.db,&#xA; com.apusic.jms.store.file,&#xA; com.apusic.jms.store.jdbc,&#xA; com.apusic.jms.topic,&#xA; com.apusic.jms.transaction,&#xA; com.apusic.jms.transport,&#xA; com.apusic.jms.util,&#xA; com.apusic.jmx,&#xA; com.apusic.jmx.adaptors.mejb,&#xA; com.apusic.jmx.adaptors.rmi,&#xA; com.apusic.jndi,&#xA; com.apusic.logging,&#xA; com.apusic.logging.manager,&#xA; com.apusic.management,&#xA; com.apusic.management.statistics,&#xA; com.apusic.naming,&#xA; com.apusic.naming.cluster,&#xA; com.apusic.naming.ins,&#xA; com.apusic.naming.ins.ext,&#xA; com.apusic.naming.jndi,&#xA; com.apusic.naming.jndi.factories,&#xA; com.apusic.naming.jndi.url.corbaname,&#xA; com.apusic.naming.jndi.url.iiop,&#xA; com.apusic.naming.jndi.url.iiopname,&#xA; com.apusic.naming.jndi.url.java,&#xA; com.apusic.net,&#xA; com.apusic.org.apache.commons.logging,&#xA; com.apusic.org.apache.commons.logging.impl,&#xA; com.apusic.org.jaxen,&#xA; com.apusic.org.jaxen.dom,&#xA; com.apusic.org.jaxen.dom4j,&#xA; com.apusic.org.jaxen.expr,&#xA; com.apusic.org.jaxen.expr.iter,&#xA; com.apusic.org.jaxen.function,&#xA; com.apusic.org.jaxen.function.ext,&#xA; com.apusic.org.jaxen.function.xslt,&#xA; com.apusic.org.jaxen.javabean,&#xA; com.apusic.org.jaxen.pattern,&#xA; com.apusic.org.jaxen.saxpath,&#xA; com.apusic.org.jaxen.saxpath.base,&#xA; com.apusic.org.jaxen.saxpath.helpers,&#xA; com.apusic.org.jaxen.util,&#xA; com.apusic.org.jgroups,&#xA; com.apusic.org.jgroups.annotations,&#xA; com.apusic.org.jgroups.auth,&#xA; com.apusic.org.jgroups.blocks,&#xA; com.apusic.org.jgroups.conf,&#xA; com.apusic.org.jgroups.debug,&#xA; com.apusic.org.jgroups.demos,&#xA; com.apusic.org.jgroups.demos.applets,&#xA; com.apusic.org.jgroups.demos.wb,&#xA; com.apusic.org.jgroups.jmx,&#xA; com.apusic.org.jgroups.jmx.protocols,&#xA; com.apusic.org.jgroups.jmx.protocols.pbcast,&#xA; com.apusic.org.jgroups.mux,&#xA; com.apusic.org.jgroups.persistence,&#xA; com.apusic.org.jgroups.protocols,&#xA; com.apusic.org.jgroups.protocols.pbcast,&#xA; com.apusic.org.jgroups.stack,&#xA; com.apusic.org.jgroups.util,&#xA; com.apusic.org.objectweb.asm,&#xA; com.apusic.org.objectweb.asm.commons,&#xA; com.apusic.org.objectweb.asm.signature,&#xA; com.apusic.org.objectweb.asm.tree,&#xA; com.apusic.org.objectweb.asm.tree.analysis,&#xA; com.apusic.org.objectweb.asm.util,&#xA; com.apusic.org.w3c.dom,&#xA; com.apusic.persistence.hibernate,&#xA; com.apusic.persistence.manager,&#xA; com.apusic.persistence.toplink,&#xA; com.apusic.security,&#xA; com.apusic.security.auth.callback,&#xA; com.apusic.security.auth.login,&#xA; com.apusic.security.cert,&#xA; com.apusic.security.config,&#xA; com.apusic.security.crypto,&#xA; com.apusic.security.jacc,&#xA; com.apusic.security.pkcs,&#xA; com.apusic.security.provider,&#xA; com.apusic.security.realm,&#xA; com.apusic.security.ssl,&#xA; com.apusic.security.sso,&#xA; com.apusic.security.util,&#xA; com.apusic.server,&#xA; com.apusic.service,&#xA; com.apusic.servlet.http,&#xA; com.apusic.servlet.http.acp,&#xA; com.apusic.servlet.http.ajp,&#xA; com.apusic.servlet.http.loadbalancer,&#xA; com.apusic.servlet.http.mux,&#xA; com.apusic.servlet.http.session,&#xA; com.apusic.servlet.http.ssl,&#xA; com.apusic.servlet.http.tcp,&#xA; com.apusic.servlet.jsp,&#xA; com.apusic.servlet.servlets,&#xA; com.apusic.tools,&#xA; com.apusic.tools.admin,&#xA; com.apusic.tools.admin.resources,&#xA; com.apusic.tools.appctl,&#xA; com.apusic.tools.deploytool,&#xA; com.apusic.tools.deploytool.config,&#xA; com.apusic.tools.deploytool.deploy,&#xA; com.apusic.tools.deploytool.deployment,&#xA; com.apusic.tools.deploytool.deployment.dtds,&#xA; com.apusic.tools.deploytool.dialog,&#xA; com.apusic.tools.deploytool.event,&#xA; com.apusic.tools.deploytool.help,&#xA; com.apusic.tools.deploytool.images,&#xA; com.apusic.tools.deploytool.jmx,&#xA; com.apusic.tools.deploytool.migrate,&#xA; com.apusic.tools.deploytool.migrate.java,&#xA; com.apusic.tools.deploytool.migrate.xslt,&#xA; com.apusic.tools.deploytool.migrate.xslt.dtds,&#xA; com.apusic.tools.deploytool.multideploy,&#xA; com.apusic.tools.deploytool.panel,&#xA; com.apusic.tools.deploytool.treenode,&#xA; com.apusic.tools.deploytool.util,&#xA; com.apusic.tools.deploytool.xml,&#xA; com.apusic.tools.domain,&#xA; com.apusic.tools.ejbgen,&#xA; com.apusic.tools.firststep,&#xA; com.apusic.tools.firststep.as,&#xA; com.apusic.tools.firststep.mq,&#xA; com.apusic.tools.firststep.nls,&#xA; com.apusic.tools.firststep.util,&#xA; com.apusic.tools.helpdoc,&#xA; com.apusic.tools.jspc,&#xA; com.apusic.tools.osservice,&#xA; com.apusic.tools.site,&#xA; com.apusic.transaction,&#xA; com.apusic.transaction.jta,&#xA; com.apusic.transaction.ots,&#xA; com.apusic.util,&#xA; com.apusic.util.asm,&#xA; com.apusic.util.concurrent,&#xA; com.apusic.util.concurrent.atomic,&#xA; com.apusic.util.concurrent.atomic.adapter,&#xA; com.apusic.util.concurrent.atomic.impl,&#xA; com.apusic.util.concurrent.helpers,&#xA; com.apusic.util.concurrent.locks,&#xA; com.apusic.web,&#xA; com.apusic.web.container,&#xA; com.apusic.web.faces,&#xA; com.apusic.web.http,&#xA; com.apusic.web.http.acp,&#xA; com.apusic.web.http.ajp,&#xA; com.apusic.web.http.ajp12,&#xA; com.apusic.web.http.ajp13,&#xA; com.apusic.web.http.delegate,&#xA; com.apusic.web.http.mux,&#xA; com.apusic.web.http.ssl,&#xA; com.apusic.web.http.tcp,&#xA; com.apusic.web.jsp,&#xA; com.apusic.web.jsp.compiler,&#xA; com.apusic.web.jsp.generator,&#xA; com.apusic.web.jsp.jspc,&#xA; com.apusic.web.jsp.parser,&#xA; com.apusic.web.jsp.runtime,&#xA; com.apusic.web.jsp.taglib,&#xA; com.apusic.web.jsp.tree,&#xA; com.apusic.web.jsp.util,&#xA; com.apusic.web.loadbalancer,&#xA; com.apusic.web.resources,&#xA; com.apusic.web.servlet,&#xA; com.apusic.web.session,&#xA; com.apusic.web.webdav,&#xA; com.apusic.xml.dom,&#xA; com.apusic.xml.dom.resources,&#xA; com.apusic.xml.parser,&#xA; com.apusic.xml.parser.resources,&#xA; com.apusic.xml.parsers,&#xA; com.apusic.xml.reader,&#xA; com.apusic.xml.rpc.binding,&#xA; com.apusic.xml.rpc.binding.http,&#xA; com.apusic.xml.rpc.binding.https,&#xA; com.apusic.xml.rpc.client,&#xA; com.apusic.xml.rpc.client.dii,&#xA; com.apusic.xml.rpc.client.proxy,&#xA; com.apusic.xml.rpc.deploy,&#xA; com.apusic.xml.rpc.encoding,&#xA; com.apusic.xml.rpc.encoding.soap11,&#xA; com.apusic.xml.rpc.handler,&#xA; com.apusic.xml.rpc.handler.soap,&#xA; com.apusic.xml.rpc.mapping,&#xA; com.apusic.xml.rpc.server,&#xA; com.apusic.xml.rpc.server.dtds,&#xA; com.apusic.xml.rpc.server.http,&#xA; com.apusic.xml.rpc.soap,&#xA; com.apusic.xml.rpc.tools,&#xA; com.apusic.xml.rpc.tools.gui,&#xA; com.apusic.xml.rpc.tools.util,&#xA; com.apusic.xml.rpc.tools.wsctl,&#xA; com.apusic.xml.rpc.tools.wsdeploy,&#xA; com.apusic.xml.rpc.tools.wsdeploy.config,&#xA; com.apusic.xml.rpc.tools.wsgen,&#xA; com.apusic.xml.rpc.utils,&#xA; com.apusic.xml.soap,&#xA; com.apusic.xml.soap.soap11,&#xA; com.apusic.xml.soap.soap12,&#xA; com.apusic.xml.soap.util,&#xA; com.apusic.xml.stream,&#xA; com.apusic.xml.stream.event,&#xA; com.apusic.xml.writer,&#xA; com.apusic.xml.ws,&#xA; com.apusic.xml.ws.address,&#xA; com.apusic.xml.ws.binding,&#xA; com.apusic.xml.ws.client,&#xA; com.apusic.xml.ws.client.dispatch,&#xA; com.apusic.xml.ws.client.pipe,&#xA; com.apusic.xml.ws.client.sei,&#xA; com.apusic.xml.ws.connection,&#xA; com.apusic.xml.ws.deploy.runtime,&#xA; com.apusic.xml.ws.deployment,&#xA; com.apusic.xml.ws.exception,&#xA; com.apusic.xml.ws.handler,&#xA; com.apusic.xml.ws.invocation,&#xA; com.apusic.xml.ws.jaxb,&#xA; com.apusic.xml.ws.message,&#xA; com.apusic.xml.ws.model,&#xA; com.apusic.xml.ws.pipeline,&#xA; com.apusic.xml.ws.servlet,&#xA; com.apusic.xml.ws.soap,&#xA; com.apusic.xml.ws.soap.attach,&#xA; com.apusic.xml.ws.soap.parser,&#xA; com.apusic.xml.ws.spi,&#xA; com.apusic.xml.ws.tools,&#xA; com.apusic.xml.ws.tools.wsdl,&#xA; com.apusic.xml.ws.util,&#xA; com.apusic.xml.ws.util.xml,&#xA; com.apusic.xml.ws.wsdl,&#xA; com.apusic.xml.wsdl,&#xA; com.borland.jbcl.layout,&#xA; com.ibm.wsdl,&#xA; com.ibm.wsdl.extensions,&#xA; com.ibm.wsdl.extensions.http,&#xA; com.ibm.wsdl.extensions.mime,&#xA; com.ibm.wsdl.extensions.schema,&#xA; com.ibm.wsdl.extensions.soap,&#xA; com.ibm.wsdl.extensions.soap12,&#xA; com.ibm.wsdl.factory,&#xA; com.ibm.wsdl.util,&#xA; com.ibm.wsdl.util.xml,&#xA; com.ibm.wsdl.xml,&#xA; com.keypoint,&#xA; com.netscape.jndi.ldap,&#xA; com.netscape.jndi.ldap.common,&#xA; com.netscape.jndi.ldap.controls,&#xA; com.netscape.jndi.ldap.schema,&#xA; com.netscape.sasl,&#xA; com.netscape.sasl.mechanisms,&#xA; com.sun.activation.registries,&#xA; com.sun.activation.viewers,&#xA; com.sun.codemodel,&#xA; com.sun.codemodel.fmt,&#xA; com.sun.codemodel.util,&#xA; com.sun.codemodel.writer,&#xA; com.sun.dtdparser,&#xA; com.sun.facelets,&#xA; com.sun.facelets.compiler,&#xA; com.sun.facelets.component,&#xA; com.sun.facelets.el,&#xA; com.sun.facelets.impl,&#xA; com.sun.facelets.tag,&#xA; com.sun.facelets.tag.jsf,&#xA; com.sun.facelets.tag.jsf.core,&#xA; com.sun.facelets.tag.jsf.html,&#xA; com.sun.facelets.tag.jstl.core,&#xA; com.sun.facelets.tag.jstl.fn,&#xA; com.sun.facelets.tag.ui,&#xA; com.sun.facelets.util,&#xA; com.sun.istack,&#xA; com.sun.istack.tools,&#xA; com.sun.istack.ws,&#xA; com.sun.java.help.impl,&#xA; com.sun.java.help.search,&#xA; com.sun.mail.dsn,&#xA; com.sun.mail.handlers,&#xA; com.sun.mail.iap,&#xA; com.sun.mail.imap,&#xA; com.sun.mail.imap.protocol,&#xA; com.sun.mail.pop3,&#xA; com.sun.mail.smtp,&#xA; com.sun.mail.util,&#xA; com.sun.org.apache.xml.internal.resolver,&#xA; com.sun.org.apache.xml.internal.resolver.helpers,&#xA; com.sun.org.apache.xml.internal.resolver.readers,&#xA; com.sun.org.apache.xml.internal.resolver.tools,&#xA; com.sun.org.omg.CORBA,&#xA; com.sun.org.omg.CORBA.ValueDefPackage,&#xA; com.sun.org.omg.CORBA.portable,&#xA; com.sun.org.omg.SendingContext,&#xA; com.sun.org.omg.SendingContext.CodeBasePackage,&#xA; com.sun.tools.jxc,&#xA; com.sun.tools.jxc.apt,&#xA; com.sun.tools.jxc.gen.config,&#xA; com.sun.tools.jxc.model.nav,&#xA; com.sun.tools.resourcegen,&#xA; com.sun.tools.ws,&#xA; com.sun.tools.ws.ant,&#xA; com.sun.tools.ws.api,&#xA; com.sun.tools.ws.api.wsdl,&#xA; com.sun.tools.ws.processor,&#xA; com.sun.tools.ws.processor.generator,&#xA; com.sun.tools.ws.processor.model,&#xA; com.sun.tools.ws.processor.model.exporter,&#xA; com.sun.tools.ws.processor.model.java,&#xA; com.sun.tools.ws.processor.model.jaxb,&#xA; com.sun.tools.ws.processor.modeler,&#xA; com.sun.tools.ws.processor.modeler.annotation,&#xA; com.sun.tools.ws.processor.modeler.wsdl,&#xA; com.sun.tools.ws.processor.util,&#xA; com.sun.tools.ws.resources,&#xA; com.sun.tools.ws.spi,&#xA; com.sun.tools.ws.util,&#xA; com.sun.tools.ws.util.xml,&#xA; com.sun.tools.ws.wscompile,&#xA; com.sun.tools.ws.wsdl.document,&#xA; com.sun.tools.ws.wsdl.document.http,&#xA; com.sun.tools.ws.wsdl.document.jaxws,&#xA; com.sun.tools.ws.wsdl.document.mime,&#xA; com.sun.tools.ws.wsdl.document.schema,&#xA; com.sun.tools.ws.wsdl.document.soap,&#xA; com.sun.tools.ws.wsdl.framework,&#xA; com.sun.tools.ws.wsdl.parser,&#xA; com.sun.tools.xjc,&#xA; com.sun.tools.xjc.addon.at_generated,&#xA; com.sun.tools.xjc.addon.code_injector,&#xA; com.sun.tools.xjc.addon.episode,&#xA; com.sun.tools.xjc.addon.locator,&#xA; com.sun.tools.xjc.addon.sync,&#xA; com.sun.tools.xjc.api,&#xA; com.sun.tools.xjc.api.impl.j2s,&#xA; com.sun.tools.xjc.api.impl.s2j,&#xA; com.sun.tools.xjc.api.util,&#xA; com.sun.tools.xjc.generator.annotation.ri,&#xA; com.sun.tools.xjc.generator.annotation.spec,&#xA; com.sun.tools.xjc.generator.bean,&#xA; com.sun.tools.xjc.generator.bean.field,&#xA; com.sun.tools.xjc.generator.util,&#xA; com.sun.tools.xjc.model,&#xA; com.sun.tools.xjc.model.nav,&#xA; com.sun.tools.xjc.outline,&#xA; com.sun.tools.xjc.reader,&#xA; com.sun.tools.xjc.reader.dtd,&#xA; com.sun.tools.xjc.reader.dtd.bindinfo,&#xA; com.sun.tools.xjc.reader.gbind,&#xA; com.sun.tools.xjc.reader.internalizer,&#xA; com.sun.tools.xjc.reader.relaxng,&#xA; com.sun.tools.xjc.reader.xmlschema,&#xA; com.sun.tools.xjc.reader.xmlschema.bindinfo,&#xA; com.sun.tools.xjc.reader.xmlschema.ct,&#xA; com.sun.tools.xjc.reader.xmlschema.parser,&#xA; com.sun.tools.xjc.runtime,&#xA; com.sun.tools.xjc.util,&#xA; com.sun.tools.xjc.writer,&#xA; com.sun.xml.bind,&#xA; com.sun.xml.bind.annotation,&#xA; com.sun.xml.bind.api,&#xA; com.sun.xml.bind.api.impl,&#xA; com.sun.xml.bind.marshaller,&#xA; com.sun.xml.bind.unmarshaller,&#xA; com.sun.xml.bind.util,&#xA; com.sun.xml.bind.v2,&#xA; com.sun.xml.bind.v2.bytecode,&#xA; com.sun.xml.bind.v2.model.annotation,&#xA; com.sun.xml.bind.v2.model.core,&#xA; com.sun.xml.bind.v2.model.impl,&#xA; com.sun.xml.bind.v2.model.nav,&#xA; com.sun.xml.bind.v2.model.runtime,&#xA; com.sun.xml.bind.v2.runtime,&#xA; com.sun.xml.bind.v2.runtime.output,&#xA; com.sun.xml.bind.v2.runtime.property,&#xA; com.sun.xml.bind.v2.runtime.reflect,&#xA; com.sun.xml.bind.v2.runtime.reflect.opt,&#xA; com.sun.xml.bind.v2.runtime.unmarshaller,&#xA; com.sun.xml.bind.v2.schemagen,&#xA; com.sun.xml.bind.v2.schemagen.episode,&#xA; com.sun.xml.bind.v2.schemagen.xmlschema,&#xA; com.sun.xml.bind.v2.util,&#xA; com.sun.xml.dtdparser,&#xA; com.sun.xml.dtdparser.resources,&#xA; com.sun.xml.stream.buffer,&#xA; com.sun.xml.stream.buffer.sax,&#xA; com.sun.xml.stream.buffer.stax,&#xA; com.sun.xml.txw2,&#xA; com.sun.xml.txw2.annotation,&#xA; com.sun.xml.txw2.output,&#xA; com.sun.xml.ws,&#xA; com.sun.xml.ws.addressing,&#xA; com.sun.xml.ws.addressing.model,&#xA; com.sun.xml.ws.addressing.v200408,&#xA; com.sun.xml.ws.api,&#xA; com.sun.xml.ws.api.addressing,&#xA; com.sun.xml.ws.api.client,&#xA; com.sun.xml.ws.api.fastinfoset,&#xA; com.sun.xml.ws.api.message,&#xA; com.sun.xml.ws.api.message.stream,&#xA; com.sun.xml.ws.api.model,&#xA; com.sun.xml.ws.api.model.soap,&#xA; com.sun.xml.ws.api.model.wsdl,&#xA; com.sun.xml.ws.api.pipe,&#xA; com.sun.xml.ws.api.pipe.helper,&#xA; com.sun.xml.ws.api.server,&#xA; com.sun.xml.ws.api.streaming,&#xA; com.sun.xml.ws.api.wsdl.parser,&#xA; com.sun.xml.ws.api.wsdl.writer,&#xA; com.sun.xml.ws.binding,&#xA; com.sun.xml.ws.client,&#xA; com.sun.xml.ws.client.dispatch,&#xA; com.sun.xml.ws.client.sei,&#xA; com.sun.xml.ws.developer,&#xA; com.sun.xml.ws.developer.servlet,&#xA; com.sun.xml.ws.encoding,&#xA; com.sun.xml.ws.encoding.fastinfoset,&#xA; com.sun.xml.ws.encoding.soap,&#xA; com.sun.xml.ws.encoding.soap.streaming,&#xA; com.sun.xml.ws.encoding.xml,&#xA; com.sun.xml.ws.fault,&#xA; com.sun.xml.ws.handler,&#xA; com.sun.xml.ws.message,&#xA; com.sun.xml.ws.message.jaxb,&#xA; com.sun.xml.ws.message.saaj,&#xA; com.sun.xml.ws.message.source,&#xA; com.sun.xml.ws.message.stream,&#xA; com.sun.xml.ws.model,&#xA; com.sun.xml.ws.model.soap,&#xA; com.sun.xml.ws.model.wsdl,&#xA; com.sun.xml.ws.protocol.soap,&#xA; com.sun.xml.ws.protocol.xml,&#xA; com.sun.xml.ws.resources,&#xA; com.sun.xml.ws.server,&#xA; com.sun.xml.ws.server.provider,&#xA; com.sun.xml.ws.server.sei,&#xA; com.sun.xml.ws.server.servlet,&#xA; com.sun.xml.ws.spi,&#xA; com.sun.xml.ws.streaming,&#xA; com.sun.xml.ws.transport,&#xA; com.sun.xml.ws.transport.http,&#xA; com.sun.xml.ws.transport.http.client,&#xA; com.sun.xml.ws.transport.http.server,&#xA; com.sun.xml.ws.transport.http.servlet,&#xA; com.sun.xml.ws.util,&#xA; com.sun.xml.ws.util.exception,&#xA; com.sun.xml.ws.util.localization,&#xA; com.sun.xml.ws.util.pipe,&#xA; com.sun.xml.ws.util.resources,&#xA; com.sun.xml.ws.util.xml,&#xA; com.sun.xml.ws.wsdl.parser,&#xA; com.sun.xml.ws.wsdl.writer,&#xA; com.sun.xml.ws.wsdl.writer.document,&#xA; com.sun.xml.ws.wsdl.writer.document.http,&#xA; com.sun.xml.ws.wsdl.writer.document.soap,&#xA; com.sun.xml.ws.wsdl.writer.document.soap12,&#xA; com.sun.xml.ws.wsdl.writer.document.xsd,&#xA; com.sun.xml.xsom,&#xA; com.sun.xml.xsom.impl,&#xA; com.sun.xml.xsom.impl.parser,&#xA; com.sun.xml.xsom.impl.parser.state,&#xA; com.sun.xml.xsom.impl.scd,&#xA; com.sun.xml.xsom.impl.util,&#xA; com.sun.xml.xsom.parser,&#xA; com.sun.xml.xsom.util,&#xA; com.sun.xml.xsom.visitor,&#xA; elite.ast,&#xA; elite.lang,&#xA; elite.lang.annotation,&#xA; javax.activation,&#xA; javax.annotation,&#xA; javax.annotation.security,&#xA; javax.ejb,&#xA; javax.ejb.spi,&#xA; javax.el,&#xA; javax.enterprise.deploy.model,&#xA; javax.enterprise.deploy.model.exceptions,&#xA; javax.enterprise.deploy.shared,&#xA; javax.enterprise.deploy.shared.factories,&#xA; javax.enterprise.deploy.spi,&#xA; javax.enterprise.deploy.spi.exceptions,&#xA; javax.enterprise.deploy.spi.factories,&#xA; javax.enterprise.deploy.spi.status,&#xA; javax.faces,&#xA; javax.faces.application,&#xA; javax.faces.component,&#xA; javax.faces.component.html,&#xA; javax.faces.context,&#xA; javax.faces.convert,&#xA; javax.faces.el,&#xA; javax.faces.event,&#xA; javax.faces.lifecycle,&#xA; javax.faces.model,&#xA; javax.faces.render,&#xA; javax.faces.validator,&#xA; javax.faces.webapp,&#xA; javax.help,&#xA; javax.help.event,&#xA; javax.help.plaf,&#xA; javax.help.plaf.basic,&#xA; javax.help.plaf.basic.images,&#xA; javax.help.resources,&#xA; javax.help.search,&#xA; javax.help.tagext,&#xA; javax.interceptor,&#xA; javax.jms,&#xA; javax.jws,&#xA; javax.jws.soap,&#xA; javax.mail,&#xA; javax.mail.event,&#xA; javax.mail.internet,&#xA; javax.mail.search,&#xA; javax.mail.util,&#xA; javax.management.j2ee,&#xA; javax.management.j2ee.statistics,&#xA; javax.measure,&#xA; javax.measure.converter,&#xA; javax.measure.quantity,&#xA; javax.measure.unit,&#xA; javax.persistence,&#xA; javax.persistence.spi,&#xA; javax.resource,&#xA; javax.resource.cci,&#xA; javax.resource.spi,&#xA; javax.resource.spi.endpoint,&#xA; javax.resource.spi.security,&#xA; javax.resource.spi.work,&#xA; javax.security.jacc,&#xA; javax.servlet,&#xA; javax.servlet.http,&#xA; javax.servlet.jsp,&#xA; javax.servlet.jsp.el,&#xA; javax.servlet.jsp.jstl.core,&#xA; javax.servlet.jsp.jstl.fmt,&#xA; javax.servlet.jsp.jstl.sql,&#xA; javax.servlet.jsp.jstl.tlv,&#xA; javax.servlet.jsp.tagext,&#xA; javax.transaction,&#xA; javax.transaction.xa,&#xA; javax.wsdl,&#xA; javax.wsdl.extensions,&#xA; javax.wsdl.extensions.http,&#xA; javax.wsdl.extensions.mime,&#xA; javax.wsdl.extensions.schema,&#xA; javax.wsdl.extensions.soap,&#xA; javax.wsdl.extensions.soap12,&#xA; javax.wsdl.factory,&#xA; javax.wsdl.xml,&#xA; javax.xml.bind,&#xA; javax.xml.bind.annotation,&#xA; javax.xml.bind.annotation.adapters,&#xA; javax.xml.bind.attachment,&#xA; javax.xml.bind.helpers,&#xA; javax.xml.bind.util,&#xA; javax.xml.registry,&#xA; javax.xml.registry.infomodel,&#xA; javax.xml.registry.samples,&#xA; javax.xml.rpc,&#xA; javax.xml.rpc.encoding,&#xA; javax.xml.rpc.handler,&#xA; javax.xml.rpc.handler.soap,&#xA; javax.xml.rpc.holders,&#xA; javax.xml.rpc.server,&#xA; javax.xml.rpc.soap,&#xA; javax.xml.soap,&#xA; javax.xml.stream,&#xA; javax.xml.stream.events,&#xA; javax.xml.stream.util,&#xA; javax.xml.ws,&#xA; javax.xml.ws.handler,&#xA; javax.xml.ws.handler.soap,&#xA; javax.xml.ws.http,&#xA; javax.xml.ws.soap,&#xA; javax.xml.ws.spi,&#xA; javax.xml.ws.wsaddressing,&#xA; license,&#xA; netscape.ldap,&#xA; netscape.ldap.ber.stream,&#xA; netscape.ldap.client,&#xA; netscape.ldap.client.opers,&#xA; netscape.ldap.controls,&#xA; netscape.ldap.factory,&#xA; netscape.ldap.util,&#xA; oracle.toplink.essentials,&#xA; oracle.toplink.essentials.changesets,&#xA; oracle.toplink.essentials.config,&#xA; oracle.toplink.essentials.descriptors,&#xA; oracle.toplink.essentials.descriptors.changetracking,&#xA; oracle.toplink.essentials.descriptors.copying,&#xA; oracle.toplink.essentials.descriptors.invalidation,&#xA; oracle.toplink.essentials.ejb.cmp3,&#xA; oracle.toplink.essentials.ejb.cmp3.persistence,&#xA; oracle.toplink.essentials.exceptions,&#xA; oracle.toplink.essentials.exceptions.i18n,&#xA; oracle.toplink.essentials.expressions,&#xA; oracle.toplink.essentials.indirection,&#xA; oracle.toplink.essentials.internal.databaseaccess,&#xA; oracle.toplink.essentials.internal.descriptors,&#xA; oracle.toplink.essentials.internal.ejb.cmp3,&#xA; oracle.toplink.essentials.internal.ejb.cmp3.base,&#xA; oracle.toplink.essentials.internal.ejb.cmp3.jdbc.base,&#xA; oracle.toplink.essentials.internal.ejb.cmp3.metadata,&#xA; oracle.toplink.essentials.internal.ejb.cmp3.metadata.accessors,&#xA; oracle.toplink.essentials.internal.ejb.cmp3.metadata.accessors.objects,&#xA; oracle.toplink.essentials.internal.ejb.cmp3.metadata.columns,&#xA; oracle.toplink.essentials.internal.ejb.cmp3.metadata.listeners,&#xA; oracle.toplink.essentials.internal.ejb.cmp3.metadata.queries,&#xA; oracle.toplink.essentials.internal.ejb.cmp3.metadata.sequencing,&#xA; oracle.toplink.essentials.internal.ejb.cmp3.metadata.tables,&#xA; oracle.toplink.essentials.internal.ejb.cmp3.naming,&#xA; oracle.toplink.essentials.internal.ejb.cmp3.naming.base,&#xA; oracle.toplink.essentials.internal.ejb.cmp3.transaction,&#xA; oracle.toplink.essentials.internal.ejb.cmp3.transaction.base,&#xA; oracle.toplink.essentials.internal.ejb.cmp3.xml,&#xA; oracle.toplink.essentials.internal.ejb.cmp3.xml.accessors,&#xA; oracle.toplink.essentials.internal.ejb.cmp3.xml.columns,&#xA; oracle.toplink.essentials.internal.ejb.cmp3.xml.listeners,&#xA; oracle.toplink.essentials.internal.ejb.cmp3.xml.parser,&#xA; oracle.toplink.essentials.internal.ejb.cmp3.xml.queries,&#xA; oracle.toplink.essentials.internal.ejb.cmp3.xml.sequencing,&#xA; oracle.toplink.essentials.internal.ejb.cmp3.xml.tables,&#xA; oracle.toplink.essentials.internal.expressions,&#xA; oracle.toplink.essentials.internal.helper,&#xA; oracle.toplink.essentials.internal.helper.linkedlist,&#xA; oracle.toplink.essentials.internal.identitymaps,&#xA; oracle.toplink.essentials.internal.indirection,&#xA; oracle.toplink.essentials.internal.localization,&#xA; oracle.toplink.essentials.internal.localization.i18n,&#xA; oracle.toplink.essentials.internal.parsing,&#xA; oracle.toplink.essentials.internal.parsing.ejbql,&#xA; oracle.toplink.essentials.internal.parsing.ejbql.antlr273,&#xA; oracle.toplink.essentials.internal.queryframework,&#xA; oracle.toplink.essentials.internal.security,&#xA; oracle.toplink.essentials.internal.sequencing,&#xA; oracle.toplink.essentials.internal.sessions,&#xA; oracle.toplink.essentials.internal.weaving,&#xA; oracle.toplink.essentials.jndi,&#xA; oracle.toplink.essentials.logging,&#xA; oracle.toplink.essentials.mappings,&#xA; oracle.toplink.essentials.mappings.converters,&#xA; oracle.toplink.essentials.mappings.foundation,&#xA; oracle.toplink.essentials.platform.database,&#xA; oracle.toplink.essentials.platform.database.oracle,&#xA; oracle.toplink.essentials.platform.server,&#xA; oracle.toplink.essentials.platform.server.oc4j,&#xA; oracle.toplink.essentials.platform.server.sunas,&#xA; oracle.toplink.essentials.platform.xml,&#xA; oracle.toplink.essentials.platform.xml.jaxp,&#xA; oracle.toplink.essentials.queryframework,&#xA; oracle.toplink.essentials.querykeys,&#xA; oracle.toplink.essentials.sequencing,&#xA; oracle.toplink.essentials.sessions,&#xA; oracle.toplink.essentials.threetier,&#xA; oracle.toplink.essentials.tools.schemaframework,&#xA; oracle.toplink.essentials.tools.sessionconfiguration,&#xA; oracle.toplink.essentials.tools.sessionmanagement,&#xA; oracle.toplink.essentials.transaction,&#xA; oracle.toplink.essentials.transaction.oc4j,&#xA; oracle.toplink.essentials.transaction.sunas,&#xA; oracle.toplink.essentials.weaving,&#xA; oracle.toplink.libraries.asm,&#xA; oracle.toplink.libraries.asm.attrs,&#xA; org.apache.bcel,&#xA; org.apache.bcel.classfile,&#xA; org.apache.bcel.generic,&#xA; org.apache.bcel.util,&#xA; org.apache.bcel.verifier,&#xA; org.apache.bcel.verifier.exc,&#xA; org.apache.bcel.verifier.statics,&#xA; org.apache.bcel.verifier.structurals,&#xA; org.apache.commons.fileupload,&#xA; org.apache.commons.fileupload.disk,&#xA; org.apache.commons.fileupload.portlet,&#xA; org.apache.commons.fileupload.servlet,&#xA; org.apache.commons.fileupload.util,&#xA; org.apache.commons.io,&#xA; org.apache.commons.io.filefilter,&#xA; org.apache.commons.io.input,&#xA; org.apache.commons.io.output,&#xA; org.apache.env,&#xA; org.apache.taglibs.standard,&#xA; org.apache.taglibs.standard.extra.spath,&#xA; org.apache.taglibs.standard.functions,&#xA; org.apache.taglibs.standard.lang.jstl,&#xA; org.apache.taglibs.standard.lang.jstl.parser,&#xA; org.apache.taglibs.standard.lang.jstl.test,&#xA; org.apache.taglibs.standard.lang.jstl.test.beans,&#xA; org.apache.taglibs.standard.lang.support,&#xA; org.apache.taglibs.standard.resources,&#xA; org.apache.taglibs.standard.tag.common.core,&#xA; org.apache.taglibs.standard.tag.common.fmt,&#xA; org.apache.taglibs.standard.tag.common.sql,&#xA; org.apache.taglibs.standard.tag.common.xml,&#xA; org.apache.taglibs.standard.tag.el.core,&#xA; org.apache.taglibs.standard.tag.el.fmt,&#xA; org.apache.taglibs.standard.tag.el.sql,&#xA; org.apache.taglibs.standard.tag.el.xml,&#xA; org.apache.taglibs.standard.tag.rt.core,&#xA; org.apache.taglibs.standard.tag.rt.fmt,&#xA; org.apache.taglibs.standard.tag.rt.sql,&#xA; org.apache.taglibs.standard.tag.rt.xml,&#xA; org.apache.taglibs.standard.tei,&#xA; org.apache.taglibs.standard.tlv,&#xA; org.apache.xml.resolver,&#xA; org.apache.xml.resolver.apps,&#xA; org.apache.xml.resolver.etc,&#xA; org.apache.xml.resolver.helpers,&#xA; org.apache.xml.resolver.readers,&#xA; org.apache.xml.resolver.tools,&#xA; org.apache.xmlcommons,&#xA; org.bouncycastle,&#xA; org.bouncycastle.asn1,&#xA; org.bouncycastle.asn1.cmp,&#xA; org.bouncycastle.asn1.cms,&#xA; org.bouncycastle.asn1.crmf,&#xA; org.bouncycastle.asn1.cryptopro,&#xA; org.bouncycastle.asn1.esf,&#xA; org.bouncycastle.asn1.ess,&#xA; org.bouncycastle.asn1.gnu,&#xA; org.bouncycastle.asn1.iana,&#xA; org.bouncycastle.asn1.icao,&#xA; org.bouncycastle.asn1.isismtt,&#xA; org.bouncycastle.asn1.isismtt.ocsp,&#xA; org.bouncycastle.asn1.isismtt.x509,&#xA; org.bouncycastle.asn1.kisa,&#xA; org.bouncycastle.asn1.microsoft,&#xA; org.bouncycastle.asn1.misc,&#xA; org.bouncycastle.asn1.mozilla,&#xA; org.bouncycastle.asn1.nist,&#xA; org.bouncycastle.asn1.ntt,&#xA; org.bouncycastle.asn1.ocsp,&#xA; org.bouncycastle.asn1.oiw,&#xA; org.bouncycastle.asn1.pkcs,&#xA; org.bouncycastle.asn1.sec,&#xA; org.bouncycastle.asn1.smime,&#xA; org.bouncycastle.asn1.teletrust,&#xA; org.bouncycastle.asn1.tsp,&#xA; org.bouncycastle.asn1.util,&#xA; org.bouncycastle.asn1.x500,&#xA; org.bouncycastle.asn1.x509,&#xA; org.bouncycastle.asn1.x509.qualified,&#xA; org.bouncycastle.asn1.x509.sigi,&#xA; org.bouncycastle.asn1.x9,&#xA; org.bouncycastle.crypto,&#xA; org.bouncycastle.crypto.agreement,&#xA; org.bouncycastle.crypto.agreement.kdf,&#xA; org.bouncycastle.crypto.digests,&#xA; org.bouncycastle.crypto.encodings,&#xA; org.bouncycastle.crypto.engines,&#xA; org.bouncycastle.crypto.examples,&#xA; org.bouncycastle.crypto.generators,&#xA; org.bouncycastle.crypto.io,&#xA; org.bouncycastle.crypto.macs,&#xA; org.bouncycastle.crypto.modes,&#xA; org.bouncycastle.crypto.paddings,&#xA; org.bouncycastle.crypto.params,&#xA; org.bouncycastle.crypto.prng,&#xA; org.bouncycastle.crypto.signers,&#xA; org.bouncycastle.crypto.tls,&#xA; org.bouncycastle.crypto.util,&#xA; org.bouncycastle.i18n,&#xA; org.bouncycastle.i18n.filter,&#xA; org.bouncycastle.jce,&#xA; org.bouncycastle.jce.examples,&#xA; org.bouncycastle.jce.exception,&#xA; org.bouncycastle.jce.interfaces,&#xA; org.bouncycastle.jce.netscape,&#xA; org.bouncycastle.jce.provider,&#xA; org.bouncycastle.jce.provider.symmetric,&#xA; org.bouncycastle.jce.spec,&#xA; org.bouncycastle.math.ec,&#xA; org.bouncycastle.mozilla,&#xA; org.bouncycastle.ocsp,&#xA; org.bouncycastle.openssl,&#xA; org.bouncycastle.util,&#xA; org.bouncycastle.util.encoders,&#xA; org.bouncycastle.util.test,&#xA; org.bouncycastle.voms,&#xA; org.bouncycastle.x509,&#xA; org.bouncycastle.x509.examples,&#xA; org.bouncycastle.x509.extension,&#xA; org.bouncycastle.x509.util,&#xA; org.jfree,&#xA; org.jfree.base,&#xA; org.jfree.base.config,&#xA; org.jfree.base.log,&#xA; org.jfree.base.modules,&#xA; org.jfree.chart,&#xA; org.jfree.chart.annotations,&#xA; org.jfree.chart.axis,&#xA; org.jfree.chart.block,&#xA; org.jfree.chart.demo,&#xA; org.jfree.chart.editor,&#xA; org.jfree.chart.encoders,&#xA; org.jfree.chart.entity,&#xA; org.jfree.chart.event,&#xA; org.jfree.chart.imagemap,&#xA; org.jfree.chart.labels,&#xA; org.jfree.chart.needle,&#xA; org.jfree.chart.plot,&#xA; org.jfree.chart.renderer,&#xA; org.jfree.chart.renderer.category,&#xA; org.jfree.chart.renderer.xy,&#xA; org.jfree.chart.resources,&#xA; org.jfree.chart.servlet,&#xA; org.jfree.chart.title,&#xA; org.jfree.chart.urls,&#xA; org.jfree.chart.util,&#xA; org.jfree.data,&#xA; org.jfree.data.category,&#xA; org.jfree.data.contour,&#xA; org.jfree.data.function,&#xA; org.jfree.data.gantt,&#xA; org.jfree.data.general,&#xA; org.jfree.data.io,&#xA; org.jfree.data.jdbc,&#xA; org.jfree.data.resources,&#xA; org.jfree.data.statistics,&#xA; org.jfree.data.time,&#xA; org.jfree.data.time.ohlc,&#xA; org.jfree.data.xml,&#xA; org.jfree.data.xy,&#xA; org.jfree.date,&#xA; org.jfree.io,&#xA; org.jfree.layout,&#xA; org.jfree.resources,&#xA; org.jfree.text,&#xA; org.jfree.threads,&#xA; org.jfree.ui,&#xA; org.jfree.ui.about,&#xA; org.jfree.ui.about.resources,&#xA; org.jfree.ui.action,&#xA; org.jfree.ui.tabbedui,&#xA; org.jfree.util,&#xA; org.jvnet.fastinfoset,&#xA; org.jvnet.fastinfoset.sax,&#xA; org.jvnet.fastinfoset.sax.helpers,&#xA; org.jvnet.fastinfoset.stax,&#xA; org.jvnet.staxex,&#xA; org.kohsuke.rngom.ast.builder,&#xA; org.kohsuke.rngom.ast.om,&#xA; org.kohsuke.rngom.ast.util,&#xA; org.kohsuke.rngom.binary,&#xA; org.kohsuke.rngom.binary.visitor,&#xA; org.kohsuke.rngom.digested,&#xA; org.kohsuke.rngom.dt,&#xA; org.kohsuke.rngom.dt.builtin,&#xA; org.kohsuke.rngom.nc,&#xA; org.kohsuke.rngom.parse,&#xA; org.kohsuke.rngom.parse.compact,&#xA; org.kohsuke.rngom.parse.host,&#xA; org.kohsuke.rngom.parse.xml,&#xA; org.kohsuke.rngom.util,&#xA; org.kohsuke.rngom.xml.sax,&#xA; org.kohsuke.rngom.xml.util,&#xA; org.omg.CORBA,&#xA; org.omg.CORBA.portable,&#xA; org.omg.CSI,&#xA; org.omg.CSIIOP,&#xA; org.omg.CosTSInteroperation,&#xA; org.omg.CosTransactions,&#xA; org.omg.GSSUP,&#xA; org.omg.IOP,&#xA; org.omg.PortableInterceptor,&#xA; org.omg.PortableInterceptor.ORBInitInfoPackage,&#xA; org.operamasks.el.compat,&#xA; org.operamasks.el.eval,&#xA; org.operamasks.el.eval.closure,&#xA; org.operamasks.el.eval.seq,&#xA; org.operamasks.el.parser,&#xA; org.operamasks.el.resolver,&#xA; org.operamasks.el.resources,&#xA; org.operamasks.el.shell,&#xA; org.operamasks.net.sf.cglib.beans,&#xA; org.operamasks.net.sf.cglib.core,&#xA; org.operamasks.net.sf.cglib.proxy,&#xA; org.operamasks.net.sf.cglib.reflect,&#xA; org.operamasks.net.sf.cglib.transform,&#xA; org.operamasks.net.sf.cglib.transform.hook,&#xA; org.operamasks.net.sf.cglib.transform.impl,&#xA; org.operamasks.net.sf.cglib.util,&#xA; org.operamasks.org.objectweb.asm,&#xA; org.operamasks.org.objectweb.asm.attrs,&#xA; org.operamasks.org.objectweb.asm.tree,&#xA; org.operamasks.org.objectweb.asm.tree.analysis,&#xA; org.operamasks.org.objectweb.asm.util,&#xA; org.operamasks.org.objectweb.asm.util.attrs,&#xA; org.operamasks.org.objectweb.asm.xml,&#xA; org.operamasks.util,&#xA; org.relaxng.datatype,&#xA; org.relaxng.datatype.helpers,&#xA; org.w3c.dom,&#xA; org.w3c.dom.css,&#xA; org.w3c.dom.events,&#xA; org.w3c.dom.html,&#xA; org.w3c.dom.ranges,&#xA; org.w3c.dom.stylesheets,&#xA; org.w3c.dom.traversal,&#xA; org.w3c.dom.views,&#xA; org.xml.sax,&#xA; org.xml.sax.ext,&#xA; org.xml.sax.helpers,&#xA; persistence.antlr,&#xA; persistence.antlr.actions.cpp,&#xA; persistence.antlr.actions.csharp,&#xA; persistence.antlr.actions.java,&#xA; persistence.antlr.collections,&#xA; persistence.antlr.collections.impl,&#xA; persistence.antlr.debug,&#xA; persistence.antlr.debug.misc,&#xA; persistence.antlr.preprocessor,&#xA; sun.corba&#xA;Bundle-Name: Apusic Plug-in&#xA;Bundle-ClassPath: apusic.jar,&#xA; standard.jar,&#xA; razor.jar,&#xA; mejb.jar,&#xA; ldapsp.jar,&#xA; ldapjdk.jar,&#xA; jhall.jar,&#xA; jgroups-all.jar,&#xA; jaxb-xjc.jar,&#xA; jaxb-impl.jar,&#xA; gftool.jar,&#xA; firststep.jar,&#xA; elite.jar,&#xA; dsn.jar,&#xA; deploy.jar,&#xA; concurrent.jar,&#xA; apusic-launcher.jar,&#xA; apusic-client.jar,&#xA; ext/bcprov-jdk15-138.jar,&#xA; ext/operamasks-third-party.jar,&#xA; ext/toplink-essentials.jar,&#xA; ext/toplink-essentials-agent.jar,&#xA; common/apusic-resources.jar,&#xA; common/elite-api.jar,&#xA; common/javaee.jar,&#xA; common/jaxb-api.jar,&#xA; common/jsf-api.jar&#xA;Bundle-Version: 1.0.0&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.kingdee.bos.jboss4bim' version='1.0.0'>
+      <update id='com.kingdee.bos.jboss4bim' range='[0.0.0,1.0.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='Jboss4BIM Plug-in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Kingdee Software (China) Company Ltd.,'/>
+        <property name='file.name' value='D:\bos\BOSModular\bim\eclipse\plugins\com.kingdee.bos.jboss4bim_6.1.0'/>
+        <property name='file.lastModified' value='1540115300578'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.jboss4bim' version='1.0.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.jboss4bim' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.jboss4bim' version='1.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-Name: Jboss4BIM Plug-in&#xA;Bundle-Version: 1.0.0&#xA;Bundle-SymbolicName: com.kingdee.bos.jboss4bim;singleton:=true&#xA;Manifest-Version: 1.0&#xA;Bundle-ActivationPolicy: lazy&#xA;Bundle-ManifestVersion: 2&#xA;Bundle-Vendor: Kingdee Software (China) Company Ltd.,&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.kingdee.bos.bim.product' version='6.0.0'>
+      <update id='com.kingdee.bos.bim.product' range='[0.0.0,6.0.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='BimIntro Plug-in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Kingdee Software'/>
+        <property name='file.name' value='D:\bos\BOSModular\bim\eclipse\plugins\com.kingdee.bos.bimintro_6.1.0'/>
+        <property name='file.lastModified' value='1540115307734'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.bim.product' version='6.0.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.bim.product' version='6.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.intro' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.bim.product' version='6.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Bundle-Name: BimIntro Plug-in&#xA;Bundle-Version: 6.0.0&#xA;Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.ui.intro&#xA;Bundle-SymbolicName: com.kingdee.bos.bim.product; singleton:=true&#xA;Bundle-Localization: plugin&#xA;Manifest-Version: 1.0&#xA;Bundle-ClassPath: bimintro.jar&#xA;Bundle-Vendor: Kingdee Software&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.kingdee.bos.bim' version='6.0.0'>
+      <update id='com.kingdee.bos.bim' range='[0.0.0,6.0.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='BIM Plug-in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Kingdee Software (China) Company Ltd.,'/>
+        <property name='file.name' value='D:\bos\BOSModular\bim\eclipse\plugins\com.kingdee.bos.bim_6.1.0'/>
+        <property name='file.lastModified' value='1540115306125'/>
+      </properties>
+      <provides size='28'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.bim' version='6.0.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.bim' version='6.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bim' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bim.actions' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bim.ant.task' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bim.common' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bim.common.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bim.designer' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bim.designer.actions' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bim.designer.dtc' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bim.designer.edit' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bim.designer.edit.layout' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bim.designer.edit.policies' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bim.designer.figures' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bim.designer.model' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bim.designer.model.commands' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bim.designer.properties' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bim.designer.validator' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bim.dialog' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bim.editors' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bim.extend' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bim.launch' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bim.perspective' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bim.views' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bim.wizard' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bim.wizard.project' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.swt.widgets' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='14'>
+        <required namespace='osgi.bundle' name='org.eclipse.ant.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ant.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.debug.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.debug.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.debug' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.debug.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.launching' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.externaltools' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.forms' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.intro' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.apache.ant' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bimupdate' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.ctrl' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.studio' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.bim' version='6.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Export-Package: com.kingdee.bos.bim,com.kingdee.bos.bim.actions,com.kingdee.bos.bim.ant.task,com.kingdee.bos.bim.common,com.kingdee.bos.bim.common.internal,com.kingdee.bos.bim.designer,com.kingdee.bos.bim.designer.actions,com.kingdee.bos.bim.designer.dtc,com.kingdee.bos.bim.designer.edit,com.kingdee.bos.bim.designer.edit.layout,com.kingdee.bos.bim.designer.edit.policies,com.kingdee.bos.bim.designer.figures,com.kingdee.bos.bim.designer.model,com.kingdee.bos.bim.designer.model.commands,com.kingdee.bos.bim.designer.properties,com.kingdee.bos.bim.designer.validator,com.kingdee.bos.bim.dialog,com.kingdee.bos.bim.editors,com.kingdee.bos.bim.extend,com.kingdee.bos.bim.launch,com.kingdee.bos.bim.perspective,com.kingdee.bos.bim.views,com.kingdee.bos.bim.wizard,com.kingdee.bos.bim.wizard.project,org.eclipse.swt.widgets&#xA;Bundle-Localization: plugin&#xA;Require-Bundle: org.eclipse.ant.core,org.eclipse.ant.ui,org.eclipse.debug.core,org.eclipse.debug.ui,org.eclipse.jdt.debug,org.eclipse.jdt.debug.ui,org.eclipse.jdt.launching,org.eclipse.ui.externaltools,org.eclipse.ui.forms,org.eclipse.ui.intro,org.apache.ant,com.kingdee.bimupdate;visibility:=reexport,com.kingdee.bos.ctrl;visibility:=reexport,com.kingdee.bos.studio;visibility:=reexport&#xA;Bundle-Activator: com.kingdee.bos.bim.BIMPlugin&#xA;Bundle-Name: BIM Plug-in&#xA;Bundle-Version: 6.0.0&#xA;Bundle-Vendor: Kingdee Software (China) Company Ltd.,&#xA;Bundle-SymbolicName: com.kingdee.bos.bim;singleton:=true&#xA;Bundle-ActivationPolicy: lazy&#xA;Manifest-Version: 1.0&#xA;Bundle-ClassPath: bim.jar,.,lib/asm-3.1.jar,lib/httpclient-4.0.1.jar,lib/httpmime-4.0.1.jar,lib/httpcore-4.0.1.jar,lib/httpcore-nio-4.0.1.jar,lib/bs_uiframe-client.jar&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.kingdee.bos.bim.doc' version='6.0.0'>
+      <update id='com.kingdee.bos.bim.doc' range='[0.0.0,6.0.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='BimHelp Plug-in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Kingdee Software'/>
+        <property name='file.name' value='D:\bos\BOSModular\bim\eclipse\plugins\com.kingdee.bos.bimhelp_6.1.0'/>
+        <property name='file.lastModified' value='1540115308531'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.bim.doc' version='6.0.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.bim.doc' version='6.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.help' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.bim.doc' version='6.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Bundle-Version: 6.0.0&#xA;Require-Bundle: org.eclipse.help,org.eclipse.core.runtime,org.eclipse.ui&#xA;Manifest-Version: 1.0&#xA;Bundle-SymbolicName: com.kingdee.bos.bim.doc; singleton:=true&#xA;Bundle-Name: BimHelp Plug-in&#xA;Bundle-Localization: plugin&#xA;Bundle-Vendor: Kingdee Software&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.kingdee.bimupdate' version='1.0.0'>
+      <update id='com.kingdee.bimupdate' range='[0.0.0,1.0.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='%Bundle-Name.0'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%Bundle-Vendor.0'/>
+        <property name='file.name' value='D:\bos\BOSModular\bim\eclipse\plugins\com.kingdee.bos.bim_update_6.1.0'/>
+        <property name='file.lastModified' value='1540115301140'/>
+      </properties>
+      <provides size='37'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bimupdate' version='1.0.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bimupdate' version='1.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bimupdate' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bimupdate.client' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bimupdate.client.engine' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bimupdate.client.listener' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bimupdate.client.requestor' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bimupdate.listener' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bimupdate.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.httpclient' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.httpclient.auth' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.httpclient.cookie' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.httpclient.methods' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.httpclient.methods.multipart' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.httpclient.protocol' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.httpclient.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.logging' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.logging.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.net' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.net.bsd' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.net.ftp' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.net.ftp.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.net.io' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.net.nntp' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.net.ntp' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.net.pop3' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.net.smtp' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.net.telnet' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.net.tftp' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.net.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.oro.io' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.oro.text' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.oro.text.awk' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.oro.text.perl' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.oro.text.regex' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.oro.util' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='osgi.bundle' name='org.log4j' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.jdom' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bimupdate' version='1.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-Vendor: %Bundle-Vendor.0&#xA;Bundle-ManifestVersion: 2&#xA;Bundle-RequiredExecutionEnvironment: J2SE-1.4&#xA;Bundle-Localization: plugin&#xA;Bundle-Name: %Bundle-Name.0&#xA;Require-Bundle: org.log4j,org.jdom&#xA;Bundle-ClassPath: lib/commons-httpclient-2.0.2.jar,lib/commons-net-1.3.0.jar,lib/commons-logging.jar,lib/jakarta-oro-2.0.8.jar,bim_update.jar&#xA;Manifest-Version: 1.0&#xA;Bundle-SymbolicName: com.kingdee.bimupdate;singleton:=true&#xA;Bundle-Version: 1.0.0&#xA;Export-Package: com.kingdee.bos.bimupdate,com.kingdee.bos.bimupdate.client,com.kingdee.bos.bimupdate.client.engine,com.kingdee.bos.bimupdate.client.listener,com.kingdee.bos.bimupdate.client.requestor,com.kingdee.bos.bimupdate.listener,com.kingdee.bos.bimupdate.util,org.apache.commons.httpclient,org.apache.commons.httpclient.auth,org.apache.commons.httpclient.cookie,org.apache.commons.httpclient.methods,org.apache.commons.httpclient.methods.multipart,org.apache.commons.httpclient.protocol,org.apache.commons.httpclient.util,org.apache.commons.logging,org.apache.commons.logging.impl,org.apache.commons.net,org.apache.commons.net.bsd,org.apache.commons.net.ftp,org.apache.commons.net.ftp.parser,org.apache.commons.net.io,org.apache.commons.net.nntp,org.apache.commons.net.ntp,org.apache.commons.net.pop3,org.apache.commons.net.smtp,org.apache.commons.net.telnet,org.apache.commons.net.tftp,org.apache.commons.net.util,org.apache.oro.io,org.apache.oro.text,org.apache.oro.text.awk,org.apache.oro.text.perl,org.apache.oro.text.regex,org.apache.oro.util&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.kingdee.eas.updater' version='1.0.0' singleton='false'>
+      <update id='com.kingdee.eas.updater' range='[0.0.0,1.0.0)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='EASUpdater Plug-in'/>
+        <property name='file.name' value='D:\bos\BOSModular\bim\eclipse\plugins\com.kingdee.bos.easupdater4bim_6.1.0'/>
+        <property name='file.lastModified' value='1540115301093'/>
+      </properties>
+      <provides size='77'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.eas.updater' version='1.0.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.eas.updater' version='1.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.eas.base.common' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.eas.base.common.client' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.eas.base.noteprint.client' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.eas.update' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.eas.update.client' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.eas.update.client.engine' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.eas.update.client.requestor' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.eas.update.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.httpclient' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.httpclient.auth' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.httpclient.cookie' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.httpclient.methods' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.httpclient.methods.multipart' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.httpclient.protocol' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.httpclient.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.logging' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.logging.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.net' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.net.bsd' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.net.ftp' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.net.ftp.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.net.io' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.net.nntp' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.net.ntp' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.net.pop3' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.net.smtp' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.net.telnet' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.net.tftp' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.net.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.oro.io' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.oro.text' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.oro.text.awk' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.oro.text.perl' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.oro.text.regex' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.oro.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.listener' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.email' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.ccm' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.clearcase' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.depend' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.depend.constantpool' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.dotnet' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.ejb' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.extension' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.extension.resolvers' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.i18n' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.ide' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.j2ee' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.javacc' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.jdepend' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.jlink' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.jsp' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.jsp.compilers' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.junit' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.junit.xsl' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.metamata' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.net' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.perforce' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.pvcs' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.scm' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.sitraka' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.sitraka.bytecode' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.sitraka.bytecode.attributes' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.sos' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.sound' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.splash' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.starteam' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.taskdefs.optional.vss' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.types.optional.depend' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.util.depend' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.util.depend.bcel' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.util.optional' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.tools.ant.util.regexp' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.jdom' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.log4j' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.ksql' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.eas.updater' version='1.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Manifest-Version: 1.0&#xA;Bundle-ManifestVersion: 2&#xA;Bundle-Localization: plugin&#xA;Bundle-SymbolicName: com.kingdee.eas.updater&#xA;Bundle-Vendor: &#xA;Export-Package: com.kingdee.eas.base.common,&#xA; com.kingdee.eas.base.common.client,&#xA; com.kingdee.eas.base.noteprint.client,&#xA; com.kingdee.eas.update,&#xA; com.kingdee.eas.update.client,&#xA; com.kingdee.eas.update.client.engine,&#xA; com.kingdee.eas.update.client.requestor,&#xA; com.kingdee.eas.update.util,&#xA; org.apache.commons.httpclient,&#xA; org.apache.commons.httpclient.auth,&#xA; org.apache.commons.httpclient.cookie,&#xA; org.apache.commons.httpclient.methods,&#xA; org.apache.commons.httpclient.methods.multipart,&#xA; org.apache.commons.httpclient.protocol,&#xA; org.apache.commons.httpclient.util,&#xA; org.apache.commons.logging,&#xA; org.apache.commons.logging.impl,&#xA; org.apache.commons.net,&#xA; org.apache.commons.net.bsd,&#xA; org.apache.commons.net.ftp,&#xA; org.apache.commons.net.ftp.parser,&#xA; org.apache.commons.net.io,&#xA; org.apache.commons.net.nntp,&#xA; org.apache.commons.net.ntp,&#xA; org.apache.commons.net.pop3,&#xA; org.apache.commons.net.smtp,&#xA; org.apache.commons.net.telnet,&#xA; org.apache.commons.net.tftp,&#xA; org.apache.commons.net.util,&#xA; org.apache.oro.io,&#xA; org.apache.oro.text,&#xA; org.apache.oro.text.awk,&#xA; org.apache.oro.text.perl,&#xA; org.apache.oro.text.regex,&#xA; org.apache.oro.util,&#xA; org.apache.tools.ant.listener,&#xA; org.apache.tools.ant.taskdefs.email,&#xA; org.apache.tools.ant.taskdefs.optional,&#xA; org.apache.tools.ant.taskdefs.optional.ccm,&#xA; org.apache.tools.ant.taskdefs.optional.clearcase,&#xA; org.apache.tools.ant.taskdefs.optional.depend,&#xA; org.apache.tools.ant.taskdefs.optional.depend.constantpool,&#xA; org.apache.tools.ant.taskdefs.optional.dotnet,&#xA; org.apache.tools.ant.taskdefs.optional.ejb,&#xA; org.apache.tools.ant.taskdefs.optional.extension,&#xA; org.apache.tools.ant.taskdefs.optional.extension.resolvers,&#xA; org.apache.tools.ant.taskdefs.optional.i18n,&#xA; org.apache.tools.ant.taskdefs.optional.ide,&#xA; org.apache.tools.ant.taskdefs.optional.j2ee,&#xA; org.apache.tools.ant.taskdefs.optional.javacc,&#xA; org.apache.tools.ant.taskdefs.optional.jdepend,&#xA; org.apache.tools.ant.taskdefs.optional.jlink,&#xA; org.apache.tools.ant.taskdefs.optional.jsp,&#xA; org.apache.tools.ant.taskdefs.optional.jsp.compilers,&#xA; org.apache.tools.ant.taskdefs.optional.junit,&#xA; org.apache.tools.ant.taskdefs.optional.junit.xsl,&#xA; org.apache.tools.ant.taskdefs.optional.metamata,&#xA; org.apache.tools.ant.taskdefs.optional.net,&#xA; org.apache.tools.ant.taskdefs.optional.perforce,&#xA; org.apache.tools.ant.taskdefs.optional.pvcs,&#xA; org.apache.tools.ant.taskdefs.optional.scm,&#xA; org.apache.tools.ant.taskdefs.optional.sitraka,&#xA; org.apache.tools.ant.taskdefs.optional.sitraka.bytecode,&#xA; org.apache.tools.ant.taskdefs.optional.sitraka.bytecode.attributes,&#xA; org.apache.tools.ant.taskdefs.optional.sos,&#xA; org.apache.tools.ant.taskdefs.optional.sound,&#xA; org.apache.tools.ant.taskdefs.optional.splash,&#xA; org.apache.tools.ant.taskdefs.optional.starteam,&#xA; org.apache.tools.ant.taskdefs.optional.vss,&#xA; org.apache.tools.ant.types.optional.depend,&#xA; org.apache.tools.ant.util.depend,&#xA; org.apache.tools.ant.util.depend.bcel,&#xA; org.apache.tools.ant.util.optional,&#xA; org.apache.tools.ant.util.regexp&#xA;Bundle-Name: EASUpdater Plug-in&#xA;Bundle-ClassPath: commons-httpclient-2.0.2.jar,&#xA; commons-logging.jar,&#xA; commons-net-1.3.0.jar,&#xA; eas_updater-client.jar,&#xA; jakarta-oro-2.0.8.jar,&#xA; optional.jar,&#xA; bs_common.jar&#xA;Bundle-Version: 1.0.0&#xA;Require-Bundle: org.jdom,&#xA; org.log4j,&#xA; com.kingdee.bos.ksql&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.kingdee.bos.solutiontemplate' version='6.2.0' singleton='false'>
+      <update id='com.kingdee.bos.solutiontemplate' range='[0.0.0,6.2.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='BIM_TEMPLATE'/>
+        <property name='org.eclipse.equinox.p2.provider' value='KINGDEE.COM'/>
+        <property name='file.name' value='D:\bos\BOSModular\bim\eclipse\plugins\com.kingdee.bos.bim_template_6.1.0'/>
+        <property name='file.lastModified' value='1540115302609'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.solutiontemplate' version='6.2.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.solutiontemplate' version='6.2.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.osgi' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.core.runtime' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.solutiontemplate' version='6.2.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Import-Package: org.eclipse.core.runtime&#xA;Bundle-ManifestVersion: 2&#xA;Bundle-Version: 6.2.0&#xA;Require-Bundle: org.eclipse.ui,org.eclipse.osgi&#xA;Manifest-Version: 1.0&#xA;Bundle-SymbolicName: com.kingdee.bos.solutiontemplate&#xA;Bundle-Name: BIM_TEMPLATE&#xA;Bundle-Vendor: KINGDEE.COM&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+  </units>
+</repository>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+	<function-all name="全局函数">
+		<function>
+			<name>ISNULL</name>
+			<formula>ISNULL(参数)</formula>
+			<description>ISNULL(参数):判断是否为空，参数为任意类型</description>	
+		</function>
+	</function-all>
+	<function-all name="数学函数">
+		<function>
+			<name>ABS</name>
+			<formula>ABS(参数)</formula>
+			<description>ABS(参数): 数学函数的绝对值,参数为有符号的整数</description>
+		</function>
+	</function-all>
+	<function-all name="字符函数">
+		<function>
+			<name>LEN</name>
+			<formula>LEN(参数)</formula>
+			<description>LEN(参数): 返回字符串长度,参数为字符串</description>
+		</function>
+		<function>
+			<name>TRIM</name>
+			<formula>TRIM(参数)</formula>
+			<description>TRIM(参数): 除去字符串中的首尾空字符,参数为字符串</description>	
+		</function>
+		<function>
+			<name>LEFT</name>
+			<formula>LEFT(参数1,参数2)</formula>
+			<description>LEFT(参数1,参数2):返回字符串左边位数,参数1:字符串,参数2:要返回的左边几位字符串</description>	
+		</function>
+		<function>
+			<name>RIGHT</name>
+			<formula>RIGHT(参数1,参数2)</formula>
+			<description>RIGHT(参数1,参数2):返回字符串右边位数,参数1:字符串,参数2:要返回的右边几位字符串</description>		
+		</function>
+		<function>
+			<name>UPPER</name>
+			<formula>UPPER(参数)</formula>
+			<description>UPPER(参数):把字符串转化成大写,参数为字符串</description>	
+		</function>
+		<function>
+			<name>LOWER</name>
+			<formula>LOWER(参数)</formula>
+			<description>LOWER(参数):把字符串转化成小写,参数为字符串</description>	
+		</function>
+	</function-all>
+	<function-all name="日期函数">
+		<function>
+			<name>NOW</name>
+			<formula>NOW()</formula>
+    		<description>NOW():返回当前日期</description>	
+		</function>
+		<function>
+			<name>YEAR</name>
+			<formula>YEAR(参数)</formula>
+			<description>YEAR(参数):返回日期的年份,参数为日期</description>	
+		</function>
+		<function>
+			<name>MONTH</name>
+			<formula>MONTH(参数)</formula>
+			<description>MONTH(参数):返回日期的月份,参数为日期</description>	
+		</function>
+		<function>
+			<name>DAY</name>
+			<formula>DAY(参数)</formula>
+			<description>DAY(参数):返回日期的日,参数为日期</description>	
+		</function>
+		<function>
+			<name>HOUR</name>
+			<formula>HOUR(参数)</formula>
+			<description>HOUR(参数):返回日期时间的时,参数为日期</description>	
+		</function>
+		<function>
+			<name>MINUTE</name>
+			<formula>MINUTE(参数)</formula>
+			<description>MINUTE(参数):返回日期时间的分,参数为日期</description>		
+		</function>
+		<function>
+			<name>SECOND</name>
+			<formula>SECOND(参数)</formula>
+			<description>SECOND(参数):返回日期时间的秒,参数为日期</description>	
+		</function>
+		<function>
+			<name>DATEADD</name>
+			<formula>DATEADD(参数1,参数2)</formula>
+			<description>DATEADD(参数1,参数2):返回日期的相加值,参数1为开始日期,参数2为日期增量</description>	
+		</function>
+		<function>
+			<name>DATEDIFF</name>
+			<formula>DATEDIFF(参数1,参数2)</formula>
+			<description>DATEDIFF(参数1,参数2):返回日期的相减值,参数1为开始日期,参数2为日期减量</description>	
+		</function>
+	</function-all>
+	<function-all name="集合函数">
+		<function>
+			<name>SUM</name>
+			<formula>SUM(参数)</formula>
+			<description>SUM(参数):求和函数,参数为分录数值字段</description>	
+		</function>
+		<function>
+			<name>AVG</name>
+			<formula>AVG(参数)</formula>
+			<description>AVG(参数):求平均数函数,参数为分录数值字段</description>	
+		</function>
+		<function>
+			<name>MAX</name>
+			<formula>MAX(参数)</formula>
+			<description>MAX(参数):求最大值函数,参数为分录数值字段</description>	
+		</function>
+		<function>
+			<name>MIN</name>
+			<formula>MIN(参数)</formula>
+			<description>MIN(参数):求最小值函数,参数为分录数值字段</description>	
+		</function>
+		<function>
+			<name>COUNT</name>
+			<formula>COUNT(参数)</formula>
+			<description>COUNT(参数):求行数总和,参数为分录字段</description>	
+		</function>
+	</function-all>
+</functions>
+

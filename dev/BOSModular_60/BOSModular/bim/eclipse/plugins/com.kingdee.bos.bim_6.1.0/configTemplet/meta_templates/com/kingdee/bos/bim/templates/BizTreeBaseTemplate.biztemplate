@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizTemplate xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.bos.bim.templates</package>
+    <name>BizTreeBaseTemplate</name>
+    <alias>bizTemplate[com.kingdee.bos.bim.templates.BizTreeBaseTemplate].alias</alias>
+    <description>bizTemplate[com.kingdee.bos.bim.templates.BizTreeBaseTemplate].description</description>
+    <userDefined>false</userDefined>
+    <bizType>BaseData</bizType>
+    <template>false</template>
+    <entityPK>com.kingdee.bos.bim.templates.app.BizTreeBase</entityPK>
+    <queryPK>com.kingdee.bos.bim.templates.app.BizTreeBaseQuery</queryPK>
+    <editUIPK>com.kingdee.bos.bim.templates.client.BizTreeBaseEditUI</editUIPK>
+    <listUIPK>com.kingdee.bos.bim.templates.client.BizTreeBaseListUI</listUIPK>
+    <entityFunctionPK />
+    <editUIFunctionPK />
+    <listUIFunctionPK />
+    <entryUIPK />
+    <versionDate />
+    <versionNumber />
+    <extendTablePKs />
+    <extendEntityPKs />
+    <extendQueryPKs />
+    <extendEditUIPKs />
+    <extendListUIPKs />
+    <menuPKList />
+    <bimTemplateType>TreeBase</bimTemplateType>
+    <relatedTablePK />
+    <relatedEntityPK />
+    <relatedEditUIPK />
+    <genImplementCode>true</genImplementCode>
+    <resource>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizTreeBaseTemplate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="基础资料模板" />
+            <lang locale="zh_TW" value="基礎資料範本" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizTreeBaseTemplate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="基础资料模板" />
+            <lang locale="zh_TW" value="基礎資料範本" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizTreeBaseTemplate].extendedProperty.BizUnitDeployed">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizTreeBaseTemplate].extendedProperty.bimTemplateType">
+            <lang locale="en_US" value="TreeBase" />
+            <lang locale="zh_CN" value="TreeBase" />
+            <lang locale="zh_TW" value="TreeBase" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizTreeBaseTemplate].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizTreeBaseTemplate].extendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="name" />
+            <lang locale="zh_CN" value="name" />
+            <lang locale="zh_TW" value="name" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizTreeBaseTemplate].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.bos.bim.templates.app.BizTreeBaseQuery" />
+            <lang locale="zh_CN" value="com.kingdee.bos.bim.templates.app.BizTreeBaseQuery" />
+            <lang locale="zh_TW" value="com.kingdee.bos.bim.templates.app.BizTreeBaseQuery" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizTreeBaseTemplate].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizTreeBaseTemplate].extendedProperty.isSimpleEntity">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizTreeBaseTemplate].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizTemplate>
+

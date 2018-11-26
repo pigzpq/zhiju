@@ -1,0 +1,27 @@
+<table cellpadding="0" cellspacing="10" style="font-size:12px">
+	<tr style="height:30px">
+		<td style="width:200px" rowspan="2">
+			<div sue="treeDiv" style="border:solid 1px #718BB7;padding:10px;width:200px;height:480px;overflow:auto;background-color:#FFF"></div>
+		</td>
+		<td style="width:520px;vertical-align:bottom">
+			目标：
+			<select sue="chooseTarget" style="margin-right:30px;width:130px">
+				<option value="">请选择...</option>
+			</select>
+			事件：
+			<select sue="chooseEvent" style="margin-right:30px;width:130px">
+				<option value="">请选择...</option>
+			</select>
+			<button sue="testBtn" class="portal_button">脚本静态检查</button>
+		</td>
+	</tr>
+	<tr style="height:440px">
+		<td style="width:520px">
+			<textarea sue="scriptArea" disabled="true" wrap="off" style="font-size:14px;font-family:'Courier New';padding:10px;line-height:16px;border:solid 1px #718BB7;background-color:#FFF;width:520px;height:440px;">请选择要对其编程的目标</textarea>
+		</td>
+	</tr>
+	<tr style="height:20px">
+		<td colspan="2" sue="helpTD" style="font-family:'Courier New'">
+		</td>
+	</tr>
+</table>

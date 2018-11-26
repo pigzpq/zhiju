@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<welcomePage title="KINGDEE 业务管理平台" format="wrap">
+	<intro>本页将帮助您快速使用 KINGDEE 业务管理平台。
+你可以通过下面的向导快速的使用业务管理平台。 </intro>
+	<item>
+		<b>业务管理平台</b>
+		<p>通过Studio进行建模设计时请打开主透视图<action pluginId="com.kingdee.bos.bim" class="com.kingdee.bos.bim.perspective.OpenBIMPerspectiveAction">窗口 - 打开透视图 - 其他 - 金蝶业务管理平台</action>。</p>
+	</item>
+	<item>
+		<b>导入解决方案</b>
+		<p>开始导入解决方案请通过<action pluginId="com.kingdee.bos.bim" class="com.kingdee.bos.bim.actions.ImportProjectAction">文件 - 导入解决方案</action>。</p>
+	</item>
+</welcomePage>

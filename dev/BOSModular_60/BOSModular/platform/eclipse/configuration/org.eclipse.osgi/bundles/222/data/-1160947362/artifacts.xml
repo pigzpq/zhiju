@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository class='org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository' version='1.0.0'?>
+<repository name='dropins artifact repo: file:/D:/bos/BOSModular/svn/' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.system' value='true'/>
+    <property name='p2.timestamp' value='1540128716640'/>
+  </properties>
+  <mappings size='3'>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='12'>
+    <artifact classifier='osgi.bundle' id='org.tigris.subversion.clientadapter' version='1.5.2'>
+      <properties size='2'>
+        <property name='artifact.size' value='76859'/>
+        <property name='download.size' value='76859'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/svn/eclipse/plugins/org.tigris.subversion.clientadapter_1.5.2.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\svn\eclipse\plugins\org.tigris.subversion.clientadapter_1.5.2.jar'/>
+        <property name='file.lastModified' value='1222395980000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.tigris.subversion.subclipse.graph' version='1.0.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='121233'/>
+        <property name='download.size' value='121233'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/svn/eclipse/plugins/org.tigris.subversion.subclipse.graph_1.0.1.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\svn\eclipse\plugins\org.tigris.subversion.subclipse.graph_1.0.1.jar'/>
+        <property name='file.lastModified' value='1228453996000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.tigris.subversion.subclipse.ui' version='1.4.7'>
+      <properties size='2'>
+        <property name='artifact.size' value='1730658'/>
+        <property name='download.size' value='1730658'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/svn/eclipse/plugins/org.tigris.subversion.subclipse.ui_1.4.7.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\svn\eclipse\plugins\org.tigris.subversion.subclipse.ui_1.4.7.jar'/>
+        <property name='file.lastModified' value='1228453632000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.tigris.subversion.subclipse.core' version='1.4.7'>
+      <properties size='2'>
+        <property name='artifact.size' value='284697'/>
+        <property name='download.size' value='284697'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/svn/eclipse/plugins/org.tigris.subversion.subclipse.core_1.4.7.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\svn\eclipse\plugins\org.tigris.subversion.subclipse.core_1.4.7.jar'/>
+        <property name='file.lastModified' value='1228453630000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.tigris.subversion.subclipse.doc' version='1.3.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='2342937'/>
+        <property name='download.size' value='2342937'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/svn/eclipse/plugins/org.tigris.subversion.subclipse.doc_1.3.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\svn\eclipse\plugins\org.tigris.subversion.subclipse.doc_1.3.0.jar'/>
+        <property name='file.lastModified' value='1222396028000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.tigris.subversion.subclipse.mylyn' version='3.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='17722'/>
+        <property name='download.size' value='17722'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/svn/eclipse/plugins/org.tigris.subversion.subclipse.mylyn_3.0.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\svn\eclipse\plugins\org.tigris.subversion.subclipse.mylyn_3.0.0.jar'/>
+        <property name='file.lastModified' value='1214877180000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.tigris.subversion.clientadapter.javahl' version='1.5.4.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='153771'/>
+        <property name='download.size' value='153771'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/svn/eclipse/plugins/org.tigris.subversion.clientadapter.javahl_1.5.4.1.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\svn\eclipse\plugins\org.tigris.subversion.clientadapter.javahl_1.5.4.1.jar'/>
+        <property name='file.lastModified' value='1228453838000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.tmatesoft.svnkit' version='1.2.1.5297'>
+      <properties size='2'>
+        <property name='artifact.size' value='3148185'/>
+        <property name='download.size' value='3148185'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/svn/eclipse/plugins/org.tmatesoft.svnkit_1.2.1.5297.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\svn\eclipse\plugins\org.tmatesoft.svnkit_1.2.1.5297.jar'/>
+        <property name='file.lastModified' value='1228453160000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.tigris.subversion.subclipse.mylyn' version='2.0.4'>
+      <properties size='2'>
+        <property name='artifact.size' value='17581'/>
+        <property name='download.size' value='17581'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/svn/eclipse/plugins/org.tigris.subversion.subclipse.mylyn_2.0.4.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\svn\eclipse\plugins\org.tigris.subversion.subclipse.mylyn_2.0.4.jar'/>
+        <property name='file.lastModified' value='1214877180000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.tigris.subversion.clientadapter.svnkit' version='1.5.4'>
+      <properties size='2'>
+        <property name='artifact.size' value='76627'/>
+        <property name='download.size' value='76627'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/svn/eclipse/plugins/org.tigris.subversion.clientadapter.svnkit_1.5.4.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\svn\eclipse\plugins\org.tigris.subversion.clientadapter.svnkit_1.5.4.jar'/>
+        <property name='file.lastModified' value='1228453942000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.sun.jna' version='3.0.9'>
+      <properties size='2'>
+        <property name='artifact.size' value='784476'/>
+        <property name='download.size' value='784476'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/svn/eclipse/plugins/com.sun.jna_3.0.9.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\svn\eclipse\plugins\com.sun.jna_3.0.9.jar'/>
+        <property name='file.lastModified' value='1228453160000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.tigris.subversion.clientadapter.javahl.win32' version='1.5.4'>
+      <properties size='2'>
+        <property name='artifact.size' value='2392776'/>
+        <property name='download.size' value='2392776'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/svn/eclipse/plugins/org.tigris.subversion.clientadapter.javahl.win32_1.5.4.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\svn\eclipse\plugins\org.tigris.subversion.clientadapter.javahl.win32_1.5.4.jar'/>
+        <property name='file.lastModified' value='1224809150000'/>
+      </repositoryProperties>
+    </artifact>
+  </artifacts>
+</repository>

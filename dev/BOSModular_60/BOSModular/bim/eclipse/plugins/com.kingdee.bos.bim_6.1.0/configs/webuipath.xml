@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="gbk"?>
+<configSet>
+	<property name="nlFile" value=""/>
+	<property name="description" value="WEBUI相关设置"/>
+	<property name="layout"	value="3"/>
+	<item>
+		<name>path.meta</name>
+		<alias>Metadata目录</alias>
+		<value>webmeta</value>
+		<valueType>string</valueType>
+		<properties>
+			<property name="UITYPE"		value="DIR_SELECTOR"/>
+			<property name="tips"		value="设置WEBUI的元数据保存路径"/>
+			<property name="fileType"	value="dir"/>
+		</properties>
+	</item>
+	<item>
+		<name>path.deploy</name>
+		<alias>元数据发布路径</alias>
+		<value>deployed_meta_web</value>
+		<valueType>string</valueType>
+		<properties>
+			<property name="UITYPE"		value="DIR_SELECTOR"/>
+			<property name="tips"		value="WEB元数据的发布路径"/>
+		</properties>
+	</item>
+	<item>
+		<name>path.webroot</name>
+		<alias>WEB根路径</alias>
+		<value>Myweb</value>
+		<valueType>string</valueType>
+		<properties>
+			<property name="UITYPE"		value="DIR_SELECTOR"/>
+			<property name="tips"		value="WEB的根路径"/>
+		</properties>
+	</item>
+	<item>
+		<name>path.appname</name>
+		<alias>WEB应用名称</alias>
+		<value>myweb.war</value>
+		<valueType>string</valueType>
+		<properties>
+			<property name="UITYPE"		value="SINGLE_TEXT"/>
+			<property name="tips"		value="WEB应用的名称"/>
+			<property name="AFECell"	value="1"/>
+		</properties>
+	</item>
+	<item>
+		<name>path.appmapname</name>
+		<alias>WEB映射名称</alias>
+		<value>myweb</value>
+		<valueType>string</valueType>
+		<properties>
+			<property name="UITYPE"		value="SINGLE_TEXT"/>
+			<property name="tips"		value="WEB映射的名称"/>
+			<property name="AFECell"	value="1"/>
+		</properties>
+	</item>
+</configSet>

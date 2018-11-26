@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cem:CommonEvent xmlns:cem="http://www.kingdee.com/bos/event/model/cem">
+  <cem:Id>79366a86-0119-1000-e000-0003c0a813a5WFEVPRCM</cem:Id>
+  <cem:Name>其他事件</cem:Name>
+  <cem:Alias>其他类型事件</cem:Alias>
+  <cem:Description>其他测试事件</cem:Description>
+  <cem:Type>其他</cem:Type>
+  <cem:Version>1.0</cem:Version>
+  <cem:Priority>50</cem:Priority>
+  <cem:Severity>50</cem:Severity>
+  <cem:Group>其他</cem:Group>
+  <cem:ExtendedDatas>
+    <cem:ExtendedData>
+      <cem:Name>userId4</cem:Name>
+      <cem:DataType>java.lang.String</cem:DataType>
+      <cem:Value></cem:Value>
+      <cem:DefaultValue></cem:DefaultValue>
+      <cem:MappingParameterName></cem:MappingParameterName>
+    </cem:ExtendedData>
+    <cem:ExtendedData>
+      <cem:Name>sessionId4</cem:Name>
+      <cem:DataType>java.lang.String</cem:DataType>
+      <cem:Value></cem:Value>
+      <cem:DefaultValue></cem:DefaultValue>
+      <cem:MappingParameterName></cem:MappingParameterName>
+    </cem:ExtendedData>
+    <cem:ExtendedData>
+      <cem:Name>context4</cem:Name>
+      <cem:DataType>com.kingdee.bos.dao.IObjectValue</cem:DataType>
+      <cem:MappingParameterName></cem:MappingParameterName>
+    </cem:ExtendedData>
+  </cem:ExtendedDatas>
+</cem:CommonEvent>

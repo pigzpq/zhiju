@@ -1,0 +1,51 @@
+<project name="deployBIMProject" default="deploy">
+	<taskdef name="mytask" classname="com.kingdee.bos.bim.ant.task.MyTask"/>
+	<taskdef name="metaDataDeployTask" classname="com.kingdee.bos.bim.ant.task.MetaDataDeployTask"/>
+	<taskdef name="dbSyncTask" classname="com.kingdee.bos.bim.ant.task.DbSyncTask"/>
+	<taskdef name="createMenuTask" classname="com.kingdee.bos.bim.ant.task.EASMenuCreatorTask"/>
+	<target name="init" description="初始化">
+		<mytask description="测试系统当前的环境变量"/>
+	</target>
+	<target name="metadataDeploy" description="发布元数据">
+		<mkdir dir="${projectDir}\${src}\$srctmp"/>
+		<metaDataDeployTask 
+			srcDir="${projectDir}\${src}\$srctmp" 
+			configDir="${projectDir}\${deploy}" 
+			repositoryDir="${projectDir}\${repository}" 
+			isDeploySrc="true" 
+			isDeployConfig="true"
+			isDeployRepository="true"
+			agentConfigFile="${dir.project}/DeployAgent.xml"
+			projectRoot = "${dir.project}"/>
+				
+		<copy todir="${projectDir}\${src}">
+			<fileset dir="${projectDir}\${src}\$srctmp">
+				<include name="**/*.properties"/>
+				<include name="**/Abstratc*.java"/>
+			</fileset>
+		</copy>
+		<delete dir="${projectDir}\${src}\$srctmp" includeemptydirs="yes"/>
+	</target>
+	<target name="dbSync" description="同步数据库">
+		<dbSyncTask driverClass="${driverClass}" jdbcUrl="${jdbcUrl}" user="${user}" password="${password}" projectRoot="${dir.project}"/>
+	</target>
+	<target name="compile" description="编译">
+		<javac srcdir="${projectDir}/${src}" destdir="${projectDir}/${classesDir}" memoryMaximumSize="256M" fork="true" debug="on" source="1.4" target="1.4">
+			<classpath>
+				<fileset dir="${projectDir}\${lib}">
+					<include name="**/*.zip"/>
+					<include name="**/*.jar"/>
+				</fileset>
+			</classpath>
+		</javac>
+		<copy todir="${projectDir}\${classesDir}">
+			<fileset dir="${projectDir}\${src}">
+				<include name="**/*.properties"/>
+			</fileset>
+		</copy>
+	</target>
+	<target name="createMenu" description="创建菜单">
+		<createMenuTask driverClass="${driverClass}" jdbcUrl="${jdbcUrl}" user="${user}" password="${password}" projectRoot="${dir.project}"/>
+	</target>
+	<target name="deploy" depends="init, metadataDeploy, compile,dbSync,createMenu"/>
+</project>

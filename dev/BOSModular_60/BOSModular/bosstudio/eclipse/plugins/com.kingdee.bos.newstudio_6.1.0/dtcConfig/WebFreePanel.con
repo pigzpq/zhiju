@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by lhf (lcsoft) -->
+<Config>
+	<isContainer>true</isContainer>
+	<isVisual>true</isVisual>
+	<Properties>
+		<Property>
+			<name>jsvar</name>
+			<type>java.lang.String</type>
+			<defaultValue></defaultValue>
+			<editorType>302</editorType>
+			<group>基本</group>
+			<canDirectSet/>
+			<canBindData>false</canBindData>
+		</Property>
+		<Property>
+			<name>border</name>
+			<type>int</type>
+			<defaultValue>0</defaultValue>
+			<editorType>320</editorType>
+			<group>基本</group>
+			<isMultiLan>false</isMultiLan>
+			<canDirectSet/>
+			<canBindData>false</canBindData>
+			<enableEL>false</enableEL>
+		</Property>		
+	</Properties>
+	<Events>
+	</Events>
+</Config>

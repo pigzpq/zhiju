@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin name="%pluginName" id="com.jtds" version="1.2" provider-name="%providerName">
+	<runtime>		
+		<library name="jtds-1.2.jar">
+			<export name="*"/>
+		</library>
+	</runtime>
+</plugin>

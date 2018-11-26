@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!-- ====================================================================== 
+     2006-8-3 16:10:53                                                        
+
+     project    
+     description
+                   
+     gady2002                                                                
+     ====================================================================== -->
+<project name="project" default="sign">
+	<taskdef name="kingdeesignjar" classname="com.kingdee.bos.bim.ant.task.KingdeeSignTask"/>
+	
+    <target name="sign"  description="签名">
+    	
+    	<copy file="${jarpath}" todir="/" overwrite="true"></copy>
+    	<rename dest="${signedpath}/${jarname}" src="/${fileName}" replace="true"/>
+    	<kingdeesignjar jar="${signedpath}/${jarname}"  alias="${alias}" storepass="${storepass}"  keypass="${keypass}"  internalsf="true" sectionsonly="true"/>
+    </target>
+
+</project>
+

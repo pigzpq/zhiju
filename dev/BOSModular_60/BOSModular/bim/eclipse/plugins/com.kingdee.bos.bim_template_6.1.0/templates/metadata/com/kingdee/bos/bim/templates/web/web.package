@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.bos.bim.templates.web</package>
+    <name>web</name>
+    <alias>package[com.kingdee.bos.bim.templates.web.web].alias</alias>
+    <description>package[com.kingdee.bos.bim.templates.web.web].description</description>
+    <basicCode />
+    <resource>
+        <rs key="package[com.kingdee.bos.bim.templates.web.web].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="web" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="package[com.kingdee.bos.bim.templates.web.web].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</package>
+

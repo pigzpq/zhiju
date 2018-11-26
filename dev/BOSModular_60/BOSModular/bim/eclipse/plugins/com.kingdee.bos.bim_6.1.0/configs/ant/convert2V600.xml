@@ -1,0 +1,97 @@
+<project name="Convert_to_V600" default="convert">
+	
+	<taskdef name="mytask" classname="com.kingdee.bos.bim.ant.task.MyTask"/>
+	<taskdef name="dataSourceMigrateTask" classname="com.kingdee.bos.bim.ant.task.ApusicDataSourceMigrateTask"/>
+	<taskdef name="apusicDeployAppRepairTask" classname="com.kingdee.bos.bim.ant.task.ApusicDeployAppRepairTask"/>
+	  <taskdef name="bosConfigurationRepairTask" classname="com.kingdee.bos.bim.ant.task.BOSConfigurationRepairTask"/>
+	  <taskdef name="portalConfigFileRepairTask" classname="com.kingdee.bos.bim.ant.task.PortalConfigFileRepairTask"/>
+	  <taskdef name="unjarTask" classname="com.kingdee.bos.bim.ant.task.UnjarTask"/>
+	
+	<!--初始化，创建工程目录-->
+	 <target name="initial" description="创建运行时工程目录">
+	 	
+	    <mkdir dir="${dir.project}\runtime"/>
+	    <mkdir dir="${dir.project}\runtime\apusic"/>
+	 	<mkdir dir="${dir.project}\runtime\server"/>
+	 	<mkdir dir="${dir.project}\runtime\client"/>
+	    <mkdir dir="${dir.project}\logs"/>
+	  </target> 
+
+  <target name="convert" depends="initial" description="转换解决方案为V600兼容模式">
+  	<!--复制服务器端配置文件ctrlhome-->
+    <copy todir="${dir.project}\runtime\${server.ctrlhome}" description="复制服务器端配置文件ctrlhome">
+      <fileset dir="${dir.project}\runtime\ctrlhome">
+      	<include name="ctrlhome/**/*"/>
+      </fileset>
+    </copy>
+  	
+  	<!--处理配置类文件-->
+	<copy todir="${dir.project}\runtime\${server.properties}" failonerror="false" description="复制服务器端配置文件properties">
+      <fileset dir="${dir.project}\runtime">
+      	<include name="*"/>
+      	<exclude name="applications" />
+      	<exclude name="config" />
+  		<exclude name="ctrlhome" />
+  		<exclude name="CVS" />
+      	<exclude name="deploy" />
+      	<exclude name="fileserver.ear" />
+  		<exclude name="licenses" />
+  		<exclude name="portalConfig" />
+      	<exclude name="store" />
+      	<exclude name="apusic"/>
+      	<exclude name="server"/>
+      	<exclude name="client"/>
+      </fileset>
+    </copy>  	
+    <copy todir="${dir.project}\runtime\${server.config}" description="复制服务器端配置文件config自runtime">
+      <fileset dir="${dir.project}/runtime">
+        <include name="*"/>
+        <include name="portalConfig/**/*"/>
+      	<exclude name="applications" />
+      	<exclude name="config" />
+  		<exclude name="ctrlhome" />
+  		<exclude name="CVS" />
+      	<exclude name="deploy" />
+      	<exclude name="fileserver.ear" />
+  		<exclude name="licenses" />
+  		<exclude name="portalConfig" />
+      	<exclude name="store" />
+      	<exclude name="apusic"/>
+      	<exclude name="server"/>
+      	<exclude name="client"/>
+      </fileset>
+    </copy>  
+  	<copy todir="${dir.project}\runtime\${server.config}" description="复制服务器端配置文件config自deploy">
+  	      <fileset dir="${dir.project}\deploy">
+  	        <include name="*"/>
+  	        <include name="licenses/**/*"/>
+  	      </fileset>
+  	 </copy>  
+  	
+  	<copy todir="${dir.project}\runtime\${server.config}" description="复制license文件">
+  	      <fileset dir="${dir.sol_template}">
+    	  <include name="licensefile.xml"/>
+  	      <include name="licenses\*"/>
+  	      </fileset>
+  	</copy>
+  	
+    <copy todir="${dir.project}\runtime\client\" description="复制Client">
+    	<fileset dir="${dir.project}">
+    		<include name="client/**/*.*"/>
+    	</fileset>
+    </copy>
+  	
+	<!--解压runtime.zip  -->
+     <unjar src="${dir.sol_template}\runtime.zip" dest="${dir.project}\runtime" description="解压runtime.zip到运行时目录"/>
+
+  	
+  	<!--特殊项修复-->
+    <dataSourceMigrateTask testApusicHome="${dir.project}\runtime\apusic\" aisName="${aisName}" description="修改datasource配置文件"></dataSourceMigrateTask>
+    <!--apps=;${dir.project}\runtime\${server.easweb.ear};${dir.project}\runtime\${server.fileserver.ear}-->
+  	<apusicDeployAppRepairTask testApusicHome="${dir.project}\runtime\apusic\" apps="${dir.project}/runtime/server/deploy/eas.ear" description="修改apusic部署文件"></apusicDeployAppRepairTask>  	
+  	<bosConfigurationRepairTask bosconfigFile="${dir.project}\runtime\${server.file.bosconfig}" licenseFile="${dir.project}\runtime\${server.config}\licenses\license" delpoypath="${dir.project}\runtime\${server.config}" description="修改bosconfig配置文件"/>
+  	<portalConfigFileRepairTask configFile="${dir.project}\runtime\${server.config}\portalConfig\resourceSet.properties" runtimePath="${dir.project}/runtime/server/deploy/fileserver.ear/easWebClient/" description="修改portal配置文件"/>
+  	<!--<easMenuImportTask driverClass="${driverClass}" jdbcUrl="${jdbcUrl}" user="${user}" password="${password}" description="导入EAS主菜单"/>-->
+  
+  </target>
+</project>

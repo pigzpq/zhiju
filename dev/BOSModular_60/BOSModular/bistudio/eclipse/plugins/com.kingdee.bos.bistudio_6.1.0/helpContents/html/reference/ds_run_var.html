@@ -1,0 +1,23 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;">
+	<title>Main Topic</title>
+</head>
+
+<body>
+<h3>运行时变量</h3>
+<p>运行期、预览期变量设置。</p>
+<ol>
+  <ol>
+    <li>运行期变量解析类：指定变量解析类,如果不输入则默认使用公共变量解析类com.kingdee.eas.bi.subject.<strong>BaseVarProvider</strong><strong>。</strong>也可以自定义变量解析类，要求继承com.kingdee.eas.bi.subject.<strong>BaseVarProvider</strong>。</li>
+    <li>变量解析规则：</li>
+    <p>若数据源使用变量abc,则执行时将调用变量解析类的getAbc()方法,返回值不限制.</p>
+     <li>预览期变量：可以设置调试期的变量，该变量优先于变量解析类，如果使用到的变量在预览期变量中没有设置，则到解析类中获取。</li>
+    <li>建议：建立自己subject的变量解析类，在com.kingdee.eas.bi.subject下使用subjec t名建立新包。需要公用的变量可以抽取到<strong>BaseVarProvider</strong>类中。</li>
+  <p>设计界面如下：<br />
+<img src="../../images/reference/ds_run_var_1.png" width="815" height="439" />
+</p>
+  </ol>
+</ol>
+</body>
+</html>

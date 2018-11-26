@@ -1,0 +1,142 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=GB2312">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./2.1.2.files/filelist.xml">
+<title>对于操作提示，应用框架统一了提示方式</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>lulc</o:Author>
+  <o:LastAuthor>lulc</o:LastAuthor>
+  <o:Revision>1</o:Revision>
+  <o:TotalTime>0</o:TotalTime>
+  <o:Created>2005-12-23T01:44:00Z</o:Created>
+  <o:LastSaved>2005-12-23T01:44:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Company>lkjdf</o:Company>
+  <o:Lines>1</o:Lines>
+  <o:Paragraphs>1</o:Paragraphs>
+  <o:Version>9.3821</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:PunctuationKerning/>
+  <w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;}
+p.MsoNormalIndent, li.MsoNormalIndent, div.MsoNormalIndent
+	{margin-top:1.0pt;
+	margin-right:0cm;
+	margin-bottom:1.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:21.0pt;
+	mso-char-indent-count:2.0;
+	mso-char-indent-size:10.5pt;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:9.0pt;
+	font-family:宋体;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+ /* Page Definitions */
+@page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;
+	layout-grid:15.6pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+</head>
+
+<body lang=ZH-CN style='tab-interval:21.0pt;text-justify-trim:punctuation'>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+<p class=MsoNormalIndent>对于操作提示，应用框架统一了提示方式。如果界面中有状态条，则在状态条中提示；如果没有状态条，则为对应框方式处理。</p>
+
+<p class=MsoNormalIndent style='text-indent:21.1pt'><b><span lang=EN-US>1.意图：<o:p></o:p></span></b></p>
+
+<p class=MsoNormalIndent>在状态条中进行统一信息提示。</p>
+
+<p class=MsoNormalIndent style='text-indent:21.1pt'><b><span lang=EN-US>2.动机：<o:p></o:p></span></b></p>
+
+<p class=MsoNormalIndent>在企业信息管理系统中，用户与系统的交互非常多。在用户操作过程中，一些非法的提示、成功完成操作，不成功的操作，我们传统的做法是给用户一个对话框提示，显示这些信息。但这样一来，我们会增加用户的无意义的操作，中断用户的连续操作，对用户非常不友好。</p>
+
+<p class=MsoNormalIndent>为了解决这类问题，对于一些系统的提示，采用状态条进行统一的提示，减少用户的一些无意义的操作。用户仅在状态栏就可以获取系统信息。</p>
+
+<p class=MsoNormalIndent style='text-indent:21.1pt'><b><span lang=EN-US>3.适用性：<o:p></o:p></span></b></p>
+
+<p class=MsoNormalIndent>对用户的一些常用而且连续的操作界面，我们这种模式大大方便用户的交互。</p>
+
+<p class=MsoNormalIndent>对于无状态栏或信息较多的情况无能为力。</p>
+
+<p class=MsoNormalIndent style='text-indent:21.1pt'><b><span lang=EN-US>4.应用：<o:p></o:p></span></b></p>
+
+<p class=MsoNormalIndent><span lang=EN-US>CoreUI,EditUI</span></p>
+
+<p class=MsoNormalIndent style='text-indent:21.1pt'><b><span lang=EN-US>5.缺点及注意事项：<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>对于模式对话框，目前由于没有显示状态栏，所以此模式不生效。</span></p>
+
+</div>
+
+</body>
+
+</html>

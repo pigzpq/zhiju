@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+<plugin
+   id="com.kingdee.bos.welcome"
+   name="BOS Studio welcome"
+   version="4.1.0"
+   provider-name="Kingdee"
+   class="com.kingdee.bos.welcome.WelcomePagePlugin">
+
+   <runtime>
+      <library name="WelcomePage.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+   
+      <import plugin="org.eclipse.ui.intro" optional="true"/>
+      <import plugin="org.eclipse.ui.cheatsheets" optional="true"/>
+      <import plugin="org.eclipse.ui.forms" optional="true"/>
+      <import plugin="org.eclipse.ui" optional="true"/>
+   </requires>
+   -->
+<plugin>   
+   <extension id="ide" point="org.eclipse.core.runtime.products">
+      <product name="%productName" application="org.eclipse.ui.ide.workbench" description="%blurb">
+          <property name="windowImages" value="studio16.gif,studio32.gif"/>
+          <property name="aboutImage" value="about.gif"/>
+          <property name="aboutText" value="%blurb"/>
+          <property name="appName" value="BOS Studio"/>
+          <property name="preferenceCustomization" value="plugin_customization.ini"/>
+      </product>
+   </extension>
+
+   
+   <extension point="org.eclipse.ui.intro">
+      <intro
+            class="org.eclipse.ui.intro.config.CustomizableIntroPart"
+            id="com.kingdee.bos.studio.product.intro"
+            icon="studio16.gif">
+      </intro>
+      <introProductBinding
+            introId="com.kingdee.bos.studio.product.intro"
+            productId="com.kingdee.bos.studio.product.ide">
+      </introProductBinding>
+   </extension>
+   <extension   
+         id="intro"
+         point="org.eclipse.ui.intro.config">
+      <config
+            introId="com.kingdee.bos.studio.product.intro"
+            id="org.eclipse.platform.introConfig"
+            content="$nl$/introContent.xml">
+         <presentation
+               home-page-id="root" standby-page-id="standby">
+            <implementation
+                  ws="win32"
+                  style="css/shared.css"
+                  kind="html"
+                  os="win32">
+            </implementation>
+            <implementation
+                  kind="swt">
+            </implementation>
+         </presentation>
+      </config>
+   </extension>
+   <extension
+         point="org.eclipse.ui.cheatsheets.cheatSheetContent">
+         <category
+    		name="BOS Studio"
+     		id="com.kingdee.bos.studio.cheatsheetgroup">
+  		 </category>
+         
+         <cheatsheet
+         	category="com.kingdee.bos.studio.cheatsheetgroup"         	
+            name="%bos.studio.cheatsheet.name"
+            contentFile="$nl$/cheatsheets/BOSStudio.xml"
+            id="com.kingdee.bos.studio.cheatsheet">
+         	<description>
+            	%cheatsheet.bos.desc
+         	</description>
+         </cheatsheet>
+   </extension>
+   
+   <!-- =====================================================  -->
+   <!-- Standby Content Part contributions                     -->
+   <!-- =====================================================  -->
+   <!--
+   <extension point="org.eclipse.ui.intro.configExtension">
+      <standbyContentPart
+            id="org.eclipse.platform.cheatsheet"
+            class="org.eclipse.platform.internal.CheatSheetStandbyContent"
+            pluginId="org.eclipse.platform"/>
+   </extension>
+-->
+</plugin>

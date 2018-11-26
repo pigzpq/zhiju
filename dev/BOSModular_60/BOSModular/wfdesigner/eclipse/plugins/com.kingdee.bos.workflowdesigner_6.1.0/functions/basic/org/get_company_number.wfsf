@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="获取行政组织所委托公司编码">
+    <script><![CDATA[String companyId =  com.kingdee.eas.basedata.person.app.PersonToWFAdapter.getCompanyIdByAdminId(__bosContext, adminId); 
+			com.kingdee.eas.basedata.org.INewOrgUnitFacade iOrg =  com.kingdee.eas.basedata.org.NewOrgUnitFacadeFactory.getLocalInstance(__bosContext); 
+			com.kingdee.eas.basedata.org.CompanyOrgUnitInfo fiInfo =  (com.kingdee.eas.basedata.org.CompanyOrgUnitInfo)  
+			iOrg.getDelegateUnit(companyId,com.kingdee.eas.basedata.org.OrgType.Company); 
+			String companyNum = "";
+			if (fiInfo != null) { 
+				companyNum = fiInfo.getNumber(); 
+			}
+			return companyNum;]]></script>
+    <description><![CDATA[根据组织ID(一般可从单据中直接输出)
+获取公司的名称]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>STRING</type>
+      <array>false</array>
+      <description><![CDATA[返回公司的编码]]></description>
+    </return>
+    <parameter>
+      <name>orgID</name>
+      <type>STRING</type>
+      <array>false</array>
+      <description><![CDATA[组织ID]]></description>
+    </parameter>
+  </function>
+</functions>
+

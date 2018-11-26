@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="gb2312"?>
+<exceptions locale="L2" subsystem="kscript" type="执行错误">
+	<exception id="PARSE_ERROR">
+		<short>
+			<text>解析脚本时发生错误,脚本内容: {0}, 错误信息: {1}</text>
+			<param index="0">脚本内容</param>
+			<param index="1">错误信息</param>
+		</short>
+		<explain>
+			<reason>脚本编写错误</reason>
+		</explain>
+		<responses>
+			<response>检查并修改脚本</response>
+		</responses>
+	</exception>
+	
+	<exception id="ASSIGN_ARRAY_TO_NO_ARRAY">
+		<short>
+			<text>赋值时错误,不能将非数据类型的数据赋值给数据类型的对象,赋值表达式为{0} = {1}, 上下文内容为{2}</text>
+			<param index="0">左表达式</param>
+			<param index="1">右表达式</param>
+			<param index="2">上下文内容</param>
+		</short>
+		<explain>
+			<reason>脚本编写错误, 不能在数组与非数组类型的对象之间赋值</reason>
+		</explain>
+		<responses>
+			<response>检查并修改脚本</response>
+		</responses>
+	</exception>
+	
+	<exception id="METHOD_INVOKE_ERROR">
+		<short>
+			<text>方法调用错误.脚本片段: {0}, 方法名称: {1}, 错误信息: {2}, 上下文内容: {3}</text>
+			<param index="0">脚本片段</param>
+			<param index="1">方法名称</param>
+			<param index="2">错误信息</param>
+			<param index="3">上下文内容</param>
+		</short>
+		<explain>
+			<reason>方法调用错误</reason>
+			<reason>方法不存在</reason>
+		</explain>
+		<responses>
+			<response>检查方法是否存在</response>
+			<response>检查上下文中数据是否合法</response>
+		</responses>
+	</exception>
+	
+	<exception id="METHOD_INVOKE_ERROR_STATIC">
+		<short>
+			<text>静态方法调用错误.脚本片段: {0}, 方法名称: {1}, 错误信息: {2}, 上下文内容: {3}</text>
+			<param index="0">脚本片段</param>
+			<param index="1">方法名称</param>
+			<param index="2">错误信息</param>
+			<param index="3">上下文内容</param>
+		</short>
+		<explain>
+			<reason>方法调用错误</reason>
+			<reason>方法不存在</reason>
+			<reason>方法不是静态的</reason>
+		</explain>
+		<responses>
+			<response>检查方法是否存在并且为状态</response>
+			<response>检查上下文中数据是否合法</response>
+		</responses>
+	</exception>
+	
+	<exception id="LOCAL_VAR_ALREADY_DECLARED">
+		<short>
+			<text>本地变量已经定义过,不能重新定义.变量名:{0}, 脚本片段: {1}</text>
+			<param index="0">变量名</param>
+			<param index="1">脚本片段</param>
+			<param index="2">错误信息</param>
+			<param index="3">上下文内容</param>
+		</short>
+		<explain>
+			<reason>发现重复定义的本地变量</reason>
+		</explain>
+		<responses>
+			<response>修改本地变量的名称</response>
+			<response>去掉重复的定义语句</response>
+		</responses>
+	</exception>
+	
+	<exception id="UNSUPPORTED_STATEMENT">
+		<short>
+			<text>未支持的语句.类型为: {0} 不被支持,脚本片段: {1}</text>
+			<param index="0">类型</param>
+			<param index="1">脚本片段</param>
+		</short>
+		<explain>
+			<reason>KSCRIPT目前还不能被支持</reason>
+		</explain>
+		<responses>
+			<response>去掉不被支持的语句</response>
+		</responses>
+	</exception>
+	
+	<exception id="CONTINUE_POS_ERROR">
+		<short>
+			<text>CONTINUE语句不合法,不能在该处使用continue关键字.脚本片段: {0}</text>
+			<param index="0">脚本片段</param>
+		</short>
+		<explain>
+			<reason>continue关键字使用错误.</reason>
+		</explain>
+		<responses>
+			<response><![CDATA[修复相关语句.continue关键字只能用在for, while, do... while等循环语句中]]></response>
+		</responses>
+	</exception>
+
+	<exception id="WHILE_NO_CODITION_EX">
+		<short>
+			<text>语法错误:WHILE 语句或者DO-WHILE必须包含条件表达式. 脚本片断: {0}</text>
+			<param index="0">脚本片断</param>
+		</short>
+		<explain>
+			<reason>脚本编写错误,WHILE或者DO-WHILE语句缺少条件表达式</reason>
+		</explain>
+		<responses>
+			<response><![CDATA[修改脚本,正确的WHILE语句为:
+				while(条件表达式) {
+					循环执行语句;
+				}
+				或者
+				do {
+					循环执行语句;
+				} while(条件表达式)
+			]]></response>
+		</responses>
+	</exception>
+
+	<exception id="INDEX_EXPR_ERROR">
+		<short>
+			<text>执行错误,目标对象不是数组类型或者List对象,不能执行索引操作([]).表达式脚本:{0}, 实际值: {1}, 实际类型: {2}, 上下文环境: {3}</text>
+			<param index="0">表达式脚本</param>
+			<param index="1">实际值</param>
+			<param index="2">实际类型</param>
+			<param index="3">上下文</param>
+		</short>
+		<explain>
+			<reason>脚本执行错误,只能在List或者数组类型上执行索引操作([])</reason>
+		</explain>
+		<responses>
+			<response>请检查上下文环境</response>
+		</responses>
+	</exception>
+	
+	<exception id="SELFIncrement_NO_IDENTIFIER">
+		<short>
+			<text>执行自增操作错误,无法在上下文找到自增变量所对应的对象.脚本片段: {0}, 标识符: {1}, 上下文环境: {2}</text>
+			<param index="0">表达式脚本</param>
+			<param index="1">标识符</param>
+			<param index="2">上下文</param>
+		</short>
+		<explain>
+			<reason>错误地使用自增操作符++</reason>
+			<reason>未正确定义标识符</reason>
+		</explain>
+		<responses>
+			<response>请检查上下文环境</response>
+		</responses>
+	</exception>
+	
+	<exception id="SELFIncrement_NOT_IDENTIFIER">
+		<short>
+			<text>执行自增操作错误.自增操作符(++)对应的对象不是一个变量.脚本片段: {0}, 表达式: {1}</text>
+			<param index="0">脚本片段</param>
+			<param index="1">表达式</param>
+		</short>
+		<explain>
+			<reason>错误地使用自增操作符++</reason>
+			<reason>未正确定义标识符</reason>
+		</explain>
+		<responses>
+			<response>请检查上下文环境</response>
+		</responses>
+	</exception>
+	
+	<exception id="SELFDecrement_NO_IDENTIFIER">
+		<short>
+			<text>执行自减错误,无法在上下文找到自减变量所对应的对象.脚本片段: {0}, 标识符: {1}, 上下文环境: {2}</text>
+			<param index="0">表达式脚本</param>
+			<param index="1">标识符</param>
+			<param index="2">上下文</param>
+		</short>
+		<explain>
+			<reason>错误地使用自增操作符－－</reason>
+			<reason>未正确定义标识符</reason>
+		</explain>
+		<responses>
+			<response>请检查上下文环境</response>
+		</responses>
+	</exception>
+	
+	<exception id="SELFDecrement_NOT_IDENTIFIER">
+		<short>
+			<text>执行自减操作错误.自减操作符(--)对应的对象不是一个变量.脚本片段: {0}, 表达式: {1}</text>
+			<param index="0">脚本片段</param>
+			<param index="1">表达式</param>
+		</short>
+		<explain>
+			<reason>错误地使用自增操作符－－</reason>
+			<reason>未正确定义标识符</reason>
+		</explain>
+		<responses>
+			<response>请检查上下文环境</response>
+		</responses>
+	</exception>
+	
+	<exception id="Tilde_EXPR_ERROR">
+		<short>
+			<text>执行算术取反操作错误.算术取反操作符(~)的对象不是整型.脚本片段: {0}, 实际值: {1}, 实际类型: {2}, 上下文环境: {3}</text>
+			<param index="0">脚本片段</param>
+			<param index="1">实际值</param>
+			<param index="2">实际类型</param>
+			<param index="3">上下文环境</param>
+		</short>
+		<explain>
+			<reason>错误地使用算术取反操作符~, ~只能作用于整数类型的变量上</reason>
+		</explain>
+		<responses>
+			<response>请检查上下文环境</response>
+		</responses>
+	</exception>
+	
+	<exception id="Not_EXPR_ERROR">
+		<short>
+			<text>执行逻辑取反操作错误.算术逻辑操作符(!)的对象不是布尔类型.脚本片段: {0}, 实际值: {1}, 实际类型: {2}, 上下文环境: {3}</text>
+			<param index="0">脚本片段</param>
+			<param index="1">实际值</param>
+			<param index="2">实际类型</param>
+			<param index="3">上下文环境</param>
+		</short>
+		<explain>
+			<reason>错误地使用逻辑取反操作符!, !只能作用于布尔类型的变量上</reason>
+		</explain>
+		<responses>
+			<response>请检查上下文环境</response>
+		</responses>
+	</exception>
+	
+	<exception id="ARRAY_CREATE_NO_CLS">
+		<short>
+			<text>初始化数组对象出错,找不到数组中的对象类型.表达式: {0}, 类型名称: {1}</text>
+			<param index="0">表达式</param>
+			<param index="1">类型名称</param>
+		</short>
+		<explain>
+			<reason>找不到所指的对象类型</reason>
+		</explain>
+		<responses>
+			<response>请检查上下文环境</response>
+			<response>请检查类名拼写是否正确(大小写敏感)</response>
+			<response>指定的类是否已经放到JAVA类路径当中</response>
+		</responses>
+	</exception>
+	
+	<exception id="OBJECT_CREATE_NO_CLS">
+		<short>
+			<text>初始化对象出错,找不到对象类型.表达式: {0}, 类型名称: {1}</text>
+			<param index="0">表达式</param>
+			<param index="1">类型名称</param>
+		</short>
+		<explain>
+			<reason>找不到所指的对象类型</reason>
+		</explain>
+		<responses>
+			<response>请检查上下文环境</response>
+			<response>请检查类名拼写是否正确(大小写敏感)</response>
+			<response>指定的类是否已经放到JAVA类路径当中</response>
+			<response><![CDATA[KScript中除基本类型及String, Object外,其它对象的引用必须指明其所在的包,举例:
+		初始化在包com.kingdee.test包中的MyClass对象时
+		错误写法: obj = new MyClass();
+		正确写法: obj = new com.kingdee.test.MyClass();
+			]]></response>
+		</responses>
+	</exception>
+	
+	<exception id="OBJECT_CREATE_NO_CONSTRUCTOR">
+		<short>
+			<text>初始化对象出错,找不到对应的构建方法.表达式: {0}, 类型名称: {1}</text>
+			<param index="0">表达式</param>
+			<param index="1">类型名称</param>
+		</short>
+		<explain>
+			<reason>找不到合适的构建方法</reason>
+		</explain>
+		<responses>
+			<response>请检查上下文环境</response>
+			<response>请检查方法名拼写是否正确(大小写敏感)</response>
+			<response>请检查参数个数是否匹配</response>
+			<response>请检查是否更新了JAVA类路径中的包/类</response>
+		</responses>
+	</exception>
+	
+	<exception id="OBJECT_construct_error">
+		<short>
+			<text>初始化对象出错,实例化时抛出异常.表达式: {0}, 构建方法: {1}, 异常信息: {2}, 上下文环境: {3}</text>
+			<param index="0">表达式</param>
+			<param index="1">构建方法</param>
+			<param index="2">异常信息</param>
+			<param index="3">上下文环境</param>
+		</short>
+		<explain>
+			<reason>实例化时抛出异常</reason>
+		</explain>
+		<responses>
+			<response>请检查上下文环境</response>
+		</responses>
+	</exception>
+	
+	<exception id="ABS_PARAM_NOT_NUM">
+		<short>
+			<text>执行abs()函数时出错,abs方法的参数必须是数字类型.表达式: {0}, 实际参数值: {1}, 实际参数类型: {2}</text>
+			<param index="0">表达式</param>
+			<param index="1">实际参数值</param>
+			<param index="2">实际参类型</param>
+		</short>
+		<explain>
+			<reason>执行abs()函数时出错,abs方法的参数必须是数字类型</reason>
+		</explain>
+		<responses>
+			<response>请检查上下文环境</response>
+		</responses>
+	</exception>
+	
+	<exception id="EVAL_PARAM_NOT_STRING">
+		<short>
+			<text>执行eval()函数时出错,eval方法的参数必须是字符串.EVAL表达式: {0}, 非法参数表达式: {1}</text>
+			<param index="0">表达式</param>
+			<param index="1">实际表达式</param>
+		</short>
+		<explain>
+			<reason>执行eval()函数时出错,eval方法的参数必须是字符串</reason>
+		</explain>
+		<responses>
+			<response>请检查上下文环境</response>
+		</responses>
+	</exception>
+	
+	<exception id="LEN_PARAM_NOT_SUIT">
+		<short>
+			<text>执行len()函数时出错,len方法的参数必须是字符串或者数组对象.len表达式: {0}, 参数表达式: {1}, 参数类型: {2}</text>
+			<param index="0">表达式</param>
+			<param index="1">实际表达式</param>
+			<param index="2">参数类型</param>
+		</short>
+		<explain>
+			<reason>执行len()函数时出错,,len方法的参数必须是字符串或者数组对象</reason>
+		</explain>
+		<responses>
+			<response>请检查上下文环境</response>
+		</responses>
+	</exception>
+	
+	<exception id="EXEC_METHOD_IllegalArgument">
+		<short>
+			<text>执行方法错误,参数错误.对象: {0}, 方法: {1}, 参数表: {2}, 上下文环境: {3}, 错误信息: {4}</text>
+			<param index="0">对象</param>
+			<param index="1">方法</param>
+			<param index="2">方法</param>
+			<param index="3">上下文环境</param>
+			<param index="4">错误信息</param>
+		</short>
+		<explain>
+			<reason>指定执行的对象上找不到待执行的方法</reason>
+			<reason>方法的参数个数不匹配</reason>
+			<reason>进行参数转换时出错</reason>
+		</explain>
+		<responses>
+			<response>请检查上下文环境</response>
+		</responses>
+	</exception>
+	
+	<exception id="EXEC_METHOD_IllegalAccess">
+		<short>
+			<text>执行方法错误,JAVA无法访问资源.对象: {0}, 方法: {1}, 参数表: {2}, 上下文环境: {3}, 错误信息: {4}</text>
+			<param index="0">对象</param>
+			<param index="1">方法</param>
+			<param index="2">参数表</param>
+			<param index="3">上下文环境</param>
+			<param index="4">错误信息</param>
+		</short>
+		<explain>
+			<reason>JAVA无法访问指定的资源</reason>
+		</explain>
+		<responses>
+			<response>请检查上系统环境</response>
+		</responses>
+	</exception>
+	
+	<exception id="EXEC_METHOD_InvocationTarget">
+		<short>
+			<text>执行方法错误,JAVA方法抛出异常.对象: {0}, 方法: {1}, 参数表: {2}, 上下文环境: {3}, 错误信息: {4}</text>
+			<param index="0">对象</param>
+			<param index="1">方法</param>
+			<param index="2">方法</param>
+			<param index="3">上下文环境</param>
+			<param index="4">错误信息</param>
+		</short>
+		<explain>
+			<reason>JAVA方法抛出时抛出异常</reason>
+		</explain>
+		<responses>
+			<response>请检查上下文环境及JAVA代码</response>
+		</responses>
+	</exception>
+	
+	<exception id="EXEC_METHOD_NotFound">
+		<short>
+			<text>执行方法错误,找不到指定的方法.对象类型: {0}, 方法名称: {1}, 参数表: {2}, 上下文环境: {3}</text>
+			<param index="0">对象类型</param>
+			<param index="1">方法名称</param>
+			<param index="2">参数表</param>
+			<param index="3">上下文环境</param>
+		</short>
+		<explain>
+			<reason>指定执行的对象上找不到该名称的方法</reason>
+			<reason>方法的参数个数不匹配</reason>
+		</explain>
+		<responses>
+			<response>请检查上下文环境,对象类型是否正确</response>
+			<response>检查方法名是否正确</response>
+			<response>检查方法参数个数是否正确</response>
+			<response>检查方法参数类型是否匹配</response>
+		</responses>
+	</exception>
+	
+	<exception id="EXEC_METHOD_FoundMulti">
+		<short>
+			<text>执行方法错误,找到多个匹配的方法.对象类型: {0}, 方法名称: {1}, 参数表: {2}, 上下文环境: {3}</text>
+			<param index="0">对象类型</param>
+			<param index="1">方法名称</param>
+			<param index="2">参数表</param>
+			<param index="3">上下文环境</param>
+		</short>
+		<explain>
+			<reason>指的方法有一个或多个重载的方法</reason>
+			<reason>指的参数有一个或多个为NULL值,并且造成歧义</reason>
+		</explain>
+		<responses>
+			<response>请检查上下文环境</response>
+		</responses>
+	</exception>
+	
+	<exception id="EVAL_PROP_OWNER_NULL">
+		<short>
+			<text>获取对象的属性错误,对象为NULL值.对象变量: {0}, 脚本片段: {1}, 上下文环境: {2}</text>
+			<param index="0">对象变量</param>
+			<param index="1">脚本片段</param>
+			<param index="2">上下文环境</param>
+		</short>
+		<explain>
+			<reason>上下文环境错误</reason>
+			<reason>脚本编写有误</reason>
+		</explain>
+		<responses>
+			<response>请检查上下文环境</response>
+			<response>请检查脚本</response>
+		</responses>
+	</exception>
+	
+	<exception id="EVAL_PROP_NO_PROP">
+		<short>
+			<text>获取对象的属性错误,找不到对应的属性或者方法.对象变量: {0}, 对象类型: {1}, 属性或方法名称: {2}, 上下文环境: {3}</text>
+			<param index="0">对象变量</param>
+			<param index="1">对象类型</param>
+			<param index="2">脚本片段</param>
+			<param index="3">上下文环境</param>
+		</short>
+		<explain>
+			<reason>上下文环境错误</reason>
+			<reason>脚本编写有误</reason>
+		</explain>
+		<responses>
+			<response>请检查上下文环境</response>
+			<response>请检查脚本</response>
+		</responses>
+	</exception>
+	
+	<exception id="EXEC_PROVIDER_ERROR">
+		<short>
+			<text>执行函数出错.在指定的函数提供类: {0} 上执行函数: {1} 时出错,出错信息为:{2}, 上下文环境为: {3}</text>
+			<param index="0">函数提供类</param>
+			<param index="1">函数名称</param>
+			<param index="2">出错信息</param>
+			<param index="3">上下文环境</param>
+		</short>
+		<explain>
+			<reason>上下文环境错误</reason>
+			<reason>脚本编写有误</reason>
+		</explain>
+		<responses>
+			<response>请检查上下文环境</response>
+			<response>请检查脚本</response>
+		</responses>
+	</exception>
+	
+	<exception id="bitwise_OP_ERROR">
+		<short>
+			<text>执行位操作错误, 位操作符{0}只能应用在两个数值类型的变量或常量,或者两个Set变量上.错误的表达式左表达式类型:{1}({2}), 右表达式类型{3}({4}) </text>
+			<param index="0">操作符</param>
+			<param index="1">左表达式值</param>
+			<param index="2">左表达式类型</param>
+			<param index="3">右表达式值</param>
+			<param index="4">右表达式类型</param>
+		</short>
+		<explain>
+			<reason>脚本编写错误,只能对两个数值类型变量或者两个集合(java.util.Set)进行位操作</reason>
+			<reason>变量的值在上下文环境中类型为非预期的数值类型</reason>
+		</explain>
+		<responses>
+			<response>请修改脚本,确认两个值都是数值类型或者都是Set类型</response>
+			<response>请检查上下文环境,确认两个值都是数值类型或者Set类型</response>
+			<response><![CDATA[KSCRIPT中,位操作包括以下几种
+		1.与操作(&): 用于计算两个数值的与操作结果,或者两个集合的交集;
+		2.或操作(|): 用于计算两个数值的或操作结果,或者两个集合的合集.与(-)并集操作不同的是.计算合集时会保留相同的元素
+		3.异或操作(^):用于计算两个数值的异或操作,或者两个集合中不相同部分的合集.
+	KSCRIPT中集合表示java.util.Set类型的对象,而数值类型包括以下几种
+		1.BigDecimal - BigDecimal
+		2.BigInteger - BigInteger (*)
+		3.float/double/int/long/short/byte - float/double/int/long/short/byte
+		4.Float/Double/Integer/Long/Short/Byte - Float/Double/Integer/Long/Short/Byte
+	其中BigInteger不能用于上面三种位操作.
+			]]></response>
+		</responses>
+	</exception>
+	
+	
+	<exception id="SHIFT_OP_ERROR">
+		<short>
+			<text>执行位移操作错误, 位移操作符{0}只能应用在两个整数类型的变量或常量上.错误的表达式左表达式类型:{1}({2}), 右表达式类型{3}({4}) </text>
+			<param index="0">操作符</param>
+			<param index="1">左表达式值</param>
+			<param index="2">左表达式类型</param>
+			<param index="3">右表达式值</param>
+			<param index="4">右表达式类型</param>
+		</short>
+		<explain>
+			<reason>脚本编写错误,只能对两个整数类型的变量进行位移</reason>
+			<reason>变量的值在上下文环境中类型为非预期的类型</reason>
+		</explain>
+		<responses>
+			<response>请修改脚本,确认两个值都是整数类型</response>
+			<response>请检查上下文环境,确认两个值都是整数类型</response>
+			<response><![CDATA[KSCRIPT中,位移操作包括以下几种
+		1.左移操作(<<): 用于计算左值向左位移一定位(右值),左移一位相当于除2
+		2.右移操作(>>): 用于计算左值向右位移一定位(右值),右移一位相当于乘2
+		3.循环右或操作(>>):用于计算左值向循环右位移一定位(右值),右移操作不同的是,循环右移将移出的位直接作为未位附加在原左值上.
+	位移操作的两个操作变量都必须是整数类型
+			]]></response>
+		</responses>
+	</exception>
+	
+	<exception id="MATH_OP_ERROR">
+		<short>
+			<text>执行算术操作错误, 算术操符{0}只能应用在两个数值类型的变量或常量上.错误的表达式左表达式类型:{1}({2}), 右表达式类型{3}({4}) </text>
+			<param index="0">操作符</param>
+			<param index="1">左表达式值</param>
+			<param index="2">左表达式类型</param>
+			<param index="3">右表达式值</param>
+			<param index="4">右表达式类型</param>
+		</short>
+		<explain>
+			<reason>脚本编写错误,只能对两个数值类型变量进行算术操作</reason>
+			<reason>变量的值在上下文环境中类型为非预期的类型</reason>
+		</explain>
+		<responses>
+			<response>请修改脚本,确认两个值都是数值类型</response>
+			<response>请检查上下文环境,确认两个值都是数值类型</response>
+			<response><![CDATA[KSCRIPT中,位操作包括以下几种
+		1.相加操作(+): 用于计算两个数值的和值; *[1]
+		2.相减操作(-): 用于计算两个数值的差值; *[2]
+		3.相乘操作(*): 用于计算两个数值的积值;
+		4.相除操作(/): 用于计算两个数值的除值;
+		5.取余操作(%): 用于计算两个整数的取模值; *[3]
+	KSCRIPT中数值类型包括以下几种
+		1.BigDecimal - BigDecimal
+		2.BigInteger - BigInteger (*)
+		3.float/double/int/long/short/byte - float/double/int/long/short/byte
+		4.Float/Double/Integer/Long/Short/Byte - Float/Double/Integer/Long/Short/Byte
+	*[1]可以对null值进行相加操作.此时null值相当于字符串的"null". 同时相加操作也可以作用于字符串类型,只要两个操作数的其中一个是字符,则会转为进行字符串连接操作.
+	*[2]相减操作(-)也可以用于两个集合(java.util.Set)类型的变量,表示对两个集合取并集,与操作符(|)不同的是并集会去掉相同的元素,只保留一个.
+	*[3]取余(模)操作只能应用于两个整型的变量或常量
+			]]></response>
+		</responses>
+	</exception>
+	
+	<exception id="BOOL_OP_ERROR">
+		<short>
+			<text>执行逻辑操作错误, 逻辑操符{0}只能应用在两个布尔值类型的变量或常量.错误的表达式左表达式类型:{1}({2}), 右表达式类型{3}({4}) </text>
+			<param index="0">操作符</param>
+			<param index="1">左表达式值</param>
+			<param index="2">左表达式类型</param>
+			<param index="3">右表达式值</param>
+			<param index="4">右表达式类型</param>
+		</short>
+		<explain>
+			<reason>脚本编写错误,只能对两个布尔值类型的变量或常量进行布尔操作</reason>
+			<reason>变量的值在上下文环境中类型为非预期的类型</reason>
+		</explain>
+		<responses>
+			<response>请修改脚本,确认两个值都是布尔值类型的变量或常量</response>
+			<response>请检查上下文环境,确认两个值都布尔值类型的变量或常量</response>
+			<response><![CDATA[KSCRIPT中,布作包括以下几种
+		1.布尔与操作(&&): 计算两个布尔值的与结果
+		2.布尔或操作(&&): 计算两个布尔值的或结果
+	KSCRIPT中布尔类型包括以下几种
+		1.boolean
+		2.java.lang.Boolean
+			]]></response>
+		</responses>
+	</exception>
+</exceptions>

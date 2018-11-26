@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="获取行政组织的负责职位上的所有人员">
+    <script><![CDATA[
+
+com.kingdee.eas.basedata.org.AdminOrgUnitInfo adminInfo = com.kingdee.eas.basedata.org.AdminOrgUnitFactory.getLocalInstance(__bosContext).getAdminOrgUnitInfo(new com.kingdee.bos.dao.ormapping.ObjectUuidPK(adminOrgId)); 
+if(adminInfo != null && adminInfo.getResponPosition() != null) { 
+   com.kingdee.eas.basedata.org.IPosition iPosition = com.kingdee.eas.basedata.org.PositionFactory.getLocalInstance(__bosContext); 
+   com.kingdee.eas.basedata.person.PersonCollection pColl = iPosition.getAllPersons(adminInfo.getResponPosition().getId()); 
+   String[] personIDs = new String[pColl.size()];
+   for (int i=0; i<pColl.size(); i++) { 
+	com.kingdee.eas.basedata.person.PersonInfo pi = pColl.get(i); 
+	personIDs[i] = pi.getId().toString(); 
+   } 
+}
+return new String[0];
+
+
+]]></script>
+    <description><![CDATA[根据行政组织内码，获取该行政组织负责职位上的所有人员内码集合。]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>OBJECT</type>
+      <array>false</array>
+      <description><![CDATA[所有人员内码集合。数据类型为String[]]]></description>
+    </return>
+    <parameter>
+      <name>adminOrgId</name>
+      <type>STRING</type>
+      <array>false</array>
+      <description><![CDATA[行政组织内码]]></description>
+    </parameter>
+  </function>
+</functions>
+

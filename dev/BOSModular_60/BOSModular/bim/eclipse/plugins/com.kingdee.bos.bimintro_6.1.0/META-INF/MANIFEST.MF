@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: BimIntro Plug-in
+Bundle-SymbolicName: com.kingdee.bos.bim.product; singleton:=true
+Bundle-Version: 6.0.0
+Bundle-Vendor: Kingdee Software
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.intro
+Bundle-ClassPath: bimintro.jar

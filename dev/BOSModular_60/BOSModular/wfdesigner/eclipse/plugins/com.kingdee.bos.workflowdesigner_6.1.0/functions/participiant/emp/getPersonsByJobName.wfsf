@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="获取职员所在组织上对应职务的人员">
+    <script><![CDATA[com.kingdee.eas.basedata.person.app.PersonToWFAdapter adapter = new com.kingdee.eas.basedata.person.app.PersonToWFAdapter();
+com.kingdee.bos.workflow.participant.Person[] persons=null;
+if(adapter != null){
+	jobInfos = adapter.getJobsArray(__bosContext);
+	for(int i=0;i<jobInfos.length;i++){
+		if(jobName.equals(jobInfos[i].getName(new Locale("L2"))) || jobName.equals(jobInfos[i].getName(new Locale("L3")))){
+			jobInfo = jobInfos[i];
+		}
+	}		
+	adminOrgUnitInfo=com.kingdee.eas.basedata.person.PersonFactory.getLocalInstance(__bosContext).getPrimaryAdminOrgUnit(personID);
+	orgid= adminOrgUnitInfo.getId();
+	persons = adapter.getAdminOrgUnitJobHolders(__bosContext,orgid,jobInfo.getId());
+}
+return persons;]]></script>
+    <description><![CDATA[根据参照人员获取其所在组织的某个职务名称的人员集合。]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>PERFORMER</type>
+      <array>false</array>
+      <description><![CDATA[人员类型的参予人集合]]></description>
+    </return>
+    <parameter>
+      <name>personID</name>
+      <type>STRING</type>
+      <array>false</array>
+      <description><![CDATA[参照人员内码]]></description>
+    </parameter>
+    <parameter>
+      <name>jobName</name>
+      <type>STRING</type>
+      <array>false</array>
+      <description><![CDATA[职务名称]]></description>
+    </parameter>
+  </function>
+</functions>
+

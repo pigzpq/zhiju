@@ -1,0 +1,1105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webUIObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.bos.bim.templates.web</package>
+    <name>BizMCoreBillEditUI</name>
+    <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].alias</alias>
+    <description>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].description</description>
+    <userDefined>false</userDefined>
+    <releasePackage>com.kingdee.bos.bim.templates.web</releasePackage>
+    <releaseClass>BizMCoreBillEditUI</releaseClass>
+    <title>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].title</title>
+    <uitype />
+    <defaultbutton />
+    <bizUnitPK>com.kingdee.bos.bim.templates.BizMCoreBillBaseTemplate</bizUnitPK>
+    <parent>
+        <key name="package" value="com.kingdee.eas.framework.web" />
+        <key name="name" value="BillEditUI" />
+    </parent>
+    <components>
+        <component>
+            <name>innerWindowUserTag</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[innerWindowUserTag].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.UserTag</classType>
+            <isContainer>true</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>attributes</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[innerWindowUserTag].properties.property[attributes].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+        </component>
+        <component>
+            <name>rootForm</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[rootForm].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Form</classType>
+            <isContainer>true</isContainer>
+            <constraints>x=5;y=5;width=1006;height=741;autoSize=15</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+        </component>
+        <component>
+            <name>rootToolBar</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[rootToolBar].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.ToolBar</classType>
+            <isContainer>true</isContainer>
+            <constraints>x=5;y=4;width=997;height=30;autoSize=12</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name>webToolBarLayout1</name>
+                <type>WebToolBarLayout</type>
+                <value />
+            </layoutInfo>
+            <parent>
+                <key name="name" value="rootForm" />
+            </parent>
+        </component>
+        <component>
+            <name>contNumber</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contNumber].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.LabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>x=5;y=56;width=270;height=19;autoSize=260</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name>contNumberlcl</name>
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>caption</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contNumber].properties.property[caption].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>lineWidth</name>
+                    <type>int</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contNumber].properties.property[lineWidth].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="rootForm" />
+            </parent>
+        </component>
+        <component>
+            <name>contBizDate</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contBizDate].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.LabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>x=368;y=56;width=270;height=19;autoSize=384</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name>contBizDatelcl</name>
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>caption</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contBizDate].properties.property[caption].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>lineWidth</name>
+                    <type>int</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contBizDate].properties.property[lineWidth].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="rootForm" />
+            </parent>
+        </component>
+        <component>
+            <name>contHandler</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contHandler].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.LabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>x=368;y=710;width=270;height=19;autoSize=386</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name>contHandlerlcl</name>
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>caption</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contHandler].properties.property[caption].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>lineWidth</name>
+                    <type>int</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contHandler].properties.property[lineWidth].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="rootForm" />
+            </parent>
+        </component>
+        <component>
+            <name>contDescription</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contDescription].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.LabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>x=731;y=56;width=270;height=19;autoSize=136</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name>contDescriptionlcl</name>
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>caption</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contDescription].properties.property[caption].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>lineWidth</name>
+                    <type>int</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contDescription].properties.property[lineWidth].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="rootForm" />
+            </parent>
+        </component>
+        <component>
+            <name>contAuditor</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contAuditor].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.LabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>x=731;y=710;width=270;height=19;autoSize=138</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name>contAuditorlcl</name>
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>caption</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contAuditor].properties.property[caption].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>lineWidth</name>
+                    <type>int</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contAuditor].properties.property[lineWidth].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="rootForm" />
+            </parent>
+        </component>
+        <component>
+            <name>dataGrid</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[dataGrid].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.EditDataGrid</classType>
+            <isContainer>true</isContainer>
+            <constraints>x=5;y=94;width=997;height=604;autoSize=15</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name>webLayout</name>
+                <type>WebLayout</type>
+                <value>0,1,false</value>
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>var</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[dataGrid].properties.property[var].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>value</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[dataGrid].properties.property[value].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>binding</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[dataGrid].properties.property[binding].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>showRowNumber</name>
+                    <type>java.lang.Boolean</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[dataGrid].properties.property[showRowNumber].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>sync</name>
+                    <type />
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[dataGrid].properties.property[sync].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="rootForm" />
+            </parent>
+        </component>
+        <component>
+            <name>msgArea</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[msgArea].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.MsgArea</classType>
+            <isContainer>false</isContainer>
+            <constraints>x=5;y=39;width=996;height=8;autoSize=12</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <parent>
+                <key name="name" value="rootForm" />
+            </parent>
+        </component>
+        <component>
+            <name>btnSave</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnSave].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Button</classType>
+            <isContainer>false</isContainer>
+            <constraints>0</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>label</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnSave].properties.property[label].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>actionBinding</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnSave].properties.property[actionBinding].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="rootToolBar" />
+            </parent>
+        </component>
+        <component>
+            <name>btnSubmit</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnSubmit].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Button</classType>
+            <isContainer>false</isContainer>
+            <constraints>1</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>label</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnSubmit].properties.property[label].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>actionBinding</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnSubmit].properties.property[actionBinding].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="rootToolBar" />
+            </parent>
+        </component>
+        <component>
+            <name>btnCopy</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnCopy].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Button</classType>
+            <isContainer>false</isContainer>
+            <constraints>2</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>label</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnCopy].properties.property[label].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>actionBinding</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnCopy].properties.property[actionBinding].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="rootToolBar" />
+            </parent>
+        </component>
+        <component>
+            <name>btnRemove</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnRemove].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Button</classType>
+            <isContainer>false</isContainer>
+            <constraints>3</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>label</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnRemove].properties.property[label].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>actionBinding</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnRemove].properties.property[actionBinding].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="rootToolBar" />
+            </parent>
+        </component>
+        <component>
+            <name>btnExit</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnExit].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.Button</classType>
+            <isContainer>false</isContainer>
+            <constraints>8</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>label</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnExit].properties.property[label].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>actionBinding</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnExit].properties.property[actionBinding].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="rootToolBar" />
+            </parent>
+        </component>
+        <component>
+            <name>txtNumber</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[txtNumber].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.TextField</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <parent>
+                <key name="name" value="contNumber" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>value</propertyName>
+                    <propertyType>java.lang.String</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>number</bindingField>
+                    <fieldType>String</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>false</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>txtBizDate</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[txtBizDate].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.DateField</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>castType</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[txtBizDate].properties.property[castType].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contBizDate" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>value</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>bizDate</bindingField>
+                    <fieldType>java.util.Date</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>false</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>prmtHandler</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[prmtHandler].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.PromptBox</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>queryInfo</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[prmtHandler].properties.property[queryInfo].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>displayFormat</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[prmtHandler].properties.property[displayFormat].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>converter</name>
+                    <type />
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[prmtHandler].properties.property[converter].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contHandler" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>value</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>handler</bindingField>
+                    <fieldType>com.kingdee.eas.base.permission.UserInfo</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>false</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>txtDescription</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[txtDescription].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.TextField</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <parent>
+                <key name="name" value="contDescription" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>value</propertyName>
+                    <propertyType>java.lang.String</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>description</bindingField>
+                    <fieldType>String</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>false</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>prmtAuditor</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[prmtAuditor].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.PromptBox</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>queryInfo</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[prmtAuditor].properties.property[queryInfo].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>displayFormat</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[prmtAuditor].properties.property[displayFormat].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>converter</name>
+                    <type />
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[prmtAuditor].properties.property[converter].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contAuditor" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>value</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>auditor</bindingField>
+                    <fieldType>com.kingdee.eas.base.permission.UserInfo</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>false</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>idColumn</name>
+            <alias>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[idColumn].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.web.EditableColumn</classType>
+            <isContainer>true</isContainer>
+            <constraints>width=170;height=19;newLine=false</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name>WebLayout</name>
+                <type>WebLayout</type>
+                <value>0,1,false</value>
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>header</name>
+                    <type>java.lang.String</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[idColumn].properties.property[header].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>width</name>
+                    <type>int</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[idColumn].properties.property[width].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>idColumn</name>
+                    <type>java.lang.Boolean</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[idColumn].properties.property[idColumn].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>hidden</name>
+                    <type>java.lang.Boolean</type>
+                    <value>webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[idColumn].properties.property[hidden].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="dataGrid" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>value</propertyName>
+                    <propertyType>java.lang.String</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>entrys.id</bindingField>
+                    <fieldType>com.kingdee.bos.util.BOSUuid</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>false</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+    </components>
+    <dataObjects>
+        <dataObject>
+            <name>editData</name>
+            <type>com.kingdee.bos.bim.templates.app.BizMCoreBillBase</type>
+            <objectType>enty</objectType>
+            <herited>false</herited>
+            <userDefined>false</userDefined>
+        </dataObject>
+    </dataObjects>
+    <resource>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].alias">
+            <lang locale="zh_CN" value="BizMCoreBillEditUI" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="BizMCoreBillEditUI" />
+            <lang locale="zh_TW" value="BizMCoreBillEditUI" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnCopy].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnCopy].properties.property[actionBinding].value">
+            <lang locale="zh_CN" value="copyNewAction" />
+            <lang locale="en_US" value="copyNewAction" />
+            <lang locale="zh_HK" value="copyNewAction" />
+            <lang locale="zh_TW" value="copyNewAction" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnCopy].properties.property[label].value">
+            <lang locale="zh_CN" value="复制" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="複製" />
+            <lang locale="zh_TW" value="複製" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnExit].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnExit].properties.property[actionBinding].value">
+            <lang locale="zh_CN" value="exitAction" />
+            <lang locale="en_US" value="exitAction" />
+            <lang locale="zh_HK" value="exitAction" />
+            <lang locale="zh_TW" value="exitAction" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnExit].properties.property[label].value">
+            <lang locale="zh_CN" value="退出" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="退出" />
+            <lang locale="zh_TW" value="退出" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnRemove].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnRemove].properties.property[actionBinding].value">
+            <lang locale="zh_CN" value="deleteAction" />
+            <lang locale="en_US" value="deleteAction" />
+            <lang locale="zh_HK" value="deleteAction" />
+            <lang locale="zh_TW" value="deleteAction" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnRemove].properties.property[label].value">
+            <lang locale="zh_CN" value="删除" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="刪除" />
+            <lang locale="zh_TW" value="刪除" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnSave].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnSave].properties.property[actionBinding].value">
+            <lang locale="zh_CN" value="saveAction" />
+            <lang locale="en_US" value="saveAction" />
+            <lang locale="zh_HK" value="saveAction" />
+            <lang locale="zh_TW" value="saveAction" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnSave].properties.property[label].value">
+            <lang locale="zh_CN" value="保存" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="保存" />
+            <lang locale="zh_TW" value="保存" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnSubmit].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnSubmit].properties.property[actionBinding].value">
+            <lang locale="zh_CN" value="submitAction" />
+            <lang locale="en_US" value="submitAction" />
+            <lang locale="zh_HK" value="submitAction" />
+            <lang locale="zh_TW" value="submitAction" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[btnSubmit].properties.property[label].value">
+            <lang locale="zh_CN" value="提交" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="提交" />
+            <lang locale="zh_TW" value="提交" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contAuditor].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contAuditor].properties.property[caption].value">
+            <lang locale="zh_CN" value="审核人" />
+            <lang locale="en_US" value="审核人" />
+            <lang locale="zh_HK" value="審核人" />
+            <lang locale="zh_TW" value="審核人" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contAuditor].properties.property[lineWidth].value">
+            <lang locale="zh_CN" value="100" />
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contBizDate].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contBizDate].properties.property[caption].value">
+            <lang locale="zh_CN" value="业务日期" />
+            <lang locale="en_US" value="业务日期" />
+            <lang locale="zh_HK" value="業務日期" />
+            <lang locale="zh_TW" value="業務日期" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contBizDate].properties.property[lineWidth].value">
+            <lang locale="zh_CN" value="100" />
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contDescription].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contDescription].properties.property[caption].value">
+            <lang locale="zh_CN" value="参考信息" />
+            <lang locale="en_US" value="参考信息" />
+            <lang locale="zh_HK" value="參考信息" />
+            <lang locale="zh_TW" value="參考信息" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contDescription].properties.property[lineWidth].value">
+            <lang locale="zh_CN" value="100" />
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contHandler].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contHandler].properties.property[caption].value">
+            <lang locale="zh_CN" value="经手人" />
+            <lang locale="en_US" value="经手人" />
+            <lang locale="zh_HK" value="經手人" />
+            <lang locale="zh_TW" value="經手人" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contHandler].properties.property[lineWidth].value">
+            <lang locale="zh_CN" value="100" />
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contNumber].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contNumber].properties.property[caption].value">
+            <lang locale="zh_CN" value="单据编号" />
+            <lang locale="en_US" value="单据编号" />
+            <lang locale="zh_HK" value="單據編號" />
+            <lang locale="zh_TW" value="單據編號" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[contNumber].properties.property[lineWidth].value">
+            <lang locale="zh_CN" value="100" />
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[dataGrid].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[dataGrid].extendedProperty.createbutton4editdatagrid">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+            <lang locale="en_US" value="true" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[dataGrid].properties.property[binding].value">
+            <lang locale="zh_CN" value="#{com.kingdee.bos.bim.templates.BizMCoreBillEntryBaseBean.editGrid}" />
+            <lang locale="en_US" value="#{com.kingdee.bos.bim.templates.BizMCoreBillEntryBaseBean.editGrid}" />
+            <lang locale="zh_HK" value="#{com.kingdee.bos.bim.templates.BizMCoreBillEntryBaseBean.editGrid}" />
+            <lang locale="zh_TW" value="#{com.kingdee.bos.bim.templates.BizMCoreBillEntryBaseBean.editGrid}" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[dataGrid].properties.property[showRowNumber].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[dataGrid].properties.property[sync].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[dataGrid].properties.property[value].value">
+            <lang locale="zh_CN" value="#{com.kingdee.bos.bim.templates.BizMCoreBillEntryBaseBean.listModel}" />
+            <lang locale="en_US" value="#{com.kingdee.bos.bim.templates.BizMCoreBillEntryBaseBean.listModel}" />
+            <lang locale="zh_HK" value="#{com.kingdee.bos.bim.templates.BizMCoreBillEntryBaseBean.listModel}" />
+            <lang locale="zh_TW" value="#{com.kingdee.bos.bim.templates.BizMCoreBillEntryBaseBean.listModel}" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[dataGrid].properties.property[var].value">
+            <lang locale="zh_CN" value="data" />
+            <lang locale="en_US" value="data" />
+            <lang locale="zh_HK" value="data" />
+            <lang locale="zh_TW" value="data" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[idColumn].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[idColumn].properties.property[header].value">
+            <lang locale="zh_CN" value="id" />
+            <lang locale="en_US" value="id" />
+            <lang locale="zh_HK" value="id" />
+            <lang locale="zh_TW" value="id" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[idColumn].properties.property[hidden].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[idColumn].properties.property[idColumn].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[idColumn].properties.property[width].value">
+            <lang locale="zh_CN" value="100" />
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[innerWindowUserTag].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[innerWindowUserTag].properties.property[attributes].value">
+            <lang locale="zh_CN" value="beanName=#{com.kingdee.bos.bim.templates.BizMCoreBillEditUIBean}" />
+            <lang locale="en_US" value="beanName=value" />
+            <lang locale="zh_HK" value="beanName=#{com.kingdee.bos.bim.templates.BizMCoreBillEditUIBean}" />
+            <lang locale="zh_TW" value="beanName=#{com.kingdee.bos.bim.templates.BizMCoreBillEditUIBean}" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[msgArea].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[prmtAuditor].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[prmtAuditor].properties.property[converter].value">
+            <lang locale="zh_CN" value="objectValueConverter" />
+            <lang locale="en_US" value="objectValueConverter" />
+            <lang locale="zh_HK" value="objectValueConverter" />
+            <lang locale="zh_TW" value="objectValueConverter" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[prmtAuditor].properties.property[displayFormat].value">
+            <lang locale="zh_CN" value="$number$-$number$" />
+            <lang locale="en_US" value="$number$-$number$" />
+            <lang locale="zh_HK" value="$number$-$number$" />
+            <lang locale="zh_TW" value="$number$-$number$" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[prmtAuditor].properties.property[queryInfo].value">
+            <lang locale="zh_CN" value="com.kingdee.eas.base.permission.app.F7AllUserQuery" />
+            <lang locale="en_US" value="com.kingdee.eas.base.permission.app.F7AllUserQuery" />
+            <lang locale="zh_HK" value="com.kingdee.eas.base.permission.app.F7AllUserQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.base.permission.app.F7AllUserQuery" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[prmtHandler].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[prmtHandler].properties.property[converter].value">
+            <lang locale="zh_CN" value="objectValueConverter" />
+            <lang locale="en_US" value="objectValueConverter" />
+            <lang locale="zh_HK" value="objectValueConverter" />
+            <lang locale="zh_TW" value="objectValueConverter" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[prmtHandler].properties.property[displayFormat].value">
+            <lang locale="zh_CN" value="$number$-$number$" />
+            <lang locale="en_US" value="$number$-$number$" />
+            <lang locale="zh_HK" value="$number$-$number$" />
+            <lang locale="zh_TW" value="$number$-$number$" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[prmtHandler].properties.property[queryInfo].value">
+            <lang locale="zh_CN" value="com.kingdee.eas.base.permission.app.F7AllUserQuery" />
+            <lang locale="en_US" value="com.kingdee.eas.base.permission.app.F7AllUserQuery" />
+            <lang locale="zh_HK" value="com.kingdee.eas.base.permission.app.F7AllUserQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.base.permission.app.F7AllUserQuery" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[rootForm].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[rootToolBar].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[txtBizDate].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[txtBizDate].properties.property[castType].value">
+            <lang locale="zh_CN" value="java.sql.Date" />
+            <lang locale="en_US" value="java.sql.Date" />
+            <lang locale="zh_HK" value="java.sql.Date" />
+            <lang locale="zh_TW" value="java.sql.Date" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[txtDescription].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].components.component[txtNumber].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].description">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].extendedProperty.height_self_adaption">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+            <lang locale="en_US" value="true" />
+        </rs>
+        <rs key="webUIObject[com.kingdee.bos.bim.templates.web.BizMCoreBillEditUI].title">
+            <lang locale="zh_CN" value="BizMCoreBillEditUI" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="BizMCoreBillEditUI" />
+            <lang locale="zh_TW" value="BizMCoreBillEditUI" />
+        </rs>
+    </resource>
+</webUIObject>
+

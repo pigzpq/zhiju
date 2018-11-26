@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BIReport>
+  <Cube ref="public:demo.cube" caption="公共:销售数据立方体"/>
+  <DataSource ref="public:demo.ds" caption="公共:销售数据源"/>
+  <MdxQuery name="query1" caption="产品地区销售情况分析" title="" memoHead="" memoTail="" perPageRows="20">select measures.members on columns, non empty {State.levels(0).members * Product.levels(0).members} on rows from sales</MdxQuery>
+  <ChartComponent name="chart1" caption="图形" mdxQuery="query1" chartTitle="产品/地区销售情况图" showSlicer="true" showChangeType="true" chartHeight="400" chartWidth="400" showLegend="true" legendPosition="3" categoryLabelAlign="Up45" dataShow="1" chartType="Bar" showPercentFormatForValue="false" showPercentFormatForTooltip="false" radarTargetColumnIndex="0" radarMinColumnIndex="1" showItemData="false" canMoveDimension="true" showColumnDimensionInSlicer="true" showRowDimensionInSlicer="true"/>
+  <Options>
+    <Molap value="false"/>
+  </Options>
+</BIReport>

@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Language" content="zh-cn">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>排序排名</title>
+		<script src="../js/sue-main.js"></script>
+		<script src="../js/sue-ui.js"></script>
+		<script src="../js/sue-config.js"></script>
+		<script src="../js/bi.js"></script>
+		<script src="../js/bi_tree.js"></script>
+		<script src="dlgSort.js"></script>
+		<STYLE>
+	.dialog
+	{
+		font-size:9pt;
+	}
+	</STYLE>
+	</head>
+	<body TOPMARGIN="10" LEFTMARGIN="15" BOTTOMMARGIN="10" RIGHTMARGIN="10">
+		<table border="0" width="100%" class="dialog" cellPadding="5" cellSpacing="0">
+			<tr>
+				<td colspan=3><input id="chkUse" type="checkbox">启用排序排名</input></td>
+			</tr>
+			<tr/>
+			<tr>
+				<td>排序方式：</td>
+				<td><input name="orderAsc" type="radio" checked="true">升序</input></td>
+				<td><input name="orderAsc" type="radio">降序</input></td>
+			</tr>
+			<tr>
+				<td>选择用来比较的列：</td>
+				<td colspan=2><select id="selColumn" style="width:280px"></select></td>
+			</tr>
+			<tr>
+				<td><input id="sortCount" name="sortMethod" type="checkbox" onclick="sortCountClick()">排名，显示前面几行</input></td>
+				<td colspan=2><input name="txtCount" size="12" MAXLENGTH="6" /></td>
+			</tr>
+			<tr>
+				<td><input id="sortPercent" name="sortMethod" type="checkbox" onclick="sortPercentClick()">排名，显示前面百分比</input></td>
+				<td colspan=2><input name="txtPercent" size="12" MAXLENGTH="6" /></td>
+			</tr>
+			<tr>
+				<td><input id="sortSum" name="sortMethod" type="checkbox" onclick="sortSumClick()">排名，显示前面总和</input></td>
+				<td colspan=2><input name="txtSum" size="12" MAXLENGTH="12" /></td>
+			</tr>
+			<tr>
+				<td><input id="chkBreak" name="sortBreak" type="checkbox">打破维度层级关系</input></td>
+			</tr>
+		</table>
+		<table width="100%" height="180px">
+			<tr>
+				<td>
+				<TEXTAREA id="memo" style="readOnly:true;border:thick;width:100%;height:160px;overflow:hidden;">
+				</TEXTAREA>
+				</td>
+			</tr>
+		</table>
+		<hr/>
+		<table width="100%">
+			<tr>
+				<td width="50%"></td>
+				<td align="right"><button class="portal_button" onclick="onok();"> 确  定 </button></td>
+				<td align="right"><button class="portal_button" onclick="oncancel();"> 取  消 </button></td>
+			</tr>
+		</table>	
+	</body>
+	<script language="javascript">
+		window.onload = window_onload;
+	</script>
+</html>

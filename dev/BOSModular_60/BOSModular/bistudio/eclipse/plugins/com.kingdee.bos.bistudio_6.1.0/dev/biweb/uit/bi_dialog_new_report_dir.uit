@@ -1,0 +1,12 @@
+@css .bi_dialog_new_report_dir {padding:10px}
+@css .bi_dialog_new_report_dir button{border:solid 1px #CCC;background-color:#EFF8FA;padding-top:3px;margin-left:10px;cursor:pointer}
+
+<div class="bi_dialog_new_report_dir">
+	<div sue="dirName" style="padding-top:10px;font:12px Arial">
+		目录名称:
+		<input type="text" style="border:solid 1px #718BB7;width:120px;height:19px" />
+	<div>
+	<div sue="save" style="padding-right:10px;padding:10px 0px;text-align:right">
+		<button>确定</button>
+	</div>
+</div>

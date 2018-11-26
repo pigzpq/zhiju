@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Bundle-Name: BOS KSQL
+Bundle-SymbolicName: com.kingdee.bos.ksql;singleton:=true
+Bundle-Version: 6.1.0
+Bundle-ClassPath: ksql.jar,
+ jtds-1.2.jar,
+ lib/mysql-connector-java-5.0.3-bin.jar
+Bundle-Localization: plugin
+Eclipse-AutoStart: true
+Require-Bundle: com.oracledriver;optional=true;reprovide=true,
+ com.db2;optional=true;reprovide=true,
+ com.mssqlserver;optional=true;reprovide=true,
+ org.junit,
+ org.log4j
+Provide-Package: com.kingdee.bos.sql,
+ com.kingdee.bos.sql.dialect.oracle,
+ com.kingdee.bos.sql.dom,
+ com.kingdee.bos.sql.dom.expr,
+ com.kingdee.bos.sql.dom.stmt,
+ com.kingdee.bos.sql.formater,
+ com.kingdee.bos.sql.parser,
+ com.kingdee.bos.sql.schema,
+ com.kingdee.bos.sql.schema.datatype,
+ com.kingdee.bos.sql.shell,
+ com.kingdee.bos.sql.shell.trace,
+ com.kingdee.bos.sql.util
+Bundle-Vendor: Kingdee Software (China) Company Ltd(test)
+Bundle-ManifestVersion: 2

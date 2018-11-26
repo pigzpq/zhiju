@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="bibench_builder" default="build_war" basedir=".">	
+	<property name="war.src" value="" />
+	<property name="war.dest" value="bibench.war" />
+	
+	<target name="init">
+		<delete file="${war.dest}"/>
+	</target>
+		
+	<target name="build_war" depends="init">
+		<war warfile="${war.dest}" webxml="${war.src}/dev/WEB-INF/web.xml">
+			<!--
+			<lib dir="${war.src}/WEB-INF/lib"/>			
+			<classes dir = "${war.src}/WEB-INF/classes"/>
+			-->			
+			<fileset dir="${war.src}">
+				<include name="**/*"/>
+				<exclude name="*.war"/>
+				<exclude name=".*"/>
+			</fileset>
+		</war>
+	</target>
+</project>

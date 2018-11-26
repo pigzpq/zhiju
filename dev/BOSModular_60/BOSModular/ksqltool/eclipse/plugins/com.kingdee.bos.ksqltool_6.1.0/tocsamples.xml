@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Samples" link_to="toc.xml#samples"> 
+	<topic label="安装示例"  href="html/samples/maintopic.html"> 
+		<topic label="安装" href="html/samples/subtopic.html" /> 
+	</topic>
+	<topic label="如何运行">
+		<topic label="运行" href="html/samples/subtopic2.html" /> 
+	</topic> 
+</toc>

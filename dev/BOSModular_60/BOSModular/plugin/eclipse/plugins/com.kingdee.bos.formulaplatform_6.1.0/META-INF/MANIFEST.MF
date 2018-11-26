@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-Name: FormulaEngine Plug-in
+Bundle-SymbolicName: com.kingdee.bos.formula.engine;singleton:=true
+Bundle-Version: 5.4.0
+Bundle-ClassPath: formulaplatform.jar
+Bundle-Vendor: Kingdee Software (China) Company Ltd.,
+Bundle-Localization: plugin
+Eclipse-AutoStart: true
+Require-Bundle: com.kingdee.bos.ctrl,
+ com.kingdee.bos.metadata,
+ com.kingdee.bos.bosframework,
+ com.kingdee.bos.orm,
+ org.junit,
+ org.log4j
+Provide-Package: com.kingdee.bos.service.formula.api,
+ com.kingdee.bos.service.formula.builder,
+ com.kingdee.bos.service.formula.builder.bosmeta,
+ com.kingdee.bos.service.formula.engine
+Bundle-ManifestVersion: 2

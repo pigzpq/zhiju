@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+<!-- ============================================================================= -->
+<!-- Define primary TOC                                                            -->
+<!-- ============================================================================= -->
+   <extension
+         point="org.eclipse.help.toc">
+      <toc
+            file="toc.xml"
+            primary="true">
+      </toc>
+   </extension>
+<!-- ============================================================================= -->
+<!-- Define TOCs                                                                   -->
+<!-- ============================================================================= -->
+   <extension
+         point="org.eclipse.help.toc">
+      <toc
+            file="topics_Guide.xml">
+      </toc>
+      <toc
+            file="topics_Tasks.xml">
+      </toc>      
+      <toc
+            file="topics_Faq.xml">
+      </toc>
+      <!--
+      <toc
+            file="topics_Porting.xml">
+      </toc>
+      <toc
+            file="topics_Questions.xml">
+      </toc>
+      <toc
+            file="topics_Samples.xml">
+      </toc>
+      -->
+   </extension>
+
+</plugin>

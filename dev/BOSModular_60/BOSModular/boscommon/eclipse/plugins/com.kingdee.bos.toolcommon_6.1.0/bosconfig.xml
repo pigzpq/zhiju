@@ -1,0 +1,997 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by XIHA (KINGDEE) -->
+<config>
+	<configitem name="organization">
+		<configitem name="kdorgprovider">
+			<attribute key="contextFactory" value="com.apusic.naming.jndi.CNContextFactory"/>
+			<attribute key="jndiURL" value="iiop://localhost:6888"/>
+			<attribute key="jndiServer" value="localhost"/>
+			<attribute key="jndiPort" value="6888"/>
+			<attribute key="securityCredential" value="admin"/>
+			<attribute key="securityPrincipal" value="admin"/>
+		</configitem>
+		<configitem name="easorgprovider">
+			<attribute key="url" value="tcp://192.168.16.15"/>
+			<attribute key="solutionName" value="eas"/>
+			<attribute key="user" value="admin"/>
+			<attribute key="password" value="admin"/>
+			<attribute key="locale" value="en"/>
+		</configitem>
+	</configitem>
+	<configitem name="DebugOptions">
+		<attribute key="cacheLazyLoad" value="false"/>
+	</configitem>
+	<configitem name="SolutionInfo">
+		<configitem name="Demo">
+			<configitem name="AISInfo">
+				<configitem name="Demo">
+					<configitem name="EJBService">
+						<attribute key="contextFactory" value="com.apusic.jndi.InitialContextFactory"/>
+						<attribute key="jndiURL" value="rmi://localhost:6888"/>
+						<attribute key="securityCredential" value="admin"/>
+						<attribute key="securityPrincipal" value="admin"/>
+						<attribute key="datasource" value="jdbc/Demo"/>
+					</configitem>
+				</configitem>
+			</configitem>
+			<attribute key="MetaDataPath" value="E:\BOS\1 CODE\BOSv3.1\metas"/>
+		</configitem>
+	</configitem>
+	<configitem name="MessageService">
+		<configitem name="Destinations">
+			<configitem name="workflow">
+				<attribute key="isEnableDaemon" value="true"/>
+				<attribute key="cacheManager" value="WfCacheManager2"/>
+				<attribute key="driverClassName" value="com.kingdee.bos.service.message.jms.queue.JMSQueueDriver"/>
+				<attribute key="url" value="bosmessage:jms:queue:jms/WorkflowTestQueue"/>
+				<configitem name="properties">
+					<attribute key="contextFactory" value="com.apusic.jndi.InitialContextFactory"/>
+					<attribute key="jndiURL" value="rmi://localhost:6888"/>
+					<attribute key="securityCredential" value="admin"/>
+					<attribute key="securityPrincipal" value="admin"/>
+					<attribute key="connectionFactoryJNDIName" value="jms/QueueConnectionFactory"/>
+				</configitem>
+			</configitem>
+			<configitem name="workflow1">
+				<attribute key="driverClassName" value="com.kingdee.bos.service.message.jms.topic.JMSTopicDriver"/>
+				<attribute key="url" value="bosmessage:jms:topic:jms/workflowTopic"/>
+				<configitem name="properties">
+					<attribute key="contextFactory" value="com.apusic.jndi.InitialContextFactory"/>
+					<attribute key="jndiURL" value="rmi://localhost:6888"/>
+					<attribute key="securityCredential" value="admin"/>
+					<attribute key="securityPrincipal" value="admin"/>
+					<attribute key="connectionFactoryJNDIName" value="jms/TopicConnectionFactory"/>
+				</configitem>
+			</configitem>
+		</configitem>
+	</configitem>
+	<configitem name="ORMServiceLocation">
+		<configitem name="sequence">
+			<attribute key="serviceURL" value=""/>
+		</configitem>
+		<configitem name="mutex">
+			<attribute key="serviceURL" value=""/>
+		</configitem>
+		<configitem name="license">
+			<attribute key="serviceURL" value=""/>
+		</configitem>
+		<configitem name="scheduler">
+			<attribute key="serviceURL" value=""/>
+		</configitem>
+		<configitem name="refCount">
+			<attribute key="serviceURL" value=""/>
+		</configitem>
+		<configitem name="SessionManager">
+			<attribute key="serviceURL" value=""/>
+		</configitem>
+	</configitem>
+	<configitem name="sequenceContainer">
+		<attribute key="fileName" value="sequenceContainer"/>
+	</configitem>
+	<configitem name="UIFactory">
+		<attribute key="name" value="com.kingdee.bos.ui.face.UIFrameFactory"/>
+	</configitem>
+	<configitem name="context">
+		<attribute key="defaultLocale" value="L2"/>
+	</configitem>
+	<configitem name="Workflow">
+		<configitem name="participant">
+			<attribute key="provider" value="com.kingdee.bos.workflow.participant.DemoParticipantProvider"/>
+		</configitem>
+		<configitem name="AIS">
+			<configitem name="Demo">
+				<attribute key="MessageDestinationName" value="workflow1"/>
+				<configitem name="Connection">
+					<attribute key="url" value="jdbc:microsoft:sqlserver://ebizser:1433;DatabaseName=bosv31;SelectMethod=cursor;"/>
+					<attribute key="driver" value="com.microsoft.jdbc.sqlserver.SQLServerDriver"/>
+					<attribute key="username" value="sa"/>
+					<attribute key="password" value="pass"/>
+				</configitem>
+			</configitem>
+		</configitem>
+	</configitem>
+	<configitem name="ExtendProperties">
+     <configitem name="ExtendProperty">
+        <configitem name="isBindingProperty">
+                 <attribute key="group" value="codingrule"/>
+                 <attribute key="required" value="false"/>
+                 <attribute key="defaultvalue" value="false"/>
+                 <attribute key="alias" value="本属性是否是编码规则过滤条件"/>
+                 <attribute key="type" value="boolean"/>
+                 <attribute key="isMultiLanguage" value="false"/>
+                 <attribute key="object" value="property"/>
+                 <attribute key="filter" value="com.kingdee.eas.framework.app.ObjectBase"/>
+                 <attribute key="description" value="描述该实体属性是否是编码规则过滤条件"/>
+        </configitem>
+     </configitem>                   
+    <configitem name="ExtendProperty">
+			<configitem name="isConfig">
+				<attribute key="group" value="common"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="false"/>
+				<attribute key="alias" value="是否用户自定义列"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="column"/>
+				<attribute key="description" value="描述该字段是否为用户扩展预设使用"/>
+			</configitem>
+			</configitem>
+			<configitem name="ExtendProperty">
+  			<configitem name="isBOTPMustInput">
+  				<attribute key="group" value="botp"/>
+  				<attribute key="required" value="false"/>
+  				<attribute key="defaultvalue" value="false"/>
+  				<attribute key="alias" value="BOTP必录项"/>
+  				<attribute key="type" value="boolean"/>
+  				<attribute key="isMultiLanguage" value="false"/>
+  				<attribute key="object" value="property"/>
+  				<attribute key="filter" value="com.kingdee.eas.framework.app.CoreBillBase || com.kingdee.eas.framework.app.CoreBillEntryBase"/>
+  				<attribute key="description" value="用来做BOTP必录项设置"/>
+  			</configitem>
+			</configitem>	
+		<configitem name="ExtendProperty">
+			<configitem name="isInCode">
+				<attribute key="group" value="codingrule"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="false"/>
+				<attribute key="alias" value="本属性是否参加编码"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="property"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.ObjectBase"/>
+				<attribute key="description" value="描述该实体属性是否可用与编码规则中参加编码"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="codingRuleEnabled">
+				<attribute key="group" value="codingrule"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="false"/>
+				<attribute key="alias" value="是否使用编码规则"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="entity"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.ObjectBase"/>
+				<attribute key="description" value="描述该实体类是否使用编码规则来生成编码"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="isForMapping">
+				<attribute key="group" value="botp"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="false"/>
+				<attribute key="alias" value="是否映射属性"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="property"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.CoreBillBase || com.kingdee.eas.framework.app.CoreBillEntryBase"/>
+				<attribute key="description" value="单据/单据分录实体中需要参与BOTP映射的属性(作为目标单据)"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="isForGrouping">
+				<attribute key="group" value="botp"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="false"/>
+				<attribute key="alias" value="是否分组属性"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="property"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.CoreBillBase || com.kingdee.eas.framework.app.CoreBillEntryBase"/>
+				<attribute key="description" value="单据/单据分录实体中需要参与BOTP分组合并的属性(作为目标单据)"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="isForMatching">
+				<attribute key="group" value="botp"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="false"/>
+				<attribute key="alias" value="是否核销属性"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="property"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.CoreBillBase || com.kingdee.eas.framework.app.CoreBillEntryBase"/>
+				<attribute key="description" value="单据/单据分录实体中需要参与BOTP核销的属性(作为目标单据)"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="isForWrittenBack">
+				<attribute key="group" value="botp"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="false"/>
+				<attribute key="alias" value="是否反写属性"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="property"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.CoreBillBase || com.kingdee.eas.framework.app.CoreBillEntryBase"/>
+				<attribute key="description" value="单据/单据分录实体中需要参与BOTP反写的属性(作为源单据)"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="defaultF7Query">
+				<attribute key="group" value="commonquery"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value=""/>
+				<attribute key="alias" value="缺省查询对象"/>
+				<attribute key="type" value="String"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="entity"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.ObjectBase"/>
+				<attribute key="description" value="通用过滤在过滤字段是对象时，如果用户没有指定F7Dlg的对话框工厂类时，通过这个关联装载查询对象放到F7Dlg展现"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="isSimpleEntity">
+				<attribute key="group" value="commonquery"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="false"/>
+				<attribute key="alias" value="是否简单实体"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="entity"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.DataBase"/>
+				<attribute key="description" value="如果是简单对象，在通用过滤中，将直接以下拉列表的形式来展现⾿(如币别)"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="defaultDisplayField">
+				<attribute key="group" value="commonquery"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value=""/>
+				<attribute key="alias" value="默认显示属性"/>
+				<attribute key="type" value="String"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="entity"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.DataBase"/>
+				<attribute key="description" value="如果是简单对象，在通用过滤中，将直接以下拉列表的形式来展现。展现的列即为该列"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="defaultF7Query">
+				<attribute key="group" value="commonquery"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value=""/>
+				<attribute key="alias" value="默认查询对象"/>
+				<attribute key="type" value="String"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="field"/>
+				<attribute key="description" value="如果查询对象的连接属性指定了f7Dlg的query对象，那么通用查询使用该属性的query对象作为f7Dlg的查询对诿.如果查询对象的连接属性没有指定了f7Dlg的query对象，通用查询就会到连接属性对应的实体的defaultF7Query扩展属性指定的查询对象作为f7的查询对象"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="isCommonQueryFilter">
+				<attribute key="group" value="commonquery"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="false"/>
+				<attribute key="alias" value="是否在通用过滤中显示"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="field"/>
+				<attribute key="description" value="是否在通用过滤中显示作为过滤字段"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="isCommonQuerySorter">
+				<attribute key="group" value="commonquery"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="false"/>
+				<attribute key="alias" value="是否在通用过滤中参与排序"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="field"/>
+				<attribute key="description" value="是否在通用过滤中参与排序"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="isDynCommonQuery">
+				<attribute key="group" value="commonquery"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="true"/>
+				<attribute key="alias" value="是否参加动态查询方案"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="field"/>
+				<attribute key="description" value="描述该字段是否可以参加动态过滤查询"/>
+			</configitem>
+		</configitem>		
+		<configitem name="ExtendProperty">
+			<configitem name="isUsingF7">
+				<attribute key="group" value="commonquery"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="false"/>
+				<attribute key="alias" value="是否使用F7"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="field"/>
+				<attribute key="description" value="查询对象的连接属性是否需要使用F7"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="printQuery">
+				<attribute key="group" value="commonquery"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value=""/>
+				<attribute key="alias" value="默认套打Query"/>
+				<attribute key="type" value="String"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="entity"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.ObjectBase"/>
+				<attribute key="description" value="描述套打使用的默认Query,作为在BIM中自动生成套打模板的数据源"/>
+			</configitem>
+		</configitem>		
+		<configitem name="ExtendProperty">
+			<configitem name="displayFormat">
+				<attribute key="group" value="f7"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value=""/>
+				<attribute key="alias" value="F7或简单实体的显示格式"/>
+				<attribute key="type" value="String"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="field"/>
+				<attribute key="description" value="F7和下拉框(简单实体时)的显示格式，和通用F7格式相同"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="editFormat">
+				<attribute key="group" value="f7"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value=""/>
+				<attribute key="alias" value="F7编辑格式"/>
+				<attribute key="type" value="String"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="field"/>
+				<attribute key="description" value="F7的编辑格式，和通用F7格式相同"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="commitFormat">
+				<attribute key="group" value="f7"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value=""/>
+				<attribute key="alias" value="F7数据提交格式"/>
+				<attribute key="type" value="String"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="query"/>
+				<attribute key="description" value="F7数据提交格式，和通用F7格式相同"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="PkNameGroupBy">
+				<attribute key="group" value="query"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value=""/>
+				<attribute key="alias" value="查询分组主键"/>
+				<attribute key="type" value="String"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="query"/>
+				<attribute key="description" value="查询分组对应对象的主键, 例如是分录对象的, 则填上entries.id"/>
+			</configitem>
+		</configitem>
+		
+		<configitem name="ExtendProperty">
+			<configitem name="commitFormat">
+				<attribute key="group" value="f7"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value=""/>
+				<attribute key="alias" value="F7提交格式"/>
+				<attribute key="type" value="String"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="field"/>
+				<attribute key="description" value="F7的提交格式，和通用F7格式相同"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="listUI">
+				<attribute key="group" value="common"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value=""/>
+				<attribute key="alias" value="序时簿UI的类名"/>
+				<attribute key="type" value="String"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="entity"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.ObjectBase"/>
+				<attribute key="description" value="在实体对象的扩展属性上设置展现其的listUI类名"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="editUI">
+				<attribute key="group" value="common"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value=""/>
+				<attribute key="alias" value="编辑UI类名"/>
+				<attribute key="type" value="String"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="entity"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.ObjectBase"/>
+				<attribute key="description" value="在实体对象的扩展属性上设置展现其的editUI类名"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="webListUI">
+				<attribute key="group" value="common"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value=""/>
+				<attribute key="alias" value="WEB序时簿UI的类名"/>
+				<attribute key="type" value="String"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="entity"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.ObjectBase"/>
+				<attribute key="description" value="在实体对象的扩展属性上设置展现其的webListUI类名"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="webEditUI">
+				<attribute key="group" value="common"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value=""/>
+				<attribute key="alias" value="WEB编辑UI类名"/>
+				<attribute key="type" value="String"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="entity"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.ObjectBase"/>
+				<attribute key="description" value="在实体对象的扩展属性上设置展现其的webEditUI类名"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="isAsstAcctType">
+				<attribute key="group" value="asst"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="false"/>
+				<attribute key="alias" value="是否辅助核算项目"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="entity"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.DataBase"/>
+				<attribute key="description" value="该对象是否可以作为辅助核算项目"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="isVisibleForKDTable">
+				<attribute key="group" value="f7"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="true"/>
+				<attribute key="alias" value="是否在KDTable显示"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="field"/>
+				<attribute key="description" value="控制查询对象中某列是否在KDTable中显示，默认是显示"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="colWidthInKDTable">
+				<attribute key="group" value="f7"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="50"/>
+				<attribute key="alias" value="列宽"/>
+				<attribute key="type" value="Integer"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="field"/>
+				<attribute key="description" value="控制查询对象中某列在KDTable的显示宽度"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="f7WindowTitle">
+				<attribute key="group" value="f7"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value=""/>
+				<attribute key="alias" value="F7窗口标题"/>
+				<attribute key="type" value="String"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="query"/>
+				<attribute key="description" value="F7显示的窗口标题"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="isParamObject">
+				<attribute key="group" value="param"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="false"/>
+				<attribute key="alias" value="是否参数引用对象"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="entity"/>
+				<attribute key="description" value="是否参数引用对象"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="orgRelation">
+				<attribute key="group" value="permission"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value=""/>
+				<attribute key="alias" value="主业务组织类型"/>
+				<attribute key="type" value="String"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="permissionitem"/>
+				<attribute key="description" value="权限项主业务组织类型，取值范围为：NONE、Admin、Company、Sale、Purchase、Storage、CostCenter、ProfitCenter、ControlUnit、UnionDebt、Transport，权限项与实体关联并且与实体主组织类型一致时可以不设置。"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="permItemType">
+				<attribute key="group" value="permission"/>
+				<attribute key="required" value="true"/>
+				<attribute key="defaultvalue" value="20"/>
+				<attribute key="alias" value="权限项类型"/>
+				<attribute key="type" value="String"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="permissionitem"/>
+				<attribute key="description" value="权限项类型，取值范围为：10(系统管理功能)、15(业务管理功能)、20(业务功能) 、30(综合功能) "/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="isConfigCache">
+				<attribute key="group" value="cache"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="true"/>
+				<attribute key="alias" value="是否可以配置缓存"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="entity"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.DataBase"/>
+				<attribute key="description" value="是否可以配置缓存"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="isBaseDataType">
+				<attribute key="group" value="common"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="true"/>
+				<attribute key="alias" value="是否基础资料"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="entity"/>
+				<attribute key="description" value="是否基础资料"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="isVerifiedState">
+				<attribute key="group" value="vc"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="true"/>
+				<attribute key="alias" value="是否核销状态"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="property"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.CoreBillBase || com.kingdee.eas.framework.app.CoreBillEntryBase"/>
+				<attribute key="description" value="是否核销状态"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="controlType">
+				<attribute key="group" value="common"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="S1"/>
+				<attribute key="alias" value="基础资料控制类别"/>
+				<attribute key="type" value="String"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="entity"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.DataBase"/>
+				<attribute key="description" value="基础资料控制类别"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="isLinkedToGroupEntity">
+				<attribute key="group" value="common"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="false"/>
+				<attribute key="alias" value="是否指向分组实体"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="property"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.DataBase"/>
+				<attribute key="description" value="是否指向分组实体"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="OrgType">
+				<attribute key="group" value="common"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="NONE"/>
+				<attribute key="alias" value="主业务组织类型"/>
+				<attribute key="type" value="String"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="entity"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.ObjectBase"/>
+				<attribute key="description" value="主业务组织类型，取值范围为：NONE、Admin、Company、Sale、Purchase、Storage、CostCenter、ProfitCenter、ControlUnit、UnionDebt、Transport"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="isActionDate">
+				<attribute key="group" value="formula"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="false"/>
+				<attribute key="alias" value="是否可用作业务日期过滤"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="field"/>
+				<attribute key="description" value="资金系统.资金计划取数公式使用"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="isDataType">
+				<attribute key="group" value="formula"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="false"/>
+				<attribute key="alias" value="是否可用作公式数据来源"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="field"/>
+				<attribute key="description" value="资金系统.资金计划取数公式使用"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="billFormulaClass">
+				<attribute key="group" value="botp"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value=""/>
+				<attribute key="alias" value="自定义函数"/>
+				<attribute key="type" value="String"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="entity"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.CoreBillBase"/>
+				<attribute key="description" value="目标单据注册BOTP公式平台自定义函数类使用"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="nobotp">
+				<attribute key="group" value="botp"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="true"/>
+				<attribute key="alias" value="不进行BOTP转换"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="entity"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.CoreBillBase"/>
+				<attribute key="description" value="单据不出现在BOTP规则定义中"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="viewName">
+				<attribute key="group" value="common"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value=""/>
+				<attribute key="alias" value="核算项目对应视图"/>
+				<attribute key="type" value="String"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="entity"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.DataBase"/>
+				<attribute key="description" value="核算项目对应视图"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="isF7Maintain">
+				<attribute key="group" value="f7"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="false"/>
+				<attribute key="alias" value="是否可以通过F7维护业务对象"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="query"/>
+				<attribute key="description" value="是否可以通过F7维护业务对象"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="multiapproveQuery">
+				<attribute key="group" value="common"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value=""/>
+				<attribute key="alias" value="多级审批特定Query"/>
+				<attribute key="type" value="String"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="entity"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.CoreBase"/>
+				<attribute key="description" value="指定一个专供多级审批显示单据用的Query,只显示必要的字段即可"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="PermissionItem">
+				<attribute key="group" value="permission"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value=""/>
+				<attribute key="alias" value="查询权限项"/>
+				<attribute key="type" value="String"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="entity"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.DataBase"/>
+				<attribute key="description" value="用于表示查询该辅助核算项目类型对应的查询权限项"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="enableFieldPermission">
+				<attribute key="group" value="permission"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="false"/>
+				<attribute key="alias" value="业务实体是否支持字段权限"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="entity"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.ObjectBase"/>
+				<attribute key="description" value="设置业务对象是否支持字段权限"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="isDelRelationsWithoutEntries">
+				<attribute key="group" value="botp"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="false"/>
+				<attribute key="alias" value="是否在删除所有分录后同时删除单据间的BOTP关系"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="entity"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.ObjectBase"/>
+				<attribute key="description" value="是否在删除所有分录后同时删除单据间的BOTP关系"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="isSubmitReverseWrite">
+				<attribute key="group" value="botp"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="true"/>
+				<attribute key="alias" value="是否在单据提交时执行反写源单"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="entity"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.ObjectBase"/>
+				<attribute key="description" value="是否在单据提交时执行反写源单"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="enableFieldPermission">
+				<attribute key="group" value="permission"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="false"/>
+				<attribute key="alias" value="实体属性是否支持字段权限"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="property"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.CoreBase"/>
+				<attribute key="description" value="设置业务实体的属性是否支持字段权限"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="CRNumberEdit">
+				<attribute key="group" value="codingrule"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="false"/>
+				<attribute key="alias" value="编码规则生成编码可修改"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="entity"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.ObjectBase"/>
+				<attribute key="description" value="描述该实体类使用编码规则生成编码后是否允许修改"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="CRDHMaintain">
+				<attribute key="group" value="codingrule"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="false"/>
+				<attribute key="alias" value="编码规则使用断号维护"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="entity"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.ObjectBase"/>
+				<attribute key="description" value="描述该实体类是否使用编码规则断号维护功能"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="ISACCTCUSSENT">
+				<attribute key="group" value="botp"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="false"/>
+				<attribute key="alias" value="是否往来户id"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="property"/>
+				<attribute key="filter" value="com.kingdee.eas.framework.app.CoreBillBase || com.kingdee.eas.framework.app.CoreBillEntryBase"/>
+				<attribute key="description" value="单据/单据分录实体中作为往来帐id的属性(作为源单据)"/>
+			</configitem>
+		</configitem>
+		<configitem name="ExtendProperty">
+			<configitem name="enableDataPermission">
+				<attribute key="group" value="permission"/>
+				<attribute key="required" value="false"/>
+				<attribute key="defaultvalue" value="false"/>
+				<attribute key="alias" value="是否启用数据权限"/>
+				<attribute key="type" value="boolean"/>
+				<attribute key="isMultiLanguage" value="false"/>
+				<attribute key="object" value="permissionitem"/>
+				<attribute key="description" value="设置该权限项是否支持数据权限。当设置支持	数据权限时，此权限项必须要关联实体."/>
+			</configitem>
+		</configitem>
+
+	<configitem name="ExtendProperty">
+		<configitem name="CRNumberAddView">
+	         <attribute key="group" value="codingrule"/>
+	         <attribute key="required" value="false"/>
+	         <attribute key="defaultvalue" value="true"/>
+	         <attribute key="alias" value="编码规则生成编码新增显示"/>
+	         <attribute key="type" value="boolean"/>
+	         <attribute key="isMultiLanguage" value="false"/>
+	         <attribute key="object" value="entity"/>
+	         <attribute key="filter" value="com.kingdee.eas.framework.app.ObjectBase"/>
+	         <attribute key="description" value="描述该实体类使用编码规则生成编码后是否在界面显示"/>
+		</configitem>
+	</configitem>
+	<configitem name="ExtendProperty">
+		<configitem name="CRDHRefuse">
+	         <attribute key="group" value="codingrule"/>
+	         <attribute key="required" value="false"/>
+	         <attribute key="defaultvalue" value="true"/>
+	         <attribute key="alias" value="编码规则不允许断号"/>
+	         <attribute key="type" value="boolean"/>
+	         <attribute key="isMultiLanguage" value="false"/>
+	         <attribute key="object" value="entity"/>
+	         <attribute key="filter" value="com.kingdee.eas.framework.app.ObjectBase"/>
+	         <attribute key="description" value="描述该实体类使用编码规则生成编码是否不允许断号"/>
+		</configitem>
+	</configitem>
+
+	<configitem name="ExtendProperty">
+		<configitem name="isSupportWeb">
+			<attribute key="group" value="HR"/>
+			<attribute key="required" value="false"/>
+			<attribute key="defaultvalue" value="false"/>
+			<attribute key="alias" value="当前实体对应的消息能否在WEB消息中心中显示"/>
+			<attribute key="type" value="boolean"/>
+			<attribute key="isMultiLanguage" value="false"/>
+			<attribute key="object" value="entity"/>
+			<attribute key="filter" value="com.kingdee.eas.framework.app.CoreBase"/>
+			<attribute key="description" value="描述当前实体对应的消息能否在WEB消息中心中显示"/>
+		</configitem>
+	</configitem>
+	
+	<configitem name="ExtendProperty">
+		<configitem name="webSupportOnly">
+			<attribute key="group" value="commmon"/>
+			<attribute key="required" value="false"/>
+			<attribute key="defaultvalue" value="false"/>
+			<attribute key="alias" value="是否在GUI中强制打开WEB审批"/>
+			<attribute key="type" value="boolean"/>
+			<attribute key="isMultiLanguage" value="false"/>
+			<attribute key="object" value="entity"/>
+			<attribute key="filter" value="com.kingdee.eas.framework.app.CoreBase"/>
+			<attribute key="description" value="描述是否在GUI中强制打开WEB审批"/>
+		</configitem>
+	</configitem>
+	
+	<configitem name="ExtendProperty">
+		<configitem name="isSumField">
+			<attribute key="group" value="commonquery"/>
+			<attribute key="required" value="false"/>
+			<attribute key="defaultvalue" value="false"/>
+			<attribute key="alias" value="是否是统计字段"/>
+			<attribute key="type" value="boolean"/>
+			<attribute key="isMultiLanguage" value="false"/>
+			<attribute key="object" value="field"/>
+			<attribute key="description" value="是否是统计字段"/>
+		</configitem>
+	</configitem>
+	<configitem name="ExtendProperty">
+		<configitem name="PkNameGroupBy">
+			<attribute key="group" value="commonquery"/>
+			<attribute key="required" value="false"/>
+			<attribute key="defaultvalue" value="false"/>
+			<attribute key="alias" value="统计字段按照主键进行统计"/>
+			<attribute key="type" value="String"/>
+			<attribute key="isMultiLanguage" value="false"/>
+			<attribute key="object" value="field"/>
+			<attribute key="description" value="统计字段按照主键进行统计"/>
+		</configitem>
+	</configitem>
+	<!-- 与hr的isSupportWeb同名冲突
+    <configitem name="ExtendProperty">
+       <configitem name="isSupportWeb">
+             <attribute key="group" value="commmon"/>
+             <attribute key="required" value="false"/>
+             <attribute key="defaultvalue" value="false"/>
+             <attribute key="alias" value="是否支持web方式审批"/>
+             <attribute key="type" value="boolean"/>
+             <attribute key="isMultiLanguage" value="false"/>
+             <attribute key="object" value="entity"/>
+             <attribute key="filter" value="com.kingdee.eas.framework.app.ObjectBase"/>
+             <attribute key="description" value="描述该实体是否支持web方式审批"/>
+       </configitem>
+    </configitem>
+  -->
+	
+	<!-- uiObject  记录工作流中GUI对应的Web页面相关属性-->
+	<configitem name="ExtendProperty">
+		<configitem name="url">
+			<attribute key="group" value="url"/>
+			<attribute key="required" value="false"/>
+			<attribute key="defaultvalue" value="http://www.kingdee.com"/>
+			<attribute key="alias" value="URL"/>
+			<attribute key="type" value="String"/>
+			<attribute key="isMultiLanguage" value="true"/>
+			<attribute key="object" value="uiObject"/>
+			<attribute key="description" value="页面访问地址"/>
+		</configitem>
+	</configitem>
+	<configitem name="ExtendProperty">
+		<configitem name="height">
+			<attribute key="group" value="url"/>
+			<attribute key="required" value="false"/>
+			<attribute key="defaultvalue" value="100"/>
+			<attribute key="alias" value="高度"/>
+			<attribute key="type" value="String"/>
+			<attribute key="isMultiLanguage" value="true"/>
+			<attribute key="object" value="uiObject"/>
+			<attribute key="description" value="页面高度"/>
+		</configitem>
+	</configitem>
+	<configitem name="ExtendProperty">
+		<configitem name="width">
+			<attribute key="group" value="url"/>
+			<attribute key="required" value="false"/>
+			<attribute key="defaultvalue" value="100"/>
+			<attribute key="alias" value="宽度"/>
+			<attribute key="type" value="String"/>
+			<attribute key="isMultiLanguage" value="true"/>
+			<attribute key="object" value="uiObject"/>
+			<attribute key="description" value="页面宽度"/>
+		</configitem>
+	</configitem>
+	<configitem name="ExtendProperty">
+		<configitem name="openWay">
+			<attribute key="group" value="url"/>
+			<attribute key="required" value="false"/>
+			<attribute key="defaultvalue" value="0"/>
+			<attribute key="alias" value="打开方式"/>
+			<attribute key="type" value="String"/>
+			<attribute key="isMultiLanguage" value="true"/>
+			<attribute key="object" value="uiObject"/>
+			<attribute key="description" value="页面打开方式"/>
+		</configitem>
+	</configitem>
+
+	<configitem name="ExtendProperty">
+		<configitem name="CRAddNoBreak">
+	         <attribute key="group" value="codingrule"/>
+	         <attribute key="required" value="false"/>
+	         <attribute key="defaultvalue" value="true"/>
+	         <attribute key="alias" value="编码规则新增显示不允许断号"/>
+	         <attribute key="type" value="boolean"/>
+	         <attribute key="isMultiLanguage" value="false"/>
+	         <attribute key="object" value="entity"/>
+	         <attribute key="filter" value="com.kingdee.eas.framework.app.ObjectBase"/>
+	         <attribute key="description" value="描述该实体类使用编码规则既在新增显示编码且不允许断号"/>
+		</configitem>
+	</configitem>
+	
+	<configitem name="ExtendProperty">
+		<configitem name="IsReverseLinkEntity">
+	         <attribute key="group" value="cache"/>
+	         <attribute key="required" value="false"/>
+	         <attribute key="defaultvalue" value="false"/>
+	         <attribute key="alias" value="是否反向关联的实体"/>
+	         <attribute key="type" value="boolean"/>
+	         <attribute key="isMultiLanguage" value="false"/>
+	         <attribute key="object" value="entity"/>
+	         <attribute key="filter" value="com.kingdee.eas.framework.app.CoreBase"/>
+	         <attribute key="description" value="如果是反向关联的实体，则影响table2type.properties的生成"/>
+		</configitem>
+	</configitem>
+	<!-- uiObject-->
+		
+	</configitem>
+</config>

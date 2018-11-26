@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.kingdee.bos.studio"
+      label="StudioFeature"
+      version="4.1.0"
+      provider-name="KINGDEE Software Co., Lit."
+      plugin="com.kingdee.bos.studio.NewStudioPlugin"
+      image="splash.bmp"
+      primary="true">
+
+   <install-handler/>
+
+   <description url="[Enter Feature URL here.]">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="[Enter Copyright URL here.]">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="[Enter License URL here.]">
+      [Enter License Description here.]
+   </license>
+
+</feature>

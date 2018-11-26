@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="获取用户的主组织ID">
+    <script><![CDATA[com.kingdee.eas.base.permission.IUser iUser = com.kingdee.eas.base.permission.UserFactory .getLocalInstance(__bosContext); 
+		com.kingdee.eas.basedata.person.PersonInfo info = iUser.getUserInfo(new com.kingdee.bos.dao.ormapping.ObjectUuidPK( com.kingdee.bos.util.BOSUuid.read(userID))).getPerson(); 
+		com.kingdee.bos.util.BOSUuid orgId = null;
+		if (info != null) { 
+			String personId = info.getId().toString(); 
+			com.kingdee.eas.basedata.org.IPositionMember iPositionMember =  com.kingdee.eas.basedata.org.PositionMemberFactory.getLocalInstance(__bosContext); 
+			com.kingdee.eas.basedata.org.PositionMemberInfo positionMemberInfo = iPositionMember.getPositionMemberInfo("select position.adminOrgUnit.id where person.id = '"+ personId + "' and isPrimary = 1"); 
+			orgId = positionMemberInfo.getPosition().getAdminOrgUnit().getId();
+		}
+		return orgId;]]></script>
+    <description><![CDATA[根据用户ID获取用户所在的主组织ID,返回组织ID,
+以便后续使用.]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>BOID</type>
+      <array>false</array>
+      <description><![CDATA[返回用户的主组织ID]]></description>
+    </return>
+    <parameter>
+      <name>userID</name>
+      <type>STRING</type>
+      <array>false</array>
+      <description><![CDATA[用户ID]]></description>
+    </parameter>
+  </function>
+</functions>
+

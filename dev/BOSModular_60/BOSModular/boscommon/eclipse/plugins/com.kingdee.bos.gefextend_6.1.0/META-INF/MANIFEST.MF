@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-Name: GefExtend Plug-in
+Bundle-SymbolicName: com.kingdee.bos.tool.gefextend;singleton:=true
+Bundle-Version: 5.0
+Bundle-ClassPath: gefextend.jar
+Bundle-Activator: com.kingdee.bos.tool.gefextend.GefExtendPlugin
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.gef,
+ org.eclipse.ui.views,
+ com.kingdee.bos.tool.toolbase
+Eclipse-AutoStart: true
+Provide-Package: com.kingdee.bos.tool.gefextend,
+ com.kingdee.bos.tool.gefextend.command,
+ com.kingdee.bos.tool.gefextend.editparts,
+ com.kingdee.bos.tool.gefextend.model,
+ com.kingdee.bos.tool.gefextend.rulers,
+ com.kingdee.bos.tool.gefextend.rulers.model,
+ com.kingdee.bos.tool.gefextend.figures,
+ com.kingdee.bos.tool.gefextend.tools
+Bundle-Vendor: Kingdee Software (China) Company Ltd.
+Bundle-ManifestVersion: 2

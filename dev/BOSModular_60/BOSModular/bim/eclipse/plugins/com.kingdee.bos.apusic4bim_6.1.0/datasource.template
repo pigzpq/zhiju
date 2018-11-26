@@ -1,0 +1,7 @@
+  <datasource name="${DCINFO.aisNumber}" jndi-name="jdbc/${DCINFO.aisNumber}" driver-class="com.kingdee.bos.sql.shell.KDDriver" url="${DCINFO.generateXMLUrl}" min-spare-connections="10" max-spare-connections="50" idle-timeout="60">
+    <property name="user" value="${DCINFO.userName}" />
+    <property name="password" value="${DCINFO.password}" />
+    <remote-acl>
+      <user>admin</user>
+    </remote-acl>
+  </datasource>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.4 U (http://www.xmlspy.com) by charse (kingdee) -->
+<Config>
+	<isContainer>true</isContainer>
+	<isVisual>true</isVisual>
+	<Properties>	
+		<Property>
+			<name>binding</name>
+			<type>java.lang.String</type>
+			<defaultValue></defaultValue>
+			<editorType>302</editorType>
+			<group>基本</group>
+			<canDirectSet/>
+			<canBindData>false</canBindData>
+			<enableEL>true</enableEL>
+		</Property>
+		<Property>
+			<name>jsvar</name>
+			<type>java.lang.String</type>
+			<defaultValue/>
+			<editorType>302</editorType>
+			<group>基本</group>
+			<canDirectSet/>
+			<canBindData>true</canBindData>
+			<enableEL>true</enableEL>
+		</Property>	
+		<Property>
+			<name>rendered</name>
+			<type>boolean</type>
+			<defaultValue>true</defaultValue>
+			<editorType>2</editorType>
+			<group>行为</group>
+			<canDirectSet/>
+			<canBindData>false</canBindData>
+		</Property>
+	</Properties>
+	<Events>
+	</Events>
+</Config>

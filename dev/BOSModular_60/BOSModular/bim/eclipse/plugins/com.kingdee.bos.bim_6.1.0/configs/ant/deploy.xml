@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="gbk" ?>
+<project name="deployBIMProject" default="deploy">
+	<taskdef name="mytask"				classname="com.kingdee.bos.bim.ant.task.MyTask"/>
+	<taskdef name="metaDataDeployTask"	classname="com.kingdee.bos.bim.ant.task.MetaDataDeployTask"/>
+	<taskdef name="dbSyncTask"			classname="com.kingdee.bos.bim.ant.task.DbSyncTask"/>
+	<taskdef name="bosTypeWriteTask"	classname="com.kingdee.bos.bim.extend.BOSTypeWriteTask"/>
+	<taskdef name="tree_gen"			classname="com.kingdee.bos.bim.ant.task.TreeGeneratorTask"/>
+	<taskdef name="KDNoteGenerator"		classname="com.kingdee.bos.bim.ant.task.KDNoteGenerator"/>
+	<taskdef name="BDShare"				classname="com.kingdee.bos.bim.ant.task.BaseDataSharePolicyTask"/>
+	<taskdef name="MergeProperty"		classname="com.kingdee.bos.bim.ant.task.PKMappingMergeTask"/>
+
+	<property name="build.compiler" 	value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+	<property name="deployRPC" 	value="false"/>
+	<property name="srctemp" 	value="./srctemp"/>
+
+	<target name="init" description="初始化">
+		<mytask description="测试系统当前的环境变量"/>
+		<delete dir="${srctemp}"/>
+		<mkdir dir="${srctemp}"/>
+	</target>
+
+	<target name="metadataDeploy" description="发布元数据">
+		<metaDataDeployTask srcDir="${dir.src}" 
+					compileDir="${srctemp}" 
+					webSrcDir="${dir.web_src}" 
+					webRootDir="${dir.web_root}"
+					configDir="${dir.deploy}" 
+					repositoryDir="${dir.deploy_metas}" 
+					isDeploySrc="true" 
+					isDeployConfig="true" 
+					isDeployRepository="true" 
+					clearMetadataCache="false" 
+					moduleViewFile="eas_moduleView.xml" 
+					deployRPC="true"
+					agentConfigFile="${dir.project}/DeployAgent.xml"
+					projectRoot="${dir.project}"/>
+		<copy todir="${dir.deploy_metas}" preservelastmodified="true" failonerror="false" overwrite="true">
+			<fileset dir="${dir.metadata}">
+				<include name="bim.permission"/>
+				<include name="bim.log"/>
+				<include name="eas.solution"/>
+			</fileset>
+		</copy>
+		<MergeProperty sourceFile="${dir.deploy_metas}\entity_pkmapping.properties" destFile="${dir.metadata}\entity_pkmapping.properties"/>
+  		<MergeProperty sourceFile="${dir.deploy_metas}\facade_pkmapping.properties" destFile="${dir.metadata}\facade_pkmapping.properties"/>
+	</target>
+
+	<target name="genKDNote" description="生成套打模板">
+  		<KDNoteGenerator projectRoot="${dir.project}"/>
+	</target>
+
+	<target name="dbSync" description="同步数据库">
+		<dbSyncTask projectRoot="${dir.project}"/>
+		<BDShare driverClass="${db.driver_class}" jdbcUrl="${db.url}" user="${db.user}" password="${db.password}" projectRoot="${dir.project}"/>
+	</target>
+	
+	<target name="compile" description="编译">
+		<javac srcdir="${srctemp}" destdir="${dir.classes}" debug="on" nowarn="on" source="1.4" verbose="false" 
+			fork="false" target="1.4" failonerror="true" >
+			<compilerarg value="-J -client -J -Xms100m -J -Xmx100m"/>
+			<compilerarg value="-Xlint:unchecked"/>
+			<exclude name="com/kingdee/eas/basedata/master/auxacct/**/AssistantHG*.java"/>
+			<classpath>
+				<fileset dir="${dir.lib}">
+					<exclude name="src/**.*"/>
+					<include name="**/*.zip"/>
+					<include name="**/*.jar"/>   	
+				</fileset>
+			</classpath>
+		</javac>
+
+		<copy todir="${dir.classes}">
+			<fileset dir="${dir.src}">
+				<include name="**/*.properties"/>
+			</fileset>
+		</copy>
+		<delete dir="${srctemp}" failonerror="false"/>
+	</target>
+	<target name="compileWEB" description="编译WEB相关内容" if="deployWEB">
+		<javac srcdir="${dir.web_src}" destdir="${dir.web_root}/WEB-INF/classes" debug="on" nowarn="on" source="1.5" verbose="true" 
+			fork="false" target="1.5" failonerror="true">
+			<classpath path="${dir.classes}">
+				<fileset dir="${dir.lib}">
+					<exclude name="src/**/*.*"/>
+					<include name="sp/**/*.zip"/>
+					<include name="sp/**/*.jar"/>
+					<include name="**/*.jar"/>
+					<include name="**/*.zip"/>
+				</fileset>
+				<fileset dir="${dir.web_root}/WEB-INF/lib">
+					<include name="**/*.jar"/>
+					<include name="**/*.zip"/>
+				</fileset>
+				<fileset dir="${dir.project}/web/webRoot/WEB-INF/lib">
+					<include name="**/*.jar"/>
+					<include name="**/*.zip"/>
+				</fileset>
+			</classpath>
+			<compilerarg value="-Xlint:unchecked"/>
+		</javac>
+		<copy description="拷贝资源文件" todir="${dir.web_root}/WEB-INF/classes">
+			<fileset dir="${dir.web_src}">
+				<include name="**/*.properties"/>
+			</fileset>
+		</copy>
+	</target>
+	<!--
+	<target name="createMenu" description="创建菜单">
+		<createMenuTask driverClass="${db.driver_class}" jdbcUrl="${db.url}" user="${db.user}" password="${db.password}"/>
+	</target>
+	-->
+
+	<!--
+	  <target name="bosTypeWrite" description="插入BOSType信息">
+		<bosTypeWriteTask driverClass="${db.driver_class}" jdbcUrl="${db.url}" user="${db.user}" password="${db.password}" projectRoot="${dir.project}"/>-
+	  </target>
+	-->
+
+	<target name="tree_gen" description="生成子系统树">
+		<tree_gen metadataRoot="${dir.metadata}" subSystemFile="${dir.project}"/>
+	</target>
+
+	<target name="deploy"	description="发布"		depends="init, metadataDeploy, compile,compileWEB,genKDNote,dbSync"/>
+	<target name="bimbuild" description="BIM构建"	depends="init, metadataDeploy, dbSync"/>
+</project>

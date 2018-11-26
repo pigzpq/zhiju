@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Meta>
+	<Element name="." caption="分页" />
+	<Element name="demo_Pagin.olaprpt" caption="产品地区销售分析(每页/20行)" />
+</Meta>
+

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizTemplate xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.bos.bim.templates</package>
+    <name>BizBillBaseTemplate</name>
+    <alias>bizTemplate[com.kingdee.bos.bim.templates.BizBillBaseTemplate].alias</alias>
+    <description>bizTemplate[com.kingdee.bos.bim.templates.BizBillBaseTemplate].description</description>
+    <userDefined>false</userDefined>
+    <bizType>BusinessBill</bizType>
+    <template>false</template>
+    <entityPK>com.kingdee.bos.bim.templates.app.BizBillBase</entityPK>
+    <queryPK>com.kingdee.bos.bim.templates.app.BizBillBaseQuery</queryPK>
+    <editUIPK>com.kingdee.bos.bim.templates.client.BizBillEditUI</editUIPK>
+    <listUIPK>com.kingdee.bos.bim.templates.client.BizBillListUI</listUIPK>
+    <entityFunctionPK />
+    <editUIFunctionPK>com.kingdee.bos.bim.templates.app.BizBillBaseEditUIFunc</editUIFunctionPK>
+    <listUIFunctionPK>com.kingdee.bos.bim.templates.app.BizBillBaseListUIFunc</listUIFunctionPK>
+    <entryUIPK />
+    <versionDate />
+    <versionNumber />
+    <extendTablePKs />
+    <extendEntityPKs />
+    <extendQueryPKs />
+    <extendEditUIPKs />
+    <extendListUIPKs />
+    <menuPKList />
+    <bimTemplateType>BillBase</bimTemplateType>
+    <relatedTablePK />
+    <relatedEntityPK />
+    <relatedEditUIPK />
+    <genImplementCode>true</genImplementCode>
+    <resource>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizBillBaseTemplate].alias">
+            <lang locale="zh_CN" value="单据基础模板" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="單據基礎範本" />
+            <lang locale="zh_TW" value="單據基礎範本" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizBillBaseTemplate].description">
+            <lang locale="zh_CN" value="单据基础模板" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="單據基礎範本" />
+            <lang locale="zh_TW" value="單據基礎範本" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizBillBaseTemplate].extendedProperty.BizUnitDeployed">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizBillBaseTemplate].extendedProperty.OrgType">
+            <lang locale="zh_CN" value="Company" />
+            <lang locale="en_US" value="Company" />
+            <lang locale="zh_TW" value="Company" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizBillBaseTemplate].extendedProperty.bimTemplateType">
+            <lang locale="zh_CN" value="BillBase" />
+            <lang locale="en_US" value="BillBase" />
+            <lang locale="zh_TW" value="BillBase" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizBillBaseTemplate].extendedProperty.codingRuleEnabled">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizBillBaseTemplate].extendedProperty.editUI">
+            <lang locale="zh_CN" value="com.kingdee.bos.bim.templates.client.BizBillEditUI" />
+            <lang locale="en_US" value="com.kingdee.bos.bim.templates.client.BizBillEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.bos.bim.templates.client.BizBillEditUI" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizBillBaseTemplate].extendedProperty.isAsstAcctType">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizBillBaseTemplate].extendedProperty.maxFieldIndex">
+            <lang locale="zh_CN" value="3" />
+            <lang locale="en_US" value="3" />
+            <lang locale="zh_TW" value="3" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizBillBaseTemplate].extendedProperty.userDefined">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizTemplate>
+

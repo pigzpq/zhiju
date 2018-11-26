@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: BOSWebServiceNL Fragment
+Bundle-SymbolicName: com.kingdee.bos.boswebservice.nl
+Bundle-Version: 5.4.0
+Bundle-ClassPath: boswebservicenl.jar
+Bundle-Vendor: Kingdee Software
+Fragment-Host: com.kingdee.bos.boswebservice;bundle-version="5.4.0"
+Bundle-Localization: plugin

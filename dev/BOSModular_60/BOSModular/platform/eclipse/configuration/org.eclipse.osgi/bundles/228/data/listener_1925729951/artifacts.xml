@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository class='org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository' version='1.0.0'?>
+<repository name='artifact listener dropins' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
+  <properties size='3'>
+    <property name='p2.system' value='true'/>
+    <property name='p2.timestamp' value='1540128714140'/>
+    <property name='dropin.artifactRepositories' value='file:/D:/bos/BOSModular/bim/|file:/D:/bos/BOSModular/boscommon/|file:/D:/bos/BOSModular/bosideupdate/|file:/D:/bos/BOSModular/bosruntime/|file:/D:/bos/BOSModular/bosstudio/|file:/D:/bos/BOSModular/commonthirdlib/|file:/D:/bos/BOSModular/ksqltool/|file:/D:/bos/BOSModular/nlpack/|file:/D:/bos/BOSModular/rcs/|file:/D:/bos/BOSModular/wfdesigner/|file:/D:/bos/BOSModular/kbs/|file:/D:/bos/BOSModular/svn/'/>
+  </properties>
+  <mappings size='3'>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='1'>
+    <artifact classifier='osgi.bundle' id='wfDesignerExtensionSimple' version='1.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/platform/eclipse/dropins/wfDesignerExtensionSimple_1.0.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\platform\eclipse\dropins\wfDesignerExtensionSimple_1.0.0'/>
+        <property name='file.lastModified' value='1540115239375'/>
+      </repositoryProperties>
+    </artifact>
+  </artifacts>
+</repository>

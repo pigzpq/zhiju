@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+<!-- ============================================================================= -->
+<!-- Define topics for the main guide                                              -->
+<!-- ============================================================================= -->
+<toc label="FAQ">
+	<topic label="BOS知识库" href="html/FAQ/Repository/bos_repository.htm"/>
+	<topic label="FAQ" href="html/FAQ/FAQ.htm">	
+		<topic label="实体类FAQ" href="html/FAQ/EntityFAQ/EntityFAQ.htm">	
+			<topic label="CoreBase常见问题" href="html/FAQ/EntityFAQ/CoreBase.htm"/>
+			<topic label="ObjectBase常见问题" href="html/FAQ/EntityFAQ/ObjectBase.htm"/>
+			<topic label="DataBase常见问题" href="html/FAQ/EntityFAQ/DataBase.htm"/>
+			<topic label="TreeBase常见问题" href="html/FAQ/EntityFAQ/TreeBase.htm"/>
+			<topic label="BillBase常见问题" href="html/FAQ/EntityFAQ/BillBase.htm"/>
+		</topic>
+		<topic label="UI类FAQ" href="html/FAQ/UIFAQ/UIFAQ.htm">
+			<topic label="ListUI常见问题" href="html/FAQ/UIFAQ/ListUI.htm"/>
+			<topic label="TreeListUI常见问题" href="html/FAQ/UIFAQ/TreeListUI.htm"/>
+		</topic>
+	</topic>
+</toc>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+<!-- ============================================================================= -->
+<!-- Define topics for the main guide                                              -->
+<!-- ============================================================================= -->
+<toc label="BOS应用FAQ">
+	<topic label="应用框架" href="http://eas2:8080/Wiki.jsp?page=AppFrameworkFAQ"/>
+	<topic label="KSQL" href="http://eas2:8080/Wiki.jsp?page=KSQLFAQ"/>
+	<topic label="Query" href="http://eas2:8080/Wiki.jsp?page=QueryFAQ"/>
+	<topic label="ORMapping" href="http://eas2:8080/Wiki.jsp?page=ORMappingFAQ"/>
+	<topic label="工作流系统" href="http://eas2:8080/Wiki.jsp?page=WorkflowFAQ"/>
+	<topic label="BOS Studio" href="http://eas2:8080/Wiki.jsp?page=BOSStudioFAQ"/>
+	<topic label="BIM（业务管理平台）" href="http://eas2:8080/Wiki.jsp?page=BIMFAQ"/>
+</toc>

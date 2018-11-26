@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Meta>
+	<Element name="demo.cube" caption="销售数据立方体" />
+	<Element name="demo_var_filter.cube" caption="销售数据立方体(过滤器宏专用)" />
+	<Element name="demo2.cube" caption="销售数据立方体(红绿灯趋势)" />
+</Meta>
+

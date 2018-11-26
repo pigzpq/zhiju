@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="获取职员的公司">
+    <script><![CDATA[if(null == personID || "".equals(personID.toString()))
+			return null;		
+		return new com.kingdee.eas.basedata.org.AdminOrgFacade(__bosContext).getComByPersonId(personID.toString());]]></script>
+    <description><![CDATA[获取职员对应的公司信息]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>OBJECT</type>
+      <description><![CDATA[返回职员的公司信息(AdminOrgUnitInfo)]]></description>
+      <isArray>false</isArray>
+    </return>
+    <parameter>
+      <name>personID</name>
+      <type>BOID</type>
+      <description><![CDATA[职员ID]]></description>
+    </parameter>
+  </function>
+</functions>
+

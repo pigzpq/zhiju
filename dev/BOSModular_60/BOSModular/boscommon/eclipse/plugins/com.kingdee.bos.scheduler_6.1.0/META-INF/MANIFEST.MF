@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Bundle-Name: BOS Scheduler
+Bundle-SymbolicName: com.kingdee.bos.scheduler;singleton:=true
+Bundle-Version: 6.1.0
+Bundle-ClassPath: scheduler.jar
+Bundle-Localization: plugin
+Eclipse-AutoStart: true
+Require-Bundle: org.log4j,
+ org.quartz,
+ com.j2ee,
+ org.commons-logging,
+ com.kingdee.bos.metadata,
+ com.kingdee.apws,
+ com.kingdee.bos.orm,
+ org.junit,
+ com.kingdee.bos.bosframework,
+ com.kingdee.bos.message
+Provide-Package: com.kingdee.bos.service.scheduler,
+ com.kingdee.bos.service.scheduler.util
+Bundle-Vendor: KINGDEE Software Corp.Bundle-Vendor: Kingdee Software (China) Company Ltd.,
+Bundle-ManifestVersion: 2
+Export-Package: com.kingdee.bos.service.job,
+ com.kingdee.bos.service.job.core,
+ com.kingdee.bos.service.job.ext,
+ com.kingdee.bos.service.job.pulse,
+ com.kingdee.bos.service.job.returns,
+ com.kingdee.bos.service.job.util,
+ com.kingdee.bos.service.job.wrapper

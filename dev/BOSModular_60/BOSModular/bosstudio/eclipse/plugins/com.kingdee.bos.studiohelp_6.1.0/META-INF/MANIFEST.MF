@@ -1,0 +1,13 @@
+Bundle-ManifestVersion: 2
+Manifest-Version: 1.0
+Bundle-Name: StudioHelp 插件
+Bundle-SymbolicName: com.kingdee.bos.studio.doc; singleton:=true
+Bundle-Version: 5.0
+Bundle-ClassPath: studiohelp.jar
+Bundle-Activator: com.kingdee.bos.studio.doc.StudioHelpPlugin
+Bundle-Vendor: Kingdee Software (China) Company Ltd.
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.help
+Eclipse-AutoStart: true

@@ -1,0 +1,32 @@
+2005.11.08  RX  <raymondxiu@kdsv.kingdee.com>
+[NEW] 支持READPAST。语法与MSSQLSERVER一样。 
+[FIX] 修正了UPDATE中带有子查询在生成MSSQLServer的SQL时改变了WHERE条件顺序的BUG 
+[FIX] 修正了Alter Table在生成Oracle的SQL中默认带有NULL的BUG 
+
+2005.11.01  RX  <raymondxiu@kdsv.kingdee.com>
+[NEW] 加入了对Left join及inner join的优化，如果join的条件的字段没有使用，则替换为原表字段。并可能进一步优化将join删除。
+
+2006-01-05  raymondxiu  <raymondxiu@kdsv.kingdee.com>
+
+	* src\com\kingdee\bos\sql\formater\TSQLFormater.java: 在Select常量字符列时，添加
+	大小写敏感排序规则
+	
+2006-03-16  RX  <raymondxiu@kdsv.kingdee.com>
+	[NEW] 通过System.property("logintimeout")设置JDBCLoginTimeOut，默认为5秒
+	[FIX] 修改临时表生成表名算法，解决某些情况下表名会超长
+
+2006-03-18  RX  <raymondxiu@kdsv.kingdee.com>
+	[NEW] 完善系统表的支持
+	
+2006-03-20  RX  <raymondxiu@kdsv.kingdee.com>
+	[NEW] 添加TO_CHAR(columnName, 'NUMBER', '9999D99')函数
+	[FIX] Update set  
+
+2006-03-21  RX  <raymondxiu@kdsv.kingdee.com>
+	[FIX] ADD_MONTHS,DATEDIFF
+
+2006-03-23  RX  <raymondxiu@kdsv.kingdee.com>
+	[FIX] 完善Update Set 自关联更新
+	[FIX] AS400 TO_DATE()
+	[FIX] KDDriver parser bindport
+	[FIX] DB2AS400 TempTable

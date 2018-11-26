@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+<!-- ============================================================================= -->
+<!-- Define topics for the main guide                                              -->
+<!-- ============================================================================= -->
+<toc label="BOS应用FAQ">
+	<topic label="BOS部网站" href="http://eas2/sites/BOS"/>
+	<topic label="金蝶研发博客" href="http://eas2/kdblog"/>
+	<topic label="主设计师" href="http://eas2/sites/cdc"/>
+	<topic label="主开发师" href="http://eas2/sites/ccc"/>
+	<topic label="研发论坛" href="http://rd-server/forum"/>
+</toc>

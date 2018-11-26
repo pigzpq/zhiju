@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <project   default="biupload"   basedir=".">   
+      <property   name="dest"   value=""></property>   
+        <property   name="src"   value=""/>   
+      <target   name="biupload">   
+            <copy   todir="../../../server/deploy/subjects">   
+                <fileset   dir="subjects">   
+                </fileset>   
+            </copy>
+      	    <copy   todir="../../../server/lib/client/eas">   
+      	         <fileset   dir="jar/client">   
+      	         </fileset>   
+      	    </copy> 
+            <copy   todir="../../../server/lib/server/eas">   
+            	  <fileset   dir="jar/server">   
+            	  </fileset>   
+           </copy> 
+      </target>   
+  </project> 

@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: NewEbgateway Plug-in
+Bundle-SymbolicName: com.kingdee.bos.ebgateway.common;singleton:=true
+Bundle-Version: 1.0.1
+Eclipse-LazyStart: true
+Eclipse-BuddyPolicy: dependent
+Require-Bundle: org.log4j,
+ org.junit
+Export-Package: com.kingdee.bos.ebgateway.bankservice,
+ com.kingdee.bos.ebgateway.bd,
+ com.kingdee.bos.ebgateway.common,
+ com.kingdee.bos.ebgateway.conf,
+ com.kingdee.bos.ebgateway.log,
+ com.kingdee.bos.ebgateway.util,
+ com.kingdee.util
+Bundle-ClassPath: ebgateway.jar

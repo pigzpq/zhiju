@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-Name: BOS Cache
+Bundle-SymbolicName: com.kingdee.bos.cache;singleton:=true
+Bundle-Version: 6.1.0
+Bundle-ClassPath: cache.jar,
+ lib/jgroups-all.jar
+Bundle-Localization: plugin
+Eclipse-AutoStart: true
+Require-Bundle: org.log4j,
+ org.jdom,
+ com.j2ee,
+ org.junit,
+ com.kingdee.bos.common,
+ com.kingdee.bos.orm,
+ org.commons-logging,
+ org.concurrent
+Provide-Package: com.kingdee.bos.cache,
+ com.kingdee.bos.cache.impl,
+ com.kingdee.bos.cache.impl.remote,
+ com.kingdee.bos.jcache,
+ com.kingdee.bos.jcache.impl,
+ com.kingdee.bos.jcache.jgroups
+Bundle-Vendor: Kingdee Software (China) Company Ltd.
+Bundle-ManifestVersion: 2

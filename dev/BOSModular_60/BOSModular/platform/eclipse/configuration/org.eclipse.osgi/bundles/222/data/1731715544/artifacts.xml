@@ -1,0 +1,267 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository class='org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository' version='1.0.0'?>
+<repository name='dropins artifact repo: file:/D:/bos/BOSModular/boscommon/' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.system' value='true'/>
+    <property name='p2.timestamp' value='1540128716796'/>
+  </properties>
+  <mappings size='3'>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='21'>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.license' version='6.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/boscommon/eclipse/plugins/com.kingdee.bos.boslicense_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\boscommon\eclipse\plugins\com.kingdee.bos.boslicense_6.1.0'/>
+        <property name='file.lastModified' value='1540115283062'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.cache' version='6.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/boscommon/eclipse/plugins/com.kingdee.bos.cache_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\boscommon\eclipse\plugins\com.kingdee.bos.cache_6.1.0'/>
+        <property name='file.lastModified' value='1540115282734'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.tool.gefextend' version='5.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/boscommon/eclipse/plugins/com.kingdee.bos.gefextend_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\boscommon\eclipse\plugins\com.kingdee.bos.gefextend_6.1.0'/>
+        <property name='file.lastModified' value='1540115281968'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.boswebservice' version='6.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/boscommon/eclipse/plugins/com.kingdee.bos.boswebservice_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\boscommon\eclipse\plugins\com.kingdee.bos.boswebservice_6.1.0'/>
+        <property name='file.lastModified' value='1540115283015'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.tool.toolbase' version='6.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/boscommon/eclipse/plugins/com.kingdee.bos.toolbase_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\boscommon\eclipse\plugins\com.kingdee.bos.toolbase_6.1.0'/>
+        <property name='file.lastModified' value='1540115281218'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.common' version='6.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/boscommon/eclipse/plugins/com.kingdee.bos.common_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\boscommon\eclipse\plugins\com.kingdee.bos.common_6.1.0'/>
+        <property name='file.lastModified' value='1540115282234'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.rpc.loadbalance.distributer' version='6.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/boscommon/eclipse/plugins/com.kingdee.bos.lbdistributer_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\boscommon\eclipse\plugins\com.kingdee.bos.lbdistributer_6.1.0'/>
+        <property name='file.lastModified' value='1540115281750'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.commoneventservice' version='1.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/boscommon/eclipse/plugins/com.kingdee.bos.commoneventservice_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\boscommon\eclipse\plugins\com.kingdee.bos.commoneventservice_6.1.0'/>
+        <property name='file.lastModified' value='1540115282593'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.kscript' version='1.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/boscommon/eclipse/plugins/com.kingdee.bos.kscript_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\boscommon\eclipse\plugins\com.kingdee.bos.kscript_6.1.0'/>
+        <property name='file.lastModified' value='1540115281875'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.ksql' version='6.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/boscommon/eclipse/plugins/com.kingdee.bos.ksql_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\boscommon\eclipse\plugins\com.kingdee.bos.ksql_6.1.0'/>
+        <property name='file.lastModified' value='1540115281828'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.ui.uimodel' version='6.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/boscommon/eclipse/plugins/com.kingdee.bos.uimodel_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\boscommon\eclipse\plugins\com.kingdee.bos.uimodel_6.1.0'/>
+        <property name='file.lastModified' value='1540115279343'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.bsrr' version='1.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/boscommon/eclipse/plugins/com.kingdee.bos.bsrr_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\boscommon\eclipse\plugins\com.kingdee.bos.bsrr_6.1.0'/>
+        <property name='file.lastModified' value='1540115282765'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.bsrrtool' version='1.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/boscommon/eclipse/plugins/com.kingdee.bos.bsrrtool_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\boscommon\eclipse\plugins\com.kingdee.bos.bsrrtool_6.1.0'/>
+        <property name='file.lastModified' value='1540115282843'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.scheduler' version='6.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/boscommon/eclipse/plugins/com.kingdee.bos.scheduler_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\boscommon\eclipse\plugins\com.kingdee.bos.scheduler_6.1.0'/>
+        <property name='file.lastModified' value='1540115281437'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.netfile' version='6.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/boscommon/eclipse/plugins/com.kingdee.bos.netfile_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\boscommon\eclipse\plugins\com.kingdee.bos.netfile_6.1.0'/>
+        <property name='file.lastModified' value='1540115281578'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.orm' version='6.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/boscommon/eclipse/plugins/com.kingdee.bos.ormrpc_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\boscommon\eclipse\plugins\com.kingdee.bos.ormrpc_6.1.0'/>
+        <property name='file.lastModified' value='1540115281500'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.commoneventtool' version='1.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/boscommon/eclipse/plugins/com.kingdee.bos.commoneventtool_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\boscommon\eclipse\plugins\com.kingdee.bos.commoneventtool_6.1.0'/>
+        <property name='file.lastModified' value='1540115282296'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.metadata' version='6.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/boscommon/eclipse/plugins/com.kingdee.bos.metadata_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\boscommon\eclipse\plugins\com.kingdee.bos.metadata_6.1.0'/>
+        <property name='file.lastModified' value='1540115281656'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.tool.toolcommon' version='6.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/boscommon/eclipse/plugins/com.kingdee.bos.toolcommon_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\boscommon\eclipse\plugins\com.kingdee.bos.toolcommon_6.1.0'/>
+        <property name='file.lastModified' value='1540115279593'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.ctrl' version='5.4.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/boscommon/eclipse/plugins/com.kingdee.bos.ctrl_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\boscommon\eclipse\plugins\com.kingdee.bos.ctrl_6.1.0'/>
+        <property name='file.lastModified' value='1540115282218'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.bos.KScriptTool' version='1.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/boscommon/eclipse/plugins/com.kingdee.bos.kscripttool_6.1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\boscommon\eclipse\plugins\com.kingdee.bos.kscripttool_6.1.0'/>
+        <property name='file.lastModified' value='1540115281921'/>
+      </repositoryProperties>
+    </artifact>
+  </artifacts>
+</repository>

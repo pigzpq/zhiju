@@ -1,0 +1,210 @@
+﻿<project name="deployBIMProject" default="publish">
+	<property name="deploytemp"		value="_deploytemp_"/>
+	<property name="webclient_home" value="${dir.server}/deploy/fileserver.ear/easWebClient" />
+
+
+	<taskdef name="mytask"				classname="com.kingdee.bos.bim.ant.task.MyTask"/>
+	<taskdef name="dbpublish"			classname="com.kingdee.bos.bim.ant.task.DbPublishTask"/>
+	<taskdef name="easVersionUpdate"	classname="com.kingdee.bos.bim.ant.task.EASVersionUpdateTask"/>
+	<taskdef name="diffJar"				classname="com.kingdee.bos.bim.ant.task.DiffJarTask"/>
+	<taskdef name="webconfig"			classname="com.kingdee.bos.bim.ant.task.WEBAPPConfigTask"/>
+	<taskdef name="jfAvailable"			classname="com.kingdee.bos.bim.ant.task.JarFileAvailableTask"/>
+
+	<target name="init" description="初始化">
+		<mytask description="测试系统当前的环境变量"/>
+		<condition property ="webclient_home" value="${CLIENT_HOME}">
+			<and>
+				<isset property="CLIENT_HOME"/>
+				<available file="${CLIENT_HOME}" type="dir"/>
+			</and>
+		</condition>
+		<available file="${projectDir}/web.jar" property="publishWEB"/>
+		<available file="${projectDir}/eas_sp.jar" property="publishGUI"/>
+	</target>
+
+	<target name="clean">
+
+	</target>
+
+	<target name="bakup" description="备份服务器文件">
+		<echo message="备份服务器文件..."/>
+		<tstamp>
+			<format property="bakup.time" pattern="yyyyMMddHHmmss" />
+		</tstamp>
+		<mkdir dir="${dir.server}/../bimbakup/${bakup.time}"/>
+		<property name="bimbakup.dir" value="${dir.server}/../bimbakup/${bakup.time}"/>
+		<copy tofile="${bimbakup.dir}/eas_sp.server.jar"	file="${dir.server}/lib/sp/eas_sp.jar" 		failonerror="false"/>
+		<copy tofile="${bimbakup.dir}/eas_sp.webclient.jar"	file="${webclient_home}/lib/sp/eas_sp.jar" 			failonerror="false"/>
+		<copy tofile="${bimbakup.dir}/metas.webclient.jar"	file="${webclient_home}/metas/sp-bim-metas.jar" 	failonerror="false"/>
+		<copy tofile="${bimbakup.dir}/metas.server.jar"		file="${dir.server}/metas/sp-bim-metas.jar" 	failonerror="false"/>
+		
+		<copy tofile="${bimbakup.dir}/eas_sp.webclientupdate.jar"	file="${webclient_home}/lib/sp/eas_sp_update.jar"	failonerror="false"/>
+		<copy tofile="${bimbakup.dir}/metas.webclientupdate.jar"	file="${webclient_home}/metas/sp-bim-metas_update.jar"	failonerror="false"/>
+		
+		<copydir dest="${bimbakup.dir}/properties" src="${dir.server}/properties"/>
+	</target>
+
+	<target name="publish" description="部署解决方案" depends="bakup, init, clean, checkFile,beforeIncUpdate,unjarUpdate, merge_sp,publish_gui, incUpdate, deleteUpdater, publish_web, odds_eas_sp_webclient, odds_metas_webclient">
+		<echo message="${publishGUI}" />
+		<echo message="${publishWEB}" />
+	</target>
+
+	<target name="publish_web" description="部署ＷＥＢ应用" if="publishWEB">
+		<unjar src="${projectDir}/web.jar" dest="${projectDir}/web">
+		</unjar>
+		<copy todir="${dir.server}/deploy">
+			<fileset dir="${projectDir}/web">
+				<exclude name="config.properties"/>
+			</fileset>
+		</copy>
+		<webconfig configFile="${projectDir}/web/config.properties" deployDir="${dir.server}/deploy"/>
+	</target>
+
+	<target name="deleteUpdater" description="删除增量更新文件" unless="canUpdate">
+		<delete file="${webclient_home}/lib/sp/eas_sp_update.jar"/>
+		<delete file="${webclient_home}/metas/sp-bim-metas_update.jar"/>
+		<mkdir dir="temp_empty_dir/META-INF"/>
+		<jar destfile="${webclient_home}/lib/sp/eas_sp_update.jar" basedir="temp_empty_dir"/>
+		<jar destfile="${webclient_home}/metas/sp-bim-metas_update.jar" basedir="temp_empty_dir"/>
+		<delete dir="temp_empty_dir"/>
+	</target>
+
+	<target name="checkFile" description="检查增量更新文件" if="useInc">
+		<jfAvailable file="${webclient_home}/metas/sp-bim-metas.jar" entry="md5.properties" type="file" property="canUpdate"/>
+		<available file="${webclient_home}/lib/sp/eas_sp_update.jar" property="updater.exists"/>
+		<available file="${dir.server}/lib/sp/eas_sp.jar" property="sp.exists"/>
+	</target>
+	
+	
+	<target name="beforeIncUpdate" description="增量更新前的准备" if="canUpdate">
+		<!-- delete dir="${dir.server}/bimupdate/base"/ -->
+		<mkdir dir="${dir.server}/bimupdate/base"/>
+		<unzip dest="${dir.server}/bimupdate" src="${projectDir}/bimupdate.zip" overwrite="true"/>
+		<copy file="${webclient_home}/lib/sp/eas_sp.jar" 		todir="${dir.server}/bimupdate/base" overwrite="true"/>
+		<copy file="${webclient_home}/metas/sp-bim-metas.jar" 	todir="${dir.server}/bimupdate/base" overwrite="true"/>
+		<copy file="${dir.server}/bimupdate/resourceSet.properties" 
+			todir="${dir.server}/profiles/server1/config/portalConfig/" overwrite="true"/>
+	</target>
+	
+	<target name="unjarUpdate" description="处理旧有updater包" if="updater.exists">
+		<unjar src="${webclient_home}/lib/sp/eas_sp_update.jar" dest="${dir.server}/bimupdate/temp/classes" overwrite="true"/>
+		<unjar src="${webclient_home}/metas/sp-bim-metas_update.jar" dest="${dir.server}/bimupdate/temp/metas" overwrite="true"/>
+	</target>
+
+	<target name="incUpdate" description="增量更新" if="canUpdate">
+		<delete dir="${dir.server}/bimupdate/temp"/>
+		<mkdir dir="${dir.server}/bimupdate/temp/classes"/>
+		<mkdir dir="${dir.server}/bimupdate/temp/metas"/>
+		
+		<diffJar toDir="${dir.server}/bimupdate/temp/classes" md5FileName="md5.properties"
+			baseJar="${dir.server}/bimupdate/base/eas_sp.jar" 
+			compJar="${dir.server}/lib/sp/eas_sp.jar" />
+		<jar destfile="${webclient_home}/lib/sp/eas_sp_update.jar" whenempty="skip">
+			<fileset dir="${dir.server}/bimupdate/temp/classes">
+				<exclude name="**/app/**"/>
+			</fileset>
+		</jar>
+		
+		<diffJar toDir="${dir.server}/bimupdate/temp/metas" md5FileName="md5.properties"
+			baseJar="${dir.server}/bimupdate/base/sp-bim-metas.jar" 
+			compJar="${dir.server}/metas/sp-bim-metas.jar" />
+		<jar destfile="${webclient_home}/metas/sp-bim-metas_update.jar" whenempty="skip">
+			<fileset dir="${dir.server}/bimupdate/temp/metas">
+				<exclude name="**/CVS/**"/>
+			</fileset>
+		</jar>
+		<copy file="${dir.server}/bimupdate/base/eas_sp.jar" tofile="${webclient_home}/lib/sp/eas_sp.jar" overwrite="true"/>
+		<copy file="${dir.server}/bimupdate/base/sp-bim-metas.jar" tofile="${webclient_home}/metas/sp-bim-metas.jar" overwrite="true"/>
+		<delete dir="${dir.server}/bimupdate/temp"/>
+	</target>
+	
+	<target name="merge_sp" if="sp.exists">
+		<copy file="${projectDir}/eas_sp.jar"		tofile="${dir.server}/lib/sp/eas_sp.jar" overwrite="true" />
+		<copy file="${projectDir}/sp-bim-metas.jar"	tofile="${dir.server}/metas/sp-bim-metas.jar"/>
+		<delete dir="${projectDir}/temp"/>
+		<mkdir dir="${projectDir}/temp/classes"/>
+		<mkdir dir="${projectDir}/temp/metas"/>
+		<unjar dest="${projectDir}/temp/classes" src="${dir.server}/lib/sp/eas_sp.jar"/>
+		<unjar dest="${projectDir}/temp/classes" src="${projectDir}/eas_sp.jar" overwrite="true"/>
+		<jar destfile="${projectDir}/eas_sp.jar">
+			<fileset dir="${projectDir}/temp/classes">
+				<include name="**/*.*"/>
+			</fileset>
+		</jar>
+		
+		<unjar dest="${projectDir}/temp/metas" src="${dir.server}/metas/sp-bim-metas.jar"/>
+		<unjar dest="${projectDir}/temp/metas" src="${projectDir}/sp-bim-metas.jar" overwrite="true"/>
+		<jar destfile="${projectDir}/p-bim-metas.jar">
+				<fileset dir="${projectDir}/temp/metas">
+					<include name="**/*.*"/>
+				</fileset>
+			</jar>
+	</target>
+
+	<target name="publish_gui" description="GUI部分" if="publishGUI">
+		<echo message="升级版本标记..."/>
+		<easVersionUpdate 
+			driverClass="${db.driver_class}" 
+			jdbcUrl="${db.url}" 
+			user="${db.user}" 
+			password="${db.password}" 
+			solFile="${projectDir}/deployed_metas/eas.solution"/>
+		<echo message="输出文件到EAS运行时..."/>
+		<mkdir dir="${dir.server}/lib/sp"/>
+		<copy file="${projectDir}/eas_sp.jar"		tofile="${dir.server}/lib/sp/eas_sp.jar" overwrite="true" />
+		<copy file="${projectDir}/sp-bim-metas.jar"	tofile="${dir.server}/metas/sp-bim-metas.jar"/>
+		<copydir src="${projectDir}/../server/properties" dest="${dir.server}/properties"/>
+
+		<echo message="输出套打到EAS运行时..."/>
+		<unzip dest="${projectDir}" src="${projectDir}/runtime.zip"/>
+		<copy todir="${dir.server}/deploy/" overwrite="true">
+			<fileset dir="${projectDir}/runtime">
+				<include name="ctrlhome\server\storage\bim\**\*"/>
+			</fileset>
+		</copy>
+
+		<echo message="输出到自动更新服务"/>
+		<copy file="${projectDir}/eas_sp.jar" tofile="${webclient_home}/lib/sp/eas_sp.jar"/>
+		<copy file="${projectDir}/sp-bim-metas.jar" tofile="${webclient_home}/metas/sp-bim-metas.jar" overwrite="true" />
+
+		<echo message="同步数据库...."/>
+		<dbpublish driverClass="${db.driver_class}" 
+			jdbcUrl="${db.url}" 
+			user="${db.user}" 
+			password="${db.password}" 
+			recordFile="${projectDir}/deployRecord.xml"
+			deployedMetas="${dir.server}/metas/sp-bim-metas.jar;${dir.server}/metas/*.jar;${dir.server}/metas/bos/*.jar;${dir.server}/metas/eas/*.jar;${dir.server}/metas/industry/*.jar;${dir.server}/metas/mri/*.jar;${dir.server}/metas/sp/*.jar"
+			fnMenuFile="${projectDir}/FnMenuTree.xml" 
+			targetImportDir="${dir.server}" 
+			bimMetas="${dir.server}/metas/sp-bim-metas.jar"/>
+	</target>
+	
+  <target name="odds_eas_sp_webclient" description="生成webclient端eas_sp.jar差异包">
+   <java failonerror="true" classname="com.kingdee.eas.cp.autoupdater.util.ServerOddsGenerator" fork="true">
+    <arg value="${bimbakup.dir}/eas_sp.webclient.jar" />
+    <arg value="${webclient_home}/lib/sp/eas_sp.jar" />
+    <sysproperty key="EAS_HOME" value="${dir.server}"/>
+    <sysproperty key="portal.config" value="${dir.server}/profiles/server1/config/portalConfig/portalConfig.xml"/>
+    <classpath>
+      <pathelement path="${dir.server}/lib/server/bos/cp_autoupdater-server.jar" />
+      <pathelement path="${dir.server}/lib/common/trd/log4j-1.2.6.jar" />
+    </classpath>
+   </java>
+  </target>
+  
+  <target name="odds_metas_webclient" description="生成webclient端sp-bim-metas.jar差异包">
+   <java failonerror="true" classname="com.kingdee.eas.cp.autoupdater.util.ServerOddsGenerator" fork="true">
+    <arg value="${bimbakup.dir}/metas.webclient.jar" />
+    <arg value="${webclient_home}/metas/sp-bim-metas.jar" />
+    <sysproperty key="EAS_HOME" value="${dir.server}"/>
+    <sysproperty key="portal.config" value="${dir.server}/profiles/server1/config/portalConfig/portalConfig.xml"/>
+    <classpath>
+      <pathelement path="${dir.server}/lib/server/bos/cp_autoupdater-server.jar" />
+      <pathelement path="${dir.server}/lib/common/trd/log4j-1.2.6.jar" />
+    </classpath>
+   </java>
+  </target>
+  
+  
+	
+</project>

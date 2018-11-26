@@ -1,0 +1,19 @@
+<!ELEMENT BIReport (Cube,DataSource,MdxQuery,WorksheetComponent*,ChartComponent*)>
+<!ELEMENT Cube EMPTY>							
+<!ELEMENT DataSource EMPTY>
+<!ELEMENT MdxQuery (#PCCDATA)>
+<!ELEMENT WorksheetComponent EMPTY>
+<!ELEMENT ChartComponent EMPTY>
+<!ATTLIST Cube ref CDATA #REQUIRED>							<!-- 引用cub -->
+<!ATTLIST DataSource ref CDATA #REQUIRED>					<!-- 引用数据源 -->
+<!ATTLIST MdxQuery name CDATA #REQUIRED>					<!-- MdxQuery语句 -->
+<!ATTLIST WorksheetComponent name CDATA #REQUIRED>			<!-- 表格组件名称 -->
+<!ATTLIST WorksheetComponent mdxQuery CDATA #REQUIRED>		<!-- 组件对应查询名 -->	
+<!ATTLIST ChartComponent name CDATA #REQUIRED>				<!-- 图表组件名称 -->
+<!ATTLIST ChartComponent mdxQuery CDATA #REQUIRED>			<!-- 组件对应查询名 -->	
+<!ATTLIST ChartComponent chartType (MultiPie | Bar | Bar3D | Line 
+| Area | StackedBar | StackedBar3D | StackedArea) #IMPLIED>			<!-- 图表类型 -->
+<!ATTLIST ChartComponent chartTitle CDATA #IMPLIED>					<!-- 图表标题 -->
+<!ATTLIST ChartComponent showSlicer (true | True | false | False) #IMPLIED>	<!-- 是否显示切片 -->
+<!ATTLIST ChartComponent chartHeight CDATA #IMPLIED>				<!-- 图表高度 -->
+<!ATTLIST ChartComponent chartWidth CDATA #IMPLIED>					<!-- 图表宽度 -->

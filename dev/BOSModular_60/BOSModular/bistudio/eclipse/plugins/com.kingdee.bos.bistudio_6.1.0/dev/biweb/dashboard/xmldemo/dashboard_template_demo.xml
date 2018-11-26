@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 仪表板模板的示例 -->
+<DashBoard version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="dashboard.xsd">
+	
+	<DataSources>
+		<DataSource type="sql" name="xx" maxRowCount="2000">
+			<Content>
+				<!CDATA ]]>
+			</Content>
+			<Description>
+				<!CDATA ]]>
+			</Description>
+			<OutputColumns>
+				<OutputColumn column="" alias=""/>
+			</OutputColumns>
+		</DataSource>
+	</DataSources>
+	
+	<!-- 样式 -->
+	<Styles>
+		<Style id="style2">
+			<fontFamily>宋体</fontFamily>
+			<fontSize>9</fontSize>
+			<color>#000000</color>
+			<fontStyle>italic</fontStyle>
+			<fontWeight>bold</fontWeight>
+			<textDecoration>underline</textDecoration>
+			<textAlign>left</textAlign>
+			<verticalAlign>middle</verticalAlign>
+			<backgroundColor>#ffff99</backgroundColor>
+		</Style>
+	</Styles>
+	<!-- 内容单元对象 -->
+	<Contents>
+		<Cell id="text1" type="text" style="style2"><![CDATA[省略内容一万字……]]></Cell>
+		<Cell id="text2" type="text" style="style2" linkType="url|dashboard|piece|report" linkTip="链接到……" linkURI="链接到的路径" linkReportType="olap|ext">
+			<![CDATA[省略内容一万字……]]>
+		</Cell>
+		<Cell id="piece2" type="piece">/存储管理/URI</Cell>
+		<Cell id="picture3" type="picture" showTitle="true" title="标题" scale="original">/存储管理/URI</Cell>
+		<Cell id="picture4" type="picture" showTitle="true" title="标题" scale="original" linkType="url|dashboard|piece|report" linkTip="链接到……" linkURI="链接到的路径" linkReportType="olap|ext">/存储管理/URI</Cell>
+		<Cell id="table4" type="table" ds="xx" showTitle="true" title="标题">
+			<OutputColumns>
+				<OutputColumn><![CDATA[产品名]]></OutputColumn>
+			</OutputColumns>
+		</Cell>
+		<Cell id="table5" type="table" ds="/存储管理/URI" showTitle="true" title="标题"></Cell>
+		<Cell id="chart6" type="chart" ds="xx" showTitle="true" title="标题">
+			<Type>Bar</Type>
+			<Xs>
+				<X><![CDATA[地区]]></X>
+				<X><![CDATA[产品]]></X>
+			</Xs>
+			<Ys>
+				<Y><![CDATA[地区]]></Y>
+				<Y><![CDATA[产品]]></Y>
+			</Ys>
+			<Measures>
+				<Measure><![CDATA[价格]]></Measure>
+				<Measure><![CDATA[数量]]></Measure>
+			</Measures>
+		</Cell>
+		<Cell id="input0" type="input"></Cell>
+		<Cell id="input1" type="select" ds="ds1" captionColumn="国家名" valueColumn="state" hintText="选择国家">
+			<Script><![CDATA[......]]></Script>
+		</Cell>
+		<Cell id="input2" type="button" hintText="提交"></Cell>
+		<Cell id="url1" type="url">
+			<URL><![CDATA[http://g.cn]]></URL>
+		</Cell>
+	</Contents>
+	<Variants>
+		<!-- 文本中用类似于${sqlname.field}$ 的表达式 -->
+		<Sql name="v1">
+			<Description><![CDATA[描述信息]]></Description>
+			<Content><![CDATA[SELECT * FROM table WHERE xxx]]></Content>
+		</Sql>
+		<Sql name="v2" ref="/存储管理/URI"/>
+	</Variants>	
+	<!-- 页面属性 -->
+	<Page>
+		<!-- scale="tiled(平铺)/center(居中)" -->
+		<Background color="#123456" scale="center">/存储管理/URI</Background>
+		<Script><![CDATA[......]]></Script>
+	</Page>
+	<!-- 布局，顶层的高宽是纯设计信息 -->
+	<Layout width="800" height="600">
+		<Table id="table0">
+			<ColGroup>
+				<Col width="200"/>
+				<Col width="50%"/>
+				<Col/>
+			</ColGroup>
+			<TBody>
+				<TR height="">
+					<TD name="td1">
+						<Div cell="cell1"/>
+					</TD>
+					<TD/>
+					<TD/>
+				</TR>
+				<TR>
+					<TD/>
+					<TD/>
+					<TD/>
+				</TR>
+			</TBody>
+			<!-- MergeBlock解析成colspan、rowspan -->
+			<MergeBlocks>
+				<Block left="0" right="1" top="0" bottom="0"/>
+			</MergeBlocks>
+		</Table>
+	</Layout>
+</DashBoard>

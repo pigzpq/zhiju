@@ -1,0 +1,112 @@
+<html>
+	<head>
+		<meta http-equiv="Pragma" content="no-cache"/> 
+		<meta http-equiv="Cache-Control" content="no-cache"/> 
+		<meta http-equiv="Expires" content="0"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	   	
+	   	<link rel="stylesheet" type="text/css" href="../ext-2.0/resources/css/ext-all.css" />
+	   	<link href="../css/worksheet.css" rel="stylesheet" type="text/css"></link>
+		
+		<script src="../ext-2.0/adapter/ext/ext-base.js"></script>
+		<script src="../ext-2.0/ext-all.js"></script>
+		
+		<script src="FusionCharts/js/FusionCharts.js"></script>
+		<script src="../js/sue-main.js"></script>
+		<script src="../js/sue-ui.js"></script>
+		<script src="../js/sue-config.js"></script>
+		<script src="../js/bi.js"></script>
+		<script src="script_engine.js"></script>
+		<script src="../js/DimSelector.js"></script>
+		<script src="../js/dashboard.js"></script>
+		<script defer>
+			// 由于要改变xsl里面的色彩方案，所以这里把原本的静态CSS改为动态注册
+			_.css( _.format( "th.column-heading-even, th.column-heading-odd, th.column-heading-span, th.corner-heading, th.row-heading-even, th.row-heading-odd, th.row-heading-span, th.column-heading-even-right, th.row-heading-even-right, th.column-heading-span-right, th.row-heading-span-right, th.row-heading-heading, th.column-heading-heading, th.rownum-heading, th.rownum {background-color:%s;border:solid 1px #fff;} td.cell-even, td.cell-odd {border:solid 1px %s} .slicer_field, .page_field, .strategy_title, .report_msgdiv {background-color:%s} .filter_panel_container hr {color:%s} .filter_panel_container a {color:%s}", Sue.config.cs[6], Sue.config.cs[6], Sue.config.cs[7], Sue.config.cs[10], Sue.config.cs[11] ) );
+			var requestType = location.search.match( /(requestType\=)(.*?)&/ )[2];
+			var env;
+			if ( requestType=="get" ) {
+				var url = location.search.match( /(url\=)(.*?)$/ )[2];	
+				// 如果采用get方式传递了仪表板路径，则根据路径来从服务端取得环境信息
+				_.get( {
+					url: url,
+					async: false,
+					nocache: true,
+					beforeStart: null,
+					afterEnd: null,
+					callback: function( r ) {
+						env = eval( "(" + r + ")" );
+						if ( "error" in env ) {
+							alert( env.error.message );
+							return;
+						}
+						//增加：div横向滚动条 brcue_sha 2009-12-18
+						var divStart="<div id='showDiv' style='width:100%;height:100%;overflow-x:auto;border:1px solid white;'>";
+						var divEnd="</div>";
+						document.body.innerHTML = divStart + env.layoutTable + divEnd;
+						//重算高度，有一个问题，当一个页签多portlet的时候会导致portlet高度不一致 brucee_sha 2009-12-18
+						var realHeight=document.getElementById('showDiv').clientHeight;//上面的div的高度
+						var prefHeight = realHeight==0?880:realHeight+90;//在多列的portlet中可能会出现得不到高度的情况
+						if( document.frames.frameElement )
+							document.frames.frameElement.style.height=(prefHeight)+"px";//不用加，frame的高度就是div的高度即可
+																		
+						// 设置背景
+						var bg = env.background;
+						var st = document.body.style;
+						bg.color && ( st.backgroundColor = bg.color );
+						bg.url && ( st.backgroundImage = "url(" + bi.getRepositoryPicture( url.match( /^(.*)\?/ )[1], bg.url ) + ")" );
+						if ( bg.scale == "center" ) {
+							st.backgroundRepeat = "no-repeat";
+							st.backgroundPosition = "center center";
+						}
+						createScriptEngine( env );
+						createScriptEngineDatasources( env );
+						createScriptEngineCells( env );
+						createScriptEngineDials( env );				
+						runAllScript( env.scriptEngine );
+					}
+				} );
+			} else if(requestType=="post") {
+				// 否则获取XML参数，传递到服务端解析出环境信息
+				var url = location.search.match( /(url\=)(.*?)&/ )[2];
+				var servletType = location.search.match( /(servletType\=)(.*?)$/ )[2];
+				var xml = window.dialogArguments.dashboardXml;
+				_.post( {
+					url: url,
+					json: {
+						servletType: servletType,
+						xml: xml
+					},
+					async: true,
+					beforeStart: null,
+					afterEnd: null,
+					callback: function( r ) {
+						env = r;
+						if ( "error" in env ) {
+							alert( env.error.message );
+							return;
+						}
+						env.servletType = servletType;
+						env.isPreview = true;
+						var bg = env.background;
+						var st = document.body.style;
+						bg.color && ( st.backgroundColor = bg.color );
+						bg.url && ( st.backgroundImage = "url(" + bi.getRepositoryPicture( url, bg.url ) + ")" );
+						if ( bg.scale == "center" ) {
+							st.backgroundRepeat = "no-repeat";
+							st.backgroundPosition = "center center";
+						}
+						document.body.innerHTML = env.layoutTable;
+						
+						createScriptEngine( env );
+						createScriptEngineDatasources( env );
+						createScriptEngineCells( env );
+						createScriptEngineDials( env );				
+						runAllScript( env.scriptEngine );
+					}
+				} );
+			}			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="BI Bench">
+	<topic label="版本适用说明"  href="helpContents/html/imprint.html"> 
+	</topic>
+ <topic href="helpContents/bos_bihelp.html" label="EAS主题分析开发手册">
+ </topic>
+</toc>

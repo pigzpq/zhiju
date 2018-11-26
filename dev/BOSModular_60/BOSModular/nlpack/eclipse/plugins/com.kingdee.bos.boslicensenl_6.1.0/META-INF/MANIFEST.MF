@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: BOSLicenseNL Fragment
+Bundle-SymbolicName: com.kingdee.bos.license.nl
+Bundle-Version: 5.4.0
+Bundle-Vendor: Kingdee Software
+Bundle-ClassPath: BOSLicenseNL.jar
+Fragment-Host: com.kingdee.bos.license;bundle-version="5.4.0"
+Bundle-Localization: plugin

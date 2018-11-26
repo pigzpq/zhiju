@@ -1,0 +1,130 @@
+<html>
+<head>
+	<meta http-equiv="Content-Language" content="zh-cn">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>插入行</title>
+	<STYLE>
+	.dialog
+	{
+		font-size:9pt;
+	}
+	</STYLE>
+	<script src="../js/sue-main.js"></script>
+	<script src="../js/sue-config.js"></script>
+</head>
+<body topmargin="10" leftmargin="10" bottommargin="5" rightmargin="10" onkeydown="doKeyDown()">
+	<table border="0" width="100%" class="dialog" cellPadding="0" cellSpacing="0">
+	  <tr>
+	    <td colspan="2">插入位置：</td>
+	  </tr>
+	  <tr>
+	    <td width="20">
+	    	<INPUT id="ctrlBeforeThis" name="insertLocation" type="radio" style="width:20px" checked="true">
+		</td>
+		<td width="100%">
+	    	<div id="txtBeforeThis">当前行之前</div>
+	    </td>
+	  </tr>
+	  <tr>
+	    <td width="20">
+			<INPUT id="ctrlAfterThis" name="insertLocation" type="radio" style="width:20px">
+		</td>
+		<td>
+			<div id="txtAfterThis">当前行之后</div>
+		</td>
+	  </tr>
+	  <tr height="30">
+		<td colspan="2">
+	  	  <table border="0" class="dialog" cellPadding="0" cellSpacing="0">
+	  		<tr>
+				<td width="60">
+					<div id="txtInsertNums" width="100%">插入行数：</div>
+				</td>
+				<td>
+					<SELECT id="ctrlInsertNums" size="1" style="width:40">
+						<OPTION value="1">1</OPTION>
+						<OPTION value="2">2</OPTION>
+						<OPTION value="3">3</OPTION>
+						<OPTION value="4">4</OPTION>
+						<OPTION value="5">5</OPTION>
+					</SELECT>
+				</td>
+			</tr>
+		  </table>
+		</td>
+	  </tr>
+	  <tr height="40"><td colspan="2"><div id="txtPrompt"></td></tr>
+	  <tr>
+		<td style="text-align:right;padding:0px" colspan="2">
+			<button id="btnOK" class="portal_button" onclick="return btnOK_onclick()" style="margin-right:10px">确定</button>
+			<button id="btnCancel" class="portal_button" onclick="return btnCancel_onclick()">取消</button>
+		</td>
+	  </tr>
+	</table>
+</body>
+
+<script language="javascript">
+var _oParams;
+
+function document.body.onload()
+{
+	_oParams = window.frameElement.$param;
+	
+	var sTypeText = _oParams.sTypeText;//行or列
+	document.title = "插入" + sTypeText;
+	txtBeforeThis.innerText = "当前" + sTypeText + "之前";
+	txtAfterThis.innerText = "当前" + sTypeText + "之后";
+	txtInsertNums.innerText = "插入" + sTypeText + "数：";
+}
+
+function btnOK.onclick()
+{
+	var iInsertNums = parseInt(ctrlInsertNums.value);
+	if(!bSecret)//留有后门，可不做校验
+	{
+		var oLayoutTable = _oParams.oLayoutTable;
+		if(_oParams.sTypeText == "行")
+		{
+			var maxRows = _oParams.oLimited.iMaxRows;
+			if(iInsertNums + oLayoutTable.iRows > maxRows)
+			{
+				alert("表格已经有" + oLayoutTable.iRows 
+					+ "行，插入后不能使总行数超过" + maxRows + "行。");
+				return;
+			}
+		}
+		else
+		{
+			var maxCols = _oParams.oLimited.iMaxCols;
+			if(iInsertNums + oLayoutTable.iCols > maxCols)
+			{
+				alert("表格已经有" + oLayoutTable.iCols 
+					+ "列，插入后不能使总列数超过" + maxCols + "列。");
+				return;
+			}
+		}
+	}
+	
+	_oParams.bBeforeThis = ctrlBeforeThis.checked;
+	_oParams.iInsertNums = iInsertNums;
+	
+	_oParams.dialog.closeDialog( true );
+}
+
+function btnCancel.onclick()
+{
+	_oParams.dialog.closeDialog( false );
+}
+
+var bSecret;
+function doKeyDown()
+{
+	//[ctrl]+[shift]+[alt]+[s]
+	if(event.ctrlKey && event.shiftKey && event.altKey && event.keyCode == 83)
+	{
+		bSecret = true;
+		txtPrompt.innerText = "（开启不校验状态）";
+	}
+}
+</script>
+</html>

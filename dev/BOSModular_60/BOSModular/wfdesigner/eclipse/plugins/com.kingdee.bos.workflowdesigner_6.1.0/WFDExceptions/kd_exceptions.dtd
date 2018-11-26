@@ -1,0 +1,35 @@
+<!ELEMENT exceptions (exception*)>
+<!ATTLIST exceptions locale CDATA #REQUIRED>
+
+<!ELEMENT exception (short, explain, responses?, try*)>
+<!ATTLIST exception
+	id ID	#REQUIRED
+	type CDATA #REQUIRED
+	subsystem CDATA #IMPLIED>
+
+<!ELEMENT short (text, param*)>
+
+<!ELEMENT text (#PCDATA)>
+
+<!ELEMENT param (#PCDATA)>
+<!ATTLIST param index CDATA #IMPLIED>
+
+<!ELEMENT explain (reason*, scene*, code*)>
+
+<!ELEMENT reason (#PCDATA)>
+<!ATTLIST param index CDATA #IMPLIED>
+
+<!ELEMENT scene (#PCDATA)>
+<!ATTLIST param index CDATA #IMPLIED>
+
+<!ELEMENT code (#PCDATA)>
+<!ATTLIST code value CDATA #REQUIRED>
+
+<!ELEMENT responses (response+)>
+
+<!ELEMENT response (#PCDATA)>
+
+<!ELEMENT try (step+)>
+
+<!ELEMENT step (#PCDATA)>
+<!ATTLIST step index CDATA #IMPLIED>

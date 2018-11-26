@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE apusic-application PUBLIC "-//Apusic//DTD Apusic Application 2.0//EN" "http://www.apusic.com/dtds/apusic-application_2_0.dtd">
+<apusic-application>
+    <display-name>ear.ear</display-name>
+    <description>ear.ear</description>
+    <module>
+        <ejb>
+            <ejb-uri>ejb</ejb-uri>
+            <session ejb-name="com_kingdee_bos_framework_agent_demo_ejb_EntryOne2ManyController">
+                <jndi-name>ejb/Demo/com_kingdee_bos_framework_agent_demo_ejb_EntryOne2ManyControllerRemoteHome</jndi-name>
+                <local-jndi-name>ejb/Demo/com_kingdee_bos_framework_agent_demo_ejb_EntryOne2ManyControllerLocalHome</local-jndi-name>
+            </session>
+            <session ejb-name="com_kingdee_bos_framework_agent_demo_ejb_HeadController">
+                <jndi-name>ejb/Demo/com_kingdee_bos_framework_agent_demo_ejb_HeadControllerRemoteHome</jndi-name>
+                <local-jndi-name>ejb/Demo/com_kingdee_bos_framework_agent_demo_ejb_HeadControllerLocalHome</local-jndi-name>
+            </session>
+            <session ejb-name="com_kingdee_bos_framework_agent_demo_ejb_EntryOne2Many2OneController">
+                <jndi-name>ejb/Demo/com_kingdee_bos_framework_agent_demo_ejb_EntryOne2Many2OneControllerRemoteHome</jndi-name>
+                <local-jndi-name>ejb/Demo/com_kingdee_bos_framework_agent_demo_ejb_EntryOne2Many2OneControllerLocalHome</local-jndi-name>
+            </session>
+            <session ejb-name="com_kingdee_bos_framework_agent_demo_ejb_EntryOne2OneController">
+                <jndi-name>ejb/Demo/com_kingdee_bos_framework_agent_demo_ejb_EntryOne2OneControllerRemoteHome</jndi-name>
+                <local-jndi-name>ejb/Demo/com_kingdee_bos_framework_agent_demo_ejb_EntryOne2OneControllerLocalHome</local-jndi-name>
+            </session>
+            <session ejb-name="com_kingdee_bos_framework_async_demo_AsyncTestController">
+                <jndi-name>ejb/Demo/com_kingdee_bos_framework_async_demo_AsyncTestControllerRemoteHome</jndi-name>
+                <local-jndi-name>ejb/Demo/com_kingdee_bos_framework_async_demo_AsyncTestControllerLocalHome</local-jndi-name>
+            </session>
+            <session ejb-name="com_kingdee_bos_framework_async_demo_ejb_TestController">
+                <jndi-name>ejb/Demo/com_kingdee_bos_framework_async_demo_ejb_TestControllerRemoteHome</jndi-name>
+                <local-jndi-name>ejb/Demo/com_kingdee_bos_framework_async_demo_ejb_TestControllerLocalHome</local-jndi-name>
+            </session>
+        </ejb>
+    </module>
+    <module>
+        <web>
+            <web-uri>web</web-uri>
+            <context-root>/eas</context-root>
+        </web>
+    </module>
+</apusic-application>
+

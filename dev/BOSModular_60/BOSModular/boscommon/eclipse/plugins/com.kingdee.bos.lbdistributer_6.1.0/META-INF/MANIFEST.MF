@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-Name: LBDistributer
+Bundle-SymbolicName: com.kingdee.bos.rpc.loadbalance.distributer;singleton:=true
+Bundle-Version: 6.1.0
+Bundle-ClassPath: lbdistributer.jar
+Eclipse-LayzStart: true
+Eclipse-BuddyPolicy: dependent
+Bundle-Vendor: Kingdee Software (China) Company Ltd.
+Require-Bundle: org.log4j,
+ org.jdom,
+ org.junit
+Provide-Package: com.kingdee,
+ com.kingdee.bos,
+ com.kingdee.bos.rpc.loadbalance.distributer
+Bundle-ManifestVersion: 2
+Export-Package: com.kingdee.bos.rpc.loadbalance.distributer

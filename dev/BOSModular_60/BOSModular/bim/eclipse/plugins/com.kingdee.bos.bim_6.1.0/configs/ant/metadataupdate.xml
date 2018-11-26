@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!-- ====================================================================== 
+     2006-6-19 16:54:16                                                        
+
+     project    
+     description
+                   
+     gady2002                                                                
+     ====================================================================== -->
+<project name="project" default="update">
+	<taskdef name="updatetask" classname="com.kingdee.bos.bim.ant.task.MetadataUpgradeTask"></taskdef>
+	<taskdef name="unjartask" classname="com.kingdee.bos.bim.ant.task.UnjarTask"></taskdef>
+    <description>
+           Eas元数据的升级
+    </description>
+	
+    <target name="update" depends="init" description="升级元数据">
+    	<updatetask   pathM0="${pathM0}"  pathM1="${pathM1}" pathM2="${pathM2}/tempmetadata" patchWorkSpace="${patchWorkSpace}" />
+    	<delete dir="${pathM2}/tempmetadata" failonerror="false"></delete>
+    </target>
+    <target name="init" description="分包元数据解压">
+    	<mkdir dir="${pathM2}/tempmetadata"/>
+    	 <unjartask fromDir="${pathM2}" toDir="${pathM2}/tempmetadata" description="解压元数据到元数据目录"/>
+    </target>
+
+</project>
+

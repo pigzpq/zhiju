@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Generated-from: 1137746320000;type=2
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.concurrent
+Bundle-Version: 1.0
+Bundle-ClassPath: concurrent.jar
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: EDU.oswego.cs.dl.util.concurrent

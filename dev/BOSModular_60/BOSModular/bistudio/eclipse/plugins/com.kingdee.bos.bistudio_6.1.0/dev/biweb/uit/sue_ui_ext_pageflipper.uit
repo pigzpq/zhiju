@@ -1,0 +1,14 @@
+<table style="border-collapse:collapse">
+	<tr style="vertical-align:middle">
+		<td sue="first" style="padding:0px 10px 0px 0px"></td>
+		<td sue="prev" style="padding:0px 10px 0px 0px"></td>
+		<td style="width:0px;padding:0px;border-left:solid 1px #9AC6FF;border-right:solid 1px #FFF"></td>
+		<td style="vertical-align:bottom;font-size:12px;padding:0px 5px">第<input type="text" sue="current" style="width:30px;height:18px;padding:0px"/>页&nbsp;&nbsp;共<span sue="total"></span>页</td>
+		<td sue="pageSizeTD" style="vertical-align:bottom;font-size:12px;padding:0px 5px">
+		每页行数<span sue="size"></span>
+		</td>
+		<td style="width:0px;padding:0px;border-left:solid 1px #9AC6FF;border-right:solid 1px #FFF"></td>
+		<td sue="next" style="padding:0px 0px 0px 10px"></td>
+		<td sue="last" style="padding:0px 0px 0px 10px"></td>
+	</tr>
+</table>

@@ -1,0 +1,52 @@
+<div style="padding-bottom:10px;font-size:12px">
+	<span><input sue="isShowTitle" type="checkbox"/>是否显示标题</span>
+	<span style="margin-left:20px">标题：<input sue="title" type="text"/></span>
+	<div style="padding-top:10px">对象名称：<input sue="objectName" type="text"/></div>
+</div>
+<fieldset style="font-size:12px;padding:12px">
+	<legend>输出列定义</legend>
+	<table cellspacing="0" cellpadding="0" style="margin-top:12px;font-size:12px">
+		<colgroup>
+			<col width="150"></col>
+			<col width="70"></col>
+			<col width="150"></col>
+			<col width="100"></col>
+		</colgroup>
+		<tr style="height:20px;vertical-align:top">
+			<td>数据源输出列</td>
+			<td></td>
+			<td>列表输出列</td>
+			<td></td>
+		</tr>
+		<tr style="height:150px">
+			<td>
+				<div sue="dsColDiv" style="overflow-x:hidden;overflow-y:auto;height:150px;width:150px;background-color:#FFF;border:solid 1px #718BB7"></div>
+			</td>
+			<td style="padding:0px 10px">
+				<div style="padding-bottom:10px">
+					<button sue="gt" class="portal_button">&nbsp;&gt;&nbsp;</button>
+				</div>
+				<div style="padding-bottom:10px">
+					<button sue="gt2" class="portal_button">&gt;&gt;</button>
+				</div>
+				<div style="padding-bottom:10px">
+					<button sue="lt" class="portal_button">&nbsp;&lt;&nbsp;</button>
+				</div>
+				<div>
+					<button sue="lt2" class="portal_button">&lt;&lt;</button>
+				</div>
+			</td>
+			<td>
+				<div sue="TableColDiv" style="overflow-x:hidden;overflow-y:auto;height:150px;width:150px;background-color:#FFF;border:solid 1px #718BB7"></div>
+			</td>
+			<td style="padding-left:10px;vertical-align:top">
+				<div style="padding-bottom:10px">
+					<button sue="up" class="portal_button">上移</button>
+				</div>
+				<div style="padding-bottom:10px">
+					<button sue="down" class="portal_button">下移</button>
+				</div>
+			</td>
+		</tr>
+	</table>
+</fieldset>

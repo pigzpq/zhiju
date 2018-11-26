@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.bos.bim.templates.app</package>
+    <name>BIM_TEMPLATE_BILL_MHSDRuleSet</name>
+    <alias>ruleSet[com.kingdee.bos.bim.templates.app.BIM_TEMPLATE_BILL_MHSDRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.bos.bim.templates.app.BIM_TEMPLATE_BILL_MHSDRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <resource>
+        <rs key="ruleSet[com.kingdee.bos.bim.templates.app.BIM_TEMPLATE_BILL_MHSDRuleSet].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.bos.bim.templates.app.BIM_TEMPLATE_BILL_MHSDRuleSet].description">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</ruleSet>
+

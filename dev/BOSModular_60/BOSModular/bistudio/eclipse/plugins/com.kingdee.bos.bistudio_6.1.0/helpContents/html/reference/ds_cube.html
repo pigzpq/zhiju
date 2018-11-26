@@ -1,0 +1,42 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;">
+	<title>Main Topic</title>
+</head>
+
+<body>
+<h3>设计cube</h3>
+<p>设计界面如下：<br />
+<img src="../../images/reference/ds_cube_1.png" width="621" height="329" /></p>
+<ol>
+  <li>标题：在工程中目录树中显示的标题，可选设置。</li>
+  <li>立方体模型：包括一个事实表、一个或多个维度。</li>
+  <li>事实表：</li>
+  <ol>
+    <li>维度引用，根据维度的增删改而自动更新，需要设置事实表中使用维度的主键，即外键：</li>
+    <p><img src="../../images/reference/ds_cube_2.png" width="158" height="90" /></p>
+     <li>度量：</li>
+     <p><img src="../../images/reference/ds_cube_3.png" width="385" height="206" /><br />
+     注意：是否显示是指  显示/隐藏  在维度选择器和切片中的度量，默认为true。</p>
+  </ol>
+  <li>维度：分标准维、时间维两种，标准维</li>
+  <p><img src="../../images/reference/ds_cube_4.png" width="281" height="131" /><br />
+<img src="../../images/reference/ds_cube_5.png" width="190" height="185" /><img src="file:///E|/eas_biframework/com.kingdee.bos.ctrl.bi.bench.svn/helpContents/images/reference/ds_cube_6.png" width="190" height="185" /></p>
+ <li>标准维度：下面可以按需建立级别，至少一个级别。</li>
+ <p><img src="../../images/reference/ds_cube_7.png" width="230" height="96" /></p>
+ <li>时间维度：级别有  年、季、月、周、日。</li>
+ <p>级别必须按范围大小顺序排序 ：年-季-月-周-日(可以取部分)<br/>
+ <img src="../../images/reference/ds_cube_8.png" width="654" height="231" /></p>
+ <li>标准级别：</li>
+ <p><img src="../../images/reference/ds_cube_9.png" width="159" height="93" /></p>
+ <li>父子级别:比标准级别多设置两个属性-父子关系键 </li>
+ <p><img src="../../images/reference/ds_cube_10.png" width="178" height="143" /></p>
+   <li>属性：每个级别下可以新建多个属性,也可以不需要。</li>
+   <p><img src="../../images/reference/ds_cube_11.png" width="234" height="88" /></p>
+     <li>查看设计生成的xml配置，与eas_biframework框架的配置文件一致。</li>
+     <p><img src="../../images/reference/ds_cube_12.png" width="740" height="435" /></p>
+     <li>过滤器的宏变量可以作用于cube,因为它的替换会影响cube文件的格式化结构,所以,暂时只能通过xml配置文件修改,并且,不再可设计。建议可使用设计器生成基本框架后,再打开xml编辑器进行修改。</li>
+</ol>
+
+</body>
+</html>

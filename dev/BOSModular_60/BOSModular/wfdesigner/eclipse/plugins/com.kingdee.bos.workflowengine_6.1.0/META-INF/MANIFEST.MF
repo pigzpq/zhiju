@@ -1,0 +1,54 @@
+Manifest-Version: 1.0
+Bundle-Name: WorkflowEngine Plug-in
+Bundle-SymbolicName: com.kingdee.bos.workflow.engine;singleton:=true
+Bundle-Version: 6.1.0
+Bundle-ClassPath: workflowengine.jar
+Bundle-Vendor: Kingdee Software (China) Company Ltd.
+Bundle-Localization: plugin
+Eclipse-AutoStart: true
+Require-Bundle: org.log4j,
+ com.j2ee,
+ org.jdom,
+ org.quartz,
+ org.concurrent,
+ org.junit,
+ com.kingdee.bos.orm,
+ com.kingdee.bos.metadata,
+ com.kingdee.bos.bosframework,
+ com.kingdee.bos.ksql,
+ com.kingdee.bos.message,
+ com.kingdee.bos.scheduler,
+ com.kingdee.bos.workflow.common,
+ com.kingdee.bos.cache,
+ com.kingdee.bos.commoneventservice,
+ org.axis,
+ com.kingdee.bos.boswebservice,
+ com.kingdee.bos.kscript
+Provide-Package: com.kingdee.bos.workflow,
+ com.kingdee.bos.workflow.biz,
+ com.kingdee.bos.workflow.biz.event,
+ com.kingdee.bos.workflow.client,
+ com.kingdee.bos.workflow.enactment,
+ com.kingdee.bos.workflow.enactment.app,
+ com.kingdee.bos.workflow.enactment.cache,
+ com.kingdee.bos.workflow.enactment.message,
+ com.kingdee.bos.workflow.enactment.queue,
+ com.kingdee.bos.workflow.enactment.queue.impl,
+ com.kingdee.bos.workflow.enactment.thread,
+ com.kingdee.bos.workflow.enactment.trace,
+ com.kingdee.bos.workflow.event,
+ com.kingdee.bos.workflow.log,
+ com.kingdee.bos.workflow.participant,
+ com.kingdee.bos.workflow.role,
+ com.kingdee.bos.workflow.service,
+ com.kingdee.bos.workflow.service.ormrpc,
+ com.kingdee.bos.workflow.shell.runtime,
+ com.kingdee.bos.workflow.store,
+ com.kingdee.bos.workflow.store.service,
+ com.kingdee.bos.workflow.timeliness,
+ com.kingdee.bos.workflow.transaction,
+ com.kingdee.bos.workflow.util,
+ com.kingdee.bos.workflow.wfdesigner.service
+Bundle-ManifestVersion: 2
+
+

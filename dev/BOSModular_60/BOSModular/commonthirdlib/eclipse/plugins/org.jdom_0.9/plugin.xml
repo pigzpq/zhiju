@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by jason (kingdee) -->
+<?eclipse version="3.0"?>
+<plugin name="%pluginName" id="org.jdom" version="0.9" provider-name="%providerName">
+	<runtime>
+		<!--
+		<library name="xmlParserAPIs.jar">
+			<export name="*"/>
+		</library>
+		-->
+		<library name="xercesImpl.jar">
+			<export name="*"/>
+		</library>
+		<library name="saxpath.jar">
+			<export name="*"/>
+		</library>
+		<library name="jdom-b9.jar">
+			<export name="*"/>
+		</library>
+		<library name="jaxen-jdom.jar">
+			<export name="*"/>
+		</library>
+		<library name="jaxen-core.jar">
+			<export name="*"/>
+		</library>
+	</runtime>
+</plugin>

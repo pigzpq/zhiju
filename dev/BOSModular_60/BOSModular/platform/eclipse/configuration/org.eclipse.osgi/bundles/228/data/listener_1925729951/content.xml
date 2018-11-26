@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?metadataRepository class='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'?>
+<repository name='metadata listener dropins' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1'>
+  <properties size='3'>
+    <property name='p2.system' value='true'/>
+    <property name='p2.timestamp' value='1540128714140'/>
+    <property name='dropin.metadataRepositories' value='file:/D:/bos/BOSModular/bim/|file:/D:/bos/BOSModular/boscommon/|file:/D:/bos/BOSModular/bosideupdate/|file:/D:/bos/BOSModular/bosruntime/|file:/D:/bos/BOSModular/bosstudio/|file:/D:/bos/BOSModular/commonthirdlib/|file:/D:/bos/BOSModular/ksqltool/|file:/D:/bos/BOSModular/nlpack/|file:/D:/bos/BOSModular/rcs/|file:/D:/bos/BOSModular/wfdesigner/|file:/D:/bos/BOSModular/kbs/|file:/D:/bos/BOSModular/svn/'/>
+  </properties>
+  <units size='1'>
+    <unit id='wfDesignerExtensionSimple' version='1.0.0'>
+      <update id='wfDesignerExtensionSimple' range='[0.0.0,1.0.0)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='WfDesignerExtensionSimple Plug-in'/>
+        <property name='file.name' value='D:\bos\BOSModular\platform\eclipse\dropins\wfDesignerExtensionSimple_1.0.0'/>
+        <property name='file.lastModified' value='1540115239375'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='wfDesignerExtensionSimple' version='1.0.0'/>
+        <provided namespace='osgi.bundle' name='wfDesignerExtensionSimple' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='5'>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.workflow.designer' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jface.text' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.swt' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jface' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.metadata' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='wfDesignerExtensionSimple' version='1.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Bundle-Version: 1.0.0&#xA;Require-Bundle: com.kingdee.bos.workflow.designer,org.eclipse.jface.text,org.eclipse.swt,org.eclipse.jface,com.kingdee.bos.metadata&#xA;Manifest-Version: 1.0&#xA;Bundle-SymbolicName: wfDesignerExtensionSimple;singleton:=true&#xA;Bundle-Name: WfDesignerExtensionSimple Plug-in&#xA;Bundle-RequiredExecutionEnvironment: J2SE-1.4&#xA;Bundle-ClassPath: extension.jar&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+  </units>
+</repository>

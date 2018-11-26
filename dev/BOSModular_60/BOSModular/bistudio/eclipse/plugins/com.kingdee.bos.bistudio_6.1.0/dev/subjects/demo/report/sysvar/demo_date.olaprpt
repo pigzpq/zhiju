@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BIReport>
+	<Cube ref="public:demo.cube" caption="公共:销售数据立方体" />
+	<DataSource ref="public:demo.ds" caption="公共:销售数据源" />
+	<MdxQuery name="方案一" caption="方案一" title="" memoHead="时间：${curTime}$  日期：${curDate}$" memoTail="当前时间：${curDate.yyyy MM-dd HH:mm:ss}$" perPageRows="">select time.members on rows,measures.members on columns
+from sales</MdxQuery>
+	<WorksheetComponent name="sheet" caption="sheet" mdxQuery="方案一" showSlicer="true" />
+	<FilterComponent name="f" caption="f">
+		<FilterItem type="input" dataType="date" caption="请输入截止日期：" column="TimeTable.Month_Date" operator="LT" required="true" defaultValue="" varname="" />
+	</FilterComponent>
+</BIReport>
+

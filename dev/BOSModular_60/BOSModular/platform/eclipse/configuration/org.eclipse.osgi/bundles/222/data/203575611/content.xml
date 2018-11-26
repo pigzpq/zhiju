@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?metadataRepository class='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'?>
+<repository name='dropins metadata repo: file:/D:/bos/BOSModular/wfdesigner/' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.system' value='true'/>
+    <property name='p2.timestamp' value='1540128715781'/>
+  </properties>
+  <units size='3'>
+    <unit id='com.kingdee.bos.workflow.engine' version='6.1.0'>
+      <update id='com.kingdee.bos.workflow.engine' range='[0.0.0,6.1.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='WorkflowEngine Plug-in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Kingdee Software (China) Company Ltd.'/>
+        <property name='file.name' value='D:\bos\BOSModular\wfdesigner\eclipse\plugins\com.kingdee.bos.workflowengine_6.1.0'/>
+        <property name='file.lastModified' value='1540115210625'/>
+      </properties>
+      <provides size='28'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.workflow.engine' version='6.1.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.workflow.engine' version='6.1.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.biz' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.biz.event' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.client' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.enactment' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.enactment.app' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.enactment.cache' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.enactment.message' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.enactment.queue' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.enactment.queue.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.enactment.thread' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.enactment.trace' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.event' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.log' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.participant' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.role' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.service' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.service.ormrpc' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.shell.runtime' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.store' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.store.service' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.timeliness' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.transaction' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.service' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='18'>
+        <required namespace='osgi.bundle' name='org.log4j' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.j2ee' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.jdom' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.quartz' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.concurrent' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.junit' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.orm' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.metadata' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.bosframework' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.ksql' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.message' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.scheduler' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.workflow.common' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.cache' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.commoneventservice' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.axis' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.boswebservice' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.kscript' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.workflow.engine' version='6.1.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-Vendor: Kingdee Software (China) Company Ltd.&#xA;Bundle-ManifestVersion: 2&#xA;Bundle-Localization: plugin&#xA;Bundle-Name: WorkflowEngine Plug-in&#xA;Require-Bundle: org.log4j,com.j2ee,org.jdom,org.quartz,org.concurrent,org.junit,com.kingdee.bos.orm,com.kingdee.bos.metadata,com.kingdee.bos.bosframework,com.kingdee.bos.ksql,com.kingdee.bos.message,com.kingdee.bos.scheduler,com.kingdee.bos.workflow.common,com.kingdee.bos.cache,com.kingdee.bos.commoneventservice,org.axis,com.kingdee.bos.boswebservice,com.kingdee.bos.kscript&#xA;Bundle-ClassPath: workflowengine.jar&#xA;Eclipse-AutoStart: true&#xA;Manifest-Version: 1.0&#xA;Bundle-SymbolicName: com.kingdee.bos.workflow.engine;singleton:=true&#xA;Bundle-Version: 6.1.0&#xA;Provide-Package: com.kingdee.bos.workflow,com.kingdee.bos.workflow.biz,com.kingdee.bos.workflow.biz.event,com.kingdee.bos.workflow.client,com.kingdee.bos.workflow.enactment,com.kingdee.bos.workflow.enactment.app,com.kingdee.bos.workflow.enactment.cache,com.kingdee.bos.workflow.enactment.message,com.kingdee.bos.workflow.enactment.queue,com.kingdee.bos.workflow.enactment.queue.impl,com.kingdee.bos.workflow.enactment.thread,com.kingdee.bos.workflow.enactment.trace,com.kingdee.bos.workflow.event,com.kingdee.bos.workflow.log,com.kingdee.bos.workflow.participant,com.kingdee.bos.workflow.role,com.kingdee.bos.workflow.service,com.kingdee.bos.workflow.service.ormrpc,com.kingdee.bos.workflow.shell.runtime,com.kingdee.bos.workflow.store,com.kingdee.bos.workflow.store.service,com.kingdee.bos.workflow.timeliness,com.kingdee.bos.workflow.transaction,com.kingdee.bos.workflow.util,com.kingdee.bos.workflow.wfdesigner.service&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.kingdee.bos.workflow.common' version='6.1.0'>
+      <update id='com.kingdee.bos.workflow.common' range='[0.0.0,6.1.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='WrokflowCommon Plug-in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Kingdee Software (China) Company Ltd.'/>
+        <property name='file.name' value='D:\bos\BOSModular\wfdesigner\eclipse\plugins\com.kingdee.bos.workflowcommon_6.1.0'/>
+        <property name='file.lastModified' value='1540115225687'/>
+      </properties>
+      <provides size='55'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.workflow.common' version='6.1.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.workflow.common' version='6.1.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.application' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.biz' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.biz.agent' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.biz.event' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.biz.trans' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.botp' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.define' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.define.diagram' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.define.enhanced' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.define.extended' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.define.validation' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.define.validation.rules' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.dynui' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.dynui.approve' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.emluator' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.emluator.def' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.emluator.engine' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.emluator.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.emluator.util.schedule' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.enactment' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.enactment.handler' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.exception' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.exception.biz' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.exception.def' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.exception.engine' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.exception.transaction' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.mdo' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.mdo.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.message' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.metas' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.participant' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.security' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.service' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.service.ces' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.service.ormrpc' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.service.ormrpc.struct' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.shell' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.shell.ast' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.shell.ast.expr' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.shell.ast.stmt' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.shell.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.store' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.store.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.test.enactment' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.transaction.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.upgrade' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.util.cache' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.service' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.workcalendar' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='19'>
+        <required namespace='osgi.bundle' name='org.axis' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.j2ee' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.jdom' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.log4j' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.quartz' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.db2' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.junit' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.bosframework' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.common' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.ksql' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.metadata' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.orm' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.netfile' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.cache' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.commoneventservice' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.common' range='2.1.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.scheduler' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.kscript' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.message' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.workflow.common' version='6.1.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-Vendor: Kingdee Software (China) Company Ltd.&#xA;Bundle-ManifestVersion: 2&#xA;Bundle-Name: WrokflowCommon Plug-in&#xA;Require-Bundle: org.axis,com.j2ee,org.jdom,org.log4j,org.quartz,com.db2,org.junit,com.kingdee.bos.bosframework,com.kingdee.bos.common,com.kingdee.bos.ksql,com.kingdee.bos.metadata,com.kingdee.bos.orm,com.kingdee.bos.netfile,com.kingdee.bos.cache,com.kingdee.bos.commoneventservice,org.eclipse.emf.common;bundle-version=&quot;2.1.0&quot;,com.kingdee.bos.scheduler,com.kingdee.bos.kscript,com.kingdee.bos.message&#xA;Bundle-ClassPath: workflowcommon.jar&#xA;Bundle-ActivationPolicy: lazy&#xA;Eclipse-AutoStart: true&#xA;Manifest-Version: 1.0&#xA;Bundle-SymbolicName: com.kingdee.bos.workflow.common;singleton:=true&#xA;Bundle-Version: 6.1.0&#xA;Export-Package: com.kingdee.bos.workflow,com.kingdee.bos.workflow.application,com.kingdee.bos.workflow.biz,com.kingdee.bos.workflow.biz.agent,com.kingdee.bos.workflow.biz.event,com.kingdee.bos.workflow.biz.trans,com.kingdee.bos.workflow.botp,com.kingdee.bos.workflow.define,com.kingdee.bos.workflow.define.diagram,com.kingdee.bos.workflow.define.enhanced,com.kingdee.bos.workflow.define.extended,com.kingdee.bos.workflow.define.validation,com.kingdee.bos.workflow.define.validation.rules,com.kingdee.bos.workflow.dynui,com.kingdee.bos.workflow.dynui.approve,com.kingdee.bos.workflow.emluator,com.kingdee.bos.workflow.emluator.def,com.kingdee.bos.workflow.emluator.engine,com.kingdee.bos.workflow.emluator.util,com.kingdee.bos.workflow.emluator.util.schedule,com.kingdee.bos.workflow.enactment,com.kingdee.bos.workflow.enactment.handler,com.kingdee.bos.workflow.exception,com.kingdee.bos.workflow.exception.biz,com.kingdee.bos.workflow.exception.def,com.kingdee.bos.workflow.exception.engine,com.kingdee.bos.workflow.exception.transaction,com.kingdee.bos.workflow.mdo,com.kingdee.bos.workflow.mdo.impl,com.kingdee.bos.workflow.message,com.kingdee.bos.workflow.metas,com.kingdee.bos.workflow.participant,com.kingdee.bos.workflow.security,com.kingdee.bos.workflow.service,com.kingdee.bos.workflow.service.ces,com.kingdee.bos.workflow.service.ormrpc,com.kingdee.bos.workflow.service.ormrpc.struct,com.kingdee.bos.workflow.shell,com.kingdee.bos.workflow.shell.ast,com.kingdee.bos.workflow.shell.ast.expr,com.kingdee.bos.workflow.shell.ast.stmt,com.kingdee.bos.workflow.shell.parser,com.kingdee.bos.workflow.store,com.kingdee.bos.workflow.store.util,com.kingdee.bos.workflow.test.enactment,com.kingdee.bos.workflow.transaction.util,com.kingdee.bos.workflow.upgrade,com.kingdee.bos.workflow.util,com.kingdee.bos.workflow.util.cache,com.kingdee.bos.workflow.wfdesigner,com.kingdee.bos.workflow.wfdesigner.service,com.kingdee.bos.workflow.workcalendar&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.kingdee.bos.workflow.designer' version='6.1.0'>
+      <update id='com.kingdee.bos.workflow.designer' range='[0.0.0,6.1.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='WorkflowDesinger Plug-in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Kingdee Software (China) Company Ltd.'/>
+        <property name='file.name' value='D:\bos\BOSModular\wfdesigner\eclipse\plugins\com.kingdee.bos.workflowdesigner_6.1.0'/>
+        <property name='file.lastModified' value='1540115225234'/>
+      </properties>
+      <provides size='52'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.workflow.designer' version='6.1.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.workflow.designer' version='6.1.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.actions' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.actionsets' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.attribute' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.attribute.participant' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.attribute.provider' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.attribute.resource' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.attribute.uisolutin' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.attribute.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.commands' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.composite' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.dnd' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.edit' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.editor' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.editor.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.exception' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.extension' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.factory' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.figures' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.gefextend' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.model' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.perspective' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.policy' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.preferences' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.selector' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.swtexternd' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.tools' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.update' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.util.abstracts' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.util.crypt' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.util.editor' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.util.message' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.util.script' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.util.xmleditor' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.validator' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.validator.rules' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.view' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.view.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.view.internal.adpater' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.view.internal.cache' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.view.internal.deploy' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.wizard.conn' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.wizard.emluator' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.wizard.exportprocess' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.wizard.importprocess' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.wizard.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.wizard.process' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.workflow.wfdesigner.wsdl' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='52'>
+        <required namespace='osgi.bundle' name='org.axis' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jface.text' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.draw2d' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.gef' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.jdom' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.j2ee' range='1.3.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.views' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.workbench.texteditor' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.log4j' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.junit' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.forms' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.pde' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.pde.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.mssqlserver' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.db2' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.oracledriver' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.apache.ant' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ant.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.intro' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.pde.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.console' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.common' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.ksql' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.cache' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.bosframework' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.netfile' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.orm' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.workflow.common' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.workflow.engine' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.tool.toolbase' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.help' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.help.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.help.appserver' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.help.base' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.help.webapp' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.bosideupdate' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.commoneventservice' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.metadata' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.ecore' range='2.1.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.bsrr' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.bsrrtool' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.tool.toolcommon' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.license' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.kscript' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.KScriptTool' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.workflow.designer' version='6.1.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-Vendor: Kingdee Software (China) Company Ltd.&#xA;Bundle-ManifestVersion: 2&#xA;Bundle-Activator: com.kingdee.bos.workflow.ClientVersionWfPlugIn&#xA;Bundle-Localization: plugin&#xA;Bundle-Name: WorkflowDesinger Plug-in&#xA;Require-Bundle: org.axis,org.eclipse.core.resources,org.eclipse.core.runtime,org.eclipse.jface.text,org.eclipse.draw2d,org.eclipse.gef,org.jdom,com.j2ee;bundle-version=&quot;1.3.0&quot;,org.eclipse.ui,org.eclipse.ui.ide,org.eclipse.ui.views,org.eclipse.ui.editors,org.eclipse.ui.workbench.texteditor,org.log4j,org.junit,org.eclipse.jdt.ui,org.eclipse.jdt.core,org.eclipse.ui.forms,org.eclipse.pde,org.eclipse.pde.ui,com.mssqlserver,com.db2,com.oracledriver,org.apache.ant,org.eclipse.ant.core,org.eclipse.ui.intro,org.eclipse.pde.runtime,org.eclipse.ui.console,com.kingdee.bos.common,com.kingdee.bos.ksql,com.kingdee.bos.cache,com.kingdee.bos.bosframework,com.kingdee.bos.netfile,com.kingdee.bos.orm,com.kingdee.bos.workflow.common,com.kingdee.bos.workflow.engine,com.kingdee.bos.tool.toolbase,org.eclipse.help,org.eclipse.help.ui,org.eclipse.help.appserver,org.eclipse.help.base,org.eclipse.help.webapp,com.kingdee.bos.bosideupdate,com.kingdee.bos.commoneventservice,com.kingdee.bos.metadata,org.eclipse.emf.ecore;bundle-version=&quot;2.1.0&quot;,com.kingdee.bos.bsrr,com.kingdee.bos.bsrrtool,com.kingdee.bos.tool.toolcommon,com.kingdee.bos.license,com.kingdee.bos.kscript,com.kingdee.bos.KScriptTool&#xA;Bundle-ClassPath: workflowdesigner.jar,lib/autoupdate.jar&#xA;Bundle-ActivationPolicy: lazy&#xA;Bundle-SymbolicName: com.kingdee.bos.workflow.designer; singleton:=true&#xA;Bundle-Version: 6.1.0&#xA;Export-Package: com.kingdee.bos.workflow,com.kingdee.bos.workflow.wfdesigner.actions,com.kingdee.bos.workflow.wfdesigner.actionsets,com.kingdee.bos.workflow.wfdesigner.attribute,com.kingdee.bos.workflow.wfdesigner.attribute.participant,com.kingdee.bos.workflow.wfdesigner.attribute.provider,com.kingdee.bos.workflow.wfdesigner.attribute.resource,com.kingdee.bos.workflow.wfdesigner.attribute.uisolutin,com.kingdee.bos.workflow.wfdesigner.attribute.util,com.kingdee.bos.workflow.wfdesigner.commands,com.kingdee.bos.workflow.wfdesigner.composite,com.kingdee.bos.workflow.wfdesigner.dnd,com.kingdee.bos.workflow.wfdesigner.edit,com.kingdee.bos.workflow.wfdesigner.editor,com.kingdee.bos.workflow.wfdesigner.editor.internal,com.kingdee.bos.workflow.wfdesigner.exception,com.kingdee.bos.workflow.wfdesigner.extension,com.kingdee.bos.workflow.wfdesigner.factory,com.kingdee.bos.workflow.wfdesigner.figures,com.kingdee.bos.workflow.wfdesigner.gefextend,com.kingdee.bos.workflow.wfdesigner.model,com.kingdee.bos.workflow.wfdesigner.perspective,com.kingdee.bos.workflow.wfdesigner.policy,com.kingdee.bos.workflow.wfdesigner.preferences,com.kingdee.bos.workflow.wfdesigner.selector,com.kingdee.bos.workflow.wfdesigner.swtexternd,com.kingdee.bos.workflow.wfdesigner.tools,com.kingdee.bos.workflow.wfdesigner.update,com.kingdee.bos.workflow.wfdesigner.util,com.kingdee.bos.workflow.wfdesigner.util.abstracts,com.kingdee.bos.workflow.wfdesigner.util.crypt,com.kingdee.bos.workflow.wfdesigner.util.editor,com.kingdee.bos.workflow.wfdesigner.util.message,com.kingdee.bos.workflow.wfdesigner.util.script,com.kingdee.bos.workflow.wfdesigner.util.xmleditor,com.kingdee.bos.workflow.wfdesigner.validator,com.kingdee.bos.workflow.wfdesigner.validator.rules,com.kingdee.bos.workflow.wfdesigner.view,com.kingdee.bos.workflow.wfdesigner.view.internal,com.kingdee.bos.workflow.wfdesigner.view.internal.adpater,com.kingdee.bos.workflow.wfdesigner.view.internal.cache,com.kingdee.bos.workflow.wfdesigner.view.internal.deploy,com.kingdee.bos.workflow.wfdesigner.wizard.conn,com.kingdee.bos.workflow.wfdesigner.wizard.emluator,com.kingdee.bos.workflow.wfdesigner.wizard.exportprocess,com.kingdee.bos.workflow.wfdesigner.wizard.importprocess,com.kingdee.bos.workflow.wfdesigner.wizard.internal,com.kingdee.bos.workflow.wfdesigner.wizard.process,com.kingdee.bos.workflow.wfdesigner.wsdl&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+  </units>
+</repository>

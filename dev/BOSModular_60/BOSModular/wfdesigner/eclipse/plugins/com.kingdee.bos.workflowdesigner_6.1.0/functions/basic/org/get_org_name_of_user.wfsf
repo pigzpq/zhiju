@@ -1,0 +1,27 @@
+<functions>
+  <function name="获取用户的主组织名称">
+    <script><![CDATA[com.kingdee.eas.base.permission.IUser iUser = com.kingdee.eas.base.permission.UserFactory .getLocalInstance(__bosContext); 
+		com.kingdee.eas.basedata.person.PersonInfo info = iUser.getUserInfo(new com.kingdee.bos.dao.ormapping.ObjectUuidPK( com.kingdee.bos.util.BOSUuid.read(userId))).getPerson(); 
+		String orgName = "";
+		if (info != null) { 
+		String personId = info.getId().toString(); 
+		com.kingdee.eas.basedata.org.IPositionMember iPositionMember =  com.kingdee.eas.basedata.org.PositionMemberFactory 
+		.getLocalInstance(__bosContext); 
+		com.kingdee.eas.basedata.org.PositionMemberInfo positionMemberInfo = iPositionMember 
+		.getPositionMemberInfo("select position.adminOrgUnit.id where person.id = '"+ personId + "' and isPrimary = 1"); 
+		orgName = positionMemberInfo.getPosition().getAdminOrgUnit().getName();
+	}
+		return orgName;]]></script>
+    <description><![CDATA[根据用户的ID获取用户所在的主组织名称]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>STRING</type>
+      <description><![CDATA[返回用户的主组织名称]]></description>
+    </return>
+    <parameter>
+      <name>userID</name>
+      <type>STRING</type>
+      <description><![CDATA[用户ID]]></description>
+    </parameter>
+  </function>
+</functions>

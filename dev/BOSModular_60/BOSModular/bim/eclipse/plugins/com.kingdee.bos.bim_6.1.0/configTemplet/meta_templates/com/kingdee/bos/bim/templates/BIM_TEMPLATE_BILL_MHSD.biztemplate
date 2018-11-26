@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizTemplate xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.bos.bim.templates</package>
+    <name>BIM_TEMPLATE_BILL_MHSD</name>
+    <alias>bizTemplate[com.kingdee.bos.bim.templates.BIM_TEMPLATE_BILL_MHSD].alias</alias>
+    <description>bizTemplate[com.kingdee.bos.bim.templates.BIM_TEMPLATE_BILL_MHSD].description</description>
+    <userDefined>false</userDefined>
+    <bizType>BusinessBill</bizType>
+    <template>true</template>
+    <entityPK>com.kingdee.bos.bim.templates.app.BIM_TEMPLATE_BILL_MHSD</entityPK>
+    <queryPK>com.kingdee.bos.bim.templates.app.BIM_TEMPLATE_BILL_MHSDQuery</queryPK>
+    <editUIPK>com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI</editUIPK>
+    <listUIPK>com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDListUI</listUIPK>
+    <entityFunctionPK />
+    <editUIFunctionPK>com.kingdee.bos.bim.templates.app.BIM_TEMPLATE_BILL_MHSDEditUIFunction</editUIFunctionPK>
+    <listUIFunctionPK>com.kingdee.bos.bim.templates.app.BIM_TEMPLATE_BILL_MHSDListUIFunction</listUIFunctionPK>
+    <entryUIPK />
+    <versionDate />
+    <versionNumber />
+    <extendTablePKs />
+    <extendEntityPKs />
+    <extendQueryPKs />
+    <extendEditUIPKs />
+    <extendListUIPKs />
+    <menuPKList />
+    <bimTemplateType>MCoreBillBase</bimTemplateType>
+    <relatedTablePK />
+    <relatedEntityPK />
+    <relatedEditUIPK />
+    <genImplementCode>true</genImplementCode>
+    <resource>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BIM_TEMPLATE_BILL_MHSD].alias">
+            <lang locale="zh_CN" value="多页签表头单表体(MPHSD)业务模板" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="多頁簽表頭單表體(MPHSD)業務範本" />
+            <lang locale="zh_TW" value="多頁簽表頭單表體(MPHSD)業務範本" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BIM_TEMPLATE_BILL_MHSD].description">
+            <lang locale="zh_CN" value="多分录基础单据模板" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="多分錄基礎單據範本" />
+            <lang locale="zh_TW" value="多分錄基礎單據範本" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BIM_TEMPLATE_BILL_MHSD].extendedProperty.BizUnitDeployed">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BIM_TEMPLATE_BILL_MHSD].extendedProperty.OrgType">
+            <lang locale="zh_CN" value="Company" />
+            <lang locale="en_US" value="Company" />
+            <lang locale="zh_TW" value="Company" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BIM_TEMPLATE_BILL_MHSD].extendedProperty.codingRuleEnabled">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BIM_TEMPLATE_BILL_MHSD].extendedProperty.defaultDisplayField">
+            <lang locale="zh_CN" value="" />
+            <lang locale="en_US" value="" />
+            <lang locale="zh_TW" value="" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BIM_TEMPLATE_BILL_MHSD].extendedProperty.defaultF7Query">
+            <lang locale="zh_CN" value="com.kingdee.bos.bim.templates.app.BIM_TEMPLATE_BILL_MHSDQuery" />
+            <lang locale="en_US" value="com.kingdee.bos.bim.templates.app.BIM_TEMPLATE_BILL_MHSDQuery" />
+            <lang locale="zh_TW" value="com.kingdee.bos.bim.templates.app.BIM_TEMPLATE_BILL_MHSDQuery" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BIM_TEMPLATE_BILL_MHSD].extendedProperty.editUI">
+            <lang locale="zh_CN" value="com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI" />
+            <lang locale="en_US" value="com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BIM_TEMPLATE_BILL_MHSD].extendedProperty.enableFieldPermission">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BIM_TEMPLATE_BILL_MHSD].extendedProperty.isAsstAcctType">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BIM_TEMPLATE_BILL_MHSD].extendedProperty.isParamObject">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BIM_TEMPLATE_BILL_MHSD].extendedProperty.isUseCodeRule">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BIM_TEMPLATE_BILL_MHSD].extendedProperty.listUI">
+            <lang locale="zh_CN" value="com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDListUI" />
+            <lang locale="en_US" value="com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDListUI" />
+            <lang locale="zh_TW" value="com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDListUI" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BIM_TEMPLATE_BILL_MHSD].extendedProperty.maxFieldIndex">
+            <lang locale="zh_CN" value="7" />
+            <lang locale="en_US" value="7" />
+            <lang locale="zh_TW" value="7" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BIM_TEMPLATE_BILL_MHSD].extendedProperty.useTableEditUI">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BIM_TEMPLATE_BILL_MHSD].extendedProperty.userDefined">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizTemplate>
+

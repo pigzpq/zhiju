@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: BOSIDEUpdate Plug-in
+Bundle-SymbolicName: com.kingdee.bos.bosideupdate; singleton:=true
+Bundle-Version: 6.0.0
+Bundle-Activator: com.kingdee.bos.bosideupdate.BOSIDEUpdatePlugin
+Bundle-Vendor: Kingdee Software
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.log4j,
+ org.jdom,
+ com.kingdee.bos.license
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: bosideupdate.jar
+Export-Package: com.kingdee.bos.bosideupdate.update

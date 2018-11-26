@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="创建组织类型的参予人变量">
+    <script><![CDATA[com.kingdee.bos.workflow.participant.OrgUnitInfo orgUnitInfo = new com.kingdee.bos.workflow.participant.OrgUnitInfo();
+orgUnitInfo.setId(orgID);
+return orgUnitInfo;]]></script>
+    <description><![CDATA[根据行政组织内码创建职位类型的参予人变量.
+当此变量直接用于定义“变量类型参予人”时，活动参予人为该行政组织内的所有人员。]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>PERFORMER</type>
+      <array>false</array>
+      <description><![CDATA[组织类型的参予人变量]]></description>
+    </return>
+    <parameter>
+      <name>adminOrgID</name>
+      <type>STRING</type>
+      <array>false</array>
+      <description><![CDATA[行政组织内码]]></description>
+    </parameter>
+  </function>
+</functions>
+

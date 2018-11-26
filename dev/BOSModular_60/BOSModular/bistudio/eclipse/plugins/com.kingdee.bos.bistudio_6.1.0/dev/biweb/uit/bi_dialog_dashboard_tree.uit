@@ -1,0 +1,4 @@
+<div style="width:373px">
+	<div sue="msgDiv"></div>
+	<div sue="dashboardTree" style="height:120px;border:solid 1px #718BB7;overflow-y:auto;padding:10px;background-color:#FFF"></div>
+</div>

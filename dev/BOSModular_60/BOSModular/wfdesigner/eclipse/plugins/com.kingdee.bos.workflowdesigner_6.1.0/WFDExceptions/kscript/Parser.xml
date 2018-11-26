@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="gb2312"?>
+<exceptions locale="L2" subsystem="kscript" type="语法错误">
+	<exception id="STRING_CAN_NOT_MINS_ANY">
+		<short>
+			<text>字符串不能减去任何值.字符串:{0}, 值表达式:{1}, 位置: ({3})</text>
+			<param index="0">字符串表达式</param>
+			<param index="1">值表达式</param>
+			<param index="2">位置</param>
+		</short>
+		<explain>
+			<reason>脚本编写错误</reason>
+		</explain>
+		<responses>
+			<response>检查并修改脚本</response>
+		</responses>
+	</exception>
+	
+	<exception id="CAN_NOT_MINUS_STRING">
+		<short>
+			<text>不能减去一个字符串类型的值. 字符串: {0}, 值表达式:{1}, 位置: ({3})</text>
+			<param index="0">字符串表达式</param>
+			<param index="1">值表达式</param>
+			<param index="2">位置</param>
+		</short>
+		<explain>
+			<reason>脚本编写错误</reason>
+		</explain>
+		<responses>
+			<response>检查并修改脚本</response>
+		</responses>
+	</exception>
+	
+	<exception id="UNEXPECTED_END">
+		<short>
+			<text>未预期的脚本结束符,脚本不完整. 位置: ({0})</text>
+			<param index="0">位置</param>
+		</short>
+		<explain>
+			<reason>脚本不完整</reason>
+			<reason>脚本有多余的字符</reason>
+		</explain>
+		<responses>
+			<response>补充脚本使之完整或者去掉多佘的表达式和字符</response>
+		</responses>
+	</exception>
+	
+	<exception id="FIND_UNEXPECTED_TOKEN">
+		<short>
+			<text>不合法的符号. 符号 {0} 不应当出现在位置({1}), 合法的符号应当是以下之一: {2}</text>
+			<param index="0">不合法的符号</param>
+			<param index="1">位置</param>
+			<param index="0">期望的符号列表</param>
+		</short>
+		<explain>
+			<reason>脚本编写错误.</reason>
+		</explain>
+		<responses>
+			<response><![CDATA[修改脚本, KScript脚本有以下限制
+	1.不需要也不能对一个变量进行强类型转换,
+	如return ((java.lang.String)str).length(); 应该写成 return str.length(); 
+	其中str是个字符串类型不为空的变量,脚本会自动获得变量的真正类型.
+			]]></response>
+		</responses>
+	</exception>
+	
+	
+	<exception id="WHILE_NO_CODITION">
+		<short>
+			<text>WHILE 语句必须包含条件表达式. 位置: ({0}), 错误的WHILE语句为 "{1}"</text>
+			<param index="0">语句的开始位置</param>
+			<param index="1">错误的表达式</param>
+		</short>
+		<explain>
+			<reason>脚本编写错误,WHILE语句缺少条件表达式</reason>
+		</explain>
+		<responses>
+			<response><![CDATA[修改脚本,正确的WHILE语句为:
+		while(条件表达式) {
+			循环执行语句;
+		}
+		或者
+		do {
+			循环执行语句;
+		} while(条件表达式)
+			]]></response>
+		</responses>
+	</exception>
+	
+	<exception id="WHILE_NO_WHILE">
+		<short>
+			<text>WHILE 语句必须包含关键字"while". 位置: ({0}), 错误的字符串为 "{1}"</text>
+			<param index="0">语句的开始位置</param>
+			<param index="1">错误的字符串</param>
+		</short>
+		<explain>
+			<reason>脚本编写错误,缺少"while"关键字</reason>
+		</explain>
+		<responses>
+			<response><![CDATA[修改脚本,正确的WHILE语句为:
+		while(条件表达式) {
+			循环执行语句;
+		}
+		或者
+		do {
+			循环执行语句;
+		} while(条件表达式)
+			]]></response>
+		</responses>
+	</exception>
+	
+	<exception id="DO_NO_DO">
+		<short>
+			<text>DO 语句必须包含关键字"do". 位置: ({0}), 错误的字符串为 "{1}"</text>
+			<param index="0">语句的开始位置</param>
+			<param index="1">错误的字符串</param>
+		</short>
+		<explain>
+			<reason>脚本编写错误,缺少"do"关键字</reason>
+		</explain>
+		<responses>
+			<response><![CDATA[修改脚本,正确的DO语句为:
+				do {
+					循环执行语句;
+				} while(条件表达式)
+			]]></response>
+		</responses>
+	</exception>
+	
+	<exception id="FOR_NO_FOR">
+		<short>
+			<text>FOR 语句必须包含关键字"for". 位置: ({0}), 错误的字符串为 "{1}"</text>
+			<param index="0">语句的开始位置</param>
+			<param index="1">错误的字符串</param>
+		</short>
+		<explain>
+			<reason>脚本编写错误,缺少"for"关键字</reason>
+		</explain>
+		<responses>
+			<response><![CDATA[修改脚本,正确的FOR语句为:
+		for (初始化表达式, 条件表达式, 一次循环后执行的表达式) {
+			循环执行语句;
+		}
+	其中 "初始化表达式", "条件表达式", "一次循环后执行的表达式"都可以省略,但其中的逗号必须保留
+			]]></response>
+		</responses>
+	</exception>
+	
+	<exception id="CONDITION_CAN_NOT_BE_ASSIGN">
+		<short>
+			<text>IF/WHILE语句的条件表达式不能是赋值语句. 位置: ({0}), 错误的赋值表达式 :"{1}"</text>
+			<param index="0">语句的开始位置</param>
+			<param index="1">错误的赋值表达式</param>
+		</short>
+		<explain>
+			<reason>脚本编写错误,将"=="写成"="</reason>
+		</explain>
+		<responses>
+			<response><![CDATA[修改脚本,正确的IF语句为:
+		IF (条件表达式) {
+			执行语句1;
+		} else if {
+			执行语句2;
+		} else {
+			执行语句3;
+		}
+	其中 "else if" 和"else"语句块可以省略.
+	
+	正确的WHILE语句为:
+		while(条件表达式) {
+			循环执行语句;
+		}
+		或者
+		do {
+			循环执行语句;
+		} while(条件表达式)
+	注意:形如"aa = bb"是个赋值表达式, "aa == bb"才是比较表达式.
+			]]></response>
+		</responses>
+	</exception>
+	
+	<exception id="IF_NO_CONDITION">
+	<short>
+			<text>IF语句缺少条件表达式. 位置: ({0}), IF表达式: {1}</text>
+			<param index="0">语句的开始位置</param>
+			<param index="1">错误的标识符</param>
+		</short>
+		<explain>
+			<reason>脚本编写错误,缺少if关键字</reason>
+		</explain>
+		<responses>
+			<response><![CDATA[修改脚本,正确的IF语句为:
+		IF (条件表达式) {
+			执行语句1;
+		} else if {
+			执行语句2;
+		} else {
+			执行语句3;
+		}
+	其中 "else if" 和"else"语句块可以省略.
+			]]></response>
+		</responses>
+	</exception>
+	
+	<exception id="IF_NO_IF">
+		<short>
+			<text>IF语句缺少"if"关键字. 位置: ({0}), 错误的标识符 :"{1}"</text>
+			<param index="0">语句的开始位置</param>
+			<param index="1">错误的标识符</param>
+		</short>
+		<explain>
+			<reason>脚本编写错误,缺少if关键字</reason>
+		</explain>
+		<responses>
+			<response><![CDATA[修改脚本,正确的IF语句为:
+		IF (条件表达式) {
+			执行语句1;
+		} else if {
+			执行语句2;
+		} else {
+			执行语句3;
+		}
+	其中 "else if" 和"else"语句块可以省略.
+			]]></response>
+		</responses>
+	</exception>
+	
+	<exception id="EXP_MUST_BE_IDENTIFIER">
+		<short>
+			<text>此处({0})必须为一个标识表达式, 错误的表达式 :"{1}"</text>
+			<param index="0">语句的开始位置</param>
+			<param index="1">错误的表达式</param>
+		</short>
+		<explain>
+			<reason>脚本编写错误,但不到所需的标识表达式</reason>
+		</explain>
+		<responses>
+			<response>修改脚本</response>
+		</responses>
+	</exception>
+	
+	<exception id="UNEXPECTED_TOKEN_FOR_NEW">
+		<short>
+			<text>错误的NEW 或者 初始化对象语句, 位置: ({0}) 上缺少符号 '(' 或者 '[', 而不是错误的符号: {1}</text>
+			<param index="0">语句的开始位置</param>
+			<param index="1">错误的表达式</param>
+		</short>
+		<explain>
+			<reason>脚本编写错误,但不到所需的标识表达式</reason>
+		</explain>
+		<responses>
+			<response><![CDATA[修改脚本, 请参考KSCRIPT中初始化对象语句的例子为:
+		1.初始化对象
+			obj = new Object();
+		2.初始化数组
+			array = new java.lang.String[len];
+		3.初始化基本对象
+			f = 0.01f;
+			]]>
+			</response>
+		</responses>
+	</exception>
+	
+	<exception id="ILLEGAL_TOKEN">
+		<short>
+			<text>非法的符号, 位置: ({0}) 发现非法的符号 {1}, 在该位置合法的符号包括: {2}</text>
+			<param index="0">语句的开始位置</param>
+			<param index="1">错误的符号</param>
+			<param index="2">预期的符号</param>
+		</short>
+		<explain>
+			<reason>脚本编写错误,在所指位置出错非法的符号</reason>
+		</explain>
+		<responses>
+			<response><![CDATA[这些语句不被支持, KSCRIPT中可能出错非法的符号包括:
+		1. -->; 合法的符号包括: --, -=
+		2.  */; 合法的符号包括: *=
+		3.\其它; 合法的符号包括: \\, \", \t, \r, \n
+			]]>
+			</response>
+		</responses>
+	</exception>
+	
+	<exception id="STRING_UNCLOSED">
+		<short>
+			<text>字符串未闭合, 字符串必须以"号结束, 位置: ({0}) 需要"号来结束,但发现的符号为{1}</text>
+			<param index="0">语句的开始位置</param>
+			<param index="1">错误的符号</param>
+		</short>
+		<explain>
+			<reason>脚本编写错误,字符串未闭合</reason>
+		</explain>
+		<responses>
+			<response>请修改脚本,在指定位置插入符号:"	</response>
+		</responses>
+	</exception>
+	
+</exceptions>

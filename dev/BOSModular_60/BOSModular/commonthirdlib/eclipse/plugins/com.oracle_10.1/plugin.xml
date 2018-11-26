@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin name="%pluginName" id="com.oracledriver" version="10.1" provider-name="%providerName">
+	<runtime>		
+		<library name="classes12.zip">
+			<export name="*"/>
+		</library>
+	</runtime>
+</plugin>

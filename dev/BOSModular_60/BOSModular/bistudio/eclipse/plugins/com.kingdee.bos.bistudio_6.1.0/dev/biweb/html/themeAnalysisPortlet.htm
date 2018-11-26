@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>金蝶BI平台 - 主题分析</title>
+		<script type="text/javascript"> 
+			//增加：目录发布为portlet 2010-02-26 bruce_sha 为了动态生成tree.jsp的参数地址
+			function getFolderPath()
+			{
+				//var folderPath = location.search.match( /(folderPath\=)(.*?)$/ )[2]; //得到："report_tree/DIR1267515833663_12&from=portlet"
+				var folderPath = location.search.match( /(folderPath\=)(.*?)&/ )[2];  
+ 				return folderPath;     
+ 			}
+ 			
+			window.onload=function(){
+				// 构造左树
+				document.frames["tree"].document.location="tree.jsp?treeType=configReport&folderPath=" + getFolderPath(); 
+				// 构造右表 处理目录发布为Portlet后session的问题 2010-03-02 bruce_sha
+				document.frames["bireport"].document.location="report.jsp?from=" + getFolderPath();  
+  			}  
+  	
+		</script> 
+	</head>
+	<frameset id="frames" cols="250px,11px,*" frameborder="0">
+		<frame name="tree" id="tree" src="" scrolling="no" noresize="noresize"></frame>
+		<frame id="scaler" src="scaler.htm" scrolling="no" noresize="noresize"></frame>
+		<frame name="bireport" id="bireport" src="" scrolling="no" noresize="noresize"></frame>
+	</frameset>
+</html>

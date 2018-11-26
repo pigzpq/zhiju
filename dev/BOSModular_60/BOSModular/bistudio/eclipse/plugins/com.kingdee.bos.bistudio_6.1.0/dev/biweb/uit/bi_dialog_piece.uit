@@ -1,0 +1,30 @@
+<div style="width:373px">
+	<div sue="msgDiv"></div>
+	<div sue="pieceType" style="padding:5px 0px;text-align:left;font-size:12px">
+		选择导出类型：
+		<input type="radio" sue="pieceType1" NAME="pieceType" VALUE="0" checked="true"/>动态
+		<input type="radio" sue="pieceType2" NAME="pieceType" VALUE="1"/>静态页面
+		<br>
+		<font color="red"></font>
+	</div>
+	<div sue="componentType" style="padding:5px 0px;text-align:left;font:12px Arial">
+		选择组件类型：
+		<input type="radio" sue="componentType1" NAME="componentType" VALUE="worksheet" checked="true"/>表格
+		<input type="radio" sue="componentType2" NAME="componentType" VALUE="chart"/>图表
+	</div>
+	<div sue="divRepAction" style="padding:5px 0px;text-align:right">
+		<button sue="btnNewDir" class="portal_button" style="margin-right:10px">新建目录</button>
+		<button sue="btnDel" class="portal_button">删除</button>
+	</div>
+	<div sue="pieceTree" style="height:120px;border:solid 1px #718BB7;overflow-y:auto;padding:10px;background-color:#FFF"></div>
+	<div sue="divPieceDir" style="padding-top:10px;font:12px Arial">
+		导出目录:
+		<input type="text" sue="pieceDir" readonly="true" class="portal_textfield" />
+		<input type="hidden" sue="pieceDirHidden"/>
+	</div>
+	<div sue="divPieceName" style="padding-top:10px;font:12px Arial">
+		片段名称:
+		<input type="text" sue="pieceName" class="portal_textfield" />
+	</div>
+	
+</div>

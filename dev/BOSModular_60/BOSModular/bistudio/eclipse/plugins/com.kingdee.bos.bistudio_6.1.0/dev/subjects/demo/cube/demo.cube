@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Schema name="OLAP TEST">
+	<Parameter name="SalesFact" type="table" />
+	<Parameter name="Product" type="table" />
+	<Parameter name="State" type="table" />
+	<Parameter name="Employee" type="table" />
+	<Parameter name="TimeTable" type="table" />
+	<Dimension name="Product" caption="产品" table="Product" primaryKey="Product_ID">
+		<Hierarchy>
+			<Level name="Category" caption="" column="Category_ID">
+				<Property name="name" column="Category" />
+			</Level>
+			<Level name="SubCategory" caption="" column="SubCategory_ID">
+				<Property name="name" column="SubCategory" />
+			</Level>
+			<Level name="Product" caption="" column="Product_ID">
+				<Property name="name" column="Name_Id" />
+			</Level>
+		</Hierarchy>
+	</Dimension>
+	<Dimension name="State" caption="地区" table="State" primaryKey="State_ID">
+		<Hierarchy>
+			<Level name="Country" caption="" column="Country" />
+			<Level name="Region" caption="" column="Region" />
+			<Level name="State Name" caption="" column="State_ID">
+				<Property name="name" column="State_Name" />
+			</Level>
+		</Hierarchy>
+	</Dimension>
+	<Dimension name="Employee" caption="职员" table="Employee" primaryKey="Employee_ID">
+		<Hierarchy>
+			<Level name="Employee" caption="" column="Employee_ID" childColumn="Employee_ID" parentColumn="Manager_ID">
+				<Property name="name" column="Employee_Name" />
+				<Property name="caption" column="Employee_Name" />
+				<Property name="skipLevel" column="skipped_levels" caption="" />
+			</Level>
+		</Hierarchy>
+	</Dimension>
+	<Dimension name="Time" caption="时间" table="TimeTable" primaryKey="month_ID" type="Time">
+		<Hierarchy>
+			<Level name="Year" caption="" column="month_date" type="Years" />
+			<Level name="Month" caption="" column="month_date" type="Months" />
+		</Hierarchy>
+	</Dimension>
+	<Cube name="sales" caption="" table="SalesFact">
+		<DimensionUsage name="State" foreignKey="State_ID" />
+		<DimensionUsage name="Employee" foreignKey="Employee_ID" />
+		<DimensionUsage name="Product" foreignKey="Product_ID" />
+		<DimensionUsage name="Time" foreignKey="month_ID" />
+		<Measure name="Sales_Dollars" caption="销售金额" column="Sales_Dollars" aggregator="sum" formatString="#,##0.00" visible="" color="" />
+		<Measure name="Sales_Units" caption="销售数量" column="Sales_Units" aggregator="sum" formatString="#,###" visible="" color="" />
+	</Cube>
+</Schema>
+

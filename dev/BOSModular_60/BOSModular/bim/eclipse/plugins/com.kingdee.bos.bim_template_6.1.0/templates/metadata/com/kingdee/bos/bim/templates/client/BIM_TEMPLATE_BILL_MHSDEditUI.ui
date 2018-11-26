@@ -1,0 +1,3017 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uiObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.bos.bim.templates.client</package>
+    <name>BIM_TEMPLATE_BILL_MHSDEditUI</name>
+    <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].alias</alias>
+    <description>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].description</description>
+    <userDefined>false</userDefined>
+    <releasePackage>com.kingdee.bos.bim.templates.client</releasePackage>
+    <releaseClass>BIM_TEMPLATE_BILL_MHSDEditUI</releaseClass>
+    <title>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].title</title>
+    <uitype />
+    <defaultbutton />
+    <bizUnitPK>com.kingdee.bos.bim.templates.BIM_TEMPLATE_BILL_MHSD</bizUnitPK>
+    <ruleSet>
+        <key name="package" value="com.kingdee.bos.bim.templates.app" />
+        <key name="name" value="BIM_TEMPLATE_BILL_MHSDRuleSet" />
+    </ruleSet>
+    <parent>
+        <key name="package" value="com.kingdee.eas.framework.client" />
+        <key name="name" value="CoreBillEditUI" />
+    </parent>
+    <components>
+        <component>
+            <name>CoreUI</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[CoreUI].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDPanel</classType>
+            <isContainer>true</isContainer>
+            <constraints>0,0,1013,629</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+        </component>
+        <component>
+            <name>btnAddLine</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnAddLine].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDWorkButton</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnAddLine].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+        </component>
+        <component>
+            <name>btnCopyLine</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnCopyLine].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDWorkButton</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnCopyLine].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+        </component>
+        <component>
+            <name>btnInsertLine</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnInsertLine].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDWorkButton</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnInsertLine].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+        </component>
+        <component>
+            <name>btnRemoveLine</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnRemoveLine].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDWorkButton</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnRemoveLine].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+        </component>
+        <component>
+            <name>btnTraceUp</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnTraceUp].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDWorkButton</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnTraceUp].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+        </component>
+        <component>
+            <name>btnTraceDown</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnTraceDown].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDWorkButton</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnTraceDown].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+        </component>
+        <component>
+            <name>btnAuditResult</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnAuditResult].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDWorkButton</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnAuditResult].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+        </component>
+        <component>
+            <name>separator1</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[separator1].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>javax.swing.JPopupMenu.Separator</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[separator1].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+        </component>
+        <component>
+            <name>separator3</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[separator3].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>javax.swing.JPopupMenu.Separator</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[separator3].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+        </component>
+        <component>
+            <name>menuItemTraceUp</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemTraceUp].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDMenuItem</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemTraceUp].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+        </component>
+        <component>
+            <name>menuItemTraceDown</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemTraceDown].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDMenuItem</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemTraceDown].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+        </component>
+        <component>
+            <name>menuItemViewSubmitProccess</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemViewSubmitProccess].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDMenuItem</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemViewSubmitProccess].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+        </component>
+        <component>
+            <name>menuItemViewDoProccess</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemViewDoProccess].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDMenuItem</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemViewDoProccess].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+        </component>
+        <component>
+            <name>menuItemAuditResult</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemAuditResult].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDMenuItem</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemAuditResult].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+        </component>
+        <component>
+            <name>menuTable1</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuTable1].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDMenu</classType>
+            <isContainer>true</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuTable1].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+        </component>
+        <component>
+            <name>menuItemAddLine</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemAddLine].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDMenuItem</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemAddLine].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+        </component>
+        <component>
+            <name>menuItemInsertLine</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemInsertLine].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDMenuItem</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemInsertLine].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+        </component>
+        <component>
+            <name>menuItemRemoveLine</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemRemoveLine].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDMenuItem</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemRemoveLine].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+        </component>
+        <component>
+            <name>btnCreateTo</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnCreateTo].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDWorkButton</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnCreateTo].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+        </component>
+        <component>
+            <name>menuItemCreateTo</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemCreateTo].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDMenuItem</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemCreateTo].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+        </component>
+        <component>
+            <name>menuItemCopyLine</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemCopyLine].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDMenuItem</classType>
+            <isContainer>false</isContainer>
+            <constraints />
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemCopyLine].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+        </component>
+        <component>
+            <name>kdtEntrys</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kdtEntrys].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.kdf.table.KDTable</classType>
+            <isContainer>false</isContainer>
+            <constraints>6,250,991,369</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>formatXml</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kdtEntrys].properties.property[formatXml].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="CoreUI" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>id.text</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>entrys.id</bindingField>
+                    <fieldType>com.kingdee.bos.util.BOSUuid</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>false</userDefined>
+                </propertyBinding>
+                <propertyBinding>
+                    <propertyName>userObject</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>entrys</bindingField>
+                    <fieldType>com.kingdee.bos.bim.templates.BIM_TEMPLATE_BILL_MHSDEntryCollection</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>false</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>paneBIZLayerControl15</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[paneBIZLayerControl15].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDTabbedPane</classType>
+            <isContainer>true</isContainer>
+            <constraints>6,4,990,234</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[paneBIZLayerControl15].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="CoreUI" />
+            </parent>
+        </component>
+        <component>
+            <name>base</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[base].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDPanel</classType>
+            <isContainer>true</isContainer>
+            <constraints>基本信息</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[base].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="paneBIZLayerControl15" />
+            </parent>
+        </component>
+        <component>
+            <name>detail</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[detail].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDPanel</classType>
+            <isContainer>true</isContainer>
+            <constraints>详细资料</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[detail].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="paneBIZLayerControl15" />
+            </parent>
+        </component>
+        <component>
+            <name>contBizDate</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBizDate].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>10,13,270,19</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBizDate].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBizDate].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBizDate].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelAlignment</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBizDate].properties.property[boundLabelAlignment].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBizDate].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>foreground</name>
+                    <type>java.awt.Color</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBizDate].properties.property[foreground].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="base" />
+            </parent>
+        </component>
+        <component>
+            <name>pkBizDate</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[pkBizDate].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDDatePicker</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[pkBizDate].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>enabled</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[pkBizDate].properties.property[enabled].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>foreground</name>
+                    <type>java.awt.Color</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[pkBizDate].properties.property[foreground].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>required</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[pkBizDate].properties.property[required].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contBizDate" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>value</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>bizDate</bindingField>
+                    <fieldType>java.util.Date</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>false</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>contAuditor</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contAuditor].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>8,169,270,19</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contAuditor].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contAuditor].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contAuditor].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelAlignment</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contAuditor].properties.property[boundLabelAlignment].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contAuditor].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>foreground</name>
+                    <type>java.awt.Color</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contAuditor].properties.property[foreground].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="base" />
+            </parent>
+        </component>
+        <component>
+            <name>prmtAuditor</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtAuditor].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>enabled</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtAuditor].properties.property[enabled].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtAuditor].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>foreground</name>
+                    <type>java.awt.Color</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtAuditor].properties.property[foreground].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>required</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtAuditor].properties.property[required].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contAuditor" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>data</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>auditor</bindingField>
+                    <fieldType>com.kingdee.eas.base.permission.UserInfo</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>false</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>contCreateTime</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreateTime].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>704,137,270,19</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreateTime].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreateTime].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreateTime].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>enabled</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreateTime].properties.property[enabled].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelAlignment</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreateTime].properties.property[boundLabelAlignment].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreateTime].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>foreground</name>
+                    <type>java.awt.Color</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreateTime].properties.property[foreground].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="base" />
+            </parent>
+        </component>
+        <component>
+            <name>kDDateCreateTime</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kDDateCreateTime].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDDatePicker</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>timeEnabled</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kDDateCreateTime].properties.property[timeEnabled].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>enabled</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kDDateCreateTime].properties.property[enabled].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kDDateCreateTime].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>foreground</name>
+                    <type>java.awt.Color</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kDDateCreateTime].properties.property[foreground].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>required</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kDDateCreateTime].properties.property[required].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contCreateTime" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>value</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>createTime</bindingField>
+                    <fieldType>java.sql.Timestamp</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>false</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>contLastUpdateTime</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateTime].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>704,169,270,19</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateTime].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateTime].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateTime].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>enabled</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateTime].properties.property[enabled].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateTime].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelAlignment</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateTime].properties.property[boundLabelAlignment].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>foreground</name>
+                    <type>java.awt.Color</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateTime].properties.property[foreground].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="base" />
+            </parent>
+        </component>
+        <component>
+            <name>kDDateLastUpdateTime</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kDDateLastUpdateTime].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDDatePicker</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>timeEnabled</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kDDateLastUpdateTime].properties.property[timeEnabled].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>enabled</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kDDateLastUpdateTime].properties.property[enabled].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kDDateLastUpdateTime].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>foreground</name>
+                    <type>java.awt.Color</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kDDateLastUpdateTime].properties.property[foreground].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>required</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kDDateLastUpdateTime].properties.property[required].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contLastUpdateTime" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>value</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>lastUpdateTime</bindingField>
+                    <fieldType>java.sql.Timestamp</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>false</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>contNumber</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contNumber].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>353,14,270,19</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contNumber].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contNumber].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contNumber].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelAlignment</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contNumber].properties.property[boundLabelAlignment].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contNumber].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>foreground</name>
+                    <type>java.awt.Color</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contNumber].properties.property[foreground].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="base" />
+            </parent>
+        </component>
+        <component>
+            <name>txtNumber</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtNumber].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDTextField</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>maxLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtNumber].properties.property[maxLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtNumber].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>enabled</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtNumber].properties.property[enabled].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>horizontalAlignment</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtNumber].properties.property[horizontalAlignment].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>foreground</name>
+                    <type>java.awt.Color</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtNumber].properties.property[foreground].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>required</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtNumber].properties.property[required].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contNumber" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>text</propertyName>
+                    <propertyType>java.lang.String</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>number</bindingField>
+                    <fieldType>String</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>false</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>contDescription</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contDescription].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>704,11,270,19</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contDescription].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contDescription].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contDescription].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelAlignment</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contDescription].properties.property[boundLabelAlignment].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contDescription].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>foreground</name>
+                    <type>java.awt.Color</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contDescription].properties.property[foreground].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="base" />
+            </parent>
+        </component>
+        <component>
+            <name>txtDescription</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtDescription].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDTextField</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>maxLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtDescription].properties.property[maxLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtDescription].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>enabled</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtDescription].properties.property[enabled].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>horizontalAlignment</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtDescription].properties.property[horizontalAlignment].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>foreground</name>
+                    <type>java.awt.Color</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtDescription].properties.property[foreground].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>required</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtDescription].properties.property[required].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contDescription" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>text</propertyName>
+                    <propertyType>java.lang.String</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>description</bindingField>
+                    <fieldType>String</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>false</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>contCreator</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreator].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>353,137,270,19</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreator].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreator].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreator].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>enabled</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreator].properties.property[enabled].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelAlignment</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreator].properties.property[boundLabelAlignment].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreator].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>foreground</name>
+                    <type>java.awt.Color</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreator].properties.property[foreground].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="base" />
+            </parent>
+        </component>
+        <component>
+            <name>prmtCreator</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtCreator].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>enabled</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtCreator].properties.property[enabled].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtCreator].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>foreground</name>
+                    <type>java.awt.Color</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtCreator].properties.property[foreground].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>required</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtCreator].properties.property[required].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contCreator" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>data</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>creator</bindingField>
+                    <fieldType>com.kingdee.eas.base.permission.UserInfo</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>false</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>contLastUpdateUser</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateUser].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>353,169,270,19</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateUser].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateUser].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateUser].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>enabled</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateUser].properties.property[enabled].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateUser].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelAlignment</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateUser].properties.property[boundLabelAlignment].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>foreground</name>
+                    <type>java.awt.Color</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateUser].properties.property[foreground].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="base" />
+            </parent>
+        </component>
+        <component>
+            <name>prmtLastUpdateUser</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtLastUpdateUser].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>enabled</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtLastUpdateUser].properties.property[enabled].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtLastUpdateUser].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>foreground</name>
+                    <type>java.awt.Color</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtLastUpdateUser].properties.property[foreground].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>required</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtLastUpdateUser].properties.property[required].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contLastUpdateUser" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>data</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>lastUpdateUser</bindingField>
+                    <fieldType>com.kingdee.eas.base.permission.UserInfo</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>false</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>contBIMTEMPR_4BIZORG</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBIMTEMPR_4BIZORG].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>8,138,270,19</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBIMTEMPR_4BIZORG].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBIMTEMPR_4BIZORG].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBIMTEMPR_4BIZORG].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBIMTEMPR_4BIZORG].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>foreground</name>
+                    <type>java.awt.Color</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBIMTEMPR_4BIZORG].properties.property[foreground].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelAlignment</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBIMTEMPR_4BIZORG].properties.property[boundLabelAlignment].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="base" />
+            </parent>
+        </component>
+        <component>
+            <name>txtBIMTEMPR_4BIZORG</name>
+            <alias>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtBIMTEMPR_4BIZORG].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDTextField</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtBIMTEMPR_4BIZORG].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>horizontalAlignment</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtBIMTEMPR_4BIZORG].properties.property[horizontalAlignment].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>foreground</name>
+                    <type>java.awt.Color</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtBIMTEMPR_4BIZORG].properties.property[foreground].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>maxLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtBIMTEMPR_4BIZORG].properties.property[maxLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>required</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtBIMTEMPR_4BIZORG].properties.property[required].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>enabled</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtBIMTEMPR_4BIZORG].properties.property[enabled].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contBIMTEMPR_4BIZORG" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>text</propertyName>
+                    <propertyType>java.lang.String</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>BIMTEMPR_4BIZORG</bindingField>
+                    <fieldType>String</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>false</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+    </components>
+    <dataObjects>
+        <dataObject>
+            <name>editData</name>
+            <type>com.kingdee.bos.bim.templates.app.BIM_TEMPLATE_BILL_MHSD</type>
+            <objectType>enty</objectType>
+            <herited>true</herited>
+            <userDefined>false</userDefined>
+        </dataObject>
+    </dataObjects>
+    <actions>
+        <action>
+            <instanceName>actionSubmit</instanceName>
+            <className>ActionSubmit</className>
+            <name>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].actions.action[actionSubmit].name</name>
+            <enabled>true</enabled>
+            <actionPerformed />
+            <beforeActionPerformed />
+            <afterActionPerformed />
+            <finallyActionPerformed />
+            <actionCommandKey />
+            <acceleratorKey>ctrl S</acceleratorKey>
+            <mnemonicKey />
+            <smallIcon>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].actions.action[actionSubmit].smallIcon</smallIcon>
+            <shortDescription>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].actions.action[actionSubmit].shortDescription</shortDescription>
+            <longDescription>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].actions.action[actionSubmit].longDescription</longDescription>
+            <isBindWorkFlow>true</isBindWorkFlow>
+            <herited>true</herited>
+            <daemonRun>false</daemonRun>
+            <actionExtendProperty />
+            <services>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;root&gt;&lt;service class="com.kingdee.eas.framework.client.service.PermissionService" /&gt;&lt;service class="com.kingdee.eas.framework.client.service.NetFunctionService" /&gt;&lt;service class="com.kingdee.eas.framework.client.service.UserMonitorService" /&gt;&lt;/root&gt;</services>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <oprtIntent />
+            <nextUI />
+            <isUIPNavigator>false</isUIPNavigator>
+        </action>
+        <action>
+            <instanceName>actionPrint</instanceName>
+            <className>ActionPrint</className>
+            <name>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].actions.action[actionPrint].name</name>
+            <enabled>true</enabled>
+            <actionPerformed>ArrayList idList = new ArrayList();
+    	if (editData != null &amp;&amp; !StringUtils.isEmpty(editData.getString("id"))) {
+    		idList.add(editData.getString("id"));
+    	}
+        if (idList == null || idList.size() == 0 || getTDQueryPK() == null || getTDFileName() == null)
+            return;
+        com.kingdee.bos.ctrl.kdf.data.impl.BOSQueryDelegate data = new com.kingdee.eas.framework.util.CommonDataProvider(idList,getTDQueryPK());
+        com.kingdee.bos.ctrl.report.forapp.kdnote.client.KDNoteHelper appHlp = new com.kingdee.bos.ctrl.report.forapp.kdnote.client.KDNoteHelper();
+        appHlp.print(getTDFileName(), data, javax.swing.SwingUtilities.getWindowAncestor(this));</actionPerformed>
+            <beforeActionPerformed />
+            <afterActionPerformed />
+            <finallyActionPerformed />
+            <actionCommandKey />
+            <acceleratorKey>ctrl P</acceleratorKey>
+            <mnemonicKey />
+            <smallIcon>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].actions.action[actionPrint].smallIcon</smallIcon>
+            <shortDescription>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].actions.action[actionPrint].shortDescription</shortDescription>
+            <longDescription>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].actions.action[actionPrint].longDescription</longDescription>
+            <isBindWorkFlow>false</isBindWorkFlow>
+            <herited>true</herited>
+            <daemonRun>false</daemonRun>
+            <actionExtendProperty />
+            <services>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;root&gt;&lt;service class="com.kingdee.eas.framework.client.service.PermissionService" /&gt;&lt;service class="com.kingdee.eas.framework.client.service.NetFunctionService" /&gt;&lt;service class="com.kingdee.eas.framework.client.service.UserMonitorService" /&gt;&lt;/root&gt;</services>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <oprtIntent />
+            <nextUI />
+            <isUIPNavigator>false</isUIPNavigator>
+        </action>
+        <action>
+            <instanceName>actionPrintPreview</instanceName>
+            <className>ActionPrintPreview</className>
+            <name>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].actions.action[actionPrintPreview].name</name>
+            <enabled>true</enabled>
+            <actionPerformed>ArrayList idList = new ArrayList();
+        if (editData != null &amp;&amp; !StringUtils.isEmpty(editData.getString("id"))) {
+    		idList.add(editData.getString("id"));
+    	}
+        if (idList == null || idList.size() == 0 || getTDQueryPK() == null || getTDFileName() == null)
+            return;
+        com.kingdee.bos.ctrl.kdf.data.impl.BOSQueryDelegate data = new com.kingdee.eas.framework.util.CommonDataProvider(idList,getTDQueryPK());
+        com.kingdee.bos.ctrl.report.forapp.kdnote.client.KDNoteHelper appHlp = new com.kingdee.bos.ctrl.report.forapp.kdnote.client.KDNoteHelper();
+        appHlp.printPreview(getTDFileName(), data, javax.swing.SwingUtilities.getWindowAncestor(this));</actionPerformed>
+            <beforeActionPerformed />
+            <afterActionPerformed />
+            <finallyActionPerformed />
+            <actionCommandKey />
+            <acceleratorKey>shift ctrl P</acceleratorKey>
+            <mnemonicKey />
+            <smallIcon>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].actions.action[actionPrintPreview].smallIcon</smallIcon>
+            <shortDescription>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].actions.action[actionPrintPreview].shortDescription</shortDescription>
+            <longDescription>uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].actions.action[actionPrintPreview].longDescription</longDescription>
+            <isBindWorkFlow>false</isBindWorkFlow>
+            <herited>true</herited>
+            <daemonRun>false</daemonRun>
+            <actionExtendProperty />
+            <services>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;root&gt;&lt;service class="com.kingdee.eas.framework.client.service.PermissionService" /&gt;&lt;service class="com.kingdee.eas.framework.client.service.NetFunctionService" /&gt;&lt;service class="com.kingdee.eas.framework.client.service.UserMonitorService" /&gt;&lt;/root&gt;</services>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <oprtIntent />
+            <nextUI />
+            <isUIPNavigator>false</isUIPNavigator>
+        </action>
+    </actions>
+    <resource>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].actions.action[actionPrintPreview].longDescription">
+            <lang locale="zh_CN" value="打印预览" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="列印預覽" />
+            <lang locale="zh_TW" value="列印預覽" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].actions.action[actionPrintPreview].name">
+            <lang locale="zh_CN" value="打印预览" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="列印預覽" />
+            <lang locale="zh_TW" value="列印預覽" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].actions.action[actionPrintPreview].shortDescription">
+            <lang locale="zh_CN" value="打印预览" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="列印預覽" />
+            <lang locale="zh_TW" value="列印預覽" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].actions.action[actionPrintPreview].smallIcon">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].actions.action[actionPrint].longDescription">
+            <lang locale="zh_CN" value="打印" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="列印" />
+            <lang locale="zh_TW" value="列印" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].actions.action[actionPrint].name">
+            <lang locale="zh_CN" value="打印" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="列印" />
+            <lang locale="zh_TW" value="列印" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].actions.action[actionPrint].shortDescription">
+            <lang locale="zh_CN" value="打印" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="列印" />
+            <lang locale="zh_TW" value="列印" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].actions.action[actionPrint].smallIcon">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].actions.action[actionSubmit].longDescription">
+            <lang locale="zh_CN" value="提交" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="提交" />
+            <lang locale="zh_TW" value="提交" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].actions.action[actionSubmit].name">
+            <lang locale="zh_CN" value="提交" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="提交" />
+            <lang locale="zh_TW" value="提交" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].actions.action[actionSubmit].shortDescription">
+            <lang locale="zh_CN" value="提交" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="提交" />
+            <lang locale="zh_TW" value="提交" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].actions.action[actionSubmit].smallIcon">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].alias">
+            <lang locale="zh_CN" value="多表头单表(MHSD)体业务模板" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="多表頭單表(MHSD)體業務範本" />
+            <lang locale="zh_TW" value="多表頭單表(MHSD)體業務範本" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[CoreUI].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[base].alias">
+            <lang locale="zh_CN" value="基本信息" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="基本信息" />
+            <lang locale="zh_TW" value="基本信息" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[base].properties.property[visible].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnAddLine].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnAddLine].properties.property[visible].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnAuditResult].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnAuditResult].properties.property[visible].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnCopyLine].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnCopyLine].properties.property[visible].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnCreateTo].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnCreateTo].properties.property[visible].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnInsertLine].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnInsertLine].properties.property[visible].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnRemoveLine].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnRemoveLine].properties.property[visible].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnTraceDown].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnTraceDown].properties.property[visible].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnTraceUp].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[btnTraceUp].properties.property[visible].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contAuditor].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contAuditor].properties.property[boundLabelAlignment].value">
+            <lang locale="zh_CN" value="7" />
+            <lang locale="en_US" value="7" />
+            <lang locale="zh_HK" value="7" />
+            <lang locale="zh_TW" value="7" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contAuditor].properties.property[boundLabelLength].value">
+            <lang locale="zh_CN" value="100" />
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contAuditor].properties.property[boundLabelText].value">
+            <lang locale="zh_CN" value="审核人" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="審核人" />
+            <lang locale="zh_TW" value="審核人" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contAuditor].properties.property[boundLabelUnderline].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contAuditor].properties.property[foreground].value">
+            <lang locale="zh_CN" value="r=0,g=0,b=0" />
+            <lang locale="en_US" value="r=0,g=0,b=0" />
+            <lang locale="zh_HK" value="r=0,g=0,b=0" />
+            <lang locale="zh_TW" value="r=0,g=0,b=0" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contAuditor].properties.property[visible].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBIMTEMPR_4BIZORG].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBIMTEMPR_4BIZORG].properties.property[boundLabelAlignment].value">
+            <lang locale="zh_CN" value="7" />
+            <lang locale="en_US" value="7" />
+            <lang locale="zh_HK" value="7" />
+            <lang locale="zh_TW" value="7" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBIMTEMPR_4BIZORG].properties.property[boundLabelLength].value">
+            <lang locale="zh_CN" value="100" />
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBIMTEMPR_4BIZORG].properties.property[boundLabelText].value">
+            <lang locale="zh_CN" value="主业务组织" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="主業務組織" />
+            <lang locale="zh_TW" value="主業務組織" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBIMTEMPR_4BIZORG].properties.property[boundLabelUnderline].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBIMTEMPR_4BIZORG].properties.property[foreground].value">
+            <lang locale="zh_CN" value="r=0,g=0,b=0" />
+            <lang locale="en_US" value="r=0,g=0,b=0" />
+            <lang locale="zh_HK" value="r=0,g=0,b=0" />
+            <lang locale="zh_TW" value="r=0,g=0,b=0" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBIMTEMPR_4BIZORG].properties.property[visible].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBizDate].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBizDate].properties.property[boundLabelAlignment].value">
+            <lang locale="zh_CN" value="7" />
+            <lang locale="en_US" value="7" />
+            <lang locale="zh_HK" value="7" />
+            <lang locale="zh_TW" value="7" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBizDate].properties.property[boundLabelLength].value">
+            <lang locale="zh_CN" value="100" />
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBizDate].properties.property[boundLabelText].value">
+            <lang locale="zh_CN" value="业务日期" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="業務日期" />
+            <lang locale="zh_TW" value="業務日期" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBizDate].properties.property[boundLabelUnderline].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBizDate].properties.property[foreground].value">
+            <lang locale="zh_CN" value="r=0,g=0,b=0" />
+            <lang locale="en_US" value="r=0,g=0,b=0" />
+            <lang locale="zh_HK" value="r=0,g=0,b=0" />
+            <lang locale="zh_TW" value="r=0,g=0,b=0" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contBizDate].properties.property[visible].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreateTime].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreateTime].properties.property[boundLabelAlignment].value">
+            <lang locale="zh_CN" value="7" />
+            <lang locale="en_US" value="7" />
+            <lang locale="zh_HK" value="7" />
+            <lang locale="zh_TW" value="7" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreateTime].properties.property[boundLabelLength].value">
+            <lang locale="zh_CN" value="100" />
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreateTime].properties.property[boundLabelText].value">
+            <lang locale="zh_CN" value="创建时间" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="創建時間" />
+            <lang locale="zh_TW" value="創建時間" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreateTime].properties.property[boundLabelUnderline].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreateTime].properties.property[enabled].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreateTime].properties.property[foreground].value">
+            <lang locale="zh_CN" value="r=0,g=0,b=0" />
+            <lang locale="en_US" value="r=0,g=0,b=0" />
+            <lang locale="zh_HK" value="r=0,g=0,b=0" />
+            <lang locale="zh_TW" value="r=0,g=0,b=0" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreateTime].properties.property[visible].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreator].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreator].properties.property[boundLabelAlignment].value">
+            <lang locale="zh_CN" value="7" />
+            <lang locale="en_US" value="7" />
+            <lang locale="zh_HK" value="7" />
+            <lang locale="zh_TW" value="7" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreator].properties.property[boundLabelLength].value">
+            <lang locale="zh_CN" value="100" />
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreator].properties.property[boundLabelText].value">
+            <lang locale="zh_CN" value="创建者" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="創建者" />
+            <lang locale="zh_TW" value="創建者" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreator].properties.property[boundLabelUnderline].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreator].properties.property[enabled].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreator].properties.property[foreground].value">
+            <lang locale="zh_CN" value="r=0,g=0,b=0" />
+            <lang locale="en_US" value="r=0,g=0,b=0" />
+            <lang locale="zh_HK" value="r=0,g=0,b=0" />
+            <lang locale="zh_TW" value="r=0,g=0,b=0" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contCreator].properties.property[visible].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contDescription].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contDescription].properties.property[boundLabelAlignment].value">
+            <lang locale="zh_CN" value="7" />
+            <lang locale="en_US" value="7" />
+            <lang locale="zh_HK" value="7" />
+            <lang locale="zh_TW" value="7" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contDescription].properties.property[boundLabelLength].value">
+            <lang locale="zh_CN" value="100" />
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contDescription].properties.property[boundLabelText].value">
+            <lang locale="zh_CN" value="参考信息" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="參考信息" />
+            <lang locale="zh_TW" value="參考信息" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contDescription].properties.property[boundLabelUnderline].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contDescription].properties.property[foreground].value">
+            <lang locale="zh_CN" value="r=0,g=0,b=0" />
+            <lang locale="en_US" value="r=0,g=0,b=0" />
+            <lang locale="zh_HK" value="r=0,g=0,b=0" />
+            <lang locale="zh_TW" value="r=0,g=0,b=0" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contDescription].properties.property[visible].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateTime].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateTime].properties.property[boundLabelAlignment].value">
+            <lang locale="zh_CN" value="7" />
+            <lang locale="en_US" value="7" />
+            <lang locale="zh_HK" value="7" />
+            <lang locale="zh_TW" value="7" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateTime].properties.property[boundLabelLength].value">
+            <lang locale="zh_CN" value="100" />
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateTime].properties.property[boundLabelText].value">
+            <lang locale="zh_CN" value="最后修改时间" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="最後修改時間" />
+            <lang locale="zh_TW" value="最後修改時間" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateTime].properties.property[boundLabelUnderline].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateTime].properties.property[enabled].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateTime].properties.property[foreground].value">
+            <lang locale="zh_CN" value="r=0,g=0,b=0" />
+            <lang locale="en_US" value="r=0,g=0,b=0" />
+            <lang locale="zh_HK" value="r=0,g=0,b=0" />
+            <lang locale="zh_TW" value="r=0,g=0,b=0" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateTime].properties.property[visible].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateUser].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateUser].properties.property[boundLabelAlignment].value">
+            <lang locale="zh_CN" value="7" />
+            <lang locale="en_US" value="7" />
+            <lang locale="zh_HK" value="7" />
+            <lang locale="zh_TW" value="7" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateUser].properties.property[boundLabelLength].value">
+            <lang locale="zh_CN" value="100" />
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateUser].properties.property[boundLabelText].value">
+            <lang locale="zh_CN" value="最后修改者" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="最後修改者" />
+            <lang locale="zh_TW" value="最後修改者" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateUser].properties.property[boundLabelUnderline].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateUser].properties.property[enabled].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateUser].properties.property[foreground].value">
+            <lang locale="zh_CN" value="r=0,g=0,b=0" />
+            <lang locale="en_US" value="r=0,g=0,b=0" />
+            <lang locale="zh_HK" value="r=0,g=0,b=0" />
+            <lang locale="zh_TW" value="r=0,g=0,b=0" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contLastUpdateUser].properties.property[visible].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contNumber].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contNumber].properties.property[boundLabelAlignment].value">
+            <lang locale="zh_CN" value="7" />
+            <lang locale="en_US" value="7" />
+            <lang locale="zh_HK" value="7" />
+            <lang locale="zh_TW" value="7" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contNumber].properties.property[boundLabelLength].value">
+            <lang locale="zh_CN" value="100" />
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contNumber].properties.property[boundLabelText].value">
+            <lang locale="zh_CN" value="单据编号" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="單據編號" />
+            <lang locale="zh_TW" value="單據編號" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contNumber].properties.property[boundLabelUnderline].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contNumber].properties.property[foreground].value">
+            <lang locale="zh_CN" value="r=0,g=0,b=0" />
+            <lang locale="en_US" value="r=0,g=0,b=0" />
+            <lang locale="zh_HK" value="r=0,g=0,b=0" />
+            <lang locale="zh_TW" value="r=0,g=0,b=0" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[contNumber].properties.property[visible].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[detail].alias">
+            <lang locale="zh_CN" value="详细资料" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="詳細資料" />
+            <lang locale="zh_TW" value="詳細資料" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[detail].properties.property[visible].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kDDateCreateTime].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kDDateCreateTime].properties.property[enabled].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kDDateCreateTime].properties.property[foreground].value">
+            <lang locale="zh_CN" value="r=0,g=0,b=0" />
+            <lang locale="en_US" value="r=0,g=0,b=0" />
+            <lang locale="zh_HK" value="r=0,g=0,b=0" />
+            <lang locale="zh_TW" value="r=0,g=0,b=0" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kDDateCreateTime].properties.property[required].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kDDateCreateTime].properties.property[timeEnabled].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kDDateCreateTime].properties.property[visible].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kDDateLastUpdateTime].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kDDateLastUpdateTime].properties.property[enabled].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kDDateLastUpdateTime].properties.property[foreground].value">
+            <lang locale="zh_CN" value="r=0,g=0,b=0" />
+            <lang locale="en_US" value="r=0,g=0,b=0" />
+            <lang locale="zh_HK" value="r=0,g=0,b=0" />
+            <lang locale="zh_TW" value="r=0,g=0,b=0" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kDDateLastUpdateTime].properties.property[required].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kDDateLastUpdateTime].properties.property[timeEnabled].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kDDateLastUpdateTime].properties.property[visible].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kdtEntrys].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kdtEntrys].extendedProperty.buildDetail">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+            <lang locale="en_US" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[kdtEntrys].properties.property[formatXml].value">
+            <lang locale="zh_CN" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;DocRoot xmlns:c=&quot;http://www.kingdee.com/Common&quot; xmlns:f=&quot;http://www.kingdee.com/Form&quot; xmlns:t=&quot;http://www.kingdee.com/Table&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.kingdee.com/KDF KDFSchema.xsd&quot; version=&quot;0.0&quot;&gt;&lt;Styles&gt;&lt;c:Style id=&quot;sCol0&quot;&gt;&lt;c:Protection hidden=&quot;true&quot; /&gt;&lt;/c:Style&gt;&lt;/Styles&gt;&lt;Table id=&quot;KDTable&quot;&gt;&lt;t:Sheet name=&quot;sheet1&quot;&gt;&lt;t:Table t:selectMode=&quot;15&quot; t:mergeMode=&quot;0&quot; t:dataRequestMode=&quot;0&quot; t:pageRowCount=&quot;100&quot;&gt;&lt;t:ColumnGroup&gt;&lt;t:Column t:key=&quot;id&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:styleID=&quot;sCol0&quot; /&gt;&lt;/t:ColumnGroup&gt;&lt;t:Head&gt;&lt;t:Row t:name=&quot;header&quot; t:height=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot;&gt;&lt;t:Cell&gt;id&lt;/t:Cell&gt;&lt;/t:Row&gt;&lt;/t:Head&gt;&lt;/t:Table&gt;&lt;t:SheetOptions&gt;&lt;t:MergeBlocks&gt;&lt;t:Head /&gt;&lt;/t:MergeBlocks&gt;&lt;/t:SheetOptions&gt;&lt;/t:Sheet&gt;&lt;/Table&gt;&lt;/DocRoot&gt; " />
+            <lang locale="en_US" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;DocRoot xmlns:c=&quot;http://www.kingdee.com/Common&quot; xmlns:f=&quot;http://www.kingdee.com/Form&quot; xmlns:t=&quot;http://www.kingdee.com/Table&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.kingdee.com/KDF KDFSchema.xsd&quot; version=&quot;0.0&quot;&gt;&lt;Styles /&gt;&lt;Table id=&quot;KDTable&quot;&gt;&lt;t:Sheet name=&quot;sheet1&quot;&gt;&lt;t:Table t:selectMode=&quot;15&quot; t:mergeMode=&quot;0&quot; t:dataRequestMode=&quot;0&quot; t:pageRowCount=&quot;100&quot;&gt;&lt;t:ColumnGroup&gt;&lt;t:Column t:key=&quot;id&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; /&gt;&lt;/t:ColumnGroup&gt;&lt;t:Head&gt;&lt;t:Row t:name=&quot;header&quot; t:height=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot;&gt;&lt;t:Cell&gt;id&lt;/t:Cell&gt;&lt;/t:Row&gt;&lt;/t:Head&gt;&lt;/t:Table&gt;&lt;t:SheetOptions&gt;&lt;t:MergeBlocks&gt;&lt;t:Head /&gt;&lt;/t:MergeBlocks&gt;&lt;/t:SheetOptions&gt;&lt;/t:Sheet&gt;&lt;/Table&gt;&lt;/DocRoot&gt; " />
+            <lang locale="zh_HK" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;DocRoot xmlns:c=&quot;http://www.kingdee.com/Common&quot; xmlns:f=&quot;http://www.kingdee.com/Form&quot; xmlns:t=&quot;http://www.kingdee.com/Table&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.kingdee.com/KDF KDFSchema.xsd&quot; version=&quot;0.0&quot;&gt;&lt;Styles&gt;&lt;c:Style id=&quot;sCol0&quot;&gt;&lt;c:Protection hidden=&quot;true&quot; /&gt;&lt;/c:Style&gt;&lt;/Styles&gt;&lt;Table id=&quot;KDTable&quot;&gt;&lt;t:Sheet name=&quot;sheet1&quot;&gt;&lt;t:Table t:selectMode=&quot;15&quot; t:mergeMode=&quot;0&quot; t:dataRequestMode=&quot;0&quot; t:pageRowCount=&quot;100&quot;&gt;&lt;t:ColumnGroup&gt;&lt;t:Column t:key=&quot;id&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:styleID=&quot;sCol0&quot; /&gt;&lt;/t:ColumnGroup&gt;&lt;t:Head&gt;&lt;t:Row t:name=&quot;header&quot; t:height=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot;&gt;&lt;t:Cell&gt;id&lt;/t:Cell&gt;&lt;/t:Row&gt;&lt;/t:Head&gt;&lt;/t:Table&gt;&lt;t:SheetOptions&gt;&lt;t:MergeBlocks&gt;&lt;t:Head /&gt;&lt;/t:MergeBlocks&gt;&lt;/t:SheetOptions&gt;&lt;/t:Sheet&gt;&lt;/Table&gt;&lt;/DocRoot&gt; " />
+            <lang locale="zh_TW" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;DocRoot xmlns:c=&quot;http://www.kingdee.com/Common&quot; xmlns:f=&quot;http://www.kingdee.com/Form&quot; xmlns:t=&quot;http://www.kingdee.com/Table&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.kingdee.com/KDF KDFSchema.xsd&quot; version=&quot;0.0&quot;&gt;&lt;Styles&gt;&lt;c:Style id=&quot;sCol0&quot;&gt;&lt;c:Protection hidden=&quot;true&quot; /&gt;&lt;/c:Style&gt;&lt;/Styles&gt;&lt;Table id=&quot;KDTable&quot;&gt;&lt;t:Sheet name=&quot;sheet1&quot;&gt;&lt;t:Table t:selectMode=&quot;15&quot; t:mergeMode=&quot;0&quot; t:dataRequestMode=&quot;0&quot; t:pageRowCount=&quot;100&quot;&gt;&lt;t:ColumnGroup&gt;&lt;t:Column t:key=&quot;id&quot; t:width=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot; t:moveable=&quot;true&quot; t:group=&quot;false&quot; t:required=&quot;false&quot; t:styleID=&quot;sCol0&quot; /&gt;&lt;/t:ColumnGroup&gt;&lt;t:Head&gt;&lt;t:Row t:name=&quot;header&quot; t:height=&quot;-1&quot; t:mergeable=&quot;true&quot; t:resizeable=&quot;true&quot;&gt;&lt;t:Cell&gt;id&lt;/t:Cell&gt;&lt;/t:Row&gt;&lt;/t:Head&gt;&lt;/t:Table&gt;&lt;t:SheetOptions&gt;&lt;t:MergeBlocks&gt;&lt;t:Head /&gt;&lt;/t:MergeBlocks&gt;&lt;/t:SheetOptions&gt;&lt;/t:Sheet&gt;&lt;/Table&gt;&lt;/DocRoot&gt; " />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemAddLine].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemAddLine].properties.property[visible].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemAuditResult].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemAuditResult].properties.property[visible].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemCopyLine].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemCopyLine].properties.property[visible].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemCreateTo].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemCreateTo].properties.property[visible].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemInsertLine].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemInsertLine].properties.property[visible].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemRemoveLine].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemRemoveLine].properties.property[visible].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemTraceDown].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemTraceDown].properties.property[visible].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemTraceUp].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemTraceUp].properties.property[visible].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemViewDoProccess].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemViewDoProccess].properties.property[visible].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemViewSubmitProccess].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuItemViewSubmitProccess].properties.property[visible].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuTable1].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[menuTable1].properties.property[visible].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[paneBIZLayerControl15].alias">
+            <lang locale="zh_CN" value="表头页签" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="表頭頁簽" />
+            <lang locale="zh_TW" value="表頭頁簽" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[paneBIZLayerControl15].properties.property[visible].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[pkBizDate].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[pkBizDate].properties.property[enabled].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[pkBizDate].properties.property[foreground].value">
+            <lang locale="zh_CN" value="r=0,g=0,b=0" />
+            <lang locale="en_US" value="r=0,g=0,b=0" />
+            <lang locale="zh_HK" value="r=0,g=0,b=0" />
+            <lang locale="zh_TW" value="r=0,g=0,b=0" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[pkBizDate].properties.property[required].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[pkBizDate].properties.property[visible].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtAuditor].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtAuditor].properties.property[enabled].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtAuditor].properties.property[foreground].value">
+            <lang locale="zh_CN" value="r=0,g=0,b=0" />
+            <lang locale="en_US" value="r=0,g=0,b=0" />
+            <lang locale="zh_HK" value="r=0,g=0,b=0" />
+            <lang locale="zh_TW" value="r=0,g=0,b=0" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtAuditor].properties.property[required].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtAuditor].properties.property[visible].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtCreator].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtCreator].properties.property[enabled].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtCreator].properties.property[foreground].value">
+            <lang locale="zh_CN" value="r=0,g=0,b=0" />
+            <lang locale="en_US" value="r=0,g=0,b=0" />
+            <lang locale="zh_HK" value="r=0,g=0,b=0" />
+            <lang locale="zh_TW" value="r=0,g=0,b=0" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtCreator].properties.property[required].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtCreator].properties.property[visible].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtLastUpdateUser].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtLastUpdateUser].properties.property[enabled].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtLastUpdateUser].properties.property[foreground].value">
+            <lang locale="zh_CN" value="r=0,g=0,b=0" />
+            <lang locale="en_US" value="r=0,g=0,b=0" />
+            <lang locale="zh_HK" value="r=0,g=0,b=0" />
+            <lang locale="zh_TW" value="r=0,g=0,b=0" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtLastUpdateUser].properties.property[required].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[prmtLastUpdateUser].properties.property[visible].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[separator1].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[separator1].properties.property[visible].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[separator3].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[separator3].properties.property[visible].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtBIMTEMPR_4BIZORG].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtBIMTEMPR_4BIZORG].properties.property[enabled].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtBIMTEMPR_4BIZORG].properties.property[foreground].value">
+            <lang locale="zh_CN" value="r=0,g=0,b=0" />
+            <lang locale="en_US" value="r=0,g=0,b=0" />
+            <lang locale="zh_HK" value="r=0,g=0,b=0" />
+            <lang locale="zh_TW" value="r=0,g=0,b=0" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtBIMTEMPR_4BIZORG].properties.property[horizontalAlignment].value">
+            <lang locale="zh_CN" value="2" />
+            <lang locale="en_US" value="2" />
+            <lang locale="zh_HK" value="2" />
+            <lang locale="zh_TW" value="2" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtBIMTEMPR_4BIZORG].properties.property[maxLength].value">
+            <lang locale="zh_CN" value="50" />
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_HK" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtBIMTEMPR_4BIZORG].properties.property[required].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtBIMTEMPR_4BIZORG].properties.property[visible].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtDescription].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtDescription].properties.property[enabled].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtDescription].properties.property[foreground].value">
+            <lang locale="zh_CN" value="r=0,g=0,b=0" />
+            <lang locale="en_US" value="r=0,g=0,b=0" />
+            <lang locale="zh_HK" value="r=0,g=0,b=0" />
+            <lang locale="zh_TW" value="r=0,g=0,b=0" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtDescription].properties.property[horizontalAlignment].value">
+            <lang locale="zh_CN" value="2" />
+            <lang locale="en_US" value="2" />
+            <lang locale="zh_HK" value="2" />
+            <lang locale="zh_TW" value="2" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtDescription].properties.property[maxLength].value">
+            <lang locale="zh_CN" value="80" />
+            <lang locale="en_US" value="80" />
+            <lang locale="zh_HK" value="80" />
+            <lang locale="zh_TW" value="80" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtDescription].properties.property[required].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtDescription].properties.property[visible].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtNumber].alias">
+            <lang locale="zh_CN" value="null" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtNumber].properties.property[enabled].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtNumber].properties.property[foreground].value">
+            <lang locale="zh_CN" value="r=0,g=0,b=0" />
+            <lang locale="en_US" value="r=0,g=0,b=0" />
+            <lang locale="zh_HK" value="r=0,g=0,b=0" />
+            <lang locale="zh_TW" value="r=0,g=0,b=0" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtNumber].properties.property[horizontalAlignment].value">
+            <lang locale="zh_CN" value="2" />
+            <lang locale="en_US" value="2" />
+            <lang locale="zh_HK" value="2" />
+            <lang locale="zh_TW" value="2" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtNumber].properties.property[maxLength].value">
+            <lang locale="zh_CN" value="80" />
+            <lang locale="en_US" value="80" />
+            <lang locale="zh_HK" value="80" />
+            <lang locale="zh_TW" value="80" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtNumber].properties.property[required].value">
+            <lang locale="zh_CN" value="false" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].components.component[txtNumber].properties.property[visible].value">
+            <lang locale="zh_CN" value="true" />
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].description">
+            <lang locale="zh_CN" value="多分录基础单据模板编辑界面" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="多分錄基礎單據範本編輯介面" />
+            <lang locale="zh_TW" value="多分錄基礎單據範本編輯介面" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].extendedProperty.bimTemplateType">
+            <lang locale="zh_CN" value="MCoreBillBase" />
+            <lang locale="zh_TW" value="MCoreBillBase" />
+            <lang locale="en_US" value="MCoreBillBase" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].extendedProperty.bimUIType">
+            <lang locale="zh_CN" value="EditUI" />
+            <lang locale="zh_TW" value="EditUI" />
+            <lang locale="en_US" value="EditUI" />
+        </rs>
+        <rs key="uiObject[com.kingdee.bos.bim.templates.client.BIM_TEMPLATE_BILL_MHSDEditUI].title">
+            <lang locale="zh_CN" value="多页签表头单表体(MPHSD)业务模板" />
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_HK" value="多頁簽表頭單表體(MPHSD)業務範本" />
+            <lang locale="zh_TW" value="多頁簽表頭單表體(MPHSD)業務範本" />
+        </rs>
+    </resource>
+</uiObject>
+

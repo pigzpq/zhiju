@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=GB2312">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="../../../../book.css" CHARSET="GB2312" TYPE="text/css">
+<TITLE>
+怎样建立多个表达式之间的逻辑关系
+</TITLE>
+
+<link rel="stylesheet" type="text/css" HREF="../../../../book.css">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H3>怎样建立多个表达式之间的逻辑关系</H3>
+<p>怎样建立多个表达式之间的逻辑关系？即如何设置formular String（mask String）？</p>
+<p>在BOS中，经常需要对多个表达式进行逻辑操作，比如，BOS Studio中，当一个过滤条件有两个表达式时（假设 field1 > a 与 field2 > b）,怎样描述这些表达式之间的逻辑关系？再比如，构造一个EntityViewInfo，传给getCollection, 其中有多个filterItemInfo, mask关系如何设置？这种情况下BOS是通过它们的formular String 或者 mask String设置的。比如，为了表达出 field1 > a and field2 > b，只需要输入formular String 为：(#0 and #1) 即可。请注意，序号从0开始。</p>
+
+
+<p align="center"><a href="../../../../notices.html"><img border="0" src="../../../../copyright.gif"></a></p>
+<p></p>
+</BODY>
+</HTML>

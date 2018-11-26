@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+<toc label="如何建立一條簡單的流程">
+	<!--topic label="建立簡單流程" href="help/contents/eg-top.htm"/-->
+	<topic label="新建流程" href="help/contents/simpleFlowEG/constuctNewFlow.htm"/>
+	<topic label="編輯流程活動" href="help/contents/simpleFlowEG/editFlowActivity.htm">
+		<topic label="添加人工節點" href="help/contents/simpleFlowEG/editActivity-manpower.htm"/>
+		<topic label="添加審批節點" href="help/contents/simpleFlowEG/editActivity-approve.htm"/>
+		<topic label="添加自動節點" href="help/contents/simpleFlowEG/editActivity-tool.htm"/>
+	</topic>
+	<topic label="編輯流程連接弧" href="help/contents/simpleFlowEG/editConnectWire.htm"/>
+	<topic label="校驗和發佈" href="help/contents/simpleFlowEG/validateAndDeplpyFlow.htm">
+		<topic label="流程校驗" href="help/contents/simpleFlowEG/validate.htm"/>
+		<topic label="流程發佈" href="help/contents/simpleFlowEG/deploy.htm"/>
+	</topic>
+</toc>

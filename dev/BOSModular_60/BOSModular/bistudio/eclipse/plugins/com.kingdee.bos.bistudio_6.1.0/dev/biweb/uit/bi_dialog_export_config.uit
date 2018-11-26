@@ -1,0 +1,35 @@
+<table id='paper_config_table' cellspacing='5' cellpadding='0' style="font:12px Arial;width:100%">
+	<tr>
+		<td style='width:70px;text-align:right'>标题：</td>
+		<td style='width:300px;padding-left:8px'><input id='paper_config_title' class='portal_textfield' style="width:220px" type='text' value='' /></td>
+	</tr>
+	<tr>
+		<td style="text-align:right">切片：</td>
+		<td style="padding-left:8px">
+			<span style="width:120px">
+			<input id='paper_config_slicer_show' type='radio' name='paper_config_slicer' checked="checked"/>&nbsp;显示</span>
+			<span style="width:120px">
+			<input id='paper_config_slicer_hidden' type='radio' name='paper_config_slicer'/>&nbsp;不显示</span>
+		</td>
+	</tr>
+	<tr>
+		<td style="text-align:right">纸张大小：</td>
+		<td style="padding-left:8px"><select id='paper_config_size' type='width:100%'><option>正在获取数据，请稍候……</option></select></td>
+	</tr>
+	<tr id='paper_config_custom_tr' style='display:none'>
+		<td></td>
+		<td style="padding-left:8px"><span style="width:120px">自定义宽&nbsp;<input id='paper_config_custom_width' type='text' class='portal_textfield' style="width:32px;height:17px"/>&nbsp;mm</span><span style="width:120px">自定义高&nbsp;<input id='paper_config_custom_height' class='portal_textfield' type='text' style="width:32px;height:17px"/>&nbsp;mm</span></td>
+	</tr>
+	<tr>
+		<td style="text-align:right">方向：</td>
+		<td style="padding-left:8px"><span style="width:120px"><input id='paper_config_direction_vertical' type='radio' name='paper_config_direction' checked=checked/>&nbsp;纵向</span><span style="width:120px"><input id='paper_config_direction_horizontal' type='radio' name='paper_config_direction'/>&nbsp;横向</span></td>
+	</tr>
+	<tr>
+		<td style="text-align:right">页边距：</td>
+		<td style="padding-left:8px"><span style="width:120px">左：<input id='paper_config_margin_left' class='portal_textfield' type='text' style="width:32px;height:17px" value='15'/>&nbsp;mm</span><span style="width:120px">上：<input id='paper_config_margin_top' class='portal_textfield' type='text' style="width:32px;height:17px" value='15'/>&nbsp;mm</span></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td style="padding-left:8px"><span style="width:120px">右：<input id='paper_config_margin_right' class='portal_textfield' type='text' style="width:32px;height:17px" value='15'/>&nbsp;mm</span><span style="width:120px">下：<input id='paper_config_margin_bottom' class='portal_textfield' type='text' style="width:32px;height:17px" value='15'/>&nbsp;mm</span></td>
+	</tr>
+</table>

@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Kingdee StudioIntro
+Bundle-SymbolicName: com.kingdee.bos.studio.product; singleton:=true
+Bundle-Version: 5.0
+Bundle-ClassPath: studiointro.jar
+Bundle-Activator: StudioIntroPlugin
+Bundle-Vendor: Kingdee Software (China) Company Ltd.
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.intro,
+ org.eclipse.ui.cheatsheets,
+ org.eclipse.ui.forms,
+ org.eclipse.osgi.util
+Eclipse-AutoStart: true

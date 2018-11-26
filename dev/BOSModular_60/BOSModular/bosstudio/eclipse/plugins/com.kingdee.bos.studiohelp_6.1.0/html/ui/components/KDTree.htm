@@ -1,0 +1,2344 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="KDTree.files/filelist.xml">
+<link rel=Edit-Time-Data href="KDTree.files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>控件名称</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>chenjx</o:Author>
+  <o:LastAuthor>fuxiuhu</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>443</o:TotalTime>
+  <o:Created>2005-06-07T02:15:00Z</o:Created>
+  <o:LastSaved>2005-06-07T02:15:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>971</o:Words>
+  <o:Characters>5536</o:Characters>
+  <o:Company>kingdee</o:Company>
+  <o:Lines>46</o:Lines>
+  <o:Paragraphs>12</o:Paragraphs>
+  <o:CharactersWithSpaces>6495</o:CharactersWithSpaces>
+  <o:Version>11.5606</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:PunctuationKerning/>
+  <w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:536871559 0 0 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:none;
+	tab-stops:center 207.65pt right 415.3pt;
+	layout-grid-mode:char;
+	border:none;
+	mso-border-bottom-alt:solid windowtext .75pt;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 1.0pt 0cm;
+	font-size:9.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	tab-stops:center 207.65pt right 415.3pt;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;}
+p.a, li.a, div.a
+	{mso-style-name:控件名称;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;
+	font-weight:bold;}
+p.a0, li.a0, div.a0
+	{mso-style-name:类列表项;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;}
+p.a1, li.a1, div.a1
+	{mso-style-name:小标题;
+	mso-style-parent:控件名称;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;
+	font-weight:bold;}
+p.a2, li.a2, div.a2
+	{mso-style-name:代码;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:21.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0cm;
+	mso-para-margin-right:0cm;
+	mso-para-margin-bottom:0cm;
+	mso-para-margin-left:2.0gd;
+	mso-para-margin-bottom:.0001pt;
+	line-height:12.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:none;
+	font-size:9.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:宋体;
+	color:navy;
+	mso-font-kerning:1.0pt;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;
+	mso-footnote-separator:url("KDTree.files/header.htm") fs;
+	mso-footnote-continuation-separator:url("KDTree.files/header.htm") fcs;
+	mso-endnote-separator:url("KDTree.files/header.htm") es;
+	mso-endnote-continuation-separator:url("KDTree.files/header.htm") ecs;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-header:url("KDTree.files/header.htm") h1;
+	mso-footer:url("KDTree.files/header.htm") f1;
+	mso-paper-source:0;
+	layout-grid:15.6pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:818860;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1573872410 -1346307780 953604382 -98541758 -868427742 888466334 -1344000906 547276524 -781707394 -1599072216;}
+@list l0:level1
+	{mso-level-number-format:image;
+	list-style-image:url("KDTree.files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:74010240;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1661284220 -318577672 1719418060 -339453492 1101697274 703132748 -1185879054 860551630 -35246826 -96843558;}
+@list l1:level1
+	{mso-level-number-format:image;
+	list-style-image:url("KDTree.files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l2
+	{mso-list-id:735785050;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1402806734 1094849250 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:★;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	font-family:宋体;
+	mso-bidi-font-family:"Times New Roman";}
+@list l3
+	{mso-list-id:999121723;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1000404370 -1814936128 754493266 1982347492 -49136750 -469438772 -1822018642 636623802 194527708 -226214012;}
+@list l3:level1
+	{mso-level-number-format:image;
+	list-style-image:url("KDTree.files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l4
+	{mso-list-id:1168207222;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1182562642 -1588145472 -1589509298 1125672372 535173216 1653108846 -1589992328 -100875118 -1305449590 537938430;}
+@list l4:level1
+	{mso-level-number-format:image;
+	list-style-image:url("KDTree.files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l5
+	{mso-list-id:1299190117;
+	mso-list-type:hybrid;
+	mso-list-template-ids:738767158 -604483946 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l5:level1
+	{mso-level-text:%1、;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l6
+	{mso-list-id:1437018645;
+	mso-list-type:hybrid;
+	mso-list-template-ids:679097322 437812938 1984590912 1314543208 962097654 1814604630 -1612649302 -214956656 -446138724 -1083673304;}
+@list l6:level1
+	{mso-level-number-format:image;
+	list-style-image:url("KDTree.files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l7
+	{mso-list-id:1632901723;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2045202808 1236979516 -503181888 -1146967746 934808940 1733061910 1348470846 -1983988364 -1309610452 -1513589692;}
+@list l7:level1
+	{mso-level-number-format:image;
+	list-style-image:url("KDTree.files/image001.gif");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l8
+	{mso-list-id:2110001381;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1623059320 -352258756 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l8:level1
+	{mso-level-text:%1、;
+	mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:普通表格;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=ZH-CN style='tab-interval:21.0pt;text-justify-trim:punctuation'>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US><o:p>&nbsp;</o:p></span></b></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=571
+ style='width:428.4pt;border-collapse:collapse;border:none;mso-border-alt:solid gray .5pt;
+ mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:.5pt solid gray;
+ mso-border-insidev:.5pt solid gray'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=91 valign=top style='width:68.4pt;border:solid gray 1.0pt;
+  mso-border-alt:solid gray .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a1 style='text-align:justify;text-justify:distribute-all-lines'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>控件名称</span></p>
+  </td>
+  <td width=480 style='width:360.0pt;border:solid gray 1.0pt;border-left:none;
+  mso-border-left-alt:solid gray .5pt;mso-border-alt:solid gray .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman"'>树控件</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=91 valign=top style='width:68.4pt;border:solid gray 1.0pt;
+  border-top:none;mso-border-top-alt:solid gray .5pt;mso-border-alt:solid gray .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a1 style='text-align:justify;text-justify:distribute-all-lines'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>类名</span></p>
+  </td>
+  <td width=480 style='width:360.0pt;border-top:none;border-left:none;
+  border-bottom:solid gray 1.0pt;border-right:solid gray 1.0pt;mso-border-top-alt:
+  solid gray .5pt;mso-border-left-alt:solid gray .5pt;mso-border-alt:solid gray .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a0 style='text-align:justify;text-justify:inter-ideograph'><span
+  lang=EN-US>com.kingdee.bos.ctrl.swing.</span><span lang=EN-US
+  style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Courier New";
+  mso-bidi-font-family:宋体;color:black;background:white;mso-highlight:white;
+  mso-font-kerning:0pt'>KDTree</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=91 valign=top style='width:68.4pt;border:solid gray 1.0pt;
+  border-top:none;mso-border-top-alt:solid gray .5pt;mso-border-alt:solid gray .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a1 style='text-align:justify;text-justify:distribute-all-lines'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>父类</span></p>
+  </td>
+  <td width=480 style='width:360.0pt;border-top:none;border-left:none;
+  border-bottom:solid gray 1.0pt;border-right:solid gray 1.0pt;mso-border-top-alt:
+  solid gray .5pt;mso-border-left-alt:solid gray .5pt;mso-border-alt:solid gray .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a0 style='text-align:justify;text-justify:inter-ideograph'><span
+  lang=EN-US>javax.swing.</span><span lang=EN-US style='font-size:10.0pt;
+  font-family:宋体;mso-hansi-font-family:"Courier New";mso-bidi-font-family:宋体;
+  color:black;background:white;mso-highlight:white;mso-font-kerning:0pt'>JTree</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;page-break-inside:avoid;height:5.25pt'>
+  <td width=91 rowspan=3 valign=top style='width:68.4pt;border:solid gray 1.0pt;
+  border-top:none;mso-border-top-alt:solid gray .5pt;mso-border-alt:solid gray .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:5.25pt'>
+  <p class=a1 style='text-align:justify;text-justify:distribute-all-lines'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>父接口</span></p>
+  </td>
+  <td width=480 style='width:360.0pt;border-top:none;border-left:none;
+  border-bottom:solid gray 1.0pt;border-right:solid gray 1.0pt;mso-border-top-alt:
+  solid gray .5pt;mso-border-left-alt:solid gray .5pt;mso-border-alt:solid gray .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:5.25pt'>
+  <p class=a0 style='text-align:justify;text-justify:inter-ideograph'><span
+  lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Courier New";
+  mso-bidi-font-family:宋体;color:black;background:white;mso-highlight:white;
+  mso-font-kerning:0pt'>com.kingdee.bos.ctrl.swing</span><span lang=EN-US
+  style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Courier New";
+  mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>.<span
+  style='background:white;mso-highlight:white'>IKDComponent</span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;page-break-inside:avoid;height:5.25pt'>
+  <td width=480 style='width:360.0pt;border-top:none;border-left:none;
+  border-bottom:solid gray 1.0pt;border-right:solid gray 1.0pt;mso-border-top-alt:
+  solid gray .5pt;mso-border-left-alt:solid gray .5pt;mso-border-alt:solid gray .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:5.25pt'>
+  <p class=a0 style='text-align:justify;text-justify:inter-ideograph'><span
+  lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;page-break-inside:avoid;height:5.25pt'>
+  <td width=480 style='width:360.0pt;border-top:none;border-left:none;
+  border-bottom:solid gray 1.0pt;border-right:solid gray 1.0pt;mso-border-top-alt:
+  solid gray .5pt;mso-border-left-alt:solid gray .5pt;mso-border-alt:solid gray .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:5.25pt'>
+  <p class=a0 style='text-align:justify;text-justify:inter-ideograph'><span
+  lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;page-break-inside:avoid;height:4.05pt'>
+  <td width=91 rowspan=4 valign=top style='width:68.4pt;border:solid gray 1.0pt;
+  border-top:none;mso-border-top-alt:solid gray .5pt;mso-border-alt:solid gray .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:4.05pt'>
+  <p class=a1 style='text-align:justify;text-justify:distribute-all-lines'><span
+  style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman"'>相关的类</span></p>
+  </td>
+  <td width=480 style='width:360.0pt;border-top:none;border-left:none;
+  border-bottom:solid gray 1.0pt;border-right:solid gray 1.0pt;mso-border-top-alt:
+  solid gray .5pt;mso-border-left-alt:solid gray .5pt;mso-border-alt:solid gray .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:4.05pt'>
+  <p class=a0 style='text-align:justify;text-justify:inter-ideograph'><span
+  lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Courier New";
+  mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>com.kingdee.bos.ctrl.swing.plaf.KingdeeTreeUI.java</span><b
+  style='mso-bidi-font-weight:normal'><span lang=EN-US><o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;page-break-inside:avoid;height:5.25pt'>
+  <td width=480 style='width:360.0pt;border-top:none;border-left:none;
+  border-bottom:solid gray 1.0pt;border-right:solid gray 1.0pt;mso-border-top-alt:
+  solid gray .5pt;mso-border-left-alt:solid gray .5pt;mso-border-alt:solid gray .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:5.25pt'>
+  <p class=a0 style='text-align:justify;text-justify:inter-ideograph'><span
+  lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Courier New";
+  mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>com.kingdee.bos.ctrl.swing.tree.KingdeeTreeModel.java<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;page-break-inside:avoid;height:5.25pt'>
+  <td width=480 style='width:360.0pt;border-top:none;border-left:none;
+  border-bottom:solid gray 1.0pt;border-right:solid gray 1.0pt;mso-border-top-alt:
+  solid gray .5pt;mso-border-left-alt:solid gray .5pt;mso-border-alt:solid gray .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:5.25pt'>
+  <p class=a0 style='text-align:justify;text-justify:inter-ideograph'><span
+  lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Courier New";
+  mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>com.kingdee.bos.ctrl.swing.tree.DefaultKingdeeTreeNode.java
+  </span><span style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:
+  "Courier New";mso-bidi-font-family:宋体;color:black;background:white;
+  mso-highlight:white;mso-font-kerning:0pt'>等<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;mso-yfti-lastrow:yes;page-break-inside:avoid;
+  height:5.25pt'>
+  <td width=480 style='width:360.0pt;border-top:none;border-left:none;
+  border-bottom:solid gray 1.0pt;border-right:solid gray 1.0pt;mso-border-top-alt:
+  solid gray .5pt;mso-border-left-alt:solid gray .5pt;mso-border-alt:solid gray .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:5.25pt'>
+  <p class=a0 style='text-align:justify;text-justify:inter-ideograph'><span
+  lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Courier New";
+  mso-bidi-font-family:宋体;color:black;background:white;mso-highlight:white;
+  mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=a1><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 18.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+宋体;mso-bidi-font-family:宋体'><span style='mso-list:Ignore'>★<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US>KDTree</span></b><b
+style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>的模与节点</span><span
+lang=EN-US><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;mso-para-margin-left:2.0gd;
+text-indent:21.0pt;mso-char-indent-count:2.0'><span lang=EN-US>KDTree</span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>从</span><span lang=EN-US>JTree</span><span style='font-family:
+宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>继承，它的模式及结构也是与</span><span
+lang=EN-US>JTree</span><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>保持一致，而</span><span lang=EN-US>JTree</span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>使用的模</span><span lang=EN-US>DefaultTreeModel</span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>和节点</span><span lang=EN-US>DefaultMultableTreeNode</span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>不能满足</span><span lang=EN-US>KDTree</span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>的需求，于是扩展了</span><span lang=EN-US>KingdeeTreeModel</span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>和</span><span lang=EN-US>DefaultKingTreeNode</span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>。</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;mso-para-margin-left:2.0gd;
+text-indent:21.0pt;mso-char-indent-count:2.0'><span lang=EN-US
+style='color:red'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l4 level1 lfo5;
+tab-stops:list 36.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'><img width=11 height=11 src="KDTree.files/image001.gif"
+alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>JTree<span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span><span style='font-family:
+宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>－</span>
+<span lang=EN-US>DefaultTreeModel <span style='mso-spacerun:yes'>&nbsp;</span></span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>－</span><span lang=EN-US> DefaultMutableTreeNode</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l7 level1 lfo4;
+tab-stops:list 36.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'><img width=11 height=11 src="KDTree.files/image001.gif"
+alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>KDTree </span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>－</span> <span lang=EN-US>KingdeeTreeModel </span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>－</span><span lang=EN-US> DefaultKingdeeTreeNode</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";color:red'>使用</span><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='color:red'>KDTree</span></b><span style='font-family:宋体;
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+color:red'>，必须使用</span><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='color:red'>KingdeeTreeModel</span></b><span style='font-family:宋体;
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+color:red'>和</span><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='color:red'>DefaultKingdeeTreeNode</span></b><b style='mso-bidi-font-weight:
+normal'><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";color:red'>。</span><span lang=EN-US
+style='color:red'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 18.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+宋体;mso-bidi-font-family:宋体'><span style='mso-list:Ignore'>★<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b
+style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>树的创建</span><span
+lang=EN-US><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>常用的构造函数：</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo6;
+tab-stops:list 36.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'><img width=11 height=11 src="KDTree.files/image001.gif"
+alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>KDTree()</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo6;
+tab-stops:list 36.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'><img width=11 height=11 src="KDTree.files/image001.gif"
+alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>KDTree(ITreeNode root)</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo6;
+tab-stops:list 36.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'><img width=11 height=11 src="KDTree.files/image001.gif"
+alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>KDTree(TreeModel newModel)</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><u><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>例：</span><span lang=EN-US><o:p></o:p></span></u></p>
+
+<p class=MsoNormal style='text-indent:40.0pt;mso-char-indent-count:4.0'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>DefaultKingdeeTreeNode</span><span lang=EN-US
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;background:white;mso-highlight:white;mso-font-kerning:
+0pt'> root <span style='color:black'>=</span> <b><span style='color:#7F0055'>new</span></b>
+<span style='color:black'>DefaultKingdeeTreeNode(</span><span style='color:
+#2A00FF'>&quot;RootNode&quot;</span><span style='color:black'>);</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:40.0pt;mso-char-indent-count:4.0'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>KDTree</span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;background:white;mso-highlight:white;mso-font-kerning:0pt'> <span
+style='color:black'>tree</span> <span style='color:black'>=</span> <b><span
+style='color:#7F0055'>new</span></b> <span style='color:black'>KDTree(root);</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><u><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>例：</span><span lang=EN-US><o:p></o:p></span></u></p>
+
+<p class=MsoNormal style='text-indent:40.0pt;mso-char-indent-count:4.0'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>DefaultKingdeeTreeNode</span><span lang=EN-US
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;background:white;mso-highlight:white;mso-font-kerning:
+0pt'> root <span style='color:black'>=</span> <b><span style='color:#7F0055'>new</span></b>
+<span style='color:black'>DefaultKingdeeTreeNode(</span><span style='color:
+#2A00FF'>&quot;RootNode&quot;</span><span style='color:black'>);</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:40.0pt;mso-char-indent-count:4.0'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>KDTree</span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;background:white;mso-highlight:white;mso-font-kerning:0pt'> <span
+style='color:black'>tree</span> <span style='color:black'>=</span> <b><span
+style='color:#7F0055'>new</span></b> <span style='color:black'>KDTree(</span><b><span
+style='color:#7F0055'>new</span></b> <span style='color:black'>KingdeeTreeModel(root));</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><u><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>例：</span><span lang=EN-US><o:p></o:p></span></u></p>
+
+<p class=MsoNormal style='text-indent:40.0pt;mso-char-indent-count:4.0'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>DefaultKingdeeTreeNode</span><span lang=EN-US
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;background:white;mso-highlight:white;mso-font-kerning:
+0pt'> root <span style='color:black'>=</span> <b><span style='color:#7F0055'>new</span></b>
+<span style='color:black'>DefaultKingdeeTreeNode(</span><span style='color:
+#2A00FF'>&quot;RootNode&quot;</span><span style='color:black'>);</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:40.0pt;mso-char-indent-count:4.0'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>KDTree</span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;background:white;mso-highlight:white;mso-font-kerning:0pt'> <span
+style='color:black'>tree</span> <span style='color:black'>=</span> <b><span
+style='color:#7F0055'>new</span></b> <span style='color:black'>KDTree();</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:40.0pt;mso-char-indent-count:4.0'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>tree.setModel(</span><b><span lang=EN-US
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#7F0055;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>new</span></b><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;background:white;mso-highlight:white;mso-font-kerning:0pt'> <span
+style='color:black'>KingdeeTreeModel(root));</span></span><span lang=EN-US
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 18.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+宋体;mso-bidi-font-family:宋体'><span style='mso-list:Ignore'>★<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b
+style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>增删节点</span><span
+lang=EN-US><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-indent:20.0pt;mso-char-indent-count:2.0'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;background:white;mso-highlight:white;
+mso-font-kerning:0pt;mso-bidi-font-weight:bold'>KDTree</span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>提供了一组增删节点的易用性接口：</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='color:#3F5FBF'>/**</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='mso-spacerun:yes'>&nbsp;</span><span
+style='color:#3F5FBF'>*</span> </span><span style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;color:#3F5FBF;
+background:white;mso-highlight:white;mso-font-kerning:0pt'>在父节点下的最后插入子节点</span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='mso-spacerun:yes'>&nbsp;</span><span
+style='color:#3F5FBF'>*</span> <b><span style='color:#7F9FBF'>@param</span></b>
+<span style='color:#3F5FBF'>newChild</span> </span><span style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;color:#3F5FBF;background:white;mso-highlight:white;mso-font-kerning:0pt'>要插入的子节点</span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='mso-spacerun:yes'>&nbsp;</span><span
+style='color:#3F5FBF'>*</span> <b><span style='color:#7F9FBF'>@param</span></b>
+<span style='color:#3F5FBF'>parent</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span><span style='font-size:
+10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;color:#3F5FBF;background:white;mso-highlight:white;mso-font-kerning:0pt'>父节点</span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='mso-spacerun:yes'>&nbsp;</span><span
+style='color:#3F5FBF'>*/</span></span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;color:#3F5FBF;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;color:#3F5FBF;
+mso-font-kerning:0pt'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;background:white;mso-highlight:white;mso-font-kerning:
+0pt'><span style='mso-tab-count:1'> </span><b><span style='color:#7F0055'>public</span></b>
+<b><span style='color:#7F0055'>void</span></b> <span style='color:black'>addNodeInto(MutableTreeNode</span>
+<span style='color:black'>newChild, MutableTreeNode</span> <span
+style='color:black'>parent)</span></span><span lang=EN-US style='font-size:
+10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='color:#3F5FBF'>/**</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='mso-spacerun:yes'>&nbsp;</span><span
+style='color:#3F5FBF'>*</span> </span><span style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;color:#3F5FBF;
+background:white;mso-highlight:white;mso-font-kerning:0pt'>在父节点下的指定位置插入子节点</span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='mso-spacerun:yes'>&nbsp;</span><span
+style='color:#3F5FBF'>*</span> <b><span style='color:#7F9FBF'>@param</span></b>
+<span style='color:#3F5FBF'>newChild</span> </span><span style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;color:#3F5FBF;background:white;mso-highlight:white;mso-font-kerning:0pt'>要插入的子节点</span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='mso-spacerun:yes'>&nbsp;</span><span
+style='color:#3F5FBF'>*</span> <b><span style='color:#7F9FBF'>@param</span></b>
+<span style='color:#3F5FBF'>parent</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span><span style='font-size:
+10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;color:#3F5FBF;background:white;mso-highlight:white;mso-font-kerning:0pt'>父节点</span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='mso-spacerun:yes'>&nbsp;</span><span
+style='color:#3F5FBF'>*</span> <b><span style='color:#7F9FBF'>@param</span></b>
+<span style='color:#3F5FBF'>index</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#3F5FBF;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>指定位置（<span lang=EN-US>0&lt; index
+&lt;parent.getChildCount()</span>）<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='mso-spacerun:yes'>&nbsp;</span><span
+style='color:#3F5FBF'>*/</span></span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><b><span style='color:#7F0055'>public</span></b> <b><span
+style='color:#7F0055'>void</span></b> <span style='color:black'>insertNodeInto(MutableTreeNode</span>
+<span style='mso-spacerun:yes'>&nbsp;</span><span style='color:black'>newChild,</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+7'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='color:black'>MutableTreeNode</span>
+<span style='mso-spacerun:yes'>&nbsp;</span><span style='color:black'>parent,</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+7'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span><b><span style='color:#7F0055'>int</span></b><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='mso-spacerun:yes'>&nbsp;</span><span style='color:black'>index)</span></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='color:#3F5FBF'>/**</span> </span><span
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#3F5FBF;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>删除节点 <span lang=EN-US>*/</span></span><span lang=EN-US
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><b><span style='color:#7F0055'>public</span></b> <b><span
+style='color:#7F0055'>void</span></b> <span style='color:black'>removeNodeFromParent(MutableTreeNode</span>
+<span style='color:black'>node)</span></span><span lang=EN-US style='font-size:
+10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;color:black;
+mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='color:#3F5FBF'>/**</span> </span><span
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#3F5FBF;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>删除节点的所有子节点 <span lang=EN-US>*/</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><b><span style='color:#7F0055'>public</span></b> <b><span
+style='color:#7F0055'>void</span></b> <span style='color:black'>removeAllChildrenFromParent(MutableTreeNode</span>
+<span style='color:black'>parent)</span></span><span lang=EN-US
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><u><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>例：</span><span lang=EN-US><o:p></o:p></span></u></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:40.0pt;
+mso-char-indent-count:4.0;mso-layout-grid-align:none;text-autospace:none'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>menuitem.addActionListener(</span><b><span lang=EN-US
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#7F0055;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>new</span></b><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;background:white;mso-highlight:white;mso-font-kerning:0pt'> <span
+style='color:black'>ActionListener()</span></span><span lang=EN-US
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='color:black'>{</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+style='color:#7F0055'>public</span></b> <b><span style='color:#7F0055'>void</span></b>
+<span style='color:black'>actionPerformed(ActionEvent</span> <span
+style='color:black'>event)</span></span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:black'>{</span></span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:black'>TreePath</span> <span style='color:black'>path</span> <span
+style='color:black'>=</span> <span style='color:black'>tree.getSelectionPath();</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:black'>DefaultKingdeeTreeNode</span> <span style='color:black'>node</span>
+<span style='color:black'>=</span> </span><span lang=EN-US style='font-size:
+10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+6'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:black'>(DefaultKingdeeTreeNode) path.getLastPathComponent();</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:black'>tree.removeNodeFromParent(node);</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:black'>}</span></span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='color:black'>});</span></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 18.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+宋体;mso-bidi-font-family:宋体'><span style='mso-list:Ignore'>★<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b
+style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>节点的图标与文字</span><span
+lang=EN-US><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-indent:20.65pt;mso-char-indent-count:1.96'><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:125.25pt;
+ height:68.25pt'>
+ <v:imagedata src="KDTree.files/image002.png" o:title="&#10392;&#849;&#10400;&#849;X"/>
+</v:shape><![endif]--><![if !vml]><img width=167 height=91
+src="KDTree.files/image003.jpg" v:shapes="_x0000_i1025"><![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+lang=EN-US>(</span><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>注意，这是</span><span lang=EN-US>DefaultKingdeeTreeNode</span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>的接口。</span><span lang=EN-US>)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='color:#3F5FBF'>/**</span> </span><span
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#3F5FBF;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>设置节点图标 <span lang=EN-US>*/</span></span><span lang=EN-US
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><b><span style='color:#7F0055'>public</span></b> <b><span
+style='color:#7F0055'>void</span></b> <span style='color:black'>setCustomIcon(Icon</span>
+<span style='color:black'>icon)</span></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='color:#3F5FBF'>/**</span> </span><span
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#3F5FBF;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>设置节点文字 <span lang=EN-US>*/</span></span><span lang=EN-US
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><b><span style='color:#7F0055'>public</span></b> <b><span
+style='color:#7F0055'>void</span></b> <span style='color:black'>setText(String</span>
+<span style='color:black'>text)</span></span><span lang=EN-US style='font-size:
+10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='color:#3F5FBF'>/**</span> </span><span
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#3F5FBF;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>设置节点文本颜色 <span lang=EN-US>*/</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><b><span style='color:#7F0055'>public</span></b> <b><span
+style='color:#7F0055'>void</span></b> <span style='color:black'>setTextColor(Color</span>
+<span style='color:black'>color)</span></span><span lang=EN-US
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='color:#3F5FBF'>/**</span> </span><span
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#3F5FBF;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>设置节点文本是否粗体 <span lang=EN-US>*/</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><b><span style='color:#7F0055'>public</span></b> <b><span
+style='color:#7F0055'>void</span></b> <span style='color:black'>setTextBold(</span><b><span
+style='color:#7F0055'>boolean</span></b> <span style='color:black'>bold)</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>节点文字长度在通过</span><span lang=EN-US>setText</span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>或</span><span lang=EN-US>setTextBold</span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>改变了之后，需要刷新。</span></p>
+
+<p class=MsoNormal style='text-indent:40.0pt;mso-char-indent-count:4.0'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>((KingdeeTreeUI)tree.getUI()).resetSize();</span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:42.0pt;mso-char-indent-count:4.0'><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>或</span><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;color:black;
+background:white;mso-highlight:white;mso-font-kerning:0pt'>
+((DefaultTreeModel)tree.getModel()).nodeChanged(node);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 18.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+宋体;mso-bidi-font-family:宋体'><span style='mso-list:Ignore'>★<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US>checkbox<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+lang=EN-US>KDTree</span><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>：</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+</span><span style='color:#3F5FBF'>/** </span></span><span style='font-size:
+10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;color:#3F5FBF;background:white;mso-highlight:white;mso-font-kerning:0pt'>设置节点是否显示<span
+lang=EN-US>CheckBox </span>（默认为<span lang=EN-US>false</span>）<span lang=EN-US>*/</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:40.0pt;mso-char-indent-count:4.0'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;background:white;mso-highlight:white;mso-font-kerning:
+0pt'><span style='mso-tab-count:1'> </span><b><span style='color:#7F0055'>public</span></b>
+<b><span style='color:#7F0055'>void</span></b> <span style='color:black'>setShowCheckBox(</span><b><span
+style='color:#7F0055'>boolean</span></b> <span style='color:black'>showCheckBox)</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:40.0pt;
+mso-char-indent-count:4.0;mso-layout-grid-align:none;text-autospace:none'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;background:white;mso-highlight:white;mso-font-kerning:
+0pt'><span style='mso-tab-count:1'> </span><span style='color:#3F5FBF'>/** </span></span><span
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#3F5FBF;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>设置当节点的<span lang=EN-US>Check</span>属性变化时是否同步它的父子等节点的<span
+lang=EN-US>Checked</span>属性</span><span style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'> <span lang=EN-US
+style='color:#3F5FBF'>*/</span></span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:40.0pt;mso-char-indent-count:4.0'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;background:white;mso-highlight:white;mso-font-kerning:
+0pt'><span style='mso-tab-count:1'> </span><b><span style='color:#7F0055'>public</span></b>
+<b><span style='color:#7F0055'>void</span></b> <span style='color:black'>setSyncChecked(</span><b><span
+style='color:#7F0055'>boolean</span></b> <span style='color:black'>syncChecked)</span></span></p>
+
+<p class=MsoNormal style='text-indent:21.75pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:21.75pt'><span lang=EN-US>DefaultKingdeeTreeNode</span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>：</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;
+</span><span style='color:#3F5FBF'>/**</span> </span><span style='font-size:
+10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;color:#3F5FBF;background:white;mso-highlight:white;mso-font-kerning:0pt'>设置是否有<span
+lang=EN-US>checkBox </span>（默认为<span lang=EN-US>true</span>）<span lang=EN-US>*/</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:41.45pt;mso-char-indent-count:4.13'><b><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#7F0055;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>public</span></b><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;background:white;mso-highlight:white;mso-font-kerning:0pt'> <b><span
+style='color:#7F0055'>void</span></b> <span style='color:black'>setCheckBoxVisible(</span><b><span
+style='color:#7F0055'>boolean</span></b> <span style='color:black'>b)</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:40.0pt;
+mso-char-indent-count:4.0;mso-layout-grid-align:none;text-autospace:none'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;background:white;mso-highlight:white;mso-font-kerning:
+0pt'><span style='mso-tab-count:1'> </span><span style='color:#3F5FBF'>/**</span>
+</span><span style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#3F5FBF;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>设置<span lang=EN-US>checkBox</span>是否有效 （默认为<span
+lang=EN-US>true</span>）<span lang=EN-US>*/</span></span><span lang=EN-US
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:41.45pt;mso-char-indent-count:4.13'><b><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#7F0055;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>public</span></b><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;background:white;mso-highlight:white;mso-font-kerning:0pt'> <b><span
+style='color:#7F0055'>void</span></b> <span style='color:black'>setCheckBoxEnabled(</span><b><span
+style='color:#7F0055'>boolean</span></b> <span style='color:black'>b)</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:21.75pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:21.75pt'><span style='font-family:宋体;
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>通过以上方法，可实现在同一棵树中，有的节点有</span><span
+lang=EN-US>checkBox</span><span style='font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>，有的节点没有。</span></p>
+
+<p class=MsoNormal style='text-indent:21.75pt'><span lang=EN-US><!--[if gte vml 1]><v:shape
+ id="_x0000_i1026" type="#_x0000_t75" style='width:99pt;height:1in'>
+ <v:imagedata src="KDTree.files/image004.png" o:title="&#2224;&#855;&#2232;&#855;X"/>
+</v:shape><![endif]--><![if !vml]><img width=132 height=96
+src="KDTree.files/image005.jpg" v:shapes="_x0000_i1026"><![endif]></span></p>
+
+<p class=MsoNormal style='text-indent:21.75pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:21.75pt'><span style='font-family:宋体;
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>可监听</span><span
+lang=EN-US>checkBox</span><span style='font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>状态改变，请参考后文“事件”部分。</span></p>
+
+<p class=MsoNormal style='text-indent:21.75pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 18.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+宋体;mso-bidi-font-family:宋体'><span style='mso-list:Ignore'>★<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b
+style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>显示</span><span
+lang=EN-US>/</span></b><b style='mso-bidi-font-weight:normal'><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>隐藏根节点</span><span lang=EN-US><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-indent:20.0pt;mso-char-indent-count:2.0'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#3F5FBF;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>/**</span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;background:white;mso-highlight:white;mso-font-kerning:0pt'> </span><span
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#3F5FBF;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>设置是否显示根节点 （默认为<span lang=EN-US>true</span>）<span
+lang=EN-US>*/</span></span><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-indent:19.7pt;mso-char-indent-count:1.96'><b><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#7F0055;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>public</span></b><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;background:white;mso-highlight:white;mso-font-kerning:0pt'> <b><span
+style='color:#7F0055'>void</span></b> <span style='color:black'>setRootVisible(</span><b><span
+style='color:#7F0055'>boolean</span></b> <span style='color:black'>rootVisible)</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:20.0pt;mso-char-indent-count:2.0'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#3F5FBF;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>/**</span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;background:white;mso-highlight:white;mso-font-kerning:0pt'> </span><span
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#3F5FBF;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>设置是否显示根节点前的“展开<span lang=EN-US>/</span>收缩”图示（默认为<span
+lang=EN-US>false</span>）<span lang=EN-US>*/</span></span><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-indent:19.7pt;mso-char-indent-count:1.96'><b><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#7F0055;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>public</span></b><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;background:white;mso-highlight:white;mso-font-kerning:0pt'> <b><span
+style='color:#7F0055'>void</span></b> <span style='color:black'>setShowsRootHandles(</span><b><span
+style='color:#7F0055'>boolean</span></b> <span style='color:black'>newValue)</span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+lang=EN-US><!--[if gte vml 1]><v:shape id="_x0000_i1027" type="#_x0000_t75"
+ style='width:126.75pt;height:94.5pt'>
+ <v:imagedata src="KDTree.files/image006.png" o:title="壀壈X"/>
+</v:shape><![endif]--><![if !vml]><img width=169 height=126
+src="KDTree.files/image007.jpg" v:shapes="_x0000_i1027"><![endif]></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 18.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+宋体;mso-bidi-font-family:宋体'><span style='mso-list:Ignore'>★<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b
+style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>展开节点</span><span
+lang=EN-US><o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='color:#3F5FBF'>/**</span> </span><span
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#3F5FBF;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>对目标节点全展或全收 <span lang=EN-US>*/</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><b><span style='color:#7F0055'>public</span></b> <b><span
+style='color:#7F0055'>void</span></b> <span style='color:black'>expandAllNodes(</span><b><span
+style='color:#7F0055'>boolean</span></b> <span style='color:black'>expand,</span>
+<span style='color:black'>TreeNode</span> <span style='color:black'>node)</span></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='color:#3F5FBF'>/**</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='mso-spacerun:yes'>&nbsp;</span><span
+style='color:#3F5FBF'>*</span> </span><span style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;color:#3F5FBF;
+background:white;mso-highlight:white;mso-font-kerning:0pt'>设置节点不能收缩</span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='mso-spacerun:yes'>&nbsp;</span><span
+style='color:#3F5FBF'>*</span> <span style='color:#3F5FBF'>(</span></span><span
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#3F5FBF;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>对组织架构展示的特殊支持：开始全展开，不显示“展开<span lang=EN-US>/</span>收缩”图示，且不能收缩<span
+lang=EN-US>)</span></span><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;mso-font-kerning:
+0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='mso-spacerun:yes'>&nbsp;</span><span
+style='color:#3F5FBF'>*/</span></span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><b><span style='color:#7F0055'>public</span></b> <b><span
+style='color:#7F0055'>void</span></b> <span style='color:black'>setCollapsePathDisabled(</span><b><span
+style='color:#7F0055'>boolean</span></b> <span style='color:black'>b)</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:20.0pt;mso-char-indent-count:2.0'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1028" type="#_x0000_t75" style='width:113.25pt;height:85.5pt'>
+ <v:imagedata src="KDTree.files/image008.png" o:title="&#48376;&#847;&#48384;&#847;X"/>
+</v:shape><![endif]--><![if !vml]><img width=151 height=114
+src="KDTree.files/image009.jpg" v:shapes="_x0000_i1028"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 18.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+宋体;mso-bidi-font-family:宋体'><span style='mso-list:Ignore'>★<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b
+style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>选中节点</span><span
+lang=EN-US><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-indent:20.0pt;mso-char-indent-count:2.0'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#3F5FBF;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>/** </span><span style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;color:#3F5FBF;
+background:white;mso-highlight:white;mso-font-kerning:0pt'>获取第一个选中节点的<span
+lang=EN-US>path */<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:20.1pt;mso-char-indent-count:2.0'><b><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#7F0055;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>public</span></b><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;background:white;mso-highlight:white;mso-font-kerning:0pt'> <span
+style='color:black'>TreePath</span> <span style='color:black'>getSelectionPath()<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:20.0pt;mso-char-indent-count:2.0'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#3F5FBF;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>/** </span><span style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;color:#3F5FBF;
+background:white;mso-highlight:white;mso-font-kerning:0pt'>获取所有选中节点的<span
+lang=EN-US>path */<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:20.1pt;mso-char-indent-count:2.0'><b><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#7F0055;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>public</span></b><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;background:white;mso-highlight:white;mso-font-kerning:0pt'> <span
+style='color:black'>TreePath[]</span> <span style='color:black'>getSelectionPaths()</span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><u><span
+lang=EN-US><o:p><span style='text-decoration:none'>&nbsp;</span></o:p></span></u></p>
+
+<p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><u><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>例：</span></u><span style='font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>（得到</span><span
+lang=EN-US>path</span><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>从而得到节点）</span></p>
+
+<p class=MsoNormal style='text-indent:40.0pt;mso-char-indent-count:4.0'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>TreePath</span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;background:white;mso-highlight:white;mso-font-kerning:0pt'> <span
+style='color:black'>path</span> <span style='color:black'>=</span> <span
+style='color:black'>tree.getSelectionPath();<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:40.0pt;mso-char-indent-count:4.0'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>DefaultKingdeeTreeNode</span><span lang=EN-US
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;background:white;mso-highlight:white;mso-font-kerning:
+0pt'> <span style='color:black'>node</span> <span style='color:black'>=</span> <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:80.0pt;mso-char-indent-count:8.0'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>(DefaultKingdeeTreeNode) path.getLastPathComponent();</span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:21.75pt'><span style='font-family:宋体;
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>相应的有</span><span
+lang=EN-US>setSelectionPath(</span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;color:black;background:white;mso-highlight:white;mso-font-kerning:0pt'>TreePath</span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'> path</span><span
+lang=EN-US>)</span><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>设置选中节点，</span> <span style='font-family:
+宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>但是从</span><span
+lang=EN-US>node</span><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>到</span><span lang=EN-US>path</span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>，需要去</span><span lang=EN-US>new</span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>一个</span><span lang=EN-US>TreePath</span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>，很不方便，于是</span><span lang=EN-US>KDTree</span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>提供了一个易用性接口：</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='color:#3F5FBF'>/** </span></span><span
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#3F5FBF;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>设置选中节点的易用性接口 <span lang=EN-US>*/</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:21.75pt'><b><span lang=EN-US
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#7F0055;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>public</span></b><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;background:white;mso-highlight:white;mso-font-kerning:0pt'> <b><span
+style='color:#7F0055'>void</span></b> <span style='color:black'>setSelectionNode(DefaultKingdeeTreeNode</span>
+<span style='color:black'>node)</span></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 18.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+宋体;mso-bidi-font-family:宋体'><span style='mso-list:Ignore'>★<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b
+style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>单选</span><span
+lang=EN-US> / </span></b><b style='mso-bidi-font-weight:normal'><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>多选</span> </b><b style='mso-bidi-font-weight:normal'><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>模式</span><span lang=EN-US><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><u><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>例：</span><span lang=EN-US><o:p></o:p></span></u></p>
+
+<p class=MsoNormal style='text-indent:40.0pt;mso-char-indent-count:4.0'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>tree.getSelectionModel().setSelectionMode<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:80.0pt;mso-char-indent-count:8.0'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>(TreeSelectionModel.CONTIGUOUS_TREE_SELECTION);</span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:80.0pt;mso-char-indent-count:8.0'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:42.0pt;mso-char-indent-count:4.0'><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>参数可选以下常量：</span></p>
+
+<p class=MsoNormal style='text-indent:63.75pt;mso-char-indent-count:6.07;
+tab-stops:list 36.0pt'><span lang=EN-US>DISCONTIGUOUS_TREE_SELECTION<span
+style='mso-spacerun:yes'>&nbsp; </span></span><span style='font-family:宋体;
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>多选不连续</span><span
+lang=EN-US>(</span><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>默认</span><span lang=EN-US>)</span></p>
+
+<p class=MsoNormal style='text-indent:63.75pt;mso-char-indent-count:6.07;
+tab-stops:list 36.0pt'><span lang=EN-US>CONTIGUOUS_TREE_SELECTION<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>多选连续</span></p>
+
+<p class=MsoNormal style='text-indent:63.75pt;mso-char-indent-count:6.07;
+tab-stops:list 36.0pt'><span lang=EN-US>SINGLE_TREE_SELECTION<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='mso-spacerun:yes'>&nbsp;&nbsp;</span></span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>单选</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 18.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+宋体;mso-bidi-font-family:宋体'><span style='mso-list:Ignore'>★<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b
+style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>右键菜单</span><span
+lang=EN-US><o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt;
+mso-char-indent-count:2.0;mso-layout-grid-align:none;text-autospace:none'><u><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>例：</span></u><span style='font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>（如何弹出菜单）</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:40.0pt;
+mso-char-indent-count:4.0;mso-layout-grid-align:none;text-autospace:none'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;background:white;mso-highlight:white;mso-font-kerning:
+0pt'><span style='mso-tab-count:1'> </span><span style='color:black'>tree.addTreePopupMenu(</span><b><span
+style='color:#7F0055'>new</span></b> <span style='color:black'>TreePopupMenuListener()</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='color:black'>{</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+style='color:#7F0055'>public</span></b> <b><span style='color:#7F0055'>boolean</span></b>
+<span style='color:black'>popMenu(TreePopupMenuEvent</span> <span
+style='color:black'>event)</span></span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:black'>{<o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:85.0pt;
+mso-char-indent-count:8.5;mso-layout-grid-align:none;text-autospace:none'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#3F7F5F;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>//</span><span style='font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;color:#3F7F5F;
+mso-font-kerning:0pt'>可在此动态添加菜单项</span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+style='color:#7F0055'>return</span></b> <b><span style='color:#7F0055'>true</span></b><span
+style='color:black'>;</span></span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:black'>}</span></span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='color:black'>});</span></span><span
+lang=EN-US> </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt;
+mso-char-indent-count:2.0;mso-layout-grid-align:none;text-autospace:none'><u><span
+lang=EN-US><o:p><span style='text-decoration:none'>&nbsp;</span></o:p></span></u></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt;
+mso-char-indent-count:2.0;mso-layout-grid-align:none;text-autospace:none'><u><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>例：</span></u><span style='font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>（如何加固定菜单项，即对于整棵树的所有节点都有的菜单项）</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='color:black'>JMenuItem
+menuitem</span> <span style='color:black'>=</span> <b><span style='color:#7F0055'>new</span></b>
+<span style='color:black'>JMenuItem(</span><span style='color:#2A00FF'>&quot;</span></span><span
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#2A00FF;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>重命名<span lang=EN-US>&quot;</span></span><span lang=EN-US
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>);</span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='color:black'>tree.getPopupMenu().add(menuitem);</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='color:black'>menuitem.addActionListener(</span><b><span
+style='color:#7F0055'>new</span></b> <span style='color:black'>ActionListener()</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='color:black'>{</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+style='color:#7F0055'>public</span></b> <b><span style='color:#7F0055'>void</span></b>
+<span style='color:black'>actionPerformed(ActionEvent</span> <span
+style='color:black'>event)</span></span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:black'>{</span></span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:black'>TreePath</span> <span style='color:black'>path</span> <span
+style='color:black'>=</span> <span style='color:black'>tree.getSelectionPath();</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:black'>tree.startEditingAtPath(path);</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'> <o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='color:black'>}</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='color:black'>});</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;color:black;
+mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt;
+mso-char-indent-count:2.0;mso-layout-grid-align:none;text-autospace:none'><u><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>例：</span></u><span style='font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>（如何加动态菜单项，即对于树的不同节点可能有不同的菜单项）</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt;
+mso-char-indent-count:2.0;mso-layout-grid-align:none;text-autospace:none'><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>结合以上两例，作必要的条件判断。请注意，必须加上以下代码，在关闭菜单时移除选项及其监听。</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='color:black'>menu.addPopupMenuListener(</span><b><span
+style='color:#7F0055'>new</span></b> <span style='color:black'>PopupMenuAdapter()</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='color:black'>{</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:40.0pt;
+mso-char-indent-count:4.0;mso-layout-grid-align:none;text-autospace:none'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#3F7F5F;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>//</span><span style='font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;color:#3F7F5F;
+background:white;mso-highlight:white;mso-font-kerning:0pt'>菜单关闭时移除选项</span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span style='color:
+#7F0055'>public</span></b> <b><span style='color:#7F0055'>void</span></b> <span
+style='color:black'>popupMenuWillBecomeInvisible(PopupMenuEvent</span> <span
+style='color:black'>e)</span></span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='color:black'>{</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:black'>menu.remove(menuitem);</span></span><span lang=EN-US
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:black'>menu.removePopupMenuListener(</span><b><span
+style='color:#7F0055'>this</span></b><span style='color:black'>);</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='color:black'>}</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='color:black'>});</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+lang=EN-US>KDTree</span><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>的右键菜单默认带有五个展开</span><span lang=EN-US>/</span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>收缩等操作的选项，可通过以下方法隐去。</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><span style='color:#3F5FBF'>/**</span> </span><span
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:#3F5FBF;background:white;mso-highlight:white;
+mso-font-kerning:0pt'>设置是否显示右键弹出菜单五个常用选项 （默认为<span lang=EN-US>true</span>）<span
+lang=EN-US>*/</span></span><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;mso-font-kerning:
+0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt;font-family:宋体;
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span><b><span style='color:#7F0055'>public</span></b> <b><span
+style='color:#7F0055'>void</span></b> <span style='color:black'>setShowPopMenuDefaultItem(</span><b><span
+style='color:#7F0055'>boolean</span></b> <span style='color:black'>b)</span></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 18.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+宋体;mso-bidi-font-family:宋体'><span style='mso-list:Ignore'>★<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b
+style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>事件</span><span
+lang=EN-US><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-indent:20.65pt;mso-char-indent-count:1.96'><b
+style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>监听选中节点</span><span
+lang=EN-US><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-indent:41.6pt;mso-char-indent-count:3.96'><u><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>例：</span></u></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='color:black'>tree.addTreeSelectionListener(</span><b><span
+style='color:#7F0055'>new</span></b> <span style='color:black'>TreeSelectionListener()</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='color:black'>{</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+style='color:#7F0055'>public</span></b> <b><span style='color:#7F0055'>void</span></b>
+<span style='color:black'>valueChanged(TreeSelectionEvent</span> <span
+style='color:black'>e)</span></span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:black'>{</span></span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+style='color:#7F0055'>if</span></b><span style='color:black'>(e.getNewLeadSelectionPath()</span>
+<span style='color:black'>!=</span> <b><span style='color:#7F0055'>null</span></b><span
+style='color:black'>)</span></span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:black'>{</span></span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>……</span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:black'>}</span> </span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:black'>}</span></span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:19.6pt;mso-char-indent-count:1.96'><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;background:white;mso-highlight:white;mso-font-kerning:
+0pt'><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp; </span><span
+style='color:black'>});</span></span></p>
+
+<p class=MsoNormal style='text-indent:20.6pt;mso-char-indent-count:1.96'><span
+lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:20.65pt;mso-char-indent-count:1.96'><b
+style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>监听</span><span
+lang=EN-US>chkeckBox</span></b><b style='mso-bidi-font-weight:normal'><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>状态改变</span><span lang=EN-US><o:p></o:p></span></b></p>
+
+<p class=a1 style='text-indent:42.0pt;mso-char-indent-count:4.0'><u><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";font-weight:normal;mso-bidi-font-weight:bold'>例：</span></u><span
+lang=EN-US style='font-weight:normal;mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='color:black'>tree.addTreeNodeStateChangeListener(</span><b><span
+style='color:#7F0055'>new</span></b> <span style='color:black'>TreeNodeStateChangeListener()</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='color:black'>{</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+style='color:#7F0055'>public</span></b> <b><span style='color:#7F0055'>void</span></b>
+<span style='color:black'>nodeStateChange(TreeNodeStateChangeEvent</span> <span
+style='color:black'>event)</span></span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:black'>{</span></span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:black'>DefaultKingdeeTreeNode</span> <span style='color:black'>node</span>
+<span style='color:black'>=</span> </span><span lang=EN-US style='font-size:
+10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+6'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:black'>(DefaultKingdeeTreeNode)event.getNode();</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:black'>System.out.println(node.toString()</span> <span
+style='color:black'>+</span> <span style='color:#2A00FF'>&quot; -&gt; &quot;</span>
+<span style='color:black'>+</span> <span style='color:black'>node.isChecked());</span></span><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:10.0pt;font-family:
+宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:宋体;background:
+white;mso-highlight:white;mso-font-kerning:0pt'><span style='mso-tab-count:
+3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:black'>}</span></span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;background:white;mso-highlight:white;mso-font-kerning:
+0pt'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span><span
+style='color:black'>});</span></span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<span lang=EN-US style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:
+"Times New Roman";mso-fareast-font-family:宋体;mso-font-kerning:1.0pt;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=EN-US>FAQ</span><span style='font-family:宋体;
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>：（问题征集中，欢迎提出使用中的任何问题。）</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo2;
+tab-stops:list 18.0pt'><![if !supportLists]><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>1、<span style='font:7.0pt "Times New Roman"'> </span></span></span></b><![endif]><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US>KDTree</span></b><b
+style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>中的一些节点，我想让它成为文件夹，可是当它没有子节点时，它会显示叶子节点的图标。是否有办法指定它是文件夹图标？</span><span
+lang=EN-US><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>答：可以。我们首先想的办法可能是用</span><span lang=EN-US>DefaultKingdeeTreeNode</span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>的</span><span lang=EN-US>setCustomIcon</span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>方法来设节点的自定义图标。但是这个图标不能根据文件夹是否打开的状态而变化。实际上</span><span
+lang=EN-US>JTree</span><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>已经提供了解决方案。</span></p>
+
+<p class=MsoNormal style='margin-left:17.95pt;mso-para-margin-left:1.71gd;
+text-indent:21.0pt;mso-char-indent-count:2.0'><span style='font-family:宋体;
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>首先，</span><span
+lang=EN-US>treeModel</span><span style='font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>中有一个</span><span
+lang=EN-US>asksAllowsChildren</span><span style='font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>的属性，默认是</span><span
+lang=EN-US>false</span><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>，我们要把它设为</span><span lang=EN-US>true</span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>：</span></p>
+
+<p class=MsoNormal style='margin-left:17.95pt;mso-para-margin-left:1.71gd;
+text-indent:21.0pt;mso-char-indent-count:2.0'><span lang=EN-US>((KingdeeTreeModel)tree.getModel()).setAsksAllowsChildren(true);</span></p>
+
+<p class=MsoNormal style='margin-left:17.95pt;mso-para-margin-left:1.71gd;
+text-indent:21.0pt;mso-char-indent-count:2.0'><span style='font-family:宋体;
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>然后，对于希望成为文件夹的节点</span><span
+lang=EN-US>node1:</span></p>
+
+<p class=MsoNormal style='margin-left:17.95pt;mso-para-margin-left:1.71gd;
+text-indent:21.0pt;mso-char-indent-count:2.0'><span lang=EN-US>node1.setAllowsChildren(true);
+//</span><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>其实默认已经就是</span><span lang=EN-US>true</span></p>
+
+<p class=MsoNormal style='margin-left:17.95pt;mso-para-margin-left:1.71gd;
+text-indent:21.0pt;mso-char-indent-count:2.0'><span style='font-family:宋体;
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>这样，不管</span><span
+lang=EN-US>node1</span><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>有没有子节点，都会以文件夹图标出现。且双击它使其打开</span><span
+lang=EN-US>/</span><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>关闭时，图标也会变化。</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo2;
+tab-stops:list 18.0pt'><![if !supportLists]><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>2、<span style='font:7.0pt "Times New Roman"'> </span></span></span></b><![endif]><b
+style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>当只有一个根节点并且根节点被隐藏时，不能往根节点添加子节点。而根节点没有隐藏，或者根节点隐藏了，但它至少有一个子节点时，添加子节点的操作一切都正常。是什么原因？</span><span
+lang=EN-US><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>答：并不是“不能添加子节点”，只是此时根节点没有展开，看不到结果而已。只要把根节点展开就行了：</span></p>
+
+<p class=MsoNormal style='margin-left:17.95pt;mso-para-margin-left:1.71gd;
+text-indent:21.0pt;mso-char-indent-count:2.0'><span lang=EN-US>tree.expandAllNodes(true,
+(DefaultKingdeeTreeNode)tree.getModel().getRoot());</span></p>
+
+<p class=MsoNormal style='margin-left:17.95pt;mso-para-margin-left:1.71gd;
+text-indent:21.0pt;mso-char-indent-count:2.0'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l5 level1 lfo2;
+tab-stops:list 18.0pt'><![if !supportLists]><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>3、<span style='font:7.0pt "Times New Roman"'> </span></span></span></b><![endif]><b
+style='mso-bidi-font-weight:normal'><span style='font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>删除节点时，界面上为什么不刷新？而且我用了</span><span
+lang=EN-US>tree.validate(); tree.repaint();</span></b><b style='mso-bidi-font-weight:
+normal'><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>也无效。</span><span lang=EN-US><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>答：这种情况很可能是这样使用造成的：</span></p>
+
+<p class=MsoNormal style='margin-left:17.95pt;mso-para-margin-left:1.71gd;
+text-indent:21.0pt;mso-char-indent-count:2.0'><span lang=EN-US>parentNode.remove(childNode);</span></p>
+
+<p class=MsoNormal style='margin-left:17.95pt;mso-para-margin-left:1.71gd;
+text-indent:21.0pt;mso-char-indent-count:2.0'><span style='font-family:宋体;
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>因为从节点的角度去移除节点，树的模并不知道，所以会有“删不了”的情况。要改成这样：</span></p>
+
+<p class=MsoNormal style='margin-left:17.95pt;mso-para-margin-left:1.71gd;
+text-indent:21.0pt;mso-char-indent-count:2.0'><span lang=EN-US>tree.removeNodeFromParent(childNode);</span></p>
+
+<p class=MsoNormal style='margin-left:17.95pt;mso-para-margin-left:1.71gd;
+text-indent:21.0pt;mso-char-indent-count:2.0'><span style='font-family:宋体;
+mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman"'>顺便再说一下，</span><span
+lang=EN-US>KDTree</span><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>提供了增删节点的几个方法，都是从模去操作的。这几个方法如下：</span></p>
+
+<p class=a2 style='margin-left:0cm'><span lang=EN-US style='color:#339966;
+background:white;mso-highlight:white;mso-font-kerning:0pt'>//</span><span
+style='font-family:宋体;mso-ascii-font-family:"Courier New";mso-hansi-font-family:
+"Courier New";color:#339966;background:white;mso-highlight:white;mso-font-kerning:
+0pt'>删除节点</span><span lang=EN-US style='color:#339966;background:white;
+mso-highlight:white;mso-font-kerning:0pt'>:<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><b><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;color:#7F0055;background:white;mso-highlight:white;mso-font-kerning:0pt'>public</span></b><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;background:white;mso-highlight:white;mso-font-kerning:
+0pt'> <b><span style='color:#7F0055'>void</span></b> <span style='color:black'>removeNodeFromParent(MutableTreeNode</span>
+<span style='color:black'>node)</span></span><span lang=EN-US style='font-size:
+10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=a2 style='margin-left:0cm'><span lang=EN-US style='color:#339966;
+background:white;mso-highlight:white;mso-font-kerning:0pt'>//</span><span
+style='font-family:宋体;mso-ascii-font-family:"Courier New";mso-hansi-font-family:
+"Courier New";color:#339966;background:white;mso-highlight:white;mso-font-kerning:
+0pt'>删除节点的所有子节点</span><span lang=EN-US style='color:#339966;background:white;
+mso-highlight:white;mso-font-kerning:0pt'>:<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><b><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;color:#7F0055;background:white;mso-highlight:white;mso-font-kerning:0pt'>public</span></b><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;background:white;mso-highlight:white;mso-font-kerning:
+0pt'> <b><span style='color:#7F0055'>void</span></b> <span style='color:black'>removeAllChildrenFromParent(MutableTreeNode</span>
+<span style='color:black'>parent)</span></span></p>
+
+<p class=a2 style='margin-left:0cm'><span lang=EN-US style='color:#339966;
+background:white;mso-highlight:white;mso-font-kerning:0pt'>//</span><span
+style='font-family:宋体;mso-ascii-font-family:"Courier New";mso-hansi-font-family:
+"Courier New";color:#339966;background:white;mso-highlight:white;mso-font-kerning:
+0pt'>插入节点</span><span lang=EN-US style='color:#339966;background:white;
+mso-highlight:white;mso-font-kerning:0pt'>:<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><b><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;color:#7F0055;background:white;mso-highlight:white;mso-font-kerning:0pt'>public</span></b><span
+lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;background:white;mso-highlight:white;mso-font-kerning:
+0pt'> <b><span style='color:#7F0055'>void</span></b> <span style='color:black'>insertNodeInto(MutableTreeNode</span>
+<span style='color:black'>newChild,MutableTreeNode</span> <span
+style='color:black'>parent,</span><b><span style='color:#7F0055'>int </span></b><span
+style='color:black'>index)</span></span><span lang=EN-US style='font-size:10.0pt;
+font-family:宋体;mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=a2 style='margin-left:0cm'><span lang=EN-US style='color:#339966;
+background:white;mso-highlight:white;mso-font-kerning:0pt'>//</span><span
+style='font-family:宋体;mso-ascii-font-family:"Courier New";mso-hansi-font-family:
+"Courier New";color:#339966;background:white;mso-highlight:white;mso-font-kerning:
+0pt'>在父节点末端插入节点</span><span lang=EN-US style='color:#339966;background:white;
+mso-highlight:white;mso-font-kerning:0pt'>:<o:p></o:p></span></p>
+
+<p class=a1><span lang=EN-US style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-family:宋体;color:#7F0055;background:white;
+mso-highlight:white;mso-font-kerning:0pt'>public void </span><span lang=EN-US
+style='font-size:10.0pt;font-family:宋体;mso-hansi-font-family:"Times New Roman";
+mso-bidi-font-family:宋体;color:black;background:white;mso-highlight:white;
+mso-font-kerning:0pt;font-weight:normal'>addNodeInto(MutableTreeNode
+newChild,MutableTreeNode parent)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

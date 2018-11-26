@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<category name="编辑界面">
+		<webui name="com.kingdee.eas.framework.web.EditUI" type="entity">
+			<label value="编辑界面"/>
+			<description value="编辑界面"/>
+			<children/>
+		</webui>
+		<webui name="com.kingdee.eas.framework.web.BillEditUI" type="entity">
+			<label value="单据编辑界面"/>
+			<description value="单据编辑界面"/>
+			<children/>
+		</webui>
+	</category>
+	<category name="列表界面">
+		<webui name="com.kingdee.eas.framework.web.ListUI" type="query">
+			<label value="列表界面"/>
+			<description value="列表界面"/>
+			<children/>
+		</webui>
+		<webui name="com.kingdee.eas.framework.web.BillListUI" type="query">
+			<label value="单据列表界面"/>
+			<description value="单据列表界面"/>
+			<children/>
+		</webui>
+	<!--
+		<webui name="com.kingdee.eas.framework.client.TreeListUI" type="query">
+			<label value="树列表界面"/>
+			<description value="树列表界面，树和列表对应同一个实体"/>
+			<children/>
+		</webui>
+	-->
+	</category>
+	<!--studio是否提供web设计功能-->
+	<provideWebui>true</provideWebui>
+</xml>

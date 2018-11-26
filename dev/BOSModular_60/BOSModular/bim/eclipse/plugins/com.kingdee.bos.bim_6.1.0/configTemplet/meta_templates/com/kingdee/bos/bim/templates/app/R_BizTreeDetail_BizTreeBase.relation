@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relationship xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.bos.bim.templates.app</package>
+    <name>R_BizTreeDetail_BizTreeBase</name>
+    <alias>relationship[com.kingdee.bos.bim.templates.app.R_BizTreeDetail_BizTreeBase].alias</alias>
+    <description>relationship[com.kingdee.bos.bim.templates.app.R_BizTreeDetail_BizTreeBase].description</description>
+    <userDefined>false</userDefined>
+    <type>Association</type>
+    <clientCardinality>1</clientCardinality>
+    <supplierCardinality>0..1</supplierCardinality>
+    <xmlNodeRelationship />
+    <clientObject>
+        <key name="package" value="com.kingdee.bos.bim.templates.app" />
+        <key name="name" value="BizTreeDetail" />
+    </clientObject>
+    <supplierObject>
+        <key name="package" value="com.kingdee.bos.bim.templates.app" />
+        <key name="name" value="BizTreeBase" />
+    </supplierObject>
+    <resource>
+        <rs key="relationship[com.kingdee.bos.bim.templates.app.R_BizTreeDetail_BizTreeBase].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="基础资料分组关系" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="relationship[com.kingdee.bos.bim.templates.app.R_BizTreeDetail_BizTreeBase].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="基础资料分组关系" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</relationship>
+

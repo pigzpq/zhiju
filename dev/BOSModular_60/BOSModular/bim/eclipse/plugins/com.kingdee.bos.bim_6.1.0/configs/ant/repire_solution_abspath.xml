@@ -1,0 +1,16 @@
+<project name="repire_solution" default="repire">
+  <!-- 
+        运行该脚本时，假设已经有如下环境变量 
+        ${projectDir}
+    -->
+
+	 <taskdef name="apusicDeployAppRepairTask" classname="com.kingdee.bos.bim.ant.task.ApusicDeployAppRepairTask"/>
+	 <taskdef name="bosConfigurationRepairTask" classname="com.kingdee.bos.bim.ant.task.BOSConfigurationRepairTask"/>
+	 <taskdef name="portalConfigFileRepairTask" classname="com.kingdee.bos.bim.ant.task.PortalConfigFileRepairTask"/>
+
+  <target name="repire"  description="修正解决方案中绝对路径">  	
+  	<apusicDeployAppRepairTask testApusicHome="${dir.project}\runtime\apusic" apps="${dir.project}/runtime/server/deploy/eas.ear" description="修改apusic部署文件"/>  	
+  	<bosConfigurationRepairTask bosconfigFile="${dir.project}\runtime\${server.file.bosconfig}" licenseFile="${projectDir}\runtime\${server.config}\licenses\license" delpoypath="${projectDir}\runtime\${server.config}" description="修改bosconfig配置文件"/>
+  	<portalConfigFileRepairTask configFile="${dir.project}\runtime\${server.config}\portalConfig\resourceSet.properties" runtimePath="${projectDir}/runtime/server/deploy/fileserver.ear/easWebClient/" description="修改portal配置文件"/>  
+  </target>
+</project>

@@ -1,0 +1,7 @@
+<div style="font-size:12px;padding:10px">
+	<div sue="msg" style="width:100%"></div>
+	<span sue="text"></span>
+	<span>
+		<input sue="input" type="text" class="portal_textfield"/>
+	</span>
+</div>

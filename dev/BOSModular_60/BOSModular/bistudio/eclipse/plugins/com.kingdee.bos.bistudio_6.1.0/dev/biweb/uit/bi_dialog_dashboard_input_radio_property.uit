@@ -1,0 +1,31 @@
+<table width="365" height="143" border="0" style="font-size:12px">
+  <tr>
+    <td height="28" align="right">对象名称：</td>
+    <td  align="left">
+	<input sue="objectName" type="text" style="width:150px" /></td>
+  </tr>
+    <tr>
+      <td  height="28" align="right">标签：</td>
+       <td align="left">
+        <input sue="hintText" type="text"   style="width:150px"/>      </td>
+    </tr>
+    <tr>
+      <td height="27" align="right">数据源选择：</td>
+      <td align="left">
+        <select sue="chooseDS" style="width:150px">
+          <option>请选择数据源....</option>
+		</select>      </td>
+    </tr>
+    <tr>
+      <td height="24"align="right">名称列：</td>
+      <td align="left">
+        <select sue="captionColumn" style="width:150px;">
+		</select>      </td>
+    </tr>
+    <tr>
+      <td height="24" align="right">值列：</td>
+      <td align="left">
+        <select sue="valueColumn" style="width:150px;">
+		</select>      </td>
+    </tr>
+ </table>

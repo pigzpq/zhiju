@@ -1,0 +1,323 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<SCRIPT language="JavaScript" src="tree.js"></SCRIPT>
+		<title>我是一棵秋天的树</title>
+	</head>
+	<body>
+		<table border="1" width="800" height="600">
+			<tr height="50">
+				<td>&nbsp</td>
+				<td width="200" onclick="click1()" style="background-color:#00aa00">1来点我呀</td>
+				<td width="400" onclick="click2()" style="background-color:#00aa00">2点我产生随机数据</td>
+			</tr>
+			<tr>
+				<td>换View：</td>
+				<td colspan="2" rowspan="4">
+					<Div id="treeOwner" style="border:2 solid RED; height:480; width:640; overflow:auto"></div>
+				</td>
+			</tr>
+			<tr>
+				<td onclick="click3()" viewName="DefaultHorizontalTreeView" style="background-color:yellow">缺省</td>
+			</tr>
+			<tr>
+				<td onclick="click3()" viewName="CustomView_Smaller" style="background-color:yellow">变小</td>
+			</tr>
+			<tr>
+				<td onclick="click3()" viewName="CustomView_Expandable" style="background-color:yellow">高级</td>
+			</tr>
+		</table>
+	</body>
+	<script>
+		var _tree;
+		
+		function window.onload()
+		{
+			_tree = new HorizontalTree();
+			//_tree.setDynamicLayout(false);
+		}
+		
+		function click1()
+		{
+			fixedValue();
+		}
+		
+		function click2()
+		{
+			randomValue();
+		}
+		
+		function click3()
+		{
+			if(_tree.getModel())
+			{
+				var e = window.event;
+				var viewName = e.srcElement.viewName;
+				var view = eval("new " + viewName + "()");
+				_tree.setCustomView(view);
+				updateUI();
+			}
+		}
+		
+		function updateUI()
+		{
+			var div = _tree.createUI(30, 30);
+			div.style.border = "1 solid blue";
+			div.style.position = "relative";
+			div.style.left = 0;
+			div.style.top = 0;
+			
+			var owner = document.getElementById("treeOwner");
+			owner.innerHTML = "";
+			owner.appendChild(div);
+		}
+		
+		function fixedValue()
+		{
+			var root = new HorizontalTreeNode();
+			root.setValue("root");
+			
+			var a1 = new HorizontalTreeNode();
+			a1.setValue("a1");
+			var a2 = new HorizontalTreeNode();
+			a2.setValue("a2");
+			var a3 = new HorizontalTreeNode();
+			a3.setValue("a3");
+			root.addChild(a1);
+			root.addChild(a2);
+			root.addChild(a3);
+			root.setChildrenRelation(2, "+");
+			root.setAllowsExpand(true);
+			root.setExpanded(true);
+			
+			var b1 = new HorizontalTreeNode();
+			b1.setValue("b1");
+			var b2 = new HorizontalTreeNode();
+			b2.setValue("b2"); 
+			a1.addChild(b1);
+			a1.addChild(b2);
+			
+			var v1 = new HorizontalTreeNode();
+			v1.setValue("v1");
+			var v2 = new HorizontalTreeNode();
+			v2.setValue("v2");
+			var v3 = new HorizontalTreeNode();
+			v3.setValue("v3");
+			b2.setWithBeanpodChildren(true);
+			b2.addChild(v1);
+			b2.addChild(v2);
+			b2.addChild(v3);
+			b2.setAllowsExpand(true);
+			b2.setExpanded(true);
+			
+
+			var b3 = new HorizontalTreeNode();
+			b3.setValue("b3");
+			var b4 = new HorizontalTreeNode();
+			b4.setValue("b4");
+			var b5 = new HorizontalTreeNode();
+			b5.setValue("b5");
+			a3.addChild(b3);
+			a3.addChild(b4);
+			a3.addChild(b5);
+			a3.setChildrenRelation(0, "[(");
+			a3.setChildrenRelation(1, "+");
+			a3.setChildrenRelation(2, ")*");
+			a3.setChildrenRelation(3, "]");
+			a3.setAllowsExpand(true);
+			a3.setExpanded(true);
+			
+			var model = new HorizontalTreeModel(root);
+			_tree.setModel(model);
+			updateUI();
+		}
+		
+		function randomValue()
+		{
+			var root = new HorizontalTreeNode();
+			root.setValue("root");
+			buildRandomTree(root, 1, false);
+			var model = new HorizontalTreeModel(root);
+			_tree.setModel(model);
+			updateUI();
+		}
+	
+		function buildRandomTree(parent, level, forceStop)
+		{
+			var childCount = Math.floor(Math.random()* 3 + 2);
+			var relations = new Array();
+			relations[0] = "+";
+			relations[1] = "-";
+			relations[2] = "×";
+			relations[3] = "÷";
+			for(var i = 0; i <= childCount; i++)
+			{
+				if(i == 0)
+				{
+					parent.setChildrenRelation(i, "(");
+				}
+				else if(i == childCount)
+				{
+					parent.setChildrenRelation(i, ")");
+				}
+				else
+				{
+					parent.setChildrenRelation(i, relations[Math.floor(Math.random()*4)]);
+				}
+				if(i < childCount)
+				{
+					var child = new HorizontalTreeNode();
+					child.setValue(level + "-" + i);
+					parent.addChild(child);
+					parent.setAllowsExpand(true);
+					parent.setExpanded(true);
+					if(!forceStop)
+					{
+						if(Math.random() < 0.25)
+						{
+							if(level > 1 && Math.random() < 0.5)
+							{
+								child.setWithBeanpodChildren(true);
+								buildRandomTree(child, level + 1, true);
+							}
+							else
+							{
+								buildRandomTree(child, level + 1, false);
+							}
+						}
+					}
+				}
+			}
+		}
+	
+		function CustomView_Smaller()
+		{
+			DefaultHorizontalTreeView.call(this);
+			
+			this.calculateNodeSize = function(node)
+			{
+				return new Dimension(50, 20);
+			}
+			
+			this.getLevelDistance = function()
+			{
+				return 16;
+			}
+		}
+	
+		function CustomView_Expandable()
+		{
+			var _this = this;
+			DefaultHorizontalTreeView.call(this);
+			var ExpanedBoxLength = 12;
+		
+			this.drawNode = function(divOwner, node, x, y, width, height)
+			{
+				var div = document.createElement("div");
+				div.style.position = "absolute";
+				div.style.left = x;
+				div.style.top = y;
+				div.style.width = width;
+				div.style.height = height;
+				div.style.borderLeft = "1 solid #ffcccc";
+				div.style.borderTop = "1 solid #ffcccc";
+				div.style.borderRight = "1 solid #ff6666";
+				div.style.borderBottom = "1 solid #ff6666";
+				div.style.backgroundColor = "#ff8888";
+				div.innerText = (node.getValue() ? node.getValue() : x + "-" + y);
+				div.visibleControllerNode = node.getParent();
+				divOwner.appendChild(div);
+				
+				addExpandBox(divOwner, node, x, y, width, height);
+				addCtrl(divOwner, node, x, y, width, height);
+			}
+			
+			var addCtrl = function(divOwner, node, x, y, width, height)
+			{
+				if(node.getValue())
+				{
+					var ctrl = document.createElement("input");
+					ctrl.visibleControllerNode = node.getParent();
+					divOwner.appendChild(ctrl);
+					
+					ctrl.style.position = "absolute";
+					ctrl.style.left = x + 3;
+					ctrl.style.top = y + 25;
+					ctrl.style.width = width - 6;
+					ctrl.style.height = height - 28;
+				}
+			}
+			
+			var addExpandBox = function(divOwner, node, x, y, width, height)
+			{
+				if(node.isAllowsExpand())
+				{
+					var ex;
+					if(node.isWithBeanpodChildren())
+					{
+						ex = x + (_this.getBeanpodBusWidth() - ExpanedBoxLength) / 2;
+					}
+					else
+					{
+						ex = x + (width - ExpanedBoxLength) / 2;
+					}
+					
+					var ey = y + height;
+		
+					var eDiv = document.createElement("div");
+					eDiv.style.cursor = "hand";
+					eDiv.style.fontSize = 9;
+					eDiv.style.textAlign = "center";
+					eDiv.style.backgroundColor = "#aaaaaa";
+					eDiv.style.position = "absolute";
+					eDiv.style.left = ex;
+					eDiv.style.top = ey;
+					eDiv.style.width = ExpanedBoxLength;
+					eDiv.style.height = ExpanedBoxLength;
+					eDiv.style.zIndex = 1;//在上面
+					eDiv.userObject = node;
+					eDiv.visibleControllerNode = node.getParent();
+					divOwner.appendChild(eDiv);	
+					updateExpandBox(node, eDiv);
+
+					eDiv.onclick = function()
+					{
+						var div = window.event.srcElement;
+						var node = div.userObject;
+						node.setExpanded(!node.isExpanded());
+						updateExpandBox(node, div);
+						_this.getTree().updateUI();
+					};
+					eDiv.onselectstart = function()
+					{
+						return false;
+					};
+				}
+			}
+			
+			var updateExpandBox = function(node, div)
+			{
+				var lightBorder = "1 solid #cccccc";
+				var darkBorder = "1 solid #666666";
+				if(node.isExpanded())
+				{
+					div.innerText = "-";
+					div.style.borderLeft = darkBorder;
+					div.style.borderTop = darkBorder;
+					div.style.borderRight = lightBorder;
+					div.style.borderBottom = lightBorder;
+				}
+				else
+				{
+					div.innerText = "+";
+					div.style.borderLeft = lightBorder;
+					div.style.borderTop = lightBorder;
+					div.style.borderRight = darkBorder;
+					div.style.borderBottom = darkBorder;
+				}
+			}
+		}
+	</script>
+</html>
+
+

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.contexts"?>
+<contexts>
+	<context id="studio_view_context">
+		<description>金蝶EAS-BOS設計開發工具各個視圖簡介</description>
+		<topic label="包分類視圖" href="html/concepts/viewers_intro.htm"/>
+		<topic label="應用分類視圖" href="html/concepts/viewers_intro.htm"/>
+		<topic label="類型視圖" href="html/concepts/viewers_intro.htm"/>
+		<topic label="圖片視圖" href="html/concepts/viewers_intro.htm"/>
+		<topic label="控制台視圖" href="html/concepts/viewers_intro.htm"/>
+	</context>
+	<context id="studio_entity_editor_context">
+		<description>實體編輯上下文幫助</description>
+		<topic label="什麼是實體對像" href="html/metadatas/what_is_entity.htm"/>
+		<topic label="如何創建實體對像" href="html/tasks/create_entity.htm"/>
+	</context>
+	<context id="studio_data_editor_context">
+		<description>數據表編輯上下文幫助</description>
+		<topic label="什麼是數據表" href="html/metadatas/what_is_table.htm"/>
+		<topic label="如何創建數據表" href="html/tasks/create_table.htm"/>
+	</context>
+	<context id="studio_facade_editor_context">
+		<description>功能對像編輯上下文幫助</description>
+		<topic label="什麼是功能對像" href="html/metadatas/what_is_facade.htm"/>
+		<topic label="如何創建功能對像" href="html/tasks/create_facade.htm"/>
+	</context>
+	<context id="studio_function_editor_context">
+		<description>業務功能編輯上下文幫助</description>
+		<topic label="什麼是業務功能" href="html/metadatas/what_is_function.htm"/>
+		<topic label="如何創建業務功能" href="html/tasks/create_function.htm"/>
+	</context>
+	<context id="studio_exception_editor_context">
+		<description>異常編輯上下文幫助</description>
+		<topic label="什麼是異常" href="html/metadatas/what_is_exception.htm"/>
+		<topic label="如何創建異常" href="html/tasks/create_exception.htm"/>
+	</context>
+	<context id="studio_enum_editor_context">
+		<description>枚舉編輯上下文幫助</description>
+		<topic label="什麼是枚舉" href="html/metadatas/what_is_enum.htm"/>
+		<topic label="如何創建枚舉" href="html/tasks/create_enum.htm"/>
+	</context>
+	<context id="studio_relation_editor_context">
+		<description>關係編輯上下文幫助</description>
+		<topic label="什麼是關係" href="html/metadatas/what_is_relationship.htm"/>
+		<topic label="如何創建關係" href="html/tasks/create_relationship.htm"/>
+	</context>
+	<context id="studio_query_editor_context">
+		<description>查詢編輯上下文幫助</description>
+		<topic label="什麼是查詢" href="html/metadatas/what_is_query.htm"/>
+		<topic label="如何創建查詢" href="html/tasks/create_query.htm"/>
+	</context>
+	<context id="studio_permission_editor_context">
+		<description>權限編輯上下文幫助</description>
+		<topic label="什麼是權限" href="html/metadatas/what_is_permission.htm"/>
+		<topic label="如何創建權限" href="html/tasks/create_permission.htm"/>
+	</context>
+	<context id="studio_log_editor_context">
+		<description>日誌編輯上下文幫助</description>
+		<topic label="什麼是日誌" href="html/metadatas/what_is_log.htm"/>
+	</context>
+	<context id="studio_mutex_editor_context">
+		<description>互斥項編輯上下文幫助</description>
+		<topic label="什麼是互斥項" href="html/metadatas/what_is_log.htm"/>
+	</context>
+	<context id="studio_resource_editor_context">
+		<description>多語言資源編輯上下文幫助</description>
+		<topic label="什麼是多語言資源" href="html/metadatas/what_is_resource.htm"/>
+		<topic label="如何創建多語言資源" href="html/tasks/create_resource.htm"/>
+	</context>
+	<context id="studio_bizdatatype_editor_context">
+		<description>業務數據類型編輯上下文幫助</description>
+		<topic label="什麼是業務數據類型" href="html/metadatas/what_is_bizdatatype.htm"/>
+		<topic label="如何創建業務數據類型" href="html/tasks/create_bizdatatype.htm"/>
+	</context>
+	
+	<!--UI控件-->
+	<context id="ui_context_KDBusiCurrencyField">
+		<description>KDBusiCurrencyField控件上下文幫助</description>
+		<topic label="KDBusiCurrencyField說明" href="html/ui/components/KDBusiCurrencyField.htm"/>
+	</context>
+	<context id="ui_context_KDBusiMaskField">
+		<description>KDBusiMaskField控件上下文幫助</description>
+		<topic label="KDBusiMaskField說明" href="html/ui/components/KDBusiMaskField.htm"/>
+	</context>
+	<context id="ui_context_KDButton">
+		<description>KDButton控件上下文幫助</description>
+		<topic label="KDButton說明" href="html/ui/components/KDButton.htm"/>
+	</context>	
+	<context id="ui_context_KDButtonGroup">
+		<description>KDButtonGroup控件上下文幫助</description>
+		<topic label="KDButtonGroup說明" href="html/ui/components/KDButtonGroup.htm"/>
+	</context>
+	<context id="ui_context_KDCheckBox">
+		<description>KDCheckBox控件上下文幫助</description>
+		<topic label="KDCheckBox說明" href="html/ui/components/KDCheckBox.htm"/>
+	</context>
+	<context id="ui_context_KDCheckBoxMenuItem">
+		<description>KDCheckBoxMenuItem控件上下文幫助</description>
+		<topic label="KDCheckBoxMenuItem說明" href="html/ui/components/KDCheckBoxMenuItem.htm"/>
+	</context>
+	<context id="ui_context_KDColorChooser">
+		<description>KDColorChooser控件上下文幫助</description>
+		<topic label="KDColorChooser說明" href="html/ui/components/KDColorChooser.htm"/>
+	</context>
+	<context id="ui_context_KDComboBox">
+		<description>KDComboBox控件上下文幫助</description>
+		<topic label="KDComboBox說明" href="html/ui/components/KDComboBox.htm"/>
+	</context>
+	<context id="ui_context_KDComboColor">
+		<description>KDComboColor控件上下文幫助</description>
+		<topic label="KDComboColor說明" href="html/ui/components/KDComboColor.htm"/>
+	</context>
+	
+	<context id="ui_context_KDContainer">
+		<description>KDContainer控件上下文幫助</description>
+		<topic label="KDContainer說明" href="html/ui/components/KDContainer.htm"/>
+	</context>
+	<context id="ui_context_KDCurrencyTextField">
+		<description>KDCurrencyTextField控件上下文幫助</description>
+		<topic label="KDCurrencyTextField說明" href="html/ui/components/KDCurrencyTextField.htm"/>
+	</context>
+	<context id="ui_context_KDDatePicker">
+		<description>KDDatePicker控件上下文幫助</description>
+		<topic label="KDDatePicker說明" href="html/ui/components/KDDatePicker.htm"/>
+	</context>	
+	<context id="ui_context_KDDesktopPane">
+		<description>KDDesktopPane控件上下文幫助</description>
+		<topic label="KDDesktopPane說明" href="html/ui/components/KDDesktopPane.htm"/>
+	</context>
+	<context id="ui_context_KDDBntScrollBar">
+		<description>KDDBntScrollBar控件上下文幫助</description>
+		<topic label="KDDBntScrollBar說明" href="html/ui/components/KDDBntScrollBar.htm"/>
+	</context>
+	<context id="ui_context_KDDial">
+		<description>KDDial控件上下文幫助</description>
+		<topic label="KDDial說明" href="html/ui/components/KDDial.htm"/>
+	</context>
+	<context id="ui_context_KDDialog">
+		<description>KDDialog控件上下文幫助</description>
+		<topic label="KDDialog說明" href="html/ui/components/KDDialog.htm"/>
+	</context>
+	<context id="ui_context_KDEditorPane">
+		<description>KDEditorPane控件上下文幫助</description>
+		<topic label="KDEditorPane說明" href="html/ui/components/KDEditorPane.htm"/>
+	</context>
+	<context id="ui_context_KDFileChooser">
+		<description>KDFileChooser控件上下文幫助</description>
+		<topic label="KDFileChooser說明" href="html/ui/components/KDFileChooser.htm"/>
+	</context>
+	
+	<context id="ui_context_KDFilterTextField">
+		<description>KDFilterTextField控件上下文幫助</description>
+		<topic label="KDFilterTextField說明" href="html/ui/components/KDFilterTextField.htm"/>
+	</context>
+	<context id="ui_context_KDFormattedTextField">
+		<description>KDFormattedTextField控件上下文幫助</description>
+		<topic label="KDFormattedTextField說明" href="html/ui/components/KDFormattedTextField.htm"/>
+	</context>
+	<context id="ui_context_KDFrame">
+		<description>KDFrame控件上下文幫助</description>
+		<topic label="KDFrame說明" href="html/ui/components/KDFrame.htm"/>
+	</context>	
+	<context id="ui_context_KDLabel">
+		<description>KDLabel控件上下文幫助</description>
+		<topic label="KDLabel說明" href="html/ui/components/KDLabel.htm"/>
+	</context>
+	<context id="ui_context_KDLabelContainer">
+		<description>KDLabelContainer控件上下文幫助</description>
+		<topic label="KDLabelContainer說明" href="html/ui/components/KDLabelContainer.htm"/>
+	</context>
+	<context id="ui_context_KDList">
+		<description>KDList控件上下文幫助</description>
+		<topic label="KDList說明" href="html/ui/components/KDList.htm"/>
+	</context>
+	<context id="ui_context_KDMaskTextField">
+		<description>KDMaskTextField控件上下文幫助</description>
+		<topic label="KDMaskTextField說明" href="html/ui/components/KDMaskTextField.htm"/>
+	</context>
+	<context id="ui_context_KDMenu">
+		<description>KDMenu控件上下文幫助</description>
+		<topic label="KDMenu說明" href="html/ui/components/KDMenu.htm"/>
+	</context>
+	<context id="ui_context_KDMenuBar">
+		<description>KDMenuBar控件上下文幫助</description>
+		<topic label="KDMenuBar說明" href="html/ui/components/KDMenuBar.htm"/>
+	</context>
+	
+	<context id="ui_context_KDMenuItem">
+		<description>KDMenuItem控件上下文幫助</description>
+		<topic label="KDMenuItem說明" href="html/ui/components/KDMenuItem.htm"/>
+	</context>
+	<context id="ui_context_KDMultiLangBox">
+		<description>KDMultiLangBox控件上下文幫助</description>
+		<topic label="KDMultiLangBox說明" href="html/ui/components/KDMultiLangBox.htm"/>
+	</context>
+	<context id="ui_context_KDNumberTextField">
+		<description>KDNumberTextField控件上下文幫助</description>
+		<topic label="KDNumberTextField說明" href="html/ui/components/KDNumberTextField.htm"/>
+	</context>	
+	<context id="ui_context_KDOptionPane">
+		<description>KDOptionPane控件上下文幫助</description>
+		<topic label="KDOptionPane說明" href="html/ui/components/KDOptionPane.htm"/>
+	</context>
+	<context id="ui_context_KDPanel">
+		<description>KDPanel控件上下文幫助</description>
+		<topic label="KDPanel說明" href="html/ui/components/KDPanel.htm"/>
+	</context>
+	<context id="ui_context_KDPasswordField">
+		<description>KDPasswordField控件上下文幫助</description>
+		<topic label="KDPasswordField說明" href="html/ui/components/KDPasswordField.htm"/>
+	</context>
+	<context id="ui_context_KDProgressBar">
+		<description>KDProgressBar控件上下文幫助</description>
+		<topic label="KDProgressBar說明" href="html/ui/components/KDProgressBar.htm"/>
+	</context>
+	<context id="ui_context_KDPromptBox">
+		<description>KDPromptBox控件上下文幫助</description>
+		<topic label="KDPromptBox說明" href="html/ui/components/KDPromptBox.htm"/>
+	</context>
+	<context id="ui_context_KDRadioButton">
+		<description>KDRadioButton控件上下文幫助</description>
+		<topic label="KDRadioButton說明" href="html/ui/components/KDRadioButton.htm"/>
+	</context>
+	
+	<context id="ui_context_KDRadioButtonMenuItem">
+		<description>KDRadioButtonMenuItem控件上下文幫助</description>
+		<topic label="KDRadioButtonMenuItem說明" href="html/ui/components/KDRadioButtonMenuItem.htm"/>
+	</context>
+	<context id="ui_context_KDScrollPane">
+		<description>KDScrollPane控件上下文幫助</description>
+		<topic label="KDScrollPane說明" href="html/ui/components/KDScrollPane.htm"/>
+	</context>
+	<context id="ui_context_KDSeparator">
+		<description>KDSeparator控件上下文幫助</description>
+		<topic label="KDSeparator說明" href="html/ui/components/KDSeparator.htm"/>
+	</context>	
+	<context id="ui_context_KDSlider">
+		<description>KDSlider控件上下文幫助</description>
+		<topic label="KDSlider說明" href="html/ui/components/KDSlider.htm"/>
+	</context>
+	<context id="ui_context_KDSpinner">
+		<description>KDSpinner控件上下文幫助</description>
+		<topic label="KDSpinner說明" href="html/ui/components/KDSpinner.htm"/>
+	</context>
+	<context id="ui_context_KDSplitPane">
+		<description>KDSplitPane控件上下文幫助</description>
+		<topic label="KDSplitPane說明" href="html/ui/components/KDSplitPane.htm"/>
+	</context>
+	<context id="ui_context_KDStatusBar">
+		<description>KDStatusBar控件上下文幫助</description>
+		<topic label="KDStatusBar說明" href="html/ui/components/KDStatusBar.htm"/>
+	</context>
+	<context id="ui_context_KDTabbedPane">
+		<description>KDTabbedPane控件上下文幫助</description>
+		<topic label="KDTabbedPane說明" href="html/ui/components/KDTabbedPane.htm"/>
+	</context>
+	<context id="ui_context_KDTextArea">
+		<description>KDTextArea控件上下文幫助</description>
+		<topic label="KDTextArea說明" href="html/ui/components/KDTextArea.htm"/>
+	</context>
+	
+	<context id="ui_context_KDTextField">
+		<description>KDTextField控件上下文幫助</description>
+		<topic label="KDTextField說明" href="html/ui/components/KDTextField.htm"/>
+	</context>
+	<context id="ui_context_KDTextPane">
+		<description>KDTextPane控件上下文幫助</description>
+		<topic label="KDTextPane說明" href="html/ui/components/KDTextPane.htm"/>
+	</context>
+	<context id="ui_context_KDTimePicker">
+		<description>KDTimePicker控件上下文幫助</description>
+		<topic label="KDTimePicker說明" href="html/ui/components/KDTimePicker.htm"/>
+	</context>	
+	<context id="ui_context_KDToggleButton">
+		<description>KDToggleButton控件上下文幫助</description>
+		<topic label="KDToggleButton說明" href="html/ui/components/KDToggleButton.htm"/>
+	</context>
+	<context id="ui_context_KDToolBar">
+		<description>KDToolBar控件上下文幫助</description>
+		<topic label="KDToolBar說明" href="html/ui/components/KDToolBar.htm"/>
+	</context>
+	<context id="ui_context_KDToolButton">
+		<description>KDToolButton控件上下文幫助</description>
+		<topic label="KDToolButton說明" href="html/ui/components/KDToolButton.htm"/>
+	</context>
+	<context id="ui_context_KDTree">
+		<description>KDTree控件上下文幫助</description>
+		<topic label="KDTree說明" href="html/ui/components/KDTree.htm"/>
+	</context>
+	<context id="ui_context_KDTreeView">
+		<description>KDTreeView控件上下文幫助</description>
+		<topic label="KDTreeView說明" href="html/ui/components/KDTreeView.htm"/>
+	</context>
+	<context id="ui_context_KDWorkButton">
+		<description>KDWorkButton控件上下文幫助</description>
+		<topic label="KDWorkButton說明" href="html/ui/components/KDWorkButton.htm"/>
+	</context>
+	
+	<context id="ui_context_KDTable">
+		<description>KDTable控件上下文幫助</description>
+		<topic label="KDTable說明" href="html/ui/components/KDTable.htm"/>
+	</context>
+	<context id="ui_context_KDBizPromptBox">
+		<description>KDBizPromptBox控件上下文幫助</description>
+		<topic label="KDBizPromptBox說明" href="html/ui/components/KDBizPromptBox.htm"/>
+	</context>
+	<context id="ui_context_KDBizMultiLangBox">
+		<description>KDBizMultiLangBox控件上下文幫助</description>
+		<topic label="KDBizMultiLangBox說明" href="html/ui/components/KDBizMultiLangBox.htm"/>
+	</context>	
+	<context id="ui_context_KDBizMultiLangArea">
+		<description>KDBizMultiLangArea控件上下文幫助</description>
+		<topic label="KDBizMultiLangArea說明" href="html/ui/components/KDBizMultiLangArea.htm"/>
+	</context>
+	<context id="ui_context_Separator">
+		<description>Separator控件上下文幫助</description>
+		<topic label="Separator說明" href="html/ui/components/Separator.htm"/>
+	</context>
+	
+	<context id="ui_context_KDLayout">
+		<description>KDLayout上下文幫助</description>
+		<topic label="KDLayout說明" href="html/ui/components/KDLayout.htm"/>
+	</context>
+	
+	<context id="webservice_context">
+		<description>發佈WebService上下文幫助</description>
+		<topic label="發佈WebService注意事項" href="html/newfunction/webservice/YueShuJiZhuYiShiXiang.htm"/>
+	</context>
+	
+	<context id="dic_edit_context">
+		<description>简繁体字典编辑</description>
+		<topic label="简繁体字典编辑帮助" href="html/newfunction/multilan/JianFanTiZiDianWeiHu.htm"/>
+	</context>
+</contexts>

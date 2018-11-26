@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.4 U (http://www.xmlspy.com) by charse (kingdee) -->
+<Config>
+	<isContainer>false</isContainer>
+	<isVisual>true</isVisual>
+	<Properties>
+		<Property>
+			<name>style</name>
+			<type>java.lang.String</type>
+			<defaultValue/>
+			<editorType>302</editorType>
+			<group>外观</group>
+			<isMultiLan>false</isMultiLan>
+			<canDirectSet/>
+			<canBindData>false</canBindData>
+			<enableEL>true</enableEL>
+		</Property>	
+		<Property>
+			<name>dataCol</name>
+			<type>java.lang.String</type>
+			<defaultValue></defaultValue>
+			<editorType>302</editorType>
+			<group>基本</group>
+			<isMultiLan>false</isMultiLan>
+			<canDirectSet/>
+			<canBindData>true</canBindData>
+			<enableEL>true</enableEL>
+		</Property>
+		<Property>
+			<name>url</name>
+			<type>java.lang.String</type>
+			<defaultValue></defaultValue>
+			<editorType>302</editorType>
+			<group>基本</group>
+			<isMultiLan>false</isMultiLan>
+			<canDirectSet/>
+			<canBindData>false</canBindData>
+			<enableEL>true</enableEL>
+		</Property>
+	</Properties>
+	<Events>
+	</Events>
+</Config>

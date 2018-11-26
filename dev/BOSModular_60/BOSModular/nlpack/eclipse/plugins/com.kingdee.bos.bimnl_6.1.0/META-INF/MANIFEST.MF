@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: BimNL Fragment
+Bundle-SymbolicName: com.kingdee.bos.bim.nl
+Bundle-Version: 6.0.0
+Bundle-Vendor: Kingdee Software
+Bundle-ClassPath: bimnl.jar
+Fragment-Host: com.kingdee.bos.bim;bundle-version="[6.0.0,7.0.0)"
+Bundle-Localization: plugin

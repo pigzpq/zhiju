@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin name="%pluginName" id="org.quartz" version="1.5.2" provider-name="%providerName">
+	<runtime>
+		<library name="quartz-1.5.2.jar">
+			<export name="*"/>
+		</library>
+	</runtime>
+</plugin>

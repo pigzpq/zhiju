@@ -1,0 +1,400 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?metadataRepository class='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'?>
+<repository name='dropins metadata repo: file:/D:/bos/BOSModular/bosstudio/' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.system' value='true'/>
+    <property name='p2.timestamp' value='1540128715796'/>
+  </properties>
+  <units size='8'>
+    <unit id='com.kingdee.bos.framework.doc' version='5.0.0'>
+      <update id='com.kingdee.bos.framework.doc' range='[0.0.0,5.0.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='FrameworkHelp Plug-in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Kingdee Software (China) Company Ltd.'/>
+        <property name='file.name' value='D:\bos\BOSModular\bosstudio\eclipse\plugins\com.kingdee.bos.frameworkhelp_6.1.0'/>
+        <property name='file.lastModified' value='1540115278234'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.framework.doc' version='5.0.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.framework.doc' version='5.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='osgi.bundle' name='org.eclipse.help' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.framework.doc' version='5.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Bundle-Version: 5.0.0&#xA;Require-Bundle: org.eclipse.help&#xA;Manifest-Version: 1.0&#xA;Bundle-SymbolicName: com.kingdee.bos.framework.doc; singleton:=true&#xA;Bundle-Name: FrameworkHelp Plug-in&#xA;Bundle-Localization: plugin&#xA;Bundle-Vendor: Kingdee Software (China) Company Ltd.&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.kingdee.bos.studio.doc' version='5.0.0'>
+      <update id='com.kingdee.bos.studio.doc' range='[0.0.0,5.0.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='StudioHelp 插件'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Kingdee Software (China) Company Ltd.'/>
+        <property name='file.name' value='D:\bos\BOSModular\bosstudio\eclipse\plugins\com.kingdee.bos.studiohelp_6.1.0'/>
+        <property name='file.lastModified' value='1540115272406'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.studio.doc' version='5.0.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.studio.doc' version='5.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.help' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.studio.doc' version='5.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-Vendor: Kingdee Software (China) Company Ltd.&#xA;Bundle-ManifestVersion: 2&#xA;Bundle-Activator: com.kingdee.bos.studio.doc.StudioHelpPlugin&#xA;Bundle-Localization: plugin&#xA;Bundle-Name: StudioHelp 插件&#xA;Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.help&#xA;Bundle-ClassPath: studiohelp.jar&#xA;Eclipse-AutoStart: true&#xA;Manifest-Version: 1.0&#xA;Bundle-SymbolicName: com.kingdee.bos.studio.doc; singleton:=true&#xA;Bundle-Version: 5.0&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.kingdee.bos.stconvert' version='6.0.0'>
+      <update id='com.kingdee.bos.stconvert' range='[0.0.0,6.0.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='Sc2TcConvert 插件'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Kingdee Software'/>
+        <property name='file.name' value='D:\bos\BOSModular\bosstudio\eclipse\plugins\com.kingdee.bos.sc2tcconvert_6.1.0'/>
+        <property name='file.lastModified' value='1540115274765'/>
+      </properties>
+      <provides size='9'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.stconvert' version='6.0.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.stconvert' version='6.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.dictionaryedit' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.dictionaryedit.wizard' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.dictionarypreference' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.stconvert' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.stconvert.wizard' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='4'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.stconvert' version='6.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Eclipse-AutoStart: true&#xA;Export-Package: com.kingdee.bos,com.kingdee.bos.dictionaryedit,com.kingdee.bos.dictionaryedit.wizard,com.kingdee.bos.dictionarypreference,com.kingdee.bos.stconvert,com.kingdee.bos.stconvert.wizard&#xA;Bundle-Localization: plugin&#xA;Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.core.resources,org.eclipse.jdt.core&#xA;Bundle-Activator: com.kingdee.bos.Sc2TcConvertPlugin&#xA;Bundle-Name: Sc2TcConvert 插件&#xA;Bundle-Version: 6.0.0&#xA;Bundle-Vendor: Kingdee Software&#xA;Bundle-SymbolicName: com.kingdee.bos.stconvert; singleton:=true&#xA;Manifest-Version: 1.0&#xA;Bundle-ClassPath: sc2tcconvert.jar&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.kingdee.bos.onlineresource' version='5.0.0'>
+      <update id='com.kingdee.bos.onlineresource' range='[0.0.0,5.0.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='OnLineResource Plug-in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Kingdee Software'/>
+        <property name='file.name' value='D:\bos\BOSModular\bosstudio\eclipse\plugins\com.kingdee.bos.onlineresource_6.1.0'/>
+        <property name='file.lastModified' value='1540115274828'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.onlineresource' version='5.0.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.onlineresource' version='5.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.help' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.onlineresource' version='5.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Bundle-Version: 5.0.0&#xA;Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.help&#xA;Manifest-Version: 1.0&#xA;Bundle-SymbolicName: com.kingdee.bos.onlineresource; singleton:=true&#xA;Bundle-Name: OnLineResource Plug-in&#xA;Bundle-Localization: plugin&#xA;Bundle-Vendor: Kingdee Software&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.kingdee.bos.studio' version='6.0.0'>
+      <update id='com.kingdee.bos.studio' range='[0.0.0,6.0.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='NewStudio Plug-in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Kingdee Software (China) Company Ltd.'/>
+        <property name='file.name' value='D:\bos\BOSModular\bosstudio\eclipse\plugins\com.kingdee.bos.newstudio_6.1.0'/>
+        <property name='file.lastModified' value='1540115277546'/>
+      </properties>
+      <provides size='116'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.studio' version='6.0.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.studio' version='6.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.newdesigner.command' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.newdesigner.dtc' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.newdesigner.edit' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.newdesigner.edit.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.newdesigner.figure' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.newdesigner.gui.edit' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.newdesigner.gui.model' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.newdesigner.model' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.newdesigner.policy' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.newdesigner.properties' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.newdesigner.properties.smartlayout' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.newdesigner.tools' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.newdesigner.utils' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.newdesigner.webui' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.newdesigner.webui.edit' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.newdesigner.webui.figure' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.newdesigner.webui.layer' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.newdesigner.webui.layout' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.newdesigner.webui.model' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.newdesigner.webui.model.borderlayout' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.actions' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.actions.importmd' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.actions.newcreate' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.common' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.dialog' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.dialog.expression' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.common' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.data' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.entity' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.enumer' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.exception' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.facade' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.function' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.graphicaledit.actions' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.graphicaledit.commands' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.graphicaledit.dnd' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.graphicaledit.editor' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.graphicaledit.figures' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.graphicaledit.layout' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.graphicaledit.models' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.graphicaledit.parts' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.graphicaledit.parts.connector' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.graphicaledit.parts.factory' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.graphicaledit.policy' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.graphicaledit.propertyedit' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.graphicaledit.wizards' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.log' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.log.dnd' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.mdquery' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.mutex' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.permission' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.permission.dnd' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.query' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.relation' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.resource' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.rule' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.multipageeditor.template.bizdatatype' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.perspective' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.preferences' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.views' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.wizard' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.wizard.appimport' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.wizard.application' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.wizard.copy' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.wizard.dependence' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.wizard.deploy' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.wizard.entity' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.wizard.entity2table' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.wizard.exports' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.wizard.facade' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.wizard.folder' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.wizard.imports' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.wizard.mdquery' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.wizard.packages' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.wizard.query' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.wizard.rename' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.wizard.resimport' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.wizard.subsystem' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.wizard.table' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.wizard.uiobject' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.wizard.webuiobject' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.wizard.webuiobject.dtp' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.actions' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.command' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.command.orderedcommand' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.dialog' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.dtc' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.edit' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.edit.layout' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.edit.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.figures' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.figures.border' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.figures.kdctrl' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.javaeditor' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.javaeditor.java' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.javaeditor.javadoc' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.javaeditor.jdt' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.javaeditor.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.layout' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.model' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.model.dtc' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.model.propedit' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.palette' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.policy' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.preferences' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.properties' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.properties.kdlayout' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.properties.kdtabledesigner' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.utils' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.views' version='0.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.uidesigner.wizards' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='7'>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.draw2d' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.help' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.views.properties.tabbed' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.tool.gefextend' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.tool.toolcommon' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.boswebservice' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.studio' version='6.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Export-Package: com.kingdee.bos.newdesigner.command,com.kingdee.bos.newdesigner.dtc,com.kingdee.bos.newdesigner.edit,com.kingdee.bos.newdesigner.edit.util,com.kingdee.bos.newdesigner.figure,com.kingdee.bos.newdesigner.gui.edit,com.kingdee.bos.newdesigner.gui.model,com.kingdee.bos.newdesigner.model,com.kingdee.bos.newdesigner.policy,com.kingdee.bos.newdesigner.properties,com.kingdee.bos.newdesigner.properties.smartlayout,com.kingdee.bos.newdesigner.tools,com.kingdee.bos.newdesigner.utils,com.kingdee.bos.newdesigner.webui,com.kingdee.bos.newdesigner.webui.edit,com.kingdee.bos.newdesigner.webui.figure,com.kingdee.bos.newdesigner.webui.layer,com.kingdee.bos.newdesigner.webui.layout,com.kingdee.bos.newdesigner.webui.model,com.kingdee.bos.newdesigner.webui.model.borderlayout,com.kingdee.bos.studio,com.kingdee.bos.studio.actions,com.kingdee.bos.studio.actions.importmd,com.kingdee.bos.studio.actions.newcreate,com.kingdee.bos.studio.common,com.kingdee.bos.studio.dialog,com.kingdee.bos.studio.dialog.expression,com.kingdee.bos.studio.multipageeditor.common,com.kingdee.bos.studio.multipageeditor.data,com.kingdee.bos.studio.multipageeditor.entity,com.kingdee.bos.studio.multipageeditor.enumer,com.kingdee.bos.studio.multipageeditor.exception,com.kingdee.bos.studio.multipageeditor.facade,com.kingdee.bos.studio.multipageeditor.function,com.kingdee.bos.studio.multipageeditor.graphicaledit.actions,com.kingdee.bos.studio.multipageeditor.graphicaledit.commands,com.kingdee.bos.studio.multipageeditor.graphicaledit.dnd,com.kingdee.bos.studio.multipageeditor.graphicaledit.editor,com.kingdee.bos.studio.multipageeditor.graphicaledit.figures,com.kingdee.bos.studio.multipageeditor.graphicaledit.layout,com.kingdee.bos.studio.multipageeditor.graphicaledit.models,com.kingdee.bos.studio.multipageeditor.graphicaledit.parts,com.kingdee.bos.studio.multipageeditor.graphicaledit.parts.connector,com.kingdee.bos.studio.multipageeditor.graphicaledit.parts.factory,com.kingdee.bos.studio.multipageeditor.graphicaledit.policy,com.kingdee.bos.studio.multipageeditor.graphicaledit.propertyedit,com.kingdee.bos.studio.multipageeditor.graphicaledit.wizards,com.kingdee.bos.studio.multipageeditor.log,com.kingdee.bos.studio.multipageeditor.log.dnd,com.kingdee.bos.studio.multipageeditor.mdquery,com.kingdee.bos.studio.multipageeditor.mutex,com.kingdee.bos.studio.multipageeditor.permission,com.kingdee.bos.studio.multipageeditor.permission.dnd,com.kingdee.bos.studio.multipageeditor.query,com.kingdee.bos.studio.multipageeditor.relation,com.kingdee.bos.studio.multipageeditor.resource,com.kingdee.bos.studio.multipageeditor.rule,com.kingdee.bos.studio.multipageeditor.template.bizdatatype,com.kingdee.bos.studio.perspective,com.kingdee.bos.studio.preferences,com.kingdee.bos.studio.views,com.kingdee.bos.studio.wizard,com.kingdee.bos.studio.wizard.appimport,com.kingdee.bos.studio.wizard.application,com.kingdee.bos.studio.wizard.copy,com.kingdee.bos.studio.wizard.dependence,com.kingdee.bos.studio.wizard.deploy,com.kingdee.bos.studio.wizard.entity,com.kingdee.bos.studio.wizard.entity2table,com.kingdee.bos.studio.wizard.exports,com.kingdee.bos.studio.wizard.facade,com.kingdee.bos.studio.wizard.folder,com.kingdee.bos.studio.wizard.imports,com.kingdee.bos.studio.wizard.mdquery,com.kingdee.bos.studio.wizard.packages,com.kingdee.bos.studio.wizard.query,com.kingdee.bos.studio.wizard.rename,com.kingdee.bos.studio.wizard.resimport,com.kingdee.bos.studio.wizard.subsystem,com.kingdee.bos.studio.wizard.table,com.kingdee.bos.studio.wizard.uiobject,com.kingdee.bos.studio.wizard.webuiobject,com.kingdee.bos.studio.wizard.webuiobject.dtp,com.kingdee.bos.uidesigner,com.kingdee.bos.uidesigner.actions,com.kingdee.bos.uidesigner.command,com.kingdee.bos.uidesigner.command.orderedcommand,com.kingdee.bos.uidesigner.dialog,com.kingdee.bos.uidesigner.dtc,com.kingdee.bos.uidesigner.edit,com.kingdee.bos.uidesigner.edit.layout,com.kingdee.bos.uidesigner.edit.util,com.kingdee.bos.uidesigner.figures,com.kingdee.bos.uidesigner.figures.border,com.kingdee.bos.uidesigner.figures.kdctrl,com.kingdee.bos.uidesigner.javaeditor,com.kingdee.bos.uidesigner.javaeditor.java,com.kingdee.bos.uidesigner.javaeditor.javadoc,com.kingdee.bos.uidesigner.javaeditor.jdt,com.kingdee.bos.uidesigner.javaeditor.util,com.kingdee.bos.uidesigner.layout,com.kingdee.bos.uidesigner.model,com.kingdee.bos.uidesigner.model.dtc,com.kingdee.bos.uidesigner.model.propedit,com.kingdee.bos.uidesigner.palette,com.kingdee.bos.uidesigner.policy,com.kingdee.bos.uidesigner.preferences,com.kingdee.bos.uidesigner.properties,com.kingdee.bos.uidesigner.properties.kdlayout,com.kingdee.bos.uidesigner.properties.kdtabledesigner,com.kingdee.bos.uidesigner.utils,com.kingdee.bos.uidesigner.views,com.kingdee.bos.uidesigner.wizards&#xA;Bundle-Localization: plugin&#xA;Require-Bundle: org.eclipse.jdt.ui;visibility:=reexport,org.eclipse.draw2d;visibility:=reexport,org.eclipse.help;visibility:=reexport,org.eclipse.ui.views.properties.tabbed;visibility:=reexport,com.kingdee.bos.tool.gefextend;visibility:=reexport,com.kingdee.bos.tool.toolcommon;visibility:=reexport,com.kingdee.bos.boswebservice;visibility:=reexport&#xA;Bundle-Activator: com.kingdee.bos.studio.NewStudioPlugin&#xA;Bundle-Name: NewStudio Plug-in&#xA;Bundle-Version: 6.0.0&#xA;Bundle-Vendor: Kingdee Software (China) Company Ltd.&#xA;Bundle-SymbolicName: com.kingdee.bos.studio; singleton:=true&#xA;Bundle-ActivationPolicy: lazy&#xA;Manifest-Version: 1.0&#xA;Bundle-ClassPath: newstudio.jar&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.kingdee.bos.studio.product' version='5.0.0'>
+      <update id='com.kingdee.bos.studio.product' range='[0.0.0,5.0.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='Kingdee StudioIntro'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Kingdee Software (China) Company Ltd.'/>
+        <property name='file.name' value='D:\bos\BOSModular\bosstudio\eclipse\plugins\com.kingdee.bos.studiointro_6.1.0'/>
+        <property name='file.lastModified' value='1540115266812'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.studio.product' version='5.0.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.studio.product' version='5.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='6'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.intro' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.cheatsheets' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.forms' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.osgi.util' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.studio.product' version='5.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-Vendor: Kingdee Software (China) Company Ltd.&#xA;Bundle-ManifestVersion: 2&#xA;Bundle-Activator: StudioIntroPlugin&#xA;Bundle-Localization: plugin&#xA;Bundle-Name: Kingdee StudioIntro&#xA;Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.ui.intro,org.eclipse.ui.cheatsheets,org.eclipse.ui.forms,org.eclipse.osgi.util&#xA;Bundle-ClassPath: studiointro.jar&#xA;Eclipse-AutoStart: true&#xA;Manifest-Version: 1.0&#xA;Bundle-SymbolicName: com.kingdee.bos.studio.product; singleton:=true&#xA;Bundle-Version: 5.0&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='EASValidityRule.nl1' version='6.0.0' singleton='false'>
+      <update id='EASValidityRule.nl1' range='[0.0.0,6.0.0)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Nl1 Fragment'/>
+        <property name='file.name' value='D:\bos\BOSModular\bosstudio\eclipse\plugins\com.kingdee.bos.easvalidityrule.nl1_6.1.0'/>
+        <property name='file.lastModified' value='1540115278906'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='EASValidityRule.nl1' version='6.0.0'/>
+        <provided namespace='osgi.bundle' name='EASValidityRule.nl1' version='6.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='osgi.fragment' name='com.kingdee.bos.studio.easValidity' version='6.0.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.studio.easValidity' range='[6.0.0,7.0.0)'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='EASValidityRule.nl1' version='6.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Bundle-Version: 6.0.0&#xA;Manifest-Version: 1.0&#xA;Bundle-SymbolicName: EASValidityRule.nl1&#xA;Bundle-Name: Nl1 Fragment&#xA;Fragment-Host: com.kingdee.bos.studio.easValidity;bundle-version=&quot;[6.0.0,7.0.0)&quot;&#xA;Bundle-Localization: plugin&#xA;Bundle-ClassPath: easvalidityrule.nl1.jar&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.kingdee.bos.studio.easValidity' version='6.0.0'>
+      <update id='com.kingdee.bos.studio.easValidity' range='[0.0.0,6.0.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='EAS Validity Check Plug-in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Kingdee Software (China) Company Ltd.'/>
+        <property name='file.name' value='D:\bos\BOSModular\bosstudio\eclipse\plugins\com.kingdee.bos.easvalidityrule_6.1.0'/>
+        <property name='file.lastModified' value='1540115278875'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.studio.easValidity' version='6.0.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.studio.easValidity' version='6.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.studio.eascheck' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='5'>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.metadata' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.tool.toolcommon' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.junit' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.stconvert' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.studio.easValidity' version='6.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Eclipse-AutoStart: true&#xA;Export-Package: com.kingdee.bos.studio.eascheck&#xA;Bundle-Localization: plugin&#xA;Require-Bundle: org.eclipse.core.runtime,com.kingdee.bos.metadata,com.kingdee.bos.tool.toolcommon,org.junit,com.kingdee.bos.stconvert&#xA;Bundle-Activator: com.kingdee.bos.studio.EASValidityCheckPlugin&#xA;Bundle-Name: EAS Validity Check Plug-in&#xA;Bundle-Version: 6.0.0&#xA;Bundle-Vendor: Kingdee Software (China) Company Ltd.&#xA;Bundle-SymbolicName: com.kingdee.bos.studio.easValidity; singleton:=true&#xA;Manifest-Version: 1.0&#xA;Bundle-ClassPath: easvalidityrule.jar&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+  </units>
+</repository>

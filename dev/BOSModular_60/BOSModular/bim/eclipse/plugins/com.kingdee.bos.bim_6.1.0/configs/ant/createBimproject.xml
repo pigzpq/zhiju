@@ -1,0 +1,35 @@
+<project default="delete">
+	
+	<taskdef name="datasource" classname="com.kingdee.bos.bim.ant.task.ApusicDataSourceMigrateTask">
+	</taskdef> 
+	<taskdef name="bosconfig" classname="com.kingdee.bos.bim.ant.task.BOSConfigurationRepairTask"></taskdef>
+	<target name="init">
+		<mkdir dir="${dir.project}/src" />
+		<mkdir dir="${dir.project}}/lib" />
+		<mkdir dir="${dir.project}}/client" />
+		<mkdir dir="${dir.project}}/metadata" />
+		<mkdir dir="${dir.project}/runtime" />
+		<mkdir dir="${dir.project}/classes" />
+		<mkdir dir="${dir.project}/tempruntime" />
+	</target>
+	<target name="unjar" depends="init">
+		<unjar dest="${dir.project}/tempruntime">
+			<fileset file="${jardir}/runtime.zip">
+			</fileset>
+		</unjar>
+	</target>
+	<target name="copy" depends="unjar">
+		<echo message="copying">
+		</echo>
+		<copy todir="${dir.project}/runtime">
+			<fileset dir="${dir.project}/tempruntime">
+			</fileset>
+		</copy>
+		<datasource testApusicHome="${dir.project}/runtime"/>
+		<bosconfig bosconfigFile="${dir.project}/runtime/bosconfig.xml"/>
+	</target>
+	<target name="delete" depends="copy">
+		<delete dir="${dir.project}/tempruntime">
+		</delete>
+	</target>
+</project>

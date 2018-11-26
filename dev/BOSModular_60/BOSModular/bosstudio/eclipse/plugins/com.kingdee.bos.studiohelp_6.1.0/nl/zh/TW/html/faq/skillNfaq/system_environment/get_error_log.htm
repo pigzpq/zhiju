@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="../../../../book.css" CHARSET="GB2312" TYPE="text/css">
+<TITLE>
+怎樣獲取BOS Studio出錯的日誌信息
+</TITLE>
+
+<link rel="stylesheet" type="text/css" HREF="../../../../book.css">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H3>怎樣獲取BOS Studio出錯的日誌信息</H3>
+<p>BOS Studio出錯時，一般都會記錄日誌。這些日誌通常記錄在兩個位置：</p>
+<p><b>A)</b>一部分日誌記錄在BOS Studio安裝目錄下的workspace\.metadata\.log中，這部分日誌是Eclipse本身機制生成的日誌，通常包括Eclipse平台本身的錯誤或者BOS Studio未捕獲的運行期異常;</p>
+<p><b>B)</b>另一部分是BOS Studio記錄的日誌，要獲得這部分日誌需要配置BOS Studio安裝目錄下eclipse\plugins\com.kingdee.bos.studio_X.X.X\log4j.properties文件(x.x.x表示BOS Studiob版本號，如4.1.0）。修改上述log4j.properties文件後，需重新啟動BOS Studio方可生效。關於如何配置log4j.properties文件請參考有關Log4j的資料。</p>
+
+<p align="center"><a href="../../../../notices.html"><img border="0" src="../../../../copyright.gif"></a></p>
+<p></p>
+</BODY>
+</HTML>

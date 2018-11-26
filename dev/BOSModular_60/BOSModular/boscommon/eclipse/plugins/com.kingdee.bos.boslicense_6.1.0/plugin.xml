@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+         id="com.kingdee.bos.boslicense.actionsets"
+         name="BOSLicense ActionSets"
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="com.kingdee.bos.boslicense.actionset"
+            label="BOSLicense ActionSet"
+            visible="true">
+         <action
+               class="com.kingdee.bos.license.ui.LicenseManagementAction"
+               id="com.kingdee.bos.license.LicenseManagementAction"
+               label="%boslicenseGuanLi"
+               menubarPath="help/additions"
+               retarget="false"
+               style="push"/>
+         <action
+               class="com.kingdee.bos.license.actions.ValidityCheckAction"
+               id="com.kingdee.bos.license.actions.ValidityCheckAction"
+               label="%ZhengBanYanZheng"
+               menubarPath="help/additions"
+               retarget="false"
+               style="push"/>
+      </actionSet>
+   </extension>
+
+</plugin>

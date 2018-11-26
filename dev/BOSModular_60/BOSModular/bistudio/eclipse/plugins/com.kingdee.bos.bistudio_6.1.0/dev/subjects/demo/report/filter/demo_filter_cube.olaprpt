@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BIReport>
+	<Cube ref="public:demo_var_filter.cube" caption="公共:销售数据立方体(过滤器宏专用)" />
+	<DataSource ref="public:demo.ds" caption="公共:销售数据源" />
+	<MdxQuery name="query1" caption="" title="" memoHead="" memoTail="" perPageRows="">		select State.levels(0).members*measures.members on columns,
+			non empty Product.levels(0).members on rows 
+		from sales</MdxQuery>
+	<WorksheetComponent name="ws001" caption="表格" mdxQuery="query1" showSlicer="" />
+	<FilterComponent name="filter" caption="过滤器">
+		<FilterItem type="input" dataType="string" caption="地区维度标题" column="" operator="EQ" required="true" defaultValue="地区" varname="stateCaption" />
+	</FilterComponent>
+</BIReport>
+

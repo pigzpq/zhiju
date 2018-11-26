@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-Name: BOS NetFile
+Bundle-SymbolicName: com.kingdee.bos.netfile;singleton=true
+Bundle-Version: 6.1.0
+Bundle-ClassPath: netfile.jar
+Bundle-Localization: plugin
+Eclipse-AutoStart: true
+Bundle-Vendor: Kingdee Software (China) Company Ltd.
+Require-Bundle: org.log4j,
+ com.kingdee.bos.common,
+ org.junit
+Provide-Package: com.kingdee.bos.service.netfile,
+ com.kingdee.bos.service.netfile.ftp

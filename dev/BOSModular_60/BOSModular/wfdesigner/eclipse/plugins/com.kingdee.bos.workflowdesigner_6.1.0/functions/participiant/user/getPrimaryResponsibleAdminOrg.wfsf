@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="获取某个用户的主要负责的行政组织">
+    <script><![CDATA[com.kingdee.eas.base.permission.IUser iUser = com.kingdee.eas.base.permission.UserFactory .getLocalInstance(__bosContext); 
+com.kingdee.eas.basedata.person.PersonInfo info = 
+iUser.getUserInfo(new com.kingdee.bos.dao.ormapping.ObjectUuidPK(com.kingdee.bos.util.BOSUuid.read(userId))).getPerson(); 
+if (info != null) { 
+	String personId = info.getId().toString(); 
+	com.kingdee.eas.basedata.org.IPositionMember iPositionMember =  
+		com.kingdee.eas.basedata.org.PositionMemberFactory.getLocalInstance(__bosContext); 
+	com.kingdee.eas.basedata.org.PositionMemberInfo positionMemberInfo = 
+		iPositionMember.getPositionMemberInfo("select  position.adminOrgUnit.id where person.id = '"+ personId + "' and isPrimary = 1"); 
+	if(positionMemberInfo != null && positionMemberInfo.getPosition() != null && positionMemberInfo.getPosition().getAdminOrgUnit() != null) {
+		return positionMemberInfo.getPosition().getAdminOrgUnit().getId(); 
+	}
+}
+return null;]]></script>
+    <description><![CDATA[根据用户内码，获取该用户的主要负责的行政组织内码。]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>STRING</type>
+      <array>false</array>
+      <description><![CDATA[行政组织内码]]></description>
+    </return>
+    <parameter>
+      <name>userID</name>
+      <type>STRING</type>
+      <array>false</array>
+      <description><![CDATA[用户内码]]></description>
+    </parameter>
+  </function>
+</functions>
+

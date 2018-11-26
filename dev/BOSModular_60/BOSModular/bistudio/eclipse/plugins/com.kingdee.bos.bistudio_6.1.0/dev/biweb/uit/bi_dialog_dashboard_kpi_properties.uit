@@ -1,0 +1,78 @@
+<table width="100%" height="500" border="0" style="font-size:12px">
+  <tr>
+    <td height="24"  colspan="3" align="left">
+	&nbsp;KPI标题：<input sue="title" type="text" style="width:150px"/>&nbsp;
+	<input sue="isShowTitle" type="checkbox"/>是否显示标题
+	<span style="width:60px"></span>
+	对象名称：<input sue="objectName" type="text" style="width:150px"/>
+	</td>
+  </tr>
+  <tr>
+    <td height="25" colspan="3" align="left">
+    过滤字段：<select sue="kpi_maindim" name="kpi_select_dim" style="width:150px"></select>&nbsp;&nbsp;
+	KPI指标：<select sue="kpi_project" name="kpi_select1" style="width:150px"></select>&nbsp;&nbsp;
+	<select sue="kpi_item" name="kpi_select2"  style="width:150px"></select>&nbsp;&nbsp;
+	<button sue="btn_addItem" class="portal_button"> 添加</button>  
+	<button sue="btn_addAllItems"  class="portal_button">	全部添加</button>	</td>
+  </tr>
+  <tr>
+    <td height="20" colspan="3" valign="bottom">已添加指标：
+    <a href="#" sue="btn_del_Project" >删除</a> 
+    <a href="#" sue="btn_delAllProject" > 全部删除</a> 
+    <a href="#" sue="btn_moveUP" >上移</a> 
+    <a href="#" sue="btn_moveDown" > 下移</a>
+    </td>
+  </tr>
+  <tr>
+    <td   width="220">
+    <select name="select" sue="kpi_selected_items" size="12"  style="width:210px;visibility:hidden">
+    </select>    </td>
+    <td width="745" colspan="2" align="left">
+	<div align="center" style="width:98%;height:190px;border:solid 1px #718BB7">
+	  <table width="98%" height="100%" border="0" style="font-size:12px">
+        <tr>
+          <td height="21" colspan="2">
+		  KPI标注：&nbsp;&nbsp; 
+		  <input sue="kpi_label" type="text" style="width:150px"/>&nbsp;&nbsp;&nbsp;(在KPI右上角显示)</td>
+        </tr>
+        <tr>
+          <td width="45%" height="23">
+		    展示方式：
+		      <select sue="select_displayType" style="width:150px;visibility:hidden">
+              <option value="KPI">仪表盘</option>
+              <option value="HLD">红绿灯</option>
+            </select>&nbsp;<font style="color:red;">*</font></td>
+          <td width="55%">
+		   图表类型 ：
+		   <select sue="select_chartType" style="width:150px;visibility:hidden">
+				<option value="KPIL">单边下限KPI图</option>
+				<option value="KPIH">单边上限KPI图</option>
+				<option value="KPILH">双边上下限KPI图</option>
+   		   </select>&nbsp;<font style="color:red;">*</font></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+			  <div  style="padding:0px;width:100%;height:140px;overflow:auto">
+			    <table sue="config_table"   style="word-wrap:break-word;word-break:break-all;font-size:12px;border-collapse:collapse; border-width:1px;" width="99%"   border="1" cellpadding="0" cellspacing="0" bordercolor="#BFBFBF" >
+                  <tr align="center" height="22px">
+                    <td width="20%"  background="../img/ui-web/userview_tableheader.gif"></td>
+                    <td width="16%" background="../img/ui-web/userview_tableheader.gif">指针值&nbsp;<font style="color:red;">*</font></td>
+                    <td width="16%" background="../img/ui-web/userview_tableheader.gif">最小值</td>
+                    <td width="16%" background="../img/ui-web/userview_tableheader.gif">预警值&nbsp;<font style="color:red;">*</font></td>
+                    <td width="16%" background="../img/ui-web/userview_tableheader.gif">良好值&nbsp;<font style="color:red;">*</font></td>
+                    <td width="16%" background="../img/ui-web/userview_tableheader.gif">最大值</td>
+                  </tr>
+                </table>
+			  </div>  
+		  </td>
+          </tr>
+      </table>
+	</div>	
+	</td>
+  </tr>
+  
+  <tr>
+    <td colspan="3">
+	<div align="center" sue="preview" style="width:770px;height:230px;overflow:auto;background-color:#ffffff;border:solid 1px #718BB7"></div>	</td>
+  </tr>
+</table>

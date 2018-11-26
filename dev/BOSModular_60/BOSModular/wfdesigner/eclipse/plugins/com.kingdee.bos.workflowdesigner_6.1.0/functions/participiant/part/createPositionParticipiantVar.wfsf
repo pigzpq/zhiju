@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="创建职位参予人变量">
+    <script><![CDATA[positionInfo = new com.kingdee.bos.workflow.participant.PositionInfo();
+return positionInfo.setId(positionID.toString());]]></script>
+    <description><![CDATA[根据职位内码创建职位类型的参予人变量.
+当此变量直接用于定义“变量类型参予人”时，活动参予人为该职位上的所有人员。]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>PERFORMER</type>
+      <array>false</array>
+      <description><![CDATA[职位类型的参予人变量]]></description>
+    </return>
+    <parameter>
+      <name>positionID</name>
+      <type>STRING</type>
+      <array>false</array>
+      <description><![CDATA[职位内码]]></description>
+    </parameter>
+  </function>
+</functions>
+

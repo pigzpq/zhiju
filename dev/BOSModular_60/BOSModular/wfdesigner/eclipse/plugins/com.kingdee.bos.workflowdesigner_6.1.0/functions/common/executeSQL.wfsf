@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="执行SQL语句">
+    <script><![CDATA[java.sql.Connection con =
+ com.kingdee.bos.framework.ejb.EJBFactory.getConnection(__bosContext); 
+java.sql.Statement statement = con.createStatement();
+statement.execute(sql); 
+com.kingdee.util.db.SQLUtils.cleanup(statement, con);]]></script>
+    <description><![CDATA[直接执行sql语句，无返回值]]></description>
+    <type>KSCRIPT</type>
+    <parameter>
+      <name>sql</name>
+      <type>STRING</type>
+      <array>false</array>
+      <description><![CDATA[被执行的sql语句]]></description>
+    </parameter>
+  </function>
+</functions>
+

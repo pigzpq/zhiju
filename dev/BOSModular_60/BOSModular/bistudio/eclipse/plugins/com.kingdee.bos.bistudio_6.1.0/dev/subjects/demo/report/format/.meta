@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Meta>
+	<Element name="." caption="突出显示" />
+	<Element name="demo_format1.olaprpt" caption="产品地区销售分析(合计预警)" />
+	<Element name="demo_format2.olaprpt" caption="产品地区销售分析(红绿灯趋势)" />
+</Meta>
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.4 U (http://www.xmlspy.com) by charse (kingdee) -->
+<Config>
+	<isContainer>true</isContainer>
+	<isVisual>true</isVisual>
+	<Properties>
+		<Property>
+			<name>tag</name>
+			<type>java.lang.String</type>
+			<defaultValue/>
+			<editorType>1</editorType>
+			<group>杂项</group>
+			<canDirectSet/>
+			<canBindData>true</canBindData>
+		</Property>	
+		<Property>
+			<name>namespace</name>
+			<type>java.lang.String</type>
+			<defaultValue>;http://www.w3.org/1999/xhtml</defaultValue>
+			<editorType>315</editorType>
+			<group>杂项</group>
+			<canDirectSet/>
+			<canBindData>true</canBindData>
+		</Property>	
+		<Property>
+			<name>attributes</name>
+			<type>java.lang.String</type>
+			<defaultValue/>
+			<editorType>308</editorType>
+			<group>杂项</group>
+			<isMultiLan>true</isMultiLan>
+			<canDirectSet/>
+			<canBindData>true</canBindData>
+		</Property>	
+	</Properties>
+	<Events>
+	</Events>
+</Config>

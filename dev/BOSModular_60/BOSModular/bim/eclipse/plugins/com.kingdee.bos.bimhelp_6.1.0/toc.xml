@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="com.kingdee.bos.bim.toc"?>
+<!-- ============================================================================= -->
+<!-- Define the top level topics                                                   -->
+<!-- ============================================================================= -->
+<toc label="金蝶业务建模工具帮助系统" topic="welcome_first.html">
+	<topic label="系統概述" href="html/1.htm"/>
+	<topic label="安裝使用业务建模工具" href="html/2.htm">
+		<topic label="运行最低配置" href="html/3.htm"/>
+		<topic label="导入解決方案" href="html/4.htm"/>
+		<topic label="解決方案設置" href="html/5.htm"/>
+	</topic>
+	<topic label="业务建模工具主框架" href="html/6.htm">
+		<topic label="組別管理" href="html/7.htm"/>
+		<topic label="新建业务单元" href="html/8.htm">
+			<topic label="新增基础资料" href="html/9.htm"/>
+			<topic label="新增业务单据" href="html/10.htm"/>
+		</topic>
+		<topic label="新建业务模板" href="html/11.htm"/>
+		<topic label="主菜单管理" href="html/12.htm"/>
+		<topic label="网络控制管理" href="html/13.htm"/>
+	</topic>
+	<topic label="定义业务单元" href="html/14.htm">
+		<topic label="业务单元信息" href="html/15.htm">
+			<topic label="业务单元属性设置" href="html/16.htm"/>
+			<topic label="业务单元信息管理" href="html/17.htm"/>
+		</topic>
+		<topic label="字段管理" href="html/18.htm">
+			<topic label="新增字段" href="html/19.htm"/>
+			<topic label="修改字段" href="html/20.htm"/>
+			<topic label="刪除字段" href="html/21.htm"/>
+		</topic>
+		<topic label="事件管理" href="html/22.htm">
+			<topic label="事件类型" href="html/23.htm"/>
+			<topic label="事件操作类型" href="html/24.htm"/>
+			<topic label="事件定义" href="html/25.htm">
+				<topic label="根据事件触发时刻选择事件" href="html/26.htm"/>
+				<topic label="各种操作的详细描述" href="html/27.htm"/>
+			</topic>
+		</topic>
+		<topic label="页签管理" href="html/28.htm">
+			<topic label="新增页签" href="html/29.htm"/>
+			<topic label="修改页签" href="html/30.htm"/>
+		</topic>
+		<topic label="业务单元菜单工具栏管理" href="html/31.htm">
+			<topic label="录入界面菜单管理" href="html/32.htm"/>
+			<topic label="录入界面工具栏管理" href="html/33.htm"/>
+		</topic>
+		<topic label="枚举定义" href="html/34.htm"/>
+		<topic label="录入及查询顺序管理" href="html/35.htm">
+			<topic label="设置录入顺序" href="html/36.htm"/>
+			<topic label="设置查询顺序" href="html/37.htm"/>
+		</topic>
+		<topic label="格式设置" href="html/38.htm">
+			<topic label="对齐" href="html/39.htm"/>
+			<topic label="大小" href="html/40.htm"/>
+			<topic label="间距" href="html/41.htm"/>
+			<topic label="缩放" href="html/42.htm"/>
+		</topic>
+	</topic>
+	<topic label="定义核算項目" href="html/43.htm">
+		<topic label="设置核算项目" href="html/44.htm"/>
+		<topic label="取消核算项目" href="html/45.htm"/>
+	</topic>
+	<topic label="定义业务单元" href="html/46.htm">
+		<topic label="定义基础资料模板" href="html/47.htm"/>
+		<topic label="定义单据模板" href="html/48.htm"/>
+	</topic>
+	<topic label="报表管理" href="html/49.htm">
+		<topic label="一般报表" href="html/50.htm">
+			<topic label="新建报表数据源" href="html/51.htm"/>
+			<topic label="新建报表" href="html/52.htm"/>
+			<topic label="界面跳转" href="html/70.htm"/>
+		</topic>
+		<topic label="分析报表" href="html/53.htm">
+			<topic label="新建分析报表数据源" href="html/54.htm"/>
+			<topic label="新建分析报表" href="html/55.htm"/>
+		</topic></topic>
+		<topic label="业务功能定义及与工作流集成" href="html/56.htm">
+			<topic label="业务功能定义" href="html/57.htm"/>
+			<topic label="与工作流集成" href="html/58.htm"/>
+		</topic>
+		<topic label="与单据转换平台控制集成" href="html/59.htm">
+			<topic label="定义的业务单据可进行单据转换定义" href="html/60.htm"/>
+			<topic label="定义的单据可以进行定义转换为凭证" href="html/61.htm"/>
+		</topic>
+		<topic label="权限定义与权限控制集成" href="html/62.htm">
+			<topic label="权限定义" href="html/63.htm"/>
+			<topic label="与权限控制集成" href="html/64.htm"/>
+		</topic>
+		<topic label="发布业务单元及报表" href="html/65.htm"/>
+		<topic label="测试业务单元及报表" href="html/66.htm"/>
+		<topic label="部署业务单元" href="html/67.htm"/>
+		<topic label="附录A" href="html/68.htm"/>
+</toc>

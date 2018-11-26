@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="com.kingdee.bos.bim.toc"?>
+<!-- ============================================================================= -->
+<!-- Define the top level topics                                                   -->
+<!-- ============================================================================= -->
+
+<toc label="金蝶BIM幫助系統" topic="welcome_first.html">
+	<topic label="系統概述" href="html/1.htm"/>
+	<topic label="安裝使用業務管理平台" href="html/2.htm"/>
+	<topic label="導入解決方案" href="html/3.htm"/>
+	<topic label="解決方案設置" href="html/4.htm"/>
+	<topic label="業務管理平台主框架" href="html/5.htm"/>
+	<topic label="組別管理" href="html/6.htm"/>
+	<topic label="新建業務單元" href="html/7.htm"/>
+	<topic label="新建業務模板" href="html/8.htm"/>
+	<topic label="主菜單管理" href="html/9.htm"/>	
+	<topic label="網絡控制管理" href="html/10.htm"/>
+	<topic label="定義業務單元" href="html/11.htm"/>
+	<topic label="業務單元信息" href="html/12.htm"/>
+	<topic label="字段管理" href="html/13.htm"/>
+	<topic label="事件管理" href="html/14.htm"/>
+	<topic label="頁簽管理" href="html/15.htm"/>
+	<topic label="業務單元菜單工具欄管理" href="html/16.htm"/>
+	<topic label="枚舉定義" href="html/17.htm"/>
+	<topic label="錄入及查詢順序管理" href="html/18.htm"/>
+	<topic label="格式設置" href="html/19.htm"/>
+	<topic label="定義核算項目" href="html/20.htm"/>
+	<topic label="設置核算項目" href="html/21.htm"/>
+	<topic label="取消核算項目設置" href="html/22.htm"/>
+	<topic label="定義業務模板" href="html/23.htm"/>
+	<topic label="定義基礎資料模板" href="html/24.htm"/>
+	<topic label="定義單據模板" href="html/25.htm"/>
+	<topic label="業務功能定義及與工作流集成" href="html/26.htm"/>
+	<topic label="業務功能定義" href="html/27.htm"/>
+	<topic label="與工作流集成" href="html/28.htm"/>
+	<topic label="與單據轉換平台控制集成" href="html/29.htm"/>
+	<topic label="定義的業務單據可以單據轉換定義" href="html/30.htm"/>
+	<topic label="定義的單據可以進行定義轉換為憑證" href="html/31.htm"/>
+	<topic label="權限定義與權限控制集成" href="html/32.htm"/>
+	<topic label="權限定義" href="html/33.htm"/>
+	<topic label="與權限控制集成" href="html/34.htm"/>
+	<topic label="發佈業務單元" href="html/35.htm"/>
+</toc>

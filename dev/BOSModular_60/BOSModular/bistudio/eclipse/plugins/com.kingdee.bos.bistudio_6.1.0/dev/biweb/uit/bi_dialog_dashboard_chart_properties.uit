@@ -1,0 +1,24 @@
+<div style="padding-bottom:10px;font-size:12px">
+	<span><input sue="isShowTitle" type="checkbox"/>是否显示标题</span>
+	<span style="margin-left:20px">标题：<input sue="title" type="text"/></span>
+	<div style="padding-top:10px">对象名称：<input sue="objectName" type="text"/></div>
+</div>
+<div style="padding-bottom:10px;font-size:12px">
+	<table>
+		<tr style="height:20px">
+			<td sue="chartType" style="text-align:left"></td>
+			<td style="text-align:right"><button sue="previewBtn" class="portal_button">预览</button></td>
+		</tr>
+	</table>
+</div>
+<table cellpadding="0" cellspacing="0" style="font-size:12px;width:100%">
+	<tr style="height:310px">
+		<td style="width:250px;padding:0px;vertical-align:top">
+			<div sue="config_table" style="padding:0px;width:250px;height:310px;overflow:auto"></div>
+		</td>
+		<td style="width:10px">&nbsp;</td>
+		<td style="width:530px;padding:0px;vertical-align:top">
+			<div sue="preview" style="width:530px;height:310px;background-color:#FFF;border:solid 1px #718BB7"></div>
+		</td>
+	</tr>
+</table>

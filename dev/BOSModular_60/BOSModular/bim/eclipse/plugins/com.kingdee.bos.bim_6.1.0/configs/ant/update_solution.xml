@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="GBK"?>
+<project name="updateBIMSolution" default="update">
+	
+	<taskdef name="webconfig"			classname="com.kingdee.bos.bim.ant.task.WEBAPPConfigTask"/>
+	<taskdef name="mergeConfigSet"		classname="com.kingdee.bos.bim.ant.task.MergeConfigSet"/>
+	<taskdef name="apusicAppRepair" 	classname="com.kingdee.bos.bim.ant.task.ApusicDeployAppRepairTask"/>
+	
+	<property name="pluginDir" 		description="BIM插件的路径" 		value="E:\workspace\620jo\Bim"/>
+	<property name="solutionDir"	description="解决方案的路径" 	value="E:\workspace\runtime-New_configuration\LOCAL\"/>
+	<property name="webRoot"		description="WEB的根路径"		value="${solutionDir}/web/myweb"/>
+	<property name="webSrc"			description="WEB的发布源路径"	value="${solutionDir}/web/myweb"/>
+	<property name="webUri"			description="WEB的相对路径"		value="${solutionDir}/web/myweb.war"/>
+	<property name="webMapping"		description="WEB的相对路径"		value="myweb"/>
+	
+	<property name="tempDir"		description="临时文件目录" 		value="${pluginDir}/update_temp"/>
+	
+	
+	
+	<target name="update" description="更新解决方案,工具版本6.2" depends="init,updateWEBDir,updateFunctions,cleanup"/>
+	
+	<target name="init" description="初始化环境">
+		<delete dir="${tempDir}"/>
+	</target>
+	
+	<target name="updateWEBDir" description="更新WEB相关目录">
+		<mkdir dir="${webRoot}"/>
+		<mkdir dir="${webSrc}"/>
+		<mkdir dir="${tempDir}/web"/>
+		<unjar dest="${tempDir}/web" src="${dir.sol_template}/war.zip" overwrite="false"/>
+		
+		<copy todir="${webRoot}" overwrite="false" includeemptydirs="true">
+			<fileset dir="${tempDir}/web">
+				<include name="**/*.*"/>
+			</fileset>
+		</copy>
+		
+		<mkdir dir="${tempDir}/runtime"/>	
+		<unjar dest="${tempDir}/runtime" src="${dir.sol_template}/runtime.zip" overwrite="false"/>
+		
+		<mkdir dir="${solutionDir}/runtime/server/deploy/bim_test.ear"/>
+		<copy todir="${solutionDir}/runtime/server/deploy/bim_test.ear" overwrite="false" includeemptydirs="true">
+			<fileset dir="${tempDir}/runtime/server/deploy/bim_test.ear">
+				<include name="**/*.*"/>
+			</fileset>
+		</copy>
+		<webconfig applicationFile="${solutionDir}/runtime/server/deploy/bim_test.ear/META-INF/application.xml"
+			uri="${weburi}" rootPath="/${webMapping}"/>
+	</target>
+	
+	<target name="updateFunctions" description="整合功能文件">
+		<mergeConfigSet source="${pluginDir}/configs/projectFunctionConfig.xml" target="${solutionDir}/projectFunctionConfig.xml"/>
+		<apusicAppRepair description="修改apusic部署文件" testApusicHome="${solutionDir}\runtime\apusic\" 
+		  			apps="${solutionDir}/runtime/server/deploy/eas.ear;${solutionDir}/runtime/server/deploy/fileserver.ear;${solutionDir}/runtime/server/deploy/bim_test.ear"/>
+	</target>
+	
+	<target name="cleanup">
+		<delete dir="${tempDir}"></delete>
+	</target>
+</project>

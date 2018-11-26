@@ -1,0 +1,76 @@
+<html>
+	<head>
+	<title>指标监控钻取</title>
+		<meta http-equiv="Pragma" content="no-cache"/> 
+		<meta http-equiv="Cache-Control" content="no-cache"/> 
+		<meta http-equiv="Expires" content="0"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	   	<link href="../css/worksheet.css" rel="stylesheet" type="text/css"></link>
+	   	<link href="../css/ui-components.css" rel="stylesheet" type="text/css"></link>
+		<script src="../js/sue-main.js"></script>
+		<script src="../js/sue-ui.js"></script>
+		<script src="../js/sue-config.js"></script>
+		<script src="../js/bi.js"></script>
+		<script src="../js/DimSelector.js"></script>
+		<script defer>
+			var kpiMonitorId = location.search.match( /(kpiMonitorId\=)(.*?)&/ )[2];	//指标监控模型定义ID
+			var kpiMonitorType = location.search.match( /(kpiMonitorType\=)(.*?)&/ )[2];				//显示类型
+			//条件参数格式：	{参数名：值,参数名：值}
+			var param = location.search.match( /(param\=)(.*?)&/ )[2];				//条件参数
+			var params = eval("(" + param + ")");
+			var url = location.search.match( /(url\=)(.*?)&/ )[2];					//提交post的URL
+			var showList=location.search.match( /(showList\=)(.*?)$/ )[2];//当前组织的子组织：('01.001','01.01','01.02','01.03')
+			var d = document.getElementById("content");
+			var servletType = "kpiMonitor";
+			var post;
+			_.post( {
+				url: url,
+				json: _.extend( 
+					{
+						servletType: servletType,
+						kpiMonitorId: kpiMonitorId,
+						kpiMonitorType: kpiMonitorType,
+						showList: showList
+					},params ),
+				async: false,
+				nocache: true,
+				beforeStart: null,
+				afterEnd: null,
+				callback: function( r ) {
+				//debugger;
+					var dial = eval(r);
+					//用作指标监控的标准通讯Post
+					post = _.compose( function( cfg ) {
+						cfg.url || ( cfg.url = url );
+						cfg.json.servletType = servletType;
+						cfg.json.uiid = dial.id;//标记唯一性
+						cfg.json.pageId = dial.pageId;//新增：处理超时问题
+						return cfg;
+					}, _.post );
+					refreshKPIMonitor( d, dial, post, dial.urlSeparator );
+				}
+			} );
+			
+			// 绑定ping和close操作
+			window.setInterval( function() {
+				post( {
+					json: {
+						command: "ping"
+					}
+				} );
+			}, 300000 );
+			
+			_.bindEvent( document.body, "unload", function() {
+				post( {
+					json: {
+						command: "close"
+					}
+				} );
+			} );
+			
+		</script>
+	</head>
+	<body topmargin="10" leftmargin="10" bottommargin="10" rightmargin="10" style="overflow-x:auto;overflow-y:auto">
+		<div id="content" style="margin:10px"></div>
+	</body>
+</html>

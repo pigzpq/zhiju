@@ -1,0 +1,128 @@
+<project name="BIMProject" default="buildpackage">
+	<taskdef name="mytask" classname="com.kingdee.bos.bim.ant.task.MyTask"/>
+	<taskdef name="genProperties" classname="com.kingdee.bos.bim.ant.task.GenPropertiesFileTask"/>
+	<taskdef name="md5"	classname="com.kingdee.bos.bim.ant.task.MD5FileMakeTask"/>
+	<taskdef name="pop" classname="com.kingdee.bos.bim.ant.task.PropertiesFileGenerator"/>
+	<property name="build.compiler" 	value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+	<property name="dir.update_temp"	value="${dir.project}/remote_temp"/>
+	
+	<target name="init" description="初始化环境">
+		<mytask description="测试环境"/>
+		<delete dir="${dir.update_temp}" />
+		<mkdir dir="${dir.update_temp}"/>
+		<genProperties propertiesfile="${dir.update_temp}/update.properties"
+			properties="dir.server#db.driver_class=${tdb.driver_class}#useInc#db.url=${tdb.url}#db.user=${tdb.user}#db.password=${tdb.password}#projectDir=bimproject#"
+			splitor="#"
+			header="ant update properties , gerenate by bim ant"/>
+		
+	</target>
+	
+	<target name="copyUpdateJar" description="拷贝批量更新包" if="useInc">
+		<copy todir="${dir.update_temp}/bimproject"  file="${dir.sol_template}/bimupdate.zip"></copy>
+	</target>
+	
+	<target name="compileGUI" description="编译GUI代码" if="publishGUI">
+		<javac srcdir="${dir.src}" destdir="${dir.classes}" debug="on" source="1.4" verbose="true" target="1.4" fork="true" nowarn="on">
+			<exclude name="com/kingdee/eas/basedata/master/auxacct/AssistantHG*.java"/>
+			<exclude name="com/kingdee/eas/basedata/master/auxacct/IAssistantHG.java"/>
+			<exclude name="com/kingdee/eas/basedata/master/auxacct/app/AssistantHGController*.java"/>
+			<classpath>
+				<fileset dir="${dir.lib}">
+					<exclude name="src/**/*.*"/>
+					<include name="**/*.zip"/>
+					<include name="**/*.jar"/>
+				</fileset>
+			</classpath>
+			<compilerarg value="-Xlint:unchecked"/>
+		</javac>
+		<copy todir="${dir.classes}" >
+			<fileset dir="${dir.src}">
+				<include name="**/*.properties"/>
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="buildGUI" description="打包GUI内容" if="publishGUI" depends="compileGUI">
+		<mkdir dir="${dir.update_temp}"/>
+		<mkdir dir="${dir.update_temp}/bimproject"/>
+		<mkdir dir="${dir.project}/runtime/ctrlhome/server/storage/bim/kdnote/template"/>
+
+		<md5 dir="${dir.classes}" md5File="${dir.classes}/md5.properties"/>
+		<jar destfile="${dir.update_temp}/bimproject/eas_sp.jar" >
+			<fileset dir="${dir.classes}">
+				<exclude name="**/web/**/*.*"/>
+			</fileset>
+		</jar>
+
+		<md5 dir="${dir.deploy_metas}" md5File="${dir.deploy_metas}/md5.properties"/>
+		<jar destfile="${dir.update_temp}/bimproject/sp-bim-metas.jar">
+			<fileset dir="${dir.deploy_metas}" includes="**/*"/>
+		</jar>
+		<zip destfile="${dir.update_temp}/bimproject/runtime.zip">
+			<fileset dir="${dir.project}" id="id">
+				<include name="runtime/ctrlhome/**/*"/>
+				<include name="SubSystem_*.xml"/>
+				<include name="deployRecord.xml"/>
+				<include name="FnMenuTree.xml"/>
+			</fileset>
+		</zip>
+	</target>
+	
+	<target name="compileWEB" description="编辑WEB相关内容" if="publishWEB">
+		<delete dir="${dir.web_root}/WEB-INF/classes"/>
+		<mkdir dir="${dir.web_root}/WEB-INF/classes"/>
+		<javac srcdir="${dir.web_src}" destdir="${dir.web_root}/WEB-INF/classes" 
+			fork="false" source="1.5" target="1.5"	nowarn="on"	debug="on"
+			taskname="javac5" includejavaruntime="false" includeantruntime="false">
+			<classpath path="${dir.classes}">
+				<fileset dir="${dir.lib}">
+					<exclude name="src/**/*.*"/>
+					<include name="sp/**/*.zip"/>
+					<include name="sp/**/*.jar"/>
+					<include name="**/*.jar"/>
+					<include name="**/*.zip"/>
+				</fileset>
+				<fileset dir="${dir.web_root}/WEB-INF/lib">
+					<include name="**/*.jar"/>
+					<include name="**/*.zip"/>
+				</fileset>
+				<fileset dir="${dir.project}/web/webRoot/WEB-INF/lib">
+					<include name="**/*.jar"/>
+					<include name="**/*.zip"/>
+				</fileset>
+			</classpath>
+			<compilerarg value="-Xlint:unchecked"/>
+		</javac>
+		<copy description="拷贝资源文件" todir="${dir.web_root}/WEB-INF/classes">
+			<fileset dir="${dir.web_src}">
+				<include name="**/*.properties"/>
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="buildWeb" description="打包WEB UI内容" if="publishWEB" depends="compileWEB">
+		<mkdir dir="${dir.update_temp}/web/${earName}/${name.web_name}"/>
+		<mkdir dir="${dir.update_temp}/bimproject"/>
+		<copy todir="${dir.update_temp}/web/${earName}/${name.web_name}" includeemptydirs="true" >
+			<fileset dir="${dir.web_root}">
+				<exclude name="winlet/**"/>
+				<exclude name="resource/**"/>
+				<exclude name="WEB-INF/**"/>
+			</fileset>
+			<fileset dir="${dir.web_root}">
+				<include name="WEB-INF/classes/**"/>
+			</fileset>
+		</copy>
+		<genProperties propertiesFile="${dir.update_temp}/web/config.properties"
+			properties="uri=${name.web_name};rootPath=/${name.web_mapping};earName=${earName}"/>
+		<jar destfile="${dir.update_temp}/bimproject/web.jar">
+			<fileset dir="${dir.update_temp}/web/" includes="**/*"/>
+		</jar>
+	</target>
+
+	<target name="copyScript" description="制作升级脚本">
+		<copy file="${dir.bim}/configs/ant/publish_apusic.xml" tofile="${dir.update_temp}/update.xml"/>
+	</target>
+
+	<target name="buildpackage" depends="init,buildGUI,buildWeb,copyScript,copyUpdateJar" description="远程部署--打包"/>
+</project>

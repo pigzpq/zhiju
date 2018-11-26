@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Meta>
+	<Element name="." caption="MDX测试" />
+	<Element name="demo_cellcal.olaprpt" caption="计算单元测试" />
+</Meta>
+

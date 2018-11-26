@@ -1,0 +1,22 @@
+<div sue="filterOn" style = padding:5px 0px 5px;font-size:14px"></div>
+<div sue="filterCondition" style = padding:5px 0px 5px;font-size:14px"></div>
+<div sue="filterList" style = padding:5px 0px 5px;font-size:14px"></div>
+<table class="bi_dialog_penetrate_filter_list" cellspacing="10">
+	<tr>
+		<td style="text-align:right">当前过滤列:</td>
+		<td sue="filterColumn"></td>
+	</tr>
+	<tr>
+		<td style="text-align:right">过滤条件:</td>
+		<td sue="filterCondition"></td>
+	</tr>
+	<tr>
+		<td sue="filterList"></td>
+	</tr>
+	<tr>
+		<td colspan="2" style="text-align:right">
+			<button sue="filterOk" class="portal_button" style="margin-right:10px">确定</button>
+			<button sue="filterCancel" class="portal_button">取消</button>
+		</td>
+	</tr>
+</table>

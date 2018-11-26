@@ -1,0 +1,24 @@
+<!--
+$Id: server_1_1.dtd,v 1.1 2008-07-04 09:48:44 chao_guo Exp $
+
+Copyright (c) 2000, 2001 Apusic Software Inc.
+All rights reserved
+-->
+
+<!--
+This is the XML DTD for the Apusic Application Configuration information.
+-->
+
+<!ELEMENT server (application*, delete*)>
+
+<!ELEMENT application EMPTY>
+<!ATTLIST application name CDATA #REQUIRED>
+<!ATTLIST application base CDATA #REQUIRED>
+<!ATTLIST application config CDATA #IMPLIED>
+<!ATTLIST application virtual-host CDATA #IMPLIED>
+<!ATTLIST application base-context CDATA #IMPLIED>
+<!ATTLIST application start (auto|demand) "auto">
+<!ATTLIST application timestamp CDATA #IMPLIED>
+
+<!ELEMENT delete EMPTY>
+<!ATTLIST delete file CDATA #REQUIRED>

@@ -1,0 +1,818 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository class='org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository' version='1.0.0'?>
+<repository name='dropins artifact repo: file:/D:/bos/BOSModular/commonthirdlib/' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.system' value='true'/>
+    <property name='p2.timestamp' value='1540128716953'/>
+  </properties>
+  <mappings size='3'>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='75'>
+    <artifact classifier='osgi.bundle' id='com.j2ee' version='1.3.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/com.j2ee_1.3/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\com.j2ee_1.3'/>
+        <property name='file.lastModified' value='1540115264609'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.edit.ui' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='107713'/>
+        <property name='download.size' value='107713'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.edit.ui_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.edit.ui_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746438000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.codegen.ui' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='26824'/>
+        <property name='download.size' value='26824'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.codegen.ui_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.codegen.ui_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746534000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.log4j' version='1.2.6'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.log4j_1.2.6/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.log4j_1.2.6'/>
+        <property name='file.lastModified' value='1540115263640'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.oracledriver' version='10.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/com.oracle_10.1/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\com.oracle_10.1'/>
+        <property name='file.lastModified' value='1540115264531'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.ecore.editor' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='63349'/>
+        <property name='download.size' value='63349'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.ecore.editor_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.ecore.editor_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746568000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.xjavadoc' version='1.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.xjavadoc_1.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.xjavadoc_1.0'/>
+        <property name='file.lastModified' value='1540115263578'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.db2' version='8.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/com.db2_8.0/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\com.db2_8.0'/>
+        <property name='file.lastModified' value='1540115264656'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.kingdee.apws' version='3.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/com.kingdee.apws_3.1/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\com.kingdee.apws_3.1'/>
+        <property name='file.lastModified' value='1540115264562'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.ecore.sdo.editor' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='80674'/>
+        <property name='download.size' value='80674'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.ecore.sdo.editor_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.ecore.sdo.editor_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746464000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.mapping' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='182864'/>
+        <property name='download.size' value='182864'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.mapping_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.mapping_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746572000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.xsd.doc' version='2.1.1'>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/features/org.eclipse.xsd.doc_2.1.1/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\features\org.eclipse.xsd.doc_2.1.1'/>
+        <property name='file.lastModified' value='1540115264812'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.xsd.editor' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='81577'/>
+        <property name='download.size' value='81577'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.xsd.editor_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.xsd.editor_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746366000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.ecore.edit' version='2.1.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='67168'/>
+        <property name='download.size' value='67168'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.ecore.edit_2.1.1.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.ecore.edit_2.1.1.jar'/>
+        <property name='file.lastModified' value='1137746366000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.draw2d' version='3.4.0.v20080529'>
+      <properties size='2'>
+        <property name='artifact.size' value='525549'/>
+        <property name='download.size' value='525549'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.draw2d_3.4.0.v20080529.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.draw2d_3.4.0.v20080529.jar'/>
+        <property name='file.lastModified' value='1212989818000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.ant' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='15695'/>
+        <property name='download.size' value='15695'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.ant_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.ant_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746482000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.emf.ecore.sdo' version='2.1.1'>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/features/org.eclipse.emf.ecore.sdo_2.1.1/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\features\org.eclipse.emf.ecore.sdo_2.1.1'/>
+        <property name='file.lastModified' value='1540115265203'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.mapping.xsd2ecore' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='24994'/>
+        <property name='download.size' value='24994'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.mapping.xsd2ecore_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.mapping.xsd2ecore_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746470000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.gef.source' version='3.4.0.v20080115-677-8082A5696H274A'>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/features/org.eclipse.gef.source_3.4.0.v20080115-677-8082A5696H274A/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\features\org.eclipse.gef.source_3.4.0.v20080115-677-8082A5696H274A'/>
+        <property name='file.lastModified' value='1540115264953'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.concurrent' version='1.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.concurrent/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.concurrent'/>
+        <property name='file.lastModified' value='1540115264390'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.jdom' version='0.9.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.jdom_0.9/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.jdom_0.9'/>
+        <property name='file.lastModified' value='1540115263703'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.gef' version='3.4.0.v20080115-677-8082A5696H274A'>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/features/org.eclipse.gef_3.4.0.v20080115-677-8082A5696H274A/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\features\org.eclipse.gef_3.4.0.v20080115-677-8082A5696H274A'/>
+        <property name='file.lastModified' value='1540115264875'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.mapping.ui' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='130281'/>
+        <property name='download.size' value='130281'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.mapping.ui_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.mapping.ui_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746408000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.xsd.source' version='2.1.1'>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/features/org.eclipse.xsd.source_2.1.1/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\features\org.eclipse.xsd.source_2.1.1'/>
+        <property name='file.lastModified' value='1540115264765'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.ecore.xmi' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='144547'/>
+        <property name='download.size' value='144547'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.ecore.xmi_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.ecore.xmi_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746406000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.draw2d.source' version='3.4.0.v20080115-33-7w3119163_'>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/features/org.eclipse.draw2d.source_3.4.0.v20080115-33-7w3119163_/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\features\org.eclipse.draw2d.source_3.4.0.v20080115-33-7w3119163_'/>
+        <property name='file.lastModified' value='1540115265468'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.emf.doc' version='2.1.1'>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/features/org.eclipse.emf.doc_2.1.1/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\features\org.eclipse.emf.doc_2.1.1'/>
+        <property name='file.lastModified' value='1540115265312'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.xsd' version='2.1.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='741817'/>
+        <property name='download.size' value='741817'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.xsd_2.1.1.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.xsd_2.1.1.jar'/>
+        <property name='file.lastModified' value='1137746320000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.edit' version='2.1.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='212730'/>
+        <property name='download.size' value='212730'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.edit_2.1.1.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.edit_2.1.1.jar'/>
+        <property name='file.lastModified' value='1137746452000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.codegen.ecore.ui' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='85289'/>
+        <property name='download.size' value='85289'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.codegen.ecore.ui_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.codegen.ecore.ui_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746534000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.draw2d' version='3.4.0.v20080115-33-7w3119163_'>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/features/org.eclipse.draw2d_3.4.0.v20080115-33-7w3119163_/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\features\org.eclipse.draw2d_3.4.0.v20080115-33-7w3119163_'/>
+        <property name='file.lastModified' value='1540115265375'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.emf' version='2.1.1'>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/features/org.eclipse.emf_2.1.1/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\features\org.eclipse.emf_2.1.1'/>
+        <property name='file.lastModified' value='1540115265109'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.xsd' version='2.1.1'>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/features/org.eclipse.xsd_2.1.1/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\features\org.eclipse.xsd_2.1.1'/>
+        <property name='file.lastModified' value='1540115264734'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.rhino' version='1.5.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.rhino_1.5/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.rhino_1.5'/>
+        <property name='file.lastModified' value='1540115263609'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.ecore.sdo.edit' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='24122'/>
+        <property name='download.size' value='24122'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.ecore.sdo.edit_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.ecore.sdo.edit_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746570000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.mapping.ecore2xml' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='47943'/>
+        <property name='download.size' value='47943'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.mapping.ecore2xml_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.mapping.ecore2xml_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746402000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.gef.examples.ui.pde' version='3.4.0.v20080226'>
+      <properties size='2'>
+        <property name='artifact.size' value='349858'/>
+        <property name='download.size' value='349858'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.gef.examples.ui.pde_3.4.0.v20080226.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.gef.examples.ui.pde_3.4.0.v20080226.jar'/>
+        <property name='file.lastModified' value='1212989860000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.gef.sdk' version='3.4.0.v20080115-7B7E-97OK5c7PDdDMPMcHNPTM3CD'>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/features/org.eclipse.gef.sdk_3.4.0.v20080115-7B7E-97OK5c7PDdDMPMcHNPTM3CD/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\features\org.eclipse.gef.sdk_3.4.0.v20080115-7B7E-97OK5c7PDdDMPMcHNPTM3CD'/>
+        <property name='file.lastModified' value='1540115265031'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.importer.ecore' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='8750'/>
+        <property name='download.size' value='8750'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.importer.ecore_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.importer.ecore_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746448000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.draw2d.source' version='3.4.0.v20080115-33-7w3119163_'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.draw2d.source_3.4.0.v20080115-33-7w3119163_/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.draw2d.source_3.4.0.v20080115-33-7w3119163_'/>
+        <property name='file.lastModified' value='1540115264343'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.common' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='137063'/>
+        <property name='download.size' value='137063'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.common_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.common_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746462000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.mssqlserver' version='2000.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/com.sqlserver_2000/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\com.sqlserver_2000'/>
+        <property name='file.lastModified' value='1540115264500'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.emf.sdk' version='2.1.1'>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/features/org.eclipse.emf.sdk_2.1.1/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\features\org.eclipse.emf.sdk_2.1.1'/>
+        <property name='file.lastModified' value='1540115265156'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.importer.rose' version='2.1.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='94941'/>
+        <property name='download.size' value='94941'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.importer.rose_2.1.1.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.importer.rose_2.1.1.jar'/>
+        <property name='file.lastModified' value='1137746362000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.codegen.ecore' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='612248'/>
+        <property name='download.size' value='612248'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.codegen.ecore_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.codegen.ecore_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746556000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.quartz' version='1.5.2'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.quartz/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.quartz'/>
+        <property name='file.lastModified' value='1540115263625'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.codegen' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='116951'/>
+        <property name='download.size' value='116951'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.codegen_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.codegen_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746574000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.draw2d.sdk' version='3.4.0.v20080115-677-8082A5655G3B9B8x422_274A'>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/features/org.eclipse.draw2d.sdk_3.4.0.v20080115-677-8082A5655G3B9B8x422_274A/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\features\org.eclipse.draw2d.sdk_3.4.0.v20080115-677-8082A5655G3B9B8x422_274A'/>
+        <property name='file.lastModified' value='1540115265562'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.ecore.sdo.doc' version='2.1.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.ecore.sdo.doc_2.1.1/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.ecore.sdo.doc_2.1.1'/>
+        <property name='file.lastModified' value='1540115264109'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jtds' version='1.2.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/com.jtds_1.2/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\com.jtds_1.2'/>
+        <property name='file.lastModified' value='1540115264578'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.commonj.sdo' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='5702'/>
+        <property name='download.size' value='5702'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.commonj.sdo_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.commonj.sdo_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746366000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.common.ui' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='37524'/>
+        <property name='download.size' value='37524'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.common.ui_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.common.ui_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746548000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.importer' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='101645'/>
+        <property name='download.size' value='101645'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.importer_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.importer_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746464000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.ecore.sdo' version='2.1.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='193578'/>
+        <property name='download.size' value='193578'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.ecore.sdo_2.1.1.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.ecore.sdo_2.1.1.jar'/>
+        <property name='file.lastModified' value='1137746512000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.xsd.edit' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='194939'/>
+        <property name='download.size' value='194939'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.xsd.edit_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.xsd.edit_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746496000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf' version='2.1.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='36779'/>
+        <property name='download.size' value='36779'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf_2.1.1.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf_2.1.1.jar'/>
+        <property name='file.lastModified' value='1137746466000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.gef' version='3.4.0.v20080526'>
+      <properties size='2'>
+        <property name='artifact.size' value='818406'/>
+        <property name='download.size' value='818406'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.gef_3.4.0.v20080526.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.gef_3.4.0.v20080526.jar'/>
+        <property name='file.lastModified' value='1212989874000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.ecore.change.edit' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='23691'/>
+        <property name='download.size' value='23691'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.ecore.change.edit_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.ecore.change.edit_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746466000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.xsd.ecore.importer' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='20537'/>
+        <property name='download.size' value='20537'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.xsd.ecore.importer_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.xsd.ecore.importer_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746484000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.draw2d.doc.isv' version='3.4.0.v20080606'>
+      <properties size='2'>
+        <property name='artifact.size' value='1846125'/>
+        <property name='download.size' value='1846125'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.draw2d.doc.isv_3.4.0.v20080606.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.draw2d.doc.isv_3.4.0.v20080606.jar'/>
+        <property name='file.lastModified' value='1212989806000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.mapping.xsd2ecore.editor' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='25840'/>
+        <property name='download.size' value='25840'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.mapping.xsd2ecore.editor_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.mapping.xsd2ecore.editor_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746336000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.commons-collections' version='1.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.commons-collections/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.commons-collections'/>
+        <property name='file.lastModified' value='1540115264437'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.mapping.ecore2ecore' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='36140'/>
+        <property name='download.size' value='36140'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.mapping.ecore2ecore_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.mapping.ecore2ecore_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746372000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.emf.ecore.sdo.doc' version='2.1.1'>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/features/org.eclipse.emf.ecore.sdo.doc_2.1.1/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\features\org.eclipse.emf.ecore.sdo.doc_2.1.1'/>
+        <property name='file.lastModified' value='1540115265265'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.ecore' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='639778'/>
+        <property name='download.size' value='639778'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.ecore_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.ecore_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746336000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.ecore.change' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='66621'/>
+        <property name='download.size' value='66621'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.ecore.change_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.ecore.change_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746486000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.gef.doc.isv' version='3.4.0.v20080606'>
+      <properties size='2'>
+        <property name='artifact.size' value='2506917'/>
+        <property name='download.size' value='2506917'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.gef.doc.isv_3.4.0.v20080606.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.gef.doc.isv_3.4.0.v20080606.jar'/>
+        <property name='file.lastModified' value='1212989830000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.mapping.ecore2xml.ui' version='2.1.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='78198'/>
+        <property name='download.size' value='78198'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.mapping.ecore2xml.ui_2.1.1.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.mapping.ecore2xml.ui_2.1.1.jar'/>
+        <property name='file.lastModified' value='1137746574000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.axis' version='1.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.apache.axis_1.1/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.apache.axis_1.1'/>
+        <property name='file.lastModified' value='1540115264468'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.doc' version='2.1.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.doc_2.1.1/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.doc_2.1.1'/>
+        <property name='file.lastModified' value='1540115264250'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.importer.java' version='2.1.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='32113'/>
+        <property name='download.size' value='32113'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.importer.java_2.1.1.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.importer.java_2.1.1.jar'/>
+        <property name='file.lastModified' value='1137746404000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.emf.mapping.ecore2ecore.editor' version='2.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='37528'/>
+        <property name='download.size' value='37528'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.emf.mapping.ecore2ecore.editor_2.1.0.jar'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.emf.mapping.ecore2ecore.editor_2.1.0.jar'/>
+        <property name='file.lastModified' value='1137746452000'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.gef.source' version='3.4.0.v20080115-677-8082A5696H274A'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.gef.source_3.4.0.v20080115-677-8082A5696H274A/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.gef.source_3.4.0.v20080115-677-8082A5696H274A'/>
+        <property name='file.lastModified' value='1540115263968'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.xsd.doc' version='2.1.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.eclipse.xsd.doc_2.1.1/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.eclipse.xsd.doc_2.1.1'/>
+        <property name='file.lastModified' value='1540115263812'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.commons-logging' version='1.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='4'>
+        <property name='artifact.reference' value='file:/D:/bos/BOSModular/commonthirdlib/eclipse/plugins/org.commons-logging/'/>
+        <property name='artifact.folder' value='true'/>
+        <property name='file.name' value='D:\bos\BOSModular\commonthirdlib\eclipse\plugins\org.commons-logging'/>
+        <property name='file.lastModified' value='1540115264406'/>
+      </repositoryProperties>
+    </artifact>
+  </artifacts>
+</repository>

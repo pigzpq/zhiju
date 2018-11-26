@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="../../../../book.css" CHARSET="GB2312" TYPE="text/css">
+<TITLE>
+如何將以前定義成從CoreUIObject繼承的UI ，改成從EditUI或其它UI繼承呢
+</TITLE>
+
+<link rel="stylesheet" type="text/css" HREF="../../../../book.css">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H3>如何將以前定義成從CoreUIObject繼承的UI ，改成從EditUI或其它UI繼承呢</H3>
+<p>假設現有 BTPMakeBillFromUI.ui文件，是從CoreUIObject繼承的，現要改成從EditUI繼承，具體做法如下：</p>
+<p>A）、將BTPMakeBillFromUI.ui文件以UTF-8格式用文本編輯器打開；</p>
+<p>B）、在&lt;title&gt;與&lt;components&gt;節點之間增加以下節點，其中package所對應的value是指父UI的包路徑全稱，name所對應的value是指父UI名稱：</br>
+&lt;parent><br>
+&nbsp;&nbsp;&nbsp; &lt;key name="package" value="com.kingdee.eas.framework.client" /><br> 
+&nbsp;&nbsp;&nbsp; &lt;key name="name" value="EditUI" / ><br> 
+&lt;/parent>
+</p>
+<p>C）、在所有&lt;component>節點中，刪除&lt;component>節點下&lt;name>節點值為當前UI名稱、以及當前UI名稱+"_toobar"、當前UI名稱+"_menubar"的三個&lt;component>點。在本例中，即刪除以下三個節點：<br>
+&lt;component><br>
+&nbsp;&nbsp;&nbsp; &lt;name>BTPMakeBillFromUI&lt;/name><br>
+&nbsp;&nbsp;&nbsp; &lt;classType>com.kingdee.bos.ctrl.swing.KDPanel&lt;/classType><br>
+&nbsp;&nbsp;&nbsp; &lt;isContainer>true&lt;/isContainer><br>
+&nbsp;&nbsp;&nbsp; &lt;constraints>10,10,300,150&lt;/constraints><br>
+&nbsp;&nbsp;&nbsp; &lt;tabIndex>0&lt;/tabIndex><br>
+&nbsp;&nbsp;&nbsp; &lt;herited>false&lt;/herited><br>
+&nbsp;&nbsp;&nbsp; &lt;layoutInfo><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;name>kDLayout1&lt;/name><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;type>KDLayout&lt;/type><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;value /><br> 
+&nbsp;&nbsp;&nbsp; &lt;/layoutInfo><br>
+&lt;/component><br>
+&lt;component><br>
+&nbsp;&nbsp;&nbsp; &lt;name>BTPMakeBillFromUI_toolbar&lt;/name><br>
+&nbsp;&nbsp;&nbsp; &lt;classType>com.kingdee.bos.ctrl.swing.KDToolbar&lt;/classType><br>
+&nbsp;&nbsp;&nbsp; &lt;isContainer>true&lt;/isContainer><br>
+&nbsp;&nbsp;&nbsp; &lt;constraints>10,10,300,150&lt;/constraints><br>
+&nbsp;&nbsp;&nbsp; &lt;tabIndex>0&lt;/tabIndex><br>
+&nbsp;&nbsp;&nbsp; &lt;herited>false&lt;/herited><br>
+&nbsp;&nbsp;&nbsp; &lt;layoutInfo><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;name>kDLayout1&lt;/name><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;type>KDLayout&lt;/type><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;value /><br> 
+&nbsp;&nbsp;&nbsp; &lt;/layoutInfo><br>
+&lt;/component><br>
+&lt;component><br>
+&nbsp;&nbsp;&nbsp; &lt;name>BTPMakeBillFromUI_menubar&lt;/name><br>
+&nbsp;&nbsp;&nbsp; &lt;classType>com.kingdee.bos.ctrl.swing.KDMenubar&lt;/classType><br>
+&nbsp;&nbsp;&nbsp; &lt;isContainer>true&lt;/isContainer><br>
+&nbsp;&nbsp;&nbsp; &lt;constraints>10,10,300,150&lt;/constraints><br>
+&nbsp;&nbsp;&nbsp; &lt;tabIndex>0&lt;/tabIndex><br>
+&nbsp;&nbsp;&nbsp; &lt;herited>false&lt;/herited><br>
+&nbsp;&nbsp;&nbsp; &lt;layoutInfo><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;name>kDLayout1&lt;/name><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;type>KDLayout&lt;/type><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;value /><br> 
+&nbsp;&nbsp;&nbsp; &lt;/layoutInfo><br>
+&lt;/component>
+</p>
+<p>D）、在所有&lt;component>節點的孩子節點中，找到如下節點：</br>
+&lt;parent><br>
+&nbsp;&nbsp;&nbsp; &lt;key name="name" value="BTPMakeBillFromUI" /><br> 
+&lt;/parent>
+</br>將其中的BTPMakeBillFromUI替換成CoreUI
+</p>
+<p>
+E）、在所有節點的孩子節點中，找到如下節點：</br>
+&lt;parent><br>
+&nbsp;&nbsp;&nbsp; &lt;key name="name" value="BTPMakeBillFromUI_toolbar" /><br> 
+&lt;/parent>
+</br>將其中的BTPMakeBillFromUI_toolbar替換成CoreUI_toolbar
+</p>
+<p>F）、在所有&lt;component>節點中，找到如下節點：</br>
+&lt;parent><br>
+&nbsp;&nbsp;&nbsp; &lt;key name="name" value="BTPMakeBillFromUI_menubar" /><br> 
+&lt;/parent>
+</br>將其中的BTPMakeBillFromUI_menubar替換成CoreUI_menubar
+</p>
+<p>G）、最後，將修改過的文件以UTF-8文件格式保存即可。</p>
+
+
+<p align="center"><a href="../../../../notices.html"><img border="0" src="../../../../copyright.gif"></a></p>
+<p></p>
+</BODY>
+</HTML>

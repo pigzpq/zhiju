@@ -1,0 +1,215 @@
+<project name="deployBIMProject" default="publish">
+	<property name="deploytemp"		value="_deploytemp_" />
+	<property name="webclient_home" value="${dir.server}/deploy/fileserver.ear/easWebClient" />
+	<property name="build.compiler" 	value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+	<property name="dir.web_src"		description="WEBUI的发布路径" value=""/>
+
+	<taskdef name="mytask"				classname="com.kingdee.bos.bim.ant.task.MyTask"/>
+	<taskdef name="dbpublish"			classname="com.kingdee.bos.bim.ant.task.DbPublishTask"/>
+	<taskdef name="easVersionUpdate"	classname="com.kingdee.bos.bim.ant.task.EASVersionUpdateTask"/>
+	<taskdef name="diffJar"				classname="com.kingdee.bos.bim.ant.task.DiffJarTask"/>
+	<taskdef name="webconfig"			classname="com.kingdee.bos.bim.ant.task.WEBAPPConfigTask"/>
+	<taskdef name="jfAvailable"			classname="com.kingdee.bos.bim.ant.task.JarFileAvailableTask"/>
+	<taskdef name="md5"	classname="com.kingdee.bos.bim.ant.task.MD5FileMakeTask"/>
+
+	<target name="init" description="初始化">
+		<mytask description="测试系统当前的环境变量" />
+		<condition property="webclient_home" value="${CLIENT_HOME}">
+			<and>
+				<isset property="CLIENT_HOME" />
+				<available file="${CLIENT_HOME}" type="dir" />
+			</and>
+		</condition>
+	</target>
+
+	<target name="bakup" description="备份服务器文件">
+		<tstamp>
+			<format property="bakup.time" pattern="yyyyMMddHHmmss" />
+		</tstamp>
+		<mkdir dir="${dir.server}/../bimbakup/${bakup.time}" />
+		<property name="bimbakup.dir" value="${dir.server}/../bimbakup/${bakup.time}" />
+		<copy tofile="${bimbakup.dir}/eas_sp.server.jar"	file="${dir.server}/lib/sp/eas_sp.jar"			failonerror="false" />
+		<copy tofile="${bimbakup.dir}/eas_sp.webclient.jar" file="${webclient_home}/lib/sp/eas_sp.jar"			failonerror="false" />
+		<copy tofile="${bimbakup.dir}/metas.webclient.jar"	file="${webclient_home}/metas/sp-bim-metas.jar"		failonerror="false" />
+		<copy tofile="${bimbakup.dir}/metas.server.jar"		file="${dir.server}/metas/sp-bim-metas.jar"	failonerror="false" />
+	</target>
+
+	<target name="publish" description="发布" depends="init,checkFile,beforeIncUpdate,unjarUpdate, publish_gui, incUpdate,deleteUpdater,publish_web">
+		<echo message="${publishGUI}" />
+		<echo message="${publishWEB}" />
+	</target>
+	
+	<target name="publish_web" if="publishWEB" description="发布ＷＥＢ应用">
+		<delete dir="${dir.web_root}/WEB-INF/classes"/>
+		<mkdir dir="${dir.web_root}/WEB-INF/classes"/>
+		<javac srcdir="${dir.web_src}" destdir="${dir.web_root}/WEB-INF/classes" 
+			fork="false" source="1.5" target="1.5"
+			nowarn="on"
+			debug="on"
+			taskname="javac5" includejavaruntime="false" includeantruntime="false">
+			<classpath path="${dir.classes}">
+				<fileset dir="${dir.lib}">
+					<exclude name="src/**/*.*"/>
+					<include name="sp/**/*.zip"/>
+					<include name="sp/**/*.jar"/>
+					<include name="**/*.jar"/>
+					<include name="**/*.zip"/>
+				</fileset>
+				<fileset dir="${dir.web_root}/WEB-INF/lib">
+					<include name="**/*.jar"/>
+					<include name="**/*.zip"/>
+				</fileset>
+				<fileset dir="${dir.project}/web/webRoot/WEB-INF/lib">
+					<include name="**/*.jar"/>
+					<include name="**/*.zip"/>
+				</fileset>
+			</classpath>
+			<compilerarg value="-Xlint:unchecked"/>
+		</javac>
+		<copy description="拷贝资源文件" todir="${dir.web_root}/WEB-INF/classes">
+			<fileset dir="${dir.web_src}">
+				<include name="**/*.properties"/>
+			</fileset>
+		</copy>
+		
+		<copy todir="${dir.server}/deploy/${earName}/${name.web_name}" includeemptydirs="true" >
+			<fileset dir="${dir.web_root}">
+				<exclude name="winlet/**"/>
+				<exclude name="resource/**"/>
+				<exclude name="WEB-INF/**"/>
+			</fileset>
+			<fileset dir="${dir.web_root}">
+				<include name="WEB-INF/classes/**"/>
+			</fileset>
+		</copy>
+		<webconfig applicationFile="${dir.server}/deploy/${earName}/META-INF/application.xml" 
+			uri="${name.web_name}" rootPath="/${name.web_mapping}"/>
+	</target>
+	
+	<target name="deleteUpdater" description="删除增量更新文件" unless="canUpdate">
+		<delete file="${webclient_home}/lib/sp/eas_sp_update.jar"/>
+		<delete file="${webclient_home}/metas/sp-bim-metas_update.jar"/>
+		<mkdir dir="temp_empty_dir/META-INF"/>
+		<jar destfile="${webclient_home}/lib/sp/eas_sp_update.jar" basedir="temp_empty_dir" />
+		<jar destfile="${webclient_home}/metas/sp-bim-metas_update.jar" basedir="temp_empty_dir"/>
+		<delete dir="temp_empty_dir"/>
+	</target>
+	
+	<target name="checkFile" description="检查增量更新文件" if="useInc">
+		<jfAvailable file="${webclient_home}/metas/sp-bim-metas.jar" entry="md5.properties" type="file" property="canUpdate"/>
+		<available file="${webclient_home}/lib/sp/eas_sp_update.jar" property="updater.exists"/>
+	</target>
+	
+	<target name="beforeIncUpdate" description="增量更新前的准备" if="canUpdate">
+		<unzip dest="${dir.server}/bimupdate" src="${dir.sol_template}/bimupdate.zip" overwrite="true"/>
+		<copy file="${webclient_home}/lib/sp/eas_sp.jar" 		todir="${dir.server}/bimupdate/base" overwrite="true"/>
+		<copy file="${webclient_home}/metas/sp-bim-metas.jar" 	todir="${dir.server}/bimupdate/base" overwrite="true"/>
+		<copy file="${dir.server}/bimupdate/resourceSet.properties" 
+			todir="${dir.server}/profiles/server1/config/portalConfig/" overwrite="true"/>
+	</target>
+	
+	<target name="unjarUpdate" description="处理旧有updater包" if="updater.exists">
+		<unjar src="${webclient_home}/lib/sp/eas_sp_update.jar" dest="${dir.server}/bimupdate/temp/classes" overwrite="true"/>
+		<unjar src="${webclient_home}/metas/sp-bim-metas_update.jar" dest="${dir.server}/bimupdate/temp/metas" overwrite="true"/>
+	</target>
+	
+	<target name="incUpdate" description="增量更新" if="canUpdate">
+		<delete dir="${dir.server}/bimupdate/temp"/>
+		<mkdir dir="${dir.server}/bimupdate/temp/classes"/>
+		<mkdir dir="${dir.server}/bimupdate/temp/metas"/>
+		
+		<diffJar toDir="${dir.server}/bimupdate/temp/classes" md5FileName="md5.properties"
+			baseJar="${dir.server}/bimupdate/base/eas_sp.jar" 
+			compJar="${dir.server}/lib/sp/eas_sp.jar" />
+		<jar destfile="${webclient_home}/lib/sp/eas_sp_update.jar" whenempty="skip">
+			<fileset dir="${dir.server}/bimupdate/temp/classes">
+				<exclude name="**/app/**"/>
+			</fileset>
+		</jar>
+		
+		<diffJar toDir="${dir.server}/bimupdate/temp/metas" md5FileName="md5.properties"
+			baseJar="${dir.server}/bimupdate/base/sp-bim-metas.jar" 
+			compJar="${dir.server}/metas/sp-bim-metas.jar" />
+		<jar destfile="${webclient_home}/metas/sp-bim-metas_update.jar" whenempty="skip">
+			<fileset dir="${dir.server}/bimupdate/temp/metas">
+				<exclude name="**/CVS/**"/>
+			</fileset>
+		</jar>
+		<copy file="${dir.server}/bimupdate/base/eas_sp.jar" tofile="${webclient_home}/lib/sp/eas_sp.jar" overwrite="true"/>
+		<copy file="${dir.server}/bimupdate/base/sp-bim-metas.jar" tofile="${webclient_home}/metas/sp-bim-metas.jar" overwrite="true"/>
+				<delete dir="${dir.server}/bimupdate/temp"/>
+	</target>
+	
+	<target name="publish_gui" if="publishGUI" description="发布GUI应用">
+		<javac srcdir="${dir.src}" destdir="${dir.classes}" debug="on" source="1.4" verbose="true" target="1.4" fork="true" nowarn="on">
+			<exclude name="com/kingdee/eas/basedata/master/auxacct/AssistantHG*.java"/>
+			<exclude name="com/kingdee/eas/basedata/master/auxacct/IAssistantHG.java"/>
+			<exclude name="com/kingdee/eas/basedata/master/auxacct/app/AssistantHGController*.java"/>
+			<classpath>
+				<fileset dir="${dir.lib}">
+					<exclude name="src/**/*.*"/>
+					<include name="**/*.zip"/>
+					<include name="**/*.jar"/>
+				</fileset>
+			</classpath>
+			<compilerarg value="-Xlint:unchecked"/>
+		</javac>
+		<copy todir="${dir.classes}" >
+			<fileset dir="${dir.src}">
+				<include name="**/*.properties"/>
+			</fileset>
+		</copy>
+		<echo message="升级版本标记..." />
+		<easVersionUpdate 
+			driverClass="${tdb.driver_class}" 
+			jdbcUrl="${tdb.url}" 
+			user="${tdb.user}" 
+			password="${tdb.password}" 
+			solFile="${dir.project}/deployed_metas/eas.solution" />
+
+		<echo message="输出文件到EAS运行时..." />
+		<mkdir dir="${dir.server}/lib/sp" />
+		<md5 dir="${dir.classes}" md5File="${dir.classes}/md5.properties"/>
+		<jar destfile="${dir.project}/eas_sp.jar">
+			<fileset dir="${dir.classes}" includes="**/*" />
+		</jar>
+		<md5 dir="${dir.deploy_metas}" md5File="${dir.deploy_metas}/md5.properties"/>
+		<jar destfile="${dir.project}/${bakup.time}-bim-metas.jar">
+			<fileset dir="${dir.deploy_metas}" includes="**/*" />
+		</jar>
+
+		<copy file="${dir.project}/eas_sp.jar" tofile="${dir.server}/lib/sp/eas_sp.jar" overwrite="true" />
+		<copy file="${dir.project}/${bakup.time}-bim-metas.jar" tofile="${dir.server}/metas/sp-bim-metas.jar" />
+
+
+		<echo message="输出套打到EAS运行时..." />
+		<copy todir="${dir.server}/deploy/" overwrite="true">
+			<fileset dir="${dir.project}/runtime">
+				<include name="ctrlhome\server\storage\bim\**\*" />
+			</fileset>
+		</copy>
+
+		<echo message="输出到自动更新服务" />
+		<copy file="${dir.project}/eas_sp.jar" tofile="${webclient_home}/lib/sp/eas_sp.jar" />
+		<copy file="${dir.project}/${bakup.time}-bim-metas.jar" tofile="${webclient_home}/metas/sp-bim-metas.jar" overwrite="true" />
+
+		<echo message="同步数据库...." />
+		<dbpublish 
+			driverClass="${tdb.driver_class}" 
+			jdbcUrl="${tdb.url}" 
+			user="${tdb.user}" 
+			password="${tdb.password}" 
+			recordFile="${dir.project}/deployRecord.xml" 
+			deployedMetas="${dir.server}/metas/sp-bim-metas.jar;${dir.server}/metas/*.jar;${dir.server}/metas/bos/*.jar;${dir.server}/metas/eas/*.jar;${dir.server}/metas/industry/*.jar;${dir.server}/metas/mri/*.jar;${dir.server}/metas/sp/*.jar" 
+			fnMenuFile="${dir.project}/FnMenuTree.xml" 
+			targetImportDir="${dir.server}" 
+			bimMetas="${dir.server}/metas/sp-bim-metas.jar"/>
+
+		<delete failonerror="false">
+			<fileset dir="${dir.project}" id="id">
+				<include name="eas_sp.jar" />
+				<include name="*-bim-metas.jar" />
+			</fileset>
+		</delete>
+	</target>
+</project>

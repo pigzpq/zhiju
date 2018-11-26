@@ -1,0 +1,16 @@
+Bundle-ManifestVersion: 2
+Manifest-Version: 1.0
+Bundle-Name: EAS Validity Check Plug-in
+Bundle-SymbolicName: com.kingdee.bos.studio.easValidity; singleton:=true
+Bundle-Version: 6.0.0
+Bundle-ClassPath: easvalidityrule.jar
+Bundle-Activator: com.kingdee.bos.studio.EASValidityCheckPlugin
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ com.kingdee.bos.metadata,
+ com.kingdee.bos.tool.toolcommon,
+ org.junit,
+ com.kingdee.bos.stconvert
+Eclipse-AutoStart: true
+Export-Package: com.kingdee.bos.studio.eascheck
+Bundle-Vendor: Kingdee Software (China) Company Ltd.

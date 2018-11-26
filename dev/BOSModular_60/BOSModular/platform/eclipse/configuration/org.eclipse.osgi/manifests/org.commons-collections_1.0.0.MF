@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Generated-from: 1137746556000;type=2
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.commons-collections
+Bundle-Version: 1.0
+Bundle-ClassPath: commons-collections.jar
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: org.apache.commons.collections,
+ org.apache.commons.collections.comparators,
+ org.apache.commons.collections.iterators

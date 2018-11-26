@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+         id="com.kingdee.bos.stedit.popmenu1"
+         name="简繁体编辑"
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="com.kingdee.bos.stconvert1"
+            objectClass="org.eclipse.core.resources.IResource">
+         <action
+               class="com.kingdee.bos.stconvert.STConvertAction"
+               id="com.kingdee.bos.stconvert.action1"
+               label="Property文件简繁体转换"/>
+      </objectContribution>
+      <objectContribution
+            id="com.kingdee.bos.dictionaryedit1"
+            objectClass="org.eclipse.core.resources.IResource">
+         <action
+               class="com.kingdee.bos.dictionaryedit.DictionaryEditAction"
+               id="com.kingdee.bos.dictionaryedit.action1"
+               label="简繁体字典维护"/>
+      </objectContribution>   		
+   </extension>
+   
+   <extension
+         id="com.kingdee.bos.stedit.popmenu"
+         name="简繁体编辑"
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="com.kingdee.bos.stconvert"
+            objectClass="org.eclipse.jdt.core.IJavaElement">
+         <action
+               class="com.kingdee.bos.stconvert.STConvertAction"
+               id="com.kingdee.bos.stconvert.action"
+               label="Property文件简繁体转换"/>
+      </objectContribution>
+      <objectContribution
+            id="com.kingdee.bos.dictionaryedit"
+            objectClass="org.eclipse.jdt.core.IJavaElement">
+         <action
+               class="com.kingdee.bos.dictionaryedit.DictionaryEditAction"
+               id="com.kingdee.bos.dictionaryedit.action"
+               label="简繁体字典维护"/>
+      </objectContribution>   		
+   </extension>   
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="com.kingdee.bos.dictionarypreference.MainPreferencePage"
+            id="com.kingdee.bos.dictionarypreference.MainPreferencePage"
+            name="简繁体字典"/>
+      <page
+            category="com.kingdee.bos.dictionarypreference.MainPreferencePage"
+            class="com.kingdee.bos.dictionarypreference.DictionaryEditPreferencePage"
+            id="com.kingdee.bos.dictionarypreference.DictionaryEditPreferencePage"
+            name="编辑简繁体字典"/>
+      <page
+            category="com.kingdee.bos.dictionarypreference.MainPreferencePage"
+            class="com.kingdee.bos.dictionarypreference.Sc2TcConvertPreferencePage"
+            id="com.kingdee.bos.dictionarypreference.Sc2TcConvertPreferencePage"
+            name="字典文件指定"/>
+   </extension>
+
+</plugin>

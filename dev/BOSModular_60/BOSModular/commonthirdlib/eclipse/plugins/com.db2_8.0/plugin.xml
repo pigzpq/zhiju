@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin name="%pluginName" id="com.db2" version="8.0" provider-name="%providerName">
+	<runtime>
+		<library name="db2java.zip">
+			<export name="*"/>
+		</library>
+		<library name="db2jcc.jar">
+			<export name="*"/>
+		</library>
+		<library name="db2jcc_license_cu.jar">
+			<export name="*"/>
+		</library>
+	</runtime>
+</plugin>

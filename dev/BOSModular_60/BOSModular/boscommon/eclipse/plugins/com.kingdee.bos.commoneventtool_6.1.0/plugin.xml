@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id: plugin.xml,v 1.2 2008-06-24 07:23:01 gongyin Exp $
+-->
+
+<plugin>
+
+
+  <extension
+    point = "org.eclipse.ui.newWizards">
+    <category
+      id = "com.kingdee.bos.event.Wizard.category.ID"
+      name="%_UI_Wizard_category">
+    </category>
+    <wizard
+      id = "com.kingdee.bos.event.model.cem.presentation.CEMModelWizardID"
+      name = "%_UI_CEMModelWizard_label"
+      class = "com.kingdee.bos.event.model.cem.presentation.CEMModelWizard"
+      category = "com.kingdee.bos.event.Wizard.category.ID"
+      icon = "icons/full/obj16/CEMModelFile.gif">
+      <description>%_UI_CEMModelWizard_description</description>
+      <selection class = "org.eclipse.core.resources.IResource" />
+    </wizard>
+    <wizard
+      id = "com.kingdee.bos.event.model.es.presentation.ESModelWizardID"
+      name = "%_UI_ESModelWizard_label"
+      class = "com.kingdee.bos.event.model.es.presentation.ESModelWizard"
+      category = "com.kingdee.bos.event.Wizard.category.ID"
+      icon = "icons/full/obj16/ESModelFile.gif">
+      <description>%_UI_ESModelWizard_description</description>
+      <selection class = "org.eclipse.core.resources.IResource" />
+    </wizard>
+    <wizard
+          category="com.kingdee.bos.event.Wizard.category.ID"
+          class="com.kingdee.bos.event.model.EventProjectWizard"
+          id="com.kingdee.bos.event.model.EventProjectWizard"
+          name="%_UI_EventProjectWizard_label"
+          project="true">
+       <description/>
+       <selection class="org.eclipse.core.resources.IResource"/>
+    </wizard>
+  </extension>
+
+  <extension point = "org.eclipse.ui.editors">
+    <editor
+        id = "com.kingdee.bos.event.model.cem.presentation.CEMEditorID"
+        name = "%_UI_CEMEditor_label"
+        icon = "icons/full/obj16/CEMModelFile.gif"
+        extensions = "cem"
+        class = "com.kingdee.bos.event.model.cem.presentation.CEMEditor" 
+        contributorClass="com.kingdee.bos.event.model.cem.presentation.CEMActionBarContributor" >
+    </editor>
+    <editor
+        id = "com.kingdee.bos.event.model.es.presentation.ESEditorID"
+        name = "%_UI_ESEditor_label"
+        icon = "icons/full/obj16/ESModelFile.gif"
+        extensions = "es"
+        class = "com.kingdee.bos.event.model.es.presentation.ESEditor" 
+        contributorClass="com.kingdee.bos.event.model.es.presentation.ESActionBarContributor" >
+    </editor>
+  </extension>
+  <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+    <factory 
+       uri = "http://www.kingdee.com/bos/event/model/cem" 
+       class = "com.kingdee.bos.event.model.cem.provider.CEMItemProviderAdapterFactory" 
+       supportedTypes = 
+         "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+          org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+          org.eclipse.emf.edit.provider.ITreeItemContentProvider
+          org.eclipse.emf.edit.provider.IItemLabelProvider
+          org.eclipse.emf.edit.provider.IItemPropertySource" />
+    <factory 
+       uri = "http://www.kingdee.com/bos/event/model/es" 
+       class = "com.kingdee.bos.event.model.es.provider.ESItemProviderAdapterFactory" 
+       supportedTypes = 
+         "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+          org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+          org.eclipse.emf.edit.provider.ITreeItemContentProvider
+          org.eclipse.emf.edit.provider.IItemLabelProvider
+          org.eclipse.emf.edit.provider.IItemPropertySource" />
+  </extension>  
+</plugin>

@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: wfDesignerNL Fragment
+Bundle-SymbolicName: com.kingdee.bos.workflow.designer.nl1
+Bundle-Version: 5.4.0
+Bundle-Vendor: KINGDEE
+Fragment-Host: com.kingdee.bos.workflow.designer;bundle-version="5.4.0"
+Bundle-Localization: plugin
+Bundle-ClassPath: wfdesignernl.jar

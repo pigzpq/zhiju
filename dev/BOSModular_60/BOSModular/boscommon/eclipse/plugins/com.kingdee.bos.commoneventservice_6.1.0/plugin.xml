@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id: plugin.xml,v 1.2 2008-04-23 02:32:27 gongyin Exp $
+-->
+
+<plugin>
+  
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http://www.kingdee.com/bos/event/model/cem" 
+       class = "com.kingdee.bos.event.model.cem.CEMPackage"
+       genModel = "model/CommonEvent.genmodel" /> 
+       <package 
+       uri = "http://www.kingdee.com/bos/event/model/es" 
+       class = "com.kingdee.bos.event.model.es.ESPackage"
+       genModel = "model/EventSubscriber.genmodel" /> 
+  </extension>
+
+  <extension point="org.eclipse.emf.ecore.extension_parser">
+    <parser 
+       type="cem" 
+       class="com.kingdee.bos.event.model.cem.util.CEMResourceFactoryImpl" />
+        <parser 
+       type="es" 
+       class="com.kingdee.bos.event.model.es.util.ESResourceFactoryImpl" />
+  </extension>
+
+</plugin>
+

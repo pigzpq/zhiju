@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension-point id="viewset" name="viewset" schema="schema/viewset.exsd"/>
+
+   <extension
+         point="org.eclipse.core.runtime.applications"
+         id="app"
+         name="%kdtApp.name">
+      <application>
+         <run
+            class="com.kingdee.bos.rcs.RCSApp">
+         </run>
+      </application>
+   </extension>
+   
+   <extension point="org.eclipse.ui.activities">
+       <activity name="Hideable Perspectives" description="hide some perspectives"
+  		    id="com.kingdee.bos.rcs.unwantedPerspectives">
+       </activity>
+       <activityPatternBinding activityId="com.kingdee.bos.rcs.unwantedPerspectives"
+ 	        pattern="org\.eclipse\.pde\.ui/org\.eclipse\.pde\.ui\.PDEPerspective|org\.eclipse\.jdt\.ui/org\.eclipse\.jdt\.ui\.JavaPerspective|org\.eclipse\.jdt\.ui/org\.eclipse\.jdt\.ui\.JavaHierarchyPerspective|org\.eclipse\.jdt\.ui/org\.eclipse\.jdt\.ui\.JavaBrowsingPerspective|org\.eclipse\.ui\.ide/org\.eclipse\.ui\.resourcePerspective|org\.eclipse\.debug\.ui/org\.eclipse\.debug\.ui\.DebugPerspective|com\.kingdee\.bos\.rcs/com\.kingdee\.bos\.rcs\.rcsPerspective">
+       </activityPatternBinding>       
+   </extension>
+   
+   <extension point="org.eclipse.core.runtime.products" id="product">
+		<product name="%kdtProduct.name" application="com.kingdee.bos.rcs.app">
+  		<property name="appName" value="%kdtProduct.name" /> 
+  		<property name="windowImages" value="icons/kingdeeTP.gif,icons/kingdeeTP32.gif" /> 
+  		<property name="aboutText" value="%kdtAboutText" /> 
+  		<property name="aboutImage" value="icons/about.gif" /> 
+  		<property name="preferenceCustomization" value="plugin_customization.ini" /> 
+  </product>
+  </extension>
+
+</plugin>

@@ -1,0 +1,28 @@
+@css .bi_dialog_drill_member {font:12px Arial}
+@css .bi_dialog_drill_member button{border:solid 1px #CCC;background-color:#EFF8FA;padding-top:3px;cursor:pointer;margin-left:10px}
+
+<table class="bi_dialog_drill_member" cellspacing="10">
+	<tr>
+		<td style="text-align:right">选中位置:</td>
+		<td sue="bi_dialog_drill_member_position"></td>
+	</tr>
+	<tr>
+		<td style="text-align:right">选择成员:</td>
+		<td sue="bi_dialog_drill_member_select">
+		</td>
+	</tr>
+	<tr>
+		<td style="text-align:right;vertical-align:top">钻取方式:</td>
+		<td sue="bi_dialog_drill_member_radio" style="border:solid 1px #718BB7;padding:10px">
+			<input type="radio" value="doMemberDrill" name="drill_method" checked="checked"/>钻取到选择成员的儿子成员<br/>
+			<input type="radio" value="doLevelDrill" name="drill_method"/>钻取到下级所有成员<br/>
+			<input type="radio" value="doDrillup" name="drill_method"/>上钻
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="text-align:right">
+			<button sue="bi_dialog_drill_member_ok" class="portal_button" style="margin-right:10px">确定</button>
+			<button sue="bi_dialog_drill_member_cancel" class="portal_button">取消</button>
+		</td>
+	</tr>
+</table>

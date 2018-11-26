@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config transient="false" date="1540128720421" version="3.0">
+	<site policy="USER-EXCLUDE" enabled="true" url="platform:/base/" updateable="true">
+		<feature url="features/org.sf.feeling.decompiler_1.0.3.201303261728/" id="org.sf.feeling.decompiler" version="1.0.3.201303261728">
+		</feature>
+		<feature url="features/org.eclipse.nls.en_0.2.0.v20080907043401/" id="org.eclipse.nls.en" version="0.2.0.v20080907043401">
+		</feature>
+		<feature url="features/org.eclipse.nls.zh_0.2.0.v20080907043401/" id="org.eclipse.nls.zh" version="0.2.0.v20080907043401">
+		</feature>
+		<feature url="features/org.eclipse.nls.zh_TW_0.2.0.v20080907043401/" id="org.eclipse.nls.zh_TW" version="0.2.0.v20080907043401">
+		</feature>
+	</site>
+</config>

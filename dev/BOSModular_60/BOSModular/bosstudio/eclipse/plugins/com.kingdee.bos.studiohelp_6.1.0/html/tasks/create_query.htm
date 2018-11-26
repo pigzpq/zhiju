@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=GB2312">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="../book.css" CHARSET="GB2312" TYPE="text/css">
+<TITLE>
+创建一个查询
+</TITLE>
+
+<link rel="stylesheet" type="text/css" HREF="../book.css">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H1>创建一个查询</H1>
+<p>BOS中的Query对象是实体对象的查询视图，可以在数据访问过程中只获取视图中指定属性的数据，并按照过滤、排序条件进行数据的过滤和排序。</p>
+<p>Query对象的数据组织形式是二维模型的，Query对象可以分为连接查询对象和联合查询对象。在一个连接查询对象中(Join Query)可以包含多个子对象:实体(Entity)或者其他的查询对象(Sub Query称为子查询)，但是在一个连接查询对象中有且仅有一个主对象。在一个联合查询对象(Union Query)中，包含的子对象都必须是一个(Sub Query 称为子查询)，并且联合查询对象默认第一个选中的子对象为主对象。</p>
+<p><b>如何创建查询</b></p>
+<p><b>1、</b>打开“包分类”视图，在右键菜单中选择“新建”->“查询”，弹出“查询创建向导”，如图一：</p>
+<p><a name="query_wizard_1"><img border="0" src="images/create_query/create_query_1.gif"></a></p>图一
+<p><b>2、</b>选择好包，填写“名称”、“别名”和“描述”，选择查询的类型，点击“下一步”，如图二：</p>
+<p><a name="query_wizard_2"><img border="0" src="images/create_query/create_query_2.gif"></a></p>图二
+<p><b>3、</b>点击“实体对象”选择按钮，弹出实体对象选择框，如图三：</p>
+<p><a name="query_create_entity_select"><img border="0" src="images/create_query/create_query_entity_select.gif"></a></p>图三
+<p><b>4、</b>选中合法实体对象，点击“确定”即可选定实体对象，点击完成，即可成功建立查询,如图四：</p>
+<p><a name="query_create_result"><img border="0" src="images/create_query/create_query_result.gif"></a></p>图三
+
+
+<p align="center"><a href="../../notices.html"><img border="0" src="../../copyright.gif"></a></p>
+<p></p>
+</BODY>
+</HTML>

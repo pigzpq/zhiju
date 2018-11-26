@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: BIM_TEMPLATE
+Bundle-SymbolicName: com.kingdee.bos.solutiontemplate
+Bundle-Version: 6.2.0
+Bundle-Vendor: KINGDEE.COM
+Import-Package: org.eclipse.core.runtime
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.osgi

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin name="%pluginName" id="com.mssqlserver" version="2000" provider-name="%providerName">
+	<runtime>
+		<library name="msbase.jar">
+			<export name="*"/>
+		</library>
+		<library name="mssqlserver.jar">
+			<export name="*"/>
+		</library>
+		<library name="msutil.jar">
+			<export name="*"/>
+		</library>
+	</runtime>
+</plugin>

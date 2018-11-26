@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="gbk" ?>
+<project name="deployBIMProject" default="deploy4Test">
+	<taskdef name="mytask"				classname="com.kingdee.bos.bim.ant.task.MyTask"/>
+	<taskdef name="webconfig"			classname="com.kingdee.bos.bim.ant.task.WEBAPPConfigTask"/>
+
+	<property name="build.compiler" 	value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+	<property name="earRoot" 	description="EAR目录" 			value="E:\workspace\runtime-New_configuration\LOCAL\runtime\server\deploy\eas.ear"/>
+	<property name="webRoot" 	description="WEB的根目录" 		value="E:\workspace\runtime-New_configuration\LOCAL\myweb"/>
+	<property name="webSrcRoot" description="WEB发布的SRC目录"	value="E:\workspace\runtime-New_configuration\LOCAL\websrc"/>
+	<property name="appMapping"	description="WEB应用的映射路径"	value="myweb"/>
+	<property name="appName"	description="WEB应用的名称"		value="myweb.war"/>
+	<property name="guicp"		description="GUI元数据发布的classes路径"	value="E:\workspace\runtime-New_configuration\LOCAL\classes"/>
+	<property name="solution_lib"	description="解决方案的LIB目录"		value="E:\workspace\runtime-New_configuration\LOCAL\lib"/>
+	<property name="javac1.5"			value="${dir.sol_template}/jdk1.5/bin/javac"/>
+	
+	<target name="deploy4Test" description="打包到测试环境" depends="init,compile,copy4Test"/>
+	
+	<target name="init" description="初始化">
+		<mytask description="测试系统当前的环境变量"/>
+	</target>
+	
+	<target name="compile"	description="编译">
+		<property name="compiler.version" value="1.5"/>
+		<delete dir="${webRoot}/WEB-INF/classes"/>
+		<mkdir dir="${webRoot}/WEB-INF/classes"/>
+		<echo message="${guicp}"/>
+		<javac srcdir="${webSrcRoot}" destdir="${webRoot}/WEB-INF/classes" 
+			debug="on"
+			fork="true" executable="${javac1.5}" 
+			source="1.5" target="1.5"
+			nowarn="true"
+			taskname="javac1.5">
+			<classpath path="${guicp}">
+				<fileset dir="${solution_lib}">
+					<include name="sp/**/*.zip"/>
+					<include name="sp/**/*.jar"/>
+					<include name="**/metadata.jar"/>
+					<include name="**/eas_framework*.jar"/>  
+					<include name="**/common*.jar"/> 
+					<include name="**/jdom*.jar"/>  
+					<include name="**/*.jar"/>
+				</fileset>
+				<fileset dir="${webRoot}/WEB-INF/lib">
+					<include name="**/*.jar"/>
+					<include name="**/*.zip"/>
+				</fileset>
+				<fileset dir="${dir.project}/web/webRoot/WEB-INF/lib">
+					<include name="**/*.jar"/>
+					<include name="**/*.zip"/>
+				</fileset>
+				<fileset dir="${javac1.5}/../..">
+					<include name="**/*.jar"/>
+					<include name="**/*.zip"/>
+				</fileset>
+			</classpath>
+		</javac>
+		<copy description="拷贝资源文件" todir="${webRoot}/WEB-INF/classes">
+			<fileset dir="${webSrcRoot}">
+				<include name="**/*.properties"/>
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="copy4Test" description="打包到EAR环境">
+		<!--
+		<delete dir="${earRoot}/${appName}"/>
+		-->
+		<mkdir dir="${earRoot}/${appName}"/>
+		<copy todir="${earRoot}/${appName}" preservelastmodified="on">
+			<fileset dir="${webRoot}">
+				<include name="**/*.*"/>
+			</fileset>
+		</copy>
+		
+		<webconfig applicationFile="${earRoot}/META-INF/application.xml" uri="${appName}" rootPath="${appMapping}"/>
+	</target>
+	
+	
+</project>

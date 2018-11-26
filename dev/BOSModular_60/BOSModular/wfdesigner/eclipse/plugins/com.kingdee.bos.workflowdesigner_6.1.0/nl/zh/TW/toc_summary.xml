@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+<toc label="概述">
+	<topic label="簡介" href="help/summary/simple-intro.htm"/>
+	<topic label="架構" href="help/summary/art.htm"/>
+	<topic label="解決方案" href="help/summary/solution.htm"/>
+	<topic label="特性" href="help/summary/speciality-top.htm">
+		<topic label="方便易用的流程建模工具" href="help/summary/speciality-top-wfdesigner.htm"/>
+		<topic label="強大的工作流引擎" href="help/summary/speciality-wfengine.htm"/>
+	</topic>	
+</toc>

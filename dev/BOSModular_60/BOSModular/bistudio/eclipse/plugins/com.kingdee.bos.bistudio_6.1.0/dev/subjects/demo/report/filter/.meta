@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Meta>
+	<Element name="." caption="过滤器" />
+	<Element name="filter.olaprpt" caption="产品地区销售分析(标准过滤)" />
+	<Element name="demo_filter2.olaprpt" caption="产品地区销售分析(标准过滤2)" />
+	<Element name="demo_filter_cube.olaprpt" caption="产品地区销售分析(过滤器宏作用于cube)" />
+</Meta>
+

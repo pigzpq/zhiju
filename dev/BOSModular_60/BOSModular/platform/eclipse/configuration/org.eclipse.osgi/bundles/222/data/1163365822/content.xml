@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?metadataRepository class='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'?>
+<repository name='dropins metadata repo: file:/D:/bos/BOSModular/nlpack/' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.system' value='true'/>
+    <property name='p2.timestamp' value='1540128715812'/>
+  </properties>
+  <units size='8'>
+    <unit id='com.kingdee.bos.bim.nl' version='6.0.0' singleton='false'>
+      <update id='com.kingdee.bos.bim.nl' range='[0.0.0,6.0.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='BimNL Fragment'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Kingdee Software'/>
+        <property name='file.name' value='D:\bos\BOSModular\nlpack\eclipse\plugins\com.kingdee.bos.bimnl_6.1.0'/>
+        <property name='file.lastModified' value='1540115245718'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.bim.nl' version='6.0.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.bim.nl' version='6.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='osgi.fragment' name='com.kingdee.bos.bim' version='6.0.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.bim' range='[6.0.0,7.0.0)'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.bim.nl' version='6.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Bundle-Name: BimNL Fragment&#xA;Bundle-Version: 6.0.0&#xA;Fragment-Host: com.kingdee.bos.bim;bundle-version=&quot;[6.0.0,7.0.0)&quot;&#xA;Bundle-SymbolicName: com.kingdee.bos.bim.nl&#xA;Bundle-Localization: plugin&#xA;Manifest-Version: 1.0&#xA;Bundle-ClassPath: bimnl.jar&#xA;Bundle-Vendor: Kingdee Software&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.kingdee.bos.tool.toolcommon.nl1' version='6.0.0' singleton='false'>
+      <update id='com.kingdee.bos.tool.toolcommon.nl1' range='[0.0.0,6.0.0)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Nl1 Fragment'/>
+        <property name='file.name' value='D:\bos\BOSModular\nlpack\eclipse\plugins\com.kingdee.bos.toolcommon.nl1_6.1.0'/>
+        <property name='file.lastModified' value='1540115245406'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.tool.toolcommon.nl1' version='6.0.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.tool.toolcommon.nl1' version='6.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='osgi.fragment' name='com.kingdee.bos.tool.toolcommon' version='6.0.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.tool.toolcommon' range='[6.0.0,7.0.0)'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.tool.toolcommon.nl1' version='6.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Bundle-Version: 6.0.0&#xA;Manifest-Version: 1.0&#xA;Bundle-SymbolicName: com.kingdee.bos.tool.toolcommon.nl1&#xA;Bundle-Name: Nl1 Fragment&#xA;Fragment-Host: com.kingdee.bos.tool.toolcommon;bundle-version=&quot;[6.0.0,7.0.0)&quot;&#xA;Bundle-Localization: plugin&#xA;Bundle-ClassPath: toolcommon.nl1.jar&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.kingdee.bos.license.nl' version='5.4.0' singleton='false'>
+      <update id='com.kingdee.bos.license.nl' range='[0.0.0,5.4.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='BOSLicenseNL Fragment'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Kingdee Software'/>
+        <property name='file.name' value='D:\bos\BOSModular\nlpack\eclipse\plugins\com.kingdee.bos.boslicensenl_6.1.0'/>
+        <property name='file.lastModified' value='1540115245625'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.license.nl' version='5.4.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.license.nl' version='5.4.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='osgi.fragment' name='com.kingdee.bos.license' version='5.4.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.license' range='5.4.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.license.nl' version='5.4.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Bundle-Name: BOSLicenseNL Fragment&#xA;Bundle-Version: 5.4.0&#xA;Fragment-Host: com.kingdee.bos.license;bundle-version=&quot;5.4.0&quot;&#xA;Bundle-SymbolicName: com.kingdee.bos.license.nl&#xA;Bundle-Localization: plugin&#xA;Manifest-Version: 1.0&#xA;Bundle-ClassPath: BOSLicenseNL.jar&#xA;Bundle-Vendor: Kingdee Software&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.kingdee.bos.workflow.designer.nl1' version='5.4.0' singleton='false'>
+      <update id='com.kingdee.bos.workflow.designer.nl1' range='[0.0.0,5.4.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='wfDesignerNL Fragment'/>
+        <property name='org.eclipse.equinox.p2.provider' value='KINGDEE'/>
+        <property name='file.name' value='D:\bos\BOSModular\nlpack\eclipse\plugins\com.kingdee.bos.wfdesignernl_6.1.0'/>
+        <property name='file.lastModified' value='1540115245359'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.workflow.designer.nl1' version='5.4.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.workflow.designer.nl1' version='5.4.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='osgi.fragment' name='com.kingdee.bos.workflow.designer' version='5.4.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.workflow.designer' range='5.4.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.workflow.designer.nl1' version='5.4.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Bundle-Name: wfDesignerNL Fragment&#xA;Bundle-Version: 5.4.0&#xA;Fragment-Host: com.kingdee.bos.workflow.designer;bundle-version=&quot;5.4.0&quot;&#xA;Bundle-SymbolicName: com.kingdee.bos.workflow.designer.nl1&#xA;Bundle-Localization: plugin&#xA;Manifest-Version: 1.0&#xA;Bundle-ClassPath: wfdesignernl.jar&#xA;Bundle-Vendor: KINGDEE&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.kingdee.bos.studio.nl1' version='6.0.0' singleton='false'>
+      <update id='com.kingdee.bos.studio.nl1' range='[0.0.0,6.0.0)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='NewStudioNL Fragment'/>
+        <property name='file.name' value='D:\bos\BOSModular\nlpack\eclipse\plugins\com.kingdee.bos.newstudio.nl1_6.1.0'/>
+        <property name='file.lastModified' value='1540115245484'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.studio.nl1' version='6.0.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.studio.nl1' version='6.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='osgi.fragment' name='com.kingdee.bos.studio' version='6.0.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.studio' range='[6.0.0,7.0.0)'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.studio.nl1' version='6.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Bundle-Version: 6.0.0&#xA;Manifest-Version: 1.0&#xA;Bundle-SymbolicName: com.kingdee.bos.studio.nl1&#xA;Bundle-Name: NewStudioNL Fragment&#xA;Fragment-Host: com.kingdee.bos.studio;bundle-version=&quot;[6.0.0,7.0.0)&quot;&#xA;Bundle-Localization: plugin&#xA;Bundle-ClassPath: newstudio.nl1.jar&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.kingdee.bos.rcs.nl1' version='1.0.0' singleton='false'>
+      <update id='com.kingdee.bos.rcs.nl1' range='[0.0.0,1.0.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='rcsNL Fragment'/>
+        <property name='org.eclipse.equinox.p2.provider' value='KINGDEE'/>
+        <property name='file.name' value='D:\bos\BOSModular\nlpack\eclipse\plugins\com.kingdee.bos.rcsnl_6.1.0'/>
+        <property name='file.lastModified' value='1540115245453'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.rcs.nl1' version='1.0.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.rcs.nl1' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='osgi.fragment' name='com.kingdee.bos.rcs' version='1.0.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.rcs' range='[4.1.0,6.0.0)'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.rcs.nl1' version='1.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Bundle-Name: rcsNL Fragment&#xA;Bundle-Version: 1.0.0&#xA;Fragment-Host: com.kingdee.bos.rcs;bundle-version=&quot;[4.1.0,6.0.0)&quot;&#xA;Bundle-SymbolicName: com.kingdee.bos.rcs.nl1&#xA;Bundle-Localization: plugin&#xA;Manifest-Version: 1.0&#xA;Bundle-ClassPath: rcsNL.jar&#xA;Bundle-Vendor: KINGDEE&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.kingdee.bos.boswebservice.nl' version='5.4.0' singleton='false'>
+      <update id='com.kingdee.bos.boswebservice.nl' range='[0.0.0,5.4.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='BOSWebServiceNL Fragment'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Kingdee Software'/>
+        <property name='file.name' value='D:\bos\BOSModular\nlpack\eclipse\plugins\com.kingdee.bos.boswebservicenl_6.1.0'/>
+        <property name='file.lastModified' value='1540115245515'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.boswebservice.nl' version='5.4.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.boswebservice.nl' version='5.4.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='osgi.fragment' name='com.kingdee.bos.boswebservice' version='5.4.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.boswebservice' range='5.4.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.boswebservice.nl' version='5.4.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Bundle-Name: BOSWebServiceNL Fragment&#xA;Bundle-Version: 5.4.0&#xA;Fragment-Host: com.kingdee.bos.boswebservice;bundle-version=&quot;5.4.0&quot;&#xA;Bundle-SymbolicName: com.kingdee.bos.boswebservice.nl&#xA;Bundle-Localization: plugin&#xA;Manifest-Version: 1.0&#xA;Bundle-ClassPath: boswebservicenl.jar&#xA;Bundle-Vendor: Kingdee Software&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.kingdee.bos.tool.toolbase.nl1' version='1.0.0' singleton='false'>
+      <update id='com.kingdee.bos.tool.toolbase.nl1' range='[0.0.0,1.0.0)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Nl1 Fragment'/>
+        <property name='file.name' value='D:\bos\BOSModular\nlpack\eclipse\plugins\com.kingdee.bos.toolbase.nl1_6.1.0'/>
+        <property name='file.lastModified' value='1540115245421'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.tool.toolbase.nl1' version='1.0.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.tool.toolbase.nl1' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='osgi.fragment' name='com.kingdee.bos.tool.toolbase' version='1.0.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.tool.toolbase' range='[6.0.0,7.0.0)'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.tool.toolbase.nl1' version='1.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Bundle-Version: 1.0.0&#xA;Manifest-Version: 1.0&#xA;Bundle-SymbolicName: com.kingdee.bos.tool.toolbase.nl1&#xA;Bundle-Name: Nl1 Fragment&#xA;Fragment-Host: com.kingdee.bos.tool.toolbase;bundle-version=&quot;[6.0.0,7.0.0)&quot;&#xA;Bundle-Localization: plugin&#xA;Bundle-ClassPath: toolbase.nl1.jar&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+  </units>
+</repository>

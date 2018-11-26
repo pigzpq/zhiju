@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=GB2312">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="../../../../book.css" CHARSET="GB2312" TYPE="text/css">
+<TITLE>
+如何将以前定义成从CoreUIObject继承的UI ，改成从EditUI或其它UI继承呢
+</TITLE>
+
+<link rel="stylesheet" type="text/css" HREF="../../../../book.css">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H3>如何将以前定义成从CoreUIObject继承的UI ，改成从EditUI或其它UI继承呢</H3>
+<p>假设现有 BTPMakeBillFromUI.ui文件，是从CoreUIObject继承的，现要改成从EditUI继承，具体做法如下：</p>
+<p>A）、将BTPMakeBillFromUI.ui文件以UTF-8格式用文本编辑器打开；</p>
+<p>B）、在&lt;title&gt;与&lt;components&gt;节点之间增加以下节点，其中package所对应的value是指父UI的包路径全称，name所对应的value是指父UI名称：</br>
+&lt;parent><br>
+&nbsp;&nbsp;&nbsp; &lt;key name="package" value="com.kingdee.eas.framework.client" /><br> 
+&nbsp;&nbsp;&nbsp; &lt;key name="name" value="EditUI" / ><br> 
+&lt;/parent>
+</p>
+<p>C）、在所有&lt;component>节点中，删除&lt;component>节点下&lt;name>节点值为当前UI名称、以及当前UI名称+"_toobar"、当前UI名称+"_menubar"的三个&lt;component>点。在本例中，即删除以下三个节点：<br>
+&lt;component><br>
+&nbsp;&nbsp;&nbsp; &lt;name>BTPMakeBillFromUI&lt;/name><br>
+&nbsp;&nbsp;&nbsp; &lt;classType>com.kingdee.bos.ctrl.swing.KDPanel&lt;/classType><br>
+&nbsp;&nbsp;&nbsp; &lt;isContainer>true&lt;/isContainer><br>
+&nbsp;&nbsp;&nbsp; &lt;constraints>10,10,300,150&lt;/constraints><br>
+&nbsp;&nbsp;&nbsp; &lt;tabIndex>0&lt;/tabIndex><br>
+&nbsp;&nbsp;&nbsp; &lt;herited>false&lt;/herited><br>
+&nbsp;&nbsp;&nbsp; &lt;layoutInfo><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;name>kDLayout1&lt;/name><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;type>KDLayout&lt;/type><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;value /><br> 
+&nbsp;&nbsp;&nbsp; &lt;/layoutInfo><br>
+&lt;/component><br>
+&lt;component><br>
+&nbsp;&nbsp;&nbsp; &lt;name>BTPMakeBillFromUI_toolbar&lt;/name><br>
+&nbsp;&nbsp;&nbsp; &lt;classType>com.kingdee.bos.ctrl.swing.KDToolbar&lt;/classType><br>
+&nbsp;&nbsp;&nbsp; &lt;isContainer>true&lt;/isContainer><br>
+&nbsp;&nbsp;&nbsp; &lt;constraints>10,10,300,150&lt;/constraints><br>
+&nbsp;&nbsp;&nbsp; &lt;tabIndex>0&lt;/tabIndex><br>
+&nbsp;&nbsp;&nbsp; &lt;herited>false&lt;/herited><br>
+&nbsp;&nbsp;&nbsp; &lt;layoutInfo><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;name>kDLayout1&lt;/name><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;type>KDLayout&lt;/type><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;value /><br> 
+&nbsp;&nbsp;&nbsp; &lt;/layoutInfo><br>
+&lt;/component><br>
+&lt;component><br>
+&nbsp;&nbsp;&nbsp; &lt;name>BTPMakeBillFromUI_menubar&lt;/name><br>
+&nbsp;&nbsp;&nbsp; &lt;classType>com.kingdee.bos.ctrl.swing.KDMenubar&lt;/classType><br>
+&nbsp;&nbsp;&nbsp; &lt;isContainer>true&lt;/isContainer><br>
+&nbsp;&nbsp;&nbsp; &lt;constraints>10,10,300,150&lt;/constraints><br>
+&nbsp;&nbsp;&nbsp; &lt;tabIndex>0&lt;/tabIndex><br>
+&nbsp;&nbsp;&nbsp; &lt;herited>false&lt;/herited><br>
+&nbsp;&nbsp;&nbsp; &lt;layoutInfo><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;name>kDLayout1&lt;/name><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;type>KDLayout&lt;/type><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;value /><br> 
+&nbsp;&nbsp;&nbsp; &lt;/layoutInfo><br>
+&lt;/component>
+</p>
+<p>D）、在所有&lt;component>节点的孩子节点中，找到如下节点：</br>
+&lt;parent><br>
+&nbsp;&nbsp;&nbsp; &lt;key name="name" value="BTPMakeBillFromUI" /><br> 
+&lt;/parent>
+</br>将其中的BTPMakeBillFromUI替换成CoreUI
+</p>
+<p>
+E）、在所有节点的孩子节点中，找到如下节点：</br>
+&lt;parent><br>
+&nbsp;&nbsp;&nbsp; &lt;key name="name" value="BTPMakeBillFromUI_toolbar" /><br> 
+&lt;/parent>
+</br>将其中的BTPMakeBillFromUI_toolbar替换成CoreUI_toolbar
+</p>
+<p>F）、在所有&lt;component>节点中，找到如下节点：</br>
+&lt;parent><br>
+&nbsp;&nbsp;&nbsp; &lt;key name="name" value="BTPMakeBillFromUI_menubar" /><br> 
+&lt;/parent>
+</br>将其中的BTPMakeBillFromUI_menubar替换成CoreUI_menubar
+</p>
+<p>G）、最后，将修改过的文件以UTF-8文件格式保存即可。</p>
+
+
+<p align="center"><a href="../../../../notices.html"><img border="0" src="../../../../copyright.gif"></a></p>
+<p></p>
+</BODY>
+</HTML>

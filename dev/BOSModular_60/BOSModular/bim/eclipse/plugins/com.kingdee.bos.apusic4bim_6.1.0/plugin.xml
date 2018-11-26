@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="com.kingdee.bos.apusic"
+   name="Apusic Plug-in"
+   version="1.0.0"
+   provider-name="">
+
+   <runtime>
+      <library name="apusic.jar">
+         <export name="*"/>
+      </library>
+      <library name="standard.jar">
+         <export name="*"/>
+      </library>
+      <library name="razor.jar">
+         <export name="*"/>
+      </library>
+      <library name="mejb.jar">
+         <export name="*"/>
+      </library>
+      <library name="ldapsp.jar">
+         <export name="*"/>
+      </library>
+      <library name="ldapjdk.jar">
+         <export name="*"/>
+      </library>
+      <library name="jhall.jar">
+         <export name="*"/>
+      </library>
+      <library name="jgroups-all.jar">
+         <export name="*"/>
+      </library>
+      <library name="jaxb-xjc.jar">
+         <export name="*"/>
+      </library>
+      <library name="jaxb-impl.jar">
+         <export name="*"/>
+      </library>
+      <library name="gftool.jar">
+         <export name="*"/>
+      </library>
+      <library name="firststep.jar">
+         <export name="*"/>
+      </library>
+      <library name="elite.jar">
+         <export name="*"/>
+      </library>
+      <library name="dsn.jar">
+         <export name="*"/>
+      </library>
+      <library name="deploy.jar">
+         <export name="*"/>
+      </library>
+      <library name="concurrent.jar">
+         <export name="*"/>
+      </library>
+      <library name="apusic-launcher.jar">
+         <export name="*"/>
+      </library>
+      <library name="apusic-client.jar">
+         <export name="*"/>
+      </library>
+      <library name="ext/bcprov-jdk15-138.jar">
+         <export name="*"/>
+      </library>
+      <library name="ext/operamasks-third-party.jar">
+         <export name="*"/>
+      </library>
+      <library name="ext/toplink-essentials.jar">
+         <export name="*"/>
+      </library>
+      <library name="ext/toplink-essentials-agent.jar">
+         <export name="*"/>
+      </library>
+      <library name="common/apusic-resources.jar">
+         <export name="*"/>
+      </library>
+      <library name="common/elite-api.jar">
+         <export name="*"/>
+      </library>
+      <library name="common/javaee.jar">
+         <export name="*"/>
+      </library>
+      <library name="common/jaxb-api.jar">
+         <export name="*"/>
+      </library>
+      <library name="common/jsf-api.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+</plugin>

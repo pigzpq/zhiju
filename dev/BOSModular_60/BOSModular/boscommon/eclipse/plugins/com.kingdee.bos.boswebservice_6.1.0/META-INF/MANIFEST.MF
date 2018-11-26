@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-Name: BOSWebService Plug-in
+Bundle-SymbolicName: com.kingdee.bos.boswebservice
+Bundle-Version: 6.1.0
+Bundle-ClassPath: boswebservice.jar,
+ webapp/WEB-INF/lib/axis.jar,
+ webapp/WEB-INF/lib/jaxrpc.jar
+Bundle-Localization: plugin
+Require-Bundle: com.kingdee.bos.metadata,
+ com.kingdee.bos.orm,
+ org.log4j,
+ com.j2ee,
+ org.junit,
+ org.jdom;bundle-version="[0.9.0,1.0.0)"
+Provide-Package: com.kingdee.bos.webservice,
+ com.kingdee.bos.webservice.tool,
+ com.kingdee.bos.webservice.tool.config
+Bundle-Vendor: Kingdee Sofeware Co, Limited

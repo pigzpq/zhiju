@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="获取职位对应的组织信息">
+    <script><![CDATA[if(null == positionID || "".equals(positionID.toString()))
+			return null;		
+		return new com.kingdee.eas.basedata.org.AdminOrgFacade(__bosContext).getComAndDeptByPositionId(positionID.toString());]]></script>
+    <description><![CDATA[根据职位ID获取该职位对应的组织
+相关信息]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>OBJECTVALUE</type>
+      <description><![CDATA[返回组织信息数组(AdminOrgUnitInfo)]]></description>
+      <isArray>true</isArray>
+    </return>
+    <parameter>
+      <name>positionID</name>
+      <type>BOID</type>
+      <description><![CDATA[职位ID]]></description>
+    </parameter>
+  </function>
+</functions>
+

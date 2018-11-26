@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="获取被委托的组织集合">
+    <script><![CDATA[com.kingdee.eas.basedata.org.IOrgUnitRelation iOrgUnitRelation = 
+	com.kingdee.eas.basedata.org.OrgUnitRelationFactory.getLocalInstance(__bosContext);
+return iOrgUnitRelation.getToUnit(fromOrgUnitID, fromOrgType, toOrgType);]]></script>
+    <description><![CDATA[根据委托组织及被委托组织类型获取被委托的组织集合。
+附组织类型枚举值:
+	行政组织:0 
+	财务组织:1
+	销售组织:2
+	采购组织:3
+	库存组织:4
+	成本中心:5
+	利润中心:6
+	HR组织:16]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>OBJECT</type>
+      <array>false</array>
+      <description><![CDATA[被委托的组织集合(数据类型:OrgUnitCollection)]]></description>
+    </return>
+    <parameter>
+      <name>fromOrgUnitID</name>
+      <type>STRING</type>
+      <array>false</array>
+      <description><![CDATA[委托组织内码(ID)]]></description>
+    </parameter>
+    <parameter>
+      <name>fromOrgType</name>
+      <type>INTEGER</type>
+      <array>false</array>
+      <description><![CDATA[委托组织类型]]></description>
+    </parameter>
+    <parameter>
+      <name>toOrgType</name>
+      <type>INTEGER</type>
+      <array>false</array>
+      <description><![CDATA[被委托组织类型]]></description>
+    </parameter>
+  </function>
+</functions>
+

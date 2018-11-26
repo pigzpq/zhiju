@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizTemplate xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.bos.bim.templates</package>
+    <name>BizMCoreBillBaseTemplate</name>
+    <alias>bizTemplate[com.kingdee.bos.bim.templates.BizMCoreBillBaseTemplate].alias</alias>
+    <description>bizTemplate[com.kingdee.bos.bim.templates.BizMCoreBillBaseTemplate].description</description>
+    <userDefined>false</userDefined>
+    <bizType>BusinessBill</bizType>
+    <template>true</template>
+    <entityPK>com.kingdee.bos.bim.templates.app.BizMCoreBillBase</entityPK>
+    <queryPK>com.kingdee.bos.bim.templates.app.BizMCoreBillBaseQuery</queryPK>
+    <editUIPK>com.kingdee.bos.bim.templates.client.BizMCoreBillEditUI</editUIPK>
+    <listUIPK>com.kingdee.bos.bim.templates.client.BizMCoreBillListUI</listUIPK>
+    <entityFunctionPK />
+    <editUIFunctionPK>com.kingdee.bos.bim.templates.app.BizMCoreBillBaseEditUIFunc</editUIFunctionPK>
+    <listUIFunctionPK>com.kingdee.bos.bim.templates.app.BizMCoreBillBaseListUIFunc</listUIFunctionPK>
+    <entryUIPK />
+    <versionDate />
+    <versionNumber />
+    <extendTablePKs />
+    <extendEntityPKs />
+    <extendQueryPKs />
+    <extendEditUIPKs />
+    <extendListUIPKs />
+    <menuPKList />
+    <bimTemplateType>MCoreBillBase</bimTemplateType>
+    <relatedTablePK />
+    <relatedEntityPK />
+    <relatedEditUIPK />
+    <genImplementCode>true</genImplementCode>
+    <resource>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizMCoreBillBaseTemplate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="多分录基础单据模板" />
+            <lang locale="zh_TW" value="多分錄基礎單據範本" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizMCoreBillBaseTemplate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="多分录基础单据模板" />
+            <lang locale="zh_TW" value="多分錄基礎單據範本" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizMCoreBillBaseTemplate].extendedProperty.BizUnitDeployed">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizMCoreBillBaseTemplate].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizTemplate[com.kingdee.bos.bim.templates.BizMCoreBillBaseTemplate].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizTemplate>
+

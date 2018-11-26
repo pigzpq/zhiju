@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cem:CommonEvent xmlns:cem="http://www.kingdee.com/bos/event/model/cem">
+  <cem:Id>99996a86-9999-1000-e000-0000c0a813a5WFEVPRCM</cem:Id>
+  <cem:Name>XXWebFormSubmitEvent</cem:Name>
+  <cem:Alias>XXWebFormSubmit Event</cem:Alias>
+  <cem:Description>XXWebFormSubmit Event Descr</cem:Description>
+  <cem:Type>BOS</cem:Type>
+  <cem:Version>1.0</cem:Version>
+  <cem:Priority>50</cem:Priority>
+  <cem:Severity>50</cem:Severity>
+  <cem:Group>BOS</cem:Group>
+  <cem:ExpirationDate></cem:ExpirationDate>
+  <cem:FilterRuleSets/>
+  <cem:ExtendedDatas>
+    <cem:ExtendedData>
+      <cem:Name>XXWebFormID</cem:Name>
+      <cem:DataType>java.lang.String</cem:DataType>
+      <cem:Value>XXWebFormIDValue</cem:Value>
+      <cem:DefaultValue>XXWebFormIDDefaultValue</cem:DefaultValue>
+      <cem:MappingParameterName></cem:MappingParameterName>
+    </cem:ExtendedData>
+  </cem:ExtendedDatas>
+</cem:CommonEvent><!--XXWebForm Test Event-->

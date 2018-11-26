@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?metadataRepository class='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'?>
+<repository name='dropins metadata repo: file:/D:/bos/BOSModular/bosideupdate/' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.system' value='true'/>
+    <property name='p2.timestamp' value='1540128715796'/>
+  </properties>
+  <units size='1'>
+    <unit id='com.kingdee.bos.bosideupdate' version='6.0.0'>
+      <update id='com.kingdee.bos.bosideupdate' range='[0.0.0,6.0.0)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='BOSIDEUpdate Plug-in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Kingdee Software'/>
+        <property name='file.name' value='D:\bos\BOSModular\bosideupdate\eclipse\plugins\com.kingdee.bos.bosideupdate_6.1.0'/>
+        <property name='file.lastModified' value='1540128704953'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.kingdee.bos.bosideupdate' version='6.0.0'/>
+        <provided namespace='osgi.bundle' name='com.kingdee.bos.bosideupdate' version='6.0.0'/>
+        <provided namespace='java.package' name='com.kingdee.bos.bosideupdate.update' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='5'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.log4j' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.jdom' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.kingdee.bos.license' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.kingdee.bos.bosideupdate' version='6.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Export-Package: com.kingdee.bos.bosideupdate.update&#xA;Bundle-Localization: plugin&#xA;Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.log4j,org.jdom,com.kingdee.bos.license&#xA;Bundle-Activator: com.kingdee.bos.bosideupdate.BOSIDEUpdatePlugin&#xA;Bundle-Name: BOSIDEUpdate Plug-in&#xA;Bundle-Version: 6.0.0&#xA;Bundle-Vendor: Kingdee Software&#xA;Bundle-SymbolicName: com.kingdee.bos.bosideupdate; singleton:=true&#xA;Bundle-ActivationPolicy: lazy&#xA;Manifest-Version: 1.0&#xA;Bundle-ClassPath: bosideupdate.jar&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+  </units>
+</repository>

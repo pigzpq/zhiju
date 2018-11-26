@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: KScriptTool Plug-in
+Bundle-SymbolicName: com.kingdee.bos.KScriptTool;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-RequiredExecutionEnvironment: J2SE-1.4
+Require-Bundle: com.kingdee.bos.common,
+ com.kingdee.bos.kscript,
+ com.kingdee.bos.orm,
+ com.kingdee.bos.bosframework,
+ org.log4j,
+ org.eclipse.swt,
+ org.eclipse.jface,
+ org.eclipse.jface.databinding,
+ org.eclipse.jface.text,
+ org.eclipse.equinox.common,
+ org.eclipse.osgi,
+ javax.servlet
+Export-Package: com.kingdee.bos.kscript.debug,
+ com.kingdee.bos.kscript.debug.remote,
+ com.kingdee.bos.kscript.debug.ui,
+ com.kingdee.bos.kscript.debug.ui.swt,
+ com.kingdee.bos.util.lightremote
+Bundle-ClassPath: kscripttool.jar
+Bundle-Vendor: Kingdee Software (China) Company Ltd

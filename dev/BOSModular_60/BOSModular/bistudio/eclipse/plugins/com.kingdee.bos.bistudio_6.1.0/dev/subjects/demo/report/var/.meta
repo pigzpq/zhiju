@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Meta>
+	<Element name="." caption="变量" />
+	<Element name="demo_ds_var.olaprpt" caption="产品近10年销售情况分析(作用于数据源)" />
+	<Element name="demo_mdx_var.olaprpt" caption="2000年产品销售情况分析(作用于MDX)" />
+	<Element name="demo_marco_var.olaprpt" caption="产品近X年销售分析(变量使用过滤器宏)" />
+	<Element name="demo_ds_var3.olaprpt" caption="产品第1年销售情况分析(变量获取年)" />
+</Meta>
+

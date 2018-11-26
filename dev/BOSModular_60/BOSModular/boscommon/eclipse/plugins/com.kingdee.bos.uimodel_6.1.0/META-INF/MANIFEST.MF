@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bundle-Name: UIModel Plug-in
+Bundle-SymbolicName: com.kingdee.bos.ui.uimodel;singleton=true
+Bundle-Version: 6.1.0
+Bundle-ClassPath: uiModel.jar
+Bundle-Localization: plugin
+Eclipse-AutoStart: true
+Require-Bundle: com.kingdee.bos.ctrl,
+ org.junit,
+ org.log4j,
+ com.kingdee.bos.metadata,
+ com.kingdee.bos.bosframework,
+ com.kingdee.bos.orm,
+ com.kingdee.bos.invokeservice
+Provide-Package: com.kingdee.bos.appframework.client.servicebinding,
+ com.kingdee.bos.appframework.databinding,
+ com.kingdee.bos.appframework.exception,
+ com.kingdee.bos.appframework.stateManage,
+ com.kingdee.bos.appframework.uip,
+ com.kingdee.bos.appframework.uistatemanage,
+ com.kingdee.bos.appframework.validator,
+ com.kingdee.bos.ui,
+ com.kingdee.bos.ui.StateManage,
+ com.kingdee.bos.ui.bindserver,
+ com.kingdee.bos.ui.face,
+ com.kingdee.bos.ui.util
+Bundle-Vendor: Kingdee Software (China) Company Ltd.

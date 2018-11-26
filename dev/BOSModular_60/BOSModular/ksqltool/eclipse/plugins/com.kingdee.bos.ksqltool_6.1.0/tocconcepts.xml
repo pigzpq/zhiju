@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Concepts" link_to="toc.xml#concepts"> 
+	<topic label="K-SQL语法要点"  href="html/concepts/maintopic.html"> 
+		<topic label="K-SQL语法摘要" href="html/concepts/subtopic.html" /> 
+	</topic>
+	<topic label="K-SQL TOOL对象浏览器">
+		<topic label="对象浏览器" href="html/concepts/subtopic2.html" /> 
+	</topic> 
+</toc>

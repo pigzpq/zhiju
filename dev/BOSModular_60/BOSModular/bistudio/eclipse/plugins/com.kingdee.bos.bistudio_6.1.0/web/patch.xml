@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<patch toolversion="1.0">
+  <information patchName="" applyCustomer="所有客户" applyVersion="" 
+  patchType="功能改进" feedbackNumber="" instancyGrade="" 
+  dependRelation="" issueDate="" isIncludeMetas="false" 
+  isDataRepair="false" industry="GE">
+    <fix subsystem="BI报表">
+      <param>
+        <name>questionDescription</name>
+        <value><![CDATA[二次开发的BI报表]]></value>
+      </param>
+    </fix>
+  </information>
+  <publishInfo>
+    <param>
+      <name>specDesc</name>
+      <value></value>
+    </param>
+  </publishInfo>
+  <componentList>
+  </componentList>
+  <scriptList/>
+</patch>

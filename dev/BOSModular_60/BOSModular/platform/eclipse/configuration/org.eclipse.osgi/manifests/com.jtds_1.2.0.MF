@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Generated-from: 1215054076000;type=2
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: com.jtds
+Bundle-Version: 1.2
+Bundle-ClassPath: jtds-1.2.jar
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: net.sourceforge.jtds.jdbc,
+ net.sourceforge.jtds.jdbc.cache,
+ net.sourceforge.jtds.jdbcx,
+ net.sourceforge.jtds.jdbcx.proxy,
+ net.sourceforge.jtds.ssl,
+ net.sourceforge.jtds.util

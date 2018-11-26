@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<exceptionDatas>
+	<exceptionData exceptionValue="com.kingdee.eas.common.EASBizException">
+		<name>
+			<Language Locale="l1"><![CDATA[EASBizException]]></Language>
+			<Language Locale="l2"><![CDATA[EAS业务异常]]></Language>
+			<Language Locale="l3"><![CDATA[EAS業務異常]]></Language>
+		</name>
+	</exceptionData>
+	<exceptionData exceptionValue="com.kingdee.bos.BOSException">
+		<name>
+			<Language Locale="l1"><![CDATA[BOSException]]></Language>
+			<Language Locale="l2"><![CDATA[BOS异常]]></Language>
+			<Language Locale="l3"><![CDATA[BOS異常]]></Language>
+		</name>
+	</exceptionData>
+	<exceptionData exceptionValue="com.kingdee.bos.dao.DataAccessException">
+		<name>
+			<Language Locale="l1"><![CDATA[DataAccessException]]></Language>
+			<Language Locale="l2"><![CDATA[数据异常]]></Language>
+			<Language Locale="l3"><![CDATA[數據異常]]></Language>
+		</name>
+	</exceptionData>
+	<exceptionData exceptionValue="com.kingdee.eas.permission.PermissionException">
+		<name>
+			<Language Locale="l1"><![CDATA[PermissionException]]></Language>
+			<Language Locale="l2"><![CDATA[权限异常]]></Language>
+			<Language Locale="l3"><![CDATA[權限異常]]></Language>
+		</name>
+	</exceptionData>
+	<exceptionData exceptionValue="com.kingdee.bos.workflow.WfException">
+		<name>
+			<Language Locale="l1"><![CDATA[WfException]]></Language>
+			<Language Locale="l2"><![CDATA[工作流异常]]></Language>
+			<Language Locale="l3"><![CDATA[工作流異常]]></Language>
+		</name>
+	</exceptionData>
+</exceptionDatas>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by Along (Kingdee) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="DashBoard">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="Styles">
+					<xs:complexType>
+						<xs:all minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="Style">
+								<xs:complexType>
+									<xs:all minOccurs="0">
+										<xs:element name="fontFamily"/>
+										<xs:element name="fontSize"/>
+										<xs:element name="color"/>
+										<xs:element name="fontStyle"/>
+										<xs:element name="fontWeight"/>
+										<xs:element name="textDecoration"/>
+										<xs:element name="textAlign"/>
+										<xs:element name="verticalAlign"/>
+										<xs:element name="backgroundColor"/>
+									</xs:all>
+									<xs:attribute name="id" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Contents">
+					<xs:complexType>
+						<xs:all minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="Cell">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="id" type="xs:string" use="required"/>
+											<xs:attribute name="type" use="required">
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+														<xs:enumeration value="text"/>
+														<xs:enumeration value="piece"/>
+														<xs:enumeration value="picture"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+											<xs:attribute name="style" type="xs:string" use="optional"/>
+											<xs:attribute name="showTitle" type="xs:boolean" use="optional"/>
+											<xs:attribute name="title" type="xs:string" use="optional"/>
+											<xs:attribute name="scale" use="optional">
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+														<xs:enumeration value="filled"/>
+														<xs:enumeration value="original"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Variants" minOccurs="0">
+					<xs:complexType>
+						<xs:all maxOccurs="unbounded">
+							<xs:element name="Sql">
+								<xs:complexType>
+									<xs:all>
+										<xs:element name="Description" type="xs:string" minOccurs="0"/>
+										<xs:element name="Content" minOccurs="0">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="import" type="xs:boolean" use="optional" default="false"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:all>
+									<xs:attribute name="name" type="xs:string" use="required"/>
+									<xs:attribute name="ref" type="xs:string" use="optional"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Layout">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Table">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ColGroup">
+											<xs:complexType>
+												<xs:all maxOccurs="unbounded">
+													<xs:element name="Col">
+														<xs:complexType>
+															<xs:attribute name="width" type="xs:string" use="optional"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:all>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="TBody">
+											<xs:complexType>
+												<xs:all maxOccurs="unbounded">
+													<xs:element name="TR">
+														<xs:complexType>
+															<xs:all maxOccurs="unbounded">
+																<xs:element name="TD">
+																	<xs:complexType>
+																		<xs:sequence minOccurs="0">
+																			<xs:element name="Div">
+																				<xs:complexType>
+																					<xs:attribute name="cell" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:all>
+															<xs:attribute name="height" type="xs:string" use="optional"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:all>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="MergeBlocks" minOccurs="0">
+											<xs:complexType>
+												<xs:all maxOccurs="unbounded">
+													<xs:element name="Block">
+														<xs:complexType>
+															<xs:attribute name="left" type="xs:int" use="required"/>
+															<xs:attribute name="right" type="xs:int" use="required"/>
+															<xs:attribute name="top" type="xs:int" use="required"/>
+															<xs:attribute name="bottom" type="xs:int" use="required"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:all>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="id" type="xs:string" use="optional"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="width" type="xs:int" use="optional"/>
+						<xs:attribute name="height" type="xs:int" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Page">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Background">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="color" type="xs:string" use="optional"/>
+											<xs:attribute name="scale" use="optional">
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+														<xs:enumeration value="center"/>
+														<xs:enumeration value="tiled"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+			<xs:attribute name="version" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

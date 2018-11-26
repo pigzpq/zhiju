@@ -1,0 +1,33 @@
+<div style="width:100%;padding:10px">
+	<div sue="msgDiv"></div>
+	<div style="font-size:12px;padding:5px 0px">点击按钮后，在树上选择与其对应的节点，双击自定义值节点可编辑</div>
+	<div sue="hintDiv" style="font-size:12px;padding:5px 0px"></div>
+	<table width="100%" cellpadding="0" cellspacing="0" style="font-size:12px">
+		<tr style="height:150px">
+			<td style="width:250px;padding:5px 5px 0px 0px">
+				<div sue="tree_container" style="width:250px;height:150px;border:solid 1px #718BB7;background-color:#FFF;padding:10px;overflow:auto"></div>
+			</td>
+			<td style="width:180px;vertical-align:top;padding:5px 0px 0px 5px">
+				<fieldset style="padding:5px">
+					<legend>雷达图参数值</legend>
+					<p>
+						<button sue="factBtn" class="portal_switch_button" style="margin-left:10px"><font style="color:#008203">实际值</font></button>
+					</p>
+					<p>
+						<button sue="targetBtn" class="portal_switch_button" style="margin-left:10px"><font style="color:#1549B3">目标值</font></button>
+						<button sue="targetSDBtn" class="portal_button" style="margin-left:20px">自定义</button>
+					</p>
+					<p>
+						<button sue="minBtn" class="portal_switch_button" style="margin-left:10px"><font style="color:#B3380D">最差值</font></button>
+						<button sue="minSDBtn" class="portal_button" style="margin-left:20px">自定义</button>
+					</p>
+				</fieldset>
+			</td>
+		</tr>
+	</table>
+	<div style="font-size:12px;padding-top:20px">
+		<input sue="radar_setting1" id="radar_setting1" type="checkbox" checked="checked"/><label for="radar_setting1">显示名称</label>
+		<input sue="radar_setting2" id="radar_setting2" type="checkbox" checked="checked"/><label for="radar_setting2">显示数值</label>
+		<input sue="radar_setting3" id="radar_setting3" type="checkbox" checked="checked"/><label for="radar_setting3">填充背景色</label>
+	</div>
+</div>

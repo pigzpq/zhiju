@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BIReport>
+	<Cube ref="public:demo2.cube" caption="公共:销售数据立方体(红绿灯趋势)" />
+	<DataSource ref="public:demo.ds" caption="公共:销售数据源" />
+	<MdxQuery name="query1" caption="" title="" memoHead="" memoTail="" perPageRows="">	select State.levels(0).members*measures.members on columns,
+   non empty {Product.levels(0).members} on rows 
+		from sales
+	</MdxQuery>
+	<WorksheetComponent name="ws001" caption="" mdxQuery="query1" showSlicer="true" />
+	<Options>
+		<Molap value="false" />
+	</Options>
+</BIReport>
+

@@ -1,0 +1,16 @@
+<deployment xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+    <service name="EASLogin" provider="java:RPC">
+        <parameter name="className" value="com.kingdee.bos.webservice.login.EASLoginProxy"/>
+        <parameter name="allowedMethods" value="*"/>
+        <beanMapping qname="myNS:WSContext" xmlns:myNS="urn:client" languageSpecificType="java:com.kingdee.bos.webservice.login.WSContext"/>
+    </service>
+    <!-- 
+    <service name="EASLoginEAI" provider="java:RPC" style="WRAPPED" use="LITERAL" >
+    	<namespace>http://login.webservice.bos.kingdee.com</namespace>
+        <parameter name="className" value="com.kingdee.bos.webservice.login.EASLoginEAI"/>
+        <parameter name="allowedMethods" value="login"/>
+        <beanMapping qname="myNS:WSContext" xmlns:myNS="urn:client" languageSpecificType="java:com.kingdee.bos.webservice.login.WSContext"/>
+    </service>
+    -->
+</deployment>

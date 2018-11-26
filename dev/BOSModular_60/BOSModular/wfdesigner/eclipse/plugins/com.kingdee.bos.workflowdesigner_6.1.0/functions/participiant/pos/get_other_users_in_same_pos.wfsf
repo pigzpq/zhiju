@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="获取职位同级其他职位人员">
+    <script><![CDATA[if(null == positionID || "".equals(positionID))
+			return null;
+		java.util.ArrayList subordinatePersons = new java.util.ArrayList();		
+		//首先根据职位id获取本职位的所有人员
+		com.kingdee.eas.basedata.person.app.PersonToWFAdapter adapter = new 
+		com.kingdee.eas.basedata.person.app.PersonToWFAdapter();
+		com.kingdee.bos.workflow.participant.Person[] persons = adapter.getPositionHolders(__bosContext,positionID);
+		//然后根据寻找每个人员的同级其他职位所有人员
+		if(null == persons || persons.length <=0)
+			return null;
+		for(int i = 0;i<persons.length;i++){
+			com.kingdee.bos.workflow.participant.Person[] sPersons = adapter.getOtherPosFellow(__bosContext, persons[i].getEmployeeId(), positionID,null);
+			if(null == sPersons || sPersons.length <=0)
+				continue;
+			else{
+				for(int j = 0;j<sPersons.length;j++)
+					subordinatePersons.add(sPersons[j]);
+			}
+		}		
+		com.kingdee.bos.workflow.participant.Person[] ps = new com.kingdee.bos.workflow.participant.Person[subordinatePersons.size()];
+		System.arraycopy(subordinatePersons.toArray(), 0, ps, 0, subordinatePersons.size());
+		return ps;]]></script>
+    <description><![CDATA[根据职位ID获取此职位人员对应的同一级别其他职位的人员]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>PERFORMER</type>
+      <array>false</array>
+      <description><![CDATA[返回参与人数组]]></description>
+    </return>
+    <parameter>
+      <name>positionID</name>
+      <type>STRING</type>
+      <array>false</array>
+      <description><![CDATA[职位ID]]></description>
+    </parameter>
+  </function>
+</functions>
+

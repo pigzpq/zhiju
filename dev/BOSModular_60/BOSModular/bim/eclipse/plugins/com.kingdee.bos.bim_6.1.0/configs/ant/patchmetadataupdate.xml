@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="project" default="deployPatch">
+	<description>补丁元数据的升级</description>
+	<property name="EAS_HOME" value="G:/25eas/eas" />
+	<property name="pathM0" value="${EAS_HOME}/server/metasbase" />
+	<property name="pathM1" value="${EAS_HOME}/server/metas" />
+	<property name="patchWorkSpace" value="${EAS_HOME}/server/metasmerge" />
+	<property name="targetServerDir" value="${EAS_HOME}/server" />
+	<property name="webclient_home" value="${EAS_HOME}/server/deploy/fileserver.ear/easWebClient" />
+	<property name="lib" value="${EAS_HOME}/server/lib" />
+	<property name="deployRPC" value="false" />
+	<property name="genImplementCode" value="false" />
+	<property name="build.compiler" 	value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+
+	<path id="lib.path">
+		<fileset dir="${EAS_HOME}">
+			<include name="admin/lib/mergemetas/*.jar" />
+			<include name="admin/lib/ext/jdom-b9.jar" />
+			<include name="admin/lib/log4j-1.2.6.jar" />
+			<include name="admin/lib/xmlParserAPIs.jar" />
+			<include name="admin/lib/xercesImpl.jar" />
+			<include name="admin/lib/toolcommon.jar" />
+			<include name="admin/lib/toolbase.jar" />
+			<include name="server/lib/common/bos/metadata.jar" />
+			<include name="server/lib/common/bos/ormrpc.jar" />
+			<include name="server/lib/common/bos/common.jar" />
+			<include name="server/lib/common/bos/netfile.jar" />
+			<include name="server/lib/server/bos/metametas.jar" />
+			<include name="server/lib/common/bos/ksql.jar" />
+		</fileset>
+	</path>
+	<taskdef name="updatetask" classname="com.kingdee.bos.bim.ant.task.PatchMetadataUpgradeTask" classpathref="lib.path" />
+	<taskdef name="metaDataDeployTask" classname="com.kingdee.bos.bim.ant.task.PatchMetaDataDeployTask" classpathref="lib.path" />
+
+	<target description="初始化" name="init">
+		<mkdir dir="${patchWorkSpace}\patchProject"/>
+		<mkdir dir="${patchWorkSpace}\patchProject\j2EE"/>
+		<mkdir dir="${patchWorkSpace}\patchProject\src"/>
+		<mkdir dir="${patchWorkSpace}\patchProject\deployed_metas"/>
+		<mkdir dir="${patchWorkSpace}\patchProject\classes"/>
+	</target>
+	
+	<target name="checkProperties" description="检查环境">
+		<available file="${targetServerDir}/lib/sp/eas_sp.jar" property="easSPExists"/>
+	</target>
+
+	<target name="updatepatchmetas" description="升级元数据">
+		<updatetask pathM0="${pathM0}" pathM1="${pathM1}" patchWorkSpace="${patchWorkSpace}" />
+		<unjar overwrite="false" src="${pathM0}/sp-bim-metas.jar" dest="${patchWorkSpace}/mn"/>
+		<!--copy file="${pathM0}/sp-bim-metas.jar" tofile="${patchWorkSpace}/mn/sp-bim-metas-old.jar"/-->
+	</target>
+
+	<target name="metadataDeploy" description="发布元数据">
+		<metaDataDeployTask 
+			patchWorkSpace="${patchWorkSpace}" 
+			appendMetaJar="${pathM0}/sp-bim-metas.jar" 
+			metaDataJar="${pathM1}/sp-bim-metas.jar" 
+			deployRPC="true" 
+			genImplementCode="${genImplementCode}"
+			agentConfigFile="./DeployAgent.xml"
+			pathM1="${pathM1}"/>
+		<copy todir="${patchWorkSpace}\patchProject\deployed_metas" preservelastmodified="true" failonerror="false" overwrite="true">
+			<fileset dir="${patchWorkSpace}\mn">
+				<include name="bim.permission" />
+				<!--include name="eas.solution" /-->
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="unjarEAS_SP" if="easSPExists" description="解压缩eas_sp.jar包到class文件夹" depends="checkProperties">
+		<unjar dest="${patchWorkSpace}\patchProject\classes" src="${targetServerDir}/lib/sp/eas_sp.jar" overwrite="true"/>
+	</target>
+	
+	<target name="compile" description="编译" depends="unjarEAS_SP">
+		<javac srcdir="${patchWorkSpace}\patchProject\src" destdir="${patchWorkSpace}\patchProject\classes"  fork="true"
+			debug="on" noWarn="on" source="1.4" verbose="true" target="1.4"  memoryMaximumSize="1024M">
+			<compilerarg line="-log '${patchWorkSpace}\patchProject\compile.log'" compiler="org.eclipse.jdt.core.JDTCompilerAdapter" />
+			<classpath>
+				<fileset dir="${lib}">
+					<include name="sp/**/*.zip" />
+					<include name="sp/**/*.jar" />
+					<include name="industry/**/*.zip" />
+					<include name="industry/**/*.jar" />
+					<include name="web/**/*.zip" />
+					<include name="web/**/*.jar" />
+					<include name="common/**/*.zip" />
+					<include name="common/**/*.jar" />
+					<include name="client/**/*.zip" />
+					<include name="client/**/*.jar" />
+					<include name="server/**/*.zip" />
+					<include name="server/**/*.jar" />
+				</fileset>
+			</classpath>
+		</javac>
+
+		<copy todir="${patchWorkSpace}\patchProject\classes">
+			<fileset dir="${patchWorkSpace}\patchProject\src">
+				<include name="**/*.properties" />
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="buildpackage" description="打包">
+		<jar destfile="${patchWorkSpace}\patchProject\eas_sp.jar">
+			<fileset dir="${patchWorkSpace}\patchProject\classes" includes="**/*"/>
+		</jar>
+		<jar destfile="${patchWorkSpace}\patchProject\sp-bim-metas.jar">
+			<fileset dir="${patchWorkSpace}\patchProject\deployed_metas" includes="**/*" excludes="**/eas.solution" />
+		</jar>
+	</target>
+
+	<target name="deploy" description="部署">
+		<copy file="${patchWorkSpace}\patchProject\eas_sp.jar" tofile="${targetServerDir}/lib/sp/eas_sp.jar" overwrite="true" />
+		<copy file="${patchWorkSpace}\patchProject\sp-bim-metas.jar" tofile="${targetServerDir}/metas/sp-bim-metas.jar" />
+		<copy file="${patchWorkSpace}\patchProject\eas_sp.jar" tofile="${webclient_home}/lib/sp/eas_sp.jar" />
+		<copy file="${patchWorkSpace}\patchProject\sp-bim-metas.jar" tofile="${webclient_home}/metas/sp-bim-metas.jar" overwrite="true" />
+	</target>
+
+	<target name="clearEnv" description="清理">
+		<delete dir="${pathM0}"			failonerror="false" />
+		<delete dir="${patchWorkSpace}" failonerror="false" />
+	</target>
+
+	<target name="deployPatch" depends="init,updatepatchmetas,metadataDeploy,compile,buildpackage,deploy"/>
+</project>
+

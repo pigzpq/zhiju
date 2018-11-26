@@ -1,0 +1,39 @@
+.topDivcss {
+	position:absolute;
+	width:550px;
+	height:400px;
+	z-index:1;
+	border: solid 1px #EAEAEA;
+	background-color: #E0EAF5;
+}
+.divcss{
+     font-size: 12px;
+	 border: solid 1px #78b3e0;
+}
+.inputcss{
+     font-size: 12px;
+	 border: solid 1px #78b3e0;
+}
+.trcss_1{
+    font-size: 12px;
+	border: solid 1px;
+	background-color: #FFFFFF;
+}
+.trcss_2{
+    font-size: 12px;
+	border: solid 1px;
+	background-color: #EAF2F8;
+}
+.headercss{
+    background-image: url(../img/ui-web/table/command_bg_blue.gif);
+}
+.focuscss{
+    background-color: #FFDDB2;
+}
+.tablecss{
+     font-size: 12px; 
+     table:text-align:center;padding-top:2px;white-space:no-wrap;word-break:keep-all;border-collapse:collapse;
+	 }
+.fontcss{
+     font-size: 12px; 
+}

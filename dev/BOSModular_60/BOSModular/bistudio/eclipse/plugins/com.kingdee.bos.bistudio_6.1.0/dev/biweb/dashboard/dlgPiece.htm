@@ -1,0 +1,160 @@
+<html>
+<head>
+	<meta http-equiv="Content-Language" content="zh-cn">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>片段对象属性设置</title>
+	<STYLE>
+	.dialog
+	{
+		font-size:9pt;
+	}
+	</STYLE>
+	<script src="../js/sue-main.js"></script>
+	<script src="../js/sue-config.js"></script>
+</head>
+<body topmargin="10" leftmargin="10" bottommargin="5" rightmargin="10">
+	<table border="0" width="100%" class="dialog" cellPadding="0" cellSpacing="0">
+	  <tr>
+	    <td width="100%" valign="top">
+		  	<TABLE border="0" cellPadding="0" cellSpacing="0" width="100%" height="100%" style="font-size:9pt">
+		  		<COL width="120">
+		  		<COL width="220">
+		  		<TR height="22">
+		  			<TD vAlign="baseline">
+		  				<INPUT id="ctrlShowTitle" type="checkbox" onclick="doCBTitleClick()">显示标题栏</INPUT>
+		  			</TD>
+				</TR>
+				<TR height="22">
+				    <TD vAlign="baseline">
+		  				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;标题：<INPUT id="ctrlTitle" type="text" onkeydown="doKeyDown()">
+		  			</TD>
+				</TR>
+				<tr height="22">
+					<td >
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT id="ctrlCanDrill" type="checkbox" onclick="doCheckboxClick()">是否可穿透</Input>
+					</td>
+					
+				</tr>
+				<tr height="40">
+					<td >
+						对象名称：<input id="objectName" type="text"/>
+					</td>
+				</tr>
+			</TABLE>
+		</td>
+	  </tr>
+	  <tr>
+		<td style="text-align:right;padding:0px">
+			<button id="btnOK" class="portal_button" onclick="return btnOK_onclick()" style="margin-right:10px">确定</button>
+			<button id="btnCancel" class="portal_button" onclick="return btnCancel_onclick()">取消</button>
+		</td>
+	  </tr>
+	</table>
+</body>
+
+<script language="javascript">
+var _oParams;
+
+function document.body.onload()
+{
+	_oParams = window.frameElement.$param;
+	
+	_.id( "objectName" ).value = _oParams.name;
+	ctrlShowTitle.checked = _oParams.bShowTitle;
+	ctrlCanDrill.disabled = !ctrlShowTitle.checked; 
+	ctrlTitle.disabled = !ctrlShowTitle.checked;
+	ctrlTitle.style.backgroundColor = ctrlTitle.disabled?"#C0C0C0":"#FFFFFF";
+	
+	ctrlCanDrill.checked = _oParams.bCanDrill;
+	
+	ctrlTitle.value = (_oParams.sTitle == null ? "" : _oParams.sTitle);
+	try {
+		if(!ctrlTitle.disabled)
+			document.getElementById("ctrlTitle").focus();
+		else
+			document.getElementById("objectName").focus();
+	} catch( e ) {
+	}
+}
+
+var jsKeyWordMap = _.hash( "abstract,boolean,break,byte,case,catch,char,class,const,continue,default,delete,do,double,else,extends,false,final,finally,float,for,function,goto,if,implements,import,in,instanceof,int,interface,long,native,new,null,package,private,protected,public,return,short,static,super,switch,synchronized,this,throw,throws,transient,true,try,typeof,undefined,var,void,while,with,Object,Math,String,Number,Boolean,Array,Image,Option,Error".split(","), _.I, 1 );
+var dashboardKeyWordMap = _.hash( "window,name,document,parent,opener,top,location,history,navigator".split( "," ), _.I, 1 );
+
+// 测试是否合法的对象名称
+function testValidObjectName( name ) {
+	if ( !name ) {
+		return true;
+	} else if ( !/^[A-Za-z]\w*$/.test( name ) ) {
+		return "对象名称只能包含英文字符、数字和下划线，且必须英文字符开头。";
+	} else if ( name in jsKeyWordMap ) {
+		return "对象名称不能使用JavaScript关键字，请更换。";
+	} else if ( name in dashboardKeyWordMap ) {
+		return "对象名称不能使用仪表板运行环境关键字，请更换。";
+	} else {
+		return true;
+	}
+}
+
+function btnOK.onclick()
+{
+	_oParams.name = _.id( "objectName" ).value;
+	_oParams.name = _.trim( _oParams.name );
+	var testObjectName = testValidObjectName( _oParams.name );
+	if ( testObjectName !== true ) {
+		alert( testObjectName );
+		return;
+	}
+	
+	if(ctrlShowTitle.dashboard_changed)
+	{
+		_oParams.bShowTitle = ctrlShowTitle.checked;
+	}
+
+	
+	if(ctrlTitle.dashboard_changed)
+	{
+		_oParams.sTitle = ctrlTitle.value;
+	}
+	
+	
+	if(ctrlCanDrill.dashboard_changed)
+	{
+		_oParams.bCanDrill = ctrlCanDrill.checked;
+	}
+
+	
+	_oParams.dialog.closeDialog( true );
+}
+
+function btnCancel.onclick()
+{
+	_oParams.dialog.closeDialog( false );
+}
+
+function doKeyDown()
+{
+	event.srcElement.dashboard_changed = true;
+}
+
+function doCheckboxClick()
+{
+	event.srcElement.dashboard_changed = true;
+}
+
+function doCBTitleClick()
+{
+	event.srcElement.dashboard_changed = true;
+	ctrlCanDrill.disabled = !ctrlShowTitle.checked;
+	ctrlTitle.disabled = !ctrlShowTitle.checked;
+	if(!ctrlTitle.disabled)
+	{
+			try {
+				document.getElementById("ctrlTitle").focus();
+			} catch( e ) {
+			}
+	}
+	ctrlTitle.style.backgroundColor = ctrlTitle.disabled?"#C0C0C0":"#FFFFFF"; 
+}
+
+</script>
+</html>

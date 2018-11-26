@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<category name="系统界面">
+		<ui name="com.kingdee.eas.framework.client.CoreUI" type="coreui">
+			<label value="UI基类"/>
+			<description value="所有系统的UI基类"/>
+			<children/>
+		</ui>
+	</category>
+	<category name="编辑界面">
+		<ui name="com.kingdee.eas.framework.client.EditUI" type="entity">
+			<label value="编辑界面"/>
+			<description value="编辑界面"/>
+			<children/>
+		</ui>
+		<ui name="com.kingdee.eas.framework.client.BillEditUI" type="entity">
+			<label value="单据编辑界面"/>
+			<description value="单据编辑界面"/>
+			<children/>
+		</ui>
+	</category>
+	<category name="列表界面">
+		<ui name="com.kingdee.eas.framework.client.ListUI" type="query">
+			<label value="列表界面"/>
+			<description value="列表界面"/>
+			<children/>
+		</ui>
+		<ui name="com.kingdee.eas.framework.client.CommonQueryListUI" type="query">
+			<label value="查询列表界面"/>
+			<description value="带通用查询的列表界面"/>
+			<children/>
+		</ui>
+		<ui name="com.kingdee.eas.framework.client.BillListUI" type="query">
+			<label value="单据列表界面"/>
+			<description value="单据列表界面"/>
+			<children/>
+		</ui>
+		<ui name="com.kingdee.eas.framework.client.TreeListUI" type="query">
+			<label value="树列表界面"/>
+			<description value="树列表界面，树和列表对应同一个实体"/>
+			<children/>
+		</ui>
+		<ui name="com.kingdee.eas.framework.client.TreeDetailListUI" type="query">
+			<label value="树详细列表界面"/>
+			<description value="树详细列表界面，树和列表对应不同的实体"/>
+			<children/>
+		</ui>
+		<ui name="com.kingdee.eas.framework.client.ComboTreeListUI" type="query">
+			<label value="带下拉框的树列表界面"/>
+			<description value="带下拉框的树列表界面"/>
+			<children/>
+		</ui>
+		<ui name="com.kingdee.eas.framework.client.ComboTreeDetailListUI" type="query">
+			<label value="带下拉框的树详细列表界面"/>
+			<description value="带下拉框的树详细列表界面"/>
+			<children/>
+		</ui>
+	</category>
+	<category name="表格编辑界面">
+		<ui name="com.kingdee.eas.framework.client.TableEditUI" type="tableedit">
+			<label value="表格编辑界面基类"/>
+			<description value="所有系统的表格编辑界面基类"/>
+			<children/>
+		</ui>
+	</category>
+</xml>

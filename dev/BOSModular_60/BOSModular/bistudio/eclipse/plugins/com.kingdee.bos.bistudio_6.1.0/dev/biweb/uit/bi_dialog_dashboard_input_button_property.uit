@@ -1,0 +1,20 @@
+<table cellpadding="0" cellspacing="0" style="font-size:12px;">
+	<tr style="height:35px">
+		<td style="width:100px;text-align:right">对象名称：</td>
+		<td>
+			<input sue="objectName" type="text"/>
+		</td>
+	</tr>
+	<tr style="height:35px">
+		<td style="width:100px;text-align:right">文本：</td>
+		<td>
+			<input sue="hintText" type="text"/>
+		</td>
+	</tr>
+	<tr style="height:35px">
+		<td style="width:100px;text-align:right">宽度：</td>
+		<td>
+			<input sue="width" text="100" type="text"/>像素
+		</td>
+	</tr>
+</table>

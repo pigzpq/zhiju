@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by bruce_ni (kd) -->
+<introContent>
+	<page alt-style="css/root_swt.properties" style="css/root.css" id="root" style-id="page">
+		<title style-id="intro-header">歡迎使用金蝶EAS工作流建模工具</title>
+		<group id="links-background">
+			<group id="page-links">
+				<link label="關於" url="http://org.eclipse.ui.intro/showPage?id=overview" id="overview" style-id="left">
+					<img id="overview_img" style-id="content-img" src="css/graphics/icons/etool/overview72.gif" alt="Overview"/>
+					<text>關於金蝶EAS工作流建模工具</text>
+				</link>
+				<link label="使用嚮導" url="http://org.eclipse.ui.intro/showPage?id=tutorials" id="tutorials" style-id="left">
+					<img id="tutorials_img" style-id="content-img" src="css/graphics/icons/etool/tutorials72.gif" alt="Tutorials"/>
+					<text>金蝶EAS工作流建模工具</text>
+				</link>
+			</group>
+		</group>
+		<group id="action-links">
+			<link url="http://org.eclipse.ui.intro/close" label="金蝶EAS工作流建模工具" id="workbench">
+				<img id="workbench_img" style-id="content-img" src="css/graphics/icons/etool/wb48.gif" alt="金蝶EAS工作流建模工具主框架介面"/>
+				<text>回到金蝶EAS工作流建模工具主框架介面</text>
+			</link>
+		</group>
+	</page>
+	<page alt-style="css/standby_swt.properties" style="css/standby_root.css" id="standby" style-id="page">
+		<title style-id="intro-header">歡迎使用金蝶EAS工作流建模工具</title>
+		<group id="links-background">
+			<group id="page-links">
+				<link label="關於" url="http://org.eclipse.ui.intro/showPage?id=overview&amp;standby=false" id="overview" style-id="left">
+					<text>金蝶EAS工作流建模工具</text>
+				</link>
+				<link label="使用嚮導" url="http://org.eclipse.ui.intro/showPage?id=tutorials&amp;standby=false" id="tutorials" style-id="left">
+					<text>使用金蝶EAS工作流建模工具嚮導</text>
+				</link>
+			</group>
+		</group>
+	</page>
+	<page style="css/overview/overview.css" alt-style="css/overview/swt.properties" id="overview" style-id="page">
+		<title style-id="intro-header">歡迎使用金蝶EAS工作流建模工具</title>
+		<group id="background-image" filteredFrom="swt"/>
+		<group id="curve-image" filteredFrom="swt"/>
+		<group id="navigation-links" filteredFrom="swt">
+			<group id="page-links">
+				<link label="關於" url="http://org.eclipse.ui.intro/showPage?id=overview" id="overview" style-id="left">
+					<text>關於金蝶EAS工作流建模工具</text>
+				</link>
+				<link label="使用嚮導" url="http://org.eclipse.ui.intro/showPage?id=tutorials" id="tutorials" style-id="left">
+					<text>使用金蝶EAS工作流建模工具的嚮導，幫助您開始第一步的工作。</text>
+				</link>
+			</group>
+			<group id="action-links">
+				<link url="http://org.eclipse.ui.intro/close" label="金蝶EAS工作流建模工具" id="workbench">
+					<text>回到金蝶EAS工作流建模工具主框架介面</text>
+				</link>
+			</group>
+		</group>
+		<!-- -->
+		<group id="page-content">
+			<group id="content-header" label="關於" filteredFrom="swt"/>
+			<text style-id="page-title" id="page-title" filteredFrom="html">關於</text>
+			<text style-id="page-description" id="page-description">金蝶EAS工作流建模工具是易用、功能強大的可視化企業級流程配置工具，請閱讀以下幫助以幫助你入門。</text>
+			<group id="overview-links">
+				<link label="金蝶EAS工作流概述" url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.kingdee.bos.workflow.designer/help/summary/top.htm" id="login">
+					<text>金蝶EAS工作流概述</text>
+				</link>
+				<link label="參考" url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.kingdee.bos.workflow.designer/help/refrence/refrence-top.htm" id="advance">
+					<text>工作流建模中的各種功能、屬性設置參考</text>
+				</link>
+				<link label="我的第一條流程" url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.kingdee.bos.workflow.designer/help/contents/simpleFlowEG/eg-top.htm" id="constructEGFlow">
+					<text>一條典型的審批流程為例，例示如何建立流程</text>
+				</link>
+			</group>
+		</group>
+	</page>
+	<page style="css/tutorials/tutorials.css" alt-style="css/tutorials/swt.properties" id="tutorials" style-id="page">
+		<title style-id="intro-header">歡迎使用金蝶EAS工作流建模工具</title>
+		<group id="background-image" filteredFrom="swt"/>
+		<group id="curve-image" filteredFrom="swt"/>
+		<include path="overview/navigation-links"/>
+		<group id="page-content">
+			<group id="content-header" label="使用嚮導" filteredFrom="swt"/>
+			<text style-id="page-title" id="page-title" filteredFrom="html">使用嚮導</text>
+			<text style-id="page-description" id="page-description">使用金蝶EAS工作流建模工具嚮導</text>
+			<group id="tutorials-link" style-id="tutorials-group">
+				<link url="http://org.eclipse.ui.intro/runAction?pluginId=com.kingdee.bos.workflow.designer&amp;class=com.kingdee.bos.workflow.wfdesigner.actions.NewWfConnectionActionDelegate&amp;standby=true&amp;id=importproject" label="創建登錄連接" id="importproject" style-id="tutorials-link">
+					<text>工作流建模工具的第一步：使用嚮導添加新的工作流登錄連接</text>
+				</link>
+				<!--link url="http://org.eclipse.ui.intro/runAction?pluginId=com.kingdee.bos.bim&amp;class=com.kingdee.bos.bim.actions.OpenSolutionActionDelegate&amp;standby=true&amp;id=openproject" label="打開已有解決方案" id="openproject" style-id="tutorials-link">
+					<text>打開文件目錄中已有的解決方案</text>
+				</link-->
+			</group>
+		</group>
+	</page>
+</introContent>

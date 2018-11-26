@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Meta>
+  <Element name="." caption="全局过滤"/>
+  <Element name="filter_g1.olaprpt" caption="全局过滤一"/>
+  <Element name="filter_g2.olaprpt" caption="全局过滤二"/>
+</Meta>

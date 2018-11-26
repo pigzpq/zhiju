@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BIReport>
+	<Cube ref="public:demo.cube" caption="公共:销售数据立方体" />
+	<DataSource ref="public:demo.ds" caption="公共:销售数据源" />
+	<MdxQuery name="方案001" caption="" title="" memoHead="" memoTail="" perPageRows="">with member [Product].[total] as 
+'sum([Product].levels(0).members)',caption='汇总'
+cell calculation rule1 for Product.levels(0).members as '1000',
+  condition = ([Measures].CurrentMember = [Measures].[Sales_Dollars]) 
+cell calculation rule2 for {Product.total,Product.Meat} * Measures.Sales_Dollars 
+  as (Product.Dairy)*2
+SELECT {[Product].levels(0).members,[Product].[total]} ON rows, 
+{Measures.members} ON columns 
+FROM sales 
+where [State].[USA]</MdxQuery>
+	<WorksheetComponent name="table1" caption="" mdxQuery="方案001" showSlicer="true" />
+	<Options>
+		<Molap value="false" />
+	</Options>
+</BIReport>
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="获取职员的组织的公司信息">
+    <script><![CDATA[if(null == personID || "".equals(personID.toString()))
+			return null;		
+		return new com.kingdee.eas.basedata.org.AdminOrgFacade(__bosContext).getComAndDeptByPersonId(personID.toString());]]></script>
+    <description><![CDATA[根据职员ID获取职员对应组织的
+公司等信息]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>OBJECTVALUE</type>
+      <description><![CDATA[返回组织数组(AdminOrgUnitInfo)]]></description>
+      <isArray>true</isArray>
+    </return>
+    <parameter>
+      <name>personID</name>
+      <type>BOID</type>
+      <description><![CDATA[职员ID]]></description>
+    </parameter>
+  </function>
+</functions>
+

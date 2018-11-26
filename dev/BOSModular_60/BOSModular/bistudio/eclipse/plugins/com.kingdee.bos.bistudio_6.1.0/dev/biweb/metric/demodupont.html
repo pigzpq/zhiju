@@ -1,0 +1,149 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<link type="text/css" rel="stylesheet" href="look.css" />
+		<SCRIPT language="JavaScript" src="component\tree.js"></SCRIPT>
+		<SCRIPT language="JavaScript" src="dupont.js"></SCRIPT>
+		<title>杜邦</title>
+	</head>
+	<body>
+		<table border="1">
+			<tr>
+				<td>
+					<textarea rows="20" cols="120" id="xml">
+<DupontView xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DupontView.xsd">
+	<View measureCount="2">
+		<Measure>我是度量名称一</Measure>
+		<Measure>我是第二个</Measure>
+	</View>
+	<Metric number="income" allowsExpand="true" expanded="true">
+		<Item>
+			<Caption><![CDATA[利润]]></Caption>
+			<Values>
+				<Value digital="1230000" unit="万" changed="calculated">123万</Value>
+				<Value digital="123400">12.34万</Value>
+			</Values>
+		</Item>
+		<Children beanpod="false">
+			<Metric number="in">
+				<Item>
+					<Caption><![CDATA[收入]]></Caption>
+					<Values>
+						<Value digital="1234000000" ori="500000000" changed="edited" unit="百万">1234百万</Value>
+						<Value digital="5678000000">5678百万</Value>
+					</Values>
+				</Item>
+				<Children beanpod="true">
+					<Metric number="k3">
+						<Item>
+							<Caption><![CDATA[卖K/3]]></Caption>
+							<Values>
+								<Value>123</Value>
+								<Value>567</Value>
+							</Values>
+						</Item>
+					</Metric>
+					<Metric number="eas">
+						<Item>
+							<Caption><![CDATA[卖EAS]]></Caption>
+							<Values>
+								<Value>234</Value>
+								<Value>678</Value>
+							</Values>
+						</Item>
+					</Metric>
+					<Metric number="bos">
+						<Item>
+							<Caption><![CDATA[卖BOS]]></Caption>
+							<Values>
+								<Value>34</Value>
+								<Value>78</Value>
+							</Values>
+						</Item>
+					</Metric>
+				</Children>
+			</Metric>
+			<Sign> - ( </Sign>
+			<Metric number="out">
+				<Item>
+					<Caption><![CDATA[支出]]></Caption>
+					<Values>
+						<Value digital="230000" ori="300000">23万</Value>
+						<Value digital="670000">67万</Value>
+					</Values>
+				</Item>
+			</Metric>
+			<Sign> * </Sign>
+			<Metric number="random001">
+				<Item constant="true">
+					<Values>
+						<Value digital="0.8" unit="%">80%</Value>
+					</Values>
+				</Item>
+			</Metric>
+			<Sign>)</Sign>
+		</Children>
+	</Metric>
+</DupontView>
+					
+					</textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" value="刷新" onclick="doIt()">
+					<input id="btnAnalysis" type="button" value="分析：Off" onclick="analysis()">
+				</td>
+			</tr>
+			<tr height="100%">
+				<td id="treeOwner">xxx</td>
+			</tr>
+		</table>
+	</body>
+	<script>
+		var _tree;
+		
+		function window.onload()
+		{
+		debugger;
+		}
+		
+		function doIt()
+		{
+			_tree = new HorizontalTree();
+			var parser = new XmlParser();
+			parser.parse(xml.value);
+			_tree.setCustomView(parser.getView());
+			_tree.setModel(parser.getTreeModel());
+			updateUI();
+		}
+		
+		function updateUI()
+		{
+			var div = _tree.createUI(30, 30);
+			div.style.border = "1 solid blue";
+			div.style.position = "relative";
+			div.style.left = 0;
+			div.style.top = 0;
+			
+			var owner = document.getElementById("treeOwner");
+			owner.innerHTML = "";
+			owner.appendChild(div);
+			
+			updateAnalysisButtonUI();
+		}
+		
+		function analysis()
+		{
+			_tree.getCustomView().setAnalysable(!_tree.getCustomView().isAnalysable());
+			updateAnalysisButtonUI();
+		}
+		
+		function updateAnalysisButtonUI()
+		{
+			btnAnalysis.value = "分析：" + (_tree.getCustomView().isAnalysable() ? "On" : "Off");
+		}
+	</script>
+</html>
+
+

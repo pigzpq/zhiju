@@ -1,0 +1,18 @@
+<table cellpadding="0" cellspacing="10">
+	<tr style="height:190px">
+		<td sue="src"></td>
+		<td>
+			<div style="padding:10px 0px;width:42px"><button sue="gt" class="portal_button">&nbsp;&gt;&nbsp;</button></div>
+			<div style="padding:10px 0px;width:42px"><button sue="lt" class="portal_button">&nbsp;&lt;&nbsp;</button></div>
+			<div style="padding:10px 0px;width:42px"><button sue="gt2" class="portal_button">&gt;&gt;</button></div>
+			<div style="padding:10px 0px;width:42px"><button sue="lt2" class="portal_button">&lt;&lt;</button></div>
+		</td>
+		<td sue="dest"></td>
+	</tr>
+	</tr>
+		<td colspan="3" style="text-align:right">
+			<button sue="ok" class="portal_button">确定</button>
+			<button sue="cancel" class="portal_button" style="margin-left:10px">取消</button>
+		</td>
+	</tr>
+</table>

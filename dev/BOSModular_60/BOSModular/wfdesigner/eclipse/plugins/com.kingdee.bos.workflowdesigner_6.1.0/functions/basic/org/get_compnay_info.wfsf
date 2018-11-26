@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="获取组织的公司信息">
+    <script><![CDATA[if(null == orgID || "".equals(orgID.toString()))
+			return null;		
+		return new com.kingdee.eas.basedata.org.AdminOrgFacade(__bosContext).getComAndDeptByOrgId(orgID.toString());]]></script>
+    <description><![CDATA[获取某组织的所有公司集合]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>OBJECT</type>
+      <description><![CDATA[返回此组织所有的公司集合]]></description>
+      <isArray>false</isArray>
+    </return>
+    <parameter>
+      <name>orgID</name>
+      <type>BOID</type>
+      <description></description>
+    </parameter>
+  </function>
+</functions>
+

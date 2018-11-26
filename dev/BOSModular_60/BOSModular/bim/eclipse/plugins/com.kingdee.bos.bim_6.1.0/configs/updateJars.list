@@ -1,0 +1,34 @@
+##配置拷贝任务的映射关系，拷贝任务将根据本配置文件创建目录结构，并从指定源目录中查找所需要的文件并复制。
+##[//]表示根目录
+##[.] 表示当前目录
+##[..]表示上一级目录
+##{VERSION}表示当前BIM插件版本
+[//]wfdesigner/eclipse/plugins
+	[.]com.kingdee.bos.workflowengine_{VERSION}
+		workflowengine.jar
+	[..]com.kingdee.bos.workflowdesigner_{VERSION}
+		workflowdesigner.jar
+	[..]com.kingdee.bos.workflowcommon_{VERSION}
+		workflowcommon.jar
+[//]bosruntime/eclipse/plugins
+	[.]com.kingdee.bos.security_{VERSION}
+		security.jar
+	[..]com.kingdee.bos.message_{VERSION}
+		message.jar
+	[..]com.kingdee.bos.invokeservice_{VERSION}
+		invokeservice.jar
+	[..]com.kingdee.bos.bosframework_{VERSION}
+		bosframework.jar
+[//]boscommon/eclipse/plugins
+	[.]com.kingdee.bos.ormrpc_{VERSION}
+		ormrpc.jar
+	[..]com.kingdee.bos.netfile_{VERSION}
+		netfile.jar
+	[..]com.kingdee.bos.metadata_{VERSION}
+		metadata.jar
+	[..]com.kingdee.bos.ksql_{VERSION}
+		ksql.jar
+	[..]com.kingdee.bos.common_{VERSION}
+		common.jar
+	[..]com.kingdee.bos.cache_{VERSION}
+		cache.jar

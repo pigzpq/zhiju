@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="获取行政组织的负责人">
+    <script><![CDATA[
+	var ptwAda = new com.kingdee.eas.basedata.person.app.PersonToWFAdapter();
+	var wfPersons = ptwAda.getOrgPrincipal(__bosContext, adminOrgID);
+	return wfPersons;]]></script>
+    <description><![CDATA[根据行政组织内码获取该组织的负责人。]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>OBJECT</type>
+      <array>false</array>
+      <description><![CDATA[人员列表。数据类型为:com.kingdee.bos.workflow.participant.Person[]]]></description>
+    </return>
+    <parameter>
+      <name>adminOrgID</name>
+      <type>STRING</type>
+      <array>false</array>
+      <description><![CDATA[行政组织内码]]></description>
+    </parameter>
+  </function>
+</functions>

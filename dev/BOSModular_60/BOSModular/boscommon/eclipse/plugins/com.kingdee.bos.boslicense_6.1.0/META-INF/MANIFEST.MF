@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-Name: BOSLicense Plug-in
+Bundle-SymbolicName: com.kingdee.bos.license; singleton=true
+Bundle-Version: 6.0.0
+Bundle-ClassPath: boslicense.jar
+Bundle-Vendor: Kingdee Software (China) Company Ltd.,
+Bundle-Localization: plugin
+Eclipse-AutoStart: true
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.log4j,
+ org.junit
+Provide-Package: com.kingdee.bos.license,
+ com.kingdee.bos.license.impl
+Bundle-ActivationPolicy: lazy
+Bundle-Activator: com.kingdee.bos.license.BOSLicensePlugin

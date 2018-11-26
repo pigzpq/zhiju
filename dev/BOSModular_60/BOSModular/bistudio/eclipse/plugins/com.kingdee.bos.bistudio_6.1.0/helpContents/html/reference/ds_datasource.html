@@ -1,0 +1,30 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;">
+	<title>Main Topic</title>
+</head>
+<body>
+
+<h3>设计datasource</h3>
+<p>数据源为立方体维度、事实表作准备。<br />
+  设计界面如下：<br />
+<img src="../../images/reference/ds_datasource_1.png" width="797" height="476" /></p>
+<ol>
+  <ol>
+    <li>标题：在工程中目录树中显示的标题，可选设置，也可以选中文件用右键菜单项”set caption”设置。</li>
+    <li>名称：数据源名称，&lt;DataSource name=&quot;名称&quot;&gt;，可选设置， 建议写上业务相关的描述名。</li>
+    <li>SQL列表：sql数据源列表</li>
+    <ol>
+      <li>名称：不能重复，否则显示错误标识：</li>
+      <p><img src="../../images/reference/ds_datasource_2.png" width="107" height="48" /></p>  
+    </ol>
+    <li>特殊数据源：时间维度。</li>
+  </ol>
+</ol>
+
+
+<p>时间维度数据来自eas账套olap基础数据表 <strong>t_olap_time</strong>,使用SQL形如：</p>
+<p><br />
+  <img src="../../images/reference/ds_datasource_4.png" width="436" height="253" /></p>
+</body>
+</html>

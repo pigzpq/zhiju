@@ -1,0 +1,21 @@
+.cellDiv
+{
+	border: 1 solid #dddddd;
+}
+
+.cellTitle
+{
+	color: #000000;
+	background-color: #CCC;
+	font-size: 9pt;
+}
+
+.dragRowPromptLine
+{
+	border-top: 2 dashed #6666ff;
+}
+
+.dragColPromptLine
+{
+	border-left: 2 dashed #6666ff;
+}

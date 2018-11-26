@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="职员是否属于某个消息接收组">
+    <script><![CDATA[com.kingdee.bos.util.BOSUuid groupId = null;
+		boolean exist = false;
+//System.out.println("******************************** person  "+personId);
+//System.out.println("******************************** groupNumber"+groupNumber);
+		//获取所有消息接受组
+		 com.kingdee.eas.base.message.MAGroupCollection magCol = com.kingdee.eas.base.message.MAGroupFactory.getLocalInstance(__bosContext).getMAGroupCollection();
+//System.out.println("******************************** magCol   "+magCol.size() );
+		 if(magCol.size()<0)
+			 return exist;
+		 //获取编码为groupNumber的消息组
+		 for(int i = 0 ;i<magCol.size();i++){
+			 com.kingdee.eas.base.message.MAGroupInfo magInfo = magCol.get(i);
+//System.out.println("******************************** magInfo "+magInfo.getNumber());
+			 if(groupNumber.equals(magInfo.getNumber())){
+				 groupId = magInfo.getId();
+//System.out.println("******************************** groupId "+groupId);
+			 }
+		 }
+
+		 //判断职员是否位于消息接受组中
+		 if(groupId != null){
+			 com.kingdee.eas.basedata.person.app.PersonToWFAdapter adapter = new com.kingdee.eas.basedata.person.app.PersonToWFAdapter();
+			 com.kingdee.bos.workflow.participant.Person[] sPersons = adapter.getPersonsFromGroup(__bosContext, groupId.toString());
+//System.out.println(" ******************************** sPersons "+ sPersons.length);
+			 for(int j = 0 ;j<sPersons.length;j++){
+//System.out.println("  ******************************EmployeeId  "+sPersons[j].getEmployeeId());
+//System.out.println("  ******************************** personId  "+personId);
+//System.out.println("  ******************************** sPersons[j].getEmployeeId().equals(personId)  "+sPersons[j].getEmployeeId().equals(personId));
+//System.out.println("  ******************************** sPersons[j].getEmployeeId().equals(personId)22  "+sPersons[j].getEmployeeId().equalsIgnoreCase(personId));
+				 if(sPersons[j].getEmployeeId().equalsIgnoreCase(personId)){
+//System.out.println("******************************** exist   "+exist);
+					 exist = true;
+				 }
+			 }
+		 }
+//System.out.println("******************************** exist2   "+exist);
+	return exist;]]></script>
+    <description><![CDATA[根据职员和消息接受组编码判断此职员是否属于此消息接受组]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>BOOLEAN</type>
+      <array>false</array>
+      <description><![CDATA[返回职员是否属于某个消息接受组]]></description>
+    </return>
+    <parameter>
+      <name>personId</name>
+      <type>BOID</type>
+      <array>false</array>
+      <description><![CDATA[职员ID]]></description>
+    </parameter>
+    <parameter>
+      <name>groupNumber</name>
+      <type>STRING</type>
+      <array>false</array>
+      <description><![CDATA[消息接受组编码]]></description>
+    </parameter>
+  </function>
+</functions>
+

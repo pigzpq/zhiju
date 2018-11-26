@@ -1,0 +1,20 @@
+<div align="center" style="padding-top:20px">
+ <table width="230" border="0">
+     <tr>
+       <td align="right"><label class="fontcss">正常： </label></td>
+       <td align="right"><input id="kpi_good_color" type="text" name="textfield"  style="height:15px;cursor:hand;" readonly="true"  onclick="javascript:selectColor('kpi_good_color');" class="inputcss"/></td>
+       <td align="left"><img src="../img/ui-web/btn_kpicolor.gif" style="height:15px;cursor:hand;" width="15" onclick="javascript:selectColor('kpi_good_color');"/></td>
+     </tr>
+     <tr>
+       <td align="right"><label class="fontcss">不良： </label></td>
+       <td align="right"><input id="kpi_warning_color" type="text" name="textfield2" style="height:15px;cursor:hand;" readonly="true" onclick="javascript:selectColor('kpi_warning_color');" class="inputcss" /></td>
+       <td align="left"><img src="../img/ui-web/btn_kpicolor.gif" width="15" style="height:15px;cursor:hand;" onclick="javascript:selectColor('kpi_warning_color');"/></td>
+     </tr>
+     <tr>
+       <td align="right"><label class="fontcss">危险：</label></td>
+       <td align="right"><input id="kpi_danger_color" type="text" name="textfield3" style="height:15px;cursor:hand;" readonly="true" onclick="javascript:selectColor('kpi_danger_color');" class="inputcss"/></td>
+       <td align="left"><img src="../img/ui-web/btn_kpicolor.gif" style="height:15px;cursor:hand;" width="15" onclick="javascript:selectColor('kpi_danger_color');"/></td>
+     </tr>
+   </table>
+
+  <div>

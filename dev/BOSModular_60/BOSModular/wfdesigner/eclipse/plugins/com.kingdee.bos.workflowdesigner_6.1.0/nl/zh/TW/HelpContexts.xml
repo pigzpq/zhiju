@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contexts>
+	<context id="活動屬性基本">
+		<description>活動屬性-基本頁面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活動屬性-基本頁面"/>
+	</context>
+	<context id="模式">
+		<description>活動屬性-模式頁面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活動屬性-模式頁面"/>
+	</context>
+	<context id="消息">
+		<description>活動屬性-消息頁面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活動屬性-消息頁面"/>
+	</context>
+	<context id="後置腳本">
+		<description>活動屬性-後置腳本頁面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活動屬性-後置腳本頁面"/>
+	</context>
+	<context id="最後期限">
+		<description>活動屬性-最後期限頁面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活動屬性-最後期限頁面"/>
+	</context>
+	<context id="參與人">
+		<description>活動屬性-參與人頁面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活動屬性-參與人頁面"/>
+	</context>
+	<context id="任務">
+		<description>活動屬性-任務頁面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活動屬性-任務頁面"/>
+	</context>
+	<context id="流程綁定">
+		<description>活動屬性-流程綁定頁面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活動屬性-流程綁定頁面"/>
+	</context>
+	<context id="參與人變數">
+		<description>活動屬性-參與人變數頁面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活動屬性-參與人變數頁面"/>
+	</context>
+	<context id="關係">
+		<description>活動屬性-關係頁面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活動屬性-關係頁面"/>
+	</context>
+	<context id="流程發起人">
+		<description>活動屬性-流程發起人頁面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活動屬性-流程發起人頁面"/>
+	</context>
+	<context id="活動執行人">
+		<description>活動屬性-活動執行人頁面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活動屬性-活動執行人頁面"/>
+	</context>
+	<context id="組織單元">
+		<description>活動屬性-組織單元頁面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活動屬性-組織單元頁面"/>
+	</context>
+	<context id="職位">
+		<description>活動屬性-職位頁面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活動屬性-職位頁面"/>
+	</context>
+	<context id="職員">
+		<description>活動屬性-職員頁面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活動屬性-職員頁面"/>
+	</context>
+	<context id="流程管理員">
+		<description>活動屬性-流程管理員頁面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活動屬性-流程管理員頁面"/>
+	</context>
+	<context id="職位關係">
+		<description>活動屬性-職位關係頁面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活動屬性-職位關係頁面"/>
+	</context>
+	<context id="職員關係">
+		<description>活動屬性-職員關係頁面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活動屬性-職員關係頁面"/>
+	</context>
+	<context id="任意人">
+		<description>活動屬性-任意人頁面</description>
+		<topic href="help/refrence/node-attribute.htm" label="活動屬性-任意人頁面"/>
+	</context>
+	<context id="subSystemView">
+		<description>視圖-子系統分類流程視圖</description>
+		<topic href="help/refrence/view-intro.htm" label="視圖-子系統分類流程視圖"/>
+	</context>
+	<context id="wfConnectionView">
+		<description>視圖-連接視圖</description>
+		<topic href="help/refrence/login.htm" label="視圖-連接視圖"/>
+	</context>
+	<context id="modelValidateView">
+		<description>視圖-流程校驗視圖</description>
+		<topic href="help/refrence/view-intro.htm" label="視圖-流程校驗視圖"/>
+	</context>
+	<context id="functionSelectionView">
+		<description>視圖-業務功能視圖</description>
+		<topic href="help/refrence/view-intro.htm" label="視圖-業務功能視圖"/>
+	</context>
+	<context id="consoleView">
+		<description>視圖-控制臺視圖</description>
+		<topic href="help/refrence/view-intro.htm" label="視圖-控制臺視圖"/>
+	</context>
+</contexts>

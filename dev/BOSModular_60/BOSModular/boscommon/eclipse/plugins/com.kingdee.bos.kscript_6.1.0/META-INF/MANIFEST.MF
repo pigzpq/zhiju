@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: KScript Plug-in
+Bundle-SymbolicName: com.kingdee.bos.kscript;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-RequiredExecutionEnvironment: J2SE-1.4
+Require-Bundle: com.kingdee.bos.common,
+ org.log4j,
+ org.junit
+Export-Package: com.kingdee.bos.kscript,
+ com.kingdee.bos.kscript.adapter,
+ com.kingdee.bos.kscript.debug,
+ com.kingdee.bos.kscript.dom,
+ com.kingdee.bos.kscript.dom.expr,
+ com.kingdee.bos.kscript.dom.stmt,
+ com.kingdee.bos.kscript.parser,
+ com.kingdee.bos.kscript.runtime
+Bundle-ClassPath: kscript.jar
+Bundle-Vendor: Kingdee Software (China) Company Ltd

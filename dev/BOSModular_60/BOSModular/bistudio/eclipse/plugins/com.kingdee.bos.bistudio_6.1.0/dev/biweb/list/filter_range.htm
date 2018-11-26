@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Language" content="zh-cn">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>输入值范围</title>
+		<script src="../js/sue-main.js"></script>
+		<script src="../js/sue-ui.js"></script>
+		<script src="../js/sue-config.js"></script>
+		<script src="../js/bi.js"></script>
+		<script src="../js/bi_tree.js"></script>
+		<script src="DataList.js"></script>
+		<script src="filter_range.js"></script>
+		<STYLE>
+	.dialog
+	{
+		font-size:9pt;
+	}
+	</STYLE>
+	</head>
+	<body TOPMARGIN="20" LEFTMARGIN="15" BOTTOMMARGIN="5" RIGHTMARGIN="10">
+		<table border="0" width="100%" class="dialog" cellPadding="5" cellSpacing="0">
+			<tr>
+				<td>过滤列：</td>
+				<td colspan=2 id="filterColumn"></td>
+			</tr>
+			<tr>
+				<td>过滤方式：</td>
+				<td colspan=2>
+					<select id="filterMethod" style="width:220px;align:left;"> 
+						<option>只显示设定范围的值</option>
+						<option>不显示设定范围的值</option>
+					</select>
+				</td>
+			</tr>
+			<tr valign="top">
+				<td>从：</td>
+				<td align="left">
+					<input type="radio" name="rangeMin" CHECKED="true" onclick="minClick()"></input>
+				</td>
+				<td><div id="divMin"></td>
+			</tr>
+			<tr>
+				<td/>
+				<td align="left"><input type="radio" name="rangeMin" onclick="minClick()"></input>
+				</td>
+				<td>最小值</td>
+			</tr>					
+				
+			<tr valign="top">
+				<td>到：</td>
+				<td align="left"><input type="radio" name="rangeMax" CHECKED="true" onclick="maxClick()"></input>
+				</td>
+				<td><div id="divMax"></td>
+			</tr>
+			<tr>
+				<td/>
+				<td align="left"><input type="radio" name="rangeMax" onclick="maxClick()"></input>
+				</td>
+				<td>最大值</td>
+			</tr>					
+			<tr>
+			</tr>
+		</table>
+		<table width="100%" height="160">
+			<tr>
+				<td>
+				<TEXTAREA id="memo" style="readOnly:true;border:thick;width:100%;height:120px;overflow:hidden;">
+				</TEXTAREA>
+				</td>
+			</tr>
+		</table>
+		<hr/>
+		<table width="100%">
+			<tr>
+				<td width="50%"></td>
+				<td align="right"><button class="portal_button" onclick="onok();"> 确  定 </button></td>
+				<td align="right"><button class="portal_button" onclick="oncancel();"> 取  消 </button></td>
+			</tr>
+		</table>	
+	</body>
+	<script language="javascript">
+		window.onload = window_onload;
+	</script>
+</html>

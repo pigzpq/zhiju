@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: BOS Security Plug-in
+Bundle-SymbolicName: com.kingdee.bos.security
+Bundle-Version: 5.4.0
+Bundle-Vendor: Kingdee Software (China) Company Ltd.
+Bundle-Localization: plugin
+Require-Bundle: org.log4j,
+ com.kingdee.bos.common
+Eclipse-LazyStart: false

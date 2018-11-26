@@ -1,0 +1,21 @@
+<div style="border:5px">
+	<form sue="form" target="uploader" method="post" enctype="multipart/form-data">
+		<div style="padding-top:10px;font:12px Arial">
+			<input name="isDashboardImport" value="true" type="hidden"/>
+			<input name="savePath" sue="savePath" type="hidden"/>
+			<input sue="overwrite" type="checkbox" class="portal_textfield" >是否覆盖同名文件</input>
+			<input name="isOverwrite" sue="overwriteHidden" type="hidden"/>
+		<div>
+		<div sue="upload" style="padding-top:10px;font:12px Arial">
+			请选择要导入的文件(Zip格式)：<br/>
+			<input name="upload" sue="uploadFilePath" type="file" style="border:solid 1px #718BB7;width:98%;height:19px" />
+		</div>
+		
+	</form>
+	<div sue="btnField" style="padding:10px;text-align:right">
+		<button sue="btnUpload" class="portal_button">导入</button>
+	</div>
+	<iframe name="uploader" sue="uploader" style="display:none;width:0px;height:0px"></iframe>
+	
+	<div sue="msgDiv" style="padding-right:60px"></div>
+</div>

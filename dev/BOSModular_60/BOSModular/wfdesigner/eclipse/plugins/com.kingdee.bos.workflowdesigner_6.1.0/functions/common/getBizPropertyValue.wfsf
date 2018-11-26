@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="获取指定业务对象的某个属性值">
+    <script><![CDATA[com.kingdee.bos.util.BOSUuid bizObjUuid = com.kingdee.bos.util.BOSUuid.read(bizObjID);
+com.kingdee.bos.metadata.entity.SelectorItemCollection sic = new com.kingdee.bos.metadata.entity.SelectorItemCollection();
+sic.add(new com.kingdee.bos.metadata.entity.SelectorItemInfo(propertyName));
+com.kingdee.bos.framework.IDynamicObject iDynamicObject = com.kingdee.bos.framework.DynamicObjectFactory.getLocalInstance(__bosContext);
+com.kingdee.bos.dao.IObjectValue bizObj = 
+	iDynamicObject.getValue(bizObjUuid.getType(), new com.kingdee.bos.dao.ormapping.ObjectUuidPK(bizObjUuid), sic);
+return bizObj.get(propertyName);]]></script>
+    <description><![CDATA[获取指定业务对象的某个属性值的通用函数。]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>OBJECT</type>
+      <array>false</array>
+      <description><![CDATA[属性值]]></description>
+    </return>
+    <parameter>
+      <name>bizObjID</name>
+      <type>STRING</type>
+      <array>false</array>
+      <description><![CDATA[业务对象内码(ID)]]></description>
+    </parameter>
+    <parameter>
+      <name>propertyName</name>
+      <type>STRING</type>
+      <array>false</array>
+      <description><![CDATA[业务对象属性名,非分录属性]]></description>
+    </parameter>
+  </function>
+</functions>
+

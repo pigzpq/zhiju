@@ -1,0 +1,22 @@
+<div style="margin:10px">
+<table width="403"   border="0"  style="font-size:12px" >
+  <tr>
+    <td width="72"  align="left">对象名称：</td>
+    <td width="114"><input  type="text" id="objectName" size="10" /></td>
+    <td width="63">标题名称：</td>
+    <td width="136"><input  type="text" id="title" size="10" /></td> 
+  </tr>
+  <tr>
+    <td>指标宽度：</td>
+    <td><input  type="text" id="metricWidth" value="200" size="10" /></td>
+    <td>指标高度：</td>
+    <td><input type="text" id="metricHeight" value="150" size="10" /></td>
+  </tr>
+  <tr>
+    <td width="72" align="right"><input type="checkbox"  id="isShowTitle" />&nbsp;&nbsp;&nbsp;</td>
+    <td width="114">是否显示标题</td>  
+    <td align="right"><input type="checkbox" id="metricAutoFlow" />&nbsp;&nbsp;&nbsp;</td>
+    <td>是否自动换行</td>
+  </tr>
+  </table>
+</div>

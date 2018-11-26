@@ -1,0 +1,8 @@
+<div style="padding:10px;width:100%">
+	<table cellpadding="5" cellspacing="0" style="font-size:12px;width:100%">
+		<tr>
+			<td style="width:32px;height:32px;background:url(../img/ui-web/confirm_dialog_icon.gif) center top no-repeat"></td>
+			<td sue="text" style="vertical-align:top"></td>
+		</tr>
+	</table>
+</div>

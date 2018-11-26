@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BIReport>
+	<Cube ref="public:demo.cube" caption="公共:销售数据立方体" />
+	<DataSource ref="public:demo.ds" caption="公共:销售数据源" />
+	<MdxQuery name="query1" caption="产品销售分析" title="" memoHead="" memoTail="" perPageRows="">select Product.levels(0).members on rows,
+measures.members on columns from sales</MdxQuery>
+	<MdxQuery name="query2" caption="地区销售分析" title="" memoHead="" memoTail="" perPageRows="">select state.levels(0).members on rows,
+measures.members on columns from sales</MdxQuery>
+	<WorksheetComponent name="sheet1" caption="表格" mdxQuery="query1" showSlicer="true" />
+	<WorksheetComponent name="sheet1" caption="表格" mdxQuery="query2" showSlicer="true" />
+</BIReport>
+

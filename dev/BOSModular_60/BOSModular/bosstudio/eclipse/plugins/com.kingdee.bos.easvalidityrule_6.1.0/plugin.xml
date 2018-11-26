@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+         id="com.kingdee.bos.studio.eascheck.CheckPermissionItem.id"
+         name="CheckPermissionItem"
+         point="com.kingdee.bos.tool.toolcommon.metaDataVerify">
+      <category
+            name="EAS RULE"
+            id="eas"
+            enable="true"/>
+      <verifyUnit
+            level="WARNING"
+            class="com.kingdee.bos.studio.eascheck.CheckPermissionItem"
+            category="EAS RULE"
+            name="Verify Permission Item"
+            id="com.kingdee.bos.studio.eascheck.CheckPermissionItem">
+         <targets>
+            <target
+                  saveEnable="true"
+                  createEnable="false"
+                  style="Permission"/>
+         </targets>
+      </verifyUnit>
+   </extension>
+   <extension
+         name="EASVerify"
+         point="com.kingdee.bos.tool.toolcommon.metaDataVerify">
+      <category
+            name="EAS RULE"
+            id="eas"
+            enable="true"/>
+      <verifyUnit
+            level="WARNING"
+            class="com.kingdee.bos.studio.eascheck.CheckEnumName"
+            category="EAS RULE"
+            name="Verify Enumeration Name"
+            id="com.kingdee.bos.studio.eascheck.CheckEnumName">
+         <targets>
+            <target
+                  saveEnable="false"
+                  createEnable="true"
+                  style="BizEnum"/>
+         </targets>
+      </verifyUnit>
+      <verifyUnit
+            level="WARNING"
+            class="com.kingdee.bos.studio.eascheck.CheckHeadCharUpperCase"
+            category="EAS RULE"
+            name="Verify Head Char"
+            id="com.kingdee.bos.studio.eascheck.CheckHeadCharUpperCase">
+         <targets>
+            <target
+                  saveEnable="false"
+                  createEnable="true"
+                  style="Entity"/>
+            <target
+                  saveEnable="false"
+                  createEnable="true"
+                  style="Facade"/>
+            <target
+                  saveEnable="false"
+                  createEnable="true"
+                  style="BizException"/>
+            <target
+                  saveEnable="false"
+                  createEnable="true"
+                  style="BizEnum"/>
+            <target
+                  saveEnable="false"
+                  createEnable="true"
+                  style="Query"/>
+            
+            <target
+                  saveEnable="false"
+                  createEnable="true"
+                  style="Function"/>
+            <target
+                  saveEnable="false"
+                  createEnable="true"
+                  style="Relationship"/>
+            <target
+                  saveEnable="false"
+                  createEnable="true"
+                  style="Table"/>
+         </targets>
+      </verifyUnit>
+      <verifyUnit
+            level="WARNING"
+            class="com.kingdee.bos.studio.eascheck.CheckExceptionName"
+            category="EAS RULE"
+            name="Verify Exception Name"
+            id="com.kingdee.bos.studio.eascheck.CheckExceptionName">
+         <targets>
+            <target
+                  saveEnable="false"
+                  createEnable="true"
+                  style="BizException"/>
+         </targets>
+      </verifyUnit>
+      <verifyUnit
+            level="WARNING"
+            class="com.kingdee.bos.studio.eascheck.CheckBusinessImplName"
+            category="EAS RULE"
+            name="Verify BusinessImpl Name"
+            id="com.kingdee.bos.studio.eascheck.CheckBusinessImplName">
+         <targets>
+            <target
+                  saveEnable="true"
+                  createEnable="true"
+                  style="Entity"/>
+            <target
+                  saveEnable="true"
+                  createEnable="true"
+                  style="Facade"/>
+         </targets>
+      </verifyUnit>
+      <verifyUnit
+            level="WARNING"
+            class="com.kingdee.bos.studio.eascheck.CheckEnumItem"
+            category="EAS RULE"
+            name="Verify Enumeration Item Name"
+            id="com.kingdee.bos.studio.eascheck.CheckEnumItem">
+         <targets>
+            <target
+                  saveEnable="true"
+                  createEnable="true"
+                  style="BizEnum"/>
+         </targets>
+      </verifyUnit>
+      <verifyUnit
+            level="WARNING"
+            class="com.kingdee.bos.studio.eascheck.CheckPropertyName"
+            category="EAS RULE"
+            name="Verify Entity Property Name"
+            id="com.kingdee.bos.studio.eascheck.CheckPropertyName">
+         <targets>
+            <target
+                  saveEnable="true"
+                  createEnable="true"
+                  style="Entity"/>
+         </targets>
+      </verifyUnit>
+      <verifyUnit
+            level="WARNING"
+            class="com.kingdee.bos.studio.eascheck.CheckQueryName"
+            category="EAS RULE"
+            name="Verify Query Name"
+            id="com.kingdee.bos.studio.eascheck.CheckQueryName">
+         <targets>
+            <target
+                  saveEnable="false"
+                  createEnable="true"
+                  style="Query"/>
+         </targets>
+      </verifyUnit>
+      <verifyUnit
+            level="WARNING"
+            class="com.kingdee.bos.studio.eascheck.CheckRelationshipName"
+            category="EAS RULE"
+            name="Verify RelationShip Name"
+            id="com.kingdee.bos.studio.eascheck.CheckRelationshipName">
+         <targets>
+            <target
+                  saveEnable="false"
+                  createEnable="true"
+                  style="Relationship"/>
+         </targets>
+      </verifyUnit>
+      <verifyUnit
+            level="WARNING"
+            class="com.kingdee.bos.studio.eascheck.CheckRuleName"
+            category="EAS RULE"
+            name="Verify Rule Name"
+            id="com.kingdee.bos.studio.eascheck.CheckRuleName">
+         <targets>
+            <target
+                  saveEnable="false"
+                  createEnable="true"
+                  style="Rule"/>
+         </targets>
+      </verifyUnit>
+      <verifyUnit
+            level="WARNING"
+            class="com.kingdee.bos.studio.eascheck.CheckTableFieldName"
+            category="EAS RULE"
+            name="Verify Table Field Name"
+            id="com.kingdee.bos.studio.eascheck.CheckTableFieldName">
+         <targets>
+            <target
+                  saveEnable="true"
+                  createEnable="true"
+                  style="Table"/>
+         </targets>
+      </verifyUnit>
+      <verifyUnit
+            level="WARNING"
+            class="com.kingdee.bos.studio.eascheck.CheckTableIndexName"
+            category="EAS RULE"
+            name="Verify Table Index Name"
+            id="com.kingdee.bos.studio.eascheck.CheckTableIndexName">
+         <targets>
+            <target
+                  saveEnable="true"
+                  createEnable="true"
+                  style="Table"/>
+         </targets>
+      </verifyUnit>
+      <verifyUnit
+            level="WARNING"
+            class="com.kingdee.bos.studio.eascheck.CheckTableKeyName"
+            category="EAS RULE"
+            name="Verify Table Key Name"
+            id="com.kingdee.bos.studio.eascheck.CheckTableKeyName">
+         <targets>
+            <target
+                  saveEnable="true"
+                  createEnable="true"
+                  style="Table"/>
+         </targets>
+      </verifyUnit>
+      <verifyUnit
+            level="WARNING"
+            class="com.kingdee.bos.studio.eascheck.CheckTableName"
+            category="EAS RULE"
+            name="Verify Table Name"
+            id="com.kingdee.bos.studio.eascheck.CheckTableName">
+         <targets>
+            <target
+                  saveEnable="false"
+                  createEnable="true"
+                  style="Table"/>
+         </targets>
+      </verifyUnit>
+      <verifyUnit
+            level="WARNING"
+            class="com.kingdee.bos.studio.eascheck.CheckUIName"
+            category="EAS RULE"
+            name="Verify UI Name"
+            id="com.kingdee.bos.studio.eascheck.CheckUIName">
+         <targets>
+            <target
+                  saveEnable="false"
+                  createEnable="true"
+                  style="UIObject"/>
+         </targets>
+      </verifyUnit>
+      <verifyUnit
+            level="WARNING"
+            class="com.kingdee.bos.studio.eascheck.CheckMethod"
+            category="EAS RULE"
+            name="Verify Method Name"
+            id="com.kingdee.bos.studio.eascheck.CheckMethod">
+         <targets>
+            <target
+                  saveEnable="true"
+                  createEnable="false"
+                  style="Entity"/>
+            <target
+                  saveEnable="true"
+                  createEnable="false"
+                  style="Facade"/>
+         </targets>
+      </verifyUnit>
+      <verifyUnit
+            level="WARNING"
+            class="com.kingdee.bos.studio.eascheck.CheckFacadeName"
+            category="EAS RULE"
+            name="Verify Facade Name"
+            id="com.kingdee.bos.studio.eascheck.CheckFacadeName">
+         <targets>
+            <target
+                  saveEnable="false"
+                  createEnable="true"
+                  style="Facade"/>
+         </targets>
+      </verifyUnit>
+      <verifyUnit
+            level="WARNING"
+            class="com.kingdee.bos.studio.eascheck.CheckResourceName"
+            category="EAS RULE"
+            name="Verify Resource Name"
+            id="com.kingdee.bos.studio.eascheck.CheckResourceName">
+         <targets>
+            <target
+                  saveEnable="false"
+                  createEnable="true"
+                  style="MultiLanguage"/>
+         </targets>
+      </verifyUnit>
+      <verifyUnit
+            level="WARNING"
+            class="com.kingdee.bos.studio.eascheck.CheckImageResourceName"
+            category="EAS RULE"
+            name="Verify ImageResource Name"
+            id="com.kingdee.bos.studio.eascheck.CheckImageResourceName">
+         <targets>
+            <target
+                  saveEnable="false"
+                  createEnable="true"
+                  style="ImageResource"/>
+         </targets>
+      </verifyUnit>
+      <verifyUnit
+            category="EAS RULE"
+            class="com.kingdee.bos.studio.eascheck.CheckFunctionName"
+            id="com.kingdee.bos.studio.eascheck.CheckFunctionName"
+            level="WARNING"
+            name="Verify Function Name">
+         <targets>
+            <target
+                  createEnable="true"
+                  saveEnable="false"
+                  style="Function"/>
+         </targets>
+      </verifyUnit>
+      <verifyUnit
+            category="EAS RULE"
+            class="com.kingdee.bos.studio.eascheck.CheckEntityAlias"
+            id="com.kingdee.bos.studio.eascheck.CheckEntityAlias"
+            level="ERROR"
+            name="Verify Entity Alias">
+         <targets>
+            <target
+                  createEnable="false"
+                  saveEnable="true"
+                  style="Entity"/>
+         </targets>
+      </verifyUnit>
+      <verifyUnit
+            category="EAS RULE"
+            class="com.kingdee.bos.studio.eascheck.CheckFacadeAlias"
+            id="com.kingdee.bos.studio.eascheck.CheckFacadeAlias"
+            level="ERROR"
+            name="Verify Facade Alias">
+         <targets>
+            <target
+                  createEnable="false"
+                  saveEnable="true"
+                  style="Facade"/>
+         </targets>
+      </verifyUnit>      
+   </extension>
+</plugin>

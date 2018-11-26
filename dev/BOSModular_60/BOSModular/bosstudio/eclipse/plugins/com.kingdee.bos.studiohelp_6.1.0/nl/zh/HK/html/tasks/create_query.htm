@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="../book.css" CHARSET="GB2312" TYPE="text/css">
+<TITLE>
+創建一個查詢
+</TITLE>
+
+<link rel="stylesheet" type="text/css" HREF="../book.css">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H1>創建一個查詢</H1>
+<p>BOS中的Query對象是實體對象的查詢視圖，可以在數據訪問過程中只獲取視圖中指定屬性的數據，並按照過濾、排序條件進行數據的過濾和排序。</p>
+<p>Query對象的數據組織形式是二維模型的，Query對象可以分為連接查詢對像和聯合查詢對象。在一個連接查詢對像中(Join Query)可以包含多個子對像:實體(Entity)或者其他的查詢對像(Sub Query稱為子查詢)，但是在一個連接查詢對像中有且僅有一個主對象。在一個聯合查詢對像(Union Query)中，包含的子對象都必須是一個(Sub Query 稱為子查詢)，並且聯合查詢對像默認第一個選中的子對像為主對象。</p>
+<p><b>如何創建查詢</b></p>
+<p><b>1、</b>打開「包分類」視圖，在右鍵菜單中選擇「新建」->「查詢」，彈出「查詢創建嚮導」，如圖一：</p>
+<p><a name="query_wizard_1"><img border="0" src="images/create_query/create_query_1.gif"></a></p>圖一
+<p><b>2、</b>選擇好包，填寫「名稱」、「別名」和「描述」，選擇查詢的類型，點擊「下一步」，如圖二：</p>
+<p><a name="query_wizard_2"><img border="0" src="images/create_query/create_query_2.gif"></a></p>圖二
+<p><b>3、</b>點擊「實體對像」選擇按鈕，彈出實體對像選擇框，如圖三：</p>
+<p><a name="query_create_entity_select"><img border="0" src="images/create_query/create_query_entity_select.gif"></a></p>圖三
+<p><b>4、</b>選中合法實體對象，點擊「確定」即可選定實體對象，點擊完成，即可成功建立查詢,如圖四：</p>
+<p><a name="query_create_result"><img border="0" src="images/create_query/create_query_result.gif"></a></p>圖三
+
+
+<p align="center"><a href="../../notices.html"><img border="0" src="../../copyright.gif"></a></p>
+<p></p>
+</BODY>
+</HTML>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="获取职员所在的组织集合">
+    <script><![CDATA[com.kingdee.eas.basedata.org.AdminOrgUnitCollection adminORgUnit = new com.kingdee.eas.basedata.person.PersonFacade(__bosContext).getAdminOrgUnitByPerson(personID);
+		return adminORgUnit;]]></script>
+    <description><![CDATA[根据职员的ID,获取此职员对应的所有组织单元数据]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>OBJECT</type>
+      <description><![CDATA[返回组织单元集合对象(AdminOrgUnitCollection)]]></description>
+      <isArray>false</isArray>
+    </return>
+    <parameter>
+      <name>personID</name>
+      <type>BOID</type>
+      <description><![CDATA[职员ID]]></description>
+    </parameter>
+  </function>
+</functions>
+

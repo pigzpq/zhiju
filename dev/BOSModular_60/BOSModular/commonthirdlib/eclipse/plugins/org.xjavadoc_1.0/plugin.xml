@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin name="%pluginName" id="org.xjavadoc" version="1.0" provider-name="%providerName">
+	<runtime>
+		<library name="xjavadoc-1.0.jar">
+			<export name="*"/>
+		</library>
+	</runtime>
+   <requires>
+      <import plugin="org.commons-collections"/>
+   </requires>
+</plugin>

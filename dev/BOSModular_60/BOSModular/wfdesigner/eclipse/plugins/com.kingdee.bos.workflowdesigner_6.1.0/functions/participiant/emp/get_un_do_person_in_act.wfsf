@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="获取某节点未执行任务的人员">
+    <script><![CDATA[//获取某节点未执行任务的人员
+com.kingdee.bos.workflow.AssignmentInfo[] assignments = com.kingdee.bos.workflow.service.ormrpc.EnactmentServiceFactory.createEnactService(__bosContext).getAssignmentByActInstId(actInstId, com.kingdee.bos.workflow.metas.WfAssignmentState.CANCELED);
+java.lang.String[] personIds = new java.lang.String[assignments.length];
+for(int i = 0 ;i<assignments.length;i++){
+	personIds[i] = assignments[i].getEmployeeId();
+}
+return personIds;]]></script>
+    <description><![CDATA[获取某节点未执行任务的人员]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>STRING</type>
+      <array>true</array>
+      <description><![CDATA[人员编码]]></description>
+    </return>
+    <parameter>
+      <name>actInstId</name>
+      <type>STRING</type>
+      <array>false</array>
+      <description><![CDATA[活动实例id]]></description>
+    </parameter>
+  </function>
+</functions>
+

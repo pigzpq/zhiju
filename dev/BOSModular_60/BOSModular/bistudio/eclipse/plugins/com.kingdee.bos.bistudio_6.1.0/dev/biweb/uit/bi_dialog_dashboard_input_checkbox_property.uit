@@ -1,0 +1,21 @@
+<table width="365" height="93" border="0" style="font-size:12px">
+    <tr>
+      <td width="80" height="28" align="right">对象名称：</td>
+      <td width="168"  align="left"><input sue="objectName" type="text" size="20" /></td>
+      <td width="95">&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="27" align="right">标签：</td>
+      <td align="left">
+        <input sue="hintText" type="text" size="20" />
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="24">&nbsp;</td>
+      <td align="left">
+        <input type="checkbox" sue="isChecked" value="checkbox" />
+      默认勾选</td>
+      <td>&nbsp;</td>
+    </tr>
+ </table>

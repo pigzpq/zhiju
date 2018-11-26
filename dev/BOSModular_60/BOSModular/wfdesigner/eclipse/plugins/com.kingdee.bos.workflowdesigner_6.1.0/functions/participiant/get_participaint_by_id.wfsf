@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+  <function name="通过用户ID获取参与人" enabled="true">
+    <script><![CDATA[if(null==userid) 
+	return null;
+com.kingdee.eas.basedata.person.app.PersonToWFAdapter adapter = new com.kingdee.eas.basedata.person.app.PersonToWFAdapter(); 
+return adapter.getPersonByUserId(__bosContext,userid.toString());]]></script>
+    <description><![CDATA[转换函数：将用户转换为参与人返回]]></description>
+    <type>KSCRIPT</type>
+    <return>
+      <type>PERFORMER</type>
+      <description><![CDATA[参与人]]></description>
+      <isArray>false</isArray>
+    </return>
+    <parameter>
+      <name>userid</name>
+      <type>BOID</type>
+      <description><![CDATA[用户ID]]></description>
+    </parameter>
+  </function>
+</functions>
+

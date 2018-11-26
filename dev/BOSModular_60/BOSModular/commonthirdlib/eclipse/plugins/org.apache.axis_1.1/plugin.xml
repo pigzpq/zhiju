@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin name="%pluginName" id="org.axis" version="1.1" provider-name="%providerName">
+	<runtime>		
+		<library name="axis.jar">
+			<export name="*"/>
+		</library>
+		<library name="axis-ant.jar">
+			<export name="*"/>
+		</library>
+		<library name="jaxrpc.jar">
+			<export name="*"/>
+		</library>
+		<library name="saaj.jar">
+			<export name="*"/>
+		</library>						
+		<library name="wsdl4j.jar">
+			<export name="*"/>
+		</library>								
+	</runtime>
+</plugin>

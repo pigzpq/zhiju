@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="K-SQL TOOL 用户指南" topic="html/toc.html">
+   <topic label="入门">
+      <anchor id="gettingstarted"/>
+   </topic>
+   <topic label="概念">
+      <anchor id="concepts"/>
+   </topic>
+   <topic label="任务">
+      <anchor id="tasks"/>
+   </topic>
+   <topic label="参考">
+      <anchor id="reference"/>
+   </topic>
+   <topic label="示例">
+      <anchor id="samples"/>
+   </topic>
+</toc>

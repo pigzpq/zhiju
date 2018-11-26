@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: OrgHelper Plug-in
+Bundle-SymbolicName: com.kingdee.bos.eai.orghelper;singleton:=true
+Bundle-Version: 1.0.0
+Require-Bundle: org.eclipse.core.runtime,
+ com.kingdee.bos.common,
+ com.kingdee.bos.orm,
+ com.kingdee.bos.metadata,
+ com.kingdee.bos.bosframework
+Bundle-ClassPath: orghelper.jar
+Eclipse-LazyStart: true
+Export-Package: com.kingdee.bos.eai.orghelper,
+ com.kingdee.bos.eai.orghelper.editor,
+ com.kingdee.bos.eai.orghelper.exception,
+ com.kingdee.bos.eai.orghelper.participant,
+ com.kingdee.bos.eai.orghelper.service,
+ com.kingdee.bos.eai.orghelper.util

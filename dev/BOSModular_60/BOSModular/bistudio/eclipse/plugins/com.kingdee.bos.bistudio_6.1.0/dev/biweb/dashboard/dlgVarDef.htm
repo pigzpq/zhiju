@@ -1,0 +1,456 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Language" content="zh-cn">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>变量定义</title>
+		<STYLE>
+	.dialog
+	{
+		font-size:9pt;
+	}
+	.disabledTextField
+	{
+		border:1px solid #718BB7;
+	}
+	</STYLE>
+	<script src="../js/sue-main.js"></script>
+	<script src="../js/sue-config.js"></script>
+	<script src="../js/sue-ui.js"></script>
+	<script src="../js/bi.js"></script>
+	</head>
+	<body topmargin="10" leftmargin="10" bottommargin="5" rightmargin="10">
+		<table border="0" width="100%" height="100%" class="dialog" cellPadding="0" cellSpacing="0">
+			<tr>
+				<td width="100%" height="100%" colspan="3" valign="top">
+					<TABLE width="100%" cellPadding="0" cellSpacing="0">
+						<TR>
+							<TD valign="top" width="150">
+								<table style="width:100%; font-size:9pt" cellPadding="0" cellSpacing="0">
+									<tr height="26">
+										<td></td>
+										<td width="24">
+											<INPUT id="ctrlNew" title="新建" type="image" src="images/tbtn_new.gif">
+										</td>
+										<td width="24">
+											<INPUT id="ctrlEdit" title="修改" type="image" src="images/tbtn_edit.gif">
+										</td>
+										<td width="24">
+											<INPUT id="ctrlRename" title="重命名" type="image" src="images/tbtn_rename.gif">
+										</td>
+										<td width="24">
+											<INPUT id="ctrlDelete" title="删除" type="image" src="images/tbtn_delete.gif">
+										</td>
+									</tr>
+									<tr height="100%">
+										<td colspan="5">
+											<SELECT id="ctrlVariants" size="20" style="width:100%">
+											</SELECT>
+										</td>
+									</tr>
+								</table>
+							</TD>
+							<TD width="20"/>
+							<TD valign="top">
+								<table width="100%" style="font-size:9pt" cellPadding="0" cellSpacing="0">
+									<tr height="26">
+										<td>名称：		<INPUT id="ctrlName" style="width:350px"></td>
+									</tr>
+									<tr height="320" width="100%">
+										<td id="ContentSQL" height="100%" width="100%"></td>
+									</tr>
+									<tr height="26">
+										<td align="right" valign="bottom">
+											<button id="ctrlAccept" class="portal_button" style="margin-right:10px">应用</button>
+											<button id="ctrlReject" class="portal_button">取消</button>
+										</td>
+									</tr>
+								</table>							
+							</TD>
+						</TR>
+					</TABLE>
+				</td>
+			</tr>
+			<tr>
+				<td style="text-align:right">
+					<button id="btnOK" class="portal_button" onclick="return btnOK_onclick()" style="margin-right:10px">确定</button>
+					<button id="btnCancel" class="portal_button" onclick="return btnCancel_onclick()">取消</button>
+				</td>
+			</tr>
+		</table>
+	</body>
+	<script language="javascript">
+var _oParams;
+var _webUtilServlet;
+var _sEditState;//new、edit、rename
+var _bChanged;
+var ctrlSql;
+var ctrlDesc;
+
+function document.body.onload()
+{
+	_oParams = window.frameElement.$param;
+	_webUtilServlet = _oParams.getServletURL();
+	ctrlVariants.options.length = 0;
+	for(var i = 0; i < _oParams.size(); i++)
+	{
+		var oModel = _oParams.get(i);
+		createOption(oModel.clone());
+	}
+	
+	var tp = Sue.ui.ext.tabbedPanel( {
+		parent: _.id("ContentSQL")
+	} );
+	
+	var tab0 = tp.append( {
+		caption: "查询语句",
+		noclose: true,
+		init: function() {
+			ctrlSql = _.crt("textarea", null, this.body, "border:none;width:480px;height:300px");
+		}
+	} );
+
+	var tab1 = tp.append( {
+		caption: "描述",
+		noclose: true,
+		init: function() {
+			ctrlDesc = _.crt("textarea", null, this.body, "border:none;width:480px;height:300px");
+		}
+	} );
+	
+	tp.append( {
+		caption: "样本预览",
+		noclose: true,
+		init: function() {
+			this.body.style.height = "300px";
+			this.body.style.width = "480px";
+			this.body.style.overflow = "auto";
+		},
+		select: function() {
+			var _body = this.body;
+			_body.innerHTML = "";
+			if ( !ctrlSql.value ) {
+				return;
+			}
+			_.post( {
+				url: _webUtilServlet,
+				json: {
+					servletType: "BIWebUtil",
+					action: "getSampleResult",
+					sql: ctrlSql.value
+				},
+				callback: function( r ) {
+					if ( "error" in r ) {
+						bi.portalDialog( r.error.message );
+					} else {
+						var cols = _.map( r.shift(), function( h ) {
+							return {
+								caption: h
+							};
+						} );
+						var table = Sue.ui.table( {
+							parent: _body,
+							head: cols,
+							data: r
+						} );
+					}
+				}
+			} );
+		}
+	} );
+	tp.doSelect( tab0.uuid );
+
+	disabledCtrl(ctrlName, true);
+	disabledCtrl(ctrlDesc, true);
+	disabledCtrl(ctrlSql, true);
+	ctrlAccept.disabled = true;
+	ctrlReject.disabled = true;
+	try {
+		document.body.focus();
+	} catch ( e ) {}
+	
+}
+
+function disabledCtrl(oCtrl, bDisabled)
+{
+	if(!oCtrl) return;
+	oCtrl.disabled = bDisabled;	
+	if(bDisabled)
+	{
+		oCtrl.className = "disabledTextField";
+	}
+	else
+	{
+		oCtrl.className = "";
+	}	
+}
+
+function setEditingState(bEditing)
+{
+	//编辑时左边的控件禁灰，右边开启；结束时反过来
+	ctrlNew.disabled = bEditing;
+	ctrlEdit.disabled = bEditing;
+	ctrlRename.disabled = bEditing;
+	ctrlDelete.disabled = bEditing;
+	disabledCtrl(ctrlVariants, bEditing);
+
+	ctrlAccept.value = (_sEditState == "new" ? "新建" : "修改");
+	ctrlAccept.disabled = !bEditing;
+	ctrlReject.disabled = !bEditing;
+
+	if(_sEditState == "new" || _sEditState == "rename")
+	{
+		disabledCtrl(ctrlName, !bEditing);
+	}
+	if(_sEditState == "new" || _sEditState == "edit")
+	{
+		disabledCtrl(ctrlDesc, !bEditing);
+		disabledCtrl(ctrlSql, !bEditing);
+	}
+	
+	btnOK.disabled = bEditing;
+	btnCancel.disabled = bEditing;
+}
+
+function createOption(oModel)
+{
+	var oOption = new Option();
+	ctrlVariants.add(oOption);
+	oOption.innerText = oModel.sId;//innerText属性要在它被add之后给，否则add时会参数无效
+	oOption.dashboard_variant = oModel;
+}
+
+function btnOK.onclick()
+{
+	_oParams.clear();
+	for(var i = 0; i < ctrlVariants.options.length; i++)
+	{
+		var oModel = ctrlVariants.options[i].dashboard_variant;
+		_oParams.addModel(oModel);
+	}
+	_oParams.dialog.closeDialog();
+
+}
+
+function btnCancel.onclick()
+{
+	if(_bChanged)
+	{
+		if(!confirm("您确定放弃修改吗？"))
+		{
+			return;
+		}
+	}
+	_oParams.dialog.closeDialog();
+}
+
+function ctrlVariants.onchange()
+{
+	var idx = ctrlVariants.selectedIndex;
+	if(idx >= 0)
+	{
+		var oModel = ctrlVariants.options[idx].dashboard_variant;
+		ctrlName.value = oModel.sId;
+		ctrlDesc.value = oModel.sDescription;
+		ctrlSql.value = oModel.sSql;
+	}
+	else
+	{
+		ctrlName.value = "";
+		ctrlDesc.value = "";
+		ctrlSql.value = "";
+	}
+}
+
+function ctrlNew.onclick()
+{
+	_sEditState = "new";
+	setEditingState(true);
+	
+	ctrlName.value = "";
+	ctrlDesc.value = "";
+	ctrlSql.value = "";
+
+	ctrlVariants.selectedIndex = -1;
+	try {
+		ctrlName.focus();
+	} catch ( e ) {}
+}
+
+function ctrlEdit.onclick()
+{
+	var idx = ctrlVariants.selectedIndex;
+	if(idx >= 0)
+	{
+		_sEditState = "edit";
+		setEditingState(true);
+		try {
+			ctrlDesc.focus();
+		} catch( e ) {}
+	}
+	else
+	{
+		alert("未选中修改目标。");	
+	}
+}
+
+function ctrlRename.onclick()
+{
+	var idx = ctrlVariants.selectedIndex;
+	if(idx >= 0)
+	{
+		_sEditState = "rename";
+		setEditingState(true);
+		try {
+			ctrlName.focus();
+		}catch ( e ) {}
+	}
+	else
+	{
+		alert("未选中重命名目标。");	
+	}
+}
+
+function ctrlDelete.onclick()
+{
+	var idx = ctrlVariants.selectedIndex;
+	if(idx >= 0)
+	{
+		if(confirm("删除选中目标，您确定吗？"))
+		{
+			ctrlVariants.options.remove(idx);
+			ctrlName.value = "";
+			ctrlDesc.value = "";
+			ctrlSql.value = "";
+			_bChanged = true;
+		}
+	}
+	else
+	{
+		alert("未选中删除目标。");
+	}
+}
+
+function ctrlReject.onclick()
+{
+	ctrlVariants.onchange();
+	setEditingState(false);
+	_sEditState = null;
+}
+
+function ctrlAccept.onclick()
+{
+	var idx = ctrlVariants.selectedIndex;
+	var oOption;
+	var oModel;
+	if(idx >= 0)
+	{
+		oOption = ctrlVariants.options[idx];
+		oModel = oOption.dashboard_variant;
+	}
+
+	var sNewName = trim(ctrlName.value);
+	if(_sEditState == "new" || _sEditState == "rename")
+	{
+		if(!sNewName)
+		{
+			alert("请输入名称。");
+			try {
+				ctrlName.focus();
+			} catch ( e ) {}
+			return;
+		}
+		if(isNameInvalid(sNewName))
+		{
+			alert("名称只能包含字母、数字和下划线。");
+			try {
+				ctrlName.focus();
+			} catch ( e ) {}
+			return;
+		}
+		if(!(_sEditState == "rename" && oModel.sId == sNewName))
+		{
+			if(isNameExist(sNewName))
+			{
+				alert("名称已存在。");
+				try {
+					ctrlName.focus();
+				} catch ( e ) {}
+				return;
+			}
+		}
+	}
+	if(_sEditState == "new" || _sEditState == "edit")
+	{
+		if(!ctrlSql.value)
+		{
+			alert("请输入查询语句。");
+			try {
+				ctrlSql.focus();
+			} catch ( e ) {}
+			return;
+		}
+	}
+	
+	if(_sEditState == "new")
+	{
+		var oModel = _oParams.createOneModel(sNewName, ctrlDesc.value, ctrlSql.value);
+		createOption(oModel);
+		ctrlVariants.selectedIndex = ctrlVariants.options.length - 1;
+	}
+	else if(_sEditState == "edit")
+	{
+		oModel.sDescription = ctrlDesc.value;
+		oModel.sSql = ctrlSql.value;
+	}
+	else if(_sEditState == "rename")
+	{
+		oModel.sId = sNewName;
+		oOption.innerText = sNewName;
+	}
+	
+	setEditingState(false);
+	_sEditState = null;
+	_bChanged = true;
+}
+
+function isNameExist(sNewName)
+{
+	for(var i = 0; i < ctrlVariants.options.length; i++)
+	{
+		var oModel = ctrlVariants.options[i].dashboard_variant;
+		if(oModel.sId == sNewName)
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+function isNameInvalid(sName)
+{
+	for(var i = 0; i < sName.length; i++)
+	{
+		var c = sName.charAt(i);
+		if(!(c >= "0" && c <= "9"
+			|| c >= "A" && c <= "Z"
+			|| c >= "a" && c <= "z"
+			|| c == "_"))
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+function trim(str) 
+{ 
+	for(var i = 0; i < str.length && str.charAt(i) == " "; i++ );
+	for(var j = str.length; j > 0 && str.charAt(j - 1) == " "; j--);
+	if(i > j)
+	{
+		return "";
+	}
+	return str.substring(i, j); 
+} 
+	</script>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="com.kingdee.bos.studio.toc"?>
+<!-- ============================================================================= -->
+<!-- Define the top level topics                                                   -->
+<!-- ============================================================================= -->
+
+<toc label="金蝶BOS Framework帮助系统" topic="html/welcome_first.html">
+	<topic label="概述" href="html/summarize/summarize.htm">
+		<link toc="sumarize.xml" />
+	</topic>
+	<topic label="应用框架设计模型结构" href="html/DMS/DMS.html">
+		<link toc="DMS.xml" />
+	</topic>
+	<topic label="应用框架典型范例" href="html/RS/RS.html">
+		<link toc="RS.xml" />
+	</topic>
+	<topic label="文档及FAQ" href="html/faq/faq_first.html">
+		<link toc="Faq.xml" />
+	</topic>
+	<topic label="版权声明" href="html/notices.html"/>
+	
+</toc>
